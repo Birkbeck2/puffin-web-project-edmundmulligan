@@ -1,0 +1,42 @@
+/*
+ **********************************************************************
+ * File       : components/titles.css
+ * Author     : Edmund Mulligan <edmund@edmundmulligan.name>
+ * Copyright  : (c) 2025 The Embodied Mind
+ * License    : MIT License (see license-and-credits.html page)
+ * Description:
+ *   This stylesheet defines styles for site titles, subtitles and page
+ *   titles used across the Web Witchcraft and Wizardry website.
+ **********************************************************************
+ */
+
+.site-title {
+    font-family: 'Cinzel Decorative', serif;
+    font-weight: 700;
+
+}
+
+.site-subtitle {
+    font-family: Cinzel, serif;
+    font-weight: 400;
+}
+
+.page-title {
+    font-family: 'Cinzel Decorative', serif;
+    font-weight: 700;
+    margin: 0.5rem auto;
+    padding: 0.5rem 1rem;
+    width: fit-content;
+    max-width: 100%;
+    display: block;
+    white-space: normal;
+
+    /* specify these so that page title is legiible on pages with background images */
+    color: var(--color-page-text);
+    background-color: var(--color-page-background);
+    border-radius: var(--border-radius);
+}
+
+.faq-title {
+    text-align: left;
+}

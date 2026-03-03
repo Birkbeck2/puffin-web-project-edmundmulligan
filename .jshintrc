@@ -1,0 +1,14 @@
+{
+  "esversion": 9,
+  "browser": true,
+  "node": false,
+  "undef": true,
+  "unused": true,
+  "strict": false,
+  "globals": {
+    "Debug": true,
+    "FormDataStorage": true,
+    "console": true,
+    "alert": true
+  }
+}
