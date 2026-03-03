@@ -69,15 +69,15 @@ function parseHSL(hslString) {
     return null;
 }
 
-// Read CSS file and extract color values
+// Read CSS file and extract colour value
 function extractColors(cssContent) {
     const colors = {};
     const lines = cssContent.split('\n');
     
     for (const line of lines) {
-        const match = line.match(/--color-([a-z-]+):\s*(hsl\([^)]+\))/);
+        const match = line.match(/--colour-([a-z-]+):\s*(hsl\([^)]+\))/);
         if (match) {
-            const varName = '--color-' + match[1];
+            const varName = '--colour-' + match[1];
             const hslValue = match[2];
             const parsed = parseHSL(hslValue);
             if (parsed) {
@@ -95,10 +95,10 @@ function extractColors(cssContent) {
     return colors;
 }
 
-// Extract color pairs from HTML
+// Extract colour pair from HTML
 function extractColorPairs(htmlContent) {
     const pairs = [];
-    const regex = /data-bg-var="(--color-[^"]+)"\s+data-fg-var="(--color-[^"]+)"/g;
+    const regex = /data-bg-var="(--colour-[^"]+)"\s+data-fg-var="(--colour-[^"]+)"/g;
     let match;
     
     while ((match = regex.exec(htmlContent)) !== null) {
@@ -138,7 +138,7 @@ function main() {
     console.log('='.repeat(100) + '\n');
     
     console.log(`Total unique color variables: ${Object.keys(colors).length}`);
-    console.log(`Total color pairs to test: ${pairs.length}\n`);
+    console.log(`Total colour pair to test: ${pairs.length}\n`);
     
     let passing = 0;
     let aaOnly = 0;
@@ -150,7 +150,7 @@ function main() {
         const fgColor = colors[pair.fg];
         
         if (!bgColor || !fgColor) {
-            console.warn(`Warning: Missing color definition for ${pair.bg} or ${pair.fg}`);
+            console.warn(`Warning: Missing colour definition for ${pair.bg} or ${pair.fg}`);
             continue;
         }
         
@@ -214,10 +214,10 @@ function main() {
     console.log('='.repeat(100) + '\n');
     
     if (failing > 0) {
-        console.error('❌ VERIFICATION FAILED: Some color pairs do not meet WCAG AA standards\n');
+        console.error('❌ VERIFICATION FAILED: Some colour pair do not meet WCAG AA standards\n');
         process.exit(1);
     } else {
-        console.log('✅ VERIFICATION PASSED: All color pairs meet at least WCAG AA standards\n');
+        console.log('✅ VERIFICATION PASSED: All colour pair meet at least WCAG AA standards\n');
         process.exit(0);
     }
 }

@@ -157,7 +157,7 @@ async function testColourPalette() {
         console.error('❌ VERIFICATION FAILED\n');
         process.exit(1);
     } else {
-        console.log('✅ VERIFICATION PASSED: All color pairs parse correctly and meet WCAG standards\n');
+        console.log('✅ VERIFICATION PASSED: All colour pair parse correctly and meet WCAG standards\n');
         process.exit(0);
     }
 }

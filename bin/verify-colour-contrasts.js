@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * File: verify-color-contrasts.js
+ * File: verify-colour-contrasts.js
  * Author: Edmund Mulligan <edmund@edmundmulligan.name>
  * Copyright: (c) 2026 The Embodied Mind
  * License: MIT
@@ -14,13 +14,13 @@
  * - FAIL: <3:1 (insufficient contrast)
  * 
  * Usage as CLI:
- *   node verify-color-contrasts.js [path/to/colours.css]
+ *   node verify-colour-contrasts.js [path/to/colours.css]
  *   
  *   If no path provided, defaults to ../styles/colours.css
  *   If file not found, uses hardcoded fallback values
  * 
  * Usage as module:
- *   const { verifyAllContrasts, calculateContrast } = require('./verify-color-contrasts.js');
+ *   const { verifyAllContrasts, calculateContrast } = require('./verify-colour-contrasts.js');
  *   
  *   // Verify from CSS file
  *   verifyAllContrasts('path/to/colours.css');
@@ -33,8 +33,8 @@
  * 
  * CSS File Format:
  *   The script parses CSS files containing color variables in HSL format:
- *   --color-normal-light-button-background: hsl(180, 100%, 75%);
- *   --color-normal-light-code-text: hsl(from var(--color-medium-purple) h s 30%);
+ *   --colour-normal-light-button-background: hsl(180, 100%, 75%);
+ *   --colour-normal-light-code-text: hsl(from var(--colour-medium-purple) h s 30%);
  *   
  *   Supports CSS Color Module Level 5 "from" syntax for color derivation
  */
@@ -92,13 +92,13 @@ function relativeLuminance(rgb) {
 
 /**
  * Calculate contrast ratio between two colors
- * @param {Array} color1 - [h, s, l] HSL values
- * @param {Array} color2 - [h, s, l] HSL values
+ * @param {Array} colour1 - [h, s, l] HSL values
+ * @param {Array} colour2 - [h, s, l] HSL values
  * @returns {number} Contrast ratio (1-21)
  */
-function calculateContrast(color1, color2) {
-    const rgb1 = hslToRgb(...color1);
-    const rgb2 = hslToRgb(...color2);
+function calculateContrast(colour1, colour2) {
+    const rgb1 = hslToRgb(...colour1);
+    const rgb2 = hslToRgb(...colour2);
     
     const lum1 = relativeLuminance(rgb1);
     const lum2 = relativeLuminance(rgb2);
@@ -146,7 +146,7 @@ function meetsRequirement(ratio, requirement = 'AA') {
 
 /**
  * Parse HSL color from CSS value
- * @param {string} cssValue - CSS color value (e.g., "hsl(180, 100%, 50%)" or "hsl(from hsl(180, 100%, 75%) h s l)")
+ * @param {string} cssValue - CSS colour value (e.g., "hsl(180, 100%, 50%)" or "hsl(from hsl(180, 100%, 75%) h s l)")
  * @returns {Array|null} [h, s, l] values or null if not parseable
  */
 function parseHSL(cssValue) {
@@ -158,7 +158,7 @@ function parseHSL(cssValue) {
     const fromMatch = cssValue.match(fromRegex);
     
     if (fromMatch) {
-        // Extract base color
+        // Extract base colour
         const baseH = parseFloat(fromMatch[1]);
         const baseS = parseFloat(fromMatch[2]);
         const baseL = parseFloat(fromMatch[3]);
@@ -234,7 +234,7 @@ function resolveCSSVar(value, colors) {
 }
 
 /**
- * Extract color value with resolution of references
+ * Extract colour value with resolution of references
  * @param {Object} colors - All color variables
  * @param {string} varName - Variable name to extract
  * @returns {Array|null} [h, s, l] values or null
@@ -318,9 +318,9 @@ function buildThemesFromCSS(colors) {
 }
 
 /**
- * Build non-theme color definitions from CSS
+ * Build non-theme colour definition from CSS
  * @param {Object} colors - All color variables from CSS
- * @returns {Object} Non-theme color definitions
+ * @returns {Object} Non-theme colour definition
  */
 function buildNonThemeColorsFromCSS(colors) {
     return {
@@ -466,10 +466,10 @@ function verifyAllContrasts(cssFilePath) {
             console.log('✓ Successfully parsed CSS file');
         } catch (error) {
             console.warn(`⚠ Warning: Could not parse CSS file: ${error.message}`);
-            console.warn('Using default hardcoded colors as fallback');
+            console.warn('Using default hardcoded colours as fallback');
         }
     } else {
-        console.log('Using default hardcoded colors');
+        console.log('Using default hardcoded colours');
     }
     
     console.log('=' .repeat(80));
@@ -624,7 +624,7 @@ if (require.main === module) {
         verifyAllContrasts(fileToUse);
     } else if (cssFilePath) {
         console.error(`Error: CSS file not found: ${cssFilePath}`);
-        console.log('Using default hardcoded colors');
+        console.log('Using default hardcoded colours');
         verifyAllContrasts();
     } else {
         // Default file doesn't exist, use hardcoded values

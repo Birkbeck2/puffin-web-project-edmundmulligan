@@ -136,7 +136,7 @@ function parseCSSColors(cssPath) {
     return colors;
 }
 
-// Color pair definitions from the palette
+// colour pair definitions from the palette
 const colorPairs = [
     // Non-theme colors
     { bg: 'color-warning-background', fg: 'color-warning-text', name: 'Warning Popovers' },
@@ -225,7 +225,7 @@ colorPairs.forEach(pair => {
     const fgColor = colors[pair.fg];
     
     if (!bgColor || !fgColor) {
-        console.log(`⚠️  ${pair.name}: Missing color definition`);
+        console.log(`⚠️  ${pair.name}: Missing colour definition`);
         return;
     }
     
@@ -268,8 +268,8 @@ console.log(`Passing AA only (4.5-7): ${warningCount}`);
 console.log(`Passing AAA (>= 7): ${colorPairs.length - failCount - warningCount}`);
 
 if (failCount > 0) {
-    console.log('\n⚠️  WARNING: Some color pairs do not meet WCAG AA standards!');
+    console.log('\n⚠️  WARNING: Some colour pair do not meet WCAG AA standards!');
     process.exit(1);
 } else {
-    console.log('\n✅ All color pairs meet at least WCAG AA standards!');
+    console.log('\n✅ All colour pair meet at least WCAG AA standards!');
 }

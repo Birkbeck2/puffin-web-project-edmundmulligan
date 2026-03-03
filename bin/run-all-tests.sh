@@ -51,6 +51,11 @@ FAILED=0
 echo "📄 Running code validation..."
 bin/validate-code.sh "$FOLDER" || exit 1
 
+echo ""
+echo "🎨 Running colour usage audit..."
+node bin/audit-colour-usage.js || exit 1
+
+echo ""
 echo "Running comments check..."
 bin/check-file-comments.sh "$FOLDER" || exit 1
 

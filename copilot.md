@@ -63,8 +63,8 @@ All colors, fonts, spacing, and common values are defined as CSS custom properti
 
 Example:
 ```css
-color: var(--color-headings-text);
-border: var(--border-weight) var(--border-style) var(--color-headings-text);
+color: var(--colour-headings-text);
+border: var(--border-weight) var(--border-style) var(--colour-headings-text);
 font-family: var(--font-main);
 ```
 

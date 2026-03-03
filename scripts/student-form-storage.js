@@ -362,7 +362,7 @@
                 if (submitButton) {
                     const originalText = submitButton.textContent;
                     submitButton.textContent = 'Information Saved!';
-                    submitButton.style.backgroundColor = 'var(--color-light-success-background, #4CAF50)';
+                    submitButton.style.backgroundColor = 'var(--colour-light-success-background, #4CAF50)';
                 
                     setTimeout(() => {
                         submitButton.textContent = originalText;
@@ -440,7 +440,7 @@
                     
                     if (!this.storage.exists(storageKey)) {
                         loadButton.textContent = 'No Data Found!';
-                        loadButton.style.backgroundColor = 'var(--color-warning-background)';
+                        loadButton.style.backgroundColor = 'var(--colour-warning-background)';
                     
                         setTimeout(() => {
                             loadButton.textContent = 'Load Information';
@@ -457,7 +457,7 @@
 
                     // Visual feedback
                     loadButton.textContent = 'Information Loaded!';
-                    loadButton.style.backgroundColor = 'var(--color-light-success-background, #4CAF50)';
+                    loadButton.style.backgroundColor = 'var(--colour-light-success-background, #4CAF50)';
                 
                     setTimeout(() => {
                         loadButton.textContent = 'Load Information';
@@ -513,7 +513,7 @@
                 // Visual feedback on the clear button
                 if (clearButton) {
                     clearButton.textContent = 'Information Cleared!';
-                    clearButton.style.backgroundColor = 'var(--color-warning-background)';
+                    clearButton.style.backgroundColor = 'var(--colour-warning-background)';
                 
                     setTimeout(() => {
                         clearButton.textContent = 'Clear Information';

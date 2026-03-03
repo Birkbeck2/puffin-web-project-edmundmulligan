@@ -84,10 +84,10 @@
     */
 }
 
-/* Progressive enhancement: Use relative color syntax for browsers that support it */
+/* Progressive enhancement: Use relative colour syntax for browsers that support it */
 @supports (color: hsl(from white h s l)) {
     :root {
-        /* Apply relative color syntax where it provides benefits */
+        /* Apply relative colour syntax where it provides benefits */
 
         /* Note: Currently all colors use direct HSL values for maximum compatibility */
 

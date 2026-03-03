@@ -50,7 +50,7 @@ function calculateContrast(hsl1, hsl2) {
     return (lighter + 0.05) / (darker + 0.05);
 }
 
-console.log('\n=== Testing Specific Color Combinations ===\n');
+console.log('\n=== Testing Specific colour combination ===\n');
 
 const tests = [
     {

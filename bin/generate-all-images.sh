@@ -6,7 +6,7 @@
 
 # First, generate LaTeX colors from CSS
 echo "Generating LaTeX colors from CSS..."
-./bin/generate-colors-from-css.py ../styles/colors.css common/colours.tex
+./bin/generate-colours-from-css.py ../styles/colours.css common/colours.tex
 
 echo "Generating image-1 images"
 cd source/image-1

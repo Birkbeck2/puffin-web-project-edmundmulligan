@@ -30,8 +30,8 @@
 /* Sidebar navigation for lessons */
 .sidebar {
     flex: 0 0 250px;
-    background-color: var(--color-headings-background);
-    border: var(--border-weight) var(--border-style) var(--color-headings-text);
+    background-color: var(--colour-headings-background);
+    border: var(--border-weight) var(--border-style) var(--colour-headings-text);
     border-radius: var(--border-radius);
     padding: 1rem;
     max-height: calc(100vh - 150px);
@@ -42,7 +42,7 @@
 }
 
 .sidebar h3 {
-    color: var(--color-headings-text);
+    color: var(--colour-headings-text);
     margin-top: 0;
     margin-bottom: 1rem;
     text-align: center;
@@ -63,7 +63,7 @@
 .lesson-nav button {
     display: block;
     padding: 0.75rem 1rem;
-    color: var(--color-headings-text);
+    color: var(--colour-headings-text);
     text-decoration: none;
     border-radius: var(--border-radius);
     margin-bottom: 0.5rem;
@@ -81,7 +81,7 @@
 .lesson-nav a:focus-visible,
 .lesson-nav button:hover,
 .lesson-nav button:focus-visible {
-    background-color: var(--color-link-text-hover);
+    background-color: var(--colour-link-text-hover);
 }
 
 .lesson-nav a:focus-visible,
@@ -158,7 +158,7 @@
    max-width: 80%;
    margin: 0 auto;
    padding: 1rem;
-   border: var(--border-weight) var(--border-style) var(--color-headings-text);
+   border: var(--border-weight) var(--border-style) var(--colour-headings-text);
    border-radius: var(--border-radius);
    box-sizing: border-box;
 }
@@ -173,8 +173,8 @@
 .student-info form output {
    grid-column: 1;
    grid-row: 1;
-   background-color: var(--color-headings-background);
-   border: var(--border-weight) var(--border-style) var(--color-headings-text);
+   background-color: var(--colour-headings-background);
+   border: var(--border-weight) var(--border-style) var(--colour-headings-text);
    border-radius: var(--border-radius);
    padding: 1rem;
    margin: 1rem auto;
@@ -234,7 +234,7 @@
 }
 
 .student-info form fieldset {
-   border: var(--border-weight) var(--border-style) var(--color-headings-text);
+   border: var(--border-weight) var(--border-style) var(--colour-headings-text);
    border-radius: var(--border-radius);
    padding: 1rem;
    margin: 0.5rem;
@@ -261,12 +261,12 @@
 
 .student-info form hr {
    border: none;
-   border-top: var(--border-weight) var(--border-style) var(--color-headings-text);
+   border-top: var(--border-weight) var(--border-style) var(--colour-headings-text);
    margin: 0.5rem 0 0;
 }
 
 .student-info form h4 {
-   border-top: var(--border-weight) var(--border-style) var(--color-headings-text);
+   border-top: var(--border-weight) var(--border-style) var(--colour-headings-text);
    padding-top: 0.5rem;
    margin-top: 0.5rem;
 }
@@ -291,7 +291,7 @@
    gap: 2rem;
    justify-content: center;
    flex-wrap: wrap;
-   background-color: var(--color-page-background);
+   background-color: var(--colour-page-background);
    border: none;
 }
 
@@ -360,9 +360,9 @@
 .gallery-item {
    text-align: center;
    padding: 1rem;
-   background-color: var(--color-headings-background);
-   color: var(--color-headings-text);
-   border: var(--border-weight) var(--border-style) var(--color-headings-text);
+   background-color: var(--colour-headings-background);
+   color: var(--colour-headings-text);
+   border: var(--border-weight) var(--border-style) var(--colour-headings-text);
    border-radius: var(--border-radius);
    align-items: center;
 }
@@ -385,9 +385,9 @@
    display: flex;
    flex-direction: column;
    padding: 0;
-   background-color: var(--color-headings-background);
-   color: var(--color-headings-text);
-   border: var(--border-weight) var(--border-style) var(--color-headings-text);
+   background-color: var(--colour-headings-background);
+   color: var(--colour-headings-text);
+   border: var(--border-weight) var(--border-style) var(--colour-headings-text);
    border-radius: var(--border-radius);
    text-align: center;
    width: 21rem;
@@ -423,9 +423,9 @@
 
 .facts-item {
    display: block;
-   background-color: var(--color-headings-background);
-   color: var(--color-headings-text);
-   border: var(--border-weight) var(--border-style) var(--color-headings-text);
+   background-color: var(--colour-headings-background);
+   color: var(--colour-headings-text);
+   border: var(--border-weight) var(--border-style) var(--colour-headings-text);
    border-radius: var(--border-radius);
    font-size: var(--fontsize-p);
    min-width: 0;
@@ -462,7 +462,7 @@
    text-align: center;
    align-self: stretch;
    max-width: 100%;
-   border-bottom: var(--border-weight) var(--border-style) var(--color-headings-text);
+   border-bottom: var(--border-weight) var(--border-style) var(--colour-headings-text);
    display: flex;
    align-items: center;
    justify-content: center;
@@ -474,7 +474,7 @@
    margin: 0;
    text-align: center;
    align-self: stretch;
-   border-bottom: var(--border-weight) var(--border-style) var(--color-headings-text);
+   border-bottom: var(--border-weight) var(--border-style) var(--colour-headings-text);
    display: flex;
    align-items: center;
    justify-content: center;
@@ -502,8 +502,8 @@
    grid-column: 1;
    padding: 0 0.5rem;
    margin: 0;
-   border: var(--border-weight) var(--border-style) var(--color-page-text);
-   background-color: var(--color-page-background);
+   border: var(--border-weight) var(--border-style) var(--colour-page-text);
+   background-color: var(--colour-page-background);
    text-align: left;
    align-items: center;
    overflow-wrap: break-word;
@@ -514,11 +514,11 @@
    grid-column: 2;
    padding: 0 0.5rem;
    margin: 0;
-   border-top: var(--border-weight) var(--border-style) var(--color-headings-text);
-   border-right: var(--border-weight) var(--border-style) var(--color-headings-text);
-   border-bottom: var(--border-weight) var(--border-style) var(--color-headings-text);
+   border-top: var(--border-weight) var(--border-style) var(--colour-headings-text);
+   border-right: var(--border-weight) var(--border-style) var(--colour-headings-text);
+   border-bottom: var(--border-weight) var(--border-style) var(--colour-headings-text);
    border-left: none;
-   background-color: var(--color-page-background);
+   background-color: var(--colour-page-background);
    text-align: left;
    align-items: center;
    overflow-wrap: break-word;
@@ -526,14 +526,14 @@
 }
 
 .lesson-tile {
-   background-color: var(--color-headings-background);
-   border: var(--border-weight) var(--border-style) var(--color-headings-text);
+   background-color: var(--colour-headings-background);
+   border: var(--border-weight) var(--border-style) var(--colour-headings-text);
    border-radius: var(--border-radius);
    padding: 1rem;
    margin: 1rem;
    flex: 0 0 25%;
    max-width: 25%;
-   color: var(--color-headings-text);
+   color: var(--colour-headings-text);
    justify-self: center;
    align-items: center;
    justify-content: center;
@@ -543,7 +543,7 @@
 .lesson-tile a,
 .lesson-tile button {
    text-decoration: none;
-   color: var(--color-headings-text);
+   color: var(--colour-headings-text);
    font-weight: normal;
    background: none;
    border: none;
@@ -572,7 +572,7 @@
 
 .lesson-tile:hover,
 .lesson-tile:focus-visible {
-   background-color: var(--color-link-text-hover);
-   color: var(--color-headings-text);
+   background-color: var(--colour-link-text-hover);
+   color: var(--colour-headings-text);
    cursor: pointer;
 }

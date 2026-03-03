@@ -30,8 +30,8 @@
         /* turn on the warning message (normally it's display: none) */
         display: block;
         max-width: 100%;
-        color: var(--color-warning-text);
-        background-color: var(--color-warning-background);
+        color: var(--colour-warning-text);
+        background-color: var(--colour-warning-background);
         text-align: center;
     }
 }
@@ -199,7 +199,7 @@
         padding: 0.25rem 0 0.5rem;
         margin: 0 0 0.5rem;
         text-align: left;
-        border-bottom: var(--border-weight) var(--border-style) var(--color-headings-text);
+        border-bottom: var(--border-weight) var(--border-style) var(--colour-headings-text);
     }
 
     .facts dd:last-of-type {

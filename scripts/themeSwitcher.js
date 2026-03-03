@@ -10,7 +10,7 @@
  *   to localStorage and loads them when pages load. Falls back to
  *   browser/system preference if no user choice is saved. Also allows
  *   for theme/style to be set via URL parameter for testing purposes.
- *   All color combinations meet WCAG 2.2 AAA standards.
+ *   All colour combination meet WCAG 2.2 AAA standards.
  **********************************************************************
 */
 
@@ -52,27 +52,27 @@
 
             Debug.log('Applying theme:', effectiveTheme, 'with style:', style);
 
-            // Build the color variable prefix based on style and theme
-            const prefix = `--color-${style}-${effectiveTheme}`;
+            // Build the colour variable prefix based on style and theme
+            const prefix = `--colour-${style}-${effectiveTheme}`;
 
             // Apply theme-specific colors (from colours.css)
-            root.style.setProperty('--color-page-background', `var(${prefix}-page-background)`);
-            root.style.setProperty('--color-page-text', `var(${prefix}-page-text)`);
-            root.style.setProperty('--color-headings-background', `var(${prefix}-headings-background)`);
-            root.style.setProperty('--color-headings-text', `var(${prefix}-headings-text)`);
-            root.style.setProperty('--color-link-text', `var(${prefix}-link-text)`);
-            root.style.setProperty('--color-link-text-hover', `var(${prefix}-link-text-hover)`);
-            root.style.setProperty('--color-link-text-visited', `var(${prefix}-link-text-visited)`);
-            root.style.setProperty('--color-link-text-focus', `var(${prefix}-link-text-focus)`);
-            root.style.setProperty('--color-code-background', `var(${prefix}-code-background)`);
-            root.style.setProperty('--color-code-text', `var(${prefix}-code-text)`);
+            root.style.setProperty('--colour-page-background', `var(${prefix}-page-background)`);
+            root.style.setProperty('--colour-page-text', `var(${prefix}-page-text)`);
+            root.style.setProperty('--colour-headings-background', `var(${prefix}-headings-background)`);
+            root.style.setProperty('--colour-headings-text', `var(${prefix}-headings-text)`);
+            root.style.setProperty('--colour-link-text', `var(${prefix}-link-text)`);
+            root.style.setProperty('--colour-link-text-hover', `var(${prefix}-link-text-hover)`);
+            root.style.setProperty('--colour-link-text-visited', `var(${prefix}-link-text-visited)`);
+            root.style.setProperty('--colour-link-text-focus', `var(${prefix}-link-text-focus)`);
+            root.style.setProperty('--colour-code-background', `var(${prefix}-code-background)`);
+            root.style.setProperty('--colour-code-text', `var(${prefix}-code-text)`);
             
             // Apply global non-theme colors (from colours.css)
             // These are the same across all themes for consistency
-            root.style.setProperty('--color-error-background', 'var(--color-error-background)');
-            root.style.setProperty('--color-error-text', 'var(--color-error-text)');
-            root.style.setProperty('--color-warning-background', 'var(--color-warning-background)');
-            root.style.setProperty('--color-warning-text', 'var(--color-warning-text)');
+            root.style.setProperty('--colour-error-background', 'var(--colour-error-background)');
+            root.style.setProperty('--colour-error-text', 'var(--colour-error-text)');
+            root.style.setProperty('--colour-warning-background', 'var(--colour-warning-background)');
+            root.style.setProperty('--colour-warning-text', 'var(--colour-warning-text)');
             
             // Background images are both style and theme dependent
             const bgPrefix = `--bg-landscape-${style}-${effectiveTheme}`;

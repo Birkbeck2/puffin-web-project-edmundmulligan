@@ -19,7 +19,7 @@
     width: 15rem;
     margin-right: 1.5rem;
     margin-bottom: 1rem;
-    border: var(--border-weight) var(--border-style) var(--color-page-text);
+    border: var(--border-weight) var(--border-style) var(--colour-page-text);
     border-radius: var(--border-radius);
     padding: 1rem;
     box-sizing: border-box;
@@ -74,7 +74,7 @@
     justify-content: space-around;
     gap: 1rem;
     padding: 1rem;
-    border: var(--border-weight) var(--border-style) var(--color-page-text);
+    border: var(--border-weight) var(--border-style) var(--colour-page-text);
     border-radius: var(--border-radius);
     margin-bottom: 1rem;
 }
@@ -132,7 +132,7 @@
     width: 80%;
     max-width: 43rem;
     text-align: center;
-    color: #ccc;
+    color: var(--colour-light-grey);
     padding: 0.6rem 0;
     min-height: 3rem;
 }
@@ -152,13 +152,13 @@
     position: absolute;
     top: 1rem;
     right: 2.2rem;
-    color: #f1f1f1;
+    color: var(--colour-white);
     cursor: pointer;
 }
 
 .image-modal-close:hover,
 .image-modal-close:focus {
-    color: #bbb;
+    color: var(--colour-medium-grey);
     text-decoration: none;
     cursor: pointer;
 }

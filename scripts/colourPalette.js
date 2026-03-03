@@ -4,10 +4,15 @@
  * Copyright: (c) 2026 The Embodied Mind
  * License: MIT
  * Description: JavaScript for the colour palette preview page
+ * 
+ * This file runs in the browser and uses browser APIs like getComputedStyle and document.
  */
 
+/* eslint-env browser */
+/* global getComputedStyle, document */
+
 /**
- * ColourPalette class for managing color conversion, contrast calculation, and display
+ * ColourPalette class for managing colour conversion, contrast calculation, and display
  */
 class ColourPalette {
     /**
@@ -61,22 +66,22 @@ class ColourPalette {
 
     /**
  * Calculate contrast ratio between two colors
- * @param {string} color1 - HSL or RGB color string
- * @param {string} color2 - HSL or RGB color string
+ * @param {string} colour1 - HSL or RGB colour string
+ * @param {string} colour2 - HSL or RGB colour string
  * @returns {number} Contrast ratio
  */
-    calculateContrast(color1, color2) {
+    calculateContrast(colour1, colour2) {
     // Convert RGB to HSL if needed
-        if (color1.startsWith('rgb(') || color1.startsWith('rgb ')) {
-            color1 = this.rgbToHsl(color1);
+        if (colour1.startsWith('rgb(') || colour1.startsWith('rgb ')) {
+            colour1 = this.rgbToHsl(colour1);
         }
-        if (color2.startsWith('rgb(') || color2.startsWith('rgb ')) {
-            color2 = this.rgbToHsl(color2);
+        if (colour2.startsWith('rgb(') || colour2.startsWith('rgb ')) {
+            colour2 = this.rgbToHsl(colour2);
         }
     
         // Normalize both colors to handle different HSL formats
-        const normalized1 = this.normalizeHSL(color1);
-        const normalized2 = this.normalizeHSL(color2);
+        const normalized1 = this.normalizeHSL(colour1);
+        const normalized2 = this.normalizeHSL(colour2);
     
         // More flexible regex that handles optional decimals and whitespace
         const hslRegex = /hsl\(\s*(\d+(?:\.\d+)?)\s*,?\s*(\d+(?:\.\d+)?)\s*%\s*,?\s*(\d+(?:\.\d+)?)\s*%\s*\)/;
@@ -86,8 +91,8 @@ class ColourPalette {
     
         if (!match1 || !match2) {
             console.warn('Could not parse colors:', {
-                original1: color1,
-                original2: color2,
+                original1: colour1,
+                original2: colour2,
                 normalized1: normalized1,
                 normalized2: normalized2
             });
@@ -119,13 +124,23 @@ class ColourPalette {
     }
 
     /**
- * Parse RGB color to HSL format
- * @param {string} rgbString - RGB color string like 'rgb(255, 0, 0)' or 'rgb(255 0 0)'
- * @returns {string} HSL color string
+ * Parse RGB colour to HSL format
+ * @param {string} rgbString - RGB colour string like 'rgb(255, 0, 0)' or 'rgb(255 0 0)'
+ * @returns {string} HSL colour string
  */
     rgbToHsl(rgbString) {
-    // Parse RGB values - handle both comma and space separated formats
-        const match = rgbString.match(/rgb[a]?\(\s*(\d+)\s*[,\s]\s*(\d+)\s*[,\s]\s*(\d+)/);
+    // Parse RGB values - handle multiple formats: rgb(255, 0, 0), rgb(255 0 0), rgba(255, 0, 0, 1)
+        // Try comma-separated first
+        let match = rgbString.match(/rgba?\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)/);
+        // If that fails, try space-separated
+        if (!match) {
+            match = rgbString.match(/rgba?\(\s*(\d+)\s+(\d+)\s+(\d+)/);
+        }
+        // If both fail, try mixed (shouldn't happen but be defensive)
+        if (!match) {
+            match = rgbString.match(/rgba?\(\s*(\d+)\s*[,\s]\s*(\d+)\s*[,\s]\s*(\d+)/);
+        }
+        
         if (!match) {
             console.warn('Could not parse RGB:', rgbString);
             return rgbString;
@@ -161,9 +176,84 @@ class ColourPalette {
     }
 
     /**
+ * Parse relative colour syntax: hsl(from var(...) h s 18%)
+ * @param {string} relativeColorString - String like "hsl(from hsl(180deg 100% 40%) h s 18%)"
+ * @returns {string} Computed HSL string
+ */
+    parseRelativeColorSyntax(relativeColorString) {
+        // Match: hsl(from <color> h s l) where h/s/l can be values or keywords
+        const match = relativeColorString.match(/hsl\(\s*from\s+hsl\(([^)]+)\)\s+([^)]+)\)/);
+        
+        if (!match) {
+            return null;
+        }
+        
+        // Parse the base colour: "180deg 100% 40%" or "180, 100%, 40%"
+        const baseColourStr = match[1];
+        const baseMatch = baseColourStr.match(/(\d+(?:\.\d+)?)(?:deg)?\s*[,\s]\s*(\d+(?:\.\d+)?)\s*%\s*[,\s]?\s*(\d+(?:\.\d+)?)\s*%/);
+        
+        if (!baseMatch) {
+            console.warn('Could not parse base colour:', baseColourStr);
+            return null;
+        }
+        
+        const baseH = parseFloat(baseMatch[1]);
+        const baseS = parseFloat(baseMatch[2]);
+        const baseL = parseFloat(baseMatch[3]);
+        
+        // Parse the output components: "h s 18%"
+        const outputStr = match[2].trim();
+        const parts = outputStr.split(/\s+/);
+        
+        // The output format is always: <hue> <saturation> <lightness>
+        // Each can be 'h', 's', 'l' (use from base) or a literal value
+        
+        let h = baseH;
+        let s = baseS;
+        let l = baseL;
+        
+        if (parts.length >= 1) {
+            // First component is hue
+            if (parts[0] === 'h') {
+                h = baseH;
+            } else if (parts[0].endsWith('deg')) {
+                h = parseFloat(parts[0]);
+            } else if (!isNaN(parseFloat(parts[0]))) {
+                h = parseFloat(parts[0]);
+            }
+        }
+        
+        if (parts.length >= 2) {
+            // Second component is saturation
+            if (parts[1] === 's') {
+                s = baseS;
+            } else if (parts[1].endsWith('%')) {
+                s = parseFloat(parts[1]);
+            } else if (!isNaN(parseFloat(parts[1]))) {
+                s = parseFloat(parts[1]);
+            }
+        }
+        
+        if (parts.length >= 3) {
+            // Third component is lightness
+            if (parts[2] === 'l') {
+                l = baseL;
+            } else if (parts[2].endsWith('%')) {
+                l = parseFloat(parts[2]);
+            } else if (!isNaN(parseFloat(parts[2]))) {
+                l = parseFloat(parts[2]);
+            }
+        }
+        
+        console.log(`[parseRelativeColor] "${relativeColorString}" -> hsl(${h}, ${s}%, ${l}%)`);
+        
+        return `hsl(${h}, ${s}%, ${l}%)`;
+    }
+
+    /**
  * Get computed CSS variable value
- * @param {string} varName - CSS variable name (e.g., '--color-warning-background')
- * @returns {string} Computed color value in HSL format
+ * @param {string} varName - CSS variable name (e.g., '--colour-warning-background')
+ * @returns {string} Computed colour value in HSL format
  */
     getCSSVariableValue(varName) {
         const value = getComputedStyle(document.documentElement).getPropertyValue(varName).trim();
@@ -171,6 +261,16 @@ class ColourPalette {
         if (!value) {
             console.warn('No value found for CSS variable:', varName);
             return '';
+        }
+    
+        // Check if it's a relative colour syntax that the browser didn't compute
+        if (value.startsWith('hsl(from ') || value.startsWith('hsl( from ')) {
+            const parsed = this.parseRelativeColorSyntax(value);
+            if (parsed) {
+                return parsed;
+            }
+            console.warn('Could not parse relative colour syntax:', value);
+            return value;
         }
     
         // If the value is in RGB format (which browsers often return for computed styles), convert to HSL
@@ -183,8 +283,8 @@ class ColourPalette {
     }
 
     /**
- * Normalize HSL color string to standard format
- * @param {string} hslString - HSL color string (may have 'deg' suffix) or RGB string
+ * Normalize HSL colour string to standard format
+ * @param {string} hslString - HSL colour string (may have 'deg' suffix) or RGB string
  * @returns {string} Normalized HSL string
  */
     normalizeHSL(hslString) {
@@ -193,10 +293,28 @@ class ColourPalette {
             hslString = this.rgbToHsl(hslString);
         }
     
-        // Match HSL patterns with or without 'deg' suffix, with commas or spaces
-        // Handles: hsl(275deg 100% 25%), hsl(275, 100%, 25%), hsl(275 100% 25%)
-        const match = hslString.match(/hsl[a]?\(\s*(\d+(?:\.\d+)?)(?:deg)?\s*[,\s]\s*(\d+(?:\.\d+)?)\s*%\s*[,\s]?\s*(\d+(?:\.\d+)?)\s*%/);
+        // Match HSL patterns with or without 'deg' suffix
+        // Handle various formats:
+        // - hsl(275deg 100% 25%) - modern space-separated with deg
+        // - hsl(275, 100%, 25%) - traditional comma-separated  
+        // - hsl(275 100% 25%) - modern space-separated without deg
+        // - hsla(275, 100%, 25%, 1) - with alpha
+        
+        // Try modern format first (with optional deg): hsl(180deg 100% 50%) or hsl(180 100% 50%)
+        let match = hslString.match(/hsla?\(\s*(\d+(?:\.\d+)?)(?:deg)?\s+(\d+(?:\.\d+)?)\s*%\s+(\d+(?:\.\d+)?)\s*%/);
+        
+        // If that fails, try comma-separated format: hsl(180, 100%, 50%)
+        if (!match) {
+            match = hslString.match(/hsla?\(\s*(\d+(?:\.\d+)?)(?:deg)?\s*,\s*(\d+(?:\.\d+)?)\s*%\s*,\s*(\d+(?:\.\d+)?)\s*%/);
+        }
+        
+        // If both fail, try the most permissive pattern (mixed separators - shouldn't happen)
+        if (!match) {
+            match = hslString.match(/hsla?\(\s*(\d+(?:\.\d+)?)(?:deg)?\s*[,\s]\s*(\d+(?:\.\d+)?)\s*%\s*[,\s]?\s*(\d+(?:\.\d+)?)\s*%/);
+        }
+        
         if (match) {
+            // Convert to standardized comma-separated format
             return `hsl(${match[1]}, ${match[2]}%, ${match[3]}%)`;
         }
     
@@ -205,12 +323,12 @@ class ColourPalette {
     }
 
     /**
- * Initialize color values from CSS variables
+ * Initialize colour value from CSS variables
  */
     initializeColorValues() {
-        const colorValueDivs = document.querySelectorAll('.color-value[data-var]');
+        const colourValueDivs = document.querySelectorAll('.colour-value[data-var]');
     
-        colorValueDivs.forEach(div => {
+        colourValueDivs.forEach(div => {
             const varName = div.getAttribute('data-var');
             if (varName) {
                 const rawValue = getComputedStyle(document.documentElement).getPropertyValue(varName).trim();
@@ -228,13 +346,15 @@ class ColourPalette {
     }
 
     /**
- * Initialize contrast information for all color swatches
+ * Initialize contrast information for all colour swatches
  */
     initializeContrastInfo() {
         const contrastDivs = document.querySelectorAll('.contrast-info');
+        
+        console.log(`[ColourPalette] Initializing ${contrastDivs.length} contrast checks...`);
     
-        contrastDivs.forEach(div => {
-        // Check if we have CSS variable references or direct color values
+        contrastDivs.forEach((div, index) => {
+        // Check if we have CSS variable references or direct colour value
             const bgVar = div.getAttribute('data-bg-var');
             const fgVar = div.getAttribute('data-fg-var');
         
@@ -253,35 +373,52 @@ class ColourPalette {
                 const normalizedBg = this.normalizeHSL(bg);
                 const normalizedFg = this.normalizeHSL(fg);
                 const ratio = this.calculateContrast(normalizedBg, normalizedFg);
+                const level = this.getWCAGLevel(ratio);
             
-                if (ratio === 0) {
-                    console.error('Contrast calculation failed:', {
+                // Log problematic cases
+                if (level === 'Fail' || ratio === 0 || isNaN(ratio)) {
+                    console.error(`[${index+1}] PROBLEM: ${bgVar} / ${fgVar}`, {
                         bgVar,
                         fgVar,
-                        bg,
-                        fg,
-                        normalizedBg,
-                        normalizedFg
+                        bgRaw: bg,
+                        fgRaw: fg,
+                        bgNormalized: normalizedBg,
+                        fgNormalized: normalizedFg,
+                        ratio: ratio,
+                        level: level,
+                        isNaN: isNaN(ratio),
+                        isZero: ratio === 0
                     });
+                } else {
+                    console.log(`[${index+1}] OK: ${level} ${ratio.toFixed(2)}:1 - ${bgVar?.substring(8,50) || 'direct'}`);
+                }
+            
+                if (ratio === 0 || isNaN(ratio)) {
                     div.innerHTML = `
-                    <span class="wcag-badge" style="background-color: red;">Error</span>
+                    <span class="wcag-badge" style="background-color: red; color: white; padding: 2px 8px; border-radius: 3px;">Error</span>
                     Could not calculate contrast
                 `;
                 } else {
-                    const level = this.getWCAGLevel(ratio);
+                    const badgeColour = level === 'AAA' ? '#28a745' : level === 'AA' ? '#0d6efd' : level === 'A' ? '#ffc107' : '#dc3545';
                     div.innerHTML = `
-                    Contrast: ${ratio.toFixed(2)}:1
-                    <span class="wcag-badge">WCAG ${level}</span>
+                    Contrast: <strong>${ratio.toFixed(2)}:1</strong>
+                    <span class="wcag-badge" style="background-color: ${badgeColour}; color: white; padding: 2px 8px; border-radius: 3px; margin-left: 10px;">WCAG ${level}</span>
                 `;
                 }
             } else {
-                console.warn('Missing color values for contrast calculation:', { bgVar, fgVar, bg, fg });
+                console.warn(`[${index+1}] Missing values:`, { bgVar, fgVar, hasBg: !!bg, hasFg: !!fg });
+                div.innerHTML = `
+                    <span class="wcag-badge" style="background-color: orange; color: white; padding: 2px 8px; border-radius: 3px;">Warning</span>
+                    Missing colour value (bg:${!!bg}, fg:${!!fg})
+                `;
             }
         });
+        
+        console.log('[ColourPalette] Contrast initialization complete');
     }
 
     /**
- * Initialize the color palette display
+ * Initialize the colour palette display
  */
     initialize() {
         this.initializeColorValues();
@@ -289,13 +426,29 @@ class ColourPalette {
     }
 }
 
-// Create singleton instance and initialize when DOM is loaded
+// Create singleton instance and initialize when DOM and CSS are loaded
 const colourPalette = new ColourPalette();
+
+function initializeWhenReady() {
+    // Check if a known CSS variable is available (indicates CSS is loaded)
+    const testColor = getComputedStyle(document.documentElement).getPropertyValue('--colour-indigo').trim();
+    
+    if (testColor) {
+        // CSS is loaded, initialize
+        colourPalette.initialize();
+    } else {
+        // CSS not ready yet, wait a bit and try again
+        console.warn('CSS not loaded yet, retrying...');
+        setTimeout(initializeWhenReady, 100);
+    }
+}
 
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => {
-        colourPalette.initialize();
+        // Give CSS a moment to fully load
+        setTimeout(initializeWhenReady, 50);
     });
 } else {
-    colourPalette.initialize();
+    // DOM already loaded
+    initializeWhenReady();
 }

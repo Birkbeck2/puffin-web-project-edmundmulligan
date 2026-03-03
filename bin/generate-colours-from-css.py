@@ -88,7 +88,7 @@ def generate_latex_colors(colors):
     output.append('% File: colours.tex')
     output.append('% Author: Edmund Mulligan <edmund@edmundmulligan.name>')
     output.append('% Auto-generated from CSS - DO NOT EDIT MANUALLY')
-    output.append('% Run generate-colors-from-css.py to regenerate')
+    output.append('% Run generate-colours-from-css.py to regenerate')
     output.append('% Description: Contains color definitions converted from CSS HSL to LaTeX HSB')
     output.append('%' * 75)
     output.append('')
@@ -111,8 +111,8 @@ def generate_latex_colors(colors):
 def main():
     """Main execution function"""
     if len(sys.argv) < 2:
-        print('Usage: generate-colors-from-css.py <css-file> [output-file]')
-        print('Example: generate-colors-from-css.py ../../styles/main.css ../common/colours.tex')
+        print('Usage: generate-colours-from-css.py <css-file> [output-file]')
+        print('Example: generate-colours-from-css.py ../../styles/main.css ../common/colours.tex')
         sys.exit(1)
     
     css_file = sys.argv[1]
