@@ -205,7 +205,7 @@
             // Only show image if all three required selections are made
             if (data.avatarChoice && data.genderChoice && data.ageChoice) {
                 const imageName = `rachel-mulligan-${data.avatarChoice}-${data.ageChoice}-${data.genderChoice}.png`;
-                const imagePath = `../images/${imageName}`;
+                const imagePath = `../images/portraits/${imageName}`;
             
                 // Create and set the image
                 output.innerHTML = `<img src="${imagePath}" alt="Your avatar: ${data.avatarChoice}, ${data.ageChoice}, ${data.genderChoice}" style="width: 100%; height: auto; border-radius: var(--border-radius, 0.5rem);">`;
@@ -546,7 +546,7 @@
                 // Only show image if all three required selections are made
                 if (data.avatarChoice && data.genderChoice && data.ageChoice) {
                     const imageName = `rachel-mulligan-${data.avatarChoice}-${data.ageChoice}-${data.genderChoice}.png`;
-                    const imagePath = `../images/${imageName}`;
+                    const imagePath = `../images/portraits/${imageName}`;
                     const studentName = data.name || 'Student';
                 
                     // Create figure with image and caption

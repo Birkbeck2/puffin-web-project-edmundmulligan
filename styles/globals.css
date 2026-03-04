@@ -14,30 +14,20 @@
 
 :root {
     /* Background image sources */
-    --bg-landscape-normal-light:              url('../images/background-web-landscape-light.svg');
-    --bg-landscape-normal-dark:               url('../images/background-web-landscape-dark.svg');
-    --bg-portrait-normal-light:               url('../images/background-web-portrait-light.svg');
-    --bg-portrait-normal-dark:                url('../images/background-web-portrait-dark.svg');
+    --bg-landscape-normal-light:              url('../images/backgrounds/background-web-landscape-normal-light.svg');
+    --bg-landscape-normal-dark:               url('../images/backgrounds/background-web-landscape-normal-dark.svg');
+    --bg-portrait-normal-light:               url('../images/backgrounds/background-web-portrait-normal-light.svg');
+    --bg-portrait-normal-dark:                url('../images/backgrounds/background-web-portrait-normal-dark.svg');
     
-    /* Background images per style-theme combination */
-
-    /* Normal style backgrounds */
-    --bg-landscape-normal-light:       var(--bg-landscape-normal-light);
-    --bg-landscape-normal-dark:        var(--bg-landscape-normal-dark);
-    --bg-portrait-normal-light:        var(--bg-portrait-normal-light);
-    --bg-portrait-normal-dark:         var(--bg-portrait-normal-dark);
+    --bg-landscape-subdued-light:             url('../images/backgrounds/background-web-landscape-subdued-light.svg');
+    --bg-landscape-subdued-dark:              url('../images/backgrounds/background-web-landscape-subdued-dark.svg');
+    --bg-portrait-subdued-light:              url('../images/backgrounds/background-web-portrait-subdued-light.svg');
+    --bg-portrait-subdued-dark:               url('../images/backgrounds/background-web-portrait-subdued-dark.svg');
     
-    /* Subdued style backgrounds */
-    --bg-landscape-subdued-light:      var(--bg-landscape-light);
-    --bg-landscape-subdued-dark:       var(--bg-landscape-dark);
-    --bg-portrait-subdued-light:       var(--bg-portrait-light);
-    --bg-portrait-subdued-dark:        var(--bg-portrait-dark);
-    
-    /* Vibrant style backgrounds */
-    --bg-landscape-vibrant-light:      var(--bg-landscape-light);
-    --bg-landscape-vibrant-dark:       var(--bg-landscape-dark);
-    --bg-portrait-vibrant-light:       var(--bg-portrait-light);
-    --bg-portrait-vibrant-dark:        var(--bg-portrait-dark);
+    --bg-landscape-vibrant-light:             url('../images/backgrounds/background-web-landscape-vibrant-light.svg');
+    --bg-landscape-vibrant-dark:              url('../images/backgrounds/background-web-landscape-vibrant-dark.svg');
+    --bg-portrait-vibrant-light:              url('../images/backgrounds/background-web-portrait-vibrant-light.svg');
+    --bg-portrait-vibrant-dark:               url('../images/backgrounds/background-web-portrait-vibrant-dark.svg');
     
     /* Active background images - default to normal-light, overridden by theme-switcher.js */
     --bg-landscape:                    var(--bg-landscape-normal-light);

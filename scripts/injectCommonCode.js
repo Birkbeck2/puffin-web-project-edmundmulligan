@@ -47,7 +47,7 @@
             header.innerHTML = `
 <div class="header-minimal">
     <div class="header-text">
-        <img class="header-image mirror inline-header" src="${this.pathPrefix}images/cat-1299082.svg" alt="" aria-hidden="true">
+        <img class="header-image mirror inline-header" src="${this.pathPrefix}images/icons/wizard.svg" alt="" aria-hidden="true">
         <div class="inline-header">
             <h1 class="site-title">Web Witchcraft and Wizardry</h1>
             <nav class="site-navigation" aria-label="Site navigation">
@@ -66,7 +66,7 @@
                 </ul>
             </nav>
         </div>
-        <img class="header-image inline-header" src="${this.pathPrefix}images/witch-151167.svg" alt="" aria-hidden="true">
+        <img class="header-image inline-header" src="${this.pathPrefix}images/icons/witch.svg" alt="" aria-hidden="true">
         <div class="header-button">
             <button aria-label="Expand header">
                 <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
@@ -77,7 +77,7 @@
 
 <div class="header-full">
     <div class="header-left">
-        <img class="header-image mirror" src="${this.pathPrefix}images/cat-1299082.svg" alt="" aria-hidden="true">
+        <img class="header-image mirror" src="${this.pathPrefix}images/icons/wizard.svg" alt="" aria-hidden="true">
     </div>
 
     <div class="header-center">
@@ -118,7 +118,7 @@
     </div>
 
     <div class="header-right">
-        <img class="header-image" src="${this.pathPrefix}images/witch-151167.svg" alt="" aria-hidden="true">
+        <img class="header-image" src="${this.pathPrefix}images/icons/witch.svg" alt="" aria-hidden="true">
     </div>
 </div>
         `;
@@ -154,10 +154,10 @@
     <div class="footer-logo">
         <img 
             id="embodied-mind-logo"
-            src="${this.pathPrefix}images/logo-embodied-mind-with-name-purple.png" 
+            src="${this.pathPrefix}images/logos/logo-embodied-mind-normal-light.svg" 
             alt="The Embodied Mind logo. A brain with a moustache winking"
-            data-light-logo="${this.pathPrefix}images/logo-embodied-mind-with-name-purple.png"
-            data-dark-logo="${this.pathPrefix}images/logo-embodied-mind-with-name-cyan.png"
+            data-light-logo="${this.pathPrefix}images/logos/logo-embodied-mind-normal-light.svg"
+            data-dark-logo="${this.pathPrefix}images/logos/logo-embodied-mind-normal-dark.svg"
         >
     </div>
 </div>
