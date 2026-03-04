@@ -104,26 +104,24 @@ DARK_OPACITIES = {
     'opacitycorner': '0.7',
 }
 
-def generate_file(orientation, mode, source_dir='source'):
+def generate_file(orientation, mode, style, source_dir='artwork/source/image-2'):
     """Generate a single background-web file"""
     
-    filename = f"{source_dir}/background-web-{orientation}-{mode}.tex"
+    filename = f"{source_dir}/background-web-{orientation}-{style}-{mode}.tex"
     
     # Select parameters based on orientation
     package_orientation = orientation
     position_params = PORTRAIT_PARAMS if orientation == 'portrait' else LANDSCAPE_PARAMS
     
     # Select opacities and colors based on mode
+
+    bg_color = f"web_{style}_{mode}_background"
+    color_one = f"web_{style}_{mode}_button_background"
+    color_two = f"web_{style}_{mode}_code_background"
     if mode == 'light':
         opacity_params = LIGHT_OPACITIES
-        bg_color = "web_background_light"
-        color_one = "web_background_light_highlight"
-        color_two = "web_background_light_alt"
     else:
         opacity_params = DARK_OPACITIES
-        bg_color = "web_background_dark"
-        color_one = "web_background_dark_highlight"
-        color_two = "web_background_dark_alt"
     
     # Combine all parameters
     all_params = {**position_params, **opacity_params}
@@ -134,9 +132,9 @@ def generate_file(orientation, mode, source_dir='source'):
     # Generate the file content
     content = f"""\\documentclass[border=0mm]{{standalone}}
 
-\\input{{common/packages-background.tex}}
-\\input{{common/packages-background-{package_orientation}.tex}}
-\\input{{common/colours.tex}}
+\\input{{artwork/common/packages-background.tex}}
+\\input{{artwork/common/packages-background-{package_orientation}.tex}}
+\\input{{artwork/common/colours.tex}}
 
 % {orientation.capitalize()} dimensions ({mode} mode)
 \\def\\bgcolorbase{{{bg_color}}}
@@ -146,7 +144,7 @@ def generate_file(orientation, mode, source_dir='source'):
 {param_defs}
 
 \\begin{{document}}
-  \\input{{common/background-web-template.tex}}
+  \\input{{artwork/common/background-web-template.tex}}
 \\end{{document}}
 """
     
@@ -160,10 +158,12 @@ def main():
     """Generate all background-web files"""
     orientations = ['portrait', 'landscape']
     modes = ['light', 'dark']
+    themes = ['normal', 'subdues', 'vibrant']
     
     for orientation in orientations:
         for mode in modes:
-            generate_file(orientation, mode)
+            for style in themes:
+                generate_file(orientation, mode, style)
     
     print("\nAll background-web-*.tex files have been generated!")
 

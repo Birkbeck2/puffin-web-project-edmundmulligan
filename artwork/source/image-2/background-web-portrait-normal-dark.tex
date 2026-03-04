@@ -1,15 +1,14 @@
 \documentclass[border=0mm]{standalone}
 
-\usepackage{xcolor}
-\usepackage{tikz}
-
-\input{../../common/colours.tex}
+\input{artwork/common/packages-background.tex}
+\input{artwork/common/packages-background-portrait.tex}
+\input{artwork/common/colours.tex}
 
 % Portrait dimensions (dark mode)
-\def\bgcolorbase{web_background_normal_dark}
-\def\colorone{web_background_normal_dark_highlight}
-\def\colortwo{web_background_normal_dark_alt}
-\def\gridcolor{web_background_normal_dark_alt}
+\def\bgcolorbase{web_normal_dark_background}
+\def\colorone{web_normal_dark_button_background}
+\def\colortwo{web_normal_dark_code_background}
+\def\gridcolor{web_normal_dark_code_background}
 \def\bgwidth{5.5}
 \def\bgheight{8.5}
 \def\browserx{1.2}
@@ -53,5 +52,5 @@
 \def\opacitycorner{0.7}
 
 \begin{document}
-  \input{../../common/background-web-template.tex}
+  \input{artwork/common/background-web-template.tex}
 \end{document}

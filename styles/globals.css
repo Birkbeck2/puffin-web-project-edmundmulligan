@@ -14,18 +14,18 @@
 
 :root {
     /* Background image sources */
-    --bg-landscape-light:              url('../images/background-web-landscape-light.svg');
-    --bg-landscape-dark:               url('../images/background-web-landscape-dark.svg');
-    --bg-portrait-light:               url('../images/background-web-portrait-light.svg');
-    --bg-portrait-dark:                url('../images/background-web-portrait-dark.svg');
+    --bg-landscape-normal-light:              url('../images/background-web-landscape-light.svg');
+    --bg-landscape-normal-dark:               url('../images/background-web-landscape-dark.svg');
+    --bg-portrait-normal-light:               url('../images/background-web-portrait-light.svg');
+    --bg-portrait-normal-dark:                url('../images/background-web-portrait-dark.svg');
     
     /* Background images per style-theme combination */
 
     /* Normal style backgrounds */
-    --bg-landscape-normal-light:       var(--bg-landscape-light);
-    --bg-landscape-normal-dark:        var(--bg-landscape-dark);
-    --bg-portrait-normal-light:        var(--bg-portrait-light);
-    --bg-portrait-normal-dark:         var(--bg-portrait-dark);
+    --bg-landscape-normal-light:       var(--bg-landscape-normal-light);
+    --bg-landscape-normal-dark:        var(--bg-landscape-normal-dark);
+    --bg-portrait-normal-light:        var(--bg-portrait-normal-light);
+    --bg-portrait-normal-dark:         var(--bg-portrait-normal-dark);
     
     /* Subdued style backgrounds */
     --bg-landscape-subdued-light:      var(--bg-landscape-light);
