@@ -1,9 +1,16 @@
 #!/usr/bin/env node
 
-/**
- * Script to check all color contrasts in the palette
- * Parses colours.css and calculates WCAG contrast ratios
- */
+/*
+ **********************************************************************
+ * File       : check-palette-contrasts.js
+ * Author     : Edmund Mulligan <edmund@edmundmulligan.name>
+ * Copyright  : (c) 2026 The Embodied Mind
+ * License    : MIT License
+ * Description:
+ *   Script to check all color contrasts in the palette
+ *   Parses colours.css and calculates WCAG contrast ratios
+ **********************************************************************
+*/
 
 const fs = require('fs');
 const path = require('path');

@@ -1,5 +1,16 @@
 #!/usr/bin/env node
 
+/*
+ **********************************************************************
+ * File       : test-specific-contrasts.js
+ * Author     : Edmund Mulligan <edmund@edmundmulligan.name>
+ * Copyright  : (c) 2026 The Embodied Mind
+ * License    : MIT License
+ * Description:
+ *   Test specific color contrast calculations for debugging
+ **********************************************************************
+*/
+
 function hslToRgb(h, s, l) {
     h = h / 360;
     s = s / 100;

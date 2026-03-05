@@ -1,8 +1,15 @@
 #!/usr/bin/env node
 
-/**
- * Test contrast ratios for button and lesson navigation colors
- */
+/*
+ **********************************************************************
+ * File       : test-button-lesson-contrasts.js
+ * Author     : Edmund Mulligan <edmund@edmundmulligan.name>
+ * Copyright  : (c) 2026 The Embodied Mind
+ * License    : MIT License
+ * Description:
+ *   Test contrast ratios for button and lesson navigation colors
+ **********************************************************************
+*/
 
 // Function to convert HSL to RGB
 function hslToRgb(h, s, l) {

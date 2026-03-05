@@ -1,8 +1,15 @@
 #!/usr/bin/env node
 
-/**
- * Calculate exact contrast ratios for the reportedly failing colour pair
- */
+/*
+ **********************************************************************
+ * File       : test-failing-colours.js
+ * Author     : Edmund Mulligan <edmund@edmundmulligan.name>
+ * Copyright  : (c) 2026 The Embodied Mind
+ * License    : MIT License
+ * Description:
+ *   Calculate exact contrast ratios for reportedly failing colour pairs
+ **********************************************************************
+*/
 
 // Function to convert HSL to RGB
 function hslToRgb(h, s, l) {

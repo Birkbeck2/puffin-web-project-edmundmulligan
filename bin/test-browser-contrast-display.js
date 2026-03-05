@@ -1,8 +1,16 @@
 #!/usr/bin/env node
 
-/**
- * Test colourPalette.html in a browser context to verify all contrasts display correctly
- */
+/*
+ **********************************************************************
+ * File       : test-browser-contrast-display.js
+ * Author     : Edmund Mulligan <edmund@edmundmulligan.name>
+ * Copyright  : (c) 2026 The Embodied Mind
+ * License    : MIT License
+ * Description:
+ *   Test colourPalette.html in a browser context to verify
+ *   all contrasts display correctly
+ **********************************************************************
+*/
 
 const fs = require('fs');
 const path = require('path');

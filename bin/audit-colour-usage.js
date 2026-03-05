@@ -1,9 +1,16 @@
 #!/usr/bin/env node
 
-/**
- * Audit all HTML and CSS files for colour usage
- * Identifies hardcoded colours and non-theme-compliant color references
- */
+/*
+ **********************************************************************
+ * File       : audit-colour-usage.js
+ * Author     : Edmund Mulligan <edmund@edmundmulligan.name>
+ * Copyright  : (c) 2026 The Embodied Mind
+ * License    : MIT License
+ * Description:
+ *   Audit all HTML and CSS files for colour usage
+ *   Identifies hardcoded colours and non-theme-compliant color references
+ **********************************************************************
+*/
 
 const fs = require('fs');
 const path = require('path');

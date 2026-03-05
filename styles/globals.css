@@ -10,7 +10,7 @@
  */
 
 /* Import colour definitions from colours.css */
-@import "./colours.css";
+@import url("./colours.css");
 
 :root {
     /* Background image sources */
@@ -18,12 +18,10 @@
     --bg-landscape-normal-dark:               url('../images/backgrounds/background-web-landscape-normal-dark.svg');
     --bg-portrait-normal-light:               url('../images/backgrounds/background-web-portrait-normal-light.svg');
     --bg-portrait-normal-dark:                url('../images/backgrounds/background-web-portrait-normal-dark.svg');
-    
     --bg-landscape-subdued-light:             url('../images/backgrounds/background-web-landscape-subdued-light.svg');
     --bg-landscape-subdued-dark:              url('../images/backgrounds/background-web-landscape-subdued-dark.svg');
     --bg-portrait-subdued-light:              url('../images/backgrounds/background-web-portrait-subdued-light.svg');
     --bg-portrait-subdued-dark:               url('../images/backgrounds/background-web-portrait-subdued-dark.svg');
-    
     --bg-landscape-vibrant-light:             url('../images/backgrounds/background-web-landscape-vibrant-light.svg');
     --bg-landscape-vibrant-dark:              url('../images/backgrounds/background-web-landscape-vibrant-dark.svg');
     --bg-portrait-vibrant-light:              url('../images/backgrounds/background-web-portrait-vibrant-light.svg');

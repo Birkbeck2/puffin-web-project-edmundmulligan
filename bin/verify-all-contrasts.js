@@ -1,8 +1,15 @@
 #!/usr/bin/env node
 
-/**
- * Comprehensive contrast verification for all colors in colourPalette.html
- */
+/*
+ **********************************************************************
+ * File       : verify-all-contrasts.js
+ * Author     : Edmund Mulligan <edmund@edmundmulligan.name>
+ * Copyright  : (c) 2026 The Embodied Mind
+ * License    : MIT License
+ * Description:
+ *   Comprehensive contrast verification for all colors in colourPalette.html
+ **********************************************************************
+*/
 
 const fs = require('fs');
 const path = require('path');
