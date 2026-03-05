@@ -68,7 +68,7 @@ nav.site-navigation button {
 nav.site-navigation a::before,
 nav.site-navigation button::before {
     content: "\f0d0";  /* Font Awesome Magic Wand */
-    font-family: "Font Awesome 7 Pro";
+    font-family: var(--font-family-icons);
     font-weight: 900; /* needed for solid style icons */
 }
 
@@ -85,7 +85,7 @@ nav.site-navigation a:focus-visible::before,
 nav.site-navigation button:hover::before,
 nav.site-navigation button:focus-visible::before {
     content: "\e2ca";  /* Font Awesome Magic Wand with sparkles */
-    font-family: "Font Awesome 7 Pro";
+    font-family: var(--font-family-icons);
     font-weight: 900; /* needed for solid style icons */
 }
 

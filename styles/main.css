@@ -45,7 +45,7 @@ body {
     * N.B. These are inherited by child elements unless overridden
     */
 
-    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    font-family: var(--font-family-sans);
     font-style: normal;
     line-height: 1.6;
     text-align: left;
@@ -79,7 +79,7 @@ footer {
 /* Center all headings and use Cinzel (an elegant serif Google font) */
 h1, h2, h3, h4, h5, h6 {
     /* Use Cinzel font for headings */
-    font-family: Cinzel, Georgia, "Times New Roman", serif;
+    font-family: var(--font-family-serif);
     font-weight: 600;
     text-align: center;
 }
@@ -110,7 +110,7 @@ p, li {
 
 /* Make inline code elements the same size as paragraph text */
 code {
-    font-family: 'Fira Code', monospace;
+    font-family: var(--font-family-mono);
     font-size: var(--fontsize-p);
 }
 

@@ -20,7 +20,7 @@
     overflow: hidden;
     margin-bottom: 1rem;
     margin-right: 1rem;
-    font-family: 'Fira Code', monospace;
+    font-family: var(--font-family-mono);
     font-size: var(--fontsize-smallprint);
     line-height: 1.5;
     border-collapse: collapse;

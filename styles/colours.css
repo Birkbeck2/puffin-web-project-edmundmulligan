@@ -27,136 +27,136 @@
     --colour-black: hsl(0deg 0% 0%);
     
      /* non-theme colours */
-     --colour-warning-background:   hsl(from var(--colour-darkred) h s l);     /* darkred */
-     --colour-warning-text:         hsl(0deg 0% 100%);                         /* white */
-     --colour-error-background:     hsl(0deg 100% 35%);                        /* darker red for AAA: 7.20:1 with white */
-     --colour-error-text:           hsl(0deg 0% 100%);                         /* white */
-     --colour-code-background:      hsl(180deg 100% 50%);                      /* cyan */
-     --colour-code-text:            hsl(0deg 0% 0%);                            /* black */
+     --colour-warning-background:                        hsl(from var(--colour-darkred) h s l);     /* darkred */
+     --colour-warning-text:                            hsl(0deg 0% 100%);                         /* white */
+     --colour-error-background:                        hsl(0deg 100% 35%);                        /* darker red for AAA: 7.20:1 with white */
+     --colour-error-text:                              hsl(0deg 0% 100%);                         /* white */
+     --colour-code-background:                         hsl(180deg 100% 50%);                      /* cyan */
+     --colour-code-text:                               hsl(0deg 0% 0%);                            /* black */
 
     /* light theme colours */
-    --colour-normal-light-page-background:     hsl(from var(--colour-light-cyan) h s l);  /* light cyan */
-    --colour-normal-light-page-text:           hsl(from var(--colour-indigo) h s l);  /* indigo */
-    --colour-normal-light-headings-background: hsl(from var(--colour-dark-cyan) h s l);  /* dark cyan */
-    --colour-normal-light-headings-text:       hsl(from var(--colour-purple) h s l);  /* purple */
-    --colour-normal-light-code-background:     hsl(0deg 0% 96%);
-    --colour-normal-light-code-text:           hsl(259deg 100% 35%);
-    --colour-normal-light-button-background:       hsl(from var(--colour-medium-cyan) h s 75%);  /* mid cyan - related to page */
-    --colour-normal-light-button-background-hover: hsl(from var(--colour-dark-cyan) h s 55%);  /* darker cyan on hover - more distinct */
-    --colour-normal-light-button-background-selected: hsl(from var(--colour-dark-cyan) h s 18%);  /* very dark cyan for AAA: 7.82:1 with white text */
-    --colour-normal-light-button-text:             hsl(from var(--colour-indigo) h s l);  /* indigo text - matches page text */
-    --colour-normal-light-button-text-hover:       hsl(from var(--colour-purple) h s l);  /* purple on hover - related */
-    --colour-normal-light-button-text-selected:    hsl(from var(--colour-white) h s l);  /* white when selected - high contrast */
-    --colour-normal-light-link-background:       hsl(from var(--colour-dark-cyan) h s 16%);  /* very dark cyan for AAA: 9.02:1 with white */
-    --colour-normal-light-link-background-hover: hsl(from var(--colour-dark-cyan) h s 10%);  /* even darker on hover: 13.09:1 with light cyan - more distinct */
-    --colour-normal-light-link-background-visited: hsl(from var(--colour-dark-cyan) h s 16%);  /* same as normal: 7.45:1 with light purple */
-    --colour-normal-light-link-text:           hsl(from var(--colour-white) h s l);  /* white text for contrast on dark background */
-    --colour-normal-light-link-text-hover:     hsl(from var(--colour-light-cyan) h s l);  /* light cyan on hover - 94% lightness for AAA */
-    --colour-normal-light-link-text-visited:   hsl(from var(--colour-purple) h s 94%);  /* light purple for visited - distinct from white normal and cyan hover */
-    --colour-normal-light-link-text-focus:     hsl(from var(--colour-purple) h s 94%);  /* light purple for focus - same as visited for consistency */
+    --colour-normal-light-page-background:               hsl(from var(--colour-light-cyan) h s l);  /* light cyan */
+    --colour-normal-light-page-text:                     hsl(from var(--colour-indigo) h s l);  /* indigo */
+    --colour-normal-light-headings-background:           hsl(from var(--colour-dark-cyan) h s l);  /* dark cyan */
+    --colour-normal-light-headings-text:                 hsl(from var(--colour-purple) h s l);  /* purple */
+    --colour-normal-light-code-background:             hsl(0deg 0% 96%);
+    --colour-normal-light-code-text:                   hsl(259deg 100% 35%);
+    --colour-normal-light-button-background:             hsl(from var(--colour-medium-cyan) h s 75%);  /* mid cyan - related to page */
+    --colour-normal-light-button-background-hover:       hsl(from var(--colour-dark-cyan) h s 55%);  /* darker cyan on hover - more distinct */
+    --colour-normal-light-button-background-selected:    hsl(from var(--colour-dark-cyan) h s 18%);  /* very dark cyan for AAA: 7.82:1 with white text */
+    --colour-normal-light-button-text:                   hsl(from var(--colour-indigo) h s l);  /* indigo text - matches page text */
+    --colour-normal-light-button-text-hover:             hsl(from var(--colour-purple) h s l);  /* purple on hover - related */
+    --colour-normal-light-button-text-selected:          hsl(from var(--colour-white) h s l);  /* white when selected - high contrast */
+    --colour-normal-light-link-background:               hsl(from var(--colour-dark-cyan) h s 16%);  /* very dark cyan for AAA: 9.02:1 with white */
+    --colour-normal-light-link-background-hover:         hsl(from var(--colour-dark-cyan) h s 10%);  /* even darker on hover: 13.09:1 with light cyan - more distinct */
+    --colour-normal-light-link-background-visited:       hsl(from var(--colour-dark-cyan) h s 16%);  /* same as normal: 7.45:1 with light purple */
+    --colour-normal-light-link-text:                     hsl(from var(--colour-white) h s l);  /* white text for contrast on dark background */
+    --colour-normal-light-link-text-hover:               hsl(from var(--colour-light-cyan) h s l);  /* light cyan on hover - 94% lightness for AAA */
+    --colour-normal-light-link-text-visited:             hsl(from var(--colour-purple) h s 94%);  /* light purple for visited - distinct from white normal and cyan hover */
+    --colour-normal-light-link-text-focus:               hsl(from var(--colour-purple) h s 94%);  /* light purple for focus - same as visited for consistency */
 
     /* dark theme colours */
-    --colour-normal-dark-page-background:      hsl(from var(--colour-indigo) h s l);  /* indigo */
-    --colour-normal-dark-page-text:            hsl(from var(--colour-light-cyan) h s l);  /* light cyan */
-    --colour-normal-dark-headings-background:  hsl(from var(--colour-purple) h s l);  /* purple */
-    --colour-normal-dark-headings-text:        hsl(from var(--colour-cyan) h s l);  /* cyan */
-    --colour-normal-dark-code-background:      hsl(259deg 59% 26%);
-    --colour-normal-dark-code-text:            hsl(0deg 0% 100%);
-    --colour-normal-dark-button-background:       hsl(from var(--colour-cyan) h s 75%);  /* light cyan */
-    --colour-normal-dark-button-background-hover: hsl(from var(--colour-cyan) h s 55%);  /* darker cyan on hover */
-    --colour-normal-dark-button-background-selected: hsl(from var(--colour-cyan) h s 18%);  /* very dark cyan for AAA: 7.82:1 with white */
-    --colour-normal-dark-button-text:             hsl(from var(--colour-indigo) h s l);  /* indigo text */
-    --colour-normal-dark-button-text-hover:       hsl(from var(--colour-purple) h s l);  /* purple on hover */
-    --colour-normal-dark-button-text-selected:    hsl(from var(--colour-white) h s l);  /* white when selected */
-    --colour-normal-dark-link-background:       hsl(from var(--colour-purple) h s 16%);  /* very dark purple for AAA: 9.02:1 with white */
-    --colour-normal-dark-link-background-hover: hsl(from var(--colour-purple) h s 10%);  /* even darker on hover */
-    --colour-normal-dark-link-background-visited: hsl(from var(--colour-purple) h s 16%);  /* same as normal */
-    --colour-normal-dark-link-text:            hsl(from var(--colour-white) h s l);  /* white */
-    --colour-normal-dark-link-text-hover:      hsl(from var(--colour-cyan) h s 94%);  /* light cyan at 94% */
-    --colour-normal-dark-link-text-visited:    hsl(from var(--colour-magenta) h s 94%);  /* light magenta at 94% */
-    --colour-normal-dark-link-text-focus:      hsl(from var(--colour-magenta) h s 94%);  /* light magenta for focus - same as visited */
+    --colour-normal-dark-page-background:                hsl(from var(--colour-indigo) h s l);  /* indigo */
+    --colour-normal-dark-page-text:                      hsl(from var(--colour-light-cyan) h s l);  /* light cyan */
+    --colour-normal-dark-headings-background:            hsl(from var(--colour-purple) h s l);  /* purple */
+    --colour-normal-dark-headings-text:                  hsl(from var(--colour-cyan) h s l);  /* cyan */
+    --colour-normal-dark-code-background:              hsl(259deg 59% 26%);
+    --colour-normal-dark-code-text:                    hsl(0deg 0% 100%);
+    --colour-normal-dark-button-background:              hsl(from var(--colour-cyan) h s 75%);  /* light cyan */
+    --colour-normal-dark-button-background-hover:        hsl(from var(--colour-cyan) h s 55%);  /* darker cyan on hover */
+    --colour-normal-dark-button-background-selected:     hsl(from var(--colour-cyan) h s 18%);  /* very dark cyan for AAA: 7.82:1 with white */
+    --colour-normal-dark-button-text:                    hsl(from var(--colour-indigo) h s l);  /* indigo text */
+    --colour-normal-dark-button-text-hover:              hsl(from var(--colour-purple) h s l);  /* purple on hover */
+    --colour-normal-dark-button-text-selected:           hsl(from var(--colour-white) h s l);  /* white when selected */
+    --colour-normal-dark-link-background:                hsl(from var(--colour-purple) h s 16%);  /* very dark purple for AAA: 9.02:1 with white */
+    --colour-normal-dark-link-background-hover:          hsl(from var(--colour-purple) h s 10%);  /* even darker on hover */
+    --colour-normal-dark-link-background-visited:        hsl(from var(--colour-purple) h s 16%);  /* same as normal */
+    --colour-normal-dark-link-text:                      hsl(from var(--colour-white) h s l);  /* white */
+    --colour-normal-dark-link-text-hover:                hsl(from var(--colour-cyan) h s 94%);  /* light cyan at 94% */
+    --colour-normal-dark-link-text-visited:              hsl(from var(--colour-magenta) h s 94%);  /* light magenta at 94% */
+    --colour-normal-dark-link-text-focus:                hsl(from var(--colour-magenta) h s 94%);  /* light magenta for focus - same as visited */
 
     /* subdued light theme colours - desaturated, closer to greyscale */
-    --colour-subdued-light-page-background:     hsl(0deg 0% 91%);
-    --colour-subdued-light-page-text:           hsl(0deg 0% 10%);
-    --colour-subdued-light-headings-background: hsl(from var(--colour-medium-grey) h s l);  /* 75% */
-    --colour-subdued-light-headings-text:       hsl(from var(--colour-dark-grey) h s l);  /* 23% */
-    --colour-subdued-light-code-background:     hsl(0deg 0% 94%);
-    --colour-subdued-light-code-text:           hsl(0deg 0% 17%);  /* darker for AAA compliance */
-    --colour-subdued-light-button-background:       hsl(0deg 0% 54%);  /* medium gray for 3:1 vs page */
-    --colour-subdued-light-button-background-hover: hsl(0deg 0% 40%);  /* darker gray on hover for 5.27:1 vs page */
-    --colour-subdued-light-button-background-selected: hsl(0deg 0% 18%);  /* very dark gray for AAA: 7.82:1 with white */
-    --colour-subdued-light-button-text:             hsl(0deg 0% 10%);  /* very dark text: 5.04:1 */
-    --colour-subdued-light-button-text-hover:       hsl(0deg 0% 100%);  /* white text on dark hover: 5.74:1 */
-    --colour-subdued-light-button-text-selected:    hsl(0deg 0% 100%);  /* white when selected */
-    --colour-subdued-light-link-background:       hsl(0deg 0% 16%);  /* very dark gray for AAA: 9.02:1 with white */
-    --colour-subdued-light-link-background-hover: hsl(0deg 0% 10%);  /* even darker on hover */
-    --colour-subdued-light-link-background-visited: hsl(0deg 0% 16%);  /* same as normal */
-    --colour-subdued-light-link-text:           hsl(0deg 0% 100%);  /* white */
-    --colour-subdued-light-link-text-hover:     hsl(0deg 0% 94%);  /* very light gray */
-    --colour-subdued-light-link-text-visited:   hsl(0deg 0% 90%);  /* slightly darker light gray */
-    --colour-subdued-light-link-text-focus:     hsl(0deg 0% 90%);  /* same as visited for consistency */
+    --colour-subdued-light-page-background:            hsl(0deg 0% 91%);
+    --colour-subdued-light-page-text:                  hsl(0deg 0% 10%);
+    --colour-subdued-light-headings-background:          hsl(from var(--colour-medium-grey) h s l);  /* 75% */
+    --colour-subdued-light-headings-text:                hsl(from var(--colour-dark-grey) h s l);  /* 23% */
+    --colour-subdued-light-code-background:            hsl(0deg 0% 94%);
+    --colour-subdued-light-code-text:                  hsl(0deg 0% 17%);      /* darker for AAA compliance */
+    --colour-subdued-light-button-background:          hsl(0deg 0% 54%);      /* medium gray for 3:1 vs page */
+    --colour-subdued-light-button-background-hover:    hsl(0deg 0% 40%);      /* darker gray on hover for 5.27:1 vs page */
+    --colour-subdued-light-button-background-selected: hsl(0deg 0% 18%);      /* very dark gray for AAA: 7.82:1 with white */
+    --colour-subdued-light-button-text:                hsl(0deg 0% 10%);      /* very dark text: 5.04:1 */
+    --colour-subdued-light-button-text-hover:          hsl(0deg 0% 100%);     /* white text on dark hover: 5.74:1 */
+    --colour-subdued-light-button-text-selected:       hsl(0deg 0% 100%);     /* white when selected */
+    --colour-subdued-light-link-background:            hsl(0deg 0% 16%);      /* very dark gray for AAA: 9.02:1 with white */
+    --colour-subdued-light-link-background-hover:      hsl(0deg 0% 10%);      /* even darker on hover */
+    --colour-subdued-light-link-background-visited:    hsl(0deg 0% 16%);      /* same as normal */
+    --colour-subdued-light-link-text:                  hsl(0deg 0% 100%);     /* white */
+    --colour-subdued-light-link-text-hover:            hsl(0deg 0% 94%);      /* very light gray */
+    --colour-subdued-light-link-text-visited:          hsl(0deg 0% 90%);      /* slightly darker light gray */
+    --colour-subdued-light-link-text-focus:            hsl(0deg 0% 90%);      /* same as visited for consistency */
 
     /* subdued dark theme colours - desaturated, closer to greyscale */
-    --colour-subdued-dark-page-background:      hsl(0deg 0% 10%);  /* very dark */
-    --colour-subdued-dark-page-text:            hsl(0deg 0% 91%);  /* very light */
-    --colour-subdued-dark-headings-background:  hsl(0deg 0% 23%);  /* dark gray */
-    --colour-subdued-dark-headings-text:        hsl(0deg 0% 94%);  /* very light */
-    --colour-subdued-dark-code-background:      hsl(0deg 0% 17%);  /* very dark */
-    --colour-subdued-dark-code-text:            hsl(0deg 0% 94%);  /* very light */
-    --colour-subdued-dark-button-background:       hsl(0deg 0% 75%);  /* light gray */
-    --colour-subdued-dark-button-background-hover: hsl(0deg 0% 55%);  /* medium gray on hover */
-    --colour-subdued-dark-button-background-selected: hsl(0deg 0% 94%);  /* very light for AAA on dark background */
-    --colour-subdued-dark-button-text:             hsl(0deg 0% 10%);  /* very dark text */
-    --colour-subdued-dark-button-text-hover:       hsl(0deg 0% 10%);  /* very dark text */
-    --colour-subdued-dark-button-text-selected:    hsl(0deg 0% 0%);  /* black when selected */
-    --colour-subdued-dark-link-background:       hsl(0deg 0% 30%);  /* medium-dark gray for AAA: 7.59:1 with light gray 91% */
-    --colour-subdued-dark-link-background-hover: hsl(0deg 0% 40%);  /* lighter on hover for distinction */
-    --colour-subdued-dark-link-background-visited: hsl(0deg 0% 30%);  /* same as normal */
-    --colour-subdued-dark-link-text:            hsl(0deg 0% 91%);  /* light gray */
-    --colour-subdued-dark-link-text-hover:      hsl(0deg 0% 94%);  /* very light gray */
-    --colour-subdued-dark-link-text-visited:    hsl(0deg 0% 85%);  /* slightly darker light gray */
-    --colour-subdued-dark-link-text-focus:      hsl(0deg 0% 85%);  /* same as visited */
+    --colour-subdued-dark-page-background:             hsl(0deg 0% 10%);      /* very dark */
+    --colour-subdued-dark-page-text:                   hsl(0deg 0% 91%);      /* very light */
+    --colour-subdued-dark-headings-background:         hsl(0deg 0% 23%);      /* dark gray */
+    --colour-subdued-dark-headings-text:               hsl(0deg 0% 94%);      /* very light */
+    --colour-subdued-dark-code-background:             hsl(0deg 0% 17%);      /* very dark */
+    --colour-subdued-dark-code-text:                   hsl(0deg 0% 94%);      /* very light */
+    --colour-subdued-dark-button-background:           hsl(0deg 0% 75%);      /* light gray */
+    --colour-subdued-dark-button-background-hover:     hsl(0deg 0% 55%);      /* medium gray on hover */
+    --colour-subdued-dark-button-background-selected:  hsl(0deg 0% 94%);      /* very light for AAA on dark background */
+    --colour-subdued-dark-button-text:                 hsl(0deg 0% 10%);      /* very dark text */
+    --colour-subdued-dark-button-text-hover:           hsl(0deg 0% 10%);      /* very dark text */
+    --colour-subdued-dark-button-text-selected:        hsl(0deg 0% 0%);       /* black when selected */
+    --colour-subdued-dark-link-background:             hsl(0deg 0% 30%);      /* medium-dark gray for AAA: 7.59:1 with light gray 91% */
+    --colour-subdued-dark-link-background-hover:       hsl(0deg 0% 40%);      /* lighter on hover for distinction */
+    --colour-subdued-dark-link-background-visited:     hsl(0deg 0% 30%);      /* same as normal */
+    --colour-subdued-dark-link-text:                   hsl(0deg 0% 91%);      /* light gray */
+    --colour-subdued-dark-link-text-hover:             hsl(0deg 0% 94%);      /* very light gray */
+    --colour-subdued-dark-link-text-visited:           hsl(0deg 0% 85%);      /* slightly darker light gray */
+    --colour-subdued-dark-link-text-focus:             hsl(0deg 0% 85%);      /* same as visited */
 
     /* vibrant light theme colours - op-art inspired with bold colors */
-    --colour-vibrant-light-page-background:     hsl(0deg 0% 100%);    /* white */
-    --colour-vibrant-light-page-text:           hsl(0deg 0% 0%);      /* black */
-    --colour-vibrant-light-headings-background: hsl(0deg 100% 45%);   /* darker red for AA: 4.81:1 with white */
-    --colour-vibrant-light-headings-text:       hsl(0deg 0% 100%);    /* white */
-    --colour-vibrant-light-code-background:     hsl(60deg 100% 50%);  /* yellow */
-    --colour-vibrant-light-code-text:           hsl(0deg 0% 0%);      /* black */
-    --colour-vibrant-light-button-background:       hsl(30deg 100% 75%);  /* light orange */
-    --colour-vibrant-light-button-background-hover: hsl(30deg 100% 55%);  /* darker orange on hover */
-    --colour-vibrant-light-button-background-selected: hsl(30deg 100% 18%);  /* very dark orange for AAA */
-    --colour-vibrant-light-button-text:             hsl(0deg 100% 30%);  /* darker red text for AA: 5.53:1 */
-    --colour-vibrant-light-button-text-hover:       hsl(300deg 100% 20%);  /* darker magenta for AA: 5.13:1 */
-    --colour-vibrant-light-button-text-selected:    hsl(0deg 0% 100%);  /* white when selected */
-    --colour-vibrant-light-link-background:       hsl(210deg 100% 16%);  /* very dark blue for AAA */
-    --colour-vibrant-light-link-background-hover: hsl(210deg 100% 10%);  /* even darker blue on hover */
-    --colour-vibrant-light-link-background-visited: hsl(210deg 100% 16%);  /* same as normal */
-    --colour-vibrant-light-link-text:           hsl(0deg 0% 100%);  /* white */
-    --colour-vibrant-light-link-text-hover:     hsl(60deg 100% 94%);  /* light yellow */
-    --colour-vibrant-light-link-text-visited:   hsl(300deg 100% 94%);  /* light magenta */
-    --colour-vibrant-light-link-text-focus:     hsl(300deg 100% 94%);  /* light magenta - same as visited */
+    --colour-vibrant-light-page-background:            hsl(0deg 0% 100%);     /* white */
+    --colour-vibrant-light-page-text:                  hsl(0deg 0% 0%);       /* black */
+    --colour-vibrant-light-headings-background:        hsl(0deg 100% 45%);    /* darker red for AA: 4.81:1 with white */
+    --colour-vibrant-light-headings-text:              hsl(0deg 0% 100%);     /* white */
+    --colour-vibrant-light-code-background:            hsl(60deg 100% 50%);   /* yellow */
+    --colour-vibrant-light-code-text:                  hsl(0deg 0% 0%);       /* black */
+    --colour-vibrant-light-button-background:          hsl(30deg 100% 75%);   /* light orange */
+    --colour-vibrant-light-button-background-hover:    hsl(30deg 100% 55%);   /* darker orange on hover */
+    --colour-vibrant-light-button-background-selected: hsl(30deg 100% 18%);   /* very dark orange for AAA */
+    --colour-vibrant-light-button-text:                hsl(0deg 100% 30%);    /* darker red text for AA: 5.53:1 */
+    --colour-vibrant-light-button-text-hover:          hsl(300deg 100% 20%);  /* darker magenta for AA: 5.13:1 */
+    --colour-vibrant-light-button-text-selected:       hsl(0deg 0% 100%);     /* white when selected */
+    --colour-vibrant-light-link-background:            hsl(210deg 100% 16%);  /* very dark blue for AAA */
+    --colour-vibrant-light-link-background-hover:      hsl(210deg 100% 10%);  /* even darker blue on hover */
+    --colour-vibrant-light-link-background-visited:    hsl(210deg 100% 16%);  /* same as normal */
+    --colour-vibrant-light-link-text:                  hsl(0deg 0% 100%);     /* white */
+    --colour-vibrant-light-link-text-hover:            hsl(60deg 100% 94%);   /* light yellow */
+    --colour-vibrant-light-link-text-visited:          hsl(300deg 100% 94%);  /* light magenta */
+    --colour-vibrant-light-link-text-focus:            hsl(300deg 100% 94%);  /* light magenta - same as visited */
 
     /* vibrant dark theme colours - op-art inspired with bold colors */
-    --colour-vibrant-dark-page-background:      hsl(0deg 0% 0%);      /* black */
-    --colour-vibrant-dark-page-text:            hsl(0deg 0% 100%);    /* white */
-    --colour-vibrant-dark-headings-background:  hsl(120deg 100% 50%); /* lime */
-    --colour-vibrant-dark-headings-text:        hsl(0deg 0% 0%);      /* black */
-    --colour-vibrant-dark-code-background:      hsl(270deg 50% 20%);  /* dark purple */
-    --colour-vibrant-dark-code-text:            hsl(0deg 0% 100%);    /* white */
-    --colour-vibrant-dark-button-background:       hsl(120deg 100% 75%);  /* light lime */
-    --colour-vibrant-dark-button-background-hover: hsl(120deg 100% 55%);  /* darker lime on hover */
-    --colour-vibrant-dark-button-background-selected: hsl(120deg 100% 94%);  /* very light lime for AAA on black */
-    --colour-vibrant-dark-button-text:             hsl(120deg 100% 15%);  /* very dark green text */
-    --colour-vibrant-dark-button-text-hover:       hsl(180deg 100% 15%);  /* very dark cyan on hover */
-    --colour-vibrant-dark-button-text-selected:    hsl(0deg 0% 0%);  /* black when selected */
-    --colour-vibrant-dark-link-background:       hsl(300deg 100% 30%);  /* medium-dark magenta for AAA */
-    --colour-vibrant-dark-link-background-hover: hsl(300deg 100% 40%);  /* lighter magenta on hover for distinction */
-    --colour-vibrant-dark-link-background-visited: hsl(300deg 100% 30%);  /* same as normal */
-    --colour-vibrant-dark-link-text:            hsl(0deg 0% 100%);  /* white */
-    --colour-vibrant-dark-link-text-hover:      hsl(60deg 100% 94%);  /* light yellow */
-    --colour-vibrant-dark-link-text-visited:    hsl(180deg 100% 94%);  /* light cyan */
-    --colour-vibrant-dark-link-text-focus:      hsl(180deg 100% 94%);  /* light cyan - same as visited */
+    --colour-vibrant-dark-page-background:             hsl(0deg 0% 0%);       /* black */
+    --colour-vibrant-dark-page-text:                   hsl(0deg 0% 100%);     /* white */
+    --colour-vibrant-dark-headings-background:         hsl(120deg 100% 50%);  /* lime */
+    --colour-vibrant-dark-headings-text:               hsl(0deg 0% 0%);       /* black */
+    --colour-vibrant-dark-code-background:             hsl(270deg 50% 20%);   /* dark purple */
+    --colour-vibrant-dark-code-text:                   hsl(0deg 0% 100%);     /* white */
+    --colour-vibrant-dark-button-background:           hsl(120deg 100% 75%);  /* light lime */
+    --colour-vibrant-dark-button-background-hover:     hsl(120deg 100% 55%);  /* darker lime on hover */
+    --colour-vibrant-dark-button-background-selected:  hsl(120deg 100% 94%);  /* very light lime for AAA on black */
+    --colour-vibrant-dark-button-text:                 hsl(120deg 100% 15%);  /* very dark green text */
+    --colour-vibrant-dark-button-text-hover:           hsl(180deg 100% 15%);  /* very dark cyan on hover */
+    --colour-vibrant-dark-button-text-selected:        hsl(0deg 0% 0%);       /* black when selected */
+    --colour-vibrant-dark-link-background:             hsl(300deg 100% 30%);  /* medium-dark magenta for AAA */
+    --colour-vibrant-dark-link-background-hover:       hsl(300deg 100% 40%);  /* lighter magenta on hover for distinction */
+    --colour-vibrant-dark-link-background-visited:     hsl(300deg 100% 30%);  /* same as normal */
+    --colour-vibrant-dark-link-text:                   hsl(0deg 0% 100%);     /* white */
+    --colour-vibrant-dark-link-text-hover:             hsl(60deg 100% 94%);   /* light yellow */
+    --colour-vibrant-dark-link-text-visited:           hsl(180deg 100% 94%);  /* light cyan */
+    --colour-vibrant-dark-link-text-focus:             hsl(180deg 100% 94%);  /* light cyan - same as visited */
 }

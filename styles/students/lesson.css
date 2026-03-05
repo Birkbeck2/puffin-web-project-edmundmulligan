@@ -40,7 +40,7 @@
     margin-top: 0.5rem; 
     font-size: var(--fontsize-p); 
     font-weight: bold;
-    font-family: Cinzel, serif;
+    font-family: var(--font-family-serif);
 }
 
 /* Hide OS-specific instruction divs by default */
@@ -83,7 +83,7 @@
 .installing-required-software label {
     font-weight: bold;
     font-size: var(--fontsize-h5h6);
-    font-family: Cinzel, serif;
+    font-family: var(--font-family-serif);
     margin-top: 2rem;
 }
 

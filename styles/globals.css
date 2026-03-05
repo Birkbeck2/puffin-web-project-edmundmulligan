@@ -11,6 +11,7 @@
 
 /* Import colour definitions from colours.css */
 @import url("./colours.css");
+@import url("./typography.css");
 
 :root {
     /* Background image sources */
@@ -47,38 +48,11 @@
     --border-weight-thin:     0.1rem;
     --border-style:           solid;
 
-    /* responsive font and button sizes using clamp() */
-    
-    /* see https://modern-fluid-typography.vercel.app for a size calculator */
 
-    --fontsize-p:             clamp(0.5rem, 2vw + 1rem, 2.25rem);
-    --fontsize-smallprint:    clamp(0.5rem, 1.5vw + 0.75rem, 1.75rem);
-    --fontsize-largeprint:    clamp(1rem, 3vw + 1rem, 3rem);
-    --fontsize-h1h2:          clamp(0.875rem, 2vw + 1rem, 2.5rem);
-    --fontsize-h3h4:          clamp(0.8rem, 2vw + 1rem, 2.5rem);
-    --fontsize-h5h6:          clamp(0.75rem, 1.5vw + 1rem, 2rem);
-    --fontsize-button:        clamp(0.75rem, 1vw + 1rem, 4rem);
-    --fontsize-button-circle: clamp(0.75rem, 1vw + 0.75rem, 1.5rem);
-    --fontsize-nav-site:      clamp(0.875rem, 2vw, 1rem);
-    --fontsize-nav-page:     clamp(0.5rem, 2vw + 1rem, 2.25rem);
-    --buttonsize-circle:      clamp(4rem, 8vw + 5rem, 12rem);
-    --margin-vertical:        clamp(0.333rem, 0.5vw + 0.5rem, 1rem);;
-    --margin-horizontal:      clamp(0.333rem, 1vw + 1rem, 2rem);;
 
     /* 
         there are probably more things that could be defined here 
         to ensure sitewide consistency such as margin and padding
         sizes, but that means more refactoring and this is a good start
     */
-}
-
-/* Progressive enhancement: Use relative colour syntax for browsers that support it */
-@supports (color: hsl(from white h s l)) {
-    :root {
-        /* Apply relative colour syntax where it provides benefits */
-
-        /* Note: Currently all colors use direct HSL values for maximum compatibility */
-
-        /* This block is here for future enhancement when relative colors are beneficial */
-    }
 }

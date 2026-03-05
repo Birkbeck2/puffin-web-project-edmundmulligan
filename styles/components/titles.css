@@ -11,18 +11,18 @@
  */
 
 .site-title {
-    font-family: 'Cinzel Decorative', serif;
+    font-family: var(--font-family-decorative);
     font-weight: 700;
 
 }
 
 .site-subtitle {
-    font-family: Cinzel, serif;
+    font-family: var(--font-family-serif);
     font-weight: 400;
 }
 
 .page-title {
-    font-family: 'Cinzel Decorative', serif;
+    font-family: var(--font-family-decorative);
     font-weight: 700;
     margin: 0.5rem auto;
     padding: 0.5rem 1rem;

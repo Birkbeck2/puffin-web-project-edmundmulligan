@@ -11,7 +11,7 @@
 
 .magic-invisible::before {
     content: "\f0d0\f054";  /* Font Awesome Magic Wand + Chevron Right */
-    font-family: "Font Awesome 7 Pro";
+    font-family: var(--font-family-icons);
     font-weight: 900; /* needed for solid style icons */
     margin-right: 0.5em;
     display: inline-block;
@@ -19,7 +19,7 @@
 
 .magic-visible::before {
     content: "\e2ca\f078";  /* Font Awesome Magic Wand with sparkles + Chevron Down */
-    font-family: "Font Awesome 7 Pro";
+    font-family: var(--font-family-icons);
     font-weight: 900; /* needed for solid style icons */
     margin-right: 0.5em;
     display: inline-block;
@@ -33,7 +33,7 @@
     margin: 0;
     text-align: left;
     cursor: pointer;
-    font-family: "Font Awesome 7 Pro";
+    font-family: var(--font-family-icons);
     font-weight: 900;
     color: inherit;
 }

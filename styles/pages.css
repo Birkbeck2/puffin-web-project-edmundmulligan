@@ -412,7 +412,7 @@
 
 .accessory-name {
    display:block;
-   font-family: Cinzel, serif;
+   font-family: var(--font-family-serif);
    font-weight: bold;
 }
 
@@ -560,7 +560,7 @@
 
 .lesson-title {
    display: block;
-   font-family: Cinzel, serif;
+   font-family: var(--font-family-serif);
    font-weight: 600;
    font-size: var(--fontsize-h3h4);
 }

@@ -67,7 +67,7 @@
     box-sizing: border-box;
 
     /* ensure text scales within the circle */
-    font-family: Cinzel, serif;
+    font-family: var(--font-family-serif);
     font-size: var(--fontsize-button-circle);
 
 }
