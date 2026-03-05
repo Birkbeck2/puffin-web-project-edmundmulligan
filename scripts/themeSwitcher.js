@@ -86,12 +86,12 @@
                 root.style.setProperty('--svg-filter', 'var(--svg-filter-dark)');
                 root.style.setProperty('--header-svg-filter', 'var(--header-svg-filter-dark)');
                 root.setAttribute('data-theme', 'dark');
-                this.updateLogo('dark');
+                this.updateLogo('dark', style);
             } else {
                 root.style.setProperty('--svg-filter', 'var(--svg-filter-light)');
                 root.style.setProperty('--header-svg-filter', 'var(--header-svg-filter-light)');
                 root.setAttribute('data-theme', 'light');
-                this.updateLogo('light');
+                this.updateLogo('light', style);
             }
             
             root.setAttribute('data-style', style);
@@ -100,20 +100,20 @@
         }
 
         /**
-         * Update the Embodied Mind logo based on theme
+         * Update the Embodied Mind logo based on theme and style
          * @param {string} effectiveTheme - 'light' or 'dark'
+         * @param {string} style - 'normal', 'subdued', or 'vibrant'
          */
-        updateLogo(effectiveTheme) {
+        updateLogo(effectiveTheme, style = 'normal') {
             const logo = document.getElementById('embodied-mind-logo');
             if (!logo) return;
 
-            const lightLogo = logo.dataset.lightLogo;
-            const darkLogo = logo.dataset.darkLogo;
+            // Build the data attribute name: e.g., 'normalLightLogo', 'subduedDarkLogo'
+            const dataAttrName = `${style}${effectiveTheme.charAt(0).toUpperCase() + effectiveTheme.slice(1)}Logo`;
+            const logoSrc = logo.dataset[dataAttrName];
 
-            if (effectiveTheme === 'dark' && darkLogo) {
-                logo.src = darkLogo;
-            } else if (lightLogo) {
-                logo.src = lightLogo;
+            if (logoSrc) {
+                logo.src = logoSrc;
             }
         }
 
@@ -455,10 +455,11 @@
             document.addEventListener('footerInjected', () => {
                 Debug.log('Footer injected, updating logo');
                 const currentTheme = this.getThemePreference();
+                const currentStyle = this.getStylePreference();
                 const effectiveTheme = (currentTheme === 'auto') ?
                     (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') :
                     currentTheme;
-                this.updateLogo(effectiveTheme);
+                this.updateLogo(effectiveTheme, currentStyle);
             });
             
             Debug.log('=== ThemeSwitcher Initialization Complete ===');

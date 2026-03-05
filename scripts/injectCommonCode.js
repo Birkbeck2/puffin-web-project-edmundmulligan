@@ -47,7 +47,7 @@
             header.innerHTML = `
 <div class="header-minimal">
     <div class="header-text">
-        <img class="header-image mirror inline-header" src="${this.pathPrefix}images/icons/wizard.svg" alt="" aria-hidden="true">
+        <div class="header-image mirror inline-header" style="mask-image: url('${this.pathPrefix}images/icons/wizard.svg'); -webkit-mask-image: url('${this.pathPrefix}images/icons/wizard.svg');" role="img" aria-label="Wizard icon"></div>
         <div class="inline-header">
             <h1 class="site-title">Web Witchcraft and Wizardry</h1>
             <nav class="site-navigation" aria-label="Site navigation">
@@ -66,7 +66,7 @@
                 </ul>
             </nav>
         </div>
-        <img class="header-image inline-header" src="${this.pathPrefix}images/icons/witch.svg" alt="" aria-hidden="true">
+        <div class="header-image inline-header" style="mask-image: url('${this.pathPrefix}images/icons/witch.svg'); -webkit-mask-image: url('${this.pathPrefix}images/icons/witch.svg');" role="img" aria-label="Witch icon"></div>
         <div class="header-button">
             <button aria-label="Expand header">
                 <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
@@ -77,7 +77,7 @@
 
 <div class="header-full">
     <div class="header-left">
-        <img class="header-image mirror" src="${this.pathPrefix}images/icons/wizard.svg" alt="" aria-hidden="true">
+        <div class="header-image mirror" style="mask-image: url('${this.pathPrefix}images/icons/wizard.svg'); -webkit-mask-image: url('${this.pathPrefix}images/icons/wizard.svg');" role="img" aria-label="Wizard icon"></div>
     </div>
 
     <div class="header-center">
@@ -118,7 +118,7 @@
     </div>
 
     <div class="header-right">
-        <img class="header-image" src="${this.pathPrefix}images/icons/witch.svg" alt="" aria-hidden="true">
+        <div class="header-image" style="mask-image: url('${this.pathPrefix}images/icons/witch.svg'); -webkit-mask-image: url('${this.pathPrefix}images/icons/witch.svg');" role="img" aria-label="Witch icon"></div>
     </div>
 </div>
         `;
@@ -156,8 +156,12 @@
             id="embodied-mind-logo"
             src="${this.pathPrefix}images/logos/logo-embodied-mind-normal-light.svg" 
             alt="The Embodied Mind logo. A brain with a moustache winking"
-            data-light-logo="${this.pathPrefix}images/logos/logo-embodied-mind-normal-light.svg"
-            data-dark-logo="${this.pathPrefix}images/logos/logo-embodied-mind-normal-dark.svg"
+            data-normal-light-logo="${this.pathPrefix}images/logos/logo-embodied-mind-normal-light.svg"
+            data-normal-dark-logo="${this.pathPrefix}images/logos/logo-embodied-mind-normal-dark.svg"
+            data-subdued-light-logo="${this.pathPrefix}images/logos/logo-embodied-mind-subdued-light.svg"
+            data-subdued-dark-logo="${this.pathPrefix}images/logos/logo-embodied-mind-subdued-dark.svg"
+            data-vibrant-light-logo="${this.pathPrefix}images/logos/logo-embodied-mind-vibrant-light.svg"
+            data-vibrant-dark-logo="${this.pathPrefix}images/logos/logo-embodied-mind-vibrant-dark.svg"
         >
     </div>
 </div>

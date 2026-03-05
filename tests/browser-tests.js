@@ -40,7 +40,7 @@ async function runPageTests(page, pageInfo) {
   // Test 1: Check page title
   const title = await page.title();
   if (title.includes('Web Witchcraft and Wizardry')) {
-    console.log(`     ✅ ${pageInfo.name} page title correct`);
+    console.log(`✅ ${pageInfo.name} page title correct`);
     tests.push({ name: `${pageInfo.name} page title`, status: 'passed' });
   } else {
     throw new Error(`${pageInfo.name} title incorrect: ${title}`);
@@ -49,7 +49,7 @@ async function runPageTests(page, pageInfo) {
   // Test 2: Check navigation links
   const navLinks = await page.$$('nav a');
   if (navLinks.length >= 4) {
-    console.log(`     ✅ ${pageInfo.name} page navigation links present`);
+    console.log(`✅ ${pageInfo.name} page navigation links present`);
     tests.push({ name: `${pageInfo.name} navigation links`, status: 'passed' });
   } else {
     throw new Error(`Expected at least 4 nav links on ${pageInfo.name}, found ${navLinks.length}`);
@@ -58,7 +58,7 @@ async function runPageTests(page, pageInfo) {
   // Test 3: Check JavaScript execution - header/footer should be injected
   const headerContent = await page.$$('header *');
   if (headerContent.length > 0) {
-    console.log(`     ✅ ${pageInfo.name} JavaScript executed (header injected)`);
+    console.log(`✅ ${pageInfo.name} JavaScript executed (header injected)`);
     tests.push({ name: `${pageInfo.name} JavaScript execution`, status: 'passed' });
   } else {
     throw new Error(`${pageInfo.name} header not injected - JavaScript may have failed`);
@@ -67,7 +67,7 @@ async function runPageTests(page, pageInfo) {
   // Test 4: Check CSS Grid support - header child div should use grid layout (or flex on mobile)
   const headerChildDisplay = await page.$eval('header > div', el => window.getComputedStyle(el).display);
   if (headerChildDisplay === 'grid' || headerChildDisplay === 'flex' || headerChildDisplay === 'none') {
-    console.log(`     ✅ ${pageInfo.name} CSS Grid/Flexbox layout working (${headerChildDisplay})`);
+    console.log(`✅ ${pageInfo.name} CSS Grid/Flexbox layout working (${headerChildDisplay})`);
     tests.push({ name: `${pageInfo.name} CSS Grid`, status: 'passed' });
   } else {
     throw new Error(`${pageInfo.name} CSS Grid/Flex not working: display is ${headerChildDisplay}`);
@@ -76,7 +76,7 @@ async function runPageTests(page, pageInfo) {
   // Test 5: Check CSS Flexbox support - navigation should use flex
   const navDisplay = await page.$eval('nav.site-navigation ul', el => window.getComputedStyle(el).display);
   if (navDisplay === 'flex') {
-    console.log(`     ✅ ${pageInfo.name} CSS Flexbox supported`);
+    console.log(`✅ ${pageInfo.name} CSS Flexbox supported`);
     tests.push({ name: `${pageInfo.name} CSS Flexbox`, status: 'passed' });
   } else {
     throw new Error(`${pageInfo.name} CSS Flexbox not working: display is ${navDisplay}`);
@@ -85,7 +85,7 @@ async function runPageTests(page, pageInfo) {
   // Test 6: Check CSS Variables support - check if custom property is applied
   const bgColor = await page.$eval('body', el => window.getComputedStyle(el).backgroundColor);
   if (bgColor && bgColor !== 'rgba(0, 0, 0, 0)' && bgColor !== 'transparent') {
-    console.log(`     ✅ ${pageInfo.name} CSS Variables supported`);
+    console.log(`✅ ${pageInfo.name} CSS Variables supported`);
     tests.push({ name: `${pageInfo.name} CSS Variables`, status: 'passed' });
   } else {
     throw new Error(`${pageInfo.name} CSS Variables not applied correctly`);
@@ -94,7 +94,7 @@ async function runPageTests(page, pageInfo) {
   // Test 7: Check SVG support - header images should be present
   const svgImages = await page.$$('header img[src*=".svg"]');
   if (svgImages.length >= 2) {
-    console.log(`     ✅ ${pageInfo.name} SVG images loaded`);
+    console.log(`✅ ${pageInfo.name} SVG images loaded`);
     tests.push({ name: `${pageInfo.name} SVG support`, status: 'passed' });
   } else {
     throw new Error(`${pageInfo.name} SVG images not found: expected 2, found ${svgImages.length}`);
@@ -103,7 +103,7 @@ async function runPageTests(page, pageInfo) {
   // Test 8: Check responsive design - verify viewport meta tag
   const viewportMeta = await page.$$('meta[name="viewport"]');
   if (viewportMeta.length > 0) {
-    console.log(`     ✅ ${pageInfo.name} viewport meta tag present`);
+    console.log(`✅ ${pageInfo.name} viewport meta tag present`);
     tests.push({ name: `${pageInfo.name} responsive viewport`, status: 'passed' });
   } else {
     throw new Error(`${pageInfo.name} viewport meta tag missing`);
@@ -114,7 +114,7 @@ async function runPageTests(page, pageInfo) {
   if (pageTitles.length > 0) {
     const titleMaxWidth = await page.$eval('.page-title', el => window.getComputedStyle(el).maxWidth);
     if (titleMaxWidth && titleMaxWidth !== 'none') {
-      console.log(`     ✅ ${pageInfo.name} CSS calc() supported`);
+      console.log(`✅ ${pageInfo.name} CSS calc() supported`);
       tests.push({ name: `${pageInfo.name} CSS calc()`, status: 'passed' });
     }
   }
@@ -124,7 +124,7 @@ async function runPageTests(page, pageInfo) {
   if (siteTitles.length > 0) {
     const fontFamily = await page.$eval('.site-title', el => window.getComputedStyle(el).fontFamily);
     if (fontFamily && fontFamily !== '') {
-      console.log(`     ✅ ${pageInfo.name} fonts loaded`);
+      console.log(`✅ ${pageInfo.name} fonts loaded`);
       tests.push({ name: `${pageInfo.name} font rendering`, status: 'passed' });
     }
   }
