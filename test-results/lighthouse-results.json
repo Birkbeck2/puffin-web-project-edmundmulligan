@@ -76,6 +76,41 @@
       "viewport": "150",
       "score": 1,
       "failedAudits": []
+    },
+    {
+      "url": "pages/license.html",
+      "theme": "light",
+      "viewport": "150",
+      "score": 1,
+      "failedAudits": []
+    },
+    {
+      "url": "pages/credits.html",
+      "theme": "light",
+      "viewport": "150",
+      "score": 1,
+      "failedAudits": []
+    },
+    {
+      "url": "pages/start.html",
+      "theme": "light",
+      "viewport": "150",
+      "score": 1,
+      "failedAudits": []
+    },
+    {
+      "url": "diagnostics/colourPalette.html",
+      "theme": "light",
+      "viewport": "150",
+      "score": 0.95,
+      "failedAudits": [
+        {
+          "id": "color-contrast",
+          "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+          "description": "Low-contrast text is difficult or impossible for many users to read. [Learn how to provide sufficient color contrast](https://dequeuniversity.com/rules/axe/4.10/color-contrast).",
+          "score": 0
+        }
+      ]
     }
   ]
 }
