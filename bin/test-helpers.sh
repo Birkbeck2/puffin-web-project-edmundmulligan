@@ -61,7 +61,7 @@ discover_html_pages() {
     PAGE_COUNT=0
     return
   fi
-  PAGES=$(find "$folder" -name "*.html" -not -path "*/node_modules/*" -not -path "*/tests/*" -print)
+  PAGES=$(find "$folder" -name "*.html" -not -path "*/node_modules/*" -not -path "*/tests/*" -not -path "*/diagnostics/*" -print)
   PAGE_COUNT=$(echo "$PAGES" | wc -l)
   echo "Found $PAGE_COUNT pages to test"
 }

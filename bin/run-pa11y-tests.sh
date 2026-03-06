@@ -63,102 +63,117 @@ if [ "$QUICK_MODE" = true ]; then
 else
   VIEWPORTS=(150 400 900 1300)
 fi
-TOTAL_TESTS=$((PAGE_COUNT * 2 * ${#VIEWPORTS[@]}))
 
-# Test each page at different viewport widths, in both light and dark modes
+# Define styles to test
+STYLES=(normal subdued vibrant)
+
+TOTAL_TESTS=$((PAGE_COUNT * 6 * ${#VIEWPORTS[@]}))
+
+# Test each page at different viewport widths, in all theme/style combinations
 TESTED=0
 for VIEWPORT in "${VIEWPORTS[@]}"; do
   echo ""
   echo "📐 Testing at ${VIEWPORT}px width..."
   echo ""
   
-  for THEME in light dark; do
-    echo "  🎨 $THEME mode"
+  for STYLE in "${STYLES[@]}"; do
+    echo "  🎨 $STYLE style"
     
-    for page in $PAGES; do
-      TESTED=$((TESTED + 1))
-      # Convert file path to URL path
-      URL_PATH="${page#./}"
-      FULL_URL="$TEST_URL/$URL_PATH"
+    for THEME in light dark; do
+      echo "    💡 $THEME mode"
+      
+      for page in $PAGES; do
+        TESTED=$((TESTED + 1))
+        # Convert file path to URL path
+        URL_PATH="${page#./}"
+        
+        # Add theme and style parameters to URL
+        if [[ "$URL_PATH" == *"?"* ]]; then
+          FULL_URL="$TEST_URL/$URL_PATH&theme=$THEME&style=$STYLE"
+        else
+          FULL_URL="$TEST_URL/$URL_PATH?theme=$THEME&style=$STYLE"
+        fi
 
-      echo "  [$TESTED/$TOTAL_TESTS] Testing $URL_PATH (${VIEWPORT}px, $THEME mode)"
+        echo "    [$TESTED/$TOTAL_TESTS] Testing $URL_PATH (${VIEWPORT}px, $STYLE-$THEME)"
 
-      # Run pa11y on this page using inline Node.js
-      TEMP_RESULT="$RESULTS_DIR/pa11y-temp-$TESTED.json"
-      node -e "
-        (async () => {
-          const pa11y = require('pa11y');
-          const fs = require('fs');
+        # Run pa11y on this page using inline Node.js
+        TEMP_RESULT="$RESULTS_DIR/pa11y-temp-$TESTED.json"
+        node -e "
+          (async () => {
+            const pa11y = require('pa11y');
+            const fs = require('fs');
 
-          try {
-            const results = await pa11y('$FULL_URL', {
-              standard: 'WCAG2AA',
-              viewport: {
-                width: $VIEWPORT,
-                height: 768
-              },
-              emulateMediaFeatures: [
-                { name: 'prefers-color-scheme', value: '$THEME' }
-              ],
-              chromeLaunchConfig: {
-                args: [
-                  '--no-sandbox',
-                  '--disable-setuid-sandbox',
-                  '--disable-dev-shm-usage',
-                  '--disable-gpu'
-                ]
-              }
-            });
+            try {
+              const results = await pa11y('$FULL_URL', {
+                standard: 'WCAG2AA',
+                viewport: {
+                  width: $VIEWPORT,
+                  height: 768
+                },
+                emulateMediaFeatures: [
+                  { name: 'prefers-color-scheme', value: '$THEME' }
+                ],
+                chromeLaunchConfig: {
+                  args: [
+                    '--no-sandbox',
+                    '--disable-setuid-sandbox',
+                    '--disable-dev-shm-usage',
+                    '--disable-gpu'
+                  ]
+                }
+              });
 
-        fs.writeFileSync('$TEMP_RESULT', JSON.stringify(results, null, 2));
+          fs.writeFileSync('$TEMP_RESULT', JSON.stringify(results, null, 2));
 
-        const errors = results.issues.filter(i => i.type === 'error').length;
-        const warnings = results.issues.filter(i => i.type === 'warning').length;
-        console.log('  Errors: ' + errors + ', Warnings: ' + warnings);
+          const errors = results.issues.filter(i => i.type === 'error').length;
+          const warnings = results.issues.filter(i => i.type === 'warning').length;
+          console.log('      Errors: ' + errors + ', Warnings: ' + warnings);
 
-      } catch (error) {
-        console.error('  Failed: ' + error.message);
-        process.exit(1);
-      }
-    })();
-  "
-
-    # Merge results into combined file if temp file exists
-    if [ -f "$TEMP_RESULT" ]; then
-      node -e "
-        try {
-          const fs = require('fs');
-          const combined = JSON.parse(fs.readFileSync('$RESULTS_DIR/pa11y-results.json'));
-          const newData = JSON.parse(fs.readFileSync('$TEMP_RESULT'));
-
-          const pageResult = {
-            url: '$URL_PATH',
-            theme: '$THEME',
-            viewport: '$VIEWPORT',
-            documentTitle: newData.documentTitle,
-            pageUrl: newData.pageUrl,
-            issues: (newData.issues || []).map(issue => {
-              // Downgrade errors to warnings for 150px viewport
-              if ('$VIEWPORT' === '150' && issue.type === 'error') {
-                return {
-                  ...issue,
-                  type: 'warning',
-                  originalType: 'error',
-                  downgradedFrom150px: true
-                };
-              }
-              return issue;
-            })
-          };
-
-          combined.pages.push(pageResult);
-          fs.writeFileSync('$RESULTS_DIR/pa11y-results.json', JSON.stringify(combined, null, 2));
-          fs.unlinkSync('$TEMP_RESULT');
-        } catch (e) {
-          console.error('Error merging results for $URL_PATH:', e.message);
+        } catch (error) {
+          console.error('      Failed: ' + error.message);
+          process.exit(1);
         }
-      "
-    fi
+      })();
+    "
+
+      # Merge results into combined file if temp file exists
+      if [ -f "$TEMP_RESULT" ]; then
+        node -e "
+          try {
+            const fs = require('fs');
+            const combined = JSON.parse(fs.readFileSync('$RESULTS_DIR/pa11y-results.json'));
+            const newData = JSON.parse(fs.readFileSync('$TEMP_RESULT'));
+
+            const pageResult = {
+              url: '$URL_PATH',
+              theme: '$THEME',
+              style: '$STYLE',
+              viewport: '$VIEWPORT',
+              documentTitle: newData.documentTitle,
+              pageUrl: newData.pageUrl,
+              issues: (newData.issues || []).map(issue => {
+                // Downgrade errors to warnings for 150px viewport
+                if ('$VIEWPORT' === '150' && issue.type === 'error') {
+                  return {
+                    ...issue,
+                    type: 'warning',
+                    originalType: 'error',
+                    downgradedFrom150px: true
+                  };
+                }
+                return issue;
+              })
+            };
+
+            combined.pages.push(pageResult);
+            fs.writeFileSync('$RESULTS_DIR/pa11y-results.json', JSON.stringify(combined, null, 2));
+            fs.unlinkSync('$TEMP_RESULT');
+          } catch (e) {
+            console.error('Error merging results for $URL_PATH:', e.message);
+          }
+        "
+      fi
+      done
     done
   done
 done
@@ -206,7 +221,7 @@ node -e "
     pagesWithErrors.forEach(page => {
       const errors = page.issues.filter(i => i.type === 'error');
     console.log('');  
-    console.log('❌ ' + page.url + ' [' + (page.viewport || 'unknown') + 'px, ' + (page.theme || 'unknown') + ' mode] (' + errors.length + ' errors)');
+    console.log('❌ ' + page.url + ' [' + (page.viewport || 'unknown') + 'px, ' + (page.style || 'unknown') + '-' + (page.theme || 'unknown') + '] (' + errors.length + ' errors)');
 
       errors.slice(0, 5).forEach(issue => {
         console.log('    • ' + issue.message);

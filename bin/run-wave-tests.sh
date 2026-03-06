@@ -164,30 +164,37 @@ if [ "$QUICK_MODE" = true ]; then
 else
   VIEWPORTS=(150 400 900 1300)
 fi
-TOTAL_TESTS=$((PAGE_COUNT * 2 * ${#VIEWPORTS[@]}))
 
-# Test each page at different viewport widths, in both light and dark modes
+# Define styles to test
+STYLES=(normal subdued vibrant)
+
+TOTAL_TESTS=$((PAGE_COUNT * 6 * ${#VIEWPORTS[@]}))
+
+# Test each page at different viewport widths, in all theme/style combinations
 TESTED=0
 for VIEWPORT in "${VIEWPORTS[@]}"; do
   echo ""
   echo "📐 Testing at ${VIEWPORT}px width..."
   echo ""
   
-  for THEME in light dark; do
-    echo "  🎨 $THEME mode"
+  for STYLE in "${STYLES[@]}"; do
+    echo "  🎨 $STYLE style"
     
-    for page in $PAGES; do
-      TESTED=$((TESTED + 1))
-      URL_PATH="${page#./}"
+    for THEME in light dark; do
+      echo "    💡 $THEME mode"
       
-      # Add theme parameter to URL
-      if [[ "$URL_PATH" == *"?"* ]]; then
-        FULL_URL="$TEST_URL/$URL_PATH&theme=$THEME"
-      else
-        FULL_URL="$TEST_URL/$URL_PATH?theme=$THEME"
-      fi
+      for page in $PAGES; do
+        TESTED=$((TESTED + 1))
+        URL_PATH="${page#./}"
+        
+        # Add theme and style parameters to URL
+        if [[ "$URL_PATH" == *"?"* ]]; then
+          FULL_URL="$TEST_URL/$URL_PATH&theme=$THEME&style=$STYLE"
+        else
+          FULL_URL="$TEST_URL/$URL_PATH?theme=$THEME&style=$STYLE"
+        fi
 
-      echo "  [$TESTED/$TOTAL_TESTS] Testing $URL_PATH (${VIEWPORT}px, $THEME mode)"
+        echo "    [$TESTED/$TOTAL_TESTS] Testing $URL_PATH (${VIEWPORT}px, $STYLE-$THEME)"
 
       # Note: WAVE API doesn't support viewport size directly, but we track it for consistency
       # Call WAVE API (reporttype=4 returns detailed JSON)
@@ -213,6 +220,7 @@ for VIEWPORT in "${VIEWPORTS[@]}"; do
           const pageResult = {
             url: '$URL_PATH',
             theme: '$THEME',
+            style: '$STYLE',
             viewport: '$VIEWPORT',
             errors: newData.categories.error?.count || 0,
             alerts: newData.categories.alert?.count || 0,
@@ -295,6 +303,7 @@ for VIEWPORT in "${VIEWPORTS[@]}"; do
       }
     "
   fi
+      done
     done
   done
 done
@@ -330,7 +339,7 @@ node -e "
     console.log('  Pages with errors:');
     pagesWithErrors.forEach(page => {
       console.log('');
-      console.log('❌ ' + page.url + ' [' + (page.viewport || 'unknown') + 'px, ' + (page.theme || 'unknown') + ' mode]');
+      console.log('❌ ' + page.url + ' [' + (page.viewport || 'unknown') + 'px, ' + (page.style || 'unknown') + '-' + (page.theme || 'unknown') + ']');
       console.log('   Errors: ' + page.errors + ', Alerts: ' + page.alerts + ', Contrast: ' + page.contrast);
 
       // Show error details if available
@@ -353,7 +362,7 @@ node -e "
     console.log('  Pages with alerts:');
     pagesWithAlerts.forEach(page => {
       console.log('');
-      console.log('⚠️  ' + page.url + ' [' + (page.viewport || 'unknown') + 'px, ' + (page.theme || 'unknown') + ' mode]');
+      console.log('⚠️  ' + page.url + ' [' + (page.viewport || 'unknown') + 'px, ' + (page.style || 'unknown') + '-' + (page.theme || 'unknown') + ']');
       console.log('   Alerts: ' + page.alerts);
 
       // Show alert details if available

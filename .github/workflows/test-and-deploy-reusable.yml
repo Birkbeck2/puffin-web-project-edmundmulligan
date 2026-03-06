@@ -1,0 +1,128 @@
+name: Test and Deploy (Reusable)
+
+on:
+  workflow_call:
+    inputs:
+      deploy-path:
+        required: true
+        type: string
+        description: 'Server deployment path'
+      server:
+        required: false
+        type: string
+        default: 'prod.edmundmulligan.name'
+        description: 'Server hostname'
+    secrets:
+      WAVE_API_KEY:
+        required: false
+      NGROK_AUTHTOKEN:
+        required: false
+      SERVER_USERNAME:
+        required: true
+      SERVER_SSH_KEY:
+        required: true
+
+env:
+  testurl: 'http://localhost:8080'
+  testport: '8080'
+
+jobs:
+  run-pre-deployment-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Clear previous accessibility results
+      run: |
+        bin/clear-tests.sh .
+
+    - name: Validate HTML, CSS and JavaScript
+      continue-on-error: true
+      run: |
+        bin/validate-code.sh .
+
+    - name: Audit colour usage
+      continue-on-error: true
+      run: |
+        node bin/audit-colour-usage.js
+
+    - name: Check for file comments
+      continue-on-error: true
+      run: |
+        bin/check-file-comments.sh .
+
+    - name: Check for broken links
+      continue-on-error: true
+      run: |
+        bin/check-links.sh .
+
+    - name: Run axe accessibility tests
+      continue-on-error: true
+      run: |
+        bin/run-axe-tests.sh .
+
+    - name: Install Chrome for Puppeteer
+      run: |
+        npx puppeteer browsers install chrome
+
+    - name: Run Lighthouse accessibility tests
+      continue-on-error: true
+      run: |
+        bin/run-lighthouse-tests.sh .
+
+    - name: Run Pa11y accessibility tests
+      continue-on-error: true
+      run: |
+        bin/run-pa11y-tests.sh .
+
+    - name: Run WAVE accessibility tests
+      continue-on-error: true
+      run: |
+        bin/run-wave-tests.sh .
+      env:
+        WAVE_API_KEY: ${{ secrets.WAVE_API_KEY }}
+        NGROK_AUTHTOKEN: ${{ secrets.NGROK_AUTHTOKEN }}
+
+    - name: Check reading levels
+      continue-on-error: true
+      run: |
+        bin/check-reading-age.sh .
+
+    - name: Check site works in different browsers
+      continue-on-error: true
+      run: |
+        bin/run-browser-tests.sh .
+
+    - name: Summarise test results
+      continue-on-error: false
+      run: |
+        bin/summarise-tests.sh .
+
+    - name: Upload test reports
+      uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: test-reports
+        path: |
+          test-results/validation-results.json
+          test-results/broken-links-results.json
+          test-results/axe-results.json
+          test-results/pa11y-results.json
+          test-results/lighthouse-results.json
+          test-results/wave-results.json
+          test-results/readability-results.json
+          test-results/browser-results.json
+          colour-audit-report.json
+
+  deploy:
+    needs: run-pre-deployment-test
+    if: github.ref == 'refs/heads/main'
+    uses: ./.github/workflows/push-code-reusable.yml
+    with:
+      deploy-path: ${{ inputs.deploy-path }}
+      server: ${{ inputs.server }}
+    secrets:
+      SERVER_USERNAME: ${{ secrets.SERVER_USERNAME }}
+      SERVER_SSH_KEY: ${{ secrets.SERVER_SSH_KEY }}

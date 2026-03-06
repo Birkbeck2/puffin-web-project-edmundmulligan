@@ -125,6 +125,7 @@
     margin: 0;
     flex-shrink: 0;
     display: block;
+
     /* Use mask to apply headings-text color to SVG icons */
     background-color: var(--colour-headings-text);
     -webkit-mask-size: contain;
@@ -177,6 +178,7 @@
     width: 15rem;
     height: 15rem;
     object-fit: contain;
+
     /* Use mask to apply headings-text color to SVG icons */
     background-color: var(--colour-headings-text);
     -webkit-mask-size: contain;

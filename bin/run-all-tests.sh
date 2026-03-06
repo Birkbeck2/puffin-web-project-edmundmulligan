@@ -42,7 +42,7 @@ bin/clear-tests.sh "$FOLDER"
 # Run all tests and collect exit codes
 echo "Running all tests..."
 if [ "$QUICK_MODE" = true ]; then
-  echo "⚡ Quick mode enabled: Testing only at 900px viewport width"
+  echo "⚡ Quick mode enabled: Skipping Wave and Lighthouse tests"
 fi
 echo ""
 
@@ -65,38 +65,31 @@ bin/check-links.sh "$FOLDER" || exit 1
 
 echo ""
 echo "🪓 Running axe accessibility tests..."
-if [ "$QUICK_MODE" = true ]; then
-  bin/run-axe-tests.sh "$FOLDER" -q || exit 1
-else
-  bin/run-axe-tests.sh "$FOLDER" || exit 1
-fi
-echo ""
-echo "🏮 Running lighthouse accessibility tests..."
-if [ "$QUICK_MODE" = true ]; then
-  bin/run-lighthouse-tests.sh "$FOLDER" -q || exit 1
-else
+bin/run-axe-tests.sh "$FOLDER" || exit 1
+if [ "$QUICK_MODE" = false ]; then
+  echo ""
+  echo "🏮 Running lighthouse accessibility tests..."
   bin/run-lighthouse-tests.sh "$FOLDER" || exit 1
+else
+  echo ""
+  echo "⏭️  Skipping Lighthouse tests (quick mode enabled)"
 fi
 
 echo ""
 echo "🦜 Running pa11y accessibility tests..."
-if [ "$QUICK_MODE" = true ]; then
-  bin/run-pa11y-tests.sh "$FOLDER" -q || exit 1
-else
-  bin/run-pa11y-tests.sh "$FOLDER" || exit 1
-fi
+bin/run-pa11y-tests.sh "$FOLDER" || exit 1
 
-if [ "$RUN_WAVE" = true ]; then
+if [ "$RUN_WAVE" = true ] && [ "$QUICK_MODE" = false ]; then
   echo ""
   echo "🌊 Running Wave accessibility tests..."
-  if [ "$QUICK_MODE" = true ]; then
-    bin/run-wave-tests.sh "$FOLDER" -q || exit 1
-  else
-    bin/run-wave-tests.sh "$FOLDER" || exit 1
-  fi
+  bin/run-wave-tests.sh "$FOLDER" || exit 1
 else
   echo ""
-  echo "⏭️  Skipping Wave accessibility tests (use -w or --run-wave to enable)"
+  if [ "$QUICK_MODE" = true ]; then
+    echo "⏭️  Skipping Wave accessibility tests (quick mode enabled)"
+  else
+    echo "⏭️  Skipping Wave accessibility tests (use -w or --run-wave to enable)"
+  fi
 fi
 
 echo ""

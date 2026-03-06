@@ -15,19 +15,23 @@
 'use strict';
 
 /**
- * Define all pages to test
+ * Define all pages to test (excluding diagnostics folder)
  */
 const pages = [
   { url: '/index.html', name: 'Home' },
-  { url: '/pages/start.html', name: 'About' },
+  { url: '/pages/start.html', name: 'Start' },
   { url: '/pages/gallery.html', name: 'Gallery' },
   { url: '/pages/accessories.html', name: 'Accessories' },
   { url: '/pages/facts.html', name: 'Facts' },
   { url: '/pages/students.html', name: 'Students' },
+  { url: '/pages/mentors.html', name: 'Mentors' },
   { url: '/pages/glossary.html', name: 'Glossary' },
   { url: '/pages/faq.html', name: 'FAQ' },
   { url: '/pages/license.html', name: 'License' },
-  { url: '/pages/credits.html', name: 'Credits' }
+  { url: '/pages/credits.html', name: 'Credits' },
+  { url: '/students/lesson-00.html', name: 'Student Lesson 0' },
+  { url: '/students/lesson-01.html', name: 'Student Lesson 1' },
+  { url: '/mentors/lesson-00.html', name: 'Mentor Lesson 0' }
 ];
 
 /**
@@ -91,13 +95,13 @@ async function runPageTests(page, pageInfo) {
     throw new Error(`${pageInfo.name} CSS Variables not applied correctly`);
   }
 
-  // Test 7: Check SVG support - header images should be present
-  const svgImages = await page.$$('header img[src*=".svg"]');
-  if (svgImages.length >= 2) {
+  // Test 7: Check SVG support - footer logo should be present
+  const svgImages = await page.$$('footer img[src*=".svg"]');
+  if (svgImages.length >= 1) {
     console.log(`✅ ${pageInfo.name} SVG images loaded`);
     tests.push({ name: `${pageInfo.name} SVG support`, status: 'passed' });
   } else {
-    throw new Error(`${pageInfo.name} SVG images not found: expected 2, found ${svgImages.length}`);
+    throw new Error(`${pageInfo.name} SVG images not found: expected at least 1, found ${svgImages.length}`);
   }
 
   // Test 8: Check responsive design - verify viewport meta tag

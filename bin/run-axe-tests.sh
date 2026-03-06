@@ -63,31 +63,44 @@ if [ "$QUICK_MODE" = true ]; then
 else
   VIEWPORTS=(150 400 900 1300)
 fi
-TOTAL_TESTS=$((PAGE_COUNT * 2 * ${#VIEWPORTS[@]}))
 
-# Test each page at different viewport widths, in both light and dark modes
+# Define styles to test
+STYLES=(normal subdued vibrant)
+
+TOTAL_TESTS=$((PAGE_COUNT * 6 * ${#VIEWPORTS[@]}))
+
+# Test each page at different viewport widths, in all theme/style combinations
 TESTED=0
 for VIEWPORT in "${VIEWPORTS[@]}"; do
   echo ""
   echo "📐 Testing at ${VIEWPORT}px width..."
   echo ""
   
-  for THEME in light dark; do
-    echo "  🎨 $THEME mode"
+  for STYLE in "${STYLES[@]}"; do
+    echo "  🎨 $STYLE style"
     
-    for page in $PAGES; do
-      TESTED=$((TESTED + 1))
-      # Convert file path to URL path
-      URL_PATH="${page#./}"
-      FULL_URL="$TEST_URL/$URL_PATH"
+    for THEME in light dark; do
+      echo "    💡 $THEME mode"
+      
+      for page in $PAGES; do
+        TESTED=$((TESTED + 1))
+        # Convert file path to URL path
+        URL_PATH="${page#./}"
+        
+        # Add theme and style parameters to URL
+        if [[ "$URL_PATH" == *"?"* ]]; then
+          FULL_URL="$TEST_URL/$URL_PATH&theme=$THEME&style=$STYLE"
+        else
+          FULL_URL="$TEST_URL/$URL_PATH?theme=$THEME&style=$STYLE"
+        fi
 
-      echo "  [$TESTED/$TOTAL_TESTS] Testing $URL_PATH (${VIEWPORT}px, $THEME mode)"
+        echo "    [$TESTED/$TOTAL_TESTS] Testing $URL_PATH (${VIEWPORT}px, $STYLE-$THEME)"
 
-      # Run axe on this page with color scheme emulation and viewport size
-      TEMP_RESULT="$RESULTS_DIR/axe-temp-$TESTED.json"
-      axe "$FULL_URL" --disable page-has-heading-one --save "$TEMP_RESULT" \
-        --chromedriver-options="{\"args\":[\"--force-prefers-color-scheme=$THEME\",\"--window-size=${VIEWPORT},768\"]}" \
-        2>&1 | grep -E "(violations|Testing|Saved)" || true
+        # Run axe on this page with color scheme emulation and viewport size
+        TEMP_RESULT="$RESULTS_DIR/axe-temp-$TESTED.json"
+        axe "$FULL_URL" --disable page-has-heading-one --save "$TEMP_RESULT" \
+          --chromedriver-options="{\"args\":[\"--force-prefers-color-scheme=$THEME\",\"--window-size=${VIEWPORT},768\"]}" \
+          2>&1 | grep -E "(violations|Testing|Saved)" || true
 
     # Merge violations into combined results if file exists
     if [ -f "$TEMP_RESULT" ]; then
@@ -125,6 +138,7 @@ for VIEWPORT in "${VIEWPORTS[@]}"; do
         }
       "
     fi
+      done
     done
   done
 done
@@ -201,18 +215,20 @@ else
       console.log('  Description: ' + v.description);
       console.log('  Help: ' + v.help);
       
-      // Group by theme
-      const byTheme = {};
+      // Group by theme and style
+      const byThemeStyle = {};
       data.violations.forEach(violation => {
         if (violation.id === id) {
           const theme = violation.theme || 'unknown';
-          if (!byTheme[theme]) byTheme[theme] = [];
-          byTheme[theme].push(violation.pageUrl || 'unknown');
+          const style = violation.style || 'unknown';
+          const key = style + '-' + theme;
+          if (!byThemeStyle[key]) byThemeStyle[key] = [];
+          byThemeStyle[key].push(violation.pageUrl || 'unknown');
         }
       });
       
-      Object.keys(byTheme).forEach(theme => {
-        console.log('  ' + theme + ' mode: ' + byTheme[theme].join(', '));
+      Object.keys(byThemeStyle).forEach(key => {
+        console.log('  ' + key + ': ' + byThemeStyle[key].join(', '));
       });
       console.log('');
     });

@@ -90,3 +90,56 @@
     background-color: var(--colour-headings-text);
     color: var(--colour-headings-background);
 }
+
+/* Lesson popover styling - for lesson navigation info */
+.lesson-popover {
+    max-width: min(25rem, 90vw);
+    padding: 1.5rem;
+    position: fixed;
+    inset: unset;
+    left: 20rem;
+    top: auto;
+    margin: 0;
+}
+
+.lesson-popover h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-family: var(--font-family-serif);
+    font-size: var(--fontsize-h3h4);
+    font-weight: bold;
+}
+
+.lesson-popover p {
+    font-size: var(--fontsize-p);
+    font-weight: normal;
+    text-align: left;
+    margin: 0;
+}
+
+/* Info popover - uses theme heading colors */
+.info-popover {
+    background-color: var(--colour-headings-background);
+    color: var(--colour-headings-text);
+    border-color: var(--colour-headings-text);
+}
+
+.info-popover h3 {
+    color: var(--colour-headings-text);
+}
+
+/* Warning popover - uses warning colors */
+.warning-popover {
+    background-color: var(--colour-warning-background);
+    color: var(--colour-warning-text);
+    border-color: var(--colour-warning-text);
+}
+
+.warning-popover h3 {
+    color: var(--colour-warning-text);
+}
+
+.warning-popover p {
+    text-align: center;
+    font-weight: bold;
+}
