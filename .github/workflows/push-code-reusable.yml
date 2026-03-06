@@ -35,4 +35,3 @@ jobs:
         source: "."
         target: ${{ inputs.deploy-path }}
         rm: true
-        exclude: ".git,.github,node_modules,test-results,artwork/source,artwork/generated"
