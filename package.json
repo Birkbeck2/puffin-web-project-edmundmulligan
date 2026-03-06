@@ -15,8 +15,7 @@
   "author": "Edmund Mulligan",
   "license": "MIT",
   "devDependencies": {
-    "http-server": "^14.1.1",
-    "robots-txt-guard": "^1.0.4"
+    "http-server": "^14.1.1"
   },
   "dependencies": {
     "broken-link-checker": "^0.7.8",
