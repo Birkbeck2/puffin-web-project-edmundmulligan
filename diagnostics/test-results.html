@@ -448,7 +448,7 @@
     <main>
         <div class="dashboard-header">
             <div class="dashboard-title">Automated Test Suite Results</div>
-            <button class="refresh-btn" onclick="loadAllResults()">
+            <button type="button" class="refresh-btn" onclick="loadAllResults()">
                 <i class="fas fa-sync-alt"></i> Refresh Results
             </button>
         </div>
@@ -483,8 +483,8 @@
     <div id="detailsModal" class="modal">
         <div class="modal-content">
             <div class="modal-header">
-                <h2 id="modalTitle"></h2>
-                <button class="modal-close" onclick="closeModal()">&times;</button>
+                <h2 id="modalTitle">&nbsp;</h2>
+                <button type="button" class="modal-close" onclick="closeModal()">&times;</button>
             </div>
             <div class="modal-body" id="modalBody">
             </div>
