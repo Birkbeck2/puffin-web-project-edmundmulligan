@@ -15,9 +15,9 @@
     padding: 1rem;
     font-size: var(--fontsize-button);
     font-weight: bold;
-    background-color: var(--colour-headings-background);
-    color: var(--colour-headings-text);
-    border: var(--border-style) var(--border-weight) var(--colour-headings-text);
+    background-color: var(--colour-effective-headings-background);
+    color: var(--colour-effective-headings-text);
+    border: var(--border-style) var(--border-weight) var(--colour-effective-headings-text);
     cursor: pointer;
     text-align: center;
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
@@ -31,8 +31,8 @@
 [class*=" button"]:hover,
 [class^="button"]:focus-visible,
 [class*=" button"]:focus-visible {
-    color: var(--colour-link-text);
-    background-color: var(--colour-headings-text);
+    color: var(--colour-effective-button-text-hover);
+    background-color: var(--colour-effective-button-background-hover);
 }
 
 /* not all buttons are links, but those that are use these styles */
@@ -40,7 +40,7 @@
 [class*=" button"]:link,
 [class^="button"]:visited,
 [class*=" button"]:visited {
-    color: var(--colour-link-text);
+    color: var(--colour-effective-link-text);
     text-decoration: none;
 }
 
@@ -85,14 +85,14 @@
 
 .button-rectangle:hover,
 .button-rectangle:focus-visible {
-    background-color: var(--colour-link-text-hover);
-    color: var(--colour-headings-text);
+    background-color: var(--colour-effective-button-background-hover);
+    color: var(--colour-effective-button-text-hover);
 }
 
 /* 3D button styles for theme buttons */
 .button-circle.theme-button {
     box-shadow: 
-        0 5px 0 var(--colour-headings-text),
+        0 5px 0 var(--colour-effective-headings-text),
         0 8px 10px rgb(0 0 0 / 30%);
     transform: translateY(0);
     transition: all 0.1s ease;
@@ -102,7 +102,7 @@
 .button-circle.theme-button:active {
     transform: translateY(5px) scale(1);
     box-shadow: 
-        0 0 0 var(--colour-headings-text),
+        0 0 0 var(--colour-effective-headings-text),
         0 2px 5px rgb(0 0 0 / 20%);
 }
 
@@ -110,10 +110,10 @@
 .button-circle.theme-button.pressed {
     transform: translateY(5px) scale(1) !important;
     box-shadow: 
-        0 0 0 var(--colour-headings-text),
+        0 0 0 var(--colour-effective-headings-text),
         0 2px 5px rgb(0 0 0 / 20%) !important;
-    background-color: var(--colour-link-text) !important;
-    color: var(--colour-headings-background) !important;
+    background-color: var(--colour-effective-link-text) !important;
+    color: var(--colour-effective-headings-background) !important;
 }
 
 /* Prevent hover effect on pressed button */
@@ -121,7 +121,7 @@
 .button-circle.theme-button.pressed:focus-visible {
     transform: translateY(5px) scale(1) !important;
     box-shadow: 
-        0 0 0 var(--colour-headings-text),
+        0 0 0 var(--colour-effective-headings-text),
         0 2px 5px rgb(0 0 0 / 20%) !important;
 }
 
@@ -133,7 +133,7 @@
     max-height: 10rem;
     font-size: calc(var(--fontsize-button-circle) * 0.85);
     box-shadow: 
-        0 3px 0 var(--colour-headings-text),
+        0 3px 0 var(--colour-effective-headings-text),
         0 5px 8px rgb(0 0 0 / 30%);
     transform: translateY(0);
     transition: all 0.1s ease;
@@ -149,7 +149,7 @@
 .button-circle.style-button:active {
     transform: translateY(3px) scale(1);
     box-shadow: 
-        0 0 0 var(--colour-headings-text),
+        0 0 0 var(--colour-effective-headings-text),
         0 2px 4px rgb(0 0 0 / 20%);
 }
 
@@ -157,10 +157,10 @@
 .button-circle.style-button.pressed {
     transform: translateY(3px) scale(1) !important;
     box-shadow: 
-        0 0 0 var(--colour-headings-text),
+        0 0 0 var(--colour-effective-headings-text),
         0 2px 4px rgb(0 0 0 / 20%) !important;
-    background-color: var(--colour-link-text) !important;
-    color: var(--colour-headings-background) !important;
+    background-color: var(--colour-effective-link-text) !important;
+    color: var(--colour-effective-headings-background) !important;
 }
 
 /* Prevent hover effect on pressed style button */
@@ -168,6 +168,6 @@
 .button-circle.style-button.pressed:focus-visible {
     transform: translateY(3px) scale(1) !important;
     box-shadow: 
-        0 0 0 var(--colour-headings-text),
+        0 0 0 var(--colour-effective-headings-text),
         0 2px 4px rgb(0 0 0 / 20%) !important;
 }

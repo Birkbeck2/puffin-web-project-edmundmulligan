@@ -263,17 +263,17 @@
     border-color: var(--colour-normal-light-button-text-selected);
 }
 
-[data-scheme="normal-light-link"] {
+a[data-scheme="normal-light-link"] {
     background: var(--colour-normal-light-link-background);
     color: var(--colour-normal-light-link-text);
 }
 
-[data-scheme="normal-light-link-hover"] {
+a[data-scheme="normal-light-link-hover"] {
     background: var(--colour-normal-light-link-background-hover);
     color: var(--colour-normal-light-link-text-hover);
 }
 
-[data-scheme="normal-light-link-visited"] {
+a[data-scheme="normal-light-link-visited"] {
     background: var(--colour-normal-light-link-background-visited);
     color: var(--colour-normal-light-link-text-visited);
 }
@@ -312,17 +312,17 @@
     border-color: var(--colour-normal-dark-button-text-selected);
 }
 
-[data-scheme="normal-dark-link"] {
+a[data-scheme="normal-dark-link"] {
     background: var(--colour-normal-dark-link-background);
     color: var(--colour-normal-dark-link-text);
 }
 
-[data-scheme="normal-dark-link-hover"] {
+a[data-scheme="normal-dark-link-hover"] {
     background: var(--colour-normal-dark-link-background-hover);
     color: var(--colour-normal-dark-link-text-hover);
 }
 
-[data-scheme="normal-dark-link-visited"] {
+a[data-scheme="normal-dark-link-visited"] {
     background: var(--colour-normal-dark-link-background-visited);
     color: var(--colour-normal-dark-link-text-visited);
 }
@@ -361,17 +361,17 @@
     border-color: var(--colour-subdued-light-button-text-selected);
 }
 
-[data-scheme="subdued-light-link"] {
+a[data-scheme="subdued-light-link"] {
     background: var(--colour-subdued-light-link-background);
     color: var(--colour-subdued-light-link-text);
 }
 
-[data-scheme="subdued-light-link-hover"] {
+a[data-scheme="subdued-light-link-hover"] {
     background: var(--colour-subdued-light-link-background-hover);
     color: var(--colour-subdued-light-link-text-hover);
 }
 
-[data-scheme="subdued-light-link-visited"] {
+a[data-scheme="subdued-light-link-visited"] {
     background: var(--colour-subdued-light-link-background-visited);
     color: var(--colour-subdued-light-link-text-visited);
 }
@@ -410,17 +410,17 @@
     border-color: var(--colour-subdued-dark-button-text-selected);
 }
 
-[data-scheme="subdued-dark-link"] {
+a[data-scheme="subdued-dark-link"] {
     background: var(--colour-subdued-dark-link-background);
     color: var(--colour-subdued-dark-link-text);
 }
 
-[data-scheme="subdued-dark-link-hover"] {
+a[data-scheme="subdued-dark-link-hover"] {
     background: var(--colour-subdued-dark-link-background-hover);
     color: var(--colour-subdued-dark-link-text-hover);
 }
 
-[data-scheme="subdued-dark-link-visited"] {
+a[data-scheme="subdued-dark-link-visited"] {
     background: var(--colour-subdued-dark-link-background-visited);
     color: var(--colour-subdued-dark-link-text-visited);
 }
@@ -459,17 +459,17 @@
     border-color: var(--colour-vibrant-light-button-text-selected);
 }
 
-[data-scheme="vibrant-light-link"] {
+a[data-scheme="vibrant-light-link"] {
     background: var(--colour-vibrant-light-link-background);
     color: var(--colour-vibrant-light-link-text);
 }
 
-[data-scheme="vibrant-light-link-hover"] {
+a[data-scheme="vibrant-light-link-hover"] {
     background: var(--colour-vibrant-light-link-background-hover);
     color: var(--colour-vibrant-light-link-text-hover);
 }
 
-[data-scheme="vibrant-light-link-visited"] {
+a[data-scheme="vibrant-light-link-visited"] {
     background: var(--colour-vibrant-light-link-background-visited);
     color: var(--colour-vibrant-light-link-text-visited);
 }
@@ -508,17 +508,17 @@
     border-color: var(--colour-vibrant-dark-button-text-selected);
 }
 
-[data-scheme="vibrant-dark-link"] {
+a[data-scheme="vibrant-dark-link"] {
     background: var(--colour-vibrant-dark-link-background);
     color: var(--colour-vibrant-dark-link-text);
 }
 
-[data-scheme="vibrant-dark-link-hover"] {
+a[data-scheme="vibrant-dark-link-hover"] {
     background: var(--colour-vibrant-dark-link-background-hover);
     color: var(--colour-vibrant-dark-link-text-hover);
 }
 
-[data-scheme="vibrant-dark-link-visited"] {
+a[data-scheme="vibrant-dark-link-visited"] {
     background: var(--colour-vibrant-dark-link-background-visited);
     color: var(--colour-vibrant-dark-link-text-visited);
 }

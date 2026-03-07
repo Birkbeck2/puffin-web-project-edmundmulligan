@@ -37,3 +37,7 @@ cd artwork/source/image-2
 ../../../bin/tex-to-svg.sh background-web-portrait-vibrant-light ../../generated
 cd ../../..
 
+# copy the images to the website folder
+echo "Copying generated images to website folder..."
+cp artwork/generated/background-web-*.svg images/backgrounds/
+cp artwork/generated/logo-embodied-mind-*.svg images/logos/

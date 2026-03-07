@@ -19,7 +19,7 @@
     width: 15rem;
     margin-right: 1.5rem;
     margin-bottom: 1rem;
-    border: var(--border-weight) var(--border-style) var(--colour-page-text);
+    border: var(--border-weight) var(--border-style) var(--colour-effective-page-text);
     border-radius: var(--border-radius);
     padding: 1rem;
     box-sizing: border-box;
@@ -74,7 +74,7 @@
     justify-content: space-around;
     gap: 1rem;
     padding: 1rem;
-    border: var(--border-weight) var(--border-style) var(--colour-page-text);
+    border: var(--border-weight) var(--border-style) var(--colour-effective-page-text);
     border-radius: var(--border-radius);
     margin-bottom: 1rem;
 }
@@ -132,7 +132,7 @@
     width: 80%;
     max-width: 43rem;
     text-align: center;
-    color: var(--colour-light-grey);
+    color: var(--colour-effective-page-text);
     padding: 0.6rem 0;
     min-height: 3rem;
 }
@@ -158,7 +158,7 @@
 
 .image-modal-close:hover,
 .image-modal-close:focus {
-    color: var(--colour-medium-grey);
+    color: var(--colour-effective-page-text);
     text-decoration: none;
     cursor: pointer;
 }

@@ -49,8 +49,8 @@ body {
     font-style: normal;
     line-height: 1.6;
     text-align: left;
-    color: var(--colour-page-text);
-    background-color: var(--colour-page-background);
+    color: var(--colour-effective-page-text);
+    background-color: var(--colour-effective-page-background);
 }
 
 header {
@@ -123,19 +123,19 @@ code {
  /* do not distinguish between a visited and non-visited link */
  a:link,
  a:visited {
-    color: var(--colour-link-text);
+    color: var(--colour-effective-link-text);
     text-decoration: underline;
     font-weight: 800;
 }
 
 a:hover,
 a:focus-visible {
-    color: var(--colour-link-text-focus);
+    color: var(--colour-effective-link-text-focus);
 }
 
 /* this may be a bit subtle but it meets WCAG 2.2 guidelines */
 a:focus-visible {
-    outline: var(--border-weight-thin) dashed var(--colour-link-text-focus);
+    outline: var(--border-weight-thin) dashed var(--colour-effective-link-text-focus);
     outline-offset: 0.2rem;
 }
 
@@ -158,7 +158,7 @@ img[src$=".svg"] {
 
 
 .screenshot {
-    border: var(--border-weight-thin) var(--border-style) var(--colour-headings-text);
+    border: var(--border-weight-thin) var(--border-style) var(--colour-effective-headings-text);
     max-width: 60%;
     height: auto;
     box-sizing: border-box;
@@ -210,6 +210,6 @@ figcaption {
     max-width: 35rem;
     box-sizing: border-box;
     padding: 1rem;
-    border: 0.1rem solid var(--colour-headings-text);
+    border: 0.1rem solid var(--colour-effective-headings-text);
     border-radius: var(--border-radius);
 }

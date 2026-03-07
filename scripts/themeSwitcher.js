@@ -56,17 +56,27 @@
             const prefix = `--colour-${style}-${effectiveTheme}`;
 
             // Apply theme-specific colors (from colours.css)
-            root.style.setProperty('--colour-page-background', `var(${prefix}-page-background)`);
-            root.style.setProperty('--colour-page-text', `var(${prefix}-page-text)`);
-            root.style.setProperty('--colour-headings-background', `var(${prefix}-headings-background)`);
-            root.style.setProperty('--colour-headings-text', `var(${prefix}-headings-text)`);
-            root.style.setProperty('--colour-link-text', `var(${prefix}-link-text)`);
-            root.style.setProperty('--colour-link-text-hover', `var(${prefix}-link-text-hover)`);
-            root.style.setProperty('--colour-link-text-visited', `var(${prefix}-link-text-visited)`);
-            root.style.setProperty('--colour-link-text-focus', `var(${prefix}-link-text-focus)`);
-            root.style.setProperty('--colour-code-background', `var(${prefix}-code-background)`);
-            root.style.setProperty('--colour-code-text', `var(${prefix}-code-text)`);
-            
+            root.style.setProperty('--colour-effective-page-background', `var(${prefix}-page-background)`);
+            root.style.setProperty('--colour-effective-page-text', `var(${prefix}-page-text)`);
+            root.style.setProperty('--colour-effective-headings-background', `var(${prefix}-headings-background)`);
+            root.style.setProperty('--colour-effective-headings-text', `var(${prefix}-headings-text)`);
+            root.style.setProperty('--colour-effective-code-background', `var(${prefix}-code-background)`);
+            root.style.setProperty('--colour-effective-code-text', `var(${prefix}-code-text)`);
+            root.style.setProperty('--colour-effective-button-background', `var(${prefix}-button-background)`);
+            root.style.setProperty('--colour-effective-button-text', `var(${prefix}-button-text)`);
+            root.style.setProperty('--colour-effective-button-background-hover', `var(${prefix}-button-background-hover)`);
+            root.style.setProperty('--colour-effective-button-text-hover', `var(${prefix}-button-text-hover)`);
+            root.style.setProperty('--colour-effective-button-background-selected', `var(${prefix}-button-background-selected)`);
+            root.style.setProperty('--colour-effective-button-text-selected', `var(${prefix}-button-text-selected)`);
+            root.style.setProperty('--colour-effective-link-background', `var(${prefix}-link-background)`);
+            root.style.setProperty('--colour-effective-link-text', `var(${prefix}-link-text)`);
+            root.style.setProperty('--colour-effective-link-background-hover', `var(${prefix}-link-background-hover)`);
+            root.style.setProperty('--colour-effective-link-text-hover', `var(${prefix}-link-text-hover)`);
+            root.style.setProperty('--colour-effective-link-background-visited', `var(${prefix}-link-background-visited)`);
+            root.style.setProperty('--colour-effective-link-text-visited', `var(${prefix}-link-text-visited)`);
+            root.style.setProperty('--colour-effective-link-background-focus', `var(${prefix}-link-background-focus)`);
+            root.style.setProperty('--colour-effective-link-text-focus', `var(${prefix}-link-text-focus)`);
+
             // Note: Non-themed colors (error, warning) are defined in colours.css 
             // and remain constant across all themes - no need to set them here
             

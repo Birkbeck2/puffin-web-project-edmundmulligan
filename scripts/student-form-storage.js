@@ -362,7 +362,7 @@
                 if (submitButton) {
                     const originalText = submitButton.textContent;
                     submitButton.textContent = 'Information Saved!';
-                    submitButton.style.backgroundColor = 'var(--colour-light-success-background, #4CAF50)';
+                    submitButton.style.backgroundColor = 'var(--colour-success-background)';
                 
                     setTimeout(() => {
                         submitButton.textContent = originalText;
@@ -457,7 +457,7 @@
 
                     // Visual feedback
                     loadButton.textContent = 'Information Loaded!';
-                    loadButton.style.backgroundColor = 'var(--colour-light-success-background, #4CAF50)';
+                    loadButton.style.backgroundColor = 'var(--colour-success-background)';
                 
                     setTimeout(() => {
                         loadButton.textContent = 'Load Information';

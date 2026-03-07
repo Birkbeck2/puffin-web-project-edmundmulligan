@@ -199,7 +199,7 @@
         padding: 0.25rem 0 0.5rem;
         margin: 0 0 0.5rem;
         text-align: left;
-        border-bottom: var(--border-weight) var(--border-style) var(--colour-headings-text);
+        border-bottom: var(--border-weight) var(--border-style) var(--colour-effective-headings-text);
     }
 
     .facts dd:last-of-type {

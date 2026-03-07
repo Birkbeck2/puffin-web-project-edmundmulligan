@@ -16,7 +16,7 @@
 .code-snippet-table {
     display: table;
     width: calc(100% - 3rem);
-    border: var(--border-weight) var(--border-style) var(--colour-page-text);
+    border: var(--border-weight) var(--border-style) var(--colour-effective-page-text);
     overflow: hidden;
     margin-bottom: 1rem;
     margin-right: 1rem;
@@ -24,7 +24,7 @@
     font-size: var(--fontsize-smallprint);
     line-height: 1.5;
     border-collapse: collapse;
-    background-color: var(--colour-code-background);
+    background-color: var(--colour-effective-code-background);
 }
 
 .code-snippet-table .code-line {
@@ -34,10 +34,10 @@
 .code-snippet-table .line-number {
     display: table-cell;
     text-align: right;
-    color: var(--colour-code-text);
+    color: var(--colour-effective-code-text);
     opacity: 0.5;
     user-select: none;
-    border-right: var(--border-weight) var(--border-style) var(--colour-page-text);
+    border-right: var(--border-weight) var(--border-style) var(--colour-effective-page-text);
     padding: 0.25rem 1rem;
     white-space: nowrap;
     vertical-align: top;
@@ -49,5 +49,5 @@
     white-space: pre-wrap;
     overflow-wrap: break-word;
     width: 100%;
-    color: var(--colour-code-text);
+    color: var(--colour-effective-code-text);
 }
