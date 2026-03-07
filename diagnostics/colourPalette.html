@@ -17,8 +17,6 @@
     <meta name="keywords" content="color palette, design system, CSS variables, HSL colors">
     <meta name="author" content="Edmund Mulligan">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Skip validation: This page uses inline styles intentionally for color palette demo -->
-    <meta name="validate-code" content="skip">
 
     <title>Color Palette - Web Witchcraft and Wizardry</title>
 
@@ -61,9 +59,9 @@
             <h2>Non-theme Colors</h2>
             <div class="colour-grid">
                 <div class="colour-card">
-                    <div class="colour-swatch" style="background: var(--colour-warning-background); color: var(--colour-warning-text);">
+                    <div class="colour-swatch" data-scheme="warning">
                         <div class="card-title">Warning Popovers</div>
-                        <div class="lorem-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.</div>
+                        <div class="lorem-text"><strong>Lorem Ipsum</strong> dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.</div>
                         <div class="colour-name">Background: --colour-warning-background</div>
                         <div class="colour-value" data-var="--colour-warning-background"></div>
                         <div class="colour-name">Text: --colour-warning-text</div>
@@ -72,9 +70,9 @@
                     </div>
                 </div>
                 <div class="colour-card">
-                    <div class="colour-swatch" style="background: var(--colour-error-background); color: var(--colour-error-text);">
+                    <div class="colour-swatch" data-scheme="error">
                         <div class="card-title">Error Popovers</div>
-                        <div class="lorem-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.</div>
+                        <div class="lorem-text"><strong>Lorem Ipsum</strong> dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.</div>
                         <div class="colour-name">Background: --colour-error-background</div>
                         <div class="colour-value" data-var="--colour-error-background"></div>
                         <div class="colour-name">Text: --colour-error-text</div>
@@ -90,9 +88,9 @@
             <h2>Normal - Light Theme</h2>
             <div class="colour-grid">
                 <div class="colour-card">
-                    <div class="colour-swatch" style="background: var(--colour-normal-light-page-background); color: var(--colour-normal-light-page-text);">
+                    <div class="colour-swatch" data-scheme="normal-light-page">
                         <div class="card-title">Page</div>
-                        <div class="lorem-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                        <div class="lorem-text"><strong>Lorem Ipsum</strong> dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
                         <div class="colour-name">Background: --colour-normal-light-page-background</div>
                         <div class="colour-value" data-var="--colour-normal-light-page-background"></div>
                         <div class="colour-name">Text: --colour-normal-light-page-text</div>
@@ -101,9 +99,9 @@
                     </div>
                 </div>
                 <div class="colour-card">
-                    <div class="colour-swatch" style="background: var(--colour-normal-light-headings-background); color: var(--colour-normal-light-headings-text);">
+                    <div class="colour-swatch" data-scheme="normal-light-headings">
                         <div class="card-title">Header/Footer</div>
-                        <div class="lorem-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                        <div class="lorem-text"><strong>Lorem Ipsum</strong> dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
                         <div class="colour-name">Background: --colour-normal-light-headings-background</div>
                         <div class="colour-value" data-var="--colour-normal-light-headings-background"></div>
                         <div class="colour-name">Text: --colour-normal-light-headings-text</div>
@@ -112,9 +110,9 @@
                     </div>
                 </div>
                 <div class="colour-card">
-                    <div class="colour-swatch" style="background: var(--colour-normal-light-code-background); color: var(--colour-normal-light-code-text);">
+                    <div class="colour-swatch" data-scheme="normal-light-code">
                         <div class="card-title">Code</div>
-                        <div class="lorem-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                        <div class="lorem-text"><strong>Lorem Ipsum</strong> dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
                         <div class="colour-name">Background: --colour-normal-light-code-background</div>
                         <div class="colour-value" data-var="--colour-normal-light-code-background"></div>
                         <div class="colour-name">Text: --colour-normal-light-code-text</div>
@@ -123,19 +121,19 @@
                     </div>
                 </div>
                 <div class="color-card wide">
-                    <div class="colour-swatch" style="background: var(--colour-normal-light-page-background); color: var(--colour-normal-light-page-text);">
+                    <div class="colour-swatch" data-scheme="normal-light-page">
                         <div class="card-title">Buttons</div>
                         <div class="button-states">
                             <div class="button-state-item">
-                                <button class="demo-button-round" style="background: var(--colour-normal-light-button-background); color: var(--colour-normal-light-button-text); border-color: var(--colour-normal-light-button-text);">Click</button>
+                                <button class="demo-button-round" data-scheme="normal-light-button">Click</button>
                                 <div class="button-state-label">Normal</div>
                             </div>
                             <div class="button-state-item">
-                                <button class="demo-button-round hover-state" style="background: var(--colour-normal-light-button-background-hover); color: var(--colour-normal-light-button-text-hover); border-color: var(--colour-normal-light-button-text-hover);">Click</button>
+                                <button class="demo-button-round hover-state" data-scheme="normal-light-button-hover">Click</button>
                                 <div class="button-state-label">Hover</div>
                             </div>
                             <div class="button-state-item">
-                                <button class="demo-button-round selected-state" style="background: var(--colour-normal-light-button-background-selected); color: var(--colour-normal-light-button-text-selected); border-color: var(--colour-normal-light-button-text-selected);">Click</button>
+                                <button class="demo-button-round selected-state" data-scheme="normal-light-button-selected">Click</button>
                                 <div class="button-state-label">Selected</div>
                             </div>
                         </div>
@@ -160,13 +158,13 @@
                     </div>
                 </div>
                 <div class="color-card wide">
-                    <div class="colour-swatch" style="background: var(--colour-normal-light-page-background); color: var(--colour-normal-light-page-text);">
+                    <div class="colour-swatch" data-scheme="normal-light-page">
                         <div class="card-title">Lesson Navigation</div>
                         <nav>
                             <ul class="demo-nav">
-                                <li><a href="#" style="background: var(--colour-normal-light-link-background); color: var(--colour-normal-light-link-text);">Lesson 0 (normal)</a></li>
-                                <li><a href="#" style="background: var(--colour-normal-light-link-background-hover); color: var(--colour-normal-light-link-text-hover);">Lesson 1 (hover)</a></li>
-                                <li><a href="#" style="background: var(--colour-normal-light-link-background-visited); color: var(--colour-normal-light-link-text-visited);">Lesson 2 (visited)</a></li>
+                                <li><a href="#" data-scheme="normal-light-link">Lesson 0 (normal)</a></li>
+                                <li><a href="#" data-scheme="normal-light-link-hover">Lesson 1 (hover)</a></li>
+                                <li><a href="#" data-scheme="normal-light-link-visited">Lesson 2 (visited)</a></li>
                             </ul>
                         </nav>
                         <div class="colour-name">Link Background: --colour-normal-light-link-background</div>
@@ -197,9 +195,9 @@
             <h2>Normal - Dark Theme</h2>
             <div class="colour-grid">
                 <div class="colour-card">
-                    <div class="colour-swatch" style="background: var(--colour-normal-dark-page-background); color: var(--colour-normal-dark-page-text);">
+                    <div class="colour-swatch" data-scheme="normal-dark-page">
                         <div class="card-title">Page</div>
-                        <div class="lorem-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                        <div class="lorem-text"><strong>Lorem Ipsum</strong> dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
                         <div class="colour-name">Background: --colour-normal-dark-page-background</div>
                         <div class="colour-value" data-var="--colour-normal-dark-page-background"></div>
                         <div class="colour-name">Text: --colour-normal-dark-page-text</div>
@@ -208,9 +206,9 @@
                     </div>
                 </div>
                 <div class="colour-card">
-                    <div class="colour-swatch" style="background: var(--colour-normal-dark-headings-background); color: var(--colour-normal-dark-headings-text);">
+                    <div class="colour-swatch" data-scheme="normal-dark-headings">
                         <div class="card-title">Header/Footer</div>
-                        <div class="lorem-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                        <div class="lorem-text"><strong>Lorem Ipsum</strong> dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
                         <div class="colour-name">Background: --colour-normal-dark-headings-background</div>
                         <div class="colour-value" data-var="--colour-normal-dark-headings-background"></div>
                         <div class="colour-name">Text: --colour-normal-dark-headings-text</div>
@@ -219,9 +217,9 @@
                     </div>
                 </div>
                 <div class="colour-card">
-                    <div class="colour-swatch" style="background: var(--colour-normal-dark-code-background); color: var(--colour-normal-dark-code-text);">
+                    <div class="colour-swatch" data-scheme="normal-dark-code">
                         <div class="card-title">Code</div>
-                        <div class="lorem-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                        <div class="lorem-text"><strong>Lorem Ipsum</strong> dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
                         <div class="colour-name">Background: --colour-normal-dark-code-background</div>
                         <div class="colour-value" data-var="--colour-normal-dark-code-background"></div>
                         <div class="colour-name">Text: --colour-normal-dark-code-text</div>
@@ -230,19 +228,19 @@
                     </div>
                 </div>
                 <div class="color-card wide">
-                    <div class="colour-swatch" style="background: var(--colour-normal-dark-page-background); color: var(--colour-normal-dark-page-text);">
+                    <div class="colour-swatch" data-scheme="normal-dark-page">
                         <div class="card-title">Buttons</div>
                         <div class="button-states">
                             <div class="button-state-item">
-                                <button class="demo-button-round" style="background: var(--colour-normal-dark-button-background); color: var(--colour-normal-dark-button-text); border-color: var(--colour-normal-dark-button-text);">Click</button>
+                                <button class="demo-button-round" data-scheme="normal-dark-button">Click</button>
                                 <div class="button-state-label">Normal</div>
                             </div>
                             <div class="button-state-item">
-                                <button class="demo-button-round hover-state" style="background: var(--colour-normal-dark-button-background-hover); color: var(--colour-normal-dark-button-text-hover); border-color: var(--colour-normal-dark-button-text-hover);">Click</button>
+                                <button class="demo-button-round hover-state" data-scheme="normal-dark-button-hover">Click</button>
                                 <div class="button-state-label">Hover</div>
                             </div>
                             <div class="button-state-item">
-                                <button class="demo-button-round selected-state" style="background: var(--colour-normal-dark-button-background-selected); color: var(--colour-normal-dark-button-text-selected); border-color: var(--colour-normal-dark-button-text-selected);">Click</button>
+                                <button class="demo-button-round selected-state" data-scheme="normal-dark-button-selected">Click</button>
                                 <div class="button-state-label">Selected</div>
                             </div>
                         </div>
@@ -267,13 +265,13 @@
                     </div>
                 </div>
                 <div class="color-card wide">
-                    <div class="colour-swatch" style="background: var(--colour-normal-dark-page-background); color: var(--colour-normal-dark-page-text);">
+                    <div class="colour-swatch" data-scheme="normal-dark-page">
                         <div class="card-title">Lesson Navigation</div>
                         <nav>
                             <ul class="demo-nav">
-                                <li><a href="#" style="background: var(--colour-normal-dark-link-background); color: var(--colour-normal-dark-link-text);">Lesson 0 (normal)</a></li>
-                                <li><a href="#" style="background: var(--colour-normal-dark-link-background-hover); color: var(--colour-normal-dark-link-text-hover);">Lesson 1 (hover)</a></li>
-                                <li><a href="#" style="background: var(--colour-normal-dark-link-background-visited); color: var(--colour-normal-dark-link-text-visited);">Lesson 2 (visited)</a></li>
+                                <li><a href="#" data-scheme="normal-dark-link">Lesson 0 (normal)</a></li>
+                                <li><a href="#" data-scheme="normal-dark-link-hover">Lesson 1 (hover)</a></li>
+                                <li><a href="#" data-scheme="normal-dark-link-visited">Lesson 2 (visited)</a></li>
                             </ul>
                         </nav>
                         <div class="colour-name">Background: --colour-normal-dark-page-background</div>
@@ -308,9 +306,9 @@
             <h2>Subdued - Light Theme</h2>
             <div class="colour-grid">
                 <div class="colour-card">
-                    <div class="colour-swatch" style="background: var(--colour-subdued-light-page-background); color: var(--colour-subdued-light-page-text);">
+                    <div class="colour-swatch" data-scheme="subdued-light-page">
                         <div class="card-title">Page</div>
-                        <div class="lorem-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                        <div class="lorem-text"><strong>Lorem Ipsum</strong> dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
                         <div class="colour-name">Background: --colour-subdued-light-page-background</div>
                         <div class="colour-value" data-var="--colour-subdued-light-page-background"></div>
                         <div class="colour-name">Text: --colour-subdued-light-page-text</div>
@@ -319,9 +317,9 @@
                     </div>
                 </div>
                 <div class="colour-card">
-                    <div class="colour-swatch" style="background: var(--colour-subdued-light-headings-background); color: var(--colour-subdued-light-headings-text);">
+                    <div class="colour-swatch" data-scheme="subdued-light-headings">
                         <div class="card-title">Header/Footer</div>
-                        <div class="lorem-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                        <div class="lorem-text"><strong>Lorem Ipsum</strong> dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
                         <div class="colour-name">Background: --colour-subdued-light-headings-background</div>
                         <div class="colour-value" data-var="--colour-subdued-light-headings-background"></div>
                         <div class="colour-name">Text: --colour-subdued-light-headings-text</div>
@@ -330,9 +328,9 @@
                     </div>
                 </div>
                 <div class="colour-card">
-                    <div class="colour-swatch" style="background: var(--colour-subdued-light-code-background); color: var(--colour-subdued-light-code-text);">
+                    <div class="colour-swatch" data-scheme="subdued-light-code">
                         <div class="card-title">Code</div>
-                        <div class="lorem-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                        <div class="lorem-text"><strong>Lorem Ipsum</strong> dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
                         <div class="colour-name">Background: --colour-subdued-light-code-background</div>
                         <div class="colour-value" data-var="--colour-subdued-light-code-background"></div>
                         <div class="colour-name">Text: --colour-subdued-light-code-text</div>
@@ -341,19 +339,19 @@
                     </div>
                 </div>
                 <div class="color-card wide">
-                    <div class="colour-swatch" style="background: var(--colour-subdued-light-page-background); color: var(--colour-subdued-light-page-text);">
+                    <div class="colour-swatch" data-scheme="subdued-light-page">
                         <div class="card-title">Buttons</div>
                         <div class="button-states">
                             <div class="button-state-item">
-                                <button class="demo-button-round" style="background: var(--colour-subdued-light-button-background); color: var(--colour-subdued-light-button-text); border-color: var(--colour-subdued-light-button-text);">Click</button>
+                                <button class="demo-button-round" data-scheme="subdued-light-button">Click</button>
                                 <div class="button-state-label">Normal</div>
                             </div>
                             <div class="button-state-item">
-                                <button class="demo-button-round hover-state" style="background: var(--colour-subdued-light-button-background-hover); color: var(--colour-subdued-light-button-text-hover); border-color: var(--colour-subdued-light-button-text-hover);">Click</button>
+                                <button class="demo-button-round hover-state" data-scheme="subdued-light-button-hover">Click</button>
                                 <div class="button-state-label">Hover</div>
                             </div>
                             <div class="button-state-item">
-                                <button class="demo-button-round selected-state" style="background: var(--colour-subdued-light-button-background-selected); color: var(--colour-subdued-light-button-text-selected); border-color: var(--colour-subdued-light-button-text-selected);">Click</button>
+                                <button class="demo-button-round selected-state" data-scheme="subdued-light-button-selected">Click</button>
                                 <div class="button-state-label">Selected</div>
                             </div>
                         </div>
@@ -377,13 +375,13 @@
                         <div class="contrast-info" data-bg-var="--colour-subdued-light-button-background-selected" data-fg-var="--colour-subdued-light-button-text-selected"></div>
                     </div>
                 </div>
-                <div class="color-card wide">\n                    <div class="colour-swatch" style="background: var(--colour-subdued-light-page-background); color: var(--colour-subdued-light-page-text);">
+                <div class="color-card wide">\n                    <div class="colour-swatch" data-scheme="subdued-light-page">
                         <div class="card-title">Lesson Navigation</div>
                         <nav>
                             <ul class="demo-nav">
-                                <li><a href="#" style="background: var(--colour-subdued-light-link-background); color: var(--colour-subdued-light-link-text);">Lesson 0 (normal)</a></li>
-                                <li><a href="#" style="background: var(--colour-subdued-light-link-background-hover); color: var(--colour-subdued-light-link-text-hover);">Lesson 1 (hover)</a></li>
-                                <li><a href="#" style="background: var(--colour-subdued-light-link-background-visited); color: var(--colour-subdued-light-link-text-visited);">Lesson 2 (visited)</a></li>
+                                <li><a href="#" data-scheme="subdued-light-link">Lesson 0 (normal)</a></li>
+                                <li><a href="#" data-scheme="subdued-light-link-hover">Lesson 1 (hover)</a></li>
+                                <li><a href="#" data-scheme="subdued-light-link-visited">Lesson 2 (visited)</a></li>
                             </ul>
                         </nav>
                         <div class="colour-name">Background: --colour-subdued-light-page-background</div>
@@ -418,9 +416,9 @@
             <h2>Subdued - Dark Theme</h2>
             <div class="colour-grid">
                 <div class="colour-card">
-                    <div class="colour-swatch" style="background: var(--colour-subdued-dark-page-background); color: var(--colour-subdued-dark-page-text);">
+                    <div class="colour-swatch" data-scheme="subdued-dark-page">
                         <div class="card-title">Page</div>
-                        <div class="lorem-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                        <div class="lorem-text"><strong>Lorem Ipsum</strong> dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
                         <div class="colour-name">Background: --colour-subdued-dark-page-background</div>
                         <div class="colour-value" data-var="--colour-subdued-dark-page-background"></div>
                         <div class="colour-name">Text: --colour-subdued-dark-page-text</div>
@@ -429,9 +427,9 @@
                     </div>
                 </div>
                 <div class="colour-card">
-                    <div class="colour-swatch" style="background: var(--colour-subdued-dark-headings-background); color: var(--colour-subdued-dark-headings-text);">
+                    <div class="colour-swatch" data-scheme="subdued-dark-headings">
                         <div class="card-title">Header/Footer</div>
-                        <div class="lorem-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                        <div class="lorem-text"><strong>Lorem Ipsum</strong> dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
                         <div class="colour-name">Background: --colour-subdued-dark-headings-background</div>
                         <div class="colour-value" data-var="--colour-subdued-dark-headings-background"></div>
                         <div class="colour-name">Text: --colour-subdued-dark-headings-text</div>
@@ -440,9 +438,9 @@
                     </div>
                 </div>
                 <div class="colour-card">
-                    <div class="colour-swatch" style="background: var(--colour-subdued-dark-code-background); color: var(--colour-subdued-dark-code-text);">
+                    <div class="colour-swatch" data-scheme="subdued-dark-code">
                         <div class="card-title">Code</div>
-                        <div class="lorem-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                        <div class="lorem-text"><strong>Lorem Ipsum</strong> dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
                         <div class="colour-name">Background: --colour-subdued-dark-code-background</div>
                         <div class="colour-value" data-var="--colour-subdued-dark-code-background"></div>
                         <div class="colour-name">Text: --colour-subdued-dark-code-text</div>
@@ -451,19 +449,19 @@
                     </div>
                 </div>
                 <div class="color-card wide">
-                    <div class="colour-swatch" style="background: var(--colour-subdued-dark-page-background); color: var(--colour-subdued-dark-page-text);">
+                    <div class="colour-swatch" data-scheme="subdued-dark-page">
                         <div class="card-title">Buttons</div>
                         <div class="button-states">
                             <div class="button-state-item">
-                                <button class="demo-button-round" style="background: var(--colour-subdued-dark-button-background); color: var(--colour-subdued-dark-button-text); border-color: var(--colour-subdued-dark-button-text);">Click</button>
+                                <button class="demo-button-round" data-scheme="subdued-dark-button">Click</button>
                                 <div class="button-state-label">Normal</div>
                             </div>
                             <div class="button-state-item">
-                                <button class="demo-button-round hover-state" style="background: var(--colour-subdued-dark-button-background-hover); color: var(--colour-subdued-dark-button-text-hover); border-color: var(--colour-subdued-dark-button-text-hover);">Click</button>
+                                <button class="demo-button-round hover-state" data-scheme="subdued-dark-button-hover">Click</button>
                                 <div class="button-state-label">Hover</div>
                             </div>
                             <div class="button-state-item">
-                                <button class="demo-button-round selected-state" style="background: var(--colour-subdued-dark-button-background-selected); color: var(--colour-subdued-dark-button-text-selected); border-color: var(--colour-subdued-dark-button-text-selected);">Click</button>
+                                <button class="demo-button-round selected-state" data-scheme="subdued-dark-button-selected">Click</button>
                                 <div class="button-state-label">Selected</div>
                             </div>
                         </div>
@@ -488,13 +486,13 @@
                     </div>
                 </div>
                 <div class="color-card wide">
-                    <div class="colour-swatch" style="background: var(--colour-subdued-dark-page-background); color: var(--colour-subdued-dark-page-text);">
+                    <div class="colour-swatch" data-scheme="subdued-dark-page">
                         <div class="card-title">Lesson Navigation</div>
                         <nav>
                             <ul class="demo-nav">
-                                <li><a href="#" style="background: var(--colour-subdued-dark-link-background); color: var(--colour-subdued-dark-link-text);">Lesson 0 (normal)</a></li>
-                                <li><a href="#" style="background: var(--colour-subdued-dark-link-background-hover); color: var(--colour-subdued-dark-link-text-hover);">Lesson 1 (hover)</a></li>
-                                <li><a href="#" style="background: var(--colour-subdued-dark-link-background-visited); color: var(--colour-subdued-dark-link-text-visited);">Lesson 2 (visited)</a></li>
+                                <li><a href="#" data-scheme="subdued-dark-link">Lesson 0 (normal)</a></li>
+                                <li><a href="#" data-scheme="subdued-dark-link-hover">Lesson 1 (hover)</a></li>
+                                <li><a href="#" data-scheme="subdued-dark-link-visited">Lesson 2 (visited)</a></li>
                             </ul>
                         </nav>
                         <div class="colour-name">Background: --colour-subdued-dark-page-background</div>
@@ -529,9 +527,9 @@
             <h2>Vibrant - Light Theme</h2>
             <div class="colour-grid">
                 <div class="colour-card">
-                    <div class="colour-swatch" style="background: var(--colour-vibrant-light-page-background); color: var(--colour-vibrant-light-page-text);">
+                    <div class="colour-swatch" data-scheme="vibrant-light-page">
                         <div class="card-title">Page</div>
-                        <div class="lorem-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                        <div class="lorem-text"><strong>Lorem Ipsum</strong> dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
                         <div class="colour-name">Background: --colour-vibrant-light-page-background</div>
                         <div class="colour-value" data-var="--colour-vibrant-light-page-background"></div>
                         <div class="colour-name">Text: --colour-vibrant-light-page-text</div>
@@ -540,9 +538,9 @@
                     </div>
                 </div>
                 <div class="colour-card">
-                    <div class="colour-swatch" style="background: var(--colour-vibrant-light-headings-background); color: var(--colour-vibrant-light-headings-text);">
+                    <div class="colour-swatch" data-scheme="vibrant-light-headings">
                         <div class="card-title">Header/Footer</div>
-                        <div class="lorem-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                        <div class="lorem-text"><strong>Lorem Ipsum</strong> dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
                         <div class="colour-name">Background: --colour-vibrant-light-headings-background</div>
                         <div class="colour-value" data-var="--colour-vibrant-light-headings-background"></div>
                         <div class="colour-name">Text: --colour-vibrant-light-headings-text</div>
@@ -551,9 +549,9 @@
                     </div>
                 </div>
                 <div class="colour-card">
-                    <div class="colour-swatch" style="background: var(--colour-vibrant-light-code-background); color: var(--colour-vibrant-light-code-text);">
+                    <div class="colour-swatch" data-scheme="vibrant-light-code">
                         <div class="card-title">Code</div>
-                        <div class="lorem-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                        <div class="lorem-text"><strong>Lorem Ipsum</strong> dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
                         <div class="colour-name">Background: --colour-vibrant-light-code-background</div>
                         <div class="colour-value" data-var="--colour-vibrant-light-code-background"></div>
                         <div class="colour-name">Text: --colour-vibrant-light-code-text</div>
@@ -562,19 +560,19 @@
                     </div>
                 </div>
                 <div class="color-card wide">
-                    <div class="colour-swatch" style="background: var(--colour-vibrant-light-page-background); color: var(--colour-vibrant-light-page-text);">
+                    <div class="colour-swatch" data-scheme="vibrant-light-page">
                         <div class="card-title">Buttons</div>
                         <div class="button-states">
                             <div class="button-state-item">
-                                <button class="demo-button-round" style="background: var(--colour-vibrant-light-button-background); color: var(--colour-vibrant-light-button-text); border-color: var(--colour-vibrant-light-button-text);">Click</button>
+                                <button class="demo-button-round" data-scheme="vibrant-light-button">Click</button>
                                 <div class="button-state-label">Normal</div>
                             </div>
                             <div class="button-state-item">
-                                <button class="demo-button-round hover-state" style="background: var(--colour-vibrant-light-button-background-hover); color: var(--colour-vibrant-light-button-text-hover); border-color: var(--colour-vibrant-light-button-text-hover);">Click</button>
+                                <button class="demo-button-round hover-state" data-scheme="vibrant-light-button-hover">Click</button>
                                 <div class="button-state-label">Hover</div>
                             </div>
                             <div class="button-state-item">
-                                <button class="demo-button-round selected-state" style="background: var(--colour-vibrant-light-button-background-selected); color: var(--colour-vibrant-light-button-text-selected); border-color: var(--colour-vibrant-light-button-text-selected);">Click</button>
+                                <button class="demo-button-round selected-state" data-scheme="vibrant-light-button-selected">Click</button>
                                 <div class="button-state-label">Selected</div>
                             </div>
                         </div>
@@ -599,13 +597,13 @@
                     </div>
                 </div>
                 <div class="color-card wide">
-                    <div class="colour-swatch" style="background: var(--colour-vibrant-light-page-background); color: var(--colour-vibrant-light-page-text);">
+                    <div class="colour-swatch" data-scheme="vibrant-light-page">
                         <div class="card-title">Lesson Navigation</div>
                         <nav>
                             <ul class="demo-nav">
-                                <li><a href="#" style="background: var(--colour-vibrant-light-link-background); color: var(--colour-vibrant-light-link-text);">Lesson 0 (normal)</a></li>
-                                <li><a href="#" style="background: var(--colour-vibrant-light-link-background-hover); color: var(--colour-vibrant-light-link-text-hover);">Lesson 1 (hover)</a></li>
-                                <li><a href="#" style="background: var(--colour-vibrant-light-link-background-visited); color: var(--colour-vibrant-light-link-text-visited);">Lesson 2 (visited)</a></li>
+                                <li><a href="#" data-scheme="vibrant-light-link">Lesson 0 (normal)</a></li>
+                                <li><a href="#" data-scheme="vibrant-light-link-hover">Lesson 1 (hover)</a></li>
+                                <li><a href="#" data-scheme="vibrant-light-link-visited">Lesson 2 (visited)</a></li>
                             </ul>
                         </nav>
                         <div class="colour-name">Background: --colour-vibrant-light-page-background</div>
@@ -640,9 +638,9 @@
             <h2>Vibrant - Dark Theme</h2>
             <div class="colour-grid">
                 <div class="colour-card">
-                    <div class="colour-swatch" style="background: var(--colour-vibrant-dark-page-background); color: var(--colour-vibrant-dark-page-text);">
+                    <div class="colour-swatch" data-scheme="vibrant-dark-page">
                         <div class="card-title">Page</div>
-                        <div class="lorem-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                        <div class="lorem-text"><strong>Lorem Ipsum</strong> dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
                         <div class="colour-name">Background: --colour-vibrant-dark-page-background</div>
                         <div class="colour-value" data-var="--colour-vibrant-dark-page-background"></div>
                         <div class="colour-name">Text: --colour-vibrant-dark-page-text</div>
@@ -651,9 +649,9 @@
                     </div>
                 </div>
                 <div class="colour-card">
-                    <div class="colour-swatch" style="background: var(--colour-vibrant-dark-headings-background); color: var(--colour-vibrant-dark-headings-text);">
+                    <div class="colour-swatch" data-scheme="vibrant-dark-headings">
                         <div class="card-title">Header/Footer</div>
-                        <div class="lorem-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                        <div class="lorem-text"><strong>Lorem Ipsum</strong> dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
                         <div class="colour-name">Background: --colour-vibrant-dark-headings-background</div>
                         <div class="colour-value" data-var="--colour-vibrant-dark-headings-background"></div>
                         <div class="colour-name">Text: --colour-vibrant-dark-headings-text</div>
@@ -662,9 +660,9 @@
                     </div>
                 </div>
                 <div class="colour-card">
-                    <div class="colour-swatch" style="background: var(--colour-vibrant-dark-code-background); color: var(--colour-vibrant-dark-code-text);">
+                    <div class="colour-swatch" data-scheme="vibrant-dark-code">
                         <div class="card-title">Code</div>
-                        <div class="lorem-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                        <div class="lorem-text"><strong>Lorem Ipsum</strong> dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
                         <div class="colour-name">Background: --colour-vibrant-dark-code-background</div>
                         <div class="colour-value" data-var="--colour-vibrant-dark-code-background"></div>
                         <div class="colour-name">Text: --colour-vibrant-dark-code-text</div>
@@ -673,19 +671,19 @@
                     </div>
                 </div>
                 <div class="color-card wide">
-                    <div class="colour-swatch" style="background: var(--colour-vibrant-dark-page-background); color: var(--colour-vibrant-dark-page-text);">
+                    <div class="colour-swatch" data-scheme="vibrant-dark-page">
                         <div class="card-title">Buttons</div>
                         <div class="button-states">
                             <div class="button-state-item">
-                                <button class="demo-button-round" style="background: var(--colour-vibrant-dark-button-background); color: var(--colour-vibrant-dark-button-text); border-color: var(--colour-vibrant-dark-button-text);">Click</button>
+                                <button class="demo-button-round" data-scheme="vibrant-dark-button">Click</button>
                                 <div class="button-state-label">Normal</div>
                             </div>
                             <div class="button-state-item">
-                                <button class="demo-button-round hover-state" style="background: var(--colour-vibrant-dark-button-background-hover); color: var(--colour-vibrant-dark-button-text-hover); border-color: var(--colour-vibrant-dark-button-text-hover);">Click</button>
+                                <button class="demo-button-round hover-state" data-scheme="vibrant-dark-button-hover">Click</button>
                                 <div class="button-state-label">Hover</div>
                             </div>
                             <div class="button-state-item">
-                                <button class="demo-button-round selected-state" style="background: var(--colour-vibrant-dark-button-background-selected); color: var(--colour-vibrant-dark-button-text-selected); border-color: var(--colour-vibrant-dark-button-text-selected);">Click</button>
+                                <button class="demo-button-round selected-state" data-scheme="vibrant-dark-button-selected">Click</button>
                                 <div class="button-state-label">Selected</div>
                             </div>
                         </div>
@@ -710,13 +708,13 @@
                     </div>
                 </div>
                 <div class="color-card wide">
-                    <div class="colour-swatch" style="background: var(--colour-vibrant-dark-page-background); color: var(--colour-vibrant-dark-page-text);">
+                    <div class="colour-swatch" data-scheme="vibrant-dark-page">
                         <div class="card-title">Lesson Navigation</div>
                         <nav>
                             <ul class="demo-nav">
-                                <li><a href="#" style="background: var(--colour-vibrant-dark-link-background); color: var(--colour-vibrant-dark-link-text);">Lesson 0 (normal)</a></li>
-                                <li><a href="#" style="background: var(--colour-vibrant-dark-link-background-hover); color: var(--colour-vibrant-dark-link-text-hover);">Lesson 1 (hover)</a></li>
-                                <li><a href="#" style="background: var(--colour-vibrant-dark-link-background-visited); color: var(--colour-vibrant-dark-link-text-visited);">Lesson 2 (visited)</a></li>
+                                <li><a href="#" data-scheme="vibrant-dark-link">Lesson 0 (normal)</a></li>
+                                <li><a href="#" data-scheme="vibrant-dark-link-hover">Lesson 1 (hover)</a></li>
+                                <li><a href="#" data-scheme="vibrant-dark-link-visited">Lesson 2 (visited)</a></li>
                             </ul>
                         </nav>
                         <div class="colour-name">Background: --colour-vibrant-dark-page-background</div>

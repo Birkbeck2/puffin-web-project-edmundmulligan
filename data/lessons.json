@@ -16,127 +16,127 @@
       "id": "lesson 2",
       "title": "Landmarks",
       "description": "Add landmarks and other structural elements to your web page.",
-      "file": null
+      "file": "lesson-02.html"
     },
     {
       "id": "lesson 3",
       "title": "Lists",
       "description": "Add lists to your web page, both ordered and unordered.",
-      "file": null
+      "file": "lesson-03.html"
     },
     {
       "id": "lesson 4",
       "title": "Images",
       "description": "Add some images to your web page.",
-      "file": null
+      "file": "lesson-04.html"
     },
     {
       "id": "lesson 5",
       "title": "Tables and hyperlinks",
       "description": "Add tables and hyperlinks to your web page.",
-      "file": null
+      "file": "lesson-05.html"
     },
     {
       "id": "lesson 6",
       "title": "Introducing CSS",
       "description": "Learn about Cascading Style Sheets (CSS) and how they can change the look of your web pages.",
-      "file": null
+      "file": "lesson-06.html"
     },
     {
       "id": "lesson 7",
       "title": "External CSS",
       "description": "Learn how to use an external CSS stylesheet to change the look of your web pages and separate content from presentation.",
-      "file": null
+      "file": "lesson-07.html"
     },
     {
       "id": "lesson 8",
       "title": "CSS and lists",
       "description": "Make your lists more visually appealing using CSS.",
-      "file": null
+      "file": "lesson-08.html"
     },
     {
       "id": "lesson 9",
       "title": "Links and CSS",
       "description": "Make your hyperlinks more visually appealing using CSS.",
-      "file": null
+      "file": "lesson-09.html"
     },
     {
       "id": "lesson 10",
       "title": "Responsive Design",
       "description": "Learn about media queries and how they can be used to create responsive web pages that work on both desktop and mobile devices.",
-      "file": null
+      "file": "lesson-10.html"
     },
     {
       "id": "lesson 11",
       "title": "Javascript",
       "description": "Use JavaScript to add interactivity to your web pages.",
-      "file": null
+      "file": "lesson-11.html"
     },
     {
       "id": "lesson 12",
       "title": "External Javascript files",
       "description": "Just as CSS can be put in external files, so can JavaScript. In this lesson you will learn how to use external JavaScript files.",
-      "file": null
+      "file": "lesson-12.html"
     },
     {
       "id": "lesson 13",
       "title": "Errors and Exceptions",
       "description": "In this lesson you will learn about errors and exceptions in JavaScript and how to handle them.",
-      "file": null
+      "file": "lesson-13.html"
     },
     {
       "id": "lesson 14",
       "title": "  Testing and Debugging",
       "description": "Learn how to test and debug your JavaScript code using the browser's developer tools.",
-      "file": null
+      "file": "lesson-14.html"
     },
     {
       "id": "lesson 15",
       "title": "Forms",
       "description": "Learn how to create forms to collect information from users.",
-      "file": null
+      "file": "lesson-15.html"
     },
     {
       "id": "lesson 16",
       "title": "Cookies",
       "description": "In this lesson you will learn about cookies and how they can be used to store information on the user's computer.",
-      "file": null
+      "file": "lesson-16.html"
     },
     {
       "id": "lesson 17",
       "title": "Clients and Servers",
       "description": "In this lesson you will learn about the client- server model of the web.",
-      "file": null
+      "file": "lesson-17.html"
     },
     {
       "id": "lesson 18",
       "title": "A server page",
       "description": "In this lesson you will learn how to create a simple server page using a server-side language.",
-      "file": null
+      "file": "lesson-18.html"
     },
     {
       "id": "lesson 19",
       "title": "Processing Forms on the server",
       "description": "Learn how to process the data you collect from forms on the server.",
-      "file": null
+      "file": "lesson-19.html"
     },
     {
       "id": "lesson 20",
       "title": "Databases",
       "description": "In this lesson you will learn about databases and how to use them to store data for your web applications.",
-      "file": null
+      "file": "lesson-20.html"
     },
     {
       "id": "lesson 21",
       "title": "Security",
       "description": "In this lesson you will learn about basic web security concepts,",
-      "file": null
+      "file": "lesson-21.html"
     },
     {
       "id": "lesson 22",
       "title": "Passwords",
       "description": "Passwords require special handling to keep them secure. In this lesson you will learn how to handle passwords safely.",
-      "file": null
+      "file": "lesson-22.html"
     }
   ]
 }

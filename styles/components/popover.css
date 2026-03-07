@@ -96,10 +96,9 @@
     max-width: min(25rem, 90vw);
     padding: 1.5rem;
     position: fixed;
-    inset: unset;
-    left: 20rem;
-    top: auto;
     margin: 0;
+    z-index: 1000;
+    inset: unset;
 }
 
 .lesson-popover h3 {
@@ -117,7 +116,7 @@
     margin: 0;
 }
 
-/* Info popover - uses theme heading colors */
+/* Info popover - uses theme heading colours */
 .info-popover {
     background-color: var(--colour-headings-background);
     color: var(--colour-headings-text);
@@ -128,7 +127,7 @@
     color: var(--colour-headings-text);
 }
 
-/* Warning popover - uses warning colors */
+/* Warning popover - uses warning colours */
 .warning-popover {
     background-color: var(--colour-warning-background);
     color: var(--colour-warning-text);

@@ -67,12 +67,8 @@
             root.style.setProperty('--colour-code-background', `var(${prefix}-code-background)`);
             root.style.setProperty('--colour-code-text', `var(${prefix}-code-text)`);
             
-            // Apply global non-theme colors (from colours.css)
-            // These are the same across all themes for consistency
-            root.style.setProperty('--colour-error-background', 'var(--colour-error-background)');
-            root.style.setProperty('--colour-error-text', 'var(--colour-error-text)');
-            root.style.setProperty('--colour-warning-background', 'var(--colour-warning-background)');
-            root.style.setProperty('--colour-warning-text', 'var(--colour-warning-text)');
+            // Note: Non-themed colors (error, warning) are defined in colours.css 
+            // and remain constant across all themes - no need to set them here
             
             // Background images are both style and theme dependent
             const bgPrefix = `--bg-landscape-${style}-${effectiveTheme}`;

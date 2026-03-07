@@ -2,7 +2,7 @@
  **********************************************************************
  * File       : scripts/populateLessonsNav.js
  * Author     : Edmund Mulligan <edmund@edmundmulligan.name>
- * Copyright  : (c) 2025 The Embodied Mind
+ * Copyright  : (c) 2026 The Embodied Mind
  * License    : MIT License (see license-and-credits.html page)
  * Description:
  *   Dynamically generates the lessons navigation menu from data/lessons.json
@@ -118,9 +118,9 @@ function createMenuItem(lesson, pathPrefix, lessonFolder, fileExistsInFolder) {
         link.dataset.popoverId = popoverId;
         
         // Add hover and focus event listeners
-        link.addEventListener('mouseenter', () => showPopoverById(popoverId));
+        link.addEventListener('mouseenter', (e) => showPopoverById(popoverId, e.currentTarget));
         link.addEventListener('mouseleave', () => hidePopoverById(popoverId));
-        link.addEventListener('focus', () => showPopoverById(popoverId));
+        link.addEventListener('focus', (e) => showPopoverById(popoverId, e.currentTarget));
         link.addEventListener('blur', () => hidePopoverById(popoverId));
         
         li.appendChild(link);
@@ -132,9 +132,9 @@ function createMenuItem(lesson, pathPrefix, lessonFolder, fileExistsInFolder) {
         button.dataset.popoverId = popoverId;
         
         // Add hover and focus event listeners
-        button.addEventListener('mouseenter', () => showPopoverById(popoverId));
+        button.addEventListener('mouseenter', (e) => showPopoverById(popoverId, e.currentTarget));
         button.addEventListener('mouseleave', () => hidePopoverById(popoverId));
-        button.addEventListener('focus', () => showPopoverById(popoverId));
+        button.addEventListener('focus', (e) => showPopoverById(popoverId, e.currentTarget));
         button.addEventListener('blur', () => hidePopoverById(popoverId));
         
         li.appendChild(button);
@@ -144,13 +144,58 @@ function createMenuItem(lesson, pathPrefix, lessonFolder, fileExistsInFolder) {
 }
 
 /**
+ * Position a popover next to its trigger element
+ * @param {HTMLElement} popover - The popover element
+ * @param {HTMLElement} trigger - The trigger element (link or button)
+ */
+function positionPopover(popover, trigger) {
+    const triggerRect = trigger.getBoundingClientRect();
+    const popoverRect = popover.getBoundingClientRect();
+    
+    // Position to the right of the trigger element
+    let left = triggerRect.right + 10; // 10px gap
+    let top = triggerRect.top;
+    
+    // Check if popover would go off the right edge of viewport
+    if (left + popoverRect.width > window.innerWidth) {
+        // Position to the left of trigger instead
+        left = triggerRect.left - popoverRect.width - 10;
+    }
+    
+    // Check if popover would go off the bottom of viewport
+    if (top + popoverRect.height > window.innerHeight) {
+        top = window.innerHeight - popoverRect.height - 10;
+    }
+    
+    // Ensure popover doesn't go off the top
+    if (top < 10) {
+        top = 10;
+    }
+    
+    // Ensure popover doesn't go off the left
+    if (left < 10) {
+        left = 10;
+    }
+    
+    popover.style.left = `${left}px`;
+    popover.style.top = `${top}px`;
+}
+
+/**
  * Show a popover by its ID
  * @param {string} popoverId - The ID of the popover to show
+ * @param {HTMLElement} trigger - The trigger element (optional)
  */
-function showPopoverById(popoverId) {
+function showPopoverById(popoverId, trigger) {
     const popover = document.getElementById(popoverId);
     if (popover && !popover.matches(':popover-open')) {
         popover.showPopover();
+        if (trigger) {
+            // Use requestAnimationFrame to ensure popover is rendered before positioning
+            requestAnimationFrame(() => {
+                positionPopover(popover, trigger);
+            });
+        }
     }
 }
 

@@ -149,24 +149,18 @@
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    border: 2px solid var(--btn-text-color, currentcolor);
-    background: transparent;
-    color: var(--btn-text-color, inherit);
+    border: 2px solid currentcolor;
     font-weight: bold;
     font-size: 0.9rem;
     cursor: pointer;
 }
 
 .demo-button-round.hover-state {
-    background: var(--btn-text-color, currentcolor);
-    color: var(--btn-bg-color, var(--colour-white));
-    border-color: var(--btn-text-color, currentcolor);
+    /* Hover state colors come from data-scheme attribute */
 }
 
 .demo-button-round.selected-state {
-    background: var(--btn-text-color, currentcolor);
-    color: var(--btn-bg-color, var(--colour-white));
-    border-color: var(--btn-text-color, currentcolor);
+    /* Selected state colors come from data-scheme attribute */
     border-width: 3px;
     transform: scale(0.95);
 }
@@ -175,21 +169,17 @@
     padding: 0.75rem 1.5rem;
     border-radius: 0.5rem;
     border: 2px solid currentcolor;
-    background: transparent;
-    color: inherit;
     font-weight: bold;
     font-size: 0.9rem;
     cursor: pointer;
 }
 
 .demo-button-rect.hover-state {
-    background: currentcolor;
-    color: var(--button-hover-text, var(--colour-white));
+    /* Hover state colors come from data-scheme attribute */
 }
 
 .demo-button-rect.selected-state {
-    background: currentcolor;
-    color: var(--button-hover-text, var(--colour-white));
+    /* Selected state colors come from data-scheme attribute */
     border-width: 3px;
     transform: scale(0.95);
 }
@@ -224,4 +214,311 @@
     color: var(--colour-code-text);
     border-radius: var(--border-radius);
     border: var(--border-weight-thin) var(--border-style) var(--colour-page-text);
+}
+
+/* Color scheme data attributes - systematic approach to apply inline styles via CSS */
+
+/* Non-theme colors */
+[data-scheme="warning"] {
+    background: var(--colour-warning-background);
+    color: var(--colour-warning-text);
+}
+
+[data-scheme="error"] {
+    background: var(--colour-error-background);
+    color: var(--colour-error-text);
+}
+
+/* Normal Light theme */
+[data-scheme="normal-light-page"] {
+    background: var(--colour-normal-light-page-background);
+    color: var(--colour-normal-light-page-text);
+}
+
+[data-scheme="normal-light-headings"] {
+    background: var(--colour-normal-light-headings-background);
+    color: var(--colour-normal-light-headings-text);
+}
+
+[data-scheme="normal-light-code"] {
+    background: var(--colour-normal-light-code-background);
+    color: var(--colour-normal-light-code-text);
+}
+
+[data-scheme="normal-light-button"] {
+    background: var(--colour-normal-light-button-background);
+    color: var(--colour-normal-light-button-text);
+    border-color: var(--colour-normal-light-button-text);
+}
+
+[data-scheme="normal-light-button-hover"] {
+    background: var(--colour-normal-light-button-background-hover);
+    color: var(--colour-normal-light-button-text-hover);
+    border-color: var(--colour-normal-light-button-text-hover);
+}
+
+[data-scheme="normal-light-button-selected"] {
+    background: var(--colour-normal-light-button-background-selected);
+    color: var(--colour-normal-light-button-text-selected);
+    border-color: var(--colour-normal-light-button-text-selected);
+}
+
+[data-scheme="normal-light-link"] {
+    background: var(--colour-normal-light-link-background);
+    color: var(--colour-normal-light-link-text);
+}
+
+[data-scheme="normal-light-link-hover"] {
+    background: var(--colour-normal-light-link-background-hover);
+    color: var(--colour-normal-light-link-text-hover);
+}
+
+[data-scheme="normal-light-link-visited"] {
+    background: var(--colour-normal-light-link-background-visited);
+    color: var(--colour-normal-light-link-text-visited);
+}
+
+/* Normal Dark theme */
+[data-scheme="normal-dark-page"] {
+    background: var(--colour-normal-dark-page-background);
+    color: var(--colour-normal-dark-page-text);
+}
+
+[data-scheme="normal-dark-headings"] {
+    background: var(--colour-normal-dark-headings-background);
+    color: var(--colour-normal-dark-headings-text);
+}
+
+[data-scheme="normal-dark-code"] {
+    background: var(--colour-normal-dark-code-background);
+    color: var(--colour-normal-dark-code-text);
+}
+
+[data-scheme="normal-dark-button"] {
+    background: var(--colour-normal-dark-button-background);
+    color: var(--colour-normal-dark-button-text);
+    border-color: var(--colour-normal-dark-button-text);
+}
+
+[data-scheme="normal-dark-button-hover"] {
+    background: var(--colour-normal-dark-button-background-hover);
+    color: var(--colour-normal-dark-button-text-hover);
+    border-color: var(--colour-normal-dark-button-text-hover);
+}
+
+[data-scheme="normal-dark-button-selected"] {
+    background: var(--colour-normal-dark-button-background-selected);
+    color: var(--colour-normal-dark-button-text-selected);
+    border-color: var(--colour-normal-dark-button-text-selected);
+}
+
+[data-scheme="normal-dark-link"] {
+    background: var(--colour-normal-dark-link-background);
+    color: var(--colour-normal-dark-link-text);
+}
+
+[data-scheme="normal-dark-link-hover"] {
+    background: var(--colour-normal-dark-link-background-hover);
+    color: var(--colour-normal-dark-link-text-hover);
+}
+
+[data-scheme="normal-dark-link-visited"] {
+    background: var(--colour-normal-dark-link-background-visited);
+    color: var(--colour-normal-dark-link-text-visited);
+}
+
+/* Subdued Light theme */
+[data-scheme="subdued-light-page"] {
+    background: var(--colour-subdued-light-page-background);
+    color: var(--colour-subdued-light-page-text);
+}
+
+[data-scheme="subdued-light-headings"] {
+    background: var(--colour-subdued-light-headings-background);
+    color: var(--colour-subdued-light-headings-text);
+}
+
+[data-scheme="subdued-light-code"] {
+    background: var(--colour-subdued-light-code-background);
+    color: var(--colour-subdued-light-code-text);
+}
+
+[data-scheme="subdued-light-button"] {
+    background: var(--colour-subdued-light-button-background);
+    color: var(--colour-subdued-light-button-text);
+    border-color: var(--colour-subdued-light-button-text);
+}
+
+[data-scheme="subdued-light-button-hover"] {
+    background: var(--colour-subdued-light-button-background-hover);
+    color: var(--colour-subdued-light-button-text-hover);
+    border-color: var(--colour-subdued-light-button-text-hover);
+}
+
+[data-scheme="subdued-light-button-selected"] {
+    background: var(--colour-subdued-light-button-background-selected);
+    color: var(--colour-subdued-light-button-text-selected);
+    border-color: var(--colour-subdued-light-button-text-selected);
+}
+
+[data-scheme="subdued-light-link"] {
+    background: var(--colour-subdued-light-link-background);
+    color: var(--colour-subdued-light-link-text);
+}
+
+[data-scheme="subdued-light-link-hover"] {
+    background: var(--colour-subdued-light-link-background-hover);
+    color: var(--colour-subdued-light-link-text-hover);
+}
+
+[data-scheme="subdued-light-link-visited"] {
+    background: var(--colour-subdued-light-link-background-visited);
+    color: var(--colour-subdued-light-link-text-visited);
+}
+
+/* Subdued Dark theme */
+[data-scheme="subdued-dark-page"] {
+    background: var(--colour-subdued-dark-page-background);
+    color: var(--colour-subdued-dark-page-text);
+}
+
+[data-scheme="subdued-dark-headings"] {
+    background: var(--colour-subdued-dark-headings-background);
+    color: var(--colour-subdued-dark-headings-text);
+}
+
+[data-scheme="subdued-dark-code"] {
+    background: var(--colour-subdued-dark-code-background);
+    color: var(--colour-subdued-dark-code-text);
+}
+
+[data-scheme="subdued-dark-button"] {
+    background: var(--colour-subdued-dark-button-background);
+    color: var(--colour-subdued-dark-button-text);
+    border-color: var(--colour-subdued-dark-button-text);
+}
+
+[data-scheme="subdued-dark-button-hover"] {
+    background: var(--colour-subdued-dark-button-background-hover);
+    color: var(--colour-subdued-dark-button-text-hover);
+    border-color: var(--colour-subdued-dark-button-text-hover);
+}
+
+[data-scheme="subdued-dark-button-selected"] {
+    background: var(--colour-subdued-dark-button-background-selected);
+    color: var(--colour-subdued-dark-button-text-selected);
+    border-color: var(--colour-subdued-dark-button-text-selected);
+}
+
+[data-scheme="subdued-dark-link"] {
+    background: var(--colour-subdued-dark-link-background);
+    color: var(--colour-subdued-dark-link-text);
+}
+
+[data-scheme="subdued-dark-link-hover"] {
+    background: var(--colour-subdued-dark-link-background-hover);
+    color: var(--colour-subdued-dark-link-text-hover);
+}
+
+[data-scheme="subdued-dark-link-visited"] {
+    background: var(--colour-subdued-dark-link-background-visited);
+    color: var(--colour-subdued-dark-link-text-visited);
+}
+
+/* Vibrant Light theme */
+[data-scheme="vibrant-light-page"] {
+    background: var(--colour-vibrant-light-page-background);
+    color: var(--colour-vibrant-light-page-text);
+}
+
+[data-scheme="vibrant-light-headings"] {
+    background: var(--colour-vibrant-light-headings-background);
+    color: var(--colour-vibrant-light-headings-text);
+}
+
+[data-scheme="vibrant-light-code"] {
+    background: var(--colour-vibrant-light-code-background);
+    color: var(--colour-vibrant-light-code-text);
+}
+
+[data-scheme="vibrant-light-button"] {
+    background: var(--colour-vibrant-light-button-background);
+    color: var(--colour-vibrant-light-button-text);
+    border-color: var(--colour-vibrant-light-button-text);
+}
+
+[data-scheme="vibrant-light-button-hover"] {
+    background: var(--colour-vibrant-light-button-background-hover);
+    color: var(--colour-vibrant-light-button-text-hover);
+    border-color: var(--colour-vibrant-light-button-text-hover);
+}
+
+[data-scheme="vibrant-light-button-selected"] {
+    background: var(--colour-vibrant-light-button-background-selected);
+    color: var(--colour-vibrant-light-button-text-selected);
+    border-color: var(--colour-vibrant-light-button-text-selected);
+}
+
+[data-scheme="vibrant-light-link"] {
+    background: var(--colour-vibrant-light-link-background);
+    color: var(--colour-vibrant-light-link-text);
+}
+
+[data-scheme="vibrant-light-link-hover"] {
+    background: var(--colour-vibrant-light-link-background-hover);
+    color: var(--colour-vibrant-light-link-text-hover);
+}
+
+[data-scheme="vibrant-light-link-visited"] {
+    background: var(--colour-vibrant-light-link-background-visited);
+    color: var(--colour-vibrant-light-link-text-visited);
+}
+
+/* Vibrant Dark theme */
+[data-scheme="vibrant-dark-page"] {
+    background: var(--colour-vibrant-dark-page-background);
+    color: var(--colour-vibrant-dark-page-text);
+}
+
+[data-scheme="vibrant-dark-headings"] {
+    background: var(--colour-vibrant-dark-headings-background);
+    color: var(--colour-vibrant-dark-headings-text);
+}
+
+[data-scheme="vibrant-dark-code"] {
+    background: var(--colour-vibrant-dark-code-background);
+    color: var(--colour-vibrant-dark-code-text);
+}
+
+[data-scheme="vibrant-dark-button"] {
+    background: var(--colour-vibrant-dark-button-background);
+    color: var(--colour-vibrant-dark-button-text);
+    border-color: var(--colour-vibrant-dark-button-text);
+}
+
+[data-scheme="vibrant-dark-button-hover"] {
+    background: var(--colour-vibrant-dark-button-background-hover);
+    color: var(--colour-vibrant-dark-button-text-hover);
+    border-color: var(--colour-vibrant-dark-button-text-hover);
+}
+
+[data-scheme="vibrant-dark-button-selected"] {
+    background: var(--colour-vibrant-dark-button-background-selected);
+    color: var(--colour-vibrant-dark-button-text-selected);
+    border-color: var(--colour-vibrant-dark-button-text-selected);
+}
+
+[data-scheme="vibrant-dark-link"] {
+    background: var(--colour-vibrant-dark-link-background);
+    color: var(--colour-vibrant-dark-link-text);
+}
+
+[data-scheme="vibrant-dark-link-hover"] {
+    background: var(--colour-vibrant-dark-link-background-hover);
+    color: var(--colour-vibrant-dark-link-text-hover);
+}
+
+[data-scheme="vibrant-dark-link-visited"] {
+    background: var(--colour-vibrant-dark-link-background-visited);
+    color: var(--colour-vibrant-dark-link-text-visited);
 }
