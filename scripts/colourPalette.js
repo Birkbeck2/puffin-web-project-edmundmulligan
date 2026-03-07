@@ -431,7 +431,7 @@ const colourPalette = new ColourPalette();
 
 function initializeWhenReady() {
     // Check if a known CSS variable is available (indicates CSS is loaded)
-    const testColor = getComputedStyle(document.documentElement).getPropertyValue('--colour-indigo').trim();
+    const testColor = getComputedStyle(document.documentElement).getPropertyValue('--colour-white').trim();
     
     if (testColor) {
         // CSS is loaded, initialize

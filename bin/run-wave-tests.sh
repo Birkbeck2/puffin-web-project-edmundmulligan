@@ -147,8 +147,7 @@ cleanup_ngrok() {
 }
 trap cleanup_ngrok EXIT
 
-# Setup results directory
-setup_results_dir
+# Results directory already set up above with correct path
 RESULT_FILE="$RESULTS_DIR/wave-results.json"
 
 # Initialize combined results

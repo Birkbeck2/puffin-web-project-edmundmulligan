@@ -68,14 +68,14 @@ jobs:
       run: |
         bin/check-links.sh .
 
+    - name: Install Chrome for browser-based tests
+      run: |
+        npx puppeteer browsers install chrome
+
     - name: Run axe accessibility tests
       continue-on-error: true
       run: |
         bin/run-axe-tests.sh .
-
-    - name: Install Chrome for Puppeteer
-      run: |
-        npx puppeteer browsers install chrome
 
     - name: Run Lighthouse accessibility tests
       continue-on-error: true
