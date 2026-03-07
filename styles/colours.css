@@ -179,8 +179,7 @@
     --colour-vibrant-dark-link-background-visited:     hsl(from var(--colour-orange) h s 60%);
     --colour-vibrant-dark-link-text-visited:           hsl(from var(--colour-purple) h s 15%);
 
-    /* Effective theme color variables - default to normal-light theme */
-    /* These are dynamically overridden by themeSwitcher.js based on user preference */
+    /* Effective theme color variables - default to normal-light theme - will be overridden by themeSwitcher.js */
     --colour-effective-page-background:                var(--colour-normal-light-page-background);
     --colour-effective-page-text:                      var(--colour-normal-light-page-text);
     --colour-effective-headings-background:            var(--colour-normal-light-headings-background);
@@ -201,8 +200,7 @@
     --colour-effective-link-text-visited:              var(--colour-normal-light-link-text-visited);
     --colour-effective-link-text-focus:                var(--colour-normal-light-link-text-hover);
 
-    /* Static generic color variables for diagnostics pages - always normal-light theme */
-    /* These are NOT overridden by themeSwitcher.js and remain constant */
+    /* Static generic color variables for diagnostics pages - always normal-light theme. These are NOT overridden by themeSwitcher.js and remain constant */
     --colour-page-background:                          var(--colour-normal-light-page-background);
     --colour-page-text:                                var(--colour-normal-light-page-text);
     --colour-headings-background:                      var(--colour-normal-light-headings-background);

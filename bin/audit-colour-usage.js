@@ -43,7 +43,8 @@ const THEME_SPECIFIC_ALLOWED_FILES = [
     'styles/colours.css',          // Defines them
     'scripts/themeSwitcher.js',    // Maps them
     'diagnostics/colourPalette.html', // Shows them
-    'scripts/colourPalette.js'     // Analyzes them
+    'scripts/colourPalette.js',    // Analyzes them
+    'styles/colourPalette.css'     // Diagnostic stylesheet
 ];
 
 // Files/folders exempt from colour compliance checks (diagnostic/test files)

@@ -4,7 +4,7 @@
  **********************************************************************
  * File       : bin/run-browser-tests.js
  * Author     : Edmund Mulligan <edmund@edmundmulligan.name>
- * Copyright  : (c) 2025 The Embodied Mind
+ * Copyright  : (c) 2026 The Embodied Mind
  * License    : MIT License (see license-and-credits.html page)
  * Description:
  *   Generic cross-browser testing runner using Playwright.

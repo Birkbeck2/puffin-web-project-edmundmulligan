@@ -2,7 +2,7 @@
  **********************************************************************
  * File       : scripts/show-os-instructions.js
  * Author     : Edmund Mulligan <edmund@edmundmulligan.name>
- * Copyright  : (c) 2025 The Embodied Mind
+ * Copyright  : (c) 6 The Embodied Mind
  * License    : MIT License (see license-and-credits.html page)
  * Description:
  *   Shows OS-specific instructions based on radio button selection
