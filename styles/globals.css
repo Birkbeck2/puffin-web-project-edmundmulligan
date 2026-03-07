@@ -1,0 +1,58 @@
+/*
+ **********************************************************************
+ * File       : globals.css
+ * Author     : Edmund Mulligan <edmund@edmundmulligan.name>
+ * Copyright  : (c) 2026 The Embodied Mind
+ * License    : MIT License (see license-and-credits.html page)
+ * Description:
+ *    definition of global CSS variables and styles
+ **********************************************************************
+ */
+
+/* Import colour definitions from colours.css */
+@import url("./colours.css");
+@import url("./typography.css");
+
+:root {
+    /* Background image sources */
+    --bg-landscape-normal-light:              url('../images/backgrounds/background-web-landscape-normal-light.svg');
+    --bg-landscape-normal-dark:               url('../images/backgrounds/background-web-landscape-normal-dark.svg');
+    --bg-portrait-normal-light:               url('../images/backgrounds/background-web-portrait-normal-light.svg');
+    --bg-portrait-normal-dark:                url('../images/backgrounds/background-web-portrait-normal-dark.svg');
+    --bg-landscape-subdued-light:             url('../images/backgrounds/background-web-landscape-subdued-light.svg');
+    --bg-landscape-subdued-dark:              url('../images/backgrounds/background-web-landscape-subdued-dark.svg');
+    --bg-portrait-subdued-light:              url('../images/backgrounds/background-web-portrait-subdued-light.svg');
+    --bg-portrait-subdued-dark:               url('../images/backgrounds/background-web-portrait-subdued-dark.svg');
+    --bg-landscape-vibrant-light:             url('../images/backgrounds/background-web-landscape-vibrant-light.svg');
+    --bg-landscape-vibrant-dark:              url('../images/backgrounds/background-web-landscape-vibrant-dark.svg');
+    --bg-portrait-vibrant-light:              url('../images/backgrounds/background-web-portrait-vibrant-light.svg');
+    --bg-portrait-vibrant-dark:               url('../images/backgrounds/background-web-portrait-vibrant-dark.svg');
+    
+    /* Active background images - default to normal-light, overridden by theme-switcher.js */
+    --bg-landscape:                    var(--bg-landscape-normal-light);
+    --bg-portrait:                     var(--bg-portrait-normal-light);
+
+    /* SVG filter for theme switching */
+    --svg-filter-light:                none;
+    --svg-filter-dark:                 none;
+    --svg-filter:                      var(--svg-filter-light);
+
+    /* SVG filter for header silhouettes - match heading text color */
+    --header-svg-filter-light:         brightness(0) saturate(100%) invert(13%) sepia(100%) saturate(7426%) hue-rotate(275deg) brightness(86%) contrast(123%);
+    --header-svg-filter-dark:          brightness(0) saturate(100%) invert(91%) sepia(68%) saturate(3706%) hue-rotate(142deg) brightness(104%) contrast(101%);
+    --header-svg-filter:               var(--header-svg-filter-light);
+
+    /* other global variables to ensure site-wide consistency */
+    --border-radius:          2rem;
+    --border-weight:          0.2rem;
+    --border-weight-thin:     0.1rem;
+    --border-style:           solid;
+
+
+
+    /* 
+        there are probably more things that could be defined here 
+        to ensure sitewide consistency such as margin and padding
+        sizes, but that means more refactoring and this is a good start
+    */
+}
