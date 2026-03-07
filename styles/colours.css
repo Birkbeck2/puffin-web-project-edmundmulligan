@@ -17,10 +17,15 @@
     --colour-red:           hsl(0deg 100% 50%);
     --colour-orange:        hsl(30deg 100% 50%);
     --colour-yellow:        hsl(60deg 100% 50%);
+    --colour-lime:          hsl(90deg 100% 50%);
+    --colour-green:         hsl(120deg 100% 50%);
+    --colour-dark-turquoise:hsl(150deg 100% 50%);
     --colour-cyan:          hsl(180deg 100% 50%);
     --colour-blue:          hsl(210deg 100% 50%);
-    --colour-indigo:        hsl(275deg 100% 50%);
+    --colour-navy:          hsl(240deg 100% 50%);
+    --colour-indigo:        hsl(270deg 100% 50%);
     --colour-magenta:       hsl(300deg 100% 50%);
+    --colour-pink:          hsl(330deg 100% 50%);
 
     /* non-theme colours */
     --colour-warning-background:                         hsl(from var(--colour-red) h s 25%);
@@ -109,60 +114,66 @@
     --colour-subdued-dark-code-text:                   hsl(from var(--colour-grey) h s 75%);
 
     /* subdued dark theme buttons */
-    --colour-subdued-dark-button-background:           hsl(from var(--colour-grey) h s 75%);
-    --colour-subdued-dark-button-text:                 hsl(from var(--colour-grey) h s 25%);
-    --colour-subdued-dark-button-background-hover:     hsl(from var(--colour-grey) h s 60%);
-    --colour-subdued-dark-button-text-hover:           hsl(from var(--colour-grey) h s 5%);
-    --colour-subdued-dark-button-background-selected:  hsl(from var(--colour-grey) h s 5%);
-    --colour-subdued-dark-button-text-selected:        hsl(from var(--colour-grey) h s 60);
+    --colour-subdued-dark-button-background:           hsl(from var(--colour-grey) h s 25%);
+    --colour-subdued-dark-button-text:                 hsl(from var(--colour-grey) h s 75%);
+    --colour-subdued-dark-button-background-hover:     hsl(from var(--colour-grey) h s 40%);
+    --colour-subdued-dark-button-text-hover:           hsl(from var(--colour-grey) h s 95%);
+    --colour-subdued-dark-button-background-selected:  hsl(from var(--colour-grey) h s 95%);
+    --colour-subdued-dark-button-text-selected:        hsl(from var(--colour-grey) h s 40%);
 
     /* subdued dark theme menu links */
-    --colour-subdued-dark-link-background:             hsl(from var(--colour-grey) h s l);
-    --colour-subdued-dark-link-text:                   hsl(from var(--colour-black) h s l);
-    --colour-subdued-dark-link-background-hover:       hsl(from var(--colour-grey) h s 60%);
-    --colour-subdued-dark-link-text-hover:             hsl(from var(--colour-grey) h s 5%);
-    --colour-subdued-dark-link-background-visited:     hsl(from var(--colour-grey) h s l);
-    --colour-subdued-dark-link-text-visited:           hsl(from var(--colour-grey) h s 25%);
+    --colour-subdued-dark-link-background:             hsl(from var(--colour-grey) h s 25%);
+    --colour-subdued-dark-link-text:                   hsl(from var(--colour-grey) h s 75%);
+    --colour-subdued-dark-link-background-hover:       hsl(from var(--colour-grey) h s 35%);
+    --colour-subdued-dark-link-text-hover:             hsl(from var(--colour-grey) h s 95%);
+    --colour-subdued-dark-link-background-visited:     hsl(from var(--colour-grey) h s 25%);
+    --colour-subdued-dark-link-text-visited:           hsl(from var(--colour-grey) h s 95%);
 
     /* vibrant light theme colours - op-art inspired with bold colours */
-    --colour-vibrant-light-page-background:            hsl(from var(--colour-white) h s l);
-    --colour-vibrant-light-page-text:                  hsl(from var(--colour-black) h s l);
-    --colour-vibrant-light-headings-background:        hsl(from var(--colour-dark-red) h s l);
-    --colour-vibrant-light-headings-text:              hsl(from var(--colour-white) h s l);
-    --colour-vibrant-light-code-background:            hsl(from var(--colour-yellow) h s l);
-    --colour-vibrant-light-code-text:                  hsl(from var(--colour-black) h s l);
-    --colour-vibrant-light-button-background:          hsl(from var(--colour-orange) h s l);
-    --colour-vibrant-light-button-background-hover:    hsl(from var(--colour-orange) h s 55%);
-    --colour-vibrant-light-button-background-selected: hsl(from var(--colour-orange) h s 18%);
-    --colour-vibrant-light-button-text:                hsl(from var(--colour-dark-red) h s 30%);
-    --colour-vibrant-light-button-text-hover:          hsl(from var(--colour-magenta) h s 20%);
-    --colour-vibrant-light-button-text-selected:       hsl(from var(--colour-white) h s l);
-    --colour-vibrant-light-link-background:            hsl(from var(--colour-blue) h s 16%);
-    --colour-vibrant-light-link-background-hover:      hsl(from var(--colour-blue) h s 10%);
-    --colour-vibrant-light-link-background-visited:    hsl(from var(--colour-blue) h s 16%);
-    --colour-vibrant-light-link-text:                  hsl(from var(--colour-white) h s l);
-    --colour-vibrant-light-link-text-hover:            hsl(from var(--colour-yellow) h s 94%);
-    --colour-vibrant-light-link-text-visited:          hsl(from var(--colour-magenta) h s 94%);
-    --colour-vibrant-light-link-text-focus:            hsl(from var(--colour-magenta) h s 94%);
+    --colour-vibrant-light-page-background:            hsl(from var(--colour-pink) h s 75%);
+    --colour-vibrant-light-page-text:                  hsl(from var(--colour-navy) h s 15%);
+    --colour-vibrant-light-headings-background:        hsl(from var(--colour-green) h s 75%);
+    --colour-vibrant-light-headings-text:              hsl(from var(--colour-blue) h s 25%);
+    --colour-vibrant-light-code-background:            hsl(from var(--colour-yellow) h s 75%);
+    --colour-vibrant-light-code-text:                  hsl(from var(--colour-cyan) h s 15%);
+
+    /* vibrant light theme buttons */
+    --colour-vibrant-light-button-background:          hsl(from var(--colour-orange) h s 75%);
+    --colour-vibrant-light-button-text:                hsl(from var(--colour-blue) h s 15%);
+    --colour-vibrant-light-button-background-hover:    hsl(from var(--colour-green) h s 75%);
+    --colour-vibrant-light-button-text-hover:          hsl(from var(--colour-magenta) h s 25%);
+    --colour-vibrant-light-button-background-selected: hsl(from var(--colour-magenta) h s 25%);
+    --colour-vibrant-light-button-text-selected:       hsl(from var(--colour-green) h s 75%);
+
+    /* vibrant light theme menu links */
+    --colour-vibrant-light-link-background:             hsl(from var(--colour-green) h s 75%);
+    --colour-vibrant-light-link-text:                   hsl(from var(--colour-blue) h s 25%);
+    --colour-vibrant-light-link-background-hover:       hsl(from var(--colour-yellow) h s 75%);
+    --colour-vibrant-light-link-text-hover:             hsl(from var(--colour-green) h s 15%);
+    --colour-vibrant-light-link-background-visited:     hsl(from var(--colour-green) h s 75%);
+    --colour-vibrant-light-link-text-visited:           hsl(from var(--colour-blue) h s 10%);
 
     /* vibrant dark theme colours - op-art inspired with bold colours */
-    --colour-vibrant-dark-page-background:             hsl(0deg 0% 0%);       /* black */
-    --colour-vibrant-dark-page-text:                   hsl(0deg 0% 100%);     /* white */
-    --colour-vibrant-dark-headings-background:         hsl(120deg 100% 50%);  /* lime */
-    --colour-vibrant-dark-headings-text:               hsl(0deg 0% 0%);       /* black */
-    --colour-vibrant-dark-code-background:             hsl(270deg 50% 20%);   /* dark purple */
-    --colour-vibrant-dark-code-text:                   hsl(0deg 0% 100%);     /* white */
-    --colour-vibrant-dark-button-background:           hsl(120deg 100% 75%);  /* light lime */
-    --colour-vibrant-dark-button-background-hover:     hsl(120deg 100% 55%);  /* darker lime on hover */
-    --colour-vibrant-dark-button-background-selected:  hsl(120deg 100% 94%);  /* very light lime for AAA on black */
-    --colour-vibrant-dark-button-text:                 hsl(120deg 100% 15%);  /* very dark green text */
-    --colour-vibrant-dark-button-text-hover:           hsl(180deg 100% 15%);  /* very dark cyan on hover */
-    --colour-vibrant-dark-button-text-selected:        hsl(0deg 0% 0%);       /* black when selected */
-    --colour-vibrant-dark-link-background:             hsl(300deg 100% 30%);  /* medium-dark magenta for AAA */
-    --colour-vibrant-dark-link-background-hover:       hsl(300deg 100% 40%);  /* lighter magenta on hover for distinction */
-    --colour-vibrant-dark-link-background-visited:     hsl(300deg 100% 30%);  /* same as normal */
-    --colour-vibrant-dark-link-text:                   hsl(0deg 0% 100%);     /* white */
-    --colour-vibrant-dark-link-text-hover:             hsl(60deg 100% 94%);   /* light yellow */
-    --colour-vibrant-dark-link-text-visited:           hsl(180deg 100% 94%);  /* light cyan */
-    --colour-vibrant-dark-link-text-focus:             hsl(180deg 100% 94%);  /* light cyan - same as visited */
+    --colour-vibrant-dark-page-background:             hsl(from var(--colour-blue) h s 22%);
+    --colour-vibrant-dark-page-text:                   hsl(from var(--colour-cyan) h s 88%);
+    --colour-vibrant-dark-headings-background:         hsl(from var(--colour-lime) h s 20%);
+    --colour-vibrant-dark-headings-text:               hsl(from var(--colour-navy) h s 92%);
+    --colour-vibrant-dark-code-background:             hsl(from var(--colour-pink) h s 22%);
+    --colour-vibrant-dark-code-text:                   hsl(from var(--colour-cyan) h s 88%);
+
+    /* vibrant dark theme buttons */
+    --colour-vibrant-dark-button-background:           hsl(from var(--colour-green) h s 22%);
+    --colour-vibrant-dark-button-text:                 hsl(from var(--colour-green) h s 88%);
+    --colour-vibrant-dark-button-background-hover:     hsl(from var(--colour-orange) h s 22%);
+    --colour-vibrant-dark-button-text-hover:           hsl(from var(--colour-navy) h s 88%);
+    --colour-vibrant-dark-button-background-selected:  hsl(from var(--colour-navy) h s 88%);
+    --colour-vibrant-dark-button-text-selected:        hsl(from var(--colour-orange) h s 22%);
+    
+    /* vibrant dark theme menu links */
+    --colour-vibrant-dark-link-background:             hsl(from var(--colour-pink) h s 22%);
+    --colour-vibrant-dark-link-text:                   hsl(from var(--colour-navy) h s 88%);
+    --colour-vibrant-dark-link-background-hover:       hsl(from var(--colour-lime) h s 20%);
+    --colour-vibrant-dark-link-text-hover:             hsl(from var(--colour-navy) h s 92%);
+    --colour-vibrant-dark-link-background-visited:     hsl(from var(--colour-pink) h s 22%);
+    --colour-vibrant-dark-link-text-visited:           hsl(from var(--colour-indigo) h s 88%);
 }
