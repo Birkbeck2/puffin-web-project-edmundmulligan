@@ -1,0 +1,20 @@
+name: Accessibility Testing and Deployment
+
+on:
+    pull_request:
+        branches: [ staging, main ]
+        paths:
+        - '**'
+        - '!.github/**'
+        - '.github/workflows/test-and-deploy-reusable.yml'
+
+jobs:
+    test-and-deploy:
+        uses: ./.github/workflows/test-and-deploy-reusable.yml
+        with:
+            deploy-path: '/var/www/puffin.edmundmulligan.name'
+        secrets:
+            WAVE_API_KEY: ${{ secrets.WAVE_API_KEY }}
+            NGROK_AUTHTOKEN: ${{ secrets.NGROK_AUTHTOKEN }}
+            SERVER_USERNAME: ${{ secrets.SERVER_USERNAME }}
+            SERVER_SSH_KEY: ${{ secrets.SERVER_SSH_KEY }}

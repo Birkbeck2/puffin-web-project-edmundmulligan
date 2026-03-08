@@ -1,0 +1,16 @@
+name: Push Code to Prod Server
+
+on:
+    push:
+      branches: [ main]
+    pull_request:
+      branches: [ main ]
+
+jobs:
+    deploy-to-server:
+        uses: ./.github/workflows/push-code-reusable.yml
+        with:
+          deploy-path: /var/www/puffin.edmundmulligan.name
+        secrets:
+          SERVER_USERNAME: ${{ secrets.SERVER_USERNAME }}
+          SERVER_SSH_KEY: ${{ secrets.SERVER_SSH_KEY }}
