@@ -1,0 +1,138 @@
+/*
+ **********************************************************************
+ * File       : components/navigation.css
+ * Author     : Edmund Mulligan <edmund@edmundmulligan.name>
+ * Copyright  : (c) 2026 The Embodied Mind
+ * License    : MIT License (see license-and-credits.html page)
+ * Description:
+ *   This stylesheet defines styles for sitewide and in-page navigation
+ *   elements. These styles ensure a consistent look and feel
+ *   across all pages of the Web Witchcraft and Wizardry website.
+ **********************************************************************
+ */
+
+/********************************************************
+ * Styles for sitewide navigation elements
+ ********************************************************/
+
+nav.site-navigation {
+    color: var(--colour-effective-headings-text);
+    background-color: var(--colour-effective-headings-background);
+    border-radius: var(--border-radius);
+    margin: 0;
+    padding: 0.25rem 0.5rem;
+    grid-column: 1 / -1;
+    grid-row: 2;
+}
+
+nav.site-navigation ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    gap: 0.25rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav.site-navigation li {
+    display: inline-block;
+    flex: 0 1 auto;
+    background-color: var(--colour-effective-headings-background);
+    border-radius: var(--border-radius);
+    border: var(--border-weight-thin) var(--border-style) var(--colour-effective-headings-text);
+    font-size: var(--fontsize-nav-site);
+    overflow: hidden;
+}
+
+nav.site-navigation a,
+nav.site-navigation button {
+    display: block;
+    color: var(--colour-effective-headings-text);
+    text-decoration: none;
+    padding: 0.5rem;
+    border-radius: 0;
+    background: none;
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+}
+
+/* Pseudo classes and elements for nav links This makes the 
+   wand sparkle when it is hovered over or gets focus */
+nav.site-navigation a::before,
+nav.site-navigation button::before {
+    content: "\f0d0";  /* Font Awesome Magic Wand */
+    font-family: var(--font-family-icons);
+    font-weight: 900; /* needed for solid style icons */
+}
+
+nav.site-navigation a:hover,
+nav.site-navigation a:focus-visible,
+nav.site-navigation button:hover,
+nav.site-navigation button:focus-visible {
+    background-color: var(--colour-effective-link-text-hover);
+    color: var(--colour-effective-headings-text);
+}
+
+nav.site-navigation a:hover::before,
+nav.site-navigation a:focus-visible::before,
+nav.site-navigation button:hover::before,
+nav.site-navigation button:focus-visible::before {
+    content: "\e2ca";  /* Font Awesome Magic Wand with sparkles */
+    font-family: var(--font-family-icons);
+    font-weight: 900; /* needed for solid style icons */
+}
+
+/********************************************************
+ * Styles for in page navigation elements
+ ********************************************************/
+
+nav.in-page-navigation {
+    display: flex;
+    flex-flow: row nowrap;
+    flex-shrink: 1;
+    margin: 1rem auto;
+    padding: 0.25rem;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    border-radius: var(--border-radius);
+    border: var(--border-weight-thin) var(--border-style) var(--colour-effective-headings-text);
+
+}
+
+nav.in-page-navigation ul {
+    display: flex;
+    flex-flow: row wrap;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    gap: 0.25rem;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--fontsize-nave-page);
+}
+
+nav.in-page-navigation li {
+    display: flex;
+    flex: 0 1 auto;
+    align-items: center;
+    text-align: center;
+}
+
+nav.in-page-navigation a {
+    display: block;
+    color: var(--colour-effective-headings-text);
+    text-decoration: underline;
+    padding: 0.25rem 0.5rem;
+    white-space: nowrap;
+    text-align: center;
+}

@@ -1,0 +1,144 @@
+/*
+ **********************************************************************
+ * File       : components/popover.css
+ * Author     : Edmund Mulligan <edmund@edmundmulligan.name>
+ * Copyright  : (c) 2026 The Embodied Mind
+ * License    : MIT License (see license-and-credits.html page)
+ * Description:
+ *   This stylesheet defines styles for popovers used across the 
+ *   Web Witchcraft and Wizardry website.
+ **********************************************************************
+ */
+
+
+/* Popover styling It's a bit in-your-face but it's only used for a warning 
+   when something isn't implemented yet at the moment, so that's OK. */
+
+.popover {
+    background-color: var(--colour-error-background);
+    color: var(--colour-error-text);
+    border: var(--border-weight) var(--border-style) var(--colour-effective-headings-text);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    max-width: min(30rem, 90vw);
+    max-height: 80vh;
+    overflow-y: auto;
+    box-sizing: border-box;
+    inset: 0;
+    margin: auto;
+}
+
+.popover h2 {
+    margin-top: 0;
+    font-family: var(--font-family-serif);
+    font-size: var(--fontsize-h3h4);
+    font-weight: bold;
+}
+
+.popover p {
+    font-size: var(--fontsize-smallprint);
+    font-weight: bold;
+    text-align: center;
+}
+
+.popover button {
+    background-color: var(--colour-error-text);
+    color: var(--colour-error-background);
+    border: var(--border-weight) var(--border-style) var(--colour-effective-headings-text);
+    border-radius: var(--border-radius);
+    margin-top: 1rem;
+    font-family: var(--font-family-serif);
+    font-size: var(--fontsize-button);
+    font-weight: bold;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Glossary icon button styling */
+.glossary-icon-button {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0 0.2rem;
+    cursor: pointer;
+    color: var(--colour-effective-page-text);
+    font-size: inherit;
+    vertical-align: baseline;
+}
+
+.glossary-icon-button:hover {
+    color: var(--colour-effective-headings-text);
+}
+
+/* Glossary popover styling */
+.glossary-popover {
+    background-color: var(--colour-effective-headings-background);
+    color: var(--colour-effective-headings-text);
+}
+
+.glossary-popover h2 {
+    color: var(--colour-effective-headings-text);
+}
+
+.glossary-popover p {
+    text-align: left;
+    font-weight: normal;
+}
+
+.glossary-popover button {
+    background-color: var(--colour-effective-headings-text);
+    color: var(--colour-effective-headings-background);
+}
+
+/* Lesson popover styling - for lesson navigation info */
+.lesson-popover {
+    max-width: min(25rem, 90vw);
+    padding: 1.5rem;
+    position: fixed;
+    margin: 0;
+    z-index: 1000;
+    inset: unset;
+}
+
+.lesson-popover h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-family: var(--font-family-serif);
+    font-size: var(--fontsize-h3h4);
+    font-weight: bold;
+}
+
+.lesson-popover p {
+    font-size: var(--fontsize-p);
+    font-weight: normal;
+    text-align: left;
+    margin: 0;
+}
+
+/* Info popover - uses theme heading colours */
+.info-popover {
+    background-color: var(--colour-effective-headings-background);
+    color: var(--colour-effective-headings-text);
+    border-color: var(--colour-effective-headings-text);
+}
+
+.info-popover h3 {
+    color: var(--colour-effective-headings-text);
+}
+
+/* Warning popover - uses warning colours */
+.warning-popover {
+    background-color: var(--colour-warning-background);
+    color: var(--colour-warning-text);
+    border-color: var(--colour-warning-text);
+}
+
+.warning-popover h3 {
+    color: var(--colour-warning-text);
+}
+
+.warning-popover p {
+    text-align: center;
+    font-weight: bold;
+}
