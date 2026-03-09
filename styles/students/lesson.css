@@ -38,7 +38,7 @@
 
 .avatar-caption {
     margin-top: 0.5rem; 
-    font-size: var(--fontsize-p); 
+    font-size: var(--fontsize-normal); 
     font-weight: bold;
     font-family: var(--font-family-serif);
 }
@@ -82,7 +82,7 @@
 .installing-required-software legend,
 .installing-required-software label {
     font-weight: bold;
-    font-size: var(--fontsize-h5h6);
+    font-size: var(--fontsize-header-small);
     font-family: var(--font-family-serif);
     margin-top: 2rem;
 }

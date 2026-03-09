@@ -13,23 +13,32 @@
 .site-title {
     font-family: var(--font-family-decorative);
     font-weight: 700;
-
+    text-align: center;
+    margin: 0 auto;
+    overflow-wrap: break-word;
+    hyphens: auto;
 }
 
 .site-subtitle {
     font-family: var(--font-family-serif);
     font-weight: 400;
+    text-align: center;
+    margin: 0 auto;
+    overflow-wrap: break-word;
+    hyphens: auto;
 }
 
 .page-title {
     font-family: var(--font-family-decorative);
     font-weight: 700;
     margin: 0.5rem auto;
-    padding: 0.5rem 1rem;
+    padding: var(--padding-title);
     width: fit-content;
     max-width: 100%;
     display: block;
     white-space: normal;
+    overflow-wrap: break-word;
+    hyphens: auto;
 
     /* specify these so that page title is legiible on pages with background images */
     color: var(--colour-effective-page-text);
