@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <!--
 **********************************************************************
  * File       : colours.html
@@ -10,6 +9,7 @@
  *    Uses CSS Grid layout to display color swatches with their variable names
 **********************************************************************
 -->
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -45,7 +45,7 @@
         <h1><i class="fas fa-palette"></i> Web Witchcraft and Wizardry Color Palette</h1>
         <nav aria-label="breadcrumb">
             <a href="../index.html">Home</a> &gt;
-            <a href="colours.html" aria-current="page">Color Palette</a>
+            <a href="colourPalette.html" aria-current="page">Color Palette</a>
         </nav>
     </header>
 
@@ -54,7 +54,19 @@
             <p>This page displays all color variables defined in <code>colours.css</code>. The color system includes three style variants (normal, subdued, and vibrant) with both light and dark themes. All color combinations meet at least WCAG 2.2 AA contrast standards (4.5:1 ratio). Normal theme and popovers meet AAA standards (7:1 ratio). Each card shows the background color with its corresponding text color applied, along with both CSS variable names and sample text to preview readability.</p>
         </div>
 
-        <!-- Non-theme Colors -->
+        <!-- Tab Navigation -->
+        <div class="tab-navigation" role="tablist">
+            <button type="button" class="tab-button active" data-tab="non-theme" role="tab" aria-selected="true" aria-controls="tab-non-theme">Non-theme</button>
+            <button type="button" class="tab-button" data-tab="normal-light" role="tab" aria-selected="false" aria-controls="tab-normal-light">Normal Light</button>
+            <button type="button" class="tab-button" data-tab="normal-dark" role="tab" aria-selected="false" aria-controls="tab-normal-dark">Normal Dark</button>
+            <button type="button" class="tab-button" data-tab="subdued-light" role="tab" aria-selected="false" aria-controls="tab-subdued-light">Subdued Light</button>
+            <button type="button" class="tab-button" data-tab="subdued-dark" role="tab" aria-selected="false" aria-controls="tab-subdued-dark">Subdued Dark</button>
+            <button type="button" class="tab-button" data-tab="vibrant-light" role="tab" aria-selected="false" aria-controls="tab-vibrant-light">Vibrant Light</button>
+            <button type="button" class="tab-button" data-tab="vibrant-dark" role="tab" aria-selected="false" aria-controls="tab-vibrant-dark">Vibrant Dark</button>
+        </div>
+
+        <!-- Tab Panel: Non-theme Colors -->
+        <div class="tab-panel active" id="tab-non-theme" role="tabpanel">
         <section class="colour-section">
             <h2>Non-theme Colors</h2>
             <div class="colour-grid">
@@ -82,8 +94,10 @@
                 </div>
             </div>
         </section>
+        </div>
 
-        <!-- Normal Light Theme -->
+        <!-- Tab Panel: Normal Light Theme -->
+        <div class="tab-panel" id="tab-normal-light" role="tabpanel">
         <section class="colour-section">
             <h2>Normal - Light Theme</h2>
             <div class="colour-grid">
@@ -120,7 +134,7 @@
                         <div class="contrast-info" data-bg-var="--colour-normal-light-code-background" data-fg-var="--colour-normal-light-code-text"></div>
                     </div>
                 </div>
-                <div class="color-card wide">
+                <div class="colour-card wide">
                     <div class="colour-swatch" data-scheme="normal-light-page">
                         <div class="card-title">Buttons</div>
                         <div class="button-states">
@@ -154,7 +168,7 @@
                         <div class="contrast-info" data-bg-var="--colour-normal-light-button-background-selected" data-fg-var="--colour-normal-light-button-text-selected"></div>
                     </div>
                 </div>
-                <div class="color-card wide">
+                <div class="colour-card wide">
                     <div class="colour-swatch" data-scheme="normal-light-page">
                         <div class="card-title">Lesson Navigation Normal Light Theme</div>
                         <nav aria-label="Lesson Navigation Normal Light Theme">
@@ -183,8 +197,10 @@
                 </div>
             </div>
         </section>
+        </div>
 
-        <!-- Normal Dark Theme -->
+        <!-- Tab Panel: Normal Dark Theme -->
+        <div class="tab-panel" id="tab-normal-dark" role="tabpanel">
         <section class="colour-section">
             <h2>Normal - Dark Theme</h2>
             <div class="colour-grid">
@@ -221,7 +237,7 @@
                         <div class="contrast-info" data-bg-var="--colour-normal-dark-code-background" data-fg-var="--colour-normal-dark-code-text"></div>
                     </div>
                 </div>
-                <div class="color-card wide">
+                <div class="colour-card wide">
                     <div class="colour-swatch" data-scheme="normal-dark-page">
                         <div class="card-title">Buttons</div>
                         <div class="button-states">
@@ -255,7 +271,7 @@
                         <div class="contrast-info" data-bg-var="--colour-normal-dark-button-background-selected" data-fg-var="--colour-normal-dark-button-text-selected"></div>
                     </div>
                 </div>
-                <div class="color-card wide">
+                <div class="colour-card wide">
                     <div class="colour-swatch" data-scheme="normal-dark-page">
                         <div class="card-title">Lesson Navigation Normal Dark Theme</div>
                         <nav aria-label="Lesson Navigation Normal Dark Theme">
@@ -284,8 +300,10 @@
                 </div>
             </div>
         </section>
+        </div>
 
-        <!-- Subdued Light Theme -->
+        <!-- Tab Panel: Subdued Light Theme -->
+        <div class="tab-panel" id="tab-subdued-light" role="tabpanel">
         <section class="colour-section">
             <h2>Subdued - Light Theme</h2>
             <div class="colour-grid">
@@ -322,7 +340,7 @@
                         <div class="contrast-info" data-bg-var="--colour-subdued-light-code-background" data-fg-var="--colour-subdued-light-code-text"></div>
                     </div>
                 </div>
-                <div class="color-card wide">
+                <div class="colour-card wide">
                     <div class="colour-swatch" data-scheme="subdued-light-page">
                         <div class="card-title">Buttons</div>
                         <div class="button-states">
@@ -356,7 +374,7 @@
                         <div class="contrast-info" data-bg-var="--colour-subdued-light-button-background-selected" data-fg-var="--colour-subdued-light-button-text-selected"></div>
                     </div>
                 </div>
-                <div class="color-card wide">
+                <div class="colour-card wide">
                     <div class="colour-swatch" data-scheme="subdued-light-page">
                         <div class="card-title">Lesson Navigation Subdued Light Theme</div>
                         <nav aria-label="Lesson Navigation Subdued Light Theme">
@@ -385,8 +403,10 @@
                 </div>
             </div>
         </section>
+        </div>
 
-        <!-- Subdued Dark Theme -->
+        <!-- Tab Panel: Subdued Dark Theme -->
+        <div class="tab-panel" id="tab-subdued-dark" role="tabpanel">
         <section class="colour-section">
             <h2>Subdued - Dark Theme</h2>
             <div class="colour-grid">
@@ -423,7 +443,7 @@
                         <div class="contrast-info" data-bg-var="--colour-subdued-dark-code-background" data-fg-var="--colour-subdued-dark-code-text"></div>
                     </div>
                 </div>
-                <div class="color-card wide">
+                <div class="colour-card wide">
                     <div class="colour-swatch" data-scheme="subdued-dark-page">
                         <div class="card-title">Buttons</div>
                         <div class="button-states">
@@ -457,7 +477,7 @@
                         <div class="contrast-info" data-bg-var="--colour-subdued-dark-button-background-selected" data-fg-var="--colour-subdued-dark-button-text-selected"></div>
                     </div>
                 </div>
-                <div class="color-card wide">
+                <div class="colour-card wide">
                     <div class="colour-swatch" data-scheme="subdued-dark-page">
                         <div class="card-title">Lesson Navigation Subdued Dark Theme</div>
                         <nav aria-label="Lesson Navigation Subdued Dark Theme">
@@ -487,8 +507,10 @@
                 </div>
             </div>
         </section>
+        </div>
 
-        <!-- Vibrant Light Theme -->
+        <!-- Tab Panel: Vibrant Light Theme -->
+        <div class="tab-panel" id="tab-vibrant-light" role="tabpanel">
         <section class="colour-section">
             <h2>Vibrant - Light Theme</h2>
             <div class="colour-grid">
@@ -525,7 +547,7 @@
                         <div class="contrast-info" data-bg-var="--colour-vibrant-light-code-background" data-fg-var="--colour-vibrant-light-code-text"></div>
                     </div>
                 </div>
-                <div class="color-card wide">
+                <div class="colour-card wide">
                     <div class="colour-swatch" data-scheme="vibrant-light-page">
                         <div class="card-title">Buttons</div>
                         <div class="button-states">
@@ -559,7 +581,7 @@
                         <div class="contrast-info" data-bg-var="--colour-vibrant-light-button-background-selected" data-fg-var="--colour-vibrant-light-button-text-selected"></div>
                     </div>
                 </div>
-                <div class="color-card wide">
+                <div class="colour-card wide">
                     <div class="colour-swatch" data-scheme="vibrant-light-page">
                         <div class="card-title">Lesson Navigation Vibrant Light Theme</div>
                         <nav aria-label="Lesson Navigation Vibrant Light Theme">
@@ -588,8 +610,10 @@
                 </div>
             </div>
         </section>
+        </div>
 
-        <!-- Vibrant Dark Theme -->
+        <!-- Tab Panel: Vibrant Dark Theme -->
+        <div class="tab-panel" id="tab-vibrant-dark" role="tabpanel">
         <section class="colour-section">
             <h2>Vibrant - Dark Theme</h2>
             <div class="colour-grid">
@@ -626,7 +650,7 @@
                         <div class="contrast-info" data-bg-var="--colour-vibrant-dark-code-background" data-fg-var="--colour-vibrant-dark-code-text"></div>
                     </div>
                 </div>
-                <div class="color-card wide">
+                <div class="colour-card wide">
                     <div class="colour-swatch" data-scheme="vibrant-dark-page">
                         <div class="card-title">Buttons</div>
                         <div class="button-states">
@@ -660,7 +684,7 @@
                         <div class="contrast-info" data-bg-var="--colour-vibrant-dark-button-background-selected" data-fg-var="--colour-vibrant-dark-button-text-selected"></div>
                     </div>
                 </div>
-                <div class="color-card wide">
+                <div class="colour-card wide">
                     <div class="colour-swatch" data-scheme="vibrant-dark-page">
                         <div class="card-title">Lesson Navigation Vibrant Dark Theme</div>
                         <nav aria-label="Lesson Navigation Vibrant Dark Theme">
@@ -689,10 +713,40 @@
                 </div>
             </div>
         </section>
+        </div>
     </main>
 
     <footer>
         <p>&copy; 2026 The Embodied Mind. Licensed under the <a href="../license-and-credits.html">MIT License</a>.</p>
     </footer>
+
+    <script>
+        // Tab switching functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabPanels = document.querySelectorAll('.tab-panel');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const targetTab = this.getAttribute('data-tab');
+
+                    // Remove active class from all buttons and panels
+                    tabButtons.forEach(btn => {
+                        btn.classList.remove('active');
+                        btn.setAttribute('aria-selected', 'false');
+                    });
+                    tabPanels.forEach(panel => panel.classList.remove('active'));
+
+                    // Add active class to clicked button and corresponding panel
+                    this.classList.add('active');
+                    this.setAttribute('aria-selected', 'true');
+                    const targetPanel = document.getElementById('tab-' + targetTab);
+                    if (targetPanel) {
+                        targetPanel.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>

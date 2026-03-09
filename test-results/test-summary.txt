@@ -10,7 +10,7 @@
 
 [Links] Broken Links Results:
   Pages checked: 14
-  Total links: 379
+  Total links: 378
   Broken links: 0
 
 ======================

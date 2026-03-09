@@ -46,10 +46,10 @@
     /* normal light theme buttons */
     --colour-normal-light-button-background:             hsl(from var(--colour-blue) h s 85%);
     --colour-normal-light-button-text:                   hsl(from var(--colour-purple) h s 25%);
-    --colour-normal-light-button-background-hover:       hsl(from var(--colour-cyan) h s 55%);
+    --colour-normal-light-button-background-hover:       hsl(from var(--colour-cyan) h s 85%);
     --colour-normal-light-button-text-hover:             hsl(from var(--colour-magenta) h s 25%);
     --colour-normal-light-button-background-selected:    hsl(from var(--colour-magenta) h s 25%);
-    --colour-normal-light-button-text-selected:          hsl(from var(--colour-cyan) h s 55%);
+    --colour-normal-light-button-text-selected:          hsl(from var(--colour-cyan) h s 85%);
 
     /* normal light theme menu links */
     --colour-normal-light-link-background:               hsl(from var(--colour-cyan) h s l);
@@ -174,8 +174,8 @@
     /* vibrant dark theme menu links */
     --colour-vibrant-dark-link-background:             hsl(from var(--colour-orange) h s 60%);
     --colour-vibrant-dark-link-text:                   hsl(from var(--colour-navy) h s 15%);
-    --colour-vibrant-dark-link-background-hover:       hsl(from var(--colour-pink) h s 75%);
-    --colour-vibrant-dark-link-text-hover:             hsl(from var(--colour-navy) h s 15%);
+    --colour-vibrant-dark-link-background-hover:       hsl(from var(--colour-pink) h s 22%);
+    --colour-vibrant-dark-link-text-hover:             hsl(from var(--colour-cyan) h s 88%);
     --colour-vibrant-dark-link-background-visited:     hsl(from var(--colour-orange) h s 60%);
     --colour-vibrant-dark-link-text-visited:           hsl(from var(--colour-purple) h s 15%);
 

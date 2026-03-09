@@ -25,16 +25,51 @@
  ***********************************************************************
  */
 
+/* handle very small screens (e.g. very narrow browser windows) */
 @media (width < 200px) {
-    .header-warning {
-        /* turn on the warning message (normally it's display: none) */
-        display: block;
+    /* Hide navigation icons at extreme narrow widths to improve wrapping */
+    nav.site-navigation a::before,
+    nav.site-navigation button::before,
+    nav.site-navigation a:hover::before,
+    nav.site-navigation a:focus-visible::before,
+    nav.site-navigation button:hover::before,
+    nav.site-navigation button:focus-visible::before {
+        display: none;
+    }
+
+    /* Allow text to wrap within navigation items at extreme narrow widths */
+    nav.site-navigation li {
         max-width: 100%;
-        color: var(--colour-warning-text);
-        background-color: var(--colour-warning-background);
-        text-align: center;
+    }
+
+    nav.site-navigation a,
+    nav.site-navigation button {
+        white-space: normal;
+        overflow-wrap: break-word;
+        padding: clamp(0.2rem, 1vw, 0.4rem);
     }
 }
+
+/*
+ ************************************************************
+ * Narrow viewports (200px - 300px)
+ * Make navigation icons smaller to improve wrapping
+ ************************************************************
+ */
+
+/* COMMENTED OUT - ALL MEDIA QUERIES DISABLED
+@media (width >= 200px) and (width < 300px) {
+    nav.site-navigation a::before,
+    nav.site-navigation button::before,
+    nav.site-navigation a:hover::before,
+    nav.site-navigation a:focus-visible::before,
+    nav.site-navigation button:hover::before,
+    nav.site-navigation button:focus-visible::before {
+        font-size: 0.6em;
+        margin-right: 0.2rem;
+    }
+}
+END COMMENTED OUT */
 
 /*
  ************************************************************
@@ -51,8 +86,10 @@
  ************************************************************
  */
 
+
+/* COMMENTED OUT - ALL MEDIA QUERIES DISABLED
 @media (width < 800px) or ((hover:none) and (pointer:coarse)) {
-    /* Stack sidebar above main content on small screens */
+
     .page-container {
         flex-direction: column;
         gap: 1rem;
@@ -72,16 +109,14 @@
         padding: 0;
     }
 
-    /* switch header to vertical layout */
 
-    /*
+
     .header-full {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: auto auto auto;
         align-items: center;
     }
-    */
     
     .header-left {
         grid-column: 1;
@@ -92,7 +127,8 @@
     .header-center {
         grid-column: 1;
         grid-row: 2;
-        justify-self: center;
+        justify-self: stretch;
+        width: 100%;
     }
 
     .header-right {
@@ -101,13 +137,13 @@
         justify-self: center;
     }
 
-    /* center header icons */
+
     .header-left,
     .header-right {
         justify-content: center;
     }
 
-    /* switch footer to vertical layout */
+
     .footer-full {
         display: flex;
         flex-direction: column;
@@ -213,7 +249,7 @@
         max-width: 100%;
     }
 
-    /* change the containers to a column layout */
+
 
     .circular-button-container {
         flex-direction: column;
@@ -244,7 +280,7 @@
         max-width: 100%;
     }
 
-    /* Reorder avatar container: output box above radio buttons */
+
     .avatar-container {
         display: flex;
         flex-direction: column;
@@ -261,7 +297,7 @@
         height: auto;
     }
 
-    /* Stack label above input for student name */
+
     .student-form-item {
         text-align: center;
         max-width: 100%;
@@ -304,7 +340,7 @@
         margin-right: auto;
     }
 
-    /* put the output box above the radio buttons */
+
     .student-info form output {
         order: 1;
         grid-column: unset;
@@ -325,7 +361,7 @@
         grid-template-rows: repeat(6, auto);
     }
 
-    /* Reset grid positioning for mobile - stack all fieldsets vertically */
+
     .student-info form .student-form-avatar fieldset:nth-child(1),
     .student-info form .student-form-avatar fieldset:nth-child(2),
     .student-info form .student-form-avatar fieldset:nth-child(3),
@@ -360,6 +396,7 @@
         width: 80%;
     }
 }
+END COMMENTED OUT */
 
 /*
  ************************************************************
@@ -376,14 +413,18 @@
  ************************************************************
  */
 
+/* COMMENTED OUT - ALL MEDIA QUERIES DISABLED
 @media (width >= 1200px) {
     .gallery-container {
         grid-template-columns: repeat(4,1fr);
     }
 }
+END COMMENTED OUT */
 
+/* COMMENTED OUT - ALL MEDIA QUERIES DISABLED
 @media only screen and (width <= 800px) {
     .image-modal-content {
         max-width: 100%;
     }
 }
+END COMMENTED OUT */

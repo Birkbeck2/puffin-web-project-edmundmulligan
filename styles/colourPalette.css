@@ -1,9 +1,12 @@
-/**
- * File: colourPalette.css
- * Author: Edmund Mulligan <edmund@edmundmulligan.name>
- * Copyright: (c) 2026 The Embodied Mind
- * License: MIT
- * Description: Styles for the colour palette preview page
+/*
+ **********************************************************************
+ * File       : colourPalette.css
+ * Author     : Edmund Mulligan <edmund@edmundmulligan.name>
+ * Copyright  : (c) 2026 The Embodied Mind
+ * License    : MIT License (see license-and-credits.html page)
+ * Description:
+ *   Styles for the colour palette diagnostic page
+ **********************************************************************
  */
 
 .colour-preview {
@@ -24,9 +27,15 @@
 
 .colour-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 1.5rem;
     margin-bottom: 2rem;
+}
+
+@media (width >= 1200px) {
+    .colour-grid {
+        grid-template-columns: repeat(6, 1fr);
+    }
 }
 
 .colour-card {
@@ -36,8 +45,20 @@
     box-shadow: 0 2px 4px rgb(0 0 0 / 10%);
 }
 
+@media (width >= 1200px) {
+    .colour-card {
+        grid-column: span 2;
+    }
+}
+
 .colour-card.wide {
     grid-column: span 2;
+}
+
+@media (width >= 1200px) {
+    .colour-card.wide {
+        grid-column: span 3;
+    }
 }
 
 .card-title {
@@ -94,6 +115,48 @@
     margin-top: 0.25rem;
     margin-bottom: 0.5rem;
     opacity: 0.9;
+}
+
+/* Tab navigation styles */
+.tab-navigation {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid var(--colour-page-text);
+    padding-bottom: 0.5rem;
+}
+
+.tab-button {
+    padding: 0.75rem 1.5rem;
+    background: var(--colour-headings-background);
+    color: var(--colour-headings-text);
+    border: 2px solid var(--colour-page-text);
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+
+.tab-button:hover {
+    background: var(--colour-button-background-hover);
+    color: var(--colour-button-text-hover);
+}
+
+.tab-button.active {
+    background: var(--colour-button-background-selected);
+    color: var(--colour-button-text-selected);
+    border-bottom: 2px solid var(--colour-button-background-selected);
+    transform: translateY(2px);
+}
+
+.tab-panel {
+    display: none;
+}
+
+.tab-panel.active {
+    display: block;
 }
 
 .contrast-section-title {
@@ -155,12 +218,8 @@
     cursor: pointer;
 }
 
-.demo-button-round.hover-state {
-    /* Hover state colors come from data-scheme attribute */
-}
-
 .demo-button-round.selected-state {
-    /* Selected state colors come from data-scheme attribute */
+    /* Selected state colours come from data-scheme attribute */
     border-width: 3px;
     transform: scale(0.95);
 }
@@ -174,12 +233,8 @@
     cursor: pointer;
 }
 
-.demo-button-rect.hover-state {
-    /* Hover state colors come from data-scheme attribute */
-}
-
 .demo-button-rect.selected-state {
-    /* Selected state colors come from data-scheme attribute */
+    /* Selected state colours come from data-scheme attribute */
     border-width: 3px;
     transform: scale(0.95);
 }
@@ -218,7 +273,7 @@
 
 /* Color scheme data attributes - systematic approach to apply inline styles via CSS */
 
-/* Non-theme colors */
+/* Non-theme colours */
 [data-scheme="warning"] {
     background: var(--colour-warning-background);
     color: var(--colour-warning-text);

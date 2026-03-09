@@ -10,7 +10,7 @@
       "url": "index.html",
       "links": [],
       "brokenCount": 0,
-      "totalCount": 25
+      "totalCount": 24
     },
     {
       "url": "students/lesson-01.html",
@@ -86,7 +86,7 @@
     }
   ],
   "summary": {
-    "totalLinks": 379,
+    "totalLinks": 378,
     "brokenLinks": 0,
     "excludedLinks": 0
   }
