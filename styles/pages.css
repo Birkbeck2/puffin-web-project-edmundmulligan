@@ -162,7 +162,7 @@
    max-width: 80%;
    margin: 0 auto;
    padding: 1rem;
-   border: var(--border-weight) var(--border-style) var(--colour-effective-headings-text);
+   border: var(--border-weight) var(--border-style) var(--colour-effective-page-text);
    border-radius: var(--border-radius);
    box-sizing: border-box;
 }
@@ -178,7 +178,7 @@
    grid-column: 1;
    grid-row: 1;
    background-color: var(--colour-effective-headings-background);
-   border: var(--border-weight) var(--border-style) var(--colour-effective-headings-text);
+   border: var(--border-weight) var(--border-style) var(--colour-effective-page-text);
    border-radius: var(--border-radius);
    padding: 1rem;
    margin: 1rem auto;
@@ -238,7 +238,7 @@
 }
 
 .student-info form fieldset {
-   border: var(--border-weight) var(--border-style) var(--colour-effective-headings-text);
+   border: var(--border-weight) var(--border-style) var(--colour-effective-page-text);
    border-radius: var(--border-radius);
    padding: 1rem;
    margin: 0.5rem;
@@ -249,7 +249,7 @@
    width: 100%;
    padding: 0;
    margin-bottom: 0.5rem;
-   font-size: var(--fontsize-smallprint);
+   font-size: var(--fontsize-small  );
 }
 
 .student-info form input[type="radio"] {
@@ -265,12 +265,12 @@
 
 .student-info form hr {
    border: none;
-   border-top: var(--border-weight) var(--border-style) var(--colour-effective-headings-text);
+   border-top: var(--border-weight) var(--border-style) var(--colour-effective-page-text);
    margin: 0.5rem 0 0;
 }
 
 .student-info form h4 {
-   border-top: var(--border-weight) var(--border-style) var(--colour-effective-headings-text);
+   border-top: var(--border-weight) var(--border-style) var(--colour-effective-page-text);
    padding-top: 0.5rem;
    margin-top: 0.5rem;
 }
