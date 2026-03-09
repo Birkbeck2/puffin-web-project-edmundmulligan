@@ -51,6 +51,7 @@
     <link rel="stylesheet" href="../styles/components/buttons.css">
     <link rel="stylesheet" href="../styles/components/code.css">
     <link rel="stylesheet" href="../styles/components/header-and-footer.css">
+    <link rel="stylesheet" href="../styles/components/lesson-navigation.css">
     <link rel="stylesheet" href="../styles/components/navigation.css">
     <link rel="stylesheet" href="../styles/components/popover.css">
     <link rel="stylesheet" href="../styles/components/titles.css">
@@ -77,6 +78,7 @@
     <script src="../scripts/populateLineNumbers.js" defer></script>
     <script src="../scripts/modalImage.js" defer></script>
     <script src="../scripts/populateLessonsNav.js" defer></script>
+    <script src="../scripts/lessonNavigation.js" defer></script>
 
     <!-- End JavaScript file link -->
 
@@ -97,29 +99,91 @@
         </div>
 
         <main class="main-content">
-        <h2 class="page-title">Lesson 1 - Your first web page</h2>
-        <section id="introduction" class="introduction">
+        <!-- Fixed Header Section -->
+        <div class="lesson-header-fixed">
+            <h2 class="page-title">Lesson 1 - Your first web page</h2>
+            
+            <!-- Lesson Navigation Panel -->
+            <nav class="lesson-navigation-panel" aria-label="Lesson navigation">
+                <div class="navigation-controls">
+                    <!-- Fast Rewind -->
+                    <button type="button" id="fastBackwardBtn" class="nav-button lesson-nav" 
+                            title="Go to previous lesson" aria-label="Previous lesson">
+                        <i class="fa-solid fa-backward-fast" aria-hidden="true"></i>
+                    </button>
+
+                    <!-- Rewind -->
+                    <button type="button" id="backwardBtn" class="nav-button section-nav" 
+                            title="Go to previous section" aria-label="Previous section" disabled>
+                        <i class="fa-solid fa-backward-step" aria-hidden="true"></i>
+                    </button>
+
+                    <!-- Progress Bar with Wand Icons -->
+                    <div class="progress-container">
+                        <div id="progressBar" class="progress-bar" role="progressbar" 
+                             aria-valuenow="1" aria-valuemin="1" aria-valuemax="5" 
+                             aria-label="Section progress">
+                            <span class="wand-icon current" data-section="0" title="Introduction">
+                                <img src="../images/fontawesome/wand-magic-sparkles-sharp-duotone-regular-full.svg" 
+                                     alt="Current section" class="wand-current">
+                            </span>
+                            <span class="wand-icon next" data-section="1" title="Exploring Visual Studio Code">
+                                <img src="../images/fontawesome/wand-magic-duotone-regular-full.svg" 
+                                     alt="Next section" class="wand-next">
+                            </span>
+                            <span class="wand-icon next" data-section="2" title="Your first web page">
+                                <img src="../images/fontawesome/wand-magic-duotone-regular-full.svg" 
+                                     alt="Next section" class="wand-next">
+                            </span>
+                            <span class="wand-icon next" data-section="3" title="What does it mean">
+                                <img src="../images/fontawesome/wand-magic-duotone-regular-full.svg" 
+                                     alt="Next section" class="wand-next">
+                            </span>
+                            <span class="wand-icon next" data-section="4" title="Be curious">
+                                <img src="../images/fontawesome/wand-magic-duotone-regular-full.svg" 
+                                     alt="Next section" class="wand-next">
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Forward -->
+                    <button type="button" id="forwardBtn" class="nav-button section-nav" 
+                            title="Go to next section" aria-label="Next section">
+                        <i class="fa-solid fa-forward-step" aria-hidden="true"></i>
+                    </button>
+
+                    <!-- Fast Forward -->
+                    <button type="button" id="fastForwardBtn" class="nav-button lesson-nav" 
+                            title="Go to next lesson" aria-label="Next lesson">
+                        <i class="fa-solid fa-forward-fast" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
+        
+        <!-- Lesson Content -->
+        <div class="lesson-content">
+        <section id="introduction" class="introduction lesson-section">
             <div class="intro-container">
                 <div class="student-image">
                     <!--Image is injected based on choices made in student.html and saved into local storage. -->
                 </div>
                 <div class="intro-content">
-                    <h3 onclick="toggleSection('introduction-block', event);" onkeydown="toggleSection('introduction-block', event);" class="magic-invisible lesson-title">Introduction</h3>
+                    <h3 class="lesson-title">Introduction</h3>
 
-                    <div id="introduction-block" class="hidden">
+                    <div id="introduction-block">
                         <p>
                             In this lesson, you will learn about HTML and create your first web page. By the end of this lesson, you will have a simple web page that you can view in a web browser.
                         </p>
-                        <button type="button" class="magic-block-close h3-level" onclick="toggleSectionCollapse('introduction-block', event);" onkeydown="toggleSectionCollapse('introduction-block', event);" tabindex="0" aria-label="Collapse Introduction section"></button>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="exploring-vsc" class="exploring-vsc">
-            <h3 onclick="toggleSection('exploring-vsc-block', event);" onkeydown="toggleSection('exploring-vsc-block', event);" class="magic-invisible lesson-title">Exploring Visual Studio Code</h3>
+        <section id="exploring-vsc" class="exploring-vsc lesson-section hidden">
+            <h3 class="lesson-title">Exploring Visual Studio Code</h3>
 
-            <div id="exploring-vsc-block" class="hidden">
+            <div id="exploring-vsc-block">
                 <p>
                     Before you create your first web page, take a moment to explore Visual Studio Code (VS Code), the code editor you will be using throughout this course. VS Code is a powerful and user-friendly code editor that supports many programming languages, including HTML, CSS, and JavaScript.
                 </p>
@@ -145,13 +209,12 @@
                 <p>
                     Take some time to familiarise yourself with these areas. You can open and close the Explorer by clicking on the file icon in the Activity Bar. You can also open files by double-clicking them in the Explorer.
                 </p>
-                <button type="button" class="magic-block-close h3-level" onclick="toggleSectionCollapse('exploring-vsc-block', event);" onkeydown="toggleSectionCollapse('exploring-vsc-block', event);" tabindex="0" aria-label="Collapse Exploring Visual Studio Code section"></button>
             </div>
         </section>
-        <section id="your-first-web-page" class="your-first-web-page">
-            <h3 onclick="toggleSection('your-first-web-page-block', event);" onkeydown="toggleSection('your-first-web-page-block', event);" class="magic-invisible lesson-title">Your First Web Page</h3>
+        <section id="your-first-web-page" class="your-first-web-page lesson-section hidden">
+            <h3 class="lesson-title">Your First Web Page</h3>
 
-            <div id="your-first-web-page-block" class="hidden">
+            <div id="your-first-web-page-block">
                 <p>
                     HTML <button type="button" popovertarget="glossary-html-popover" class="glossary-icon-button" aria-label="Show HTML definition"><i class="fa-duotone fa-circle-question" aria-hidden="true"></i></button> is the standard language used to create web pages. It consists of a series of elements that define the structure and content of a web page. Unlike a word processor, where you format text visually (that is, if you want bold text you simply highlight it and click a button to make it bold), in HTML you use tags to mark up the text and these tags tell the browser how to display the content. This is similar to how wizards and witches use spells to transform objects; in HTML, you use tags to transform plain text into structured web content.
                 </p>
@@ -185,12 +248,12 @@
                     <li>Make sure the node.js server is running. You can do this by opening a terminal, navigating to your Projects folder, and running <code>npm start</code>.</li>
                     <li>Open <code>http://localhost:8000/lesson-1.html</code> in your web browser to see your first web page!</li>
                 </ol>
-                <button type="button" class="magic-block-close h3-level" onclick="toggleSectionCollapse('your-first-web-page-block', event);" onkeydown="toggleSectionCollapse('your-first-web-page-block', event);" tabindex="0" aria-label="Collapse First Web Page section"></button>
             </div>
+        </section>
+        <section id="what-does-it-mean" class="what-does-it-mean lesson-section hidden">
+            <h3 class="lesson-title">What does it mean</h3>
 
-            <h3 onclick="toggleSection('what-does-it-mean-block', event);" onkeydown="toggleSection('what-does-it-mean-block', event);" class="magic-invisible lesson-title">What does it mean</h3>
-
-            <div id="what-does-it-mean-block" class="hidden">
+            <div id="what-does-it-mean-block">
 
                 <p>
                     In this section, we will explain what the different parts of the HTML code you wrote mean.
@@ -203,11 +266,11 @@
                     <li>Line 9: <code>&lt;h1&gt;Hello, Witches and Wizards!&lt;/h1&gt;</code>: This line creates a heading. The <code>&lt;h1&gt;</code> tag defines a top-level heading, which is usually the largest and most important heading on the page. The text between the opening and closing tags is what will be displayed as the heading.</li>
                     <li>Line 10: <code>&lt;p&gt;You are all awesome.&lt;/p&gt;</code>: This line creates a paragraph. The <code>&lt;p&gt;</code> tag defines a paragraph of text. Similar to the heading, the text between the opening and closing tags is what will be displayed as the paragraph content.</li>
                 </ul>
-                <button type="button" class="magic-block-close h3-level" onclick="toggleSectionCollapse('what-does-it-mean-block', event);" onkeydown="toggleSectionCollapse('what-does-it-mean-block', event);" tabindex="0" aria-label="Collapse What Does It Mean section"></button>
             </div>
-            <h3 onclick="toggleSection('be-curious-block', event);" onkeydown="toggleSection('be-curious-block', event);" class="magic-invisible lesson-title">Be Curious</h3>
-
-            <div id="be-curious-block" class="hidden">
+            <h3 class="lesson-title">Be Curious</h3>
+        </section>
+        <section id="be-curious" class="be-curious lesson-section hidden">
+            <div id="be-curious-block">
 
                 <p>
                     This is a chance to experiment and see what happens when you change things in your HTML code. Try modifying the code you wrote earlier in different ways, such as:
@@ -219,12 +282,12 @@
                     <li>Try putting in deliberate mistakes in your code and see what happens. Sometimes Visual Studio Code will detect the error and warn you about it. But sometimes the code will still run in the browser despite the mistakes.</li>
                     <li>Try adding comments in different places in your code. Comments start with <pre>&lt;!--</pre> and end with <pre>--&gt;</pre>. Anything between the start and end tags is ignored by the browser and not displayed on the page. You can use this to leave notes for yourself or others who might read your code later.</li>
                 </ul>
-                <button type="button" class="magic-block-close h3-level" onclick="toggleSectionCollapse('be-curious-block', event);" onkeydown="toggleSectionCollapse('be-curious-block', event);" tabindex="0" aria-label="Collapse Be Curious section"></button>
             </div>
         </section>
         <p>
             Congratulations! You have created your first web page using HTML. In the next lessons, you will explore more HTML elements and add styling using CSS.
         </p>
+        </div> <!-- End lesson-content -->
     </main>
     </div>
 

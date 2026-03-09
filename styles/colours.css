@@ -199,6 +199,12 @@
     --colour-effective-link-background-visited:        var(--colour-normal-light-link-background-visited);
     --colour-effective-link-text-visited:              var(--colour-normal-light-link-text-visited);
     --colour-effective-link-text-focus:                var(--colour-normal-light-link-text-hover);
+    
+    /* Additional effective colors for navigation components */
+    --colour-effective-background:                     var(--colour-effective-page-background);
+    --colour-effective-surface:                        var(--colour-effective-button-background);
+    --colour-effective-border:                         var(--colour-effective-button-text);
+    --colour-effective-accent:                         var(--colour-effective-headings-text);
 
     /* Static generic color variables for diagnostics pages - always normal-light theme. These are NOT overridden by themeSwitcher.js and remain constant */
     --colour-page-background:                          var(--colour-normal-light-page-background);
