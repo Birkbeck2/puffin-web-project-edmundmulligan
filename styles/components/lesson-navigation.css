@@ -96,7 +96,7 @@
 }
 
 .nav-button i {
-    display: block;
+    display: flex;
     line-height: 1;
     vertical-align: middle;
 }
