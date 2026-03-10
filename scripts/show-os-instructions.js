@@ -41,6 +41,12 @@
             if (selectedInstructions) {
                 selectedInstructions.classList.add('visible');
             }
+
+            // Reinitialize lesson navigation to update the progress bar
+            // for the new set of visible sections
+            if (window.lessonNavigationInjector) {
+                window.lessonNavigationInjector.reinitialize();
+            }
         }
 
         /**
@@ -66,6 +72,12 @@
          */
         init() {
             this.setupListeners();
+            
+            // Check if an OS is already selected (e.g., from form restoration) and show its instructions
+            const selectedRadio = document.querySelector('input[name="os"]:checked');
+            if (selectedRadio) {
+                this.showInstructions(selectedRadio.value);
+            }
         }
     }
 

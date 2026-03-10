@@ -1,5 +1,20 @@
 {
-  "hardcodedColors": [],
+  "hardcodedColors": [
+    {
+      "file": "styles/components/lesson-navigation.css",
+      "line": 117,
+      "type": "Hex Color",
+      "value": "#ccc",
+      "context": "background-color: var(--colour-effective-button-background-disabled, #ccc);"
+    },
+    {
+      "file": "styles/components/lesson-navigation.css",
+      "line": 118,
+      "type": "Hex Color",
+      "value": "#666",
+      "context": "color: var(--colour-effective-button-text-disabled, #666);"
+    }
+  ],
   "themeSpecificVars": [],
   "missingThemeSystem": []
 }

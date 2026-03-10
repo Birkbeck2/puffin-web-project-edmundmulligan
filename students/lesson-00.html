@@ -51,6 +51,7 @@
     <link rel="stylesheet" href="../styles/components/buttons.css">
     <link rel="stylesheet" href="../styles/components/code.css">
     <link rel="stylesheet" href="../styles/components/header-and-footer.css">
+    <link rel="stylesheet" href="../styles/components/lesson-navigation.css">
     <link rel="stylesheet" href="../styles/components/navigation.css">
     <link rel="stylesheet" href="../styles/components/popover.css">
     <link rel="stylesheet" href="../styles/components/titles.css">
@@ -74,6 +75,8 @@
     <script src="../scripts/toggle-section.js" defer></script>
     <script src="../scripts/show-os-instructions.js" defer></script>
     <script src="../scripts/populateLessonsNav.js" defer></script>
+    <script src="../scripts/injectLessonNavigation.js" defer></script>
+    <script src="../scripts/lessonNavigation.js" defer></script>
 
     <!-- End JavaScript file link -->
 
@@ -95,6 +98,9 @@
 
         <main class="main-content">
             <h2 class="page-title">Lesson 0 - Getting Started</h2>
+            <!-- Lesson navigation panel will be injected here by injectLessonNavigation.js -->
+
+            <div class="lesson-content">
             <form>
                 <fieldset class="operating-systems">
                     <legend>What computer do you use?</legend>
@@ -125,50 +131,50 @@
                 </fieldset>
                 <button type="submit" class="visually-hidden" aria-hidden="true" tabindex="-1">Submit</button>
             </form>
-        <section id="introduction" class="introduction">
-            <div class="intro-container">
-                <div class="student-image">
-                    <!--Image is injected based on choices made in student.html and saved into local storage. -->
-                </div>
-                <div class="intro-content">
-                    <h3 class="lesson-title">Introduction</h3>
-                    <div id="introduction-block">
-                        <p>
-                            In this lesson, you will ensure that you have all the necessary tools installed on your computer to start learning web development. By the end of this lesson, you will be ready to create your first web page. If you are at a Code Dojo and are using a club computer, these tools will already be installed for you so you can skip to the next lesson.
-                        </p>
-                        <p>
-                            <strong>Warning.</strong> This lesson involves installing software on your computer. If you are using a shared or school computer, please check with a parent, guardian, or teacher before proceeding with the installations. Also, you will need administrative privileges to install the software. This means you will need an administrator password at various stages. If you are not using your own computer, you may need to get the owner to do those steps for you. Finally be aware that the instructions are long and detailed to ensure you get everything set up correctly. Take your time and follow each step carefully. Ask for help from a mentor, if one is available. The rest of the lessons are much shorter and easier once you have the tools installed!
-                        </p>
+            <section id="introduction" class="introduction lesson-section">
+                <div class="intro-container">
+                    <div class="student-image">
+                        <!--Image is injected based on choices made in student.html and saved into local storage. -->
+                    </div>
+                    <div class="intro-content">
+                        <h2 class="lesson-title">Introduction</h2>
+                        <div id="introduction-block">
+                            <p>
+                                In this lesson, you will ensure that you have all the necessary tools installed on your computer to start learning web development. By the end of this lesson, you will be ready to create your first web page. If you are at a Code Dojo and are using a club computer, these tools will already be installed for you so you can skip to the next lesson.
+                            </p>
+                            <p>
+                                <strong>Warning.</strong> This lesson involves installing software on your computer. If you are using a shared or school computer, please check with a parent, guardian, or teacher before proceeding with the installations. Also, you will need administrative privileges to install the software. This means you will need an administrator password at various stages. If you are not using your own computer, you may need to get the owner to do those steps for you. Finally be aware that the instructions are long and detailed to ensure you get everything set up correctly. Take your time and follow each step carefully. Ask for help from a mentor, if one is available. The rest of the lessons are much shorter and easier once you have the tools installed!
+                            </p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section id="installing-required-software" class="installing-required-software">
-            <h3 class="lesson-title">Installing Required Software</h3>
-            <div id="installing-required-software-block">
-                <p>These are the tools you need to install. Some may already be installed on your computer, in which case you can skip those sections. You may use other tools if you prefer, but these are the ones the lessons will assume you have.</p>
-                <ul>
-                    <li>Microsoft Visual Studio Code (or another code editor).</li>
-                    <li>Mozilla Firefox (or another modern web browser such as Google Chrome or Apple Safari).</li>
-                    <li>Git (optional, for version control, used in later lessons).</li>
-                    <li>Node.js (required for running the development server).</li>
-                    <li>SQLite (optional, for database management, used in later lessons).</li>
-                </ul>
-                <p>
-                    Node.js is required from the start to run the development server. If you don't want to install Git or SQLite right now, that's okay; you can install them later when you get to the lessons that need them.
-                </p>
-                <button type="button" class="magic-block-close h3-level" onclick="toggleSectionCollapse('installing-required-software-block', event);" onkeydown="toggleSectionCollapse('installing-required-software-block', event);" tabindex="0" aria-label="Collapse Installing Required Software section"></button>
+            <section id="installing-required-software" class="installing-required-software lesson-section hidden">
+                <h2 class="lesson-title">Installing Required Software</h2>
+                <div id="installing-required-software-block">
+                    <p>These are the tools you need to install. Some may already be installed on your computer, in which case you can skip those sections. You may use other tools if you prefer, but these are the ones the lessons will assume you have.</p>
+                    <ul>
+                        <li>Microsoft Visual Studio Code (or another code editor).</li>
+                        <li>Mozilla Firefox (or another modern web browser such as Google Chrome or Apple Safari).</li>
+                        <li>Git (optional, for version control, used in later lessons).</li>
+                        <li>Node.js (required for running the development server).</li>
+                        <li>SQLite (optional, for database management, used in later lessons).</li>
+                    </ul>
+                    <p>
+                        Node.js is required from the start to run the development server. If you don't want to install Git or SQLite right now, that's okay; you can install them later when you get to the lessons that need them.
+                    </p>
+                </div>
+            </section>
 
-            </div>
-            <div id="instructions-windows">
-                <h4>Windows Installation Instructions</h4>
+            <section id="instructions-windows" class="installation-instructions lesson-section hidden">
+                <h2>Windows Installation Instructions</h2>
                 <p>
                     The latest version of Windows is <strong>Windows 11</strong>, but you should be able to use <strong>Windows 10</strong> as well. The lessons have not been tested on earlier versions of Windows, but they may work ok. It's possible that the browser on older versions of windows won't run all the features used in the lessons. In particular, beware of using Internet Explorer - it is not supported any more and Microsoft Edge is recommended instead. Here are the instructions for installing the recommended software on your Windows computer:
                 </p>
 
-                <h5 onclick="toggleSection('vsc-windows', event);" onkeydown="toggleSection('vsc-windows', event);" class="magic-invisible faq-title">Visual Studio Code</h5>
-                <div id="vsc-windows" class="hidden">
+                <h3 class="faq-title">Visual Studio Code</h3>
+                <div id="vsc-windows">
                     <p>Check whether Visual Studio Code is already installed:</p>
                     <ul>
                         <li>Press <code>Windows key + R</code></li>
@@ -230,8 +236,8 @@
                     </ol>
                 </div>
 
-                <h5 onclick="toggleSection('firefox-windows', event);" onkeydown="toggleSection('firefox-windows', event);" class="magic-invisible faq-title">Mozilla Firefox</h5>
-                <div id="firefox-windows" class="hidden">
+                <h3 class="faq-title">Mozilla Firefox</h3>
+                <div id="firefox-windows">
                     <p>Check whether Firefox is already installed:</p>
                     <ul>
                         <li>Press <code>Windows key</code></li>
@@ -288,8 +294,8 @@
                     </ol>
                 </div>
 
-                <h5 onclick="toggleSection('nodejs-windows', event);" onkeydown="toggleSection('nodejs-windows', event);" class="magic-invisible faq-title">Node.js</h5>
-                <div id="nodejs-windows" class="hidden">
+                <h3 class="faq-title">Node.js</h3>
+                <div id="nodejs-windows">
                     <p>Check whether Node.js is already installed:</p>
                     <ul>
                         <li>Press <code>Windows key + R</code></li>
@@ -404,8 +410,8 @@
                     </ol>
                 </div>
 
-                <h5 onclick="toggleSection('git-windows', event);" onkeydown="toggleSection('git-windows', event);" class="magic-invisible faq-title">Git</h5>
-                <div id="git-windows" class="hidden">
+                <h3 class="faq-title">Git</h3>
+                <div id="git-windows">
                     <p>Check whether Git is already installed:</p>
                     <ul>
                         <li>Press <code>Windows key + R</code></li>
@@ -511,8 +517,8 @@
                     </ol>
                 </div>
 
-                <h5 onclick="toggleSection('sqlite-windows', event);" onkeydown="toggleSection('sqlite-windows', event);" class="magic-invisible faq-title">SQLite</h5>
-                <div id="sqlite-windows" class="hidden">
+                <h3 class="faq-title">SQLite</h3>
+                <div id="sqlite-windows">
                     <p>Check whether SQLite is already installed:</p>
                     <ul>
                         <li>Press <code>Windows key + R</code></li>
@@ -611,11 +617,11 @@ SELECT * FROM users;</code></pre>
                     </ol>
                 </div>
 
-                <h5 onclick="toggleSection('extensions-windows', event);" onkeydown="toggleSection('extensions-windows', event);" class="magic-invisible faq-title">Visual Studio Code Extensions</h5>
-                <div id="extensions-windows" class="hidden">
+                <h3 class="faq-title">Visual Studio Code Extensions</h3>
+                <div id="extensions-windows">
                     <p>VS Code extensions add extra features and functionality to your editor. Here are the recommended extensions for web development:</p>
 
-                    <h6>How to Install Extensions</h6>
+                    <h4>How to Install Extensions</h4>
                     <ol>
                         <li>
                             <strong>Open Extensions Panel</strong>
@@ -636,7 +642,7 @@ SELECT * FROM users;</code></pre>
                         </li>
                     </ol>
 
-                    <h6>Essential Extensions (Install Now)</h6>
+                    <h4>Recommended Extensions (Install Now)</h4>
                     <ol>
                         <li>
                             <strong>Live Server</strong> (ritwickdey.LiveServer)
@@ -674,7 +680,7 @@ SELECT * FROM users;</code></pre>
                         </li>
                     </ol>
 
-                    <h6>Helpful Extensions</h6>
+                    <h4>Helpful Extensions</h4>
                     <ol>
                         <li>
                             <strong>Path Intellisense</strong> (christian-kohler.path-intellisense)
@@ -700,7 +706,7 @@ SELECT * FROM users;</code></pre>
                         </li>
                     </ol>
 
-                    <h6>For Later Lessons</h6>
+                    <h4>For Later Lessons</h4>
                     <p>Install these when you reach the relevant lessons:</p>
                     <ol>
                         <li>
@@ -719,7 +725,7 @@ SELECT * FROM users;</code></pre>
                         </li>
                     </ol>
 
-                    <h6>Optional Extensions</h6>
+                    <h4>Optional Extensions</h4>
                     <ol>
                         <li>
                             <strong>Better Comments</strong> (aaron-bond.better-comments)
@@ -737,7 +743,7 @@ SELECT * FROM users;</code></pre>
                         </li>
                     </ol>
 
-                    <h6>Configure Prettier (Recommended)</h6>
+                    <h4>Configure Prettier (Recommended)</h4>
                     <p>To make Prettier format your code automatically when you save:</p>
                     <ol>
                         <li>Press <code>Ctrl + ,</code> to open Settings</li>
@@ -748,8 +754,8 @@ SELECT * FROM users;</code></pre>
                     </ol>
                 </div>
 
-                <h5 onclick="toggleSection('projects-folder-windows', event);" onkeydown="toggleSection('projects-folder-windows', event);" class="magic-invisible faq-title">Create a Projects Folder</h5>
-                <div id="projects-folder-windows" class="hidden">
+                <h3 class="faq-title">Create a Projects Folder</h3>
+                <div id="projects-folder-windows">
                     <p>It's helpful to keep all your coding projects organised in one place. Let's create a dedicated Projects folder:</p>
                     <ol>
                         <li>
@@ -781,11 +787,11 @@ SELECT * FROM users;</code></pre>
                     <p>In future lessons, you'll save your coding projects in this folder.</p>
                 </div>
 
-                <h5 onclick="toggleSection('dev-server-windows', event);" onkeydown="toggleSection('dev-server-windows', event);" class="magic-invisible faq-title">Setting Up the Development Server</h5>
-                <div id="dev-server-windows" class="hidden">
+                <h3 class="faq-title">Setting Up the Development Server</h3>
+                <div id="dev-server-windows">
                     <p>To view your web pages as you develop them, you'll need to run a local development server. This is important because some web features don't work when opening HTML files directly in a browser.</p>
 
-                    <h6>Create a package.json File</h6>
+                    <h4>Create a package.json File</h4>
                     <ol>
                         <li>Open Visual Studio Code</li>
                         <li>Select <code>File → Open Folder</code></li>
@@ -807,7 +813,7 @@ SELECT * FROM users;</code></pre>
                         <li>Save the file (<code>Ctrl + S</code>)</li>
                     </ol>
 
-                    <h6>Install http-server</h6>
+                    <h4>Install http-server</h4>
                     <ol>
                         <li>Open the integrated terminal in VS Code by pressing <code>Ctrl + `</code> (backtick key, usually above Tab)</li>
                         <li>Make sure you're in your Projects folder (the terminal should show the path)</li>
@@ -815,7 +821,7 @@ SELECT * FROM users;</code></pre>
                         <li>Wait for the installation to complete (this installs http-server locally in your Projects folder)</li>
                     </ol>
 
-                    <h6>Start the Development Server</h6>
+                    <h4>Start the Development Server</h4>
                     <ol>
                         <li>In the same terminal, type <code>npm start</code> and press Enter</li>
                         <li>You should see a message saying the server is running on <code>http://localhost:8000</code></li>
@@ -823,7 +829,7 @@ SELECT * FROM users;</code></pre>
                         <li>You should see a directory listing of your Projects folder</li>
                     </ol>
 
-                    <h6>Using the Development Server</h6>
+                    <h4>Using the Development Server</h4>
                     <ul>
                         <li>Keep the terminal open while you're working - the server needs to run continuously</li>
                         <li>When you create HTML files in your Projects folder, you can access them through the browser at <code>http://localhost:8000/filename.html</code></li>
@@ -832,14 +838,15 @@ SELECT * FROM users;</code></pre>
                         <li>To restart the server later, just run <code>npm start</code> again from your Projects folder</li>
                     </ul>
                 </div>
-            </div>
-            <div id="instructions-macos">
-                <h4>macOS Installation Instructions</h4>
+            </section>
+
+            <section id="instructions-macos" class="installation-instructions lesson-section hidden">
+                <h2>macOS Installation Instructions</h2>
                 <p>
                     The latest version of Apple's macOS is <strong>macOS Ventura</strong>, but you should be able to use recent versions as well. The lessons have not been tested on earlier versions of macOS, but they may work ok. Here are the instructions for installing the recommended software on your macOS computer:
                 </p>
-                <h5 onclick="toggleSection('vsc-macos', event);" onkeydown="toggleSection('vsc-macos', event);" class="magic-invisible faq-title">Visual Studio Code</h5>
-                <div id="vsc-macos" class="hidden">
+                <h3 class="faq-title">Visual Studio Code</h3>
+                <div id="vsc-macos">
                     <p>Check whether Visual Studio Code is already installed:</p>
                     <ul>
                         <li>Open Finder</li>
@@ -912,8 +919,8 @@ SELECT * FROM users;</code></pre>
                 </ol>
                 </div>
 
-                <h5 onclick="toggleSection('firefox-macos', event);" onkeydown="toggleSection('firefox-macos', event);" class="magic-invisible faq-title">Mozilla Firefox</h5>
-                <div id="firefox-macos" class="hidden">
+                <h3 class="faq-title">Mozilla Firefox</h3>
+                <div id="firefox-macos">
                     <p>Check whether Firefox is already installed:</p>
                     <ul>
                         <li>Open Finder</li>
@@ -985,8 +992,8 @@ SELECT * FROM users;</code></pre>
                     </ol>
                 </div>
 
-                <h5 onclick="toggleSection('nodejs-macos', event);" onkeydown="toggleSection('nodejs-macos', event);" class="magic-invisible faq-title">Node.js</h5>
-                <div id="nodejs-macos" class="hidden">
+                <h3 class="faq-title">Node.js</h3>
+                <div id="nodejs-macos">
                     <p>Check whether Node.js is already installed:</p>
                     <ul>
                         <li>Open Terminal (<code>Command + Space</code>, type "Terminal")</li>
@@ -995,7 +1002,7 @@ SELECT * FROM users;</code></pre>
                     </ul>
                     <p>If you need to install Node.js, you have two options:</p>
 
-                    <h6>Option 1: Download from Official Website (Recommended for Beginners)</h6>
+                    <h4>Option 1: Download from Official Website (Recommended for Beginners)</h4>
                     <ol>
                         <li>
                             <strong>Download Node.js</strong>
@@ -1027,7 +1034,7 @@ SELECT * FROM users;</code></pre>
                         </li>
                     </ol>
 
-                    <h6>Option 2: Install via Homebrew</h6>
+                    <h4>Option 2: Install via Homebrew</h4>
                     <p>If you have Homebrew installed (a package manager for macOS):</p>
                     <ol>
                         <li>
@@ -1102,8 +1109,8 @@ SELECT * FROM users;</code></pre>
                     </ol>
                 </div>
 
-                <h5 onclick="toggleSection('git-macos', event);" onkeydown="toggleSection('git-macos', event);" class="magic-invisible faq-title">Git</h5>
-                <div id="git-macos" class="hidden">
+                <h3 class="faq-title">Git</h3>
+                <div id="git-macos">
                     <p>Check whether Git is already installed:</p>
                     <ul>
                         <li>Open Terminal (<code>Command + Space</code>, type "Terminal")</li>
@@ -1112,7 +1119,7 @@ SELECT * FROM users;</code></pre>
                     </ul>
                     <p>If you need to install Git, you have two options:</p>
 
-                    <h6>Option 1: Install via Xcode Command Line Tools (Recommended)</h6>
+                    <h4>Option 1: Install via Xcode Command Line Tools (Recommended)</h4>
                     <ol>
                         <li>
                             <strong>Trigger Installation Prompt</strong>
@@ -1133,7 +1140,7 @@ SELECT * FROM users;</code></pre>
                         </li>
                     </ol>
 
-                    <h6>Option 2: Install via Homebrew</h6>
+                    <h4>Option 2: Install via Homebrew</h4>
                     <p>If you have Homebrew installed (a package manager for macOS), you can use it to install Git:</p>
                     <ol>
                         <li>
@@ -1148,7 +1155,7 @@ SELECT * FROM users;</code></pre>
                         </li>
                     </ol>
 
-                    <h6>Option 3: Download from Git Website</h6>
+                    <h4>Option 3: Download from Git Website</h4>
                     <ol>
                         <li>
                             <strong>Download Git</strong>
@@ -1203,8 +1210,8 @@ SELECT * FROM users;</code></pre>
                     </ol>
                 </div>
 
-                <h5 onclick="toggleSection('sqlite-macos', event);" onkeydown="toggleSection('sqlite-macos', event);" class="magic-invisible faq-title">SQLite</h5>
-                <div id="sqlite-macos" class="hidden">
+                <h3 class="faq-title">SQLite</h3>
+                <div id="sqlite-macos">
                     <p>Check whether SQLite is already installed:</p>
                     <ul>
                         <li>Open Terminal (<code>Command + Space</code>, type "Terminal")</li>
@@ -1213,7 +1220,7 @@ SELECT * FROM users;</code></pre>
                     </ul>
                     <p><strong>Good News:</strong> macOS comes with SQLite pre-installed! You usually don't need to install it separately.</p>
 
-                    <h6>Verify Existing Installation</h6>
+                    <h4>Verify Existing Installation</h4>
                     <ol>
                         <li>
                             <strong>Check SQLite Version</strong>
@@ -1241,7 +1248,7 @@ SELECT * FROM users;</code></pre>
                         </li>
                     </ol>
 
-                    <h6>Update SQLite via Homebrew (Optional)</h6>
+                    <h4>Update SQLite via Homebrew (Optional)</h4>
                     <p>If you want a newer version than what comes with macOS:</p>
                     <ol>
                         <li>
@@ -1268,7 +1275,7 @@ SELECT * FROM users;</code></pre>
                         </li>
                     </ol>
 
-                    <h6>Create a Test Database (Optional)</h6>
+                    <h4>Create a Test Database (Optional)</h4>
                     <ol>
                         <li>
                             <strong>Create a Test Directory</strong>
@@ -1305,11 +1312,11 @@ SELECT * FROM users;</code></pre>
                     </ol>
                 </div>
 
-                <h5 onclick="toggleSection('extensions-macos', event);" onkeydown="toggleSection('extensions-macos', event);" class="magic-invisible faq-title">Visual Studio Code Extensions</h5>
-                <div id="extensions-macos" class="hidden">
+                <h3 class="faq-title">Visual Studio Code Extensions</h3>
+                <div id="extensions-macos">
                     <p>VS Code extensions add extra features and functionality to your editor. Here are the recommended extensions for web development:</p>
 
-                    <h6>How to Install Extensions</h6>
+                    <h4>How to Install Extensions</h4>
                     <ol>
                         <li>
                             <strong>Open Extensions Panel</strong>
@@ -1330,7 +1337,7 @@ SELECT * FROM users;</code></pre>
                         </li>
                     </ol>
 
-                    <h6>Essential Extensions (Install Now)</h6>
+                    <h4>Essential Extensions (Install Now)</h4>
                     <ol>
                         <li>
                             <strong>Prettier - Code formatter</strong> (esbenp.prettier-vscode)
@@ -1359,7 +1366,7 @@ SELECT * FROM users;</code></pre>
                         </li>
                     </ol>
 
-                    <h6>Helpful Extensions</h6>
+                    <h4>Helpful Extensions</h4>
                     <ol>
                         <li>
                             <strong>Path Intellisense</strong> (christian-kohler.path-intellisense)
@@ -1385,7 +1392,7 @@ SELECT * FROM users;</code></pre>
                         </li>
                     </ol>
 
-                    <h6>For Later Lessons</h6>
+                    <h4>For Later Lessons</h4>
                     <p>Install these when you reach the relevant lessons:</p>
                     <ol>
                         <li>
@@ -1405,7 +1412,7 @@ SELECT * FROM users;</code></pre>
                         </li>
                     </ol>
 
-                    <h6>Optional Extensions</h6>
+                    <h4>Optional Extensions</h4>
                     <ol>
                         <li>
                             <strong>Better Comments</strong> (aaron-bond.better-comments)
@@ -1423,7 +1430,7 @@ SELECT * FROM users;</code></pre>
                         </li>
                     </ol>
 
-                    <h6>Configure Prettier (Recommended)</h6>
+                    <h4>Configure Prettier (Recommended)</h4>
                     <p>To make Prettier format your code automatically when you save:</p>
                     <ol>
                         <li>Press <code>Command + ,</code> to open Settings</li>
@@ -1434,8 +1441,8 @@ SELECT * FROM users;</code></pre>
                     </ol>
                 </div>
 
-                <h5 onclick="toggleSection('projects-folder-macos', event);" onkeydown="toggleSection('projects-folder-macos', event);" class="magic-invisible faq-title">Create a Projects Folder</h5>
-                <div id="projects-folder-macos" class="hidden">
+                <h3 class="faq-title">Create a Projects Folder</h3>
+                <div id="projects-folder-macos">
                     <p>It's helpful to keep all your coding projects organised in one place. Let's create a dedicated Projects folder:</p>
                     <ol>
                         <li>
@@ -1465,11 +1472,11 @@ SELECT * FROM users;</code></pre>
                     <p>In future lessons, you'll save your coding projects in this folder.</p>
                 </div>
 
-                <h5 onclick="toggleSection('dev-server-macos', event);" onkeydown="toggleSection('dev-server-macos', event);" class="magic-invisible faq-title">Setting Up the Development Server</h5>
-                <div id="dev-server-macos" class="hidden">
+                <h3 class="faq-title">Setting Up the Development Server</h3>
+                <div id="dev-server-macos">
                     <p>To view your web pages as you develop them, you'll need to run a local development server. This is important because some web features don't work when opening HTML files directly in a browser.</p>
 
-                    <h6>Create a package.json File</h6>
+                    <h4>Create a package.json File</h4>
                     <ol>
                         <li>Open Visual Studio Code</li>
                         <li>Select <code>File → Open Folder</code></li>
@@ -1491,7 +1498,7 @@ SELECT * FROM users;</code></pre>
                         <li>Save the file (<code>Cmd + S</code>)</li>
                     </ol>
 
-                    <h6>Install http-server</h6>
+                    <h4>Install http-server</h4>
                     <ol>
                         <li>Open the integrated terminal in VS Code by pressing <code>Ctrl + `</code> (backtick key, usually above Tab)</li>
                         <li>Make sure you're in your Projects folder (the terminal should show the path)</li>
@@ -1499,7 +1506,7 @@ SELECT * FROM users;</code></pre>
                         <li>Wait for the installation to complete (this installs http-server locally in your Projects folder)</li>
                     </ol>
 
-                    <h6>Start the Development Server</h6>
+                    <h4>Start the Development Server</h4>
                     <ol>
                         <li>In the same terminal, type <code>npm start</code> and press Enter</li>
                         <li>You should see a message saying the server is running on <code>http://localhost:8000</code></li>
@@ -1507,7 +1514,7 @@ SELECT * FROM users;</code></pre>
                         <li>You should see a directory listing of your Projects folder</li>
                     </ol>
 
-                    <h6>Using the Development Server</h6>
+                    <h4>Using the Development Server</h4>
                     <ul>
                         <li>Keep the terminal open while you're working - the server needs to run continuously</li>
                         <li>When you create HTML files in your Projects folder, you can access them through the browser at <code>http://localhost:8000/filename.html</code></li>
@@ -1516,15 +1523,16 @@ SELECT * FROM users;</code></pre>
                         <li>To restart the server later, just run <code>npm start</code> again from your Projects folder</li>
                     </ul>
                 </div>
-            </div>
-            <div id="instructions-linux">
-                <h4>Linux Installation Instructions</h4>
+            </section>
+
+            <section id="instructions-linux" class="installation-instructions lesson-section hidden">
+                <h2>Linux Installation Instructions</h2>
                 <p>
                     There are many different versions of Linux available, so these instructions will cover the most common distributions: <strong>Ubuntu</strong> and <strong>Fedora</strong>. If you are using a different distribution, the steps may vary slightly. The lessons have been tested on Linux Mint 22.2 (which is based on Ubuntu 22.04) but should work fine with other flavours and versions. Here are the instructions for installing the recommended software on your Linux computer:
                 </p>
 
-                <h5 onclick="toggleSection('vsc-linux', event);" onkeydown="toggleSection('vsc-linux', event);" class="magic-invisible faq-title">Visual Studio Code</h5>
-                <div id="vsc-linux" class="hidden">
+                <h3 class="faq-title">Visual Studio Code</h3>
+                <div id="vsc-linux">
                     <p>Check whether Visual Studio Code is already installed:</p>
                     <ul>
                         <li>Open Terminal (usually <code>Ctrl + Alt + T</code>)</li>
@@ -1532,7 +1540,7 @@ SELECT * FROM users;</code></pre>
                         <li>If you see a version number, you have it installed. If you get a "command not found" error, you need to install it.</li>
                     </ul>
 
-                <h6>Ubuntu / Debian-based Linux</h6>
+                <h4>Ubuntu / Debian-based Linux</h4>
                 <p>If you need to install Visual Studio Code on Ubuntu, follow these steps:</p>
                 <ol>
                     <li>
@@ -1575,7 +1583,7 @@ sudo install -D -o root -g root -m 644 packages.microsoft.gpg /etc/apt/keyrings/
                     </li>
                 </ol>
 
-                <h6>Fedora / Red Hat-based Linux</h6>
+                <h4>Fedora / Red Hat-based Linux</h4>
                 <p>If you need to install Visual Studio Code on Fedora, follow these steps:</p>
                 <ol>
                     <li>
@@ -1619,7 +1627,7 @@ sudo yum install code</code></pre>
                     </li>
                 </ol>
 
-                <h6>Alternative: Download .deb or .rpm Package</h6>
+                <h4>Alternative: Download .deb or .rpm Package</h4>
                 <p>You can also download VS Code directly from the website:</p>
                 <ol>
                     <li>
@@ -1655,8 +1663,8 @@ sudo apt-get install -f</code></pre>
                 </ol>
                 </div>
 
-                <h5 onclick="toggleSection('firefox-linux', event);" onkeydown="toggleSection('firefox-linux', event);" class="magic-invisible faq-title">Mozilla Firefox</h5>
-                <div id="firefox-linux" class="hidden">
+                <h3 class="faq-title">Mozilla Firefox</h3>
+                <div id="firefox-linux">
                     <p>Check whether Firefox is already installed:</p>
                     <ul>
                         <li>Open Terminal (usually <code>Ctrl + Alt + T</code>)</li>
@@ -1664,7 +1672,7 @@ sudo apt-get install -f</code></pre>
                         <li>If you see a version number, you have it installed. If you get a "command not found" error, you need to install it.</li>
                     </ul>
 
-                    <h6>Ubuntu / Debian-based Linux</h6>
+                    <h4>Ubuntu / Debian-based Linux</h4>
                     <p>If you need to install Firefox on Ubuntu, follow these steps:</p>
                     <ol>
                         <li>
@@ -1697,7 +1705,7 @@ sudo apt-get install -f</code></pre>
                         </li>
                     </ol>
 
-                    <h6>Fedora / Red Hat-based Linux</h6>
+                    <h4>Fedora / Red Hat-based Linux</h4>
                     <p>If you need to install Firefox on Fedora, follow these steps:</p>
                     <ol>
                         <li>
@@ -1724,7 +1732,7 @@ sudo apt-get install -f</code></pre>
                         </li>
                     </ol>
 
-                    <h6>Arch Linux</h6>
+                    <h4>Arch Linux</h4>
                     <p>If you need to install Firefox on Arch Linux, follow these steps:</p>
                     <ol>
                         <li>
@@ -1748,7 +1756,7 @@ sudo apt-get install -f</code></pre>
                         </li>
                     </ol>
 
-                    <h6>Alternative: Download from Mozilla Website</h6>
+                    <h4>Alternative: Download from Mozilla Website</h4>
                     <p>You can also download Firefox directly from the website:</p>
                     <ol>
                         <li>
@@ -1791,8 +1799,8 @@ sudo apt-get install -f</code></pre>
                     </ul>
                 </div>
 
-                <h5 onclick="toggleSection('nodejs-linux', event);" onkeydown="toggleSection('nodejs-linux', event);" class="magic-invisible faq-title">Node.js</h5>
-                <div id="nodejs-linux" class="hidden">
+                <h3 class="faq-title">Node.js</h3>
+                <div id="nodejs-linux">
                     <p>Check whether Node.js is already installed:</p>
                     <ul>
                         <li>Open Terminal (usually <code>Ctrl + Alt + T</code>)</li>
@@ -1800,7 +1808,7 @@ sudo apt-get install -f</code></pre>
                         <li>If you see a version number, you have it installed. If you get a "command not found" error, you need to install it.</li>
                     </ul>
 
-                    <h6>Ubuntu / Debian-based Linux</h6>
+                    <h4>Ubuntu / Debian-based Linux</h4>
                     <p>If you need to install Node.js on Ubuntu, follow these steps:</p>
                     <ol>
                         <li>
@@ -1835,7 +1843,7 @@ sudo apt install nodejs npm</code></pre>
                         </li>
                     </ol>
 
-                    <h6>Fedora / Red Hat-based Linux</h6>
+                    <h4>Fedora / Red Hat-based Linux</h4>
                     <p>If you need to install Node.js on Fedora:</p>
                     <ol>
                         <li>
@@ -1853,7 +1861,7 @@ sudo apt install nodejs npm</code></pre>
                         </li>
                     </ol>
 
-                    <h6>Arch Linux</h6>
+                    <h4>Arch Linux</h4>
                     <p>If you're using Arch Linux:</p>
                     <ol>
                         <li>
@@ -1868,7 +1876,7 @@ sudo apt install nodejs npm</code></pre>
                         </li>
                     </ol>
 
-                    <h6>Using Node Version Manager (nvm) - Advanced Option</h6>
+                    <h4>Using Node Version Manager (nvm) - Advanced Option</h4>
                     <p>For more control over Node.js versions:</p>
                     <ol>
                         <li>
@@ -1938,8 +1946,8 @@ sudo apt install nodejs npm</code></pre>
                     </ol>
                 </div>
 
-                <h5 onclick="toggleSection('git-linux', event);" onkeydown="toggleSection('git-linux', event);" class="magic-invisible faq-title">Git</h5>
-                <div id="git-linux" class="hidden">
+                <h3 class="faq-title">Git</h3>
+                <div id="git-linux">
                     <p>Check whether Git is already installed:</p>
                     <ul>
                         <li>Open Terminal (usually <code>Ctrl + Alt + T</code>)</li>
@@ -1947,7 +1955,7 @@ sudo apt install nodejs npm</code></pre>
                         <li>If you see a version number, you have it installed. If you get a "command not found" error, you need to install it.</li>
                     </ul>
 
-                    <h6>Ubuntu / Debian-based Linux</h6>
+                    <h4>Ubuntu / Debian-based Linux</h4>
                     <p>If you need to install Git on Ubuntu, follow these steps:</p>
                     <ol>
                         <li>
@@ -1972,7 +1980,7 @@ sudo apt install nodejs npm</code></pre>
                         </li>
                     </ol>
 
-                    <h6>Fedora / Red Hat-based Linux</h6>
+                    <h4>Fedora / Red Hat-based Linux</h4>
                     <p>If you need to install Git on Fedora, follow these steps:</p>
                     <ol>
                         <li>
@@ -1991,7 +1999,7 @@ sudo apt install nodejs npm</code></pre>
                         </li>
                     </ol>
 
-                    <h6>Arch Linux</h6>
+                    <h4>Arch Linux</h4>
                     <p>If you're using Arch Linux:</p>
                     <ol>
                         <li>
@@ -2037,13 +2045,13 @@ sudo apt install nodejs npm</code></pre>
                         </li>
                     </ol>
 
-                    <h6>Optional: Configure Default Branch Name</h6>
+                    <h4>Optional: Configure Default Branch Name</h4>
                     <p>Modern Git practices use "main" instead of "master" as the default branch name. To set this globally:</p>
                     <pre><code>git config --global init.defaultBranch main</code></pre>
                 </div>
 
-                <h5 onclick="toggleSection('sqlite-linux', event);" onkeydown="toggleSection('sqlite-linux', event);" class="magic-invisible faq-title">SQLite</h5>
-                <div id="sqlite-linux" class="hidden">
+                <h3 class="faq-title">SQLite</h3>
+                <div id="sqlite-linux">
                     <p>Check whether SQLite is already installed:</p>
                     <ul>
                         <li>Open Terminal (usually <code>Ctrl + Alt + T</code>)</li>
@@ -2052,7 +2060,7 @@ sudo apt install nodejs npm</code></pre>
                     </ul>
                     <p><strong>Note:</strong> Many Linux distributions come with SQLite pre-installed, but if not, it's easy to install.</p>
 
-                    <h6>Ubuntu / Debian-based Linux</h6>
+                    <h4>Ubuntu / Debian-based Linux</h4>
                     <p>If you need to install SQLite on Ubuntu, follow these steps:</p>
                     <ol>
                         <li>
@@ -2085,7 +2093,7 @@ sudo apt install nodejs npm</code></pre>
                         </li>
                     </ol>
 
-                    <h6>Fedora / Red Hat-based Linux</h6>
+                    <h4>Fedora / Red Hat-based Linux</h4>
                     <p>If you need to install SQLite on Fedora, follow these steps:</p>
                     <ol>
                         <li>
@@ -2115,7 +2123,7 @@ sudo apt install nodejs npm</code></pre>
                         </li>
                     </ol>
 
-                    <h6>Arch Linux</h6>
+                    <h4>Arch Linux</h4>
                     <p>If you're using Arch Linux:</p>
                     <ol>
                         <li>
@@ -2194,7 +2202,7 @@ SELECT * FROM users;</code></pre>
                         </li>
                     </ol>
 
-                    <h6>Useful SQLite Commands</h6>
+                    <h4>Useful SQLite Commands</h4>
                     <p>Once you're in the SQLite prompt, here are some helpful commands:</p>
                     <ul>
                         <li><code>.help</code> - Show help information</li>
@@ -2206,11 +2214,11 @@ SELECT * FROM users;</code></pre>
                     </ul>
                 </div>
 
-                <h5 onclick="toggleSection('extensions-linux', event);" onkeydown="toggleSection('extensions-linux', event);" class="magic-invisible faq-title">Visual Studio Code Extensions</h5>
-                <div id="extensions-linux" class="hidden">
+                <h3 class="faq-title">Visual Studio Code Extensions</h3>
+                <div id="extensions-linux">
                     <p>VS Code extensions add extra features and functionality to your editor. Here are the recommended extensions for web development:</p>
 
-                    <h6>How to Install Extensions</h6>
+                    <h4>How to Install Extensions</h4>
                     <ol>
                         <li>
                             <strong>Open Extensions Panel</strong>
@@ -2231,7 +2239,7 @@ SELECT * FROM users;</code></pre>
                         </li>
                     </ol>
 
-                    <h6>Essential Extensions (Install Now)</h6>
+                    <h4>Essential Extensions (Install Now)</h4>
                     <ol>
                         <li>
                             <strong>Prettier - Code formatter</strong> (esbenp.prettier-vscode)
@@ -2260,7 +2268,7 @@ SELECT * FROM users;</code></pre>
                         </li>
                     </ol>
 
-                    <h6>Helpful Extensions</h6>
+                    <h4>Helpful Extensions</h4>
                     <ol>
                         <li>
                             <strong>Path Intellisense</strong> (christian-kohler.path-intellisense)
@@ -2286,7 +2294,7 @@ SELECT * FROM users;</code></pre>
                         </li>
                     </ol>
 
-                    <h6>For Later Lessons</h6>
+                    <h4>For Later Lessons</h4>
                     <p>Install these when you reach the relevant lessons:</p>
                     <ol>
                         <li>
@@ -2306,7 +2314,7 @@ SELECT * FROM users;</code></pre>
                         </li>
                     </ol>
 
-                    <h6>Optional Extensions</h6>
+                    <h4>Optional Extensions</h4>
                     <ol>
                         <li>
                             <strong>Better Comments</strong> (aaron-bond.better-comments)
@@ -2324,7 +2332,7 @@ SELECT * FROM users;</code></pre>
                         </li>
                     </ol>
 
-                    <h6>Configure Prettier (Recommended)</h6>
+                    <h4>Configure Prettier (Recommended)</h4>
                     <p>To make Prettier format your code automatically when you save:</p>
                     <ol>
                         <li>Press <code>Ctrl + ,</code> to open Settings</li>
@@ -2335,8 +2343,8 @@ SELECT * FROM users;</code></pre>
                     </ol>
                 </div>
 
-                <h5 onclick="toggleSection('projects-folder-linux', event);" onkeydown="toggleSection('projects-folder-linux', event);" class="magic-invisible faq-title">Create a Projects Folder</h5>
-                <div id="projects-folder-linux" class="hidden">
+                <h3 class="faq-title">Create a Projects Folder</h3>
+                <div id="projects-folder-linux">
                     <p>It's helpful to keep all your coding projects organised in one place. Let's create a dedicated Projects folder:</p>
                     <ol>
                         <li>
@@ -2370,11 +2378,11 @@ SELECT * FROM users;</code></pre>
                     <p>In future lessons, you'll save your coding projects in this folder.</p>
                 </div>
 
-                <h5 onclick="toggleSection('dev-server-linux', event);" onkeydown="toggleSection('dev-server-linux', event);" class="magic-invisible faq-title">Setting Up the Development Server</h5>
-                <div id="dev-server-linux" class="hidden">
+                <h3 class="faq-title">Setting Up the Development Server</h3>
+                <div id="dev-server-linux">
                     <p>To view your web pages as you develop them, you'll need to run a local development server. This is important because some web features don't work when opening HTML files directly in a browser.</p>
 
-                    <h6>Create a package.json File</h6>
+                    <h4>Create a package.json File</h4>
                     <ol>
                         <li>Open Visual Studio Code</li>
                         <li>Select <code>File → Open Folder</code></li>
@@ -2396,7 +2404,7 @@ SELECT * FROM users;</code></pre>
                         <li>Save the file (<code>Ctrl + S</code>)</li>
                     </ol>
 
-                    <h6>Install http-server</h6>
+                    <h4>Install http-server</h4>
                     <ol>
                         <li>Open the integrated terminal in VS Code by pressing <code>Ctrl + `</code> (backtick key, usually above Tab)</li>
                         <li>Make sure you're in your Projects folder (the terminal should show the path)</li>
@@ -2404,7 +2412,7 @@ SELECT * FROM users;</code></pre>
                         <li>Wait for the installation to complete (this installs http-server locally in your Projects folder)</li>
                     </ol>
 
-                    <h6>Start the Development Server</h6>
+                    <h4>Start the Development Server</h4>
                     <ol>
                         <li>In the same terminal, type <code>npm start</code> and press Enter</li>
                         <li>You should see a message saying the server is running on <code>http://localhost:8000</code></li>
@@ -2412,7 +2420,7 @@ SELECT * FROM users;</code></pre>
                         <li>You should see a directory listing of your Projects folder</li>
                     </ol>
 
-                    <h6>Using the Development Server</h6>
+                    <h4>Using the Development Server</h4>
                     <ul>
                         <li>Keep the terminal open while you're working - the server needs to run continuously</li>
                         <li>When you create HTML files in your Projects folder, you can access them through the browser at <code>http://localhost:8000/filename.html</code></li>
@@ -2421,22 +2429,33 @@ SELECT * FROM users;</code></pre>
                         <li>To restart the server later, just run <code>npm start</code> again from your Projects folder</li>
                     </ul>
                 </div>
-            </div>
-            <div id="instructions-chromebook">
-                <p>
+            </section>
+
+            <section id="unsupported-devices" class="unsupported-devices lesson-section hidden">
+                <h2>Unsupported Devices</h2>
+                <p>The following devices are not suitable for web development with this course:</p>
+
+                <h3>Chromebook</h3>
+                <div id="instructions-chromebook">
+                    <p>
                     Chromebooks are inexpensive laptops that run Chrome OS, but they are not great for web development. It is possible to install Linux on some Chromebooks, but Google makes it difficult to do this without opening the computer up and making changes to the hardware. <strong>This will, at the very least, void your warranty and I honestly do not recommend doing this.</strong> I destroyed one Chromebook when I tried. If you want a cheap laptop for web  development, consider a Windows or Linux machine instead.
                 </p>
             </div>
+
+            <h3>Android</h3>
             <div id="instructions-android">
                 <p>
                     Android phones and tablets are not ideal for web development. While there are some code editors available for Android, the experience is limited compared to using a laptop or desktop computer. If possible, use a Windows, or Linux machine for the best experience.
                 </p>
             </div>
+
+            <h3>iOS (iPhone/iPad)</h3>
             <div id="instructions-ios">
                 <p>
                     Apple iPhones and iPads are not ideal for web development. While there are some code editors available for iOS, the experience is limited compared to using a laptop or desktop computer. If possible, use a macOS machine such as an iMac or MacBook for the best experience.
                 </p>
             </div>
+        </section>
 
         <!--
             <h4>1. Install a Code Editor</h4>
@@ -2454,7 +2473,7 @@ SELECT * FROM users;</code></pre>
 
             <p>Once you have installed the required software, please proceed to the next lesson where we will start writing our first HTML page!</p>
         -->
-        </section>
+        </div> <!-- End lesson-content -->
     </main>
     </div>
 

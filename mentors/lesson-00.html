@@ -51,6 +51,7 @@
     <link rel="stylesheet" href="../styles/components/buttons.css">
     <link rel="stylesheet" href="../styles/components/code.css">
     <link rel="stylesheet" href="../styles/components/header-and-footer.css">
+    <link rel="stylesheet" href="../styles/components/lesson-navigation.css">
     <link rel="stylesheet" href="../styles/components/navigation.css">
     <link rel="stylesheet" href="../styles/components/popover.css">
     <link rel="stylesheet" href="../styles/components/titles.css">
@@ -75,6 +76,8 @@
     <script src="../scripts/toggle-section.js" defer></script>
     <script src="../scripts/show-os-instructions.js" defer></script>
     <script src="../scripts/populateLessonsNav.js" defer></script>
+    <script src="../scripts/injectLessonNavigation.js" defer></script>
+    <script src="../scripts/lessonNavigation.js" defer></script>
 
     <!-- End JavaScript file link -->
 
@@ -96,8 +99,10 @@
 
         <main class="main-content">
             <h2 class="page-title">Lesson 0 - Getting Started</h2>
-        <section id="introduction" class="introduction">
-            <a href="../students/lesson-00.html" class="button-rectangle student-lesson-00">Student Lesson 00</a>
+            <!-- Lesson navigation panel will be injected here by injectLessonNavigation.js -->
+
+            <div class="lesson-content">
+        <section id="introduction" class="introduction lesson-section">
             <div class="intro-content">
                 <h3>Introduction</h3>
                 <p>
@@ -111,6 +116,7 @@
                 </p>
             </div>
         </section>
+            </div>
     </main>
     </div>
 

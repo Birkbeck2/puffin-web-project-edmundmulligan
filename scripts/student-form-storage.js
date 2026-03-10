@@ -527,8 +527,8 @@
          * Populate the student-image div with the saved avatar
          */
         async populateStudentImage() {
-            const studentImageDiv = document.querySelector('.student-image');
-            if (!studentImageDiv) {
+            const studentImageDivs = document.querySelectorAll('.student-image');
+            if (!studentImageDivs.length) {
                 return; // Not on a lesson page
             }
 
@@ -550,7 +550,7 @@
                     const studentName = data.name || 'Student';
                 
                     // Create figure with image and caption
-                    studentImageDiv.innerHTML = `
+                    const imageHTML = `
                     <figure style="margin: 0; text-align: center;">
                         <img src="${imagePath}" alt="Your avatar: ${data.avatarChoice}, ${data.ageChoice}, ${data.genderChoice}" class="avatar-image">
                         <figcaption class="avatar-caption">
@@ -558,6 +558,11 @@
                         </figcaption>
                     </figure>
                 `;
+
+                    // Update all student-image divs on the page
+                    studentImageDivs.forEach(div => {
+                        div.innerHTML = imageHTML;
+                    });
                 }
             } catch (error) {
                 console.error('Error loading student image:', error);

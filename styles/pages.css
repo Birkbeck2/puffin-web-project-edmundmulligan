@@ -413,7 +413,7 @@
 
 .accessory-description {
    display:block;
-   font-size: var(--fontsize-smallprint);
+   font-size: var(--fontsize-small);
 }
 
 .facts-item {

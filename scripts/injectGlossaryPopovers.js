@@ -7,6 +7,10 @@
  * Description:
  *   Dynamically loads glossary definitions from glossary.html into
  *   popover elements to follow DRY principle. Used in all lessons.
+ *   
+ *   Supports two modes:
+ *   1. Individual popovers with IDs like glossary-{term}-popover
+ *   2. Shared popover (glossary-popover) with buttons having data-glossary-term attribute
  **********************************************************************
  */
 
@@ -63,7 +67,55 @@
         }
 
         /**
-         * Populate a single popover with glossary content
+         * Get glossary term and definition content
+         * @param {string} term - The term identifier (e.g., 'html', 'css')
+         * @returns {Object|null} Object with termText and definition, or null if not found
+         */
+        getGlossaryContent(term) {
+            const glossaryId = `glossary-${term}`;
+
+            // Find the term and definition in the glossary
+            const dt = this.glossaryDoc.getElementById(glossaryId);
+            if (!dt) {
+                console.warn(`Glossary term not found: ${glossaryId}`);
+                return null;
+            }
+
+            const termText = dt.textContent.trim();
+
+            // Get the next sibling dd element (definition)
+            const dd = dt.nextElementSibling;
+            if (!dd || dd.tagName !== 'DD') {
+                console.warn(`Definition not found for term: ${glossaryId}`);
+                return null;
+            }
+
+            const definition = dd.innerHTML.trim(); // Use innerHTML to preserve formatting
+
+            return { termText, definition };
+        }
+
+        /**
+         * Populate shared popover with glossary content for a specific term
+         * @param {HTMLElement} popover - The shared popover element
+         * @param {string} term - The term to display
+         */
+        populateSharedPopover(popover, term) {
+            const content = this.getGlossaryContent(term);
+            if (!content) {
+                return;
+            }
+
+            // Populate the popover with sanitised content
+            popover.innerHTML = `
+<h2>${this.escapeHtml(content.termText)}</h2>
+<div>${content.definition}</div>
+<button type="button" popovertarget="${popover.id}" popovertargetaction="hide" class="popover-close-button">Close</button>
+`;
+        }
+
+        /**
+         * Populate a single popover with glossary content (legacy individual popover support)
          * @param {HTMLElement} popover - The popover element to populate
          */
         populatePopover(popover) {
@@ -74,47 +126,59 @@
                 return;
             }
 
-            const glossaryId = `glossary-${term}`;
-
-            // Find the term and definition in the glossary
-            const dt = this.glossaryDoc.getElementById(glossaryId);
-            if (!dt) {
-                console.warn(`Glossary term not found: ${glossaryId}`);
+            const content = this.getGlossaryContent(term);
+            if (!content) {
                 return;
             }
-
-            const termText = dt.textContent.trim();
-
-            // Get the next sibling dd element (definition)
-            const dd = dt.nextElementSibling;
-            if (!dd || dd.tagName !== 'DD') {
-                console.warn(`Definition not found for term: ${glossaryId}`);
-                return;
-            }
-
-            const definition = dd.textContent.trim();
 
             // Populate the popover with sanitised content
             popover.innerHTML = `
-<h2>${this.escapeHtml(termText)}</h2>
-<p>${this.escapeHtml(definition)}</p>
-<button type="button" popovertarget="${popoverId}" popovertargetaction="hide">Close</button>
+<h2>${this.escapeHtml(content.termText)}</h2>
+<div>${content.definition}</div>
+<button type="button" popovertarget="${popoverId}" popovertargetaction="hide" class="popover-close-button">Close</button>
 `;
+        }
+
+        /**
+         * Setup event listeners for glossary icon buttons that use a shared popover
+         */
+        setupSharedPopover() {
+            const sharedPopover = document.getElementById('glossary-popover');
+            if (!sharedPopover) {
+                return;
+            }
+
+            // Find all glossary icon buttons with data-glossary-term attribute
+            const glossaryButtons = document.querySelectorAll('.glossary-icon-button[data-glossary-term]');
+            
+            glossaryButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const term = button.getAttribute('data-glossary-term');
+                    if (term) {
+                        this.populateSharedPopover(sharedPopover, term);
+                    }
+                });
+            });
         }
 
         /**
          * Find and populate all glossary popovers on the page
          */
         async init() {
-            const glossaryPopovers = document.querySelectorAll('.glossary-popover');
-    
-            if (glossaryPopovers.length === 0) {
-                return;
-            }
-
             try {
                 await this.fetchGlossary();
-                glossaryPopovers.forEach(popover => this.populatePopover(popover));
+
+                // Setup shared popover if it exists
+                this.setupSharedPopover();
+
+                // Also support individual popovers (legacy)
+                const glossaryPopovers = document.querySelectorAll('.glossary-popover');
+                glossaryPopovers.forEach(popover => {
+                    // Only populate if it has a term-specific ID
+                    if (this.extractTermFromId(popover.id)) {
+                        this.populatePopover(popover);
+                    }
+                });
             } catch (error) {
                 console.error('Error loading glossary:', error);
             }

@@ -25,6 +25,9 @@
             this.currentSectionIndex = 0;
             this.totalSections = 0;
             this.lessonNumber = null;
+            this.lessonsData = null;
+            this.context = null; // 'students' or 'mentors'
+            this.availableLessons = new Set(); // Set of available lesson numbers
             
             this.init();
         }
@@ -33,12 +36,109 @@
          * Initialize the lesson navigator
          */
         init() {
-            // Wait for DOM to be fully loaded
-            if (document.readyState === 'loading') {
-                document.addEventListener('DOMContentLoaded', () => this.setupNavigation());
-            } else {
-                this.setupNavigation();
+            // Load lessons data first
+            this.loadLessonsData().then(() => {
+                // Wait for DOM to be fully loaded
+                if (document.readyState === 'loading') {
+                    document.addEventListener('DOMContentLoaded', () => this.setupNavigation());
+                } else {
+                    this.setupNavigation();
+                }
+
+                // Listen for navigation injection event
+                document.addEventListener('lessonNavigationInjected', () => {
+                    this.setupNavigation();
+                });
+            });
+        }
+
+        /**
+         * Determine the current context (students or mentors)
+         */
+        getContext() {
+            const path = window.location.pathname;
+            if (path.includes('/students/')) {
+                return 'students';
+            } else if (path.includes('/mentors/')) {
+                return 'mentors';
             }
+            return 'students'; // Default to students
+        }
+
+        /**
+         * Load lessons data from lessons.json
+         */
+        async loadLessonsData() {
+            try {
+                this.context = this.getContext();
+                const response = await fetch('../data/lessons.json');
+                if (!response.ok) {
+                    throw new Error('Failed to load lessons.json');
+                }
+                const data = await response.json();
+                this.lessonsData = data.lessons;
+                
+                // Check which lesson files actually exist by trying to fetch them
+                await this.checkAvailableLessons();
+                
+                console.log(`Loaded ${this.lessonsData.length} lessons, ${this.availableLessons.size} available in ${this.context}`);
+            } catch (error) {
+                console.error('Error loading lessons data:', error);
+                this.lessonsData = [];
+            }
+        }
+
+        /**
+         * Check which lesson files exist in the current context
+         */
+        async checkAvailableLessons() {
+            const checkPromises = this.lessonsData.map(async (lesson) => {
+                if (!lesson.file) return false;
+                
+                // Extract lesson number from filename (e.g., "lesson-01.html" -> 1)
+                const match = lesson.file.match(/lesson-(\d+)\.html/);
+                if (!match) return false;
+                
+                const lessonNum = parseInt(match[1], 10);
+                
+                try {
+                    // Try to fetch the lesson file (HEAD request would be better but may not work everywhere)
+                    const response = await fetch(lesson.file, { method: 'HEAD' });
+                    if (response.ok) {
+                        this.availableLessons.add(lessonNum);
+                        return true;
+                    }
+                } catch (error) {
+                    // File doesn't exist
+                    return false;
+                }
+                return false;
+            });
+            
+            await Promise.all(checkPromises);
+        }
+
+        /**
+         * Check if a lesson number exists in a specific context (students or mentors)
+         */
+        async lessonExistsInContext(lessonNumber, targetContext) {
+            const lessonFile = `lesson-${lessonNumber.toString().padStart(2, '0')}.html`;
+            
+            try {
+                // Construct the path to the target context
+                const targetPath = `../${targetContext}/${lessonFile}`;
+                const response = await fetch(targetPath, { method: 'HEAD' });
+                return response.ok;
+            } catch (error) {
+                return false;
+            }
+        }
+
+        /**
+         * Check if a lesson number exists
+         */
+        lessonExists(lessonNumber) {
+            return this.availableLessons.has(lessonNumber);
         }
 
         /**
@@ -90,6 +190,7 @@
             const forwardBtn = document.getElementById('forwardBtn');
             const fastBackwardBtn = document.getElementById('fastBackwardBtn');
             const fastForwardBtn = document.getElementById('fastForwardBtn');
+            const contextSwitchBtn = document.getElementById('contextSwitchBtn');
 
             if (backwardBtn) {
                 backwardBtn.addEventListener('click', () => this.previousSection());
@@ -102,6 +203,9 @@
             }
             if (fastForwardBtn) {
                 fastForwardBtn.addEventListener('click', () => this.nextLesson());
+            }
+            if (contextSwitchBtn) {
+                contextSwitchBtn.addEventListener('click', () => this.switchContext());
             }
         }
 
@@ -136,22 +240,22 @@
                 }
 
                 switch (event.key) {
-                    case 'ArrowLeft':
-                        event.preventDefault();
-                        this.previousSection();
-                        break;
-                    case 'ArrowRight':
-                        event.preventDefault();
-                        this.nextSection();
-                        break;
-                    case 'Home':
-                        event.preventDefault();
-                        this.goToSection(0);
-                        break;
-                    case 'End':
-                        event.preventDefault();
-                        this.goToSection(this.totalSections - 1);
-                        break;
+                case 'ArrowLeft':
+                    event.preventDefault();
+                    this.previousSection();
+                    break;
+                case 'ArrowRight':
+                    event.preventDefault();
+                    this.nextSection();
+                    break;
+                case 'Home':
+                    event.preventDefault();
+                    this.goToSection(0);
+                    break;
+                case 'End':
+                    event.preventDefault();
+                    this.goToSection(this.totalSections - 1);
+                    break;
                 }
             });
         }
@@ -231,14 +335,12 @@
          */
         nextLesson() {
             const nextLessonNumber = this.lessonNumber + 1;
-            const nextLessonUrl = `lesson-${nextLessonNumber.toString().padStart(2, '0')}.html`;
             
-            // Check if next lesson exists (you might want to load this from lessons.json)
-            // For now, we'll assume lessons go up to 20
-            if (nextLessonNumber <= 20) {
+            if (this.lessonExists(nextLessonNumber)) {
+                const nextLessonUrl = `lesson-${nextLessonNumber.toString().padStart(2, '0')}.html`;
                 window.location.href = nextLessonUrl;
             } else {
-                this.showMessage('This is the last lesson!');
+                this.showMessage('Next lesson not available yet!');
             }
         }
 
@@ -248,11 +350,30 @@
         previousLesson() {
             const prevLessonNumber = this.lessonNumber - 1;
             
-            if (prevLessonNumber >= 0) {
+            if (prevLessonNumber >= 0 && this.lessonExists(prevLessonNumber)) {
                 const prevLessonUrl = `lesson-${prevLessonNumber.toString().padStart(2, '0')}.html`;
                 window.location.href = prevLessonUrl;
             } else {
                 this.showMessage('This is the first lesson!');
+            }
+        }
+
+        /**
+         * Switch between student and mentor contexts
+         */
+        async switchContext() {
+            const targetContext = this.context === 'students' ? 'mentors' : 'students';
+            const lessonFile = `lesson-${this.lessonNumber.toString().padStart(2, '0')}.html`;
+            const targetUrl = `../${targetContext}/${lessonFile}`;
+            
+            // Check if the lesson exists in the target context
+            const exists = await this.lessonExistsInContext(this.lessonNumber, targetContext);
+            
+            if (exists) {
+                window.location.href = targetUrl;
+            } else {
+                const contextName = targetContext === 'students' ? 'student' : 'mentor';
+                this.showMessage(`This lesson is not available in the ${contextName} view yet!`);
             }
         }
 
@@ -286,7 +407,7 @@
                     // Current section gets the sparkling wand with favicon colors
                     const img = wand.querySelector('img');
                     if (img) {
-                        img.src = '../images/fontawesome/wand-magic-sparkles-sharp-duotone-regular-full.svg';
+                        img.src = '../images/icons/favicon.svg';
                         img.alt = 'Current section';
                     }
                 } else {
@@ -310,15 +431,41 @@
         /**
          * Update navigation button states
          */
-        updateNavigationButtons() {
+        async updateNavigationButtons() {
+            // Section navigation buttons
             const backwardBtn = document.getElementById('backwardBtn');
             const forwardBtn = document.getElementById('forwardBtn');
+            
+            // Lesson navigation buttons
+            const fastBackwardBtn = document.getElementById('fastBackwardBtn');
+            const fastForwardBtn = document.getElementById('fastForwardBtn');
+            
+            // Context switch button
+            const contextSwitchBtn = document.getElementById('contextSwitchBtn');
 
+            // Disable section buttons if at start/end of sections
             if (backwardBtn) {
                 backwardBtn.disabled = this.currentSectionIndex === 0;
             }
             if (forwardBtn) {
                 forwardBtn.disabled = this.currentSectionIndex === this.totalSections - 1;
+            }
+            
+            // Disable lesson buttons if previous/next lesson doesn't exist
+            if (fastBackwardBtn && this.lessonNumber !== null) {
+                const prevLessonNumber = this.lessonNumber - 1;
+                fastBackwardBtn.disabled = prevLessonNumber < 0 || !this.lessonExists(prevLessonNumber);
+            }
+            if (fastForwardBtn && this.lessonNumber !== null) {
+                const nextLessonNumber = this.lessonNumber + 1;
+                fastForwardBtn.disabled = !this.lessonExists(nextLessonNumber);
+            }
+            
+            // Disable context switch button if target lesson doesn't exist
+            if (contextSwitchBtn && this.lessonNumber !== null) {
+                const targetContext = this.context === 'students' ? 'mentors' : 'students';
+                const exists = await this.lessonExistsInContext(this.lessonNumber, targetContext);
+                contextSwitchBtn.disabled = !exists;
             }
         }
 
@@ -377,6 +524,6 @@
         }
     }
 
-    // Initialize the lesson navigator
-    new LessonNavigator();
+    // Initialize the lesson navigator and make it globally accessible
+    window.lessonNavigator = new LessonNavigator();
 })();
