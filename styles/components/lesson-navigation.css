@@ -151,14 +151,16 @@
  ********************************************************/
 .progress-container {
     flex: 1;
-    max-width: 300px;
+    max-width: min(500px, 100%);
     margin: 0 1rem;
+    container-type: inline-size;
 }
 
 .progress-bar {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
     background-color: var(--colour-effective-surface);
     padding: 0.5rem;
     border-radius: var(--border-radius);
@@ -181,6 +183,13 @@
         var(--colour-effective-border) 100%);
     z-index: 1;
     border-radius: 1px;
+}
+
+/* Hide progress line when container is narrow and wands will wrap */
+@container (max-width: 400px) {
+    .progress-bar::before {
+        display: none;
+    }
 }
 
 .wand-icon {
@@ -276,6 +285,11 @@
         order: 3;
         width: 100%;
         margin: 0.5rem 0;
+    }
+    
+    /* Hide progress line on mobile where wands may wrap */
+    .progress-bar::before {
+        display: none;
     }
     
     .nav-button {

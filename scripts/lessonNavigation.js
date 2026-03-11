@@ -28,6 +28,8 @@
             this.lessonsData = null;
             this.context = null; // 'students' or 'mentors'
             this.availableLessons = new Set(); // Set of available lesson numbers
+            this.listenersSetup = false; // Track if button event listeners have been set up
+            this.keyboardSetup = false; // Track if keyboard listeners have been set up
             
             this.init();
         }
@@ -36,19 +38,21 @@
          * Initialize the lesson navigator
          */
         init() {
-            // Load lessons data first
+            // Set up event listener immediately to avoid race condition
+            document.addEventListener('lessonNavigationInjected', () => {
+                // Reset button listeners flag since buttons were just recreated
+                this.listenersSetup = false;
+                this.setupNavigation();
+            });
+            
+            // Load lessons data
             this.loadLessonsData().then(() => {
-                // Wait for DOM to be fully loaded
-                if (document.readyState === 'loading') {
-                    document.addEventListener('DOMContentLoaded', () => this.setupNavigation());
-                } else {
+                // Check if navigation panel already exists (was injected before listener was set up)
+                const navPanel = document.querySelector('.lesson-navigation-panel');
+                if (navPanel) {
+                    // Navigation was already injected, set it up now
                     this.setupNavigation();
                 }
-
-                // Listen for navigation injection event
-                document.addEventListener('lessonNavigationInjected', () => {
-                    this.setupNavigation();
-                });
             });
         }
 
@@ -145,31 +149,77 @@
          * Set up navigation elements and event listeners
          */
         setupNavigation() {
-            // Find all lesson sections
-            this.sections = document.querySelectorAll('.lesson-section');
+            // Find all lesson sections that are NOT hidden by OS filtering
+            // We include sections that are hidden for navigation purposes
+            const allSections = document.querySelectorAll('.lesson-section');
+            const navigableSections = Array.from(allSections).filter(section => {
+                // Exclude sections that are hidden due to OS filtering
+                // (sections with lesson-install-* classes that are hidden)
+                const hasOSInstallClass = Array.from(section.classList).some(cls => cls.startsWith('lesson-install-'));
+                if (hasOSInstallClass && section.classList.contains('hidden')) {
+                    return false; // Skip OS-filtered sections
+                }
+                // Include all other sections, even if they're hidden (for navigation)
+                return true;
+            });
+            
+            // Store previous section to try to maintain position
+            const previousSectionId = this.sections[this.currentSectionIndex]?.id;
+            
+            this.sections = navigableSections;
             this.totalSections = this.sections.length;
             
-            if (this.totalSections === 0) {
-                console.warn('No lesson sections found');
-                return;
-            }
-
             // Extract lesson number from URL
             this.lessonNumber = this.extractLessonNumber();
 
-            // Set up button event listeners
-            this.setupButtonListeners();
+            // Set up button event listeners (only once per button creation)
+            if (!this.listenersSetup) {
+                this.setupButtonListeners();
+                this.listenersSetup = true;
+            }
+            
+            // Set up keyboard navigation (only needed on first call)
+            if (!this.keyboardSetup) {
+                this.setupKeyboardNavigation();
+                this.keyboardSetup = true;
+            }
 
-            // Set up progress bar click listeners
+            // Set up progress bar click listeners (needs to be updated each time)
             this.setupProgressBarListeners();
 
-            // Set up keyboard navigation
-            this.setupKeyboardNavigation();
+            if (this.totalSections === 0) {
+                console.warn('No visible lesson sections found - user may need to select an option first');
+                // Disable section navigation but keep lesson navigation enabled
+                this.disableSectionNavigation();
+                // Still update lesson-level navigation buttons
+                this.updateNavigationButtons();
+                return;
+            }
+
+            // Try to find the previous section in the new list
+            let newIndex = 0;
+            if (previousSectionId) {
+                const foundIndex = this.sections.findIndex(s => s.id === previousSectionId);
+                if (foundIndex >= 0) {
+                    newIndex = foundIndex;
+                }
+            }
 
             // Initialize display
-            this.showSection(0);
+            this.showSection(newIndex);
             this.updateProgress();
             this.updateNavigationButtons();
+        }
+        
+        /**
+         * Disable section navigation buttons when no sections are visible
+         */
+        disableSectionNavigation() {
+            const backwardBtn = document.getElementById('backwardBtn');
+            const forwardBtn = document.getElementById('forwardBtn');
+            
+            if (backwardBtn) backwardBtn.disabled = true;
+            if (forwardBtn) forwardBtn.disabled = true;
         }
 
         /**
@@ -268,13 +318,14 @@
                 return;
             }
 
-            // Hide all sections
+            // Hide all  sections using display style (not 'hidden' class)
+            // We don't use the 'hidden' class here because that's reserved for OS filtering
             this.sections.forEach(section => {
-                section.classList.add('hidden');
+                section.style.display = 'none';
             });
 
             // Show the selected section
-            this.sections[index].classList.remove('hidden');
+            this.sections[index].style.display = 'block';
 
             // Update current index
             this.currentSectionIndex = index;
@@ -384,7 +435,7 @@
             const wandIcons = document.querySelectorAll('.wand-icon');
             const progressBar = document.querySelector('.progress-bar');
             
-            if (progressBar) {
+            if (progressBar && this.totalSections > 0) {
                 const progressPercent = ((this.currentSectionIndex + 1) / this.totalSections) * 100;
                 progressBar.style.setProperty('--progress-percent', `${progressPercent}%`);
             }
@@ -423,9 +474,21 @@
 
             // Update ARIA attributes
             const progressElement = document.getElementById('progressBar');
-            if (progressElement) {
+            if (progressElement && this.totalSections > 0) {
                 progressElement.setAttribute('aria-valuenow', this.currentSectionIndex + 1);
             }
+        }
+
+        /**
+         * Check if an OS is selected (for lesson-00)
+         */
+        isOSSelected() {
+            const osRadios = document.querySelectorAll('input[name="os"]');
+            if (osRadios.length === 0) {
+                return true; // Not on a page with OS selection
+            }
+            // Check if any radio is checked
+            return Array.from(osRadios).some(radio => radio.checked);
         }
 
         /**
@@ -448,7 +511,10 @@
                 backwardBtn.disabled = this.currentSectionIndex === 0;
             }
             if (forwardBtn) {
-                forwardBtn.disabled = this.currentSectionIndex === this.totalSections - 1;
+                // Disable if at end of sections OR if on lesson-00 with no OS selected
+                const atEnd = this.currentSectionIndex === this.totalSections - 1;
+                const needsOS = this.lessonNumber === 0 && !this.isOSSelected();
+                forwardBtn.disabled = atEnd || needsOS;
             }
             
             // Disable lesson buttons if previous/next lesson doesn't exist

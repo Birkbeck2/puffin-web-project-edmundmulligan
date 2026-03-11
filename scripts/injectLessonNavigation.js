@@ -62,13 +62,11 @@
             const sectionInfo = [];
 
             sections.forEach((section, index) => {
-                // Skip hidden OS-specific installation sections
-                // These will be counted when they become visible
-                if (section.classList.contains('installation-instructions') && 
-                    section.classList.contains('hidden') &&
-                    (section.id === 'instructions-windows' || 
-                     section.id === 'instructions-macos' || 
-                     section.id === 'instructions-linux')) {
+                // Skip hidden sections (especially OS-specific installation sections)
+                // These sections have classes like lesson-install-windows, lesson-install-macos, etc.
+                // and will be counted when they become visible after OS selection
+                const hasOSInstallClass = Array.from(section.classList).some(cls => cls.startsWith('lesson-install-'));
+                if (hasOSInstallClass && section.classList.contains('hidden')) {
                     return; // Skip this section
                 }
 
@@ -133,6 +131,7 @@
             const contextTitle = isStudent ? 'Switch to mentor view' : 'Switch to student view';
 
             const wandIcons = this.generateWandIcons(sections);
+            const maxSections = Math.max(sections.length, 1); // Ensure at least 1 for aria-valuemax
 
             return `
             <!-- Lesson Navigation Panel -->
@@ -153,7 +152,7 @@
                     <!-- Progress Bar with Wand Icons -->
                     <div class="progress-container">
                         <div id="progressBar" class="progress-bar" role="progressbar" 
-                             aria-valuenow="1" aria-valuemin="1" aria-valuemax="${sections.length}" 
+                             aria-valuenow="1" aria-valuemin="1" aria-valuemax="${maxSections}" 
                              aria-label="Section progress">
                             ${wandIcons}
                         </div>
@@ -194,10 +193,8 @@
             // Get section information
             const sections = this.getSectionInfo();
 
-            if (sections.length === 0) {
-                console.warn('No lesson sections found. Navigation panel not injected.');
-                return;
-            }
+            // Always inject navigation panel, even if there are no sections yet
+            // (user may need to select an option first, but can still navigate between lessons)
 
             // Find or create the lesson-header-fixed container
             let headerFixed = document.querySelector('.lesson-header-fixed');
@@ -286,10 +283,8 @@
         reinitialize() {
             this.injectNavigation();
             
-            // Trigger reinitialization of lesson navigator if it exists
-            if (window.lessonNavigator && typeof window.lessonNavigator.setupNavigation === 'function') {
-                window.lessonNavigator.setupNavigation();
-            }
+            // Note: No need to call setupNavigation() directly here
+            // The lessonNavigationInjected event will trigger it automatically
         }
     }
 

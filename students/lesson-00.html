@@ -131,27 +131,77 @@
                 </fieldset>
                 <button type="submit" class="visually-hidden" aria-hidden="true" tabindex="-1">Submit</button>
             </form>
-            <section id="introduction" class="introduction lesson-section">
+
+            <section id="chromebook" class="lesson-section hidden lesson-install-chromebook">
+                <div class="student-image">
+                    <!--Image is injected based on choices made in student.html and saved into local storage. -->
+                </div>
+                <h3 class="lesson-title">Chromebook</h3>
+                <div id="instructions-chromebook">
+                    <p>
+                        Chromebooks are inexpensive laptops that run Chrome OS, but they are not great for web development. It is possible to install Linux on some Chromebooks, but Google makes it difficult to do this without opening the computer up and making changes to the hardware. <strong>This will, at the very least, void your warranty and I honestly do not recommend doing this.</strong> I destroyed one Chromebook when I tried. If you want a cheap laptop for web  development, consider a Windows or Linux machine instead.
+                    </p>
+                </div>
+            </section>
+
+            <section id="android" class="lesson-section hidden lesson-install-android">
+                <div class="student-image">
+                    <!--Image is injected based on choices made in student.html and saved into local storage. -->
+                </div>
+                <h3 class="lesson-title">Android</h3>
+                <div id="instructions-android">
+                    <p>
+                        Android phones and tablets are not ideal for web development. While there are some code editors available for Android, the experience is limited compared to using a laptop or desktop computer. If possible, use a Windows, or Linux machine for the best experience.
+                    </p>
+                </div>
+            </section>
+
+            <section id="ios" class="lesson-section hidden lesson-install-ios">
+                <div class="student-image">
+                    <!--Image is injected based on choices made in student.html and saved into local storage. -->
+                </div>
+                <h3 class="lesson-title"`>iOS (iPhone/iPad)</h3>
+                <div id="instructions-ios">
+                    <p>
+                        Apple iPhones and iPads are not ideal for web development. While there are some code editors available for iOS, the experience is limited compared to using a laptop or desktop computer. If possible, use a macOS machine such as an iMac or MacBook for the best experience.
+                    </p>
+                </div>
+            </section>
+
+            <section id="introduction" class="lesson-section hidden lesson-install-windows lesson-install-macos lesson-install-linux">
                 <div class="intro-container">
                     <div class="student-image">
                         <!--Image is injected based on choices made in student.html and saved into local storage. -->
                     </div>
                     <div class="intro-content">
-                        <h2 class="lesson-title">Introduction</h2>
+                        <h3 class="lesson-title">Introduction</h3>
                         <div id="introduction-block">
                             <p>
                                 In this lesson, you will ensure that you have all the necessary tools installed on your computer to start learning web development. By the end of this lesson, you will be ready to create your first web page. If you are at a Code Dojo and are using a club computer, these tools will already be installed for you so you can skip to the next lesson.
-                            </p>
-                            <p>
-                                <strong>Warning.</strong> This lesson involves installing software on your computer. If you are using a shared or school computer, please check with a parent, guardian, or teacher before proceeding with the installations. Also, you will need administrative privileges to install the software. This means you will need an administrator password at various stages. If you are not using your own computer, you may need to get the owner to do those steps for you. Finally be aware that the instructions are long and detailed to ensure you get everything set up correctly. Take your time and follow each step carefully. Ask for help from a mentor, if one is available. The rest of the lessons are much shorter and easier once you have the tools installed!
                             </p>
                         </div>
                     </div>
                 </div>
             </section>
+            <section id="warnings" class="lesson-section hidden lesson-install-windows lesson-install-macos lesson-install-linux">
+                <div class="warnings-container">
+                    <div class="student-image">
+                        <!--Image is injected based on choices made in student.html and saved into local storage. -->
+                    </div>
+                    <div class="warnings-content">
+                        <h3 class="lesson-title">Warnings</h3>
+                        <p>
+                            This lesson involves installing software on your computer. If you are using a shared or school computer, please check with a parent, guardian, or teacher before proceeding with the installations. Also, you will need administrative privileges to install the software. This means you will need an administrator password at various stages. If you are not using your own computer, you may need to get the owner to do those steps for you. Finally be aware that the instructions are long and detailed to ensure you get everything set up correctly. Take your time and follow each step carefully. Ask for help from a mentor, if one is available. The rest of the lessons are much shorter and easier once you have the tools installed!
+                        </p>
+                    </div>
+                </div>
+            </section>
 
-            <section id="installing-required-software" class="installing-required-software lesson-section hidden">
-                <h2 class="lesson-title">Installing Required Software</h2>
+            <section id="installing-required-software" class="lesson-section hidden lesson-install-windows lesson-install-macos lesson-install-linux">
+                <div class="student-image">
+                    <!--Image is injected based on choices made in student.html and saved into local storage. -->
+                </div>
+                <h3 class="lesson-title">Installing Required Software</h3>
                 <div id="installing-required-software-block">
                     <p>These are the tools you need to install. Some may already be installed on your computer, in which case you can skip those sections. You may use other tools if you prefer, but these are the ones the lessons will assume you have.</p>
                     <ul>
@@ -167,12 +217,20 @@
                 </div>
             </section>
 
-            <section id="instructions-windows" class="installation-instructions lesson-section hidden">
-                <h2>Windows Installation Instructions</h2>
+            <section id="instructions-windows" class="lesson-section hidden lesson-install-windows">
+                <div class="student-image">
+                    <!--Image is injected based on choices made in student.html and saved into local storage. -->
+                </div>
+                <h3 class="lesson-title">Windows Installation Instructions</h3>
                 <p>
-                    The latest version of Windows is <strong>Windows 11</strong>, but you should be able to use <strong>Windows 10</strong> as well. The lessons have not been tested on earlier versions of Windows, but they may work ok. It's possible that the browser on older versions of windows won't run all the features used in the lessons. In particular, beware of using Internet Explorer - it is not supported any more and Microsoft Edge is recommended instead. Here are the instructions for installing the recommended software on your Windows computer:
+                    The latest version of Windows is <strong>Windows 11</strong>, but you should be able to use <strong>Windows 10</strong> as well. The lessons have not been tested on earlier versions of Windows, but they may work ok. It's possible that the browser on older versions of windows won't run all the features used in the lessons. In particular, beware of using Internet Explorer - it is not supported any more and Microsoft Edge is recommended instead. On the next screens are the instructions for installing the recommended software on your Windows computer.
                 </p>
+            </section>
 
+            <section id="instructions-windows-vsc" class="lesson-section hidden lesson-install-windows">
+                <div class="student-image">
+                    <!--Image is injected based on choices made in student.html and saved into local storage. -->
+                </div>
                 <h3 class="faq-title">Visual Studio Code</h3>
                 <div id="vsc-windows">
                     <p>Check whether Visual Studio Code is already installed:</p>
@@ -235,7 +293,12 @@
                         </li>
                     </ol>
                 </div>
+            </section>
 
+            <section id="instructions-windows-firefox" class="lesson-section hidden lesson-install-windows">
+                <div class="student-image">
+                    <!--Image is injected based on choices made in student.html and saved into local storage. -->
+                </div>
                 <h3 class="faq-title">Mozilla Firefox</h3>
                 <div id="firefox-windows">
                     <p>Check whether Firefox is already installed:</p>
@@ -293,7 +356,12 @@
                         </li>
                     </ol>
                 </div>
+            </section>
 
+            <section id="instructions-windows-nodejs" class="lesson-section hidden lesson-install-windows">
+                <div class="student-image">
+                    <!--Image is injected based on choices made in student.html and saved into local storage. -->
+                </div>
                 <h3 class="faq-title">Node.js</h3>
                 <div id="nodejs-windows">
                     <p>Check whether Node.js is already installed:</p>
@@ -409,7 +477,12 @@
                         </li>
                     </ol>
                 </div>
+            </section>
 
+            <section id="instructions-windows-git" class="lesson-section hidden lesson-install-windows">
+                <div class="student-image">
+                    <!--Image is injected based on choices made in student.html and saved into local storage. -->
+                </div>
                 <h3 class="faq-title">Git</h3>
                 <div id="git-windows">
                     <p>Check whether Git is already installed:</p>
@@ -516,7 +589,12 @@
                         </li>
                     </ol>
                 </div>
+            </section>
 
+            <section id="instructions-windows-sqlite" class="lesson-section hidden lesson-install-windows">
+                <div class="student-image">
+                    <!--Image is injected based on choices made in student.html and saved into local storage. -->
+                </div>
                 <h3 class="faq-title">SQLite</h3>
                 <div id="sqlite-windows">
                     <p>Check whether SQLite is already installed:</p>
@@ -616,7 +694,12 @@ SELECT * FROM users;</code></pre>
                         </li>
                     </ol>
                 </div>
+            </section>
 
+            <section id="instructions-windows-vsc-extensions" class="lesson-section hidden lesson-install-windows">
+                <div class="student-image">
+                    <!--Image is injected based on choices made in student.html and saved into local storage. -->
+                </div>
                 <h3 class="faq-title">Visual Studio Code Extensions</h3>
                 <div id="extensions-windows">
                     <p>VS Code extensions add extra features and functionality to your editor. Here are the recommended extensions for web development:</p>
@@ -753,7 +836,12 @@ SELECT * FROM users;</code></pre>
                         <li>Select "Prettier - Code formatter" from the dropdown</li>
                     </ol>
                 </div>
+            </section>
 
+            <section id="instructions-windows-projects-folder" class="lesson-section hidden lesson-install-windows">
+                <div class="student-image">
+                    <!--Image is injected based on choices made in student.html and saved into local storage. -->
+                </div>
                 <h3 class="faq-title">Create a Projects Folder</h3>
                 <div id="projects-folder-windows">
                     <p>It's helpful to keep all your coding projects organised in one place. Let's create a dedicated Projects folder:</p>
@@ -786,7 +874,12 @@ SELECT * FROM users;</code></pre>
                     <p>Your Projects folder is now at: <code>C:\Users\YourUsername\Projects</code></p>
                     <p>In future lessons, you'll save your coding projects in this folder.</p>
                 </div>
+            </section>
 
+            <section id="instructions-windows-dev-server" class="lesson-section hidden lesson-install-windows">
+                <div class="student-image">
+                    <!--Image is injected based on choices made in student.html and saved into local storage. -->
+                </div>
                 <h3 class="faq-title">Setting Up the Development Server</h3>
                 <div id="dev-server-windows">
                     <p>To view your web pages as you develop them, you'll need to run a local development server. This is important because some web features don't work when opening HTML files directly in a browser.</p>
@@ -840,11 +933,20 @@ SELECT * FROM users;</code></pre>
                 </div>
             </section>
 
-            <section id="instructions-macos" class="installation-instructions lesson-section hidden">
+            <section id="instructions-macos" class="lesson-section hidden lesson-install-macos">
+                <div class="student-image">
+                    <!--Image is injected based on choices made in student.html and saved into local storage. -->
+                </div>
                 <h2>macOS Installation Instructions</h2>
                 <p>
                     The latest version of Apple's macOS is <strong>macOS Ventura</strong>, but you should be able to use recent versions as well. The lessons have not been tested on earlier versions of macOS, but they may work ok. Here are the instructions for installing the recommended software on your macOS computer:
                 </p>
+            </section>
+
+            <section id="instructions-macos-vsc" class="lesson-section hidden lesson-install-macos">
+                <div class="student-image">
+                    <!--Image is injected based on choices made in student.html and saved into local storage. -->
+                </div>
                 <h3 class="faq-title">Visual Studio Code</h3>
                 <div id="vsc-macos">
                     <p>Check whether Visual Studio Code is already installed:</p>
@@ -854,71 +956,76 @@ SELECT * FROM users;</code></pre>
                         <li>If you see Visual Studio Code.app, you have it installed. If not, you need to install it.</li>
                     </ul>
                     <p>If you need to install Visual Studio Code, follow these steps:</p>
-                <ol>
-                    <li>
-                        <strong>Download VS Code from the Official Website</strong>
-                        <ul>
-                            <li>Open your browser</li>
-                            <li>Go to <a href="https://code.visualstudio.com" target="_blank" rel="noopener noreferrer">https://code.visualstudio.com</a></li>
-                            <li>Click the large blue "Download for Mac" button</li>
-                            <li>The file <code>VSCode-darwin-universal.zip</code> will download (usually to your Downloads folder)</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <strong>Extract the Application</strong>
-                        <ul>
-                            <li>Open Finder and go to your Downloads folder</li>
-                            <li>Double-click the <code>VSCode-darwin-universal.zip</code> file to extract it</li>
-                            <li>You'll see a <code>Visual Studio Code.app</code> file appear</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <strong>Move to Applications Folder</strong>
-                        <ul>
-                            <li>Drag <code>Visual Studio Code.app</code> from Downloads to your Applications folder</li>
-                            <li>You can open Applications by pressing <code>Command + Shift + A</code> in Finder</li>
-                            <li>Or drag it to the Applications icon in the Finder sidebar</li>
-                            <li>This installs VS Code permanently on your Mac</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <strong>First Launch</strong>
-                        <ul>
-                            <li>Open your Applications folder</li>
-                            <li>Double-click <code>Visual Studio Code</code></li>
-                            <li>macOS may show a security warning: "Visual Studio Code is an app downloaded from the Internet. Are you sure you want to open it?"</li>
-                            <li>Click <code>Open</code></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <strong>Add to Dock (Optional)</strong>
-                        <ul>
-                            <li>While VS Code is running, right-click its icon in the Dock</li>
-                            <li>Select Options → Keep in Dock</li>
-                            <li>Now you can launch it quickly from the Dock</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <strong>Install Command Line Tools (Recommended)</strong>
-                        <ul>
-                            <li>In VS Code, press <code>Command + Shift + P</code> to open the Command Palette</li>
-                            <li>Type <code>shell command</code></li>
-                            <li>Select "Shell Command: Install 'code' command in PATH"</li>
-                            <li>Enter your password if prompted</li>
-                            <li>Now you can open VS Code from Terminal by typing <code>code</code></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <strong>Verify Installation:</strong>
-                        <ul>
-                            <li>Open Terminal (<code>Command + Space</code>, type "Terminal")</li>
-                            <li>Type <code>code --version</code> and press Enter</li>
-                            <li>You should see the VS Code version number</li>
-                        </ul>
-                    </li>
-                </ol>
+                    <ol>
+                        <li>
+                            <strong>Download VS Code from the Official Website</strong>
+                            <ul>
+                                <li>Open your browser</li>
+                                <li>Go to <a href="https://code.visualstudio.com" target="_blank" rel="noopener noreferrer">https://code.visualstudio.com</a></li>
+                                <li>Click the large blue "Download for Mac" button</li>
+                                <li>The file <code>VSCode-darwin-universal.zip</code> will download (usually to your Downloads folder)</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Extract the Application</strong>
+                            <ul>
+                                <li>Open Finder and go to your Downloads folder</li>
+                                <li>Double-click the <code>VSCode-darwin-universal.zip</code> file to extract it</li>
+                                <li>You'll see a <code>Visual Studio Code.app</code> file appear</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Move to Applications Folder</strong>
+                            <ul>
+                                <li>Drag <code>Visual Studio Code.app</code> from Downloads to your Applications folder</li>
+                                <li>You can open Applications by pressing <code>Command + Shift + A</code> in Finder</li>
+                                <li>Or drag it to the Applications icon in the Finder sidebar</li>
+                                <li>This installs VS Code permanently on your Mac</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>First Launch</strong>
+                            <ul>
+                                <li>Open your Applications folder</li>
+                                <li>Double-click <code>Visual Studio Code</code></li>
+                                <li>macOS may show a security warning: "Visual Studio Code is an app downloaded from the Internet. Are you sure you want to open it?"</li>
+                                <li>Click <code>Open</code></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Add to Dock (Optional)</strong>
+                            <ul>
+                                <li>While VS Code is running, right-click its icon in the Dock</li>
+                                <li>Select Options → Keep in Dock</li>
+                                <li>Now you can launch it quickly from the Dock</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Install Command Line Tools (Recommended)</strong>
+                            <ul>
+                                <li>In VS Code, press <code>Command + Shift + P</code> to open the Command Palette</li>
+                                <li>Type <code>shell command</code></li>
+                                <li>Select "Shell Command: Install 'code' command in PATH"</li>
+                                <li>Enter your password if prompted</li>
+                                <li>Now you can open VS Code from Terminal by typing <code>code</code></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Verify Installation:</strong>
+                            <ul>
+                                <li>Open Terminal (<code>Command + Space</code>, type "Terminal")</li>
+                                <li>Type <code>code --version</code> and press Enter</li>
+                                <li>You should see the VS Code version number</li>
+                            </ul>
+                        </li>
+                    </ol>
                 </div>
+            </section>
 
+            <section id="instructions-macos-firefox" class="lesson-section hidden lesson-install-macos">
+                <div class="student-image">
+                    <!--Image is injected based on choices made in student.html and saved into local storage. -->
+                </div>
                 <h3 class="faq-title">Mozilla Firefox</h3>
                 <div id="firefox-macos">
                     <p>Check whether Firefox is already installed:</p>
@@ -991,7 +1098,12 @@ SELECT * FROM users;</code></pre>
                         </li>
                     </ol>
                 </div>
+            </section>
 
+            <section id="instructions-macos-nodejs" class="lesson-section hidden lesson-install-macos">
+                <div class="student-image">
+                    <!--Image is injected based on choices made in student.html and saved into local storage. -->
+                </div>
                 <h3 class="faq-title">Node.js</h3>
                 <div id="nodejs-macos">
                     <p>Check whether Node.js is already installed:</p>
@@ -1108,7 +1220,12 @@ SELECT * FROM users;</code></pre>
                         </li>
                     </ol>
                 </div>
+            </section>
 
+            <section id="instructions-macos-git" class="lesson-section hidden lesson-install-macos">
+                <div class="student-image">
+                    <!--Image is injected based on choices made in student.html and saved into local storage. -->
+                </div>
                 <h3 class="faq-title">Git</h3>
                 <div id="git-macos">
                     <p>Check whether Git is already installed:</p>
@@ -1209,7 +1326,12 @@ SELECT * FROM users;</code></pre>
                         </li>
                     </ol>
                 </div>
+            </section>
 
+            <section id="instructions-macos-sqlite" class="lesson-section hidden lesson-install-macos">
+                <div class="student-image">
+                    <!--Image is injected based on choices made in student.html and saved into local storage. -->
+                </div>
                 <h3 class="faq-title">SQLite</h3>
                 <div id="sqlite-macos">
                     <p>Check whether SQLite is already installed:</p>
@@ -1311,7 +1433,12 @@ SELECT * FROM users;</code></pre>
                         </li>
                     </ol>
                 </div>
+            </section>
 
+            <section id="instructions-macos-extensions" class="lesson-section hidden lesson-install-macos">
+                <div class="student-image">
+                    <!--Image is injected based on choices made in student.html and saved into local storage. -->
+                </div>
                 <h3 class="faq-title">Visual Studio Code Extensions</h3>
                 <div id="extensions-macos">
                     <p>VS Code extensions add extra features and functionality to your editor. Here are the recommended extensions for web development:</p>
@@ -1440,7 +1567,12 @@ SELECT * FROM users;</code></pre>
                         <li>Select "Prettier - Code formatter" from the dropdown</li>
                     </ol>
                 </div>
+            </section>
 
+            <section id="instructions-macos-projects" class="lesson-section hidden lesson-install-macos">
+                <div class="student-image">
+                    <!--Image is injected based on choices made in student.html and saved into local storage. -->
+                </div>
                 <h3 class="faq-title">Create a Projects Folder</h3>
                 <div id="projects-folder-macos">
                     <p>It's helpful to keep all your coding projects organised in one place. Let's create a dedicated Projects folder:</p>
@@ -1471,7 +1603,12 @@ SELECT * FROM users;</code></pre>
                     <p>Your Projects folder is now at: <code>~/Projects</code> (or <code>/Users/YourUsername/Projects</code>)</p>
                     <p>In future lessons, you'll save your coding projects in this folder.</p>
                 </div>
+            </section>
 
+            <section id="instructions-macos-dev-server" class="lesson-section hidden lesson-install-macos">
+                <div class="student-image">
+                    <!--Image is injected based on choices made in student.html and saved into local storage. -->
+                </div>
                 <h3 class="faq-title">Setting Up the Development Server</h3>
                 <div id="dev-server-macos">
                     <p>To view your web pages as you develop them, you'll need to run a local development server. This is important because some web features don't work when opening HTML files directly in a browser.</p>
@@ -1525,12 +1662,20 @@ SELECT * FROM users;</code></pre>
                 </div>
             </section>
 
-            <section id="instructions-linux" class="installation-instructions lesson-section hidden">
-                <h2>Linux Installation Instructions</h2>
+            <section id="instructions-linux" class="lesson-section hidden lesson-install-linux">
+                <div class="student-image">
+                    <!--Image is injected based on choices made in student.html and saved into local storage. -->
+                </div>
+                <h3>Linux Installation Instructions</h3>
                 <p>
                     There are many different versions of Linux available, so these instructions will cover the most common distributions: <strong>Ubuntu</strong> and <strong>Fedora</strong>. If you are using a different distribution, the steps may vary slightly. The lessons have been tested on Linux Mint 22.2 (which is based on Ubuntu 22.04) but should work fine with other flavours and versions. Here are the instructions for installing the recommended software on your Linux computer:
                 </p>
+            </section>
 
+            <section id="instructions-linux-vsc" class="lesson-section hidden lesson-install-linux">
+                <div class="student-image">
+                    <!--Image is injected based on choices made in student.html and saved into local storage. -->
+                </div>
                 <h3 class="faq-title">Visual Studio Code</h3>
                 <div id="vsc-linux">
                     <p>Check whether Visual Studio Code is already installed:</p>
@@ -1540,129 +1685,134 @@ SELECT * FROM users;</code></pre>
                         <li>If you see a version number, you have it installed. If you get a "command not found" error, you need to install it.</li>
                     </ul>
 
-                <h4>Ubuntu / Debian-based Linux</h4>
-                <p>If you need to install Visual Studio Code on Ubuntu, follow these steps:</p>
-                <ol>
-                    <li>
-                        <strong>Download and Import Microsoft GPG Key</strong>
-                        <ul>
-                            <li>Open Terminal</li>
-                            <li>Run this command to download and install the Microsoft GPG key:
-                                <pre><code>wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor &gt; packages.microsoft.gpg
+                    <h4>Ubuntu / Debian-based Linux</h4>
+                    <p>If you need to install Visual Studio Code on Ubuntu, follow these steps:</p>
+                    <ol>
+                        <li>
+                            <strong>Download and Import Microsoft GPG Key</strong>
+                            <ul>
+                                <li>Open Terminal</li>
+                                <li>Run this command to download and install the Microsoft GPG key:
+                                    <pre><code>wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor &gt; packages.microsoft.gpg
 sudo install -D -o root -g root -m 644 packages.microsoft.gpg /etc/apt/keyrings/packages.microsoft.gpg</code></pre>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <strong>Add VS Code Repository</strong>
-                        <ul>
-                            <li>Run this command to add the VS Code repository:
-                                <pre><code>sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" &gt; /etc/apt/sources.list.d/vscode.list'</code></pre>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <strong>Update Package List and Install</strong>
-                        <ul>
-                            <li>Update your package list:
-                                <pre><code>sudo apt update</code></pre>
-                            </li>
-                            <li>Install VS Code:
-                                <pre><code>sudo apt install code</code></pre>
-                            </li>
-                            <li>Wait for installation to complete</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <strong>Launch VS Code</strong>
-                        <ul>
-                            <li>Type <code>code</code> in Terminal and press Enter, or</li>
-                            <li>Find "Visual Studio Code" in your application menu</li>
-                            <li>Click to open VS Code</li>
-                        </ul>
-                    </li>
-                </ol>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Add VS Code Repository</strong>
+                            <ul>
+                                <li>Run this command to add the VS Code repository:
+                                    <pre><code>sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" &gt; /etc/apt/sources.list.d/vscode.list'</code></pre>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Update Package List and Install</strong>
+                            <ul>
+                                <li>Update your package list:
+                                    <pre><code>sudo apt update</code></pre>
+                                </li>
+                                <li>Install VS Code:
+                                    <pre><code>sudo apt install code</code></pre>
+                                </li>
+                                <li>Wait for installation to complete</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Launch VS Code</strong>
+                            <ul>
+                                <li>Type <code>code</code> in Terminal and press Enter, or</li>
+                                <li>Find "Visual Studio Code" in your application menu</li>
+                                <li>Click to open VS Code</li>
+                            </ul>
+                        </li>
+                    </ol>
 
-                <h4>Fedora / Red Hat-based Linux</h4>
-                <p>If you need to install Visual Studio Code on Fedora, follow these steps:</p>
-                <ol>
-                    <li>
-                        <strong>Import Microsoft GPG Key</strong>
-                        <ul>
-                            <li>Open Terminal</li>
-                            <li>Run this command:
-                                <pre><code>sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc</code></pre>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <strong>Add VS Code Repository</strong>
-                        <ul>
-                            <li>Run this command to create the repository file:
-                                <pre><code>sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" &gt; /etc/yum.repos.d/vscode.repo'</code></pre>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <strong>Update Package Cache and Install</strong>
-                        <ul>
-                            <li>For Fedora 22 and later:
-                                <pre><code>sudo dnf check-update
+                    <h4>Fedora / Red Hat-based Linux</h4>
+                    <p>If you need to install Visual Studio Code on Fedora, follow these steps:</p>
+                    <ol>
+                        <li>
+                            <strong>Import Microsoft GPG Key</strong>
+                            <ul>
+                                <li>Open Terminal</li>
+                                <li>Run this command:
+                                    <pre><code>sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc</code></pre>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Add VS Code Repository</strong>
+                            <ul>
+                                <li>Run this command to create the repository file:
+                                    <pre><code>sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" &gt; /etc/yum.repos.d/vscode.repo'</code></pre>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Update Package Cache and Install</strong>
+                            <ul>
+                                <li>For Fedora 22 and later:
+                                    <pre><code>sudo dnf check-update
 sudo dnf install code</code></pre>
-                            </li>
-                            <li>For older versions:
-                                <pre><code>sudo yum check-update
+                                </li>
+                                <li>For older versions:
+                                    <pre><code>sudo yum check-update
 sudo yum install code</code></pre>
-                            </li>
-                            <li>Wait for installation to complete</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <strong>Launch VS Code</strong>
-                        <ul>
-                            <li>Type <code>code</code> in Terminal and press Enter, or</li>
-                            <li>Find "Visual Studio Code" in your application menu</li>
-                            <li>Click to open VS Code</li>
-                        </ul>
-                    </li>
-                </ol>
+                                </li>
+                                <li>Wait for installation to complete</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Launch VS Code</strong>
+                            <ul>
+                                <li>Type <code>code</code> in Terminal and press Enter, or</li>
+                                <li>Find "Visual Studio Code" in your application menu</li>
+                                <li>Click to open VS Code</li>
+                            </ul>
+                        </li>
+                    </ol>
 
-                <h4>Alternative: Download .deb or .rpm Package</h4>
-                <p>You can also download VS Code directly from the website:</p>
-                <ol>
-                    <li>
-                        <strong>Download from Official Website</strong>
-                        <ul>
-                            <li>Open your web browser</li>
-                            <li>Go to <a href="https://code.visualstudio.com" target="_blank" rel="noopener noreferrer">https://code.visualstudio.com</a></li>
-                            <li>Click "Download" and select:
-                                <ul>
-                                    <li><code>.deb</code> for Ubuntu/Debian</li>
-                                    <li><code>.rpm</code> for Fedora/Red Hat</li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <strong>Install the Package</strong>
-                        <ul>
-                            <li>Navigate to your Downloads folder</li>
-                            <li>For Ubuntu/Debian: Double-click the <code>.deb</code> file and click "Install", or run:
-                                <pre><code>sudo dpkg -i code_*.deb
+                   <h4>Alternative: Download .deb or .rpm Package</h4>
+                    <p>You can also download VS Code directly from the website:</p>
+                    <ol>
+                        <li>
+                            <strong>Download from Official Website</strong>
+                            <ul>
+                                <li>Open your web browser</li>
+                                <li>Go to <a href="https://code.visualstudio.com" target="_blank" rel="noopener noreferrer">https://code.visualstudio.com</a></li>
+                                <li>Click "Download" and select:
+                                    <ul>
+                                        <li><code>.deb</code> for Ubuntu/Debian</li>
+                                        <li><code>.rpm</code> for Fedora/Red Hat</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Install the Package</strong>
+                            <ul>
+                                <li>Navigate to your Downloads folder</li>
+                                <li>For Ubuntu/Debian: Double-click the <code>.deb</code> file and click "Install", or run:
+                                    <pre><code>sudo dpkg -i code_*.deb
 sudo apt-get install -f</code></pre>
-                            </li>
-                            <li>For Fedora: Double-click the <code>.rpm</code> file, or run:
-                                <pre><code>sudo dnf install ./code-*.rpm</code></pre>
-                            </li>
-                            <li>For Arch Linux: Install using an AUR helper like <code>yay</code> or <code>paru</code>:
-                                <pre><code>yay -S visual-studio-code-bin</code></pre>
-                                Or download from the <a href="https://archlinux.org/packages/" target="_blank" rel="noopener noreferrer">Arch repositories</a>
-                            </li>
-                        </ul>
-                    </li>
-                </ol>
+                                </li>
+                                <li>For Fedora: Double-click the <code>.rpm</code> file, or run:
+                                    <pre><code>sudo dnf install ./code-*.rpm</code></pre>
+                                </li>
+                                <li>For Arch Linux: Install using an AUR helper like <code>yay</code> or <code>paru</code>:
+                                    <pre><code>yay -S visual-studio-code-bin</code></pre>
+                                    Or download from the <a href="https://archlinux.org/packages/" target="_blank" rel="noopener noreferrer">Arch repositories</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ol>
                 </div>
+            </section>
 
+            <section id="instructions-linux-firefox" class="lesson-section hidden lesson-install-linux">
+                <div class="student-image">
+                    <!--Image is injected based on choices made in student.html and saved into local storage. -->
+                </div>
                 <h3 class="faq-title">Mozilla Firefox</h3>
                 <div id="firefox-linux">
                     <p>Check whether Firefox is already installed:</p>
@@ -1798,7 +1948,12 @@ sudo apt-get install -f</code></pre>
                         <li>You should see the Firefox version number</li>
                     </ul>
                 </div>
+            </section>
 
+            <section id="instructions-linux-nodejs" class="lesson-section hidden lesson-install-linux">
+                <div class="student-image">
+                    <!--Image is injected based on choices made in student.html and saved into local storage. -->
+                </div>
                 <h3 class="faq-title">Node.js</h3>
                 <div id="nodejs-linux">
                     <p>Check whether Node.js is already installed:</p>
@@ -1945,7 +2100,12 @@ sudo apt install nodejs npm</code></pre>
                         </li>
                     </ol>
                 </div>
+            </section>
 
+            <section id="instructions-linux-git" class="lesson-section hidden lesson-install-linux">
+                <div class="student-image">
+                    <!--Image is injected based on choices made in student.html and saved into local storage. -->
+                </div>
                 <h3 class="faq-title">Git</h3>
                 <div id="git-linux">
                     <p>Check whether Git is already installed:</p>
@@ -2049,7 +2209,12 @@ sudo apt install nodejs npm</code></pre>
                     <p>Modern Git practices use "main" instead of "master" as the default branch name. To set this globally:</p>
                     <pre><code>git config --global init.defaultBranch main</code></pre>
                 </div>
+            </section>
 
+            <section id="instructions-linux-sqlite" class="lesson-section hidden lesson-install-linux">
+                <div class="student-image">
+                    <!--Image is injected based on choices made in student.html and saved into local storage. -->
+                </div>
                 <h3 class="faq-title">SQLite</h3>
                 <div id="sqlite-linux">
                     <p>Check whether SQLite is already installed:</p>
@@ -2213,7 +2378,12 @@ SELECT * FROM users;</code></pre>
                         <li><code>.headers on</code> - Show column headers</li>
                     </ul>
                 </div>
+            </section>
 
+            <section id="instructions-linux-extensions" class="lesson-section hidden lesson-install-linux">
+                <div class="student-image">
+                    <!--Image is injected based on choices made in student.html and saved into local storage. -->
+                </div>
                 <h3 class="faq-title">Visual Studio Code Extensions</h3>
                 <div id="extensions-linux">
                     <p>VS Code extensions add extra features and functionality to your editor. Here are the recommended extensions for web development:</p>
@@ -2342,7 +2512,12 @@ SELECT * FROM users;</code></pre>
                         <li>Select "Prettier - Code formatter" from the dropdown</li>
                     </ol>
                 </div>
+            </section>
 
+            <section id="instructions-linux-projects" class="lesson-section hidden lesson-install-linux">
+                <div class="student-image">
+                    <!--Image is injected based on choices made in student.html and saved into local storage. -->
+                </div>
                 <h3 class="faq-title">Create a Projects Folder</h3>
                 <div id="projects-folder-linux">
                     <p>It's helpful to keep all your coding projects organised in one place. Let's create a dedicated Projects folder:</p>
@@ -2377,7 +2552,12 @@ SELECT * FROM users;</code></pre>
                     <p>Your Projects folder is now at: <code>~/Projects</code> (or <code>/home/yourusername/Projects</code>)</p>
                     <p>In future lessons, you'll save your coding projects in this folder.</p>
                 </div>
+            </section>
 
+            <section id="instructions-linux-dev-server" class="lesson-section hidden lesson-install-linux">
+                <div class="student-image">
+                    <!--Image is injected based on choices made in student.html and saved into local storage. -->
+                </div>
                 <h3 class="faq-title">Setting Up the Development Server</h3>
                 <div id="dev-server-linux">
                     <p>To view your web pages as you develop them, you'll need to run a local development server. This is important because some web features don't work when opening HTML files directly in a browser.</p>
@@ -2430,52 +2610,9 @@ SELECT * FROM users;</code></pre>
                     </ul>
                 </div>
             </section>
-
-            <section id="unsupported-devices" class="unsupported-devices lesson-section hidden">
-                <h2>Unsupported Devices</h2>
-                <p>The following devices are not suitable for web development with this course:</p>
-
-                <h3>Chromebook</h3>
-                <div id="instructions-chromebook">
-                    <p>
-                    Chromebooks are inexpensive laptops that run Chrome OS, but they are not great for web development. It is possible to install Linux on some Chromebooks, but Google makes it difficult to do this without opening the computer up and making changes to the hardware. <strong>This will, at the very least, void your warranty and I honestly do not recommend doing this.</strong> I destroyed one Chromebook when I tried. If you want a cheap laptop for web  development, consider a Windows or Linux machine instead.
-                </p>
-            </div>
-
-            <h3>Android</h3>
-            <div id="instructions-android">
-                <p>
-                    Android phones and tablets are not ideal for web development. While there are some code editors available for Android, the experience is limited compared to using a laptop or desktop computer. If possible, use a Windows, or Linux machine for the best experience.
-                </p>
-            </div>
-
-            <h3>iOS (iPhone/iPad)</h3>
-            <div id="instructions-ios">
-                <p>
-                    Apple iPhones and iPads are not ideal for web development. While there are some code editors available for iOS, the experience is limited compared to using a laptop or desktop computer. If possible, use a macOS machine such as an iMac or MacBook for the best experience.
-                </p>
-            </div>
-        </section>
-
-        <!--
-            <h4>1. Install a Code Editor</h4>
-            <p>We recommend using Visual Studio Code (VS Code) as your code editor. You can download it from the official website: <a href="https://code.visualstudio.com/" target="_blank" rel="noopener">https://code.visualstudio.com/</a></p>
-
-            <h4>2. Install a Web Browser</h4>
-            <p>You will need a modern web browser to test and view your web pages. We recommend using Google Chrome or Mozilla Firefox. You can download them from their respective websites:</p>
-            <ul>
-                <li>Google Chrome: <a href="https://www.google.com/chrome/" target="_blank" rel="noopener">https://www.google.com/chrome/</a></li>
-                <li>Mozilla Firefox: <a href="https://www.mozilla.org/firefox/new/" target="_blank" rel="noopener">https://www.mozilla.org/firefox/new/</a></li>
-            </ul>
-
-            <h4>3. Install Git (Optional)</h4>
-            <p>If you want to learn version control, we recommend installing Git. You can download it from the official website: <a href="https://git-scm.com/" target="_blank" rel="noopener">https://git-scm.com/</a></p>
-
-            <p>Once you have installed the required software, please proceed to the next lesson where we will start writing our first HTML page!</p>
-        -->
         </div> <!-- End lesson-content -->
     </main>
-    </div>
+    </div> <!-- End page-container -->
 
     <footer class="footer">
         <!-- Footer content is injected by JavaScript to ensure it is the same across all pages -->

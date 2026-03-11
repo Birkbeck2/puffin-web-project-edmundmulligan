@@ -43,16 +43,6 @@
     font-family: var(--font-family-serif);
 }
 
-/* Hide OS-specific instruction divs by default */
-[id^="instructions-"] {
-    display: none;
-}
-
-/* Show instruction divs when they have the 'visible' class */
-[id^="instructions-"].visible {
-    display: block;
-}
-
 /* Visually hidden class for accessibility */
 .visually-hidden {
     position: absolute;
@@ -89,6 +79,19 @@
 
 .lesson-title {
     text-align: left;
+}
+
+/* Ensure lists don't overlap with floated student-image */
+.lesson-section ul,
+.lesson-section ol {
+    overflow: auto;
+    clear: none;
+}
+
+.lesson-section ul li,
+.lesson-section ol li {
+    margin-left: 2rem;
+    list-style-position: inside;
 }
 
 /* Clickable image with modal */

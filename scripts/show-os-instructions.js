@@ -21,12 +21,15 @@
         }
 
         /**
-         * Hide all instruction divs
+         * Hide all OS-specific instruction sections
          */
         hideAllInstructions() {
-            const allInstructions = document.querySelectorAll('[id^="instructions-"]');
-            allInstructions.forEach(div => {
-                div.classList.remove('visible');
+            // Find all sections with lesson-install-* classes
+            const allOSSections = document.querySelectorAll('[class*="lesson-install-"]');
+            allOSSections.forEach(section => {
+                section.classList.add('hidden');
+                // Clear any inline display style that might override the hidden class
+                section.style.display = '';
             });
         }
 
@@ -35,12 +38,16 @@
          * @param {string} osValue - The OS value (e.g., 'windows', 'macos', 'linux')
          */
         showInstructions(osValue) {
+            // First hide all OS-specific sections
             this.hideAllInstructions();
             
-            const selectedInstructions = document.getElementById(`instructions-${osValue}`);
-            if (selectedInstructions) {
-                selectedInstructions.classList.add('visible');
-            }
+            // Then show all sections for the selected OS
+            const selectedSections = document.querySelectorAll(`.lesson-install-${osValue}`);
+            selectedSections.forEach(section => {
+                section.classList.remove('hidden');
+                // Clear any inline display style so CSS can take over
+                section.style.display = '';
+            });
 
             // Reinitialize lesson navigation to update the progress bar
             // for the new set of visible sections
