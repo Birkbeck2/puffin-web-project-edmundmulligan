@@ -235,7 +235,7 @@ async function populateLessonsNav() {
         // Create nav element
         const nav = document.createElement('nav');
         nav.className = 'sidebar';
-        nav.setAttribute('aria-label', 'Lesson navigation');
+        nav.setAttribute('aria-label', 'Lessons menu');
         
         // Create heading
         const heading = document.createElement('h3');

@@ -135,7 +135,7 @@
 
             return `
             <!-- Lesson Navigation Panel -->
-            <nav class="lesson-navigation-panel" aria-label="Lesson navigation">
+            <nav class="lesson-navigation-panel" aria-label="Section navigation">
                 <div class="navigation-controls">
                     <!-- Fast Rewind -->
                     <button type="button" id="fastBackwardBtn" class="nav-button section-nav" 
