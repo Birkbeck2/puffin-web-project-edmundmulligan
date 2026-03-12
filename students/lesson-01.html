@@ -51,6 +51,7 @@
     <link rel="stylesheet" href="../styles/components/buttons.css">
     <link rel="stylesheet" href="../styles/components/code.css">
     <link rel="stylesheet" href="../styles/components/header-and-footer.css">
+    <link rel="stylesheet" href="../styles/components/lesson-navigation.css">
     <link rel="stylesheet" href="../styles/components/navigation.css">
     <link rel="stylesheet" href="../styles/components/popover.css">
     <link rel="stylesheet" href="../styles/components/titles.css">
@@ -77,6 +78,8 @@
     <script src="../scripts/populateLineNumbers.js" defer></script>
     <script src="../scripts/modalImage.js" defer></script>
     <script src="../scripts/populateLessonsNav.js" defer></script>
+    <script src="../scripts/injectLessonNavigation.js" defer></script>
+    <script src="../scripts/lessonNavigation.js" defer></script>
 
     <!-- End JavaScript file link -->
 
@@ -97,29 +100,30 @@
         </div>
 
         <main class="main-content">
-        <h2 class="page-title">Lesson 1 - Your first web page</h2>
-        <section id="introduction" class="introduction">
-            <div class="intro-container">
-                <div class="student-image">
-                    <!--Image is injected based on choices made in student.html and saved into local storage. -->
-                </div>
-                <div class="intro-content">
-                    <h3 onclick="toggleSection('introduction-block', event);" onkeydown="toggleSection('introduction-block', event);" class="magic-invisible lesson-title">Introduction</h3>
+            <h2 class="page-title">Lesson 1 - Your first web page</h2>
+            <!-- Lesson navigation panel will be injected here by injectLessonNavigation.js -->
 
-                    <div id="introduction-block" class="hidden">
-                        <p>
-                            In this lesson, you will learn about HTML and create your first web page. By the end of this lesson, you will have a simple web page that you can view in a web browser.
-                        </p>
-                        <button type="button" class="magic-block-close h3-level" onclick="toggleSectionCollapse('introduction-block', event);" onkeydown="toggleSectionCollapse('introduction-block', event);" tabindex="0" aria-label="Collapse Introduction section"></button>
-                    </div>
+        <div class="lesson-content">
+        <section id="introduction" class="introduction lesson-section">
+            <div class="student-image">
+                <!--Image is injected based on choices made in student.html and saved into local storage. -->
+            </div>
+            <div class="intro-content">
+                <h3 class="lesson-title">Introduction</h3>
+                <div id="introduction-block">
+                    <p>
+                        In this lesson, you will learn about HTML and create your first web page. By the end of this lesson, you will have a simple web page that you can view in a web browser.
+                    </p>
                 </div>
             </div>
         </section>
 
-        <section id="exploring-vsc" class="exploring-vsc">
-            <h3 onclick="toggleSection('exploring-vsc-block', event);" onkeydown="toggleSection('exploring-vsc-block', event);" class="magic-invisible lesson-title">Exploring Visual Studio Code</h3>
-
-            <div id="exploring-vsc-block" class="hidden">
+        <section id="exploring-vsc" class="exploring-vsc lesson-section hidden">
+            <div class="student-image">
+                <!--Image is injected based on choices made in student.html and saved into local storage. -->
+            </div>
+            <h3 class="lesson-title">Exploring Visual Studio Code</h3>
+            <div id="exploring-vsc-block">
                 <p>
                     Before you create your first web page, take a moment to explore Visual Studio Code (VS Code), the code editor you will be using throughout this course. VS Code is a powerful and user-friendly code editor that supports many programming languages, including HTML, CSS, and JavaScript.
                 </p>
@@ -145,15 +149,17 @@
                 <p>
                     Take some time to familiarise yourself with these areas. You can open and close the Explorer by clicking on the file icon in the Activity Bar. You can also open files by double-clicking them in the Explorer.
                 </p>
-                <button type="button" class="magic-block-close h3-level" onclick="toggleSectionCollapse('exploring-vsc-block', event);" onkeydown="toggleSectionCollapse('exploring-vsc-block', event);" tabindex="0" aria-label="Collapse Exploring Visual Studio Code section"></button>
             </div>
         </section>
-        <section id="your-first-web-page" class="your-first-web-page">
-            <h3 onclick="toggleSection('your-first-web-page-block', event);" onkeydown="toggleSection('your-first-web-page-block', event);" class="magic-invisible lesson-title">Your First Web Page</h3>
+        <section id="your-first-web-page" class="your-first-web-page lesson-section hidden">
+            <div class="student-image">
+                <!--Image is injected based on choices made in student.html and saved into local storage. -->
+            </div>
+            <h3 class="lesson-title">Your First Web Page</h3>
 
-            <div id="your-first-web-page-block" class="hidden">
+            <div id="your-first-web-page-block">
                 <p>
-                    HTML <button type="button" popovertarget="glossary-html-popover" class="glossary-icon-button" aria-label="Show HTML definition"><i class="fa-duotone fa-circle-question" aria-hidden="true"></i></button> is the standard language used to create web pages. It consists of a series of elements that define the structure and content of a web page. Unlike a word processor, where you format text visually (that is, if you want bold text you simply highlight it and click a button to make it bold), in HTML you use tags to mark up the text and these tags tell the browser how to display the content. This is similar to how wizards and witches use spells to transform objects; in HTML, you use tags to transform plain text into structured web content.
+                    HTML <button type="button" popovertarget="glossary-popover" class="glossary-icon-button" data-glossary-term="html" aria-label="Show HTML definition"><i class="fa-duotone fa-circle-question" aria-hidden="true"></i></button> is the standard language used to create web pages. It consists of a series of elements <button type="button" popovertarget="glossary-popover" class="glossary-icon-button" data-glossary-term="element" aria-label="Show Element definition"><i class="fa-duotone fa-circle-question" aria-hidden="true"></i></button>that define the structure and content of a web page. Unlike a word processor, where you format text visually (that is, if you want bold text you simply highlight it and click a button to make it bold), in HTML you use tags <button type="button" popovertarget="glossary-popover" class="glossary-icon-button" data-glossary-term="tag" aria-label="Show Tag definition"><i class="fa-duotone fa-circle-question" aria-hidden="true"></i></button>to mark up the text and these tags tell the browser how to display the content. Tags can have attributes <button type="button" popovertarget="glossary-popover" class="glossary-icon-button" data-glossary-term="attribute" aria-label="Show Attribute definition"><i class="fa-duotone fa-circle-question" aria-hidden="true"></i></button> that provide additional information about an element or control how it behaves. This is similar to how witches and wizards use different incantations and magical ingredients to achieve different effects. In HTML, you combine different tags and attributes to create the structure and content of your web page, just like how you would combine different spells and ingredients to create a potion or cast a spell.
                 </p>
                 <p>
                     Usually tags come in pairs, with an opening tag and a closing tag. The opening tag is written with angle brackets, like <code>&lt;tagname&gt;</code>, and the closing tag is similar but includes a forward slash before the tag name, like <code>&lt;/tagname&gt;</code>. The content goes between the opening and closing tags. For example, to create a paragraph, you would use the <code>&lt;p&gt;</code> tag. Here is an example: <code>&lt;p&gt;This is a paragraph.&lt;/p&gt;</code>.
@@ -164,8 +170,17 @@
                     <li>Open Visual Studio Code.</li>
                     <li>Select <code>File-&gt;Open Folder</code> and choose the Projects folder you created earlier for your web development work.</li>
                     <li>Create a new file named <code>lesson-1.html</code> in the Projects folder.</li>
-                    <li>Type the following code into the file:
-                    <div class="code-snippet-container">
+                    <li>Type the code in the next screen into the file.</li>
+                    <li>Save the file.</li>
+                    <li>Make sure the node.js server is running. You can do this by opening a terminal, navigating to your Projects folder, and running <code>npm start</code>.</li>
+                    <li>Open <code>http://localhost:8000/lesson-1.html</code> in your web browser to see your first web page!</li>
+                </ol>
+            </div>
+        </section>
+        <section id="first-code" class="first-code lesson-section hidden">
+            <h3 class="lesson-title">Code for Your First Web Page</h3>
+
+                                <div class="code-snippet-container">
                         <script type="text/plain" class="code-snippet-source"><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -180,17 +195,15 @@
 </html></script>
                         <div class="code-snippet-table"></div>
                     </div>
-                    </li>
-                    <li>Save the file.</li>
-                    <li>Make sure the node.js server is running. You can do this by opening a terminal, navigating to your Projects folder, and running <code>npm start</code>.</li>
-                    <li>Open <code>http://localhost:8000/lesson-1.html</code> in your web browser to see your first web page!</li>
-                </ol>
-                <button type="button" class="magic-block-close h3-level" onclick="toggleSectionCollapse('your-first-web-page-block', event);" onkeydown="toggleSectionCollapse('your-first-web-page-block', event);" tabindex="0" aria-label="Collapse First Web Page section"></button>
+
+        </section>
+        <section id="what-does-it-mean" class="what-does-it-mean lesson-section hidden">
+            <div class="student-image">
+                <!--Image is injected based on choices made in student.html and saved into local storage. -->
             </div>
+            <h3 class="lesson-title">What does it mean</h3>
 
-            <h3 onclick="toggleSection('what-does-it-mean-block', event);" onkeydown="toggleSection('what-does-it-mean-block', event);" class="magic-invisible lesson-title">What does it mean</h3>
-
-            <div id="what-does-it-mean-block" class="hidden">
+            <div id="what-does-it-mean-block">
 
                 <p>
                     In this section, we will explain what the different parts of the HTML code you wrote mean.
@@ -203,12 +216,14 @@
                     <li>Line 9: <code>&lt;h1&gt;Hello, Witches and Wizards!&lt;/h1&gt;</code>: This line creates a heading. The <code>&lt;h1&gt;</code> tag defines a top-level heading, which is usually the largest and most important heading on the page. The text between the opening and closing tags is what will be displayed as the heading.</li>
                     <li>Line 10: <code>&lt;p&gt;You are all awesome.&lt;/p&gt;</code>: This line creates a paragraph. The <code>&lt;p&gt;</code> tag defines a paragraph of text. Similar to the heading, the text between the opening and closing tags is what will be displayed as the paragraph content.</li>
                 </ul>
-                <button type="button" class="magic-block-close h3-level" onclick="toggleSectionCollapse('what-does-it-mean-block', event);" onkeydown="toggleSectionCollapse('what-does-it-mean-block', event);" tabindex="0" aria-label="Collapse What Does It Mean section"></button>
             </div>
-            <h3 onclick="toggleSection('be-curious-block', event);" onkeydown="toggleSection('be-curious-block', event);" class="magic-invisible lesson-title">Be Curious</h3>
-
-            <div id="be-curious-block" class="hidden">
-
+        </section>
+        <section id="be-curious" class="be-curious lesson-section hidden">
+            <div class="student-image">
+                <!--Image is injected based on choices made in student.html and saved into local storage. -->
+            </div>
+            <div id="be-curious-block">
+                <h3>Be curious</h3>
                 <p>
                     This is a chance to experiment and see what happens when you change things in your HTML code. Try modifying the code you wrote earlier in different ways, such as:
                 </p>
@@ -219,12 +234,20 @@
                     <li>Try putting in deliberate mistakes in your code and see what happens. Sometimes Visual Studio Code will detect the error and warn you about it. But sometimes the code will still run in the browser despite the mistakes.</li>
                     <li>Try adding comments in different places in your code. Comments start with <pre>&lt;!--</pre> and end with <pre>--&gt;</pre>. Anything between the start and end tags is ignored by the browser and not displayed on the page. You can use this to leave notes for yourself or others who might read your code later.</li>
                 </ul>
-                <button type="button" class="magic-block-close h3-level" onclick="toggleSectionCollapse('be-curious-block', event);" onkeydown="toggleSectionCollapse('be-curious-block', event);" tabindex="0" aria-label="Collapse Be Curious section"></button>
+                </div>
+                </section>
+        <section id="conclusion" class="conclusion lesson-section hidden">
+            <div class="student-image">
+                <!--Image is injected based on choices made in student.html and saved into local storage. -->
+            </div>
+            <div id="conclusion-block">
+                <h3 class="lesson-title">Conclusion</h3>
+                <p>
+                    Congratulations! You have created your first web page using HTML. In the next lessons, you will explore more HTML elements and add styling using CSS.
+                </p>
             </div>
         </section>
-        <p>
-            Congratulations! You have created your first web page using HTML. In the next lessons, you will explore more HTML elements and add styling using CSS.
-        </p>
+        </div> <!-- End lesson-content -->
     </main>
     </div>
 
@@ -234,7 +257,7 @@
     <div id="not-implemented" popover="auto" class="popover">
         <!-- Popover content is injected by JavaScript to ensure it is the same across all pages -->
     </div>
-    <div id="glossary-html-popover" popover="auto" class="popover glossary-popover">
+    <div id="glossary-popover" popover="auto" class="popover glossary-popover">
         <!-- Content is loaded dynamically from glossary.html -->
     </div>
 

@@ -68,6 +68,8 @@
             root.style.setProperty('--colour-effective-button-text-hover', `var(${prefix}-button-text-hover)`);
             root.style.setProperty('--colour-effective-button-background-selected', `var(${prefix}-button-background-selected)`);
             root.style.setProperty('--colour-effective-button-text-selected', `var(${prefix}-button-text-selected)`);
+            root.style.setProperty('--colour-effective-button-background-disabled', `var(${prefix}-button-background-disabled)`);
+            root.style.setProperty('--colour-effective-button-text-disabled', `var(${prefix}-button-text-disabled)`);
             root.style.setProperty('--colour-effective-link-background', `var(${prefix}-link-background)`);
             root.style.setProperty('--colour-effective-link-text', `var(${prefix}-link-text)`);
             root.style.setProperty('--colour-effective-link-background-hover', `var(${prefix}-link-background-hover)`);
@@ -86,6 +88,27 @@
             
             root.style.setProperty('--bg-landscape', `var(${bgPrefix})`);
             root.style.setProperty('--bg-portrait', `var(${bgPortraitPrefix})`);
+            
+            // Wand icon filters for proper contrast with backgrounds
+            // Set based on theme and style combinations
+            if (effectiveTheme === 'dark') {
+                if (style === 'vibrant') {
+                    // Vibrant dark: dark accent (navy 20%), bright green buttons, dark backgrounds
+                    root.style.setProperty('--wand-filter-on-accent', 'invert(100%)');  // white on dark accent
+                    root.style.setProperty('--wand-filter-on-surface', 'invert(0%)');   // black on bright button
+                    root.style.setProperty('--wand-filter-on-background', 'invert(100%)'); // white on dark background
+                } else {
+                    // Normal & subdued dark: light accents (cyan 85%, white), dark buttons, dark backgrounds
+                    root.style.setProperty('--wand-filter-on-accent', 'invert(0%)');    // black on light accent
+                    root.style.setProperty('--wand-filter-on-surface', 'invert(100%)'); // white on dark button
+                    root.style.setProperty('--wand-filter-on-background', 'invert(100%)'); // white on dark background
+                }
+            } else {
+                // All light themes: dark accents, light buttons, light backgrounds - use black wands
+                root.style.setProperty('--wand-filter-on-accent', 'invert(100%)');  // white on dark accent
+                root.style.setProperty('--wand-filter-on-surface', 'invert(0%)');   // black on light button
+                root.style.setProperty('--wand-filter-on-background', 'invert(0%)'); // black on light background
+            }
             
             // SVG filters and other theme-specific settings
             if (effectiveTheme === 'dark') {
