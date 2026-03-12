@@ -32,6 +32,6 @@ jobs:
         host: ${{ inputs.server }}
         username: ${{ secrets.SERVER_USERNAME }}
         key: ${{ secrets.SERVER_SSH_KEY }}
-        source: "."
+        source: "index.html data/ diagnostics/ images/ mentors/ pages/ scripts/ students/ styles/ test-results/"
         target: ${{ inputs.deploy-path }}
         rm: true

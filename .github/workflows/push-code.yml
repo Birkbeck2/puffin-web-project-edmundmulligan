@@ -10,7 +10,7 @@ jobs:
     deploy-to-server:
         uses: ./.github/workflows/push-code-reusable.yml
         with:
-          deploy-path: /var/www/puffin.edmundmulligan.name
+          deploy-path: /var/www/web.witchcraft-and-wizardry.school
         secrets:
           SERVER_USERNAME: ${{ secrets.SERVER_USERNAME }}
           SERVER_SSH_KEY: ${{ secrets.SERVER_SSH_KEY }}
