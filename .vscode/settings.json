@@ -7,6 +7,7 @@
         "brightred",
         "browserx",
         "browsery",
+        "buttonsize",
         "codey",
         "consectetur",
         "cornerx",
@@ -18,6 +19,8 @@
         "edmundmulligan",
         "eiusmod",
         "elit",
+        "fontawesome",
+        "fontsize",
         "gridx",
         "gridy",
         "iconsx",
@@ -50,6 +53,8 @@
         "opacitypalettetwo",
         "palettex",
         "palettey",
+        "sitewide",
+        "stylesheet",
         "tempor"
     ]
 }

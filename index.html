@@ -62,7 +62,6 @@
 
     <!-- media-queries must be the last stylesheets loaded -->
     <link rel="stylesheet" href="styles/media-queries.css">
-    <link rel="stylesheet" href="styles/media-query-index.css">
     <!-- End of CSS stylesheets section -->
 
     <!-- Load JavaScript files -->
@@ -87,27 +86,27 @@
     </header>
 
     <main class="main">
-        <div class="index-block">
+        <section class="index-block">
             <h2 class="page-title">Choose your theme and style</h2>
             <div class="circular-button-container">
-                <a href="#" class="button-circle theme-button" id="light-button">Light</a>
-                <a href="#" class="button-circle theme-button" id="dark-button">Dark</a>
+                <a href="#" class="button-circle" id="light-button">Light</a>
+                <a href="#" class="button-circle" id="dark-button">Dark</a>
             </div>
             <div class="circular-button-container">
-                <a href="#" class="button-circle style-button" id="normal-button">Normal</a>
-                <a href="#" class="button-circle style-button" id="subdued-button">Subdued</a>
-                <a href="#" class="button-circle style-button" id="vibrant-button">Vibrant</a>
+                <a href="#" class="button-circle-small" id="normal-button">Normal</a>
+                <a href="#" class="button-circle-small" id="subdued-button">Subdued</a>
+                <a href="#" class="button-circle-small" id="vibrant-button">Vibrant</a>
             </div>
-        </div>
+        </section>
 
-        <div class="index-block">
+        <section class="index-block">
             <h2 class="page-title">Click on your chosen path</h2>
-            <div class="circular-button-container">
+            <div class="circular-button-container path-buttons">
                 <a href="pages/start.html" class="button-circle" id="start-button">Start</a>
                 <a href="pages/students.html" class="button-circle" id="students-button">I am a Student</a>
                 <a href="pages/mentors.html" class="button-circle" id="mentors-button">I am a Mentor</a>
             </div>
-        </div>
+        </section>
     </main>
 
     <footer class="footer">

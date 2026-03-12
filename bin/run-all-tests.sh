@@ -49,27 +49,50 @@ echo ""
 FAILED=0
 
 echo "📄 Running code validation..."
-bin/validate-code.sh "$FOLDER" || exit 1
+if ! bin/validate-code.sh "$FOLDER"; then
+  echo "⚠️  Code validation failed"
+  FAILED=1
+fi
 
 echo ""
 echo "🎨 Running colour usage audit..."
-node bin/audit-colour-usage.js || exit 1
+if ! node bin/audit-colour-usage.js; then
+  echo "⚠️  Colour audit failed"
+  FAILED=1
+fi
 
 echo ""
 echo "Running comments check..."
-bin/check-file-comments.sh "$FOLDER" || exit 1
+if ! bin/check-file-comments.sh "$FOLDER"; then
+  echo "⚠️  Comments check failed"
+  FAILED=1
+fi
 
 echo ""
 echo "🔗 Running link checks..."
-bin/check-links.sh "$FOLDER" || exit 1
+if ! bin/check-links.sh "$FOLDER"; then
+  echo "⚠️  Link checks failed"
+  FAILED=1
+fi
 
 echo ""
 echo "🪓 Running axe accessibility tests..."
-bin/run-axe-tests.sh "$FOLDER" || exit 1
+if [ "$QUICK_MODE" = true ]; then
+  AXE_CMD="bin/run-axe-tests.sh \"$FOLDER\" -q"
+else
+  AXE_CMD="bin/run-axe-tests.sh \"$FOLDER\""
+fi
+if ! eval "$AXE_CMD"; then
+  echo "⚠️  Axe tests failed"
+  FAILED=1
+fi
 if [ "$QUICK_MODE" = false ]; then
   echo ""
   echo "🏮 Running lighthouse accessibility tests..."
-  bin/run-lighthouse-tests.sh "$FOLDER" || exit 1
+  if ! bin/run-lighthouse-tests.sh "$FOLDER"; then
+    echo "⚠️  Lighthouse tests failed"
+    FAILED=1
+  fi
 else
   echo ""
   echo "⏭️  Skipping Lighthouse tests (quick mode enabled)"
@@ -77,12 +100,18 @@ fi
 
 echo ""
 echo "🦜 Running pa11y accessibility tests..."
-bin/run-pa11y-tests.sh "$FOLDER" || exit 1
+if ! bin/run-pa11y-tests.sh "$FOLDER"; then
+  echo "⚠️  Pa11y tests failed"
+  FAILED=1
+fi
 
 if [ "$RUN_WAVE" = true ] && [ "$QUICK_MODE" = false ]; then
   echo ""
   echo "🌊 Running Wave accessibility tests..."
-  bin/run-wave-tests.sh "$FOLDER" || exit 1
+  if ! bin/run-wave-tests.sh "$FOLDER"; then
+    echo "⚠️  Wave tests failed"
+    FAILED=1
+  fi
 else
   echo ""
   if [ "$QUICK_MODE" = true ]; then
@@ -94,11 +123,17 @@ fi
 
 echo ""
 echo "📖 Running reading age checks..."
-bin/check-reading-age.sh "$FOLDER" || exit 1
+if ! bin/check-reading-age.sh "$FOLDER"; then
+  echo "⚠️  Reading age checks failed"
+  FAILED=1
+fi
 
 echo ""
 echo "🌐 Running cross-browser tests..."
-bin/run-browser-tests.sh "$FOLDER" || exit 1
+if ! bin/run-browser-tests.sh "$FOLDER"; then
+  echo "⚠️  Browser tests failed"
+  FAILED=1
+fi
 
 echo ""
 echo "📊 Generating test summary..."

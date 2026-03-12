@@ -19,24 +19,27 @@
 
 /* Page container with sidebar layout */
 .page-container {
-    display: flex;
-    flex-direction: row;
-    gap: 2rem;
-    max-width: 100%;
-    margin: 0;
-    padding: 0;
+   display: flex;
+   flex-direction: row;
+   gap: 2rem;
+   width: 100%;
+   max-width: 100%;
+   min-width: 0;
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
 }
 
 /* Sidebar navigation for lessons */
 .sidebar {
-    flex: 0 0 250px;
-    background-color: var(--colour-effective-headings-background);
-    border: var(--border-weight) var(--border-style) var(--colour-effective-headings-text);
-    border-radius: var(--border-radius) 0 0 var(--border-radius);
-    padding: 0 1rem;
-    height: 100%;
-    overflow-y: auto;
-    box-sizing: border-box;
+   flex: 0 0 250px;
+   background-color: var(--colour-effective-headings-background);
+   border: var(--border-weight) var(--border-style) var(--colour-effective-headings-text);
+   border-radius: var(--border-radius) 0 0 var(--border-radius);
+   padding: 0 1rem;
+   height: 100%;
+   overflow-y: auto;
+   box-sizing: border-box;
 }
 
 .sidebar h3 {
@@ -93,7 +96,9 @@
 .main-content {
     flex: 1;
     min-width: 0;
+    max-width: 100%;
     padding: 2rem 1rem;
+    box-sizing: border-box;
 }
 
 /* these class names are the same as the section id names in the HTML files 
@@ -145,7 +150,7 @@
    text-align: left;
    max-width: 100%;
    box-sizing: border-box;
-   font-size: var(--fontsize-p);
+   font-size: var(--fontsize-normal);
 }
 
 .student-info form {
@@ -157,7 +162,7 @@
    max-width: 80%;
    margin: 0 auto;
    padding: 1rem;
-   border: var(--border-weight) var(--border-style) var(--colour-effective-headings-text);
+   border: var(--border-weight) var(--border-style) var(--colour-effective-page-text);
    border-radius: var(--border-radius);
    box-sizing: border-box;
 }
@@ -173,7 +178,7 @@
    grid-column: 1;
    grid-row: 1;
    background-color: var(--colour-effective-headings-background);
-   border: var(--border-weight) var(--border-style) var(--colour-effective-headings-text);
+   border: var(--border-weight) var(--border-style) var(--colour-effective-page-text);
    border-radius: var(--border-radius);
    padding: 1rem;
    margin: 1rem auto;
@@ -225,15 +230,15 @@
 
 .student-info form label {
    text-align: left;
-   font-size: var(--fontsize-smallprint);
+   font-size: var(--fontsize-small);
 }
 
 .student-info form legend {
-   font-size: var(--fontsize-smallprint);
+   font-size: var(--fontsize-small);
 }
 
 .student-info form fieldset {
-   border: var(--border-weight) var(--border-style) var(--colour-effective-headings-text);
+   border: var(--border-weight) var(--border-style) var(--colour-effective-page-text);
    border-radius: var(--border-radius);
    padding: 1rem;
    margin: 0.5rem;
@@ -244,28 +249,28 @@
    width: 100%;
    padding: 0;
    margin-bottom: 0.5rem;
-   font-size: var(--fontsize-smallprint);
+   font-size: var(--fontsize-small  );
 }
 
 .student-info form input[type="radio"] {
    width: 1rem;
    height: 1rem;
-   font-size: var(--fontsize-p);
+   font-size: var(--fontsize-normal);
 }
 
 .student-info form input[type="text"] {
    max-width: 60%;
-   font-size: var(--fontsize-p);
+   font-size: var(--fontsize-normal);
 }
 
 .student-info form hr {
    border: none;
-   border-top: var(--border-weight) var(--border-style) var(--colour-effective-headings-text);
+   border-top: var(--border-weight) var(--border-style) var(--colour-effective-page-text);
    margin: 0.5rem 0 0;
 }
 
 .student-info form h4 {
-   border-top: var(--border-weight) var(--border-style) var(--colour-effective-headings-text);
+   border-top: var(--border-weight) var(--border-style) var(--colour-effective-page-text);
    padding-top: 0.5rem;
    margin-top: 0.5rem;
 }
@@ -342,15 +347,6 @@
    justify-content: center;
 }
 
-.circular-button-container {
-   display: flex;
-   flex-direction: row;
-   gap: 2rem;
-   justify-content: space-evenly;
-   align-items: center;
-   margin-top: 3rem;
-}
-
 /**********************************************
  * contained classes for contained items.
  * Would be nice to call everting a *-item but
@@ -417,7 +413,7 @@
 
 .accessory-description {
    display:block;
-   font-size: var(--fontsize-smallprint);
+   font-size: var(--fontsize-small);
 }
 
 .facts-item {
@@ -426,7 +422,7 @@
    color: var(--colour-effective-headings-text);
    border: var(--border-weight) var(--border-style) var(--colour-effective-headings-text);
    border-radius: var(--border-radius);
-   font-size: var(--fontsize-p);
+   font-size: var(--fontsize-normal);
    min-width: 0;
    padding: 1rem;
    margin: var(--margin-vertical) var(--margin-horizontal);
@@ -493,7 +489,7 @@
    gap: 0;
    padding: 0 1rem;
    align-items: stretch;
-   font-size: clamp(0.5rem, 2vw + 1rem, 2.25rem);
+   font-size: var(--fontsize-normal);
 }
 
 .glossary dt {
@@ -561,12 +557,12 @@
    display: block;
    font-family: var(--font-family-serif);
    font-weight: 600;
-   font-size: var(--fontsize-h3h4);
+   font-size: var(--fontsize-header-medium);
 }
 
 .lesson-description {
    display: block;
-   font-size: var(--fontsize-p);
+   font-size: var(--fontsize-normal);
 }
 
 .lesson-tile:hover,

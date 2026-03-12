@@ -39,15 +39,15 @@
 }
 
 .magic-block-close.h3-level {
-    font-size: var(--fontsize-h3h4);
+    font-size: var(--fontsize-header-medium);
 }
 
 .magic-block-close.h4-level {
-    font-size: var(--fontsize-h3h4);
+    font-size: var(--fontsize-header-medium);
 }
 
 .magic-block-close.h5-level {
-    font-size: var(--fontsize-h5h6);
+    font-size: var(--fontsize-header-small);
 }
 
 .magic-block-close::before {

@@ -112,6 +112,43 @@ class ColourPalette {
     }
 
     /**
+ * Blend a foreground color with a background color at given opacity
+ * @param {string} fgColor - Foreground HSL color string
+ * @param {string} bgColor - Background HSL color string  
+ * @param {number} opacity - Opacity value (0-1)
+ * @returns {string} Blended HSL color string
+ */
+    blendColors(fgColor, bgColor, opacity) {
+        // Normalize both colors
+        const normFg = this.normalizeHSL(fgColor);
+        const normBg = this.normalizeHSL(bgColor);
+        
+        // Parse HSL values
+        const hslRegex = /hsl\(\s*(\d+(?:\.\d+)?)\s*,?\s*(\d+(?:\.\d+)?)\s*%\s*,?\s*(\d+(?:\.\d+)?)\s*%\s*\)/;
+        const matchFg = normFg.match(hslRegex);
+        const matchBg = normBg.match(hslRegex);
+        
+        if (!matchFg || !matchBg) {
+            console.warn('Could not parse colors for blending:', { fgColor, bgColor });
+            return fgColor;
+        }
+        
+        // Convert to RGB for blending
+        const fgRgb = this.hslToRgb(parseFloat(matchFg[1]), parseFloat(matchFg[2]), parseFloat(matchFg[3]));
+        const bgRgb = this.hslToRgb(parseFloat(matchBg[1]), parseFloat(matchBg[2]), parseFloat(matchBg[3]));
+        
+        // Blend RGB values: result = fg * opacity + bg * (1 - opacity)
+        const blendedRgb = [
+            Math.round(fgRgb[0] * opacity + bgRgb[0] * (1 - opacity)),
+            Math.round(fgRgb[1] * opacity + bgRgb[1] * (1 - opacity)),
+            Math.round(fgRgb[2] * opacity + bgRgb[2] * (1 - opacity))
+        ];
+        
+        // Convert back to HSL
+        return this.rgbToHsl(`rgb(${blendedRgb[0]}, ${blendedRgb[1]}, ${blendedRgb[2]})`);
+    }
+
+    /**
  * Determine WCAG compliance level
  * @param {number} ratio - Contrast ratio
  * @returns {string} WCAG level (AAA, AA, A, or Fail)
@@ -357,9 +394,12 @@ class ColourPalette {
         // Check if we have CSS variable references or direct colour value
             const bgVar = div.getAttribute('data-bg-var');
             const fgVar = div.getAttribute('data-fg-var');
+            const pageVar = div.getAttribute('data-page-var');
+            const opacity = parseFloat(div.getAttribute('data-opacity'));
         
             let bg = div.getAttribute('data-bg');
             let fg = div.getAttribute('data-fg');
+            let page = div.getAttribute('data-page');
         
             // If CSS variables are specified, get their computed values
             if (bgVar) {
@@ -367,6 +407,17 @@ class ColourPalette {
             }
             if (fgVar) {
                 fg = this.getCSSVariableValue(fgVar);
+            }
+            if (pageVar) {
+                page = this.getCSSVariableValue(pageVar);
+            }
+            
+            // If opacity and page background are specified, blend the colors
+            if (opacity && page && opacity < 1) {
+                const normalizedPage = this.normalizeHSL(page);
+                bg = this.blendColors(bg, normalizedPage, opacity);
+                fg = this.blendColors(fg, normalizedPage, opacity);
+                console.log(`[${index+1}] Blending with opacity ${opacity} on page background ${pageVar}`);
             }
         
             if (bg && fg) {
@@ -400,9 +451,10 @@ class ColourPalette {
                 `;
                 } else {
                     const badgeColour = level === 'AAA' ? '#28a745' : level === 'AA' ? '#0d6efd' : level === 'A' ? '#ffc107' : '#dc3545';
+                    let opacityNote = opacity && opacity < 1 ? ` <em>(at ${Math.round(opacity * 100)}% opacity)</em>` : '';
                     div.innerHTML = `
                     Contrast: <strong>${ratio.toFixed(2)}:1</strong>
-                    <span class="wcag-badge" style="background-color: ${badgeColour}; color: white; padding: 2px 8px; border-radius: 3px; margin-left: 10px;">WCAG ${level}</span>
+                    <span class="wcag-badge" style="background-color: ${badgeColour}; color: white; padding: 2px 8px; border-radius: 3px; margin-left: 10px;">WCAG ${level}</span>${opacityNote}
                 `;
                 }
             } else {

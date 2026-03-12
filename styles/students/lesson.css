@@ -38,19 +38,9 @@
 
 .avatar-caption {
     margin-top: 0.5rem; 
-    font-size: var(--fontsize-p); 
+    font-size: var(--fontsize-normal); 
     font-weight: bold;
     font-family: var(--font-family-serif);
-}
-
-/* Hide OS-specific instruction divs by default */
-[id^="instructions-"] {
-    display: none;
-}
-
-/* Show instruction divs when they have the 'visible' class */
-[id^="instructions-"].visible {
-    display: block;
 }
 
 /* Visually hidden class for accessibility */
@@ -82,13 +72,26 @@
 .installing-required-software legend,
 .installing-required-software label {
     font-weight: bold;
-    font-size: var(--fontsize-h5h6);
+    font-size: var(--fontsize-header-small);
     font-family: var(--font-family-serif);
     margin-top: 2rem;
 }
 
 .lesson-title {
     text-align: left;
+}
+
+/* Ensure lists don't overlap with floated student-image */
+.lesson-section ul,
+.lesson-section ol {
+    overflow: auto;
+    clear: none;
+}
+
+.lesson-section ul li,
+.lesson-section ol li {
+    margin-left: 2rem;
+    list-style-position: inside;
 }
 
 /* Clickable image with modal */

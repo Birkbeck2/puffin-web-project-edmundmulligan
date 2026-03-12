@@ -28,12 +28,17 @@ echo "Installing browsers (Chromium, Firefox, WebKit)..."
 npx playwright install > /dev/null 2>&1
 
 # Install system dependencies for WebKit (works in GitHub Actions)
-echo "Installing WebKit system dependencies..."
-if command -v sudo &> /dev/null; then
-    # Running locally with sudo available
+echo "Checking WebKit system dependencies..."
+# Check if webkit deps are already installed by trying to run a quick playwright check
+if npx playwright install-deps webkit --dry-run 2>&1 | grep -q "All browsers are already installed"; then
+    echo "✓ WebKit dependencies already installed"
+elif command -v sudo &> /dev/null; then
+    # Running locally with sudo available - check if deps actually need installing
+    echo "Installing WebKit system dependencies..."
     sudo npx playwright install-deps webkit > /dev/null 2>&1 && echo "✓ WebKit dependencies installed" || echo "⚠️  WebKit dependencies installation skipped (requires sudo)"
 else
     # Running in CI/GitHub Actions (already has permissions)
+    echo "Installing WebKit system dependencies..."
     npx playwright install-deps webkit > /dev/null 2>&1 && echo "✓ WebKit dependencies installed" || echo "⚠️  WebKit dependencies installation failed"
 fi
 

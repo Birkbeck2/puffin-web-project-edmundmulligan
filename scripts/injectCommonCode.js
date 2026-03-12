@@ -46,8 +46,17 @@
             Debug.log('injectHeader: Injecting header HTML');
             header.innerHTML = `
 <div class="header-minimal">
+    <div class="header-warning">
+        <h2>Warning</h2>
+        <p>
+            You are either viewing this website on a very small device or have zoomed your browser window to a high level.
+        </p>
+        <p>
+            Some of the page content may not be displayed correctly. For the best experience, please view this website on a device with a wider screen or zoom your browser window out to be wider.
+        </p>
+    </div>
     <div class="header-text">
-        <div class="header-image mirror inline-header" style="mask-image: url('${this.pathPrefix}images/icons/wizard.svg'); -webkit-mask-image: url('${this.pathPrefix}images/icons/wizard.svg');" role="img" aria-label="Wizard icon"></div>
+        <div class="header-image inline-header" style="mask-image: url('${this.pathPrefix}images/icons/wizard.svg'); -webkit-mask-image: url('${this.pathPrefix}images/icons/wizard.svg');" role="img" aria-label="Wizard icon"></div>
         <div class="inline-header">
             <h1 class="site-title">Web Witchcraft and Wizardry</h1>
             <nav class="site-navigation" aria-label="Site navigation">
@@ -77,7 +86,7 @@
 
 <div class="header-full">
     <div class="header-left">
-        <div class="header-image mirror" style="mask-image: url('${this.pathPrefix}images/icons/wizard.svg'); -webkit-mask-image: url('${this.pathPrefix}images/icons/wizard.svg');" role="img" aria-label="Wizard icon"></div>
+        <div class="header-image" style="mask-image: url('${this.pathPrefix}images/icons/wizard.svg'); -webkit-mask-image: url('${this.pathPrefix}images/icons/wizard.svg');" role="img" aria-label="Wizard icon"></div>
     </div>
 
     <div class="header-center">

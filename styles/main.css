@@ -34,6 +34,7 @@ body {
     /* prevent horizontal overflow */
     width: 100%;
     max-width: 100%;
+    min-width: 0;
     margin: 0;
     padding: 0;
     overflow: hidden auto;
@@ -55,14 +56,17 @@ body {
 
 header {
     flex: 0 0 auto;  /* Don't grow, don't shrink, auto basis */
+    min-width: 0;
+    max-width: 100%;
 }
 
 main {
     flex: 1 1 auto;  /* Grow to fill space, shrink if needed, auto basis */
+    width: 100%;
     max-width: 100%;
+    min-width: 0;
     box-sizing: border-box;
     overflow-wrap: break-word;
-    width: 100%;
     padding-bottom: 10rem;
     display: flex;
     flex-direction: column;
@@ -74,6 +78,7 @@ footer {
     left: 0;
     right: 0;
     z-index: 100;
+    min-width: 0;
 }
 
 /* Center all headings and use Cinzel (an elegant serif Google font) */
@@ -86,32 +91,32 @@ h1, h2, h3, h4, h5, h6 {
 
 /* make h1 and h2 larger and bolder */
 h1, h2{
-    font-size: var(--fontsize-h1h2);
+    font-size: var(--fontsize-header-large);
     font-weight: 700;
 }
 
 /* h3 not quite as big */
 h3, h4{
-    font-size: var(--fontsize-h3h4);
+    font-size: var(--fontsize-header-medium);
     font-weight: 700;
 }
 
 /* h5 and h6 smaller again */
 h5, h6{
-    font-size: var(--fontsize-h5h6);
+    font-size: var(--fontsize-header-small);
     font-weight: 700;
 }
 
 /* increas spacing for paragraphs in accordance with WCAG 2.2 */
 p, li {
-    font-size: var(--fontsize-p);
+    font-size: var(--fontsize-normal);
     margin-bottom: 1.5rem;
 }
 
 /* Make inline code elements the same size as paragraph text */
 code {
     font-family: var(--font-family-mono);
-    font-size: var(--fontsize-p);
+    font-size: var(--fontsize-normal);
 }
 
 /*
@@ -139,8 +144,7 @@ a:focus-visible {
     outline-offset: 0.2rem;
 }
 
-/* Utility class to mirror an image horizontally. Used by the wizard 
-   silhouette in the header as the original image faces the wrong way */
+/* Utility class to mirror an image horizontally. */
 .mirror {
     transform: scaleX(-1);
 }

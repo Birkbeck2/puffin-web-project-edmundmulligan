@@ -31,12 +31,12 @@
 .popover h2 {
     margin-top: 0;
     font-family: var(--font-family-serif);
-    font-size: var(--fontsize-h3h4);
+    font-size: var(--fontsize-header-medium);
     font-weight: bold;
 }
 
 .popover p {
-    font-size: var(--fontsize-smallprint);
+    font-size: var(--fontsize-small);
     font-weight: bold;
     text-align: center;
 }
@@ -105,12 +105,12 @@
     margin-top: 0;
     margin-bottom: 1rem;
     font-family: var(--font-family-serif);
-    font-size: var(--fontsize-h3h4);
+    font-size: var(--fontsize-header-medium);
     font-weight: bold;
 }
 
 .lesson-popover p {
-    font-size: var(--fontsize-p);
+    font-size: var(--fontsize-normal);
     font-weight: normal;
     text-align: left;
     margin: 0;
