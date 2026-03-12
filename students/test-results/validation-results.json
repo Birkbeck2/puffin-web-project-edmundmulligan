@@ -1,0 +1,54 @@
+{
+  "files": [
+    {
+      "file": "students/lesson-01.html",
+      "type": "html",
+      "errors": [
+        {
+          "line": 105,
+          "column": 1,
+          "message": "Trailing whitespace",
+          "ruleId": "no-trailing-whitespace",
+          "severity": "error"
+        },
+        {
+          "line": 123,
+          "column": 68,
+          "message": "Prefer to use the native <progress> element",
+          "ruleId": "prefer-native-element",
+          "severity": "error"
+        },
+        {
+          "line": 163,
+          "column": 1,
+          "message": "Trailing whitespace",
+          "ruleId": "no-trailing-whitespace",
+          "severity": "error"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "file": "students/lesson-00.html",
+      "type": "html",
+      "errors": [
+        {
+          "line": 120,
+          "column": 68,
+          "message": "Prefer to use the native <progress> element",
+          "ruleId": "prefer-native-element",
+          "severity": "error"
+        }
+      ],
+      "warnings": []
+    }
+  ],
+  "summary": {
+    "htmlErrors": 4,
+    "htmlWarnings": 0,
+    "cssErrors": 0,
+    "cssWarnings": 0,
+    "jsErrors": 0,
+    "jsWarnings": 0
+  }
+}

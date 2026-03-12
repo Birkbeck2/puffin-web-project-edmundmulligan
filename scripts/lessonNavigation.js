@@ -25,6 +25,11 @@
             this.currentSectionIndex = 0;
             this.totalSections = 0;
             this.lessonNumber = null;
+            this.lessonsData = null;
+            this.context = null; // 'students' or 'mentors'
+            this.availableLessons = new Set(); // Set of available lesson numbers
+            this.listenersSetup = false; // Track if button event listeners have been set up
+            this.keyboardSetup = false; // Track if keyboard listeners have been set up
             
             this.init();
         }
@@ -33,43 +38,188 @@
          * Initialize the lesson navigator
          */
         init() {
-            // Wait for DOM to be fully loaded
-            if (document.readyState === 'loading') {
-                document.addEventListener('DOMContentLoaded', () => this.setupNavigation());
-            } else {
+            // Set up event listener immediately to avoid race condition
+            document.addEventListener('lessonNavigationInjected', () => {
+                // Reset button listeners flag since buttons were just recreated
+                this.listenersSetup = false;
                 this.setupNavigation();
+            });
+            
+            // Load lessons data
+            this.loadLessonsData().then(() => {
+                // Check if navigation panel already exists (was injected before listener was set up)
+                const navPanel = document.querySelector('.lesson-navigation-panel');
+                if (navPanel) {
+                    // Navigation was already injected, set it up now
+                    this.setupNavigation();
+                }
+            });
+        }
+
+        /**
+         * Determine the current context (students or mentors)
+         */
+        getContext() {
+            const path = window.location.pathname;
+            if (path.includes('/students/')) {
+                return 'students';
+            } else if (path.includes('/mentors/')) {
+                return 'mentors';
             }
+            return 'students'; // Default to students
+        }
+
+        /**
+         * Load lessons data from lessons.json
+         */
+        async loadLessonsData() {
+            try {
+                this.context = this.getContext();
+                const response = await fetch('../data/lessons.json');
+                if (!response.ok) {
+                    throw new Error('Failed to load lessons.json');
+                }
+                const data = await response.json();
+                this.lessonsData = data.lessons;
+                
+                // Check which lesson files actually exist by trying to fetch them
+                await this.checkAvailableLessons();
+                
+                console.log(`Loaded ${this.lessonsData.length} lessons, ${this.availableLessons.size} available in ${this.context}`);
+            } catch (error) {
+                console.error('Error loading lessons data:', error);
+                this.lessonsData = [];
+            }
+        }
+
+        /**
+         * Check which lesson files exist in the current context
+         */
+        async checkAvailableLessons() {
+            const checkPromises = this.lessonsData.map(async (lesson) => {
+                if (!lesson.file) return false;
+                
+                // Extract lesson number from filename (e.g., "lesson-01.html" -> 1)
+                const match = lesson.file.match(/lesson-(\d+)\.html/);
+                if (!match) return false;
+                
+                const lessonNum = parseInt(match[1], 10);
+                
+                try {
+                    // Try to fetch the lesson file (HEAD request would be better but may not work everywhere)
+                    const response = await fetch(lesson.file, { method: 'HEAD' });
+                    if (response.ok) {
+                        this.availableLessons.add(lessonNum);
+                        return true;
+                    }
+                } catch (error) {
+                    // File doesn't exist
+                    return false;
+                }
+                return false;
+            });
+            
+            await Promise.all(checkPromises);
+        }
+
+        /**
+         * Check if a lesson number exists in a specific context (students or mentors)
+         */
+        async lessonExistsInContext(lessonNumber, targetContext) {
+            const lessonFile = `lesson-${lessonNumber.toString().padStart(2, '0')}.html`;
+            
+            try {
+                // Construct the path to the target context
+                const targetPath = `../${targetContext}/${lessonFile}`;
+                const response = await fetch(targetPath, { method: 'HEAD' });
+                return response.ok;
+            } catch (error) {
+                return false;
+            }
+        }
+
+        /**
+         * Check if a lesson number exists
+         */
+        lessonExists(lessonNumber) {
+            return this.availableLessons.has(lessonNumber);
         }
 
         /**
          * Set up navigation elements and event listeners
          */
         setupNavigation() {
-            // Find all lesson sections
-            this.sections = document.querySelectorAll('.lesson-section');
+            // Find all lesson sections that are NOT hidden by OS filtering
+            // We include sections that are hidden for navigation purposes
+            const allSections = document.querySelectorAll('.lesson-section');
+            const navigableSections = Array.from(allSections).filter(section => {
+                // Exclude sections that are hidden due to OS filtering
+                // (sections with lesson-install-* classes that are hidden)
+                const hasOSInstallClass = Array.from(section.classList).some(cls => cls.startsWith('lesson-install-'));
+                if (hasOSInstallClass && section.classList.contains('hidden')) {
+                    return false; // Skip OS-filtered sections
+                }
+                // Include all other sections, even if they're hidden (for navigation)
+                return true;
+            });
+            
+            // Store previous section to try to maintain position
+            const previousSectionId = this.sections[this.currentSectionIndex]?.id;
+            
+            this.sections = navigableSections;
             this.totalSections = this.sections.length;
             
-            if (this.totalSections === 0) {
-                console.warn('No lesson sections found');
-                return;
-            }
-
             // Extract lesson number from URL
             this.lessonNumber = this.extractLessonNumber();
 
-            // Set up button event listeners
-            this.setupButtonListeners();
+            // Set up button event listeners (only once per button creation)
+            if (!this.listenersSetup) {
+                this.setupButtonListeners();
+                this.listenersSetup = true;
+            }
+            
+            // Set up keyboard navigation (only needed on first call)
+            if (!this.keyboardSetup) {
+                this.setupKeyboardNavigation();
+                this.keyboardSetup = true;
+            }
 
-            // Set up progress bar click listeners
+            // Set up progress bar click listeners (needs to be updated each time)
             this.setupProgressBarListeners();
 
-            // Set up keyboard navigation
-            this.setupKeyboardNavigation();
+            if (this.totalSections === 0) {
+                console.warn('No visible lesson sections found - user may need to select an option first');
+                // Disable section navigation but keep lesson navigation enabled
+                this.disableSectionNavigation();
+                // Still update lesson-level navigation buttons
+                this.updateNavigationButtons();
+                return;
+            }
+
+            // Try to find the previous section in the new list
+            let newIndex = 0;
+            if (previousSectionId) {
+                const foundIndex = this.sections.findIndex(s => s.id === previousSectionId);
+                if (foundIndex >= 0) {
+                    newIndex = foundIndex;
+                }
+            }
 
             // Initialize display
-            this.showSection(0);
+            this.showSection(newIndex);
             this.updateProgress();
             this.updateNavigationButtons();
+        }
+        
+        /**
+         * Disable section navigation buttons when no sections are visible
+         */
+        disableSectionNavigation() {
+            const backwardBtn = document.getElementById('backwardBtn');
+            const forwardBtn = document.getElementById('forwardBtn');
+            
+            if (backwardBtn) backwardBtn.disabled = true;
+            if (forwardBtn) forwardBtn.disabled = true;
         }
 
         /**
@@ -90,6 +240,7 @@
             const forwardBtn = document.getElementById('forwardBtn');
             const fastBackwardBtn = document.getElementById('fastBackwardBtn');
             const fastForwardBtn = document.getElementById('fastForwardBtn');
+            const contextSwitchBtn = document.getElementById('contextSwitchBtn');
 
             if (backwardBtn) {
                 backwardBtn.addEventListener('click', () => this.previousSection());
@@ -102,6 +253,9 @@
             }
             if (fastForwardBtn) {
                 fastForwardBtn.addEventListener('click', () => this.nextLesson());
+            }
+            if (contextSwitchBtn) {
+                contextSwitchBtn.addEventListener('click', () => this.switchContext());
             }
         }
 
@@ -136,22 +290,22 @@
                 }
 
                 switch (event.key) {
-                    case 'ArrowLeft':
-                        event.preventDefault();
-                        this.previousSection();
-                        break;
-                    case 'ArrowRight':
-                        event.preventDefault();
-                        this.nextSection();
-                        break;
-                    case 'Home':
-                        event.preventDefault();
-                        this.goToSection(0);
-                        break;
-                    case 'End':
-                        event.preventDefault();
-                        this.goToSection(this.totalSections - 1);
-                        break;
+                case 'ArrowLeft':
+                    event.preventDefault();
+                    this.previousSection();
+                    break;
+                case 'ArrowRight':
+                    event.preventDefault();
+                    this.nextSection();
+                    break;
+                case 'Home':
+                    event.preventDefault();
+                    this.goToSection(0);
+                    break;
+                case 'End':
+                    event.preventDefault();
+                    this.goToSection(this.totalSections - 1);
+                    break;
                 }
             });
         }
@@ -164,13 +318,14 @@
                 return;
             }
 
-            // Hide all sections
+            // Hide all  sections using display style (not 'hidden' class)
+            // We don't use the 'hidden' class here because that's reserved for OS filtering
             this.sections.forEach(section => {
-                section.classList.add('hidden');
+                section.style.display = 'none';
             });
 
             // Show the selected section
-            this.sections[index].classList.remove('hidden');
+            this.sections[index].style.display = 'block';
 
             // Update current index
             this.currentSectionIndex = index;
@@ -231,14 +386,12 @@
          */
         nextLesson() {
             const nextLessonNumber = this.lessonNumber + 1;
-            const nextLessonUrl = `lesson-${nextLessonNumber.toString().padStart(2, '0')}.html`;
             
-            // Check if next lesson exists (you might want to load this from lessons.json)
-            // For now, we'll assume lessons go up to 20
-            if (nextLessonNumber <= 20) {
+            if (this.lessonExists(nextLessonNumber)) {
+                const nextLessonUrl = `lesson-${nextLessonNumber.toString().padStart(2, '0')}.html`;
                 window.location.href = nextLessonUrl;
             } else {
-                this.showMessage('This is the last lesson!');
+                this.showMessage('Next lesson not available yet!');
             }
         }
 
@@ -248,11 +401,30 @@
         previousLesson() {
             const prevLessonNumber = this.lessonNumber - 1;
             
-            if (prevLessonNumber >= 0) {
+            if (prevLessonNumber >= 0 && this.lessonExists(prevLessonNumber)) {
                 const prevLessonUrl = `lesson-${prevLessonNumber.toString().padStart(2, '0')}.html`;
                 window.location.href = prevLessonUrl;
             } else {
                 this.showMessage('This is the first lesson!');
+            }
+        }
+
+        /**
+         * Switch between student and mentor contexts
+         */
+        async switchContext() {
+            const targetContext = this.context === 'students' ? 'mentors' : 'students';
+            const lessonFile = `lesson-${this.lessonNumber.toString().padStart(2, '0')}.html`;
+            const targetUrl = `../${targetContext}/${lessonFile}`;
+            
+            // Check if the lesson exists in the target context
+            const exists = await this.lessonExistsInContext(this.lessonNumber, targetContext);
+            
+            if (exists) {
+                window.location.href = targetUrl;
+            } else {
+                const contextName = targetContext === 'students' ? 'student' : 'mentor';
+                this.showMessage(`This lesson is not available in the ${contextName} view yet!`);
             }
         }
 
@@ -263,7 +435,7 @@
             const wandIcons = document.querySelectorAll('.wand-icon');
             const progressBar = document.querySelector('.progress-bar');
             
-            if (progressBar) {
+            if (progressBar && this.totalSections > 0) {
                 const progressPercent = ((this.currentSectionIndex + 1) / this.totalSections) * 100;
                 progressBar.style.setProperty('--progress-percent', `${progressPercent}%`);
             }
@@ -286,7 +458,7 @@
                     // Current section gets the sparkling wand with favicon colors
                     const img = wand.querySelector('img');
                     if (img) {
-                        img.src = '../images/fontawesome/wand-magic-sparkles-sharp-duotone-regular-full.svg';
+                        img.src = '../images/icons/favicon.svg';
                         img.alt = 'Current section';
                     }
                 } else {
@@ -302,23 +474,64 @@
 
             // Update ARIA attributes
             const progressElement = document.getElementById('progressBar');
-            if (progressElement) {
+            if (progressElement && this.totalSections > 0) {
                 progressElement.setAttribute('aria-valuenow', this.currentSectionIndex + 1);
             }
         }
 
         /**
+         * Check if an OS is selected (for lesson-00)
+         */
+        isOSSelected() {
+            const osRadios = document.querySelectorAll('input[name="os"]');
+            if (osRadios.length === 0) {
+                return true; // Not on a page with OS selection
+            }
+            // Check if any radio is checked
+            return Array.from(osRadios).some(radio => radio.checked);
+        }
+
+        /**
          * Update navigation button states
          */
-        updateNavigationButtons() {
+        async updateNavigationButtons() {
+            // Section navigation buttons
             const backwardBtn = document.getElementById('backwardBtn');
             const forwardBtn = document.getElementById('forwardBtn');
+            
+            // Lesson navigation buttons
+            const fastBackwardBtn = document.getElementById('fastBackwardBtn');
+            const fastForwardBtn = document.getElementById('fastForwardBtn');
+            
+            // Context switch button
+            const contextSwitchBtn = document.getElementById('contextSwitchBtn');
 
+            // Disable section buttons if at start/end of sections
             if (backwardBtn) {
                 backwardBtn.disabled = this.currentSectionIndex === 0;
             }
             if (forwardBtn) {
-                forwardBtn.disabled = this.currentSectionIndex === this.totalSections - 1;
+                // Disable if at end of sections OR if on lesson-00 with no OS selected
+                const atEnd = this.currentSectionIndex === this.totalSections - 1;
+                const needsOS = this.lessonNumber === 0 && !this.isOSSelected();
+                forwardBtn.disabled = atEnd || needsOS;
+            }
+            
+            // Disable lesson buttons if previous/next lesson doesn't exist
+            if (fastBackwardBtn && this.lessonNumber !== null) {
+                const prevLessonNumber = this.lessonNumber - 1;
+                fastBackwardBtn.disabled = prevLessonNumber < 0 || !this.lessonExists(prevLessonNumber);
+            }
+            if (fastForwardBtn && this.lessonNumber !== null) {
+                const nextLessonNumber = this.lessonNumber + 1;
+                fastForwardBtn.disabled = !this.lessonExists(nextLessonNumber);
+            }
+            
+            // Disable context switch button if target lesson doesn't exist
+            if (contextSwitchBtn && this.lessonNumber !== null) {
+                const targetContext = this.context === 'students' ? 'mentors' : 'students';
+                const exists = await this.lessonExistsInContext(this.lessonNumber, targetContext);
+                contextSwitchBtn.disabled = !exists;
             }
         }
 
@@ -377,6 +590,6 @@
         }
     }
 
-    // Initialize the lesson navigator
-    new LessonNavigator();
+    // Initialize the lesson navigator and make it globally accessible
+    window.lessonNavigator = new LessonNavigator();
 })();
