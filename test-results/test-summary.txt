@@ -21,16 +21,16 @@
   Failed: 0
 
 [Axe] Axe Accessibility Results:
-  Total violations: 18
+  Total violations: 0
   [Critical] Critical: 0
   [Serious] Serious: 0
-  [Moderate] Moderate: 18
+  [Moderate] Moderate: 0
   [Minor] Minor: 0
 
 [OK] Lighthouse: No issues found
 
 [Pa11y] Pa11y Accessibility Results:
-  Pages tested: 336
+  Pages tested: 84
   [X] Errors: 0
   [Warning]  Warnings: 0
   Pages with errors: 0
