@@ -78,9 +78,9 @@ fi
 echo ""
 echo "🪓 Running axe accessibility tests..."
 if [ "$QUICK_MODE" = true ]; then
-  AXE_CMD="bin/run-axe-tests.sh \"$FOLDER\" -q"
+  AXE_CMD="bin/run-axe-tests.sh -q \"$FOLDER\""
 else
-  AXE_CMD="bin/run-axe-tests.sh \"$FOLDER\""
+  AXE_CMD="bin/run-axe-tests.sh -q \"$FOLDER\""
 fi
 if ! eval "$AXE_CMD"; then
   echo "⚠️  Axe tests failed"
@@ -89,7 +89,7 @@ fi
 if [ "$QUICK_MODE" = false ]; then
   echo ""
   echo "🏮 Running lighthouse accessibility tests..."
-  if ! bin/run-lighthouse-tests.sh "$FOLDER"; then
+  if ! bin/run-lighthouse-tests.sh -q "$FOLDER"; then
     echo "⚠️  Lighthouse tests failed"
     FAILED=1
   fi
@@ -100,7 +100,7 @@ fi
 
 echo ""
 echo "🦜 Running pa11y accessibility tests..."
-if ! bin/run-pa11y-tests.sh "$FOLDER"; then
+if ! bin/run-pa11y-tests.sh -q "$FOLDER"; then
   echo "⚠️  Pa11y tests failed"
   FAILED=1
 fi

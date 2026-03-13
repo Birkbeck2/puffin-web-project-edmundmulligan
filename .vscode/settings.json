@@ -8,6 +8,7 @@
         "browserx",
         "browsery",
         "buttonsize",
+        "chromedriver",
         "codey",
         "consectetur",
         "cornerx",
@@ -53,8 +54,12 @@
         "opacitypalettetwo",
         "palettex",
         "palettey",
+        "pkill",
         "sitewide",
         "stylesheet",
-        "tempor"
+        "tempor",
+        "testport",
+        "testurl",
+        "VARS"
     ]
 }

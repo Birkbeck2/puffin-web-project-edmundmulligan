@@ -22,12 +22,20 @@ const APPROVED_GENERIC_VARS = [
     '--colour-page-text',
     '--colour-headings-background',
     '--colour-headings-text',
+    '--colour-code-background',
+    '--colour-code-text',
     '--colour-link-text',
     '--colour-link-text-hover',
     '--colour-link-text-visited',
     '--colour-link-text-focus',
-    '--colour-code-background',
-    '--colour-code-text',
+    '--colour-button-background',
+    '--colour-button-text',
+    '--colour-button-background-hover',
+    '--colour-button-text-hover',
+    '--colour-button-background-active',
+    '--colour-button-text-active',
+    '--colour-button-background-disabled',
+    '--colour-button-text-disabled',
     '--colour-error-background',
     '--colour-error-text',
     '--colour-warning-background',
@@ -43,7 +51,7 @@ const THEME_SPECIFIC_ALLOWED_FILES = [
     'styles/colours.css',          // Defines them
     'scripts/themeSwitcher.js',    // Maps them
     'diagnostics/colourPalette.html', // Shows them
-    'scripts/colourPalette.js',    // Analyzes them
+    'scripts/colourPalette.js',    // Analyses them
     'styles/colourPalette.css'     // Diagnostic stylesheet
 ];
 
@@ -51,6 +59,7 @@ const THEME_SPECIFIC_ALLOWED_FILES = [
 const EXEMPT_FROM_COLOR_CHECKS = [
     'diagnostics/',                // All diagnostic/test pages
     'bin/',                        // Build and test scripts
+    'styles/test-results.css'      // Styles for test results
 ];
 
 /**
@@ -318,9 +327,9 @@ function main() {
     console.log('='.repeat(100) + '\n');
     
     // Write detailed report to file
-    const reportPath = path.join(rootDir, 'colour-audit-report.json');
+    const reportPath = path.join(rootDir, 'test-results/colour-audit-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(allIssues, null, 2));
-    console.log(`Detailed report written to: colour-audit-report.json\n`);
+    console.log(`Detailed report written to: ${reportPath}\n`);
     
     process.exit(allIssues.hardcodedColors.length + allIssues.themeSpecificVars.length + allIssues.missingThemeSystem.length);
 }

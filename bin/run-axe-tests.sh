@@ -166,7 +166,7 @@ for VIEWPORT in "${VIEWPORTS[@]}"; do
 
         echo "    [$TESTED/$TOTAL_TESTS] Testing $URL_PATH (${VIEWPORT}px, $STYLE-$THEME)"
 
-        # Run axe on this page with color scheme emulation and viewport size
+        # Run axe on this page with colour scheme emulation and viewport size
         # Add retry logic and error handling
         TEMP_RESULT="$RESULTS_DIR/axe-temp-$TESTED.json"
         rm -f "$TEMP_RESULT"
