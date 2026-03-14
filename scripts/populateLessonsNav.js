@@ -232,7 +232,7 @@ async function populateLessonsNav() {
         const data = await response.json();
         const lessons = data.lessons;
         
-        // Create hamburger button (visible only on mobile)
+        // Create hamburger button for lessons menu
         const hamburger = document.createElement('button');
         hamburger.className = 'lessons-hamburger';
         hamburger.setAttribute('aria-label', 'Toggle lessons menu');

@@ -233,38 +233,38 @@
                 </div>
                 <h3 class="faq-title">Visual Studio Code</h3>
                 <div id="vsc-windows">
-                    <p>Check whether Visual Studio Code is already installed:</p>
-                    <ul>
+                    <p onclick="toggleSection('vsc-windows-list-1', event);" onkeydown="toggleSection('vsc-windows-list-1', event);" class="magic-invisible">Check whether Visual Studio Code is already installed:</p>
+                    <ul id="vsc-windows-list-1" class="hidden">
                         <li>Press <code>Windows key + R</code></li>
                         <li>Type <code>code</code> and press Enter</li>
                         <li>If VS Code opens, you have it installed. If you get an error message, you need to install it.</li>
                     </ul>
-                    <p>If you need to install Visual Studio Code, follow these steps:</p>
-                    <ol>
-                        <li>Download VS Code from the Official Website
-                            <ul>
+                    <p onclick="toggleSection('vsc-windows-list-2', event);" onkeydown="toggleSection('vsc-windows-list-2', event);" class="magic-invisible">If you need to install Visual Studio Code, follow these steps:</p>
+                    <ol id="vsc-windows-list-2" class="hidden">
+                        <li><span onclick="toggleSection('vsc-windows-list-2-1', event);" onkeydown="toggleSection('vsc-windows-list-2-1', event);" class="magic-invisible">Download VS Code from the Official Website</span>
+                            <ul id="vsc-windows-list-2-1" class="hidden">
                                 <li>Open your web browser</li>
                                 <li>Go to <a href="https://code.visualstudio.com" target="_blank" rel="noopener noreferrer">https://code.visualstudio.com</a></li>
                                 <li>Click the large blue "Download for Windows" button</li>
                                 <li>The file <code>VSCodeUserSetup-x64-[version].exe</code> will download (usually to your Downloads folder)</li>
                             </ul>
                         </li>
-                        <li>Run the Installer
-                            <ul>
+                        <li><span onclick="toggleSection('vsc-windows-list-2-2', event);" onkeydown="toggleSection('vsc-windows-list-2-2', event);" class="magic-invisible">Run the Installer</span>
+                            <ul id="vsc-windows-list-2-2" class="hidden">
                                 <li>Open your Downloads folder (press <code>Windows key + E</code>, then click Downloads)</li>
                                 <li>Double-click the VSCodeUserSetup file you just downloaded</li>
                                 <li>If Windows asks "Do you want to allow this app to make changes?", click Yes</li>
                             </ul>
                         </li>
-                        <li>Setup Wizard
-                            <ul>
+                        <li><span onclick="toggleSection('vsc-windows-list-2-3', event);" onkeydown="toggleSection('vsc-windows-list-2-3', event);" class="magic-invisible">Setup Wizard</span>
+                            <ul id="vsc-windows-list-2-3" class="hidden">
                                 <li>Accept the license agreement, then click Next</li>
                                 <li>Choose installation location (default is fine), click Next</li>
                                 <li>Choose Start Menu folder (default is fine), click Next</li>
                             </ul>
                         </li>
-                        <li>Select Additional Tasks
-                            <ul>
+                        <li><span onclick="toggleSection('vsc-windows-list-2-4', event);" onkeydown="toggleSection('vsc-windows-list-2-4', event);" class="magic-invisible">Select Additional Tasks</span>
+                            <ul id="vsc-windows-list-2-4" class="hidden">
                                 <li>Check these recommended options:
                                     <ul>
                                         <li>Create a desktop icon</li>
@@ -277,15 +277,15 @@
                                 <li>Click Next</li>
                             </ul>
                         </li>
-                        <li>Install
-                            <ul>
+                        <li><span onclick="toggleSection('vsc-windows-list-2-5', event);" onkeydown="toggleSection('vsc-windows-list-2-5', event);" class="magic-invisible">Install</span>
+                            <ul id="vsc-windows-list-2-5" class="hidden">
                                 <li>Review your choices, then click Install</li>
                                 <li>Wait for installation to complete (takes about 1-2 minutes)</li>
                                 <li>Check "Launch Visual Studio Code", then click Finish</li>
                             </ul>
                         </li>
-                        <li>First Launch
-                            <ul>
+                        <li><span onclick="toggleSection('vsc-windows-list-2-6', event);" onkeydown="toggleSection('vsc-windows-list-2-6', event);" class="magic-invisible">First Launch</span>
+                            <ul id="vsc-windows-list-2-6" class="hidden"    >
                                 <li>VS Code opens with a Welcome screen</li>
                                 <li>You can choose your color theme (light or dark)</li>
                                 <li>You're ready to start coding!</li>
@@ -301,54 +301,54 @@
                 </div>
                 <h3 class="faq-title">Mozilla Firefox</h3>
                 <div id="firefox-windows">
-                    <p>Check whether Firefox is already installed:</p>
-                    <ul>
+                    <p onclick="toggleSection('firefox-windows-list-1', event);" onkeydown="toggleSection('firefox-windows-list-1', event);" class="magic-invisible">Check whether Firefox is already installed:</p>
+                    <ul id="firefox-windows-list-1" class="hidden">
                         <li>Press <code>Windows key</code></li>
                         <li>Type <code>Firefox</code></li>
                         <li>If Firefox appears in the search results, you have it installed. If not, you need to install it.</li>
                     </ul>
-                    <p>If you need to install Firefox, follow these steps:</p>
-                    <ol>
-                        <li>Download Firefox from the Official Website
-                            <ul>
+                    <p onclick="toggleSection('firefox-windows-list-2', event);" onkeydown="toggleSection('firefox-windows-list-2', event);" class="magic-invisible">If you need to install Firefox, follow these steps:</p>
+                    <ol id="firefox-windows-list-2" class="hidden">
+                        <li ><span onclick="toggleSection('firefox-windows-list-2-1', event);" onkeydown="toggleSection('firefox-windows-list-2-1', event);" class="magic-invisible">Download Firefox from the Official Website</span>
+                            <ul id="firefox-windows-list-2-1" class="hidden">
                                 <li>Open your web browser (Microsoft Edge or another browser)</li>
                                 <li>Go to <a href="https://www.mozilla.org/firefox/" target="_blank" rel="noopener noreferrer">https://www.mozilla.org/firefox/</a></li>
                                 <li>Click the blue "Download Firefox" button</li>
                                 <li>The file <code>Firefox Installer.exe</code> will download (usually to your Downloads folder)</li>
                             </ul>
                         </li>
-                        <li>Run the Installer
-                            <ul>
+                        <li ><span onclick="toggleSection('firefox-windows-list-2-2', event);" onkeydown="toggleSection('firefox-windows-list-2-2', event);" class="magic-invisible">Run the Installer</span>
+                            <ul id="firefox-windows-list-2-2" class="hidden">
                                 <li>Open your Downloads folder (press <code>Windows key + E</code>, then click Downloads)</li>
                                 <li>Double-click the <code>Firefox Installer.exe</code> file you just downloaded</li>
                                 <li>If Windows asks "Do you want to allow this app to make changes?", click Yes</li>
                             </ul>
                         </li>
-                        <li>Installation Process
-                            <ul>
+                        <li><span onclick="toggleSection('firefox-windows-list-2-3', event);" onkeydown="toggleSection('firefox-windows-list-2-3', event);" class="magic-invisible">Installation Process</span>
+                            <ul id="firefox-windows-list-2-3" class="hidden">
                                 <li>The installer will start automatically</li>
                                 <li>Firefox will install to the default location (usually <code>C:\Program Files\Mozilla Firefox</code>)</li>
                                 <li>Wait for installation to complete (takes about 30 seconds to 1 minute)</li>
                                 <li>Firefox will automatically launch when installation is complete</li>
                             </ul>
                         </li>
-                        <li>First Launch
-                            <ul>
+                        <li><span onclick="toggleSection('firefox-windows-list-2-4', event);" onkeydown="toggleSection('firefox-windows-list-2-4', event);" class="magic-invisible">First Launch</span>
+                            <ul id="firefox-windows-list-2-4" class="hidden">
                                 <li>Firefox opens with a Welcome screen</li>
                                 <li>You can choose to set Firefox as your default browser (optional)</li>
                                 <li>You can import bookmarks and settings from other browsers (optional)</li>
                                 <li>You're ready to browse!</li>
                             </ul>
                         </li>
-                        <li>Pin to Taskbar (Optional)
-                            <ul>
+                        <li><span onclick="toggleSection('firefox-windows-list-2-5', event);" onkeydown="toggleSection('firefox-windows-list-2-5', event);" class="magic-invisible">Pin to Taskbar (Optional)</span>
+                            <ul id="firefox-windows-list-2-5" class="hidden">
                                 <li>With Firefox running, right-click the Firefox icon in the taskbar</li>
                                 <li>Select "Pin to taskbar"</li>
                                 <li>Now you can launch Firefox quickly from the taskbar</li>
                             </ul>
                         </li>
-                        <li>Verify Installation
-                            <ul>
+                        <li><span onclick="toggleSection('firefox-windows-list-2-6', event);" onkeydown="toggleSection('firefox-windows-list-2-6', event);" class="magic-invisible">Verify Installation</span>
+                            <ul id="firefox-windows-list-2-6" class="hidden">
                                 <li>In Firefox, click the menu button (three horizontal lines) in the top-right corner</li>
                                 <li>Click "Help" → "About Firefox"</li>
                                 <li>You should see the Firefox version number</li>
@@ -364,17 +364,17 @@
                 </div>
                 <h3 class="faq-title">Node.js</h3>
                 <div id="nodejs-windows">
-                    <p>Check whether Node.js is already installed:</p>
-                    <ul>
+                    <p onclick="toggleSection('nodejs-windows-list-1', event);" onkeydown="toggleSection('nodejs-windows-list-1', event);" class="magic-invisible">Check whether Node.js is already installed:</p>
+                    <ul id="nodejs-windows-list-1" class="hidden">
                         <li>Press <code>Windows key + R</code></li>
                         <li>Type <code>cmd</code> and press Enter to open Command Prompt</li>
                         <li>Type <code>node --version</code> and press Enter</li>
                         <li>If you see a version number, you have it installed. If you get an error message, you need to install it.</li>
                     </ul>
-                    <p>If you need to install Node.js, follow these steps:</p>
-                    <ol>
-                        <li>Download Node.js from the Official Website
-                            <ul>
+                    <p onclick="toggleSection('nodejs-windows-list-2', event);" onkeydown="toggleSection('nodejs-windows-list-2', event);" class="magic-invisible">If you need to install Node.js, follow these steps:</p>
+                    <ol id="nodejs-windows-list-2" class="hidden">
+                        <li> <span onclick="toggleSection('nodejs-windows-list-2-1', event);" onkeydown="toggleSection('nodejs-windows-list-2-1', event);" class="magic-invisible">Download Node.js from the Official Website</span>
+                            <ul id="nodejs-windows-list-2-1" class="hidden">
                                 <li>Open your web browser</li>
                                 <li>Go to <a href="https://nodejs.org/" target="_blank" rel="noopener noreferrer">https://nodejs.org/</a></li>
                                 <li>You'll see two download options:
@@ -387,32 +387,32 @@
                                 <li>The file <code>node-v[version]-x64.msi</code> will download (usually to your Downloads folder)</li>
                             </ul>
                         </li>
-                        <li>Run the Installer
-                            <ul>
+                        <li><span onclick="toggleSection('nodejs-windows-list-2-2', event);" onkeydown="toggleSection('nodejs-windows-list-2-2', event);" class="magic-invisible">Run the Installer</span>
+                            <ul id="nodejs-windows-list-2-2" class="hidden">
                                 <li>Open your Downloads folder (press <code>Windows key + E</code>, then click Downloads)</li>
                                 <li>Double-click the Node.js installer file you just downloaded</li>
                                 <li>If Windows asks "Do you want to allow this app to make changes?", click Yes</li>
                             </ul>
                         </li>
-                        <li>Setup Wizard - Welcome
-                            <ul>
+                        <li><span onclick="toggleSection('nodejs-windows-list-2-3', event);" onkeydown="toggleSection('nodejs-windows-list-2-3', event);" class="magic-invisible">Setup Wizard - Welcome</span>
+                            <ul id="nodejs-windows-list-2-3" class="hidden">
                                 <li>Click "Next" on the welcome screen</li>
                             </ul>
                         </li>
-                        <li>Setup Wizard - License Agreement
-                            <ul>
+                        <li><span onclick="toggleSection('nodejs-windows-list-2-4', event);" onkeydown="toggleSection('nodejs-windows-list-2-4', event);" class="magic-invisible">Setup Wizard - License Agreement</span>
+                            <ul id="nodejs-windows-list-2-4" class="hidden">
                                 <li>Check "I accept the terms in the License Agreement"</li>
                                 <li>Click "Next"</li>
                             </ul>
                         </li>
-                        <li>Setup Wizard - Destination Folder
-                            <ul>
+                        <li><span onclick="toggleSection('nodejs-windows-list-2-5', event);" onkeydown="toggleSection('nodejs-windows-list-2-5', event);" class="magic-invisible">Setup Wizard - Destination Folder</span>
+                            <ul id="nodejs-windows-list-2-5" class="hidden">
                                 <li>Default location is fine (usually <code>C:\Program Files\nodejs\</code>)</li>
                                 <li>Click "Next"</li>
                             </ul>
                         </li>
-                        <li>Setup Wizard - Custom Setup
-                            <ul>
+                        <li><span onclick="toggleSection('nodejs-windows-list-2-6', event);" onkeydown="toggleSection('nodejs-windows-list-2-6', event);" class="magic-invisible">Setup Wizard - Custom Setup</span>
+                            <ul id="nodejs-windows-list-2-6" class="hidden">
                                 <li>Keep all default features selected:
                                     <ul>
                                         <li>Node.js runtime</li>
@@ -424,22 +424,22 @@
                                 <li>Click "Next"</li>
                             </ul>
                         </li>
-                        <li>Setup Wizard - Tools for Native Modules
-                            <ul>
+                        <li><span onclick="toggleSection('nodejs-windows-list-2-7', event);" onkeydown="toggleSection('nodejs-windows-list-2-7', event);" class="magic-invisible">Setup Wizard - Tools for Native Modules</span>
+                            <ul id="nodejs-windows-list-2-7" class="hidden">
                                 <li>You can optionally check "Automatically install the necessary tools" (this installs Python and Visual Studio Build Tools)</li>
                                 <li>For basic web development, you can skip this</li>
                                 <li>Click "Next"</li>
                             </ul>
                         </li>
-                        <li>Install
-                            <ul>
+                        <li><span onclick="toggleSection('nodejs-windows-list-2-8', event);" onkeydown="toggleSection('nodejs-windows-list-2-8', event);" class="magic-invisible">Install</span>
+                            <ul id="nodejs-windows-list-2-8" class="hidden">
                                 <li>Click "Install"</li>
                                 <li>Wait for installation to complete (takes about 1-2 minutes)</li>
                                 <li>Click "Finish"</li>
                             </ul>
                         </li>
-                        <li>Verify Installation
-                            <ul>
+                        <li><span onclick="toggleSection('nodejs-windows-list-2-9', event);" onkeydown="toggleSection('nodejs-windows-list-2-9', event);" class="magic-invisible">Verify Installation</span>
+                            <ul id="nodejs-windows-list-2-9" class="hidden">
                                 <li>Close any open Command Prompt windows</li>
                                 <li>Press <code>Windows key + R</code>, type <code>cmd</code>, press Enter</li>
                                 <li>Check Node.js version:
@@ -452,16 +452,16 @@
                                 <li>You should see the npm version number</li>
                             </ul>
                         </li>
-                        <li>Test Node.js (Optional)
-                            <ul>
+                        <li><span onclick="toggleSection('nodejs-windows-list-2-10', event);" onkeydown="toggleSection('nodejs-windows-list-2-10', event);" class="magic-invisible">Test Node.js (Optional)</span>
+                            <ul id="nodejs-windows-list-2-10" class="hidden">
                                 <li>In Command Prompt, type:
                                     <pre><code>node -e "console.log('Node.js is working!')"</code></pre>
                                 </li>
                                 <li>You should see "Node.js is working!" printed</li>
                             </ul>
                         </li>
-                        <li>Create a Simple Test Server (Optional)
-                            <ul>
+                        <li><span onclick="toggleSection('nodejs-windows-list-2-11', event);" onkeydown="toggleSection('nodejs-windows-list-2-11', event);" class="magic-invisible">Create a Simple Test Server (Optional)</span>
+                            <ul id="nodejs-windows-list-2-11" class="hidden">
                                 <li>Create a test folder: <code>mkdir C:\test-nodejs</code></li>
                                 <li>Navigate to it: <code>cd C:\test-nodejs</code></li>
                                 <li>Create a test file:
@@ -485,44 +485,44 @@
                 </div>
                 <h3 class="faq-title">Git</h3>
                 <div id="git-windows">
-                    <p>Check whether Git is already installed:</p>
-                    <ul>
+                    <p><span onclick="toggleSection('git-windows-list-1', event);" onkeydown="toggleSection('git-windows-list-1', event);" class="magic-invisible">Check whether Git is already installed:</span></p>
+                    <ul id="git-windows-list-1" class="hidden">
                         <li>Press <code>Windows key + R</code></li>
                         <li>Type <code>cmd</code> and press Enter to open Command Prompt</li>
                         <li>Type <code>git --version</code> and press Enter</li>
                         <li>If you see a version number, you have it installed. If you get an error message, you need to install it.</li>
                     </ul>
-                    <p>If you need to install Git, follow these steps:</p>
-                    <ol>
-                        <li>Download Git from the Official Website
-                            <ul>
+                    <p><span onclick="toggleSection('git-windows-list-2', event);" onkeydown="toggleSection('git-windows-list-2', event);" class="magic-invisible">If you need to install Git, follow these steps:</span></p>
+                    <ol id="git-windows-list-2" class="hidden">
+                        <li><span onclick="toggleSection('git-windows-list-2-1', event);" onkeydown="toggleSection('git-windows-list-2-1', event);" class="magic-invisible">Download Git from the Official Website</span>
+                            <ul id="git-windows-list-2-1" class="hidden">
                                 <li>Open your web browser</li>
                                 <li>Go to <a href="https://git-scm.com/" target="_blank" rel="noopener noreferrer">https://git-scm.com/</a></li>
                                 <li>Click the "Download for Windows" button</li>
                                 <li>The file <code>Git-[version]-64-bit.exe</code> will download (usually to your Downloads folder)</li>
                             </ul>
                         </li>
-                        <li>Run the Installer
-                            <ul>
+                        <li><span onclick="toggleSection('git-windows-list-2-2', event);" onkeydown="toggleSection('git-windows-list-2-2', event);" class="magic-invisible">Run the Installer</span>
+                            <ul id="git-windows-list-2-2" class="hidden">
                                 <li>Open your Downloads folder (press <code>Windows key + E</code>, then click Downloads)</li>
                                 <li>Double-click the Git installer file you just downloaded</li>
                                 <li>If Windows asks "Do you want to allow this app to make changes?", click Yes</li>
                             </ul>
                         </li>
-                        <li>Setup Wizard - License
-                            <ul>
+                        <li><span onclick="toggleSection('git-windows-list-2-3', event);" onkeydown="toggleSection('git-windows-list-2-3', event);" class="magic-invisible">Setup Wizard - License</span>
+                            <ul id="git-windows-list-2-3" class="hidden">
                                 <li>Read the GNU General Public License</li>
                                 <li>Click Next</li>
                             </ul>
                         </li>
-                        <li>Setup Wizard - Installation Location
-                            <ul>
+                        <li><span onclick="toggleSection('git-windows-list-2-4', event);" onkeydown="toggleSection('git-windows-list-2-4', event);" class="magic-invisible">Setup Wizard - Installation Location</span>
+                            <ul id="git-windows-list-2-4" class="hidden">
                                 <li>Default location is fine (<code>C:\Program Files\Git</code>)</li>
                                 <li>Click Next</li>
                             </ul>
                         </li>
-                        <li>Setup Wizard - Select Components
-                            <ul>
+                        <li><span onclick="toggleSection('git-windows-list-2-5', event);" onkeydown="toggleSection('git-windows-list-2-5', event);" class="magic-invisible">Setup Wizard - Select Components</span>
+                            <ul id="git-windows-list-2-5" class="hidden">
                                 <li>Keep the default selections (recommended):
                                     <ul>
                                         <li>Additional icons (On the Desktop)</li>
@@ -535,26 +535,26 @@
                                 <li>Click Next</li>
                             </ul>
                         </li>
-                        <li>Setup Wizard - Start Menu Folder
-                            <ul>
+                        <li><span onclick="toggleSection('git-windows-list-2-6', event);" onkeydown="toggleSection('git-windows-list-2-6', event);" class="magic-invisible">Setup Wizard - Start Menu Folder</span>
+                            <ul id="git-windows-list-2-6" class="hidden">
                                 <li>Default is fine ("Git")</li>
                                 <li>Click Next</li>
                             </ul>
                         </li>
-                        <li>Setup Wizard - Default Editor
-                            <ul>
+                        <li><span onclick="toggleSection('git-windows-list-2-7', event);" onkeydown="toggleSection('git-windows-list-2-7', event);" class="magic-invisible">Setup Wizard - Default Editor</span>
+                            <ul id="git-windows-list-2-7" class="hidden">
                                 <li>Select "Use Visual Studio Code as Git's default editor" from the dropdown</li>
                                 <li>Click Next</li>
                             </ul>
                         </li>
-                        <li>Setup Wizard - Path Environment
-                            <ul>
+                        <li><span onclick="toggleSection('git-windows-list-2-8', event);" onkeydown="toggleSection('git-windows-list-2-8', event);" class="magic-invisible">Setup Wizard - Path Environment</span>
+                            <ul id="git-windows-list-2-8" class="hidden">
                                 <li>Select "Git from the command line and also from 3rd-party software" (recommended)</li>
                                 <li>Click Next</li>
                             </ul>
                         </li>
-                        <li>Setup Wizard - Remaining Options
-                            <ul>
+                        <li><span onclick="toggleSection('git-windows-list-2-9', event);" onkeydown="toggleSection('git-windows-list-2-9', event);" class="magic-invisible">Setup Wizard - Remaining Options</span>
+                            <ul id="git-windows-list-2-9" class="hidden">
                                 <li>For all remaining screens, keep the default settings</li>
                                 <li>Click Next through each screen</li>
                                 <li>Finally, click Install</li>
@@ -562,8 +562,8 @@
                                 <li>Uncheck "View Release Notes" and click Finish</li>
                             </ul>
                         </li>
-                        <li>Configure Git
-                            <ul>
+                        <li><span onclick="toggleSection('git-windows-list-2-10', event);" onkeydown="toggleSection('git-windows-list-2-10', event);" class="magic-invisible">Configure Git</span>
+                            <ul id="git-windows-list-2-10" class="hidden">
                                 <li>Press <code>Windows key + R</code></li>
                                 <li>Type <code>cmd</code> and press Enter</li>
                                 <li>Set your name (replace "Your Name" with your actual name):
@@ -575,8 +575,8 @@
                                 <li>These settings will be used to identify you in your Git commits</li>
                             </ul>
                         </li>
-                        <li>Verify Installation
-                            <ul>
+                        <li><span onclick="toggleSection('git-windows-list-2-11', event);" onkeydown="toggleSection('git-windows-list-2-11', event);" class="magic-invisible">Verify Installation</span>
+                            <ul id="git-windows-list-2-11" class="hidden">
                                 <li>In the same Command Prompt, type:
                                     <pre><code>git --version</code></pre>
                                 </li>
@@ -597,17 +597,17 @@
                 </div>
                 <h3 class="faq-title">SQLite</h3>
                 <div id="sqlite-windows">
-                    <p>Check whether SQLite is already installed:</p>
-                    <ul>
+                    <p onclick="toggleSection('sqlite-windows-list-0', event);" onkeydown="toggleSection('sqlite-windows-list-0', event);" class="magic-invisible">Check whether SQLite is already installed:</p>
+                    <ul id="sqlite-windows-list-0" class="hidden">
                         <li>Press <code>Windows key + R</code></li>
                         <li>Type <code>cmd</code> and press Enter to open Command Prompt</li>
                         <li>Type <code>sqlite3 --version</code> and press Enter</li>
                         <li>If you see a version number, you have it installed. If you get an error message, you need to install it.</li>
                     </ul>
-                    <p>If you need to install SQLite, follow these steps:</p>
-                    <ol>
-                        <li>Download SQLite from the Official Website
-                            <ul>
+                    <p onclick="toggleSection('sqlite-windows-list-0-2', event);" onkeydown="toggleSection('sqlite-windows-list-0-2', event);" class="magic-invisible">If you need to install SQLite, follow these steps:</p>
+                    <ol id="sqlite-windows-list-0-2" class="hidden">
+                        <li><span onclick="toggleSection('sqlite-windows-list-1', event);" onkeydown="toggleSection('sqlite-windows-list-1', event);" class="magic-invisible">Download SQLite from the Official Website</span>
+                            <ul id="sqlite-windows-list-1" class="hidden">
                                 <li>Open your web browser</li>
                                 <li>Go to <a href="https://www.sqlite.org/download.html" target="_blank" rel="noopener noreferrer">https://www.sqlite.org/download.html</a></li>
                                 <li>Scroll down to the "Precompiled Binaries for Windows" section</li>
@@ -620,15 +620,15 @@
                                 <li>Both files will download to your Downloads folder</li>
                             </ul>
                         </li>
-                        <li>Create SQLite Directory
-                            <ul>
+                        <li><span onclick="toggleSection('sqlite-windows-list-2', event);" onkeydown="toggleSection('sqlite-windows-list-2', event);" class="magic-invisible">Create SQLite Directory</span>
+                            <ul id="sqlite-windows-list-2" class="hidden">
                                 <li>Press <code>Windows key + E</code> to open File Explorer</li>
                                 <li>Navigate to your C: drive</li>
                                 <li>Create a new folder called <code>sqlite</code> (full path: <code>C:\sqlite</code>)</li>
                             </ul>
                         </li>
-                        <li>Extract SQLite Files
-                            <ul>
+                        <li><span onclick="toggleSection('sqlite-windows-list-3', event);" onkeydown="toggleSection('sqlite-windows-list-3', event);" class="magic-invisible">Extract SQLite Files</span>
+                            <ul id="sqlite-windows-list-3" class="hidden">
                                 <li>Go to your Downloads folder</li>
                                 <li>Right-click <code>sqlite-tools-win32-x86-*.zip</code></li>
                                 <li>Select "Extract All..."</li>
@@ -639,8 +639,8 @@
                                 <li>Move all .exe and .dll files from the subfolders directly into <code>C:\sqlite</code></li>
                             </ul>
                         </li>
-                        <li>Add SQLite to System PATH
-                            <ul>
+                        <li><span onclick="toggleSection('sqlite-windows-list-4', event);" onkeydown="toggleSection('sqlite-windows-list-4', event);" class="magic-invisible">Add SQLite to System PATH</span>
+                            <ul id="sqlite-windows-list-4" class="hidden">
                                 <li>Press <code>Windows key</code> and type "environment variables"</li>
                                 <li>Click "Edit the system environment variables"</li>
                                 <li>Click the "Environment Variables" button at the bottom</li>
@@ -651,8 +651,8 @@
                                 <li>Click "OK" on all windows to save</li>
                             </ul>
                         </li>
-                        <li>Verify Installation
-                            <ul>
+                        <li><span onclick="toggleSection('sqlite-windows-list-5', event);" onkeydown="toggleSection('sqlite-windows-list-5', event);" class="magic-invisible">Verify Installation</span>
+                            <ul id="sqlite-windows-list-5" class="hidden">
                                 <li>Close any open Command Prompt windows</li>
                                 <li>Press <code>Windows key + R</code>, type <code>cmd</code>, press Enter</li>
                                 <li>Type:
@@ -661,8 +661,8 @@
                                 <li>You should see the SQLite version number</li>
                             </ul>
                         </li>
-                        <li>Test SQLite (Optional)
-                            <ul>
+                        <li><span onclick="toggleSection('sqlite-windows-list-6', event);" onkeydown="toggleSection('sqlite-windows-list-6', event);" class="magic-invisible">Test SQLite (Optional)</span>
+                            <ul id="sqlite-windows-list-6" class="hidden">
                                 <li>In Command Prompt, type:
                                     <pre><code>sqlite3</code></pre>
                                 </li>
@@ -674,8 +674,8 @@
                                 <li>Type <code>.quit</code> and press Enter to exit SQLite</li>
                             </ul>
                         </li>
-                        <li>Create a Test Database (Optional)
-                            <ul>
+                        <li><span onclick="toggleSection('sqlite-windows-list-7', event);" onkeydown="toggleSection('sqlite-windows-list-7', event);" class="magic-invisible">Create a Test Database (Optional)</span>
+                            <ul id="sqlite-windows-list-7" class="hidden">
                                 <li>In Command Prompt, navigate to a test folder:
                                     <pre><code>mkdir C:\test-sqlite
 cd C:\test-sqlite</code></pre>
@@ -949,14 +949,14 @@ SELECT * FROM users;</code></pre>
                 </div>
                 <h3 class="faq-title">Visual Studio Code</h3>
                 <div id="vsc-macos">
-                    <p>Check whether Visual Studio Code is already installed:</p>
-                    <ul>
+                    <p onclick="toggleSection('vsc-macos-list-1', event);" onkeydown="toggleSection('vsc-macos-list-1', event);" class="magic-invisible">Check whether Visual Studio Code is already installed:</p>
+                    <ul id="vsc-macos-list-1" class="hidden">
                         <li>Open Finder</li>
                         <li>Go to the Applications folder</li>
                         <li>If you see Visual Studio Code.app, you have it installed. If not, you need to install it.</li>
                     </ul>
-                    <p>If you need to install Visual Studio Code, follow these steps:</p>
-                    <ol>
+                    <p onclick="toggleSection('vsc-macos-list-2', event);" onkeydown="toggleSection('vsc-macos-list-2', event);" class="magic-invisible">If you need to install Visual Studio Code, follow these steps:</p>
+                    <ol id="vsc-macos-list-2" class="hidden">
                         <li>
                             <strong>Download VS Code from the Official Website</strong>
                             <ul>
@@ -1028,14 +1028,14 @@ SELECT * FROM users;</code></pre>
                 </div>
                 <h3 class="faq-title">Mozilla Firefox</h3>
                 <div id="firefox-macos">
-                    <p>Check whether Firefox is already installed:</p>
-                    <ul>
+                    <p onclick="toggleSection('firefox-macos-list-1', event);" onkeydown="toggleSection('firefox-macos-list-1', event);" class="magic-invisible">Check whether Firefox is already installed:</p>
+                    <ul id="firefox-macos-list-1" class="hidden">
                         <li>Open Finder</li>
                         <li>Go to the Applications folder</li>
                         <li>If you see Firefox.app, you have it installed. If not, you need to install it.</li>
                     </ul>
-                    <p>If you need to install Firefox, follow these steps:</p>
-                    <ol>
+                    <p onclick="toggleSection('firefox-macos-list-2', event);" onkeydown="toggleSection('firefox-macos-list-2', event);" class="magic-invisible">If you need to install Firefox, follow these steps:</p>
+                    <ol id="firefox-macos-list-2" class="hidden">
                         <li>
                             <strong>Download Firefox from the Official Website</strong>
                             <ul>
@@ -1106,13 +1106,13 @@ SELECT * FROM users;</code></pre>
                 </div>
                 <h3 class="faq-title">Node.js</h3>
                 <div id="nodejs-macos">
-                    <p>Check whether Node.js is already installed:</p>
-                    <ul>
+                    <p onclick="toggleSection('nodejs-macos-list-1', event);" onkeydown="toggleSection('nodejs-macos-list-1', event);" class="magic-invisible">Check whether Node.js is already installed:</p>
+                    <ul id="nodejs-macos-list-1" class="hidden">
                         <li>Open Terminal (<code>Command + Space</code>, type "Terminal")</li>
                         <li>Type <code>node --version</code> and press Enter</li>
                         <li>If you see a version number, you have Node.js installed.</li>
                     </ul>
-                    <p>If you need to install Node.js, you have two options:</p>
+                    <p onclick="toggleSection('nodejs-macos-list-2', event);" onkeydown="toggleSection('nodejs-macos-list-2', event);" class="magic-invisible">If you need to install Node.js, you have two options:</p>
 
                     <h4>Option 1: Download from Official Website (Recommended for Beginners)</h4>
                     <ol>
@@ -1228,8 +1228,8 @@ SELECT * FROM users;</code></pre>
                 </div>
                 <h3 class="faq-title">Git</h3>
                 <div id="git-macos">
-                    <p>Check whether Git is already installed:</p>
-                    <ul>
+                    <p onclick="toggleSection('git-macos-list-1', event);" onkeydown="toggleSection('git-macos-list-1', event);" class="magic-invisible">Check whether Git is already installed:</p>
+                    <ul id="git-macos-list-1" class="hidden">
                         <li>Open Terminal (<code>Command + Space</code>, type "Terminal")</li>
                         <li>Type <code>git --version</code> and press Enter</li>
                         <li>If you see a version number, you have it installed. If you get a popup asking to install Command Line Developer Tools, you need to install Git.</li>
@@ -1334,8 +1334,8 @@ SELECT * FROM users;</code></pre>
                 </div>
                 <h3 class="faq-title">SQLite</h3>
                 <div id="sqlite-macos">
-                    <p>Check whether SQLite is already installed:</p>
-                    <ul>
+                    <p onclick="toggleSection('sqlite-macos-list-1', event);" onkeydown="toggleSection('sqlite-macos-list-1', event);" class="magic-invisible">Check whether SQLite is already installed:</p>
+                    <ul id="sqlite-macos-list-1" class="hidden">
                         <li>Open Terminal (<code>Command + Space</code>, type "Terminal")</li>
                         <li>Type <code>sqlite3 --version</code> and press Enter</li>
                         <li>If you see a version number, you have it installed.</li>
@@ -1678,16 +1678,16 @@ SELECT * FROM users;</code></pre>
                 </div>
                 <h3 class="faq-title">Visual Studio Code</h3>
                 <div id="vsc-linux">
-                    <p>Check whether Visual Studio Code is already installed:</p>
-                    <ul>
+                    <p onclick="toggleSection('vsc-linux-list-1', event);" onkeydown="toggleSection('vsc-linux-list-1', event);" class="magic-invisible">Check whether Visual Studio Code is already installed:</p>
+                    <ul id="vsc-linux-list-1" class="hidden">
                         <li>Open Terminal (usually <code>Ctrl + Alt + T</code>)</li>
                         <li>Type <code>code --version</code> and press Enter</li>
                         <li>If you see a version number, you have it installed. If you get a "command not found" error, you need to install it.</li>
                     </ul>
 
                     <h4>Ubuntu / Debian-based Linux</h4>
-                    <p>If you need to install Visual Studio Code on Ubuntu, follow these steps:</p>
-                    <ol>
+                    <p onclick="toggleSection('vsc-linux-ubuntu-list', event);" onkeydown="toggleSection('vsc-linux-ubuntu-list', event);" class="magic-invisible">If you need to install Visual Studio Code on Ubuntu, follow these steps:</p>
+                    <ol id="vsc-linux-ubuntu-list" class="hidden">
                         <li>
                             <strong>Download and Import Microsoft GPG Key</strong>
                             <ul>
@@ -1729,8 +1729,8 @@ sudo install -D -o root -g root -m 644 packages.microsoft.gpg /etc/apt/keyrings/
                     </ol>
 
                     <h4>Fedora / Red Hat-based Linux</h4>
-                    <p>If you need to install Visual Studio Code on Fedora, follow these steps:</p>
-                    <ol>
+                    <p onclick="toggleSection('vsc-linux-fedora-list', event);" onkeydown="toggleSection('vsc-linux-fedora-list', event);" class="magic-invisible">If you need to install Visual Studio Code on Fedora, follow these steps:</p>
+                    <ol id="vsc-linux-fedora-list" class="hidden">
                         <li>
                             <strong>Import Microsoft GPG Key</strong>
                             <ul>
@@ -1815,16 +1815,16 @@ sudo apt-get install -f</code></pre>
                 </div>
                 <h3 class="faq-title">Mozilla Firefox</h3>
                 <div id="firefox-linux">
-                    <p>Check whether Firefox is already installed:</p>
-                    <ul>
+                    <p onclick="toggleSection('firefox-linux-list-1', event);" onkeydown="toggleSection('firefox-linux-list-1', event);" class="magic-invisible">Check whether Firefox is already installed:</p>
+                    <ul id="firefox-linux-list-1" class="hidden">
                         <li>Open Terminal (usually <code>Ctrl + Alt + T</code>)</li>
                         <li>Type <code>firefox --version</code> and press Enter</li>
                         <li>If you see a version number, you have it installed. If you get a "command not found" error, you need to install it.</li>
                     </ul>
 
                     <h4>Ubuntu / Debian-based Linux</h4>
-                    <p>If you need to install Firefox on Ubuntu, follow these steps:</p>
-                    <ol>
+                    <p onclick="toggleSection('firefox-linux-ubuntu-list', event);" onkeydown="toggleSection('firefox-linux-ubuntu-list', event);" class="magic-invisible">If you need to install Firefox on Ubuntu, follow these steps:</p>
+                    <ol id="firefox-linux-ubuntu-list" class="hidden">
                         <li>
                             <strong>Update Package List</strong>
                             <ul>
@@ -1856,8 +1856,8 @@ sudo apt-get install -f</code></pre>
                     </ol>
 
                     <h4>Fedora / Red Hat-based Linux</h4>
-                    <p>If you need to install Firefox on Fedora, follow these steps:</p>
-                    <ol>
+                    <p onclick="toggleSection('firefox-linux-fedora-list', event);" onkeydown="toggleSection('firefox-linux-fedora-list', event);" class="magic-invisible">If you need to install Firefox on Fedora, follow these steps:</p>
+                    <ol id="firefox-linux-fedora-list" class="hidden">
                         <li>
                             <strong>Install Firefox</strong>
                             <ul>
@@ -1883,8 +1883,8 @@ sudo apt-get install -f</code></pre>
                     </ol>
 
                     <h4>Arch Linux</h4>
-                    <p>If you need to install Firefox on Arch Linux, follow these steps:</p>
-                    <ol>
+                    <p onclick="toggleSection('firefox-linux-arch-list', event);" onkeydown="toggleSection('firefox-linux-arch-list', event);" class="magic-invisible">If you need to install Firefox on Arch Linux, follow these steps:</p>
+                    <ol id="firefox-linux-arch-list" class="hidden">
                         <li>
                             <strong>Install Firefox</strong>
                             <ul>
@@ -1956,16 +1956,16 @@ sudo apt-get install -f</code></pre>
                 </div>
                 <h3 class="faq-title">Node.js</h3>
                 <div id="nodejs-linux">
-                    <p>Check whether Node.js is already installed:</p>
-                    <ul>
+                    <p onclick="toggleSection('nodejs-linux-list-1', event);" onkeydown="toggleSection('nodejs-linux-list-1', event);" class="magic-invisible">Check whether Node.js is already installed:</p>
+                    <ul id="nodejs-linux-list-1" class="hidden">
                         <li>Open Terminal (usually <code>Ctrl + Alt + T</code>)</li>
                         <li>Type <code>node --version</code> and press Enter</li>
                         <li>If you see a version number, you have it installed. If you get a "command not found" error, you need to install it.</li>
                     </ul>
 
                     <h4>Ubuntu / Debian-based Linux</h4>
-                    <p>If you need to install Node.js on Ubuntu, follow these steps:</p>
-                    <ol>
+                    <p onclick="toggleSection('nodejs-linux-ubuntu-list', event);" onkeydown="toggleSection('nodejs-linux-ubuntu-list', event);" class="magic-invisible">If you need to install Node.js on Ubuntu, follow these steps:</p>
+                    <ol id="nodejs-linux-ubuntu-list" class="hidden">
                         <li>
                             <strong>Install Node.js via NodeSource Repository (Recommended)</strong>
                             <ul>
@@ -1999,8 +1999,8 @@ sudo apt install nodejs npm</code></pre>
                     </ol>
 
                     <h4>Fedora / Red Hat-based Linux</h4>
-                    <p>If you need to install Node.js on Fedora:</p>
-                    <ol>
+                    <p onclick="toggleSection('nodejs-linux-fedora-list', event);" onkeydown="toggleSection('nodejs-linux-fedora-list', event);" class="magic-invisible">If you need to install Node.js on Fedora:</p>
+                    <ol id="nodejs-linux-fedora-list" class="hidden">
                         <li>
                             <strong>Install Node.js</strong>
                             <ul>
@@ -2017,8 +2017,8 @@ sudo apt install nodejs npm</code></pre>
                     </ol>
 
                     <h4>Arch Linux</h4>
-                    <p>If you're using Arch Linux:</p>
-                    <ol>
+                    <p onclick="toggleSection('nodejs-linux-arch-list', event);" onkeydown="toggleSection('nodejs-linux-arch-list', event);" class="magic-invisible">If you're using Arch Linux:</p>
+                    <ol id="nodejs-linux-arch-list" class="hidden">
                         <li>
                             <strong>Install Node.js</strong>
                             <ul>
@@ -2108,16 +2108,16 @@ sudo apt install nodejs npm</code></pre>
                 </div>
                 <h3 class="faq-title">Git</h3>
                 <div id="git-linux">
-                    <p>Check whether Git is already installed:</p>
-                    <ul>
+                    <p onclick="toggleSection('git-linux-list-1', event);" onkeydown="toggleSection('git-linux-list-1', event);" class="magic-invisible">Check whether Git is already installed:</p>
+                    <ul id="git-linux-list-1" class="hidden">
                         <li>Open Terminal (usually <code>Ctrl + Alt + T</code>)</li>
                         <li>Type <code>git --version</code> and press Enter</li>
                         <li>If you see a version number, you have it installed. If you get a "command not found" error, you need to install it.</li>
                     </ul>
 
                     <h4>Ubuntu / Debian-based Linux</h4>
-                    <p>If you need to install Git on Ubuntu, follow these steps:</p>
-                    <ol>
+                    <p onclick="toggleSection('git-linux-ubuntu-list', event);" onkeydown="toggleSection('git-linux-ubuntu-list', event);" class="magic-invisible">If you need to install Git on Ubuntu, follow these steps:</p>
+                    <ol id="git-linux-ubuntu-list" class="hidden">
                         <li>
                             <strong>Update Package List</strong>
                             <ul>
@@ -2141,8 +2141,8 @@ sudo apt install nodejs npm</code></pre>
                     </ol>
 
                     <h4>Fedora / Red Hat-based Linux</h4>
-                    <p>If you need to install Git on Fedora, follow these steps:</p>
-                    <ol>
+                    <p onclick="toggleSection('git-linux-fedora-list', event);" onkeydown="toggleSection('git-linux-fedora-list', event);" class="magic-invisible">If you need to install Git on Fedora, follow these steps:</p>
+                    <ol id="git-linux-fedora-list" class="hidden">
                         <li>
                             <strong>Install Git</strong>
                             <ul>
@@ -2160,8 +2160,8 @@ sudo apt install nodejs npm</code></pre>
                     </ol>
 
                     <h4>Arch Linux</h4>
-                    <p>If you're using Arch Linux:</p>
-                    <ol>
+                    <p onclick="toggleSection('git-linux-arch-list', event);" onkeydown="toggleSection('git-linux-arch-list', event);" class="magic-invisible">If you're using Arch Linux:</p>
+                    <ol id="git-linux-arch-list" class="hidden">
                         <li>
                             <strong>Install Git</strong>
                             <ul>
@@ -2217,8 +2217,8 @@ sudo apt install nodejs npm</code></pre>
                 </div>
                 <h3 class="faq-title">SQLite</h3>
                 <div id="sqlite-linux">
-                    <p>Check whether SQLite is already installed:</p>
-                    <ul>
+                    <p onclick="toggleSection('sqlite-linux-list-1', event);" onkeydown="toggleSection('sqlite-linux-list-1', event);" class="magic-invisible">Check whether SQLite is already installed:</p>
+                    <ul id="sqlite-linux-list-1" class="hidden">
                         <li>Open Terminal (usually <code>Ctrl + Alt + T</code>)</li>
                         <li>Type <code>sqlite3 --version</code> and press Enter</li>
                         <li>If you see a version number, you have it installed. If you get a "command not found" error, you need to install it.</li>
@@ -2226,8 +2226,8 @@ sudo apt install nodejs npm</code></pre>
                     <p><strong>Note:</strong> Many Linux distributions come with SQLite pre-installed, but if not, it's easy to install.</p>
 
                     <h4>Ubuntu / Debian-based Linux</h4>
-                    <p>If you need to install SQLite on Ubuntu, follow these steps:</p>
-                    <ol>
+                    <p onclick="toggleSection('sqlite-linux-ubuntu-list', event);" onkeydown="toggleSection('sqlite-linux-ubuntu-list', event);" class="magic-invisible">If you need to install SQLite on Ubuntu, follow these steps:</p>
+                    <ol id="sqlite-linux-ubuntu-list" class="hidden">
                         <li>
                             <strong>Update Package List</strong>
                             <ul>
@@ -2259,8 +2259,8 @@ sudo apt install nodejs npm</code></pre>
                     </ol>
 
                     <h4>Fedora / Red Hat-based Linux</h4>
-                    <p>If you need to install SQLite on Fedora, follow these steps:</p>
-                    <ol>
+                    <p onclick="toggleSection('sqlite-linux-fedora-list', event);" onkeydown="toggleSection('sqlite-linux-fedora-list', event);" class="magic-invisible">If you need to install SQLite on Fedora, follow these steps:</p>
+                    <ol id="sqlite-linux-fedora-list" class="hidden">
                         <li>
                             <strong>Install SQLite</strong>
                             <ul>
@@ -2289,8 +2289,8 @@ sudo apt install nodejs npm</code></pre>
                     </ol>
 
                     <h4>Arch Linux</h4>
-                    <p>If you're using Arch Linux:</p>
-                    <ol>
+                    <p onclick="toggleSection('sqlite-linux-arch-list', event);" onkeydown="toggleSection('sqlite-linux-arch-list', event);" class="magic-invisible">If you're using Arch Linux:</p>
+                    <ol id="sqlite-linux-arch-list" class="hidden">
                         <li>
                             <strong>Install SQLite</strong>
                             <ul>

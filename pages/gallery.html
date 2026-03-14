@@ -75,10 +75,22 @@
         <!-- Header content is injected by JavaScript to ensure it is the same across all pages -->
     </header>
     <main>
-        <h2 class="page-title">Gallery of Witches and Wizards</h2>
-        <section id="gallery" class="gallery">
-            <div class="gallery-container">
-                <div class="gallery-item">
+        <h2 class="page-title">Galleries</h2>
+        <h3>Portraits of Witches and Wizards</h3>
+        <p>Here are the portraits of various witches and wizards you can choose for your avatar.</p>
+        <section id="portrait-gallery" class="gallery">
+            <!-- Radio buttons to control which portrait is shown -->
+            <input type="radio" name="portrait" id="portrait-1" checked>
+            <input type="radio" name="portrait" id="portrait-2">
+            <input type="radio" name="portrait" id="portrait-3">
+            <input type="radio" name="portrait" id="portrait-4">
+            <input type="radio" name="portrait" id="portrait-5">
+            <input type="radio" name="portrait" id="portrait-6">
+            <input type="radio" name="portrait" id="portrait-7">
+            <input type="radio" name="portrait" id="portrait-8">
+
+            <ul class="gallery-carousel">
+                <li class="gallery-item">
                     <img
                         src="../images/portraits/rachel-mulligan-witch-old-female.png"
                         alt="Portrait of an old female witch"
@@ -87,9 +99,9 @@
                     <h3>
                         An old female witch
                     </h3>
-                </div>
+                </li>
 
-                <div class="gallery-item">
+                <li class="gallery-item">
                     <img
                         src="../images/portraits/rachel-mulligan-witch-young-female.png"
                         alt="Portrait of a young female witch"
@@ -98,9 +110,9 @@
                     <h3>
                         A young female witch
                     </h3>
-                </div>
+                </li>
 
-                <div class="gallery-item">
+                <li class="gallery-item">
                     <img
                         src="../images/portraits/rachel-mulligan-witch-old-male.png"
                         alt="Portrait of an old male witch"
@@ -109,9 +121,9 @@
                     <h3>
                         An old male witch
                     </h3>
-                </div>
+                </li>
 
-                <div class="gallery-item">
+                <li class="gallery-item">
                     <img
                         src="../images/portraits/rachel-mulligan-witch-young-male.png"
                         alt="Portrait of a young male witch"
@@ -120,9 +132,9 @@
                     <h3>
                         A young male witch
                     </h3>
-                </div>
+                </li>
 
-                <div class="gallery-item">
+                <li class="gallery-item">
                     <img
                         src="../images/portraits/rachel-mulligan-wizard-old-female.png"
                         alt="Portrait of an old female wizard"
@@ -131,9 +143,9 @@
                     <h3>
                         An old female wizard
                     </h3>
-                </div>
+                </li>
 
-                <div class="gallery-item">
+                <li class="gallery-item">
                     <img
                         src="../images/portraits/rachel-mulligan-wizard-young-female.png"
                         alt="Portrait of a young female wizard"
@@ -142,9 +154,9 @@
                     <h3>
                         A young female wizard
                     </h3>
-                </div>
+                </li>
 
-                <div class="gallery-item">
+                <li class="gallery-item">
                     <img
                         src="../images/portraits/rachel-mulligan-wizard-old-male.png"
                         alt="Portrait of an old male wizard "
@@ -153,9 +165,9 @@
                     <h3>
                         An old male wizard
                     </h3>
-                </div>
+                </li>
 
-                <div class="gallery-item">
+                <li class="gallery-item">
                     <img
                         src="../images/portraits/rachel-mulligan-wizard-young-male.png"
                         alt="Portrait of a young male wizard"
@@ -164,8 +176,584 @@
                     <h3>
                         A young male wizard
                     </h3>
-                </div>
-            </div>
+                </li>
+            </ul>
+
+            <!-- Navigation buttons for portrait 1 -->
+            <label for="portrait-2" class="gallery-nav-btn gallery-next nav-for-portrait-1" aria-label="Next image">
+                <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+            </label>
+
+            <!-- Navigation buttons for portrait 2 -->
+            <label for="portrait-1" class="gallery-nav-btn gallery-prev nav-for-portrait-2" aria-label="Previous image">
+                <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+            </label>
+            <label for="portrait-3" class="gallery-nav-btn gallery-next nav-for-portrait-2" aria-label="Next image">
+                <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+            </label>
+
+            <!-- Navigation buttons for portrait 3 -->
+            <label for="portrait-2" class="gallery-nav-btn gallery-prev nav-for-portrait-3" aria-label="Previous image">
+                <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+            </label>
+            <label for="portrait-4" class="gallery-nav-btn gallery-next nav-for-portrait-3" aria-label="Next image">
+                <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+            </label>
+
+            <!-- Navigation buttons for portrait 4 -->
+            <label for="portrait-3" class="gallery-nav-btn gallery-prev nav-for-portrait-4" aria-label="Previous image">
+                <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+            </label>
+            <label for="portrait-5" class="gallery-nav-btn gallery-next nav-for-portrait-4" aria-label="Next image">
+                <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+            </label>
+
+            <!-- Navigation buttons for portrait 5 -->
+            <label for="portrait-4" class="gallery-nav-btn gallery-prev nav-for-portrait-5" aria-label="Previous image">
+                <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+            </label>
+            <label for="portrait-6" class="gallery-nav-btn gallery-next nav-for-portrait-5" aria-label="Next image">
+                <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+            </label>
+
+            <!-- Navigation buttons for portrait 6 -->
+            <label for="portrait-5" class="gallery-nav-btn gallery-prev nav-for-portrait-6" aria-label="Previous image">
+                <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+            </label>
+            <label for="portrait-7" class="gallery-nav-btn gallery-next nav-for-portrait-6" aria-label="Next image">
+                <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+            </label>
+
+            <!-- Navigation buttons for portrait 7 -->
+            <label for="portrait-6" class="gallery-nav-btn gallery-prev nav-for-portrait-7" aria-label="Previous image">
+                <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+            </label>
+            <label for="portrait-8" class="gallery-nav-btn gallery-next nav-for-portrait-7" aria-label="Next image">
+                <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+            </label>
+
+            <!-- Navigation buttons for portrait 8 -->
+            <label for="portrait-7" class="gallery-nav-btn gallery-prev nav-for-portrait-8" aria-label="Previous image">
+                <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+            </label>
+        </section>
+
+        <!-- Accessories Gallery -->
+        <section class="gallery accessories-gallery">
+            <h2>Accessories</h2>
+            <p class="intro-text">
+                All witches and wizards need their magical accessories to help them perform their craft effectively. In Terry Pratchett&rsquo;s Discworld series, witches and wizards can stock up on essentials from Boffo&rsquo;s Novelty and Joke Shop in Ankh-Morpork. Beware, though. The magic items may look stunning, but they often have unexpected side effects, if they work at all.
+            </p>
+            <p class="intro-text">
+                <strong>But</strong>, if you absolutely must accessorise your witch or wizard, then here is a selection of hand picked items for the discerning magical shopper to consider:
+            </p>
+            <p class="intro-text">
+                When you are using these accessories in your web pages, the catalogue number is the file name you use to reference the image.
+            </p>
+
+            <!-- Radio buttons for carousel state -->
+            <input type="radio" name="accessory-carousel" id="accessory-1" checked>
+            <input type="radio" name="accessory-carousel" id="accessory-2">
+            <input type="radio" name="accessory-carousel" id="accessory-3">
+            <input type="radio" name="accessory-carousel" id="accessory-4">
+            <input type="radio" name="accessory-carousel" id="accessory-5">
+            <input type="radio" name="accessory-carousel" id="accessory-6">
+            <input type="radio" name="accessory-carousel" id="accessory-7">
+            <input type="radio" name="accessory-carousel" id="accessory-8">
+            <input type="radio" name="accessory-carousel" id="accessory-9">
+            <input type="radio" name="accessory-carousel" id="accessory-10">
+            <input type="radio" name="accessory-carousel" id="accessory-11">
+            <input type="radio" name="accessory-carousel" id="accessory-12">
+            <input type="radio" name="accessory-carousel" id="accessory-13">
+            <input type="radio" name="accessory-carousel" id="accessory-14">
+            <input type="radio" name="accessory-carousel" id="accessory-15">
+            <input type="radio" name="accessory-carousel" id="accessory-16">
+            <input type="radio" name="accessory-carousel" id="accessory-17">
+            <input type="radio" name="accessory-carousel" id="accessory-18">
+            <input type="radio" name="accessory-carousel" id="accessory-19">
+            <input type="radio" name="accessory-carousel" id="accessory-20">
+            <input type="radio" name="accessory-carousel" id="accessory-21">
+
+            <ul class="gallery-carousel">
+                <li class="carousel-item">
+                    <img
+                        src="../images/fontawesome/wand-magic-duotone-regular-full.svg"
+                        alt="An icon of a magic wand"
+                        class="accessory-image"
+                    >
+                    <h3 class="accessory-name">Magic Wand</h3>
+                    <p class="accessory-description">
+                        A basic wand to cast your spells with.
+                    </p>
+                    <hr>
+                    <p class="catalogue-number">
+                        Catalogue number: <strong>wand-magic-duotone-regular-full.svg</strong>
+                    </p>
+                </li>
+                <li class="carousel-item">
+                    <img
+                        src="../images/fontawesome/wand-magic-sparkles-sharp-duotone-regular-full.svg"
+                        alt="An icon of a magic wand with sparkles"
+                        class="accessory-image"
+                    >
+                    <h3 class="accessory-name">Faulty Magic Wand</h3>
+                    <p class="accessory-description">
+                        Special Offer. This wand constantly leaks magic and may not cast spells exactly as intended.
+                    </p>
+                    <hr>
+                    <p class="catalogue-number">
+                        Catalogue number: <strong>wand-magic-sparkles-sharp-duotone-regular-full.svg</strong>
+                    </p>
+                </li>
+                <li class="carousel-item">
+                    <img
+                        src="../images/fontawesome/hat-witch-solid-full.svg"
+                        alt="An icon of a black witch&rsquo;s hat"
+                        class="accessory-image"
+                    >
+                    <h3 class="accessory-name">Witch&rsquo;s Hat</h3>
+                    <p class="accessory-description">
+                        A classic black hat for any witch.
+                    </p>
+                    <hr>
+                    <p class="catalogue-number">
+                        Catalogue number: <strong>hat-witch-solid-full.svg</strong>
+                    </p>
+                </li>
+                <li class="carousel-item">
+                    <img
+                        src="../images/fontawesome/hat-wizard-duotone-solid-full.svg"
+                        alt="An icon of a pointy wizard&rsquo;s hat"
+                        class="accessory-image"
+                    >
+                    <h3 class="accessory-name">Wizard&rsquo;s Hat</h3>
+                    <p class="accessory-description">
+                        A pointy hat with stars for the discerning wizard about town.
+                    </p>
+                    <hr>
+                    <p class="catalogue-number">
+                        Catalogue number: <strong>hat-wizard-duotone-solid-full.svg</strong>
+                    </p>
+                </li>
+                <li class="carousel-item">
+                    <img
+                        src="../images/fontawesome/hat-witch-sharp-duotone-regular-full.svg"
+                        alt="An icon of a superior witch&rsquo;s hat"
+                        class="accessory-image"
+                    >
+                    <h3 class="accessory-name">Superior Witch&rsquo;s Hat</h3>
+                    <p class="accessory-description">
+                        When the plain black hat just won&rsquo;t do.
+                    </p>
+                    <hr>
+                    <p class="catalogue-number">
+                        Catalogue number: <strong>hat-witch-sharp-duotone-regular-full.svg</strong>
+                    </p>
+                </li>
+                <li class="carousel-item">
+                    <img
+                        src="../images/fontawesome/broom-duotone-light-full.svg"
+                        alt="An icon of a broomstick"
+                        class="accessory-image"
+                    >
+                    <h3 class="accessory-name">Broomstick</h3>
+                    <p class="accessory-description">
+                        A lightweight and portable broomstick for any witch or wizard who needs to get around quickly. Can also be used for sweeping dusty floors.
+                    </p>
+                    <hr>
+                    <p class="catalogue-number">
+                        Catalogue number: <strong>broom-duotone-light-full.svg</strong>
+                    </p>
+                </li>
+                <li class="carousel-item">
+                    <img
+                        src="../images/fontawesome/broom-wide-duotone-regular-full.svg"
+                        alt="An icon of a heavy duty broomstick"
+                        class="accessory-image"
+                    >
+                    <h3 class="accessory-name">Heavy Duty Broomstick</h3>
+                    <p class="accessory-description">
+                        A sturdy broomstick for those tough cleaning jobs or long-distance flying. Maximum capacity 2 persons (or 1 wizard if they are of a generous dimension) and a small animal familiar, not including owls as they can fly alongside.
+                    </p>
+                    <hr>
+                    <p class="catalogue-number">
+                        Catalogue number: <strong>broom-wide-duotone-regular-full.svg</strong>
+                    </p>
+                </li>
+                <li class="carousel-item">
+                    <img
+                        src="../images/fontawesome/cauldron-duotone-light-full.svg"
+                        alt="An icon of a cauldron"
+                        class="accessory-image"
+                    >
+                    <h3 class="accessory-name">Cauldron</h3>
+                    <p class="accessory-description">
+                        Perfect for brewing potions and magical concoctions. Can be used as a washing up bowl in an emergency. Please wash thoroughly after use.
+                    </p>
+                    <hr>
+                    <p class="catalogue-number">
+                        Catalogue number: <strong>cauldron-duotone-light-full.svg</strong>
+                    </p>
+                </li>
+                <li class="carousel-item">
+                    <img
+                        src="../images/fontawesome/flask-round-potion-duotone-light-full.svg"
+                        alt="An icon of a potion flask"
+                        class="accessory-image"
+                    >
+                    <h3 class="accessory-name">Potion Flask</h3>
+                    <p class="accessory-description">
+                        A handy flask for holding potions and magical elixirs. Comes with a secure stopper to prevent spills.
+                    </p>
+                    <hr>
+                    <p class="catalogue-number">
+                        Catalogue number: <strong>flask-round-potion-duotone-light-full.svg</strong>
+                    </p>
+                </li>
+                <li class="carousel-item">
+                    <img
+                        src="../images/fontawesome/book-spine-duotone-regular-full.svg"
+                        alt="An icon of a spell book"
+                        class="accessory-image"
+                    >
+                    <h3 class="accessory-name">Spell Book</h3>
+                    <p class="accessory-description">
+                        A well thumbed book containing spells for all occasions. Packed with a variety of enchantments and charms for all skill levels. This edition comes with an appendix of magical curses suitable for advanced practitioners who need to curse at someone.
+                    </p>
+                    <hr>
+                    <p class="catalogue-number">
+                        Catalogue number: <strong>book-spine-duotone-regular-full.svg</strong>
+                    </p>
+                </li>
+                <li class="carousel-item">
+                    <img
+                        src="../images/fontawesome/book-open-lines-duotone-regular-full.svg"
+                        alt="An icon of an open spell book"
+                        class="accessory-image"
+                    >
+                    <h3 class="accessory-name">Ever Open Spell Book</h3>
+                    <p class="accessory-description">
+                        Does your spell book ever close just when you get to the important part? This enchanted tome keeps it open for easy reference. N.B. Cannot be stored on a book shelf as it will not close properly.
+                    </p>
+                    <hr>
+                    <p class="catalogue-number">
+                        Catalogue number: <strong>book-open-lines-duotone-regular-full.svg</strong>
+                    </p>
+                </li>
+                <li class="carousel-item">
+                    <img
+                        src="../images/fontawesome/candle-holder-duotone-light-full.svg"
+                        alt="An icon of a candle holder"
+                        class="accessory-image"
+                    >
+                    <h3 class="accessory-name">Mystic Candle Holder</h3>
+                    <p class="accessory-description">
+                        A candle holder for casting spells at night and creating ambiance during special rituals. Comes with assorted magical candles. Black dribbly candles for evil rites sold separately.
+                    </p>
+                    <hr>
+                    <p class="catalogue-number">
+                        Catalogue number: <strong>candle-holder-duotone-light-full.svg</strong>
+                    </p>
+                </li>
+                <li class="carousel-item">
+                    <img
+                        src="../images/fontawesome/cloud-bolt-sharp-duotone-light-full.svg"
+                        alt="An icon of a lightning cloud"
+                        class="accessory-image"
+                    >
+                    <h3 class="accessory-name">Portable Thunderbolt</h3>
+                    <p class="accessory-description">
+                        Useful for summoning thunderstorms on dry days or smiting your enemies. Batteries not included.
+                    </p>
+                    <hr>
+                    <p class="catalogue-number">
+                        Catalogue number: <strong>cloud-bolt-sharp-duotone-light-full.svg</strong>
+                    </p>
+                </li>
+                <li class="carousel-item">
+                    <img
+                        src="../images/fontawesome/cat-duotone-light-full.svg"
+                        alt="An icon of a cat"
+                        class="accessory-image"
+                    >
+                    <h3 class="accessory-name">Cat Familiar</h3>
+                    <p class="accessory-description">
+                        <strong>Part of our Fun Familiars range.</strong> A friendly cat suitable for any witch. Comes in any colour you like as long as it&rsquo;s black.
+                    </p>
+                    <hr>
+                    <p class="catalogue-number">
+                        Catalogue number: <strong>cat-duotone-light-full.svg</strong>
+                    </p>
+                </li>
+                <li class="carousel-item">
+                    <img
+                        src="../images/fontawesome/bat-duotone-light-full.svg"
+                        alt="An icon of a bat"
+                        class="accessory-image"
+                    >
+                    <h3 class="accessory-name">Bat Familiar</h3>
+                    <p class="accessory-description">
+                        <strong>Part of our Fun Familiars range.</strong> A sinister bat for any wizard. The manual states that it drinks blood, but in fact any red coloured liquid will do. Squeaks at night.
+                    </p>
+                    <hr>
+                    <p class="catalogue-number">
+                        Catalogue number: <strong>bat-duotone-light-full.svg</strong>
+                    </p>
+                </li>
+                <li class="carousel-item">
+                    <img
+                        src="../images/fontawesome/crow-duotone-solid-full.svg"
+                        alt="An icon of a raven"
+                        class="accessory-image"
+                    >
+                    <h3 class="accessory-name">Raven Familiar</h3>
+                    <p class="accessory-description">
+                        <strong>Part of our Fun Familiars range.</strong> A wise old bird for any wizard or witch. Known for its intelligence and dry wit. Only one previous owner who taught it to say &ldquo;Nevermore&rdquo; and now it won&rsquo;t stop.
+                    </p>
+                    <hr>
+                    <p class="catalogue-number">
+                        Catalogue number: <strong>crow-duotone-solid-full.svg</strong>
+                    </p>
+                </li>
+                <li class="carousel-item">
+                    <img
+                        src="../images/fontawesome/dragon-solid-full.svg"
+                        alt="An icon of a small black dragon"
+                        class="accessory-image"
+                    >
+                    <h3 class="accessory-name">Black Dragon Familiar</h3>
+                    <p class="accessory-description">
+                        <strong>Part of our Fun Familiars range.</strong> A small black dragon. Breathes fire when angry or upset. Requires regular feeding with coal. Handle with care as it has a tendency to explode when startled.
+                    </p>
+                    <hr>
+                    <p class="catalogue-number">
+                        Catalogue number: <strong>dragon-solid-full.svg</strong>
+                    </p>
+                </li>
+                <li class="carousel-item">
+                    <img
+                        src="../images/fontawesome/dragon-duotone-thin-full.svg"
+                        alt="An icon of a small green dragon"
+                        class="accessory-image"
+                    >
+                    <h3 class="accessory-name">Green Dragon Familiar</h3>
+                    <p class="accessory-description">
+                        <strong>Part of our Fun Familiars range.</strong> A small green dragon. This is a newer green upgrade of the black dragon familiar. Instead of coal, it runs on recycled solar and wind energy. Eco-friendly and environmentally conscious.
+                    </p>
+                    <hr>
+                    <p class="catalogue-number">
+                        Catalogue number: <strong>dragon-duotone-thin-full.svg</strong>
+                    </p>
+                </li>
+                <li class="carousel-item">
+                    <img
+                        src="../images/fontawesome/frog-duotone-regular-full.svg"
+                        alt="An icon of a toad"
+                        class="accessory-image"
+                    >
+                    <h3 class="accessory-name">Toad Familiar</h3>
+                    <p class="accessory-description">
+                        <strong>Part of our Fun Familiars range.</strong>
+                        A slimy toad. Venomous skin makes it unsuitable for handling. Missing a toe, due to use by witches in creating double toil and trouble.
+                    </p>
+                    <hr>
+                    <p class="catalogue-number">
+                        Catalogue number: <strong>frog-duotone-regular-full.svg</strong>
+                    </p>
+                </li>
+                <li class="carousel-item">
+                    <img
+                        src="../images/fontawesome/spider-duotone-light-full.svg"
+                        alt="An icon of a spider"
+                        class="accessory-image"
+                    >
+                    <h3 class="accessory-name">Spider Familiar</h3>
+                    <p class="accessory-description">
+                        <strong>Part of our Fun Familiars range.</strong> A large spider. Can creep into surprisingly small spaces. With its many eyes and legs this familiar is perfect for spying on your enemies and running away afterwards.
+                    </p>
+                    <hr>
+                    <p class="catalogue-number">
+                        Catalogue number: <strong>spider-duotone-light-full.svg</strong>
+                    </p>
+                </li>
+                <li class="carousel-item">
+                    <img
+                        src="../images/fontawesome/octopus-duotone-regular-full.svg"
+                        alt="An icon of an octopus"
+                        class="accessory-image"
+                    >
+                    <h3 class="accessory-name">Octopus Familiar</h3>
+                    <p class="accessory-description">
+                        <strong>Part of our Fun Familiars range.</strong> A highly intelligent octopus. Can solve puzzles and open jam jars with its tentacles. N.B. Do not leave with unattended jam jars or unfinished soduku puzzles.
+                    </p>
+                    <hr>
+                    <p class="catalogue-number">
+                        Catalogue number: <strong>octopus-duotone-regular-full.svg</strong>
+                    </p>
+                </li>
+            </ul>
+
+            <!-- Navigation buttons for accessory 1 -->
+            <label for="accessory-2" class="gallery-nav-btn gallery-next nav-for-accessory-1" aria-label="Next accessory">
+                <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+            </label>
+
+            <!-- Navigation buttons for accessory 2 -->
+            <label for="accessory-1" class="gallery-nav-btn gallery-prev nav-for-accessory-2" aria-label="Previous accessory">
+                <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+            </label>
+            <label for="accessory-3" class="gallery-nav-btn gallery-next nav-for-accessory-2" aria-label="Next accessory">
+                <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+            </label>
+
+            <!-- Navigation buttons for accessory 3 -->
+            <label for="accessory-2" class="gallery-nav-btn gallery-prev nav-for-accessory-3" aria-label="Previous accessory">
+                <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+            </label>
+            <label for="accessory-4" class="gallery-nav-btn gallery-next nav-for-accessory-3" aria-label="Next accessory">
+                <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+            </label>
+
+            <!-- Navigation buttons for accessory 4 -->
+            <label for="accessory-3" class="gallery-nav-btn gallery-prev nav-for-accessory-4" aria-label="Previous accessory">
+                <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+            </label>
+            <label for="accessory-5" class="gallery-nav-btn gallery-next nav-for-accessory-4" aria-label="Next accessory">
+                <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+            </label>
+
+            <!-- Navigation buttons for accessory 5 -->
+            <label for="accessory-4" class="gallery-nav-btn gallery-prev nav-for-accessory-5" aria-label="Previous accessory">
+                <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+            </label>
+            <label for="accessory-6" class="gallery-nav-btn gallery-next nav-for-accessory-5" aria-label="Next accessory">
+                <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+            </label>
+
+            <!-- Navigation buttons for accessory 6 -->
+            <label for="accessory-5" class="gallery-nav-btn gallery-prev nav-for-accessory-6" aria-label="Previous accessory">
+                <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+            </label>
+            <label for="accessory-7" class="gallery-nav-btn gallery-next nav-for-accessory-6" aria-label="Next accessory">
+                <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+            </label>
+
+            <!-- Navigation buttons for accessory 7 -->
+            <label for="accessory-6" class="gallery-nav-btn gallery-prev nav-for-accessory-7" aria-label="Previous accessory">
+                <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+            </label>
+            <label for="accessory-8" class="gallery-nav-btn gallery-next nav-for-accessory-7" aria-label="Next accessory">
+                <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+            </label>
+
+            <!-- Navigation buttons for accessory 8 -->
+            <label for="accessory-7" class="gallery-nav-btn gallery-prev nav-for-accessory-8" aria-label="Previous accessory">
+                <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+            </label>
+            <label for="accessory-9" class="gallery-nav-btn gallery-next nav-for-accessory-8" aria-label="Next accessory">
+                <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+            </label>
+
+            <!-- Navigation buttons for accessory 9 -->
+            <label for="accessory-8" class="gallery-nav-btn gallery-prev nav-for-accessory-9" aria-label="Previous accessory">
+                <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+            </label>
+            <label for="accessory-10" class="gallery-nav-btn gallery-next nav-for-accessory-9" aria-label="Next accessory">
+                <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+            </label>
+
+            <!-- Navigation buttons for accessory 10 -->
+            <label for="accessory-9" class="gallery-nav-btn gallery-prev nav-for-accessory-10" aria-label="Previous accessory">
+                <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+            </label>
+            <label for="accessory-11" class="gallery-nav-btn gallery-next nav-for-accessory-10" aria-label="Next accessory">
+                <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+            </label>
+
+            <!-- Navigation buttons for accessory 11 -->
+            <label for="accessory-10" class="gallery-nav-btn gallery-prev nav-for-accessory-11" aria-label="Previous accessory">
+                <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+            </label>
+            <label for="accessory-12" class="gallery-nav-btn gallery-next nav-for-accessory-11" aria-label="Next accessory">
+                <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+            </label>
+
+            <!-- Navigation buttons for accessory 12 -->
+            <label for="accessory-11" class="gallery-nav-btn gallery-prev nav-for-accessory-12" aria-label="Previous accessory">
+                <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+            </label>
+            <label for="accessory-13" class="gallery-nav-btn gallery-next nav-for-accessory-12" aria-label="Next accessory">
+                <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+            </label>
+
+            <!-- Navigation buttons for accessory 13 -->
+            <label for="accessory-12" class="gallery-nav-btn gallery-prev nav-for-accessory-13" aria-label="Previous accessory">
+                <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+            </label>
+            <label for="accessory-14" class="gallery-nav-btn gallery-next nav-for-accessory-13" aria-label="Next accessory">
+                <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+            </label>
+
+            <!-- Navigation buttons for accessory 14 -->
+            <label for="accessory-13" class="gallery-nav-btn gallery-prev nav-for-accessory-14" aria-label="Previous accessory">
+                <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+            </label>
+            <label for="accessory-15" class="gallery-nav-btn gallery-next nav-for-accessory-14" aria-label="Next accessory">
+                <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+            </label>
+
+            <!-- Navigation buttons for accessory 15 -->
+            <label for="accessory-14" class="gallery-nav-btn gallery-prev nav-for-accessory-15" aria-label="Previous accessory">
+                <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+            </label>
+            <label for="accessory-16" class="gallery-nav-btn gallery-next nav-for-accessory-15" aria-label="Next accessory">
+                <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+            </label>
+
+            <!-- Navigation buttons for accessory 16 -->
+            <label for="accessory-15" class="gallery-nav-btn gallery-prev nav-for-accessory-16" aria-label="Previous accessory">
+                <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+            </label>
+            <label for="accessory-17" class="gallery-nav-btn gallery-next nav-for-accessory-16" aria-label="Next accessory">
+                <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+            </label>
+
+            <!-- Navigation buttons for accessory 17 -->
+            <label for="accessory-16" class="gallery-nav-btn gallery-prev nav-for-accessory-17" aria-label="Previous accessory">
+                <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+            </label>
+            <label for="accessory-18" class="gallery-nav-btn gallery-next nav-for-accessory-17" aria-label="Next accessory">
+                <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+            </label>
+
+            <!-- Navigation buttons for accessory 18 -->
+            <label for="accessory-17" class="gallery-nav-btn gallery-prev nav-for-accessory-18" aria-label="Previous accessory">
+                <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+            </label>
+            <label for="accessory-19" class="gallery-nav-btn gallery-next nav-for-accessory-18" aria-label="Next accessory">
+                <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+            </label>
+
+            <!-- Navigation buttons for accessory 19 -->
+            <label for="accessory-18" class="gallery-nav-btn gallery-prev nav-for-accessory-19" aria-label="Previous accessory">
+                <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+            </label>
+            <label for="accessory-20" class="gallery-nav-btn gallery-next nav-for-accessory-19" aria-label="Next accessory">
+                <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+            </label>
+
+            <!-- Navigation buttons for accessory 20 -->
+            <label for="accessory-19" class="gallery-nav-btn gallery-prev nav-for-accessory-20" aria-label="Previous accessory">
+                <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+            </label>
+            <label for="accessory-21" class="gallery-nav-btn gallery-next nav-for-accessory-20" aria-label="Next accessory">
+                <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+            </label>
+
+            <!-- Navigation buttons for accessory 21 -->
+            <label for="accessory-20" class="gallery-nav-btn gallery-prev nav-for-accessory-21" aria-label="Previous accessory">
+                <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+            </label>
         </section>
     </main>
 

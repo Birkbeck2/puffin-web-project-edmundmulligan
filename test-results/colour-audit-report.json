@@ -1,5 +1,300 @@
 {
-  "hardcodedColors": [],
+  "hardcodedColors": [
+    {
+      "file": "styles/pages.css",
+      "line": 511,
+      "type": "Hex Color",
+      "value": "#acce",
+      "context": "#accessory-1:checked ~ .nav-for-accessory-1,"
+    },
+    {
+      "file": "styles/pages.css",
+      "line": 512,
+      "type": "Hex Color",
+      "value": "#acce",
+      "context": "#accessory-2:checked ~ .nav-for-accessory-2,"
+    },
+    {
+      "file": "styles/pages.css",
+      "line": 513,
+      "type": "Hex Color",
+      "value": "#acce",
+      "context": "#accessory-3:checked ~ .nav-for-accessory-3,"
+    },
+    {
+      "file": "styles/pages.css",
+      "line": 514,
+      "type": "Hex Color",
+      "value": "#acce",
+      "context": "#accessory-4:checked ~ .nav-for-accessory-4,"
+    },
+    {
+      "file": "styles/pages.css",
+      "line": 515,
+      "type": "Hex Color",
+      "value": "#acce",
+      "context": "#accessory-5:checked ~ .nav-for-accessory-5,"
+    },
+    {
+      "file": "styles/pages.css",
+      "line": 516,
+      "type": "Hex Color",
+      "value": "#acce",
+      "context": "#accessory-6:checked ~ .nav-for-accessory-6,"
+    },
+    {
+      "file": "styles/pages.css",
+      "line": 517,
+      "type": "Hex Color",
+      "value": "#acce",
+      "context": "#accessory-7:checked ~ .nav-for-accessory-7,"
+    },
+    {
+      "file": "styles/pages.css",
+      "line": 518,
+      "type": "Hex Color",
+      "value": "#acce",
+      "context": "#accessory-8:checked ~ .nav-for-accessory-8,"
+    },
+    {
+      "file": "styles/pages.css",
+      "line": 519,
+      "type": "Hex Color",
+      "value": "#acce",
+      "context": "#accessory-9:checked ~ .nav-for-accessory-9,"
+    },
+    {
+      "file": "styles/pages.css",
+      "line": 520,
+      "type": "Hex Color",
+      "value": "#acce",
+      "context": "#accessory-10:checked ~ .nav-for-accessory-10,"
+    },
+    {
+      "file": "styles/pages.css",
+      "line": 521,
+      "type": "Hex Color",
+      "value": "#acce",
+      "context": "#accessory-11:checked ~ .nav-for-accessory-11,"
+    },
+    {
+      "file": "styles/pages.css",
+      "line": 522,
+      "type": "Hex Color",
+      "value": "#acce",
+      "context": "#accessory-12:checked ~ .nav-for-accessory-12,"
+    },
+    {
+      "file": "styles/pages.css",
+      "line": 523,
+      "type": "Hex Color",
+      "value": "#acce",
+      "context": "#accessory-13:checked ~ .nav-for-accessory-13,"
+    },
+    {
+      "file": "styles/pages.css",
+      "line": 524,
+      "type": "Hex Color",
+      "value": "#acce",
+      "context": "#accessory-14:checked ~ .nav-for-accessory-14,"
+    },
+    {
+      "file": "styles/pages.css",
+      "line": 525,
+      "type": "Hex Color",
+      "value": "#acce",
+      "context": "#accessory-15:checked ~ .nav-for-accessory-15,"
+    },
+    {
+      "file": "styles/pages.css",
+      "line": 526,
+      "type": "Hex Color",
+      "value": "#acce",
+      "context": "#accessory-16:checked ~ .nav-for-accessory-16,"
+    },
+    {
+      "file": "styles/pages.css",
+      "line": 527,
+      "type": "Hex Color",
+      "value": "#acce",
+      "context": "#accessory-17:checked ~ .nav-for-accessory-17,"
+    },
+    {
+      "file": "styles/pages.css",
+      "line": 528,
+      "type": "Hex Color",
+      "value": "#acce",
+      "context": "#accessory-18:checked ~ .nav-for-accessory-18,"
+    },
+    {
+      "file": "styles/pages.css",
+      "line": 529,
+      "type": "Hex Color",
+      "value": "#acce",
+      "context": "#accessory-19:checked ~ .nav-for-accessory-19,"
+    },
+    {
+      "file": "styles/pages.css",
+      "line": 530,
+      "type": "Hex Color",
+      "value": "#acce",
+      "context": "#accessory-20:checked ~ .nav-for-accessory-20,"
+    },
+    {
+      "file": "styles/pages.css",
+      "line": 531,
+      "type": "Hex Color",
+      "value": "#acce",
+      "context": "#accessory-21:checked ~ .nav-for-accessory-21 {"
+    },
+    {
+      "file": "styles/pages.css",
+      "line": 536,
+      "type": "Hex Color",
+      "value": "#acce",
+      "context": "#accessory-1:checked ~ .gallery-carousel {"
+    },
+    {
+      "file": "styles/pages.css",
+      "line": 540,
+      "type": "Hex Color",
+      "value": "#acce",
+      "context": "#accessory-2:checked ~ .gallery-carousel {"
+    },
+    {
+      "file": "styles/pages.css",
+      "line": 544,
+      "type": "Hex Color",
+      "value": "#acce",
+      "context": "#accessory-3:checked ~ .gallery-carousel {"
+    },
+    {
+      "file": "styles/pages.css",
+      "line": 548,
+      "type": "Hex Color",
+      "value": "#acce",
+      "context": "#accessory-4:checked ~ .gallery-carousel {"
+    },
+    {
+      "file": "styles/pages.css",
+      "line": 552,
+      "type": "Hex Color",
+      "value": "#acce",
+      "context": "#accessory-5:checked ~ .gallery-carousel {"
+    },
+    {
+      "file": "styles/pages.css",
+      "line": 556,
+      "type": "Hex Color",
+      "value": "#acce",
+      "context": "#accessory-6:checked ~ .gallery-carousel {"
+    },
+    {
+      "file": "styles/pages.css",
+      "line": 560,
+      "type": "Hex Color",
+      "value": "#acce",
+      "context": "#accessory-7:checked ~ .gallery-carousel {"
+    },
+    {
+      "file": "styles/pages.css",
+      "line": 564,
+      "type": "Hex Color",
+      "value": "#acce",
+      "context": "#accessory-8:checked ~ .gallery-carousel {"
+    },
+    {
+      "file": "styles/pages.css",
+      "line": 568,
+      "type": "Hex Color",
+      "value": "#acce",
+      "context": "#accessory-9:checked ~ .gallery-carousel {"
+    },
+    {
+      "file": "styles/pages.css",
+      "line": 572,
+      "type": "Hex Color",
+      "value": "#acce",
+      "context": "#accessory-10:checked ~ .gallery-carousel {"
+    },
+    {
+      "file": "styles/pages.css",
+      "line": 576,
+      "type": "Hex Color",
+      "value": "#acce",
+      "context": "#accessory-11:checked ~ .gallery-carousel {"
+    },
+    {
+      "file": "styles/pages.css",
+      "line": 580,
+      "type": "Hex Color",
+      "value": "#acce",
+      "context": "#accessory-12:checked ~ .gallery-carousel {"
+    },
+    {
+      "file": "styles/pages.css",
+      "line": 584,
+      "type": "Hex Color",
+      "value": "#acce",
+      "context": "#accessory-13:checked ~ .gallery-carousel {"
+    },
+    {
+      "file": "styles/pages.css",
+      "line": 588,
+      "type": "Hex Color",
+      "value": "#acce",
+      "context": "#accessory-14:checked ~ .gallery-carousel {"
+    },
+    {
+      "file": "styles/pages.css",
+      "line": 592,
+      "type": "Hex Color",
+      "value": "#acce",
+      "context": "#accessory-15:checked ~ .gallery-carousel {"
+    },
+    {
+      "file": "styles/pages.css",
+      "line": 596,
+      "type": "Hex Color",
+      "value": "#acce",
+      "context": "#accessory-16:checked ~ .gallery-carousel {"
+    },
+    {
+      "file": "styles/pages.css",
+      "line": 600,
+      "type": "Hex Color",
+      "value": "#acce",
+      "context": "#accessory-17:checked ~ .gallery-carousel {"
+    },
+    {
+      "file": "styles/pages.css",
+      "line": 604,
+      "type": "Hex Color",
+      "value": "#acce",
+      "context": "#accessory-18:checked ~ .gallery-carousel {"
+    },
+    {
+      "file": "styles/pages.css",
+      "line": 608,
+      "type": "Hex Color",
+      "value": "#acce",
+      "context": "#accessory-19:checked ~ .gallery-carousel {"
+    },
+    {
+      "file": "styles/pages.css",
+      "line": 612,
+      "type": "Hex Color",
+      "value": "#acce",
+      "context": "#accessory-20:checked ~ .gallery-carousel {"
+    },
+    {
+      "file": "styles/pages.css",
+      "line": 616,
+      "type": "Hex Color",
+      "value": "#acce",
+      "context": "#accessory-21:checked ~ .gallery-carousel {"
+    }
+  ],
   "themeSpecificVars": [],
   "missingThemeSystem": []
 }
