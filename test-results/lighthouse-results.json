@@ -69,15 +69,8 @@
       "theme": "light",
       "style": "normal",
       "viewport": "900",
-      "score": 0.96,
-      "failedAudits": [
-        {
-          "id": "label",
-          "title": "Form elements do not have associated labels",
-          "description": "Labels ensure that form controls are announced properly by assistive technologies, like screen readers. [Learn more about form element labels](https://dequeuniversity.com/rules/axe/4.10/label).",
-          "score": 0
-        }
-      ]
+      "score": 1,
+      "failedAudits": []
     },
     {
       "url": "pages/accessories.html",
@@ -188,15 +181,8 @@
       "theme": "dark",
       "style": "normal",
       "viewport": "900",
-      "score": 0.96,
-      "failedAudits": [
-        {
-          "id": "label",
-          "title": "Form elements do not have associated labels",
-          "description": "Labels ensure that form controls are announced properly by assistive technologies, like screen readers. [Learn more about form element labels](https://dequeuniversity.com/rules/axe/4.10/label).",
-          "score": 0
-        }
-      ]
+      "score": 1,
+      "failedAudits": []
     },
     {
       "url": "pages/accessories.html",
@@ -307,15 +293,8 @@
       "theme": "light",
       "style": "subdued",
       "viewport": "900",
-      "score": 0.96,
-      "failedAudits": [
-        {
-          "id": "label",
-          "title": "Form elements do not have associated labels",
-          "description": "Labels ensure that form controls are announced properly by assistive technologies, like screen readers. [Learn more about form element labels](https://dequeuniversity.com/rules/axe/4.10/label).",
-          "score": 0
-        }
-      ]
+      "score": 1,
+      "failedAudits": []
     },
     {
       "url": "pages/accessories.html",
@@ -426,15 +405,8 @@
       "theme": "dark",
       "style": "subdued",
       "viewport": "900",
-      "score": 0.96,
-      "failedAudits": [
-        {
-          "id": "label",
-          "title": "Form elements do not have associated labels",
-          "description": "Labels ensure that form controls are announced properly by assistive technologies, like screen readers. [Learn more about form element labels](https://dequeuniversity.com/rules/axe/4.10/label).",
-          "score": 0
-        }
-      ]
+      "score": 1,
+      "failedAudits": []
     },
     {
       "url": "pages/accessories.html",
@@ -545,15 +517,8 @@
       "theme": "light",
       "style": "vibrant",
       "viewport": "900",
-      "score": 0.96,
-      "failedAudits": [
-        {
-          "id": "label",
-          "title": "Form elements do not have associated labels",
-          "description": "Labels ensure that form controls are announced properly by assistive technologies, like screen readers. [Learn more about form element labels](https://dequeuniversity.com/rules/axe/4.10/label).",
-          "score": 0
-        }
-      ]
+      "score": 1,
+      "failedAudits": []
     },
     {
       "url": "pages/accessories.html",
@@ -664,15 +629,8 @@
       "theme": "dark",
       "style": "vibrant",
       "viewport": "900",
-      "score": 0.96,
-      "failedAudits": [
-        {
-          "id": "label",
-          "title": "Form elements do not have associated labels",
-          "description": "Labels ensure that form controls are announced properly by assistive technologies, like screen readers. [Learn more about form element labels](https://dequeuniversity.com/rules/axe/4.10/label).",
-          "score": 0
-        }
-      ]
+      "score": 1,
+      "failedAudits": []
     },
     {
       "url": "pages/accessories.html",

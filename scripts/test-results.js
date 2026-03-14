@@ -327,7 +327,7 @@ function formatLighthouseDetails(data) {
     let html = '<h3>Pages with Issues</h3>';
     pagesWithIssues.forEach(page => {
         html += `<div class="error-item">
-            <h4>${page.page}</h4>
+            <h4>${page.url} [${page.viewport}px, ${page.style}-${page.theme}]</h4>
             <div class="error-detail">Score: ${Math.round(page.score * 100)}%</div>`;
         
         if (page.failedAudits) {
