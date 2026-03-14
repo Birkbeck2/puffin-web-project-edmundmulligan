@@ -20,6 +20,6 @@ jobs:
         host: prod.edmundmulligan.name
         username: ${{ secrets.SERVER_USERNAME }}
         key: ${{ secrets.SERVER_SSH_KEY }}
-        source: "index.html data/ diagnostics/ images/ mentors/ pages/ scripts/ students/ styles/ test-results/"
+        source: "index.html,data/,diagnostics/,images/,mentors/,pages/,scripts/,students/,styles/,test-results/"
         target: /var/www/web.witchcraft-and-wizardry.school
-        rm: true
+        rm: false
