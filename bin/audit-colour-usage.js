@@ -117,6 +117,17 @@ function findHardcodedColors(filePath, content) {
                     continue;
                 }
                 
+                // Skip hex patterns that are part of CSS ID selectors
+                // ID selectors have additional identifier characters after the hex portion
+                if (type === 'Hex Color') {
+                    const matchEnd = match.index + match[0].length;
+                    const nextChar = line[matchEnd];
+                    // If followed by -, _, or any letter, it's likely an ID selector, not a color
+                    if (nextChar && /[-_a-zA-Z]/.test(nextChar)) {
+                        continue;
+                    }
+                }
+                
                 issues.push({
                     file: filePath,
                     line: lineNum + 1,

@@ -65,8 +65,7 @@
                     <li><a href="${this.pathPrefix}pages/start.html">Start</a></li>
                     <li><a href="${this.pathPrefix}pages/students.html">Students</a></li>
                     <li><a href="${this.pathPrefix}pages/mentors.html">Mentors</a></li>
-                    <li><a href="${this.pathPrefix}pages/gallery.html">Gallery</a></li>
-                    <li><a href="${this.pathPrefix}pages/accessories.html">Accessories</a></li>
+                    <li><a href="${this.pathPrefix}pages/gallery.html">Galleries</a></li>
                     <li><a href="${this.pathPrefix}pages/facts.html">Facts</a></li>
                     <li><a href="${this.pathPrefix}pages/glossary.html">Glossary</a></li>
                     <li><a href="${this.pathPrefix}pages/faq.html">FAQ</a></li>
@@ -109,8 +108,7 @@
                     <li><a href="${this.pathPrefix}pages/start.html">Start</a></li>
                     <li><a href="${this.pathPrefix}pages/students.html">Students</a></li>
                     <li><a href="${this.pathPrefix}pages/mentors.html">Mentors</a></li>
-                    <li><a href="${this.pathPrefix}pages/gallery.html">Gallery</a></li>
-                    <li><a href="${this.pathPrefix}pages/accessories.html">Accessories</a></li>
+                    <li><a href="${this.pathPrefix}pages/gallery.html">Galleries</a></li>
                     <li><a href="${this.pathPrefix}pages/facts.html">Facts</a></li>
                     <li><a href="${this.pathPrefix}pages/glossary.html">Glossary</a></li>
                     <li><a href="${this.pathPrefix}pages/faq.html">FAQ</a></li>
