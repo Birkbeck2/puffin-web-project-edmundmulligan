@@ -232,10 +232,18 @@ async function populateLessonsNav() {
         const data = await response.json();
         const lessons = data.lessons;
         
+        // Create hamburger button for lessons menu
+        const hamburger = document.createElement('button');
+        hamburger.className = 'lessons-hamburger';
+        hamburger.setAttribute('aria-label', 'Toggle lessons menu');
+        hamburger.setAttribute('aria-expanded', 'false');
+        hamburger.innerHTML = '<i class="fa-solid fa-bars" aria-hidden="true"></i>';
+        
         // Create nav element
         const nav = document.createElement('nav');
         nav.className = 'sidebar';
         nav.setAttribute('aria-label', 'Lessons menu');
+        nav.id = 'lessons-sidebar';
         
         // Create heading
         const heading = document.createElement('h3');
@@ -273,9 +281,41 @@ async function populateLessonsNav() {
         // Append list to nav
         nav.appendChild(ul);
         
-        // Clear container and add new nav
+        // Clear container and add hamburger button and nav
         navContainer.innerHTML = '';
+        navContainer.appendChild(hamburger);
         navContainer.appendChild(nav);
+        
+        // Create overlay for mobile
+        const overlay = document.createElement('div');
+        overlay.className = 'sidebar-overlay';
+        navContainer.appendChild(overlay);
+        
+        // Setup hamburger toggle
+        hamburger.addEventListener('click', () => {
+            const isExpanded = hamburger.getAttribute('aria-expanded') === 'true';
+            hamburger.setAttribute('aria-expanded', !isExpanded);
+            nav.classList.toggle('sidebar-open');
+            overlay.classList.toggle('sidebar-overlay-visible');
+        });
+        
+        // Close sidebar when clicking overlay
+        overlay.addEventListener('click', () => {
+            hamburger.setAttribute('aria-expanded', 'false');
+            nav.classList.remove('sidebar-open');
+            overlay.classList.remove('sidebar-overlay-visible');
+        });
+        
+        // Close sidebar when clicking outside on mobile
+        document.addEventListener('click', (e) => {
+            if (window.innerWidth < 400) {
+                if (!navContainer.contains(e.target)) {
+                    hamburger.setAttribute('aria-expanded', 'false');
+                    nav.classList.remove('sidebar-open');
+                    overlay.classList.remove('sidebar-overlay-visible');
+                }
+            }
+        });
         
         // Add popovers to body
         document.body.appendChild(popoverContainer);

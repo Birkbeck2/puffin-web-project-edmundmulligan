@@ -20,7 +20,7 @@
 /* Page container with sidebar layout */
 .page-container {
    display: flex;
-   flex-direction: row;
+   flex-direction: column;
    gap: 2rem;
    width: 100%;
    max-width: 100%;
@@ -28,18 +28,31 @@
    margin: 0;
    padding: 0;
    box-sizing: border-box;
+   position: relative;
 }
 
 /* Sidebar navigation for lessons */
 .sidebar {
-   flex: 0 0 250px;
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 80%;
+   max-width: 300px;
+   height: 100vh;
+   z-index: 999;
+   transform: translateX(-100%);
+   transition: transform 0.3s ease;
    background-color: var(--colour-effective-headings-background);
    border: var(--border-weight) var(--border-style) var(--colour-effective-headings-text);
-   border-radius: var(--border-radius) 0 0 var(--border-radius);
+   border-radius: 0;
    padding: 0 1rem;
-   height: 100%;
    overflow-y: auto;
    box-sizing: border-box;
+   box-shadow: 2px 0 8px rgb(0 0 0 / 30%);
+}
+
+.sidebar.sidebar-open {
+    transform: translateX(0);
 }
 
 .sidebar h3 {
@@ -90,6 +103,42 @@
 .lesson-nav button:focus-visible {
     outline: var(--border-weight-thin) var(--border-style) currentcolor;
     outline-offset: 0.1rem;
+}
+
+/* Hamburger menu button for lessons navigation */
+.lessons-hamburger {
+    display: block; /* Visible by default for all viewport sizes */
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    z-index: 1000;
+    background-color: var(--colour-effective-button-background);
+    color: var(--colour-effective-button-text);
+    border: var(--border-weight) var(--border-style) var(--colour-effective-button-text);
+    border-radius: var(--border-radius);
+    padding: 0.75rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+/* Overlay for sidebar */
+.sidebar-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(0 0 0 / 50%);
+    z-index: 998;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.sidebar-overlay.sidebar-overlay-visible {
+    display: block;
+    opacity: 1;
 }
 
 /* Main content area */
@@ -314,12 +363,258 @@
  * still appropriate 
  **********************************************************/
 
- .gallery-container {
-   display: grid;
-   grid-template-columns: repeat(2, 1fr);
-   gap: 1rem;
+ .gallery {
+   position: relative;
    margin: var(--margin-vertical) var(--margin-horizontal);
-   max-width: 100%;
+   overflow: hidden;
+   padding: 5rem;
+   box-sizing: border-box;
+}
+
+.gallery-carousel {
+   list-style: none;
+   padding: 0;
+   margin: 0;
+   display: flex;
+   transition: transform 0.5s ease;
+   will-change: transform;
+   height: 100%;
+
+   > li {
+      min-width: 100%;
+      width: 100%;
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      box-sizing: border-box;
+   }
+}
+
+/* Remove height constraint for accessories carousel to prevent truncation */
+.accessories-gallery .gallery-carousel {
+   height: auto;
+   min-height: 600px;
+}
+
+.accessories-gallery .gallery-carousel > li {
+   justify-content: flex-start;
+   padding: 2rem 1rem;
+}
+
+/* Hide radio buttons */
+.gallery input[type="radio"] {
+   position: absolute;
+   opacity: 0;
+   pointer-events: none;
+}
+
+.gallery-nav-btn {
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   z-index: 10;
+   display: none; /* Hide all by default */
+   align-items: center;
+   justify-content: center;
+   background-color: var(--colour-effective-button-background);
+   color: var(--colour-effective-button-text);
+   border: var(--border-weight) var(--border-style) var(--colour-effective-button-text);
+   border-radius: var(--border-radius);
+   padding: 1rem;
+   cursor: pointer;
+   font-size: 1.5rem;
+   transition: all 0.3s ease;
+   box-shadow: 0 2px 8px rgb(0 0 0 / 20%);
+}
+
+.gallery-nav-btn:hover {
+   background-color: var(--colour-effective-button-background-hover);
+   transform: translateY(-50%) scale(1.1);
+}
+
+.gallery-nav-btn:active {
+   transform: translateY(-50%) scale(0.95);
+}
+
+.gallery-prev {
+   left: 1rem;
+}
+
+.gallery-next {
+   right: 1rem;
+}
+
+/* Position navigation buttons for accessories gallery at middle of content */
+.accessories-gallery .gallery-nav-btn {
+   top: 50%; /* Center vertically */
+   transform: translateY(-50%); /* Center the button itself */
+   z-index: 20; /* Ensure buttons are above content */
+}
+
+.accessories-gallery .gallery-nav-btn:hover {
+   transform: translateY(-50%) scale(1.1);
+}
+
+.accessories-gallery .gallery-nav-btn:active {
+   transform: translateY(-50%) scale(0.95);
+}
+
+/* Show navigation buttons based on checked radio button */
+#portrait-1:checked ~ .nav-for-portrait-1,
+#portrait-2:checked ~ .nav-for-portrait-2,
+#portrait-3:checked ~ .nav-for-portrait-3,
+#portrait-4:checked ~ .nav-for-portrait-4,
+#portrait-5:checked ~ .nav-for-portrait-5,
+#portrait-6:checked ~ .nav-for-portrait-6,
+#portrait-7:checked ~ .nav-for-portrait-7,
+#portrait-8:checked ~ .nav-for-portrait-8 {
+   display: flex;
+}
+
+/* Transform carousel based on checked radio button */
+#portrait-1:checked ~ .gallery-carousel {
+   transform: translateX(0%);
+}
+
+#portrait-2:checked ~ .gallery-carousel {
+   transform: translateX(-100%);
+}
+
+#portrait-3:checked ~ .gallery-carousel {
+   transform: translateX(-200%);
+}
+
+#portrait-4:checked ~ .gallery-carousel {
+   transform: translateX(-300%);
+}
+
+#portrait-5:checked ~ .gallery-carousel {
+   transform: translateX(-400%);
+}
+
+#portrait-6:checked ~ .gallery-carousel {
+   transform: translateX(-500%);
+}
+
+#portrait-7:checked ~ .gallery-carousel {
+   transform: translateX(-600%);
+}
+
+#portrait-8:checked ~ .gallery-carousel {
+   transform: translateX(-700%);
+}
+
+/* Show navigation buttons for accessories carousel */
+#accessory-1:checked ~ .nav-for-accessory-1,
+#accessory-2:checked ~ .nav-for-accessory-2,
+#accessory-3:checked ~ .nav-for-accessory-3,
+#accessory-4:checked ~ .nav-for-accessory-4,
+#accessory-5:checked ~ .nav-for-accessory-5,
+#accessory-6:checked ~ .nav-for-accessory-6,
+#accessory-7:checked ~ .nav-for-accessory-7,
+#accessory-8:checked ~ .nav-for-accessory-8,
+#accessory-9:checked ~ .nav-for-accessory-9,
+#accessory-10:checked ~ .nav-for-accessory-10,
+#accessory-11:checked ~ .nav-for-accessory-11,
+#accessory-12:checked ~ .nav-for-accessory-12,
+#accessory-13:checked ~ .nav-for-accessory-13,
+#accessory-14:checked ~ .nav-for-accessory-14,
+#accessory-15:checked ~ .nav-for-accessory-15,
+#accessory-16:checked ~ .nav-for-accessory-16,
+#accessory-17:checked ~ .nav-for-accessory-17,
+#accessory-18:checked ~ .nav-for-accessory-18,
+#accessory-19:checked ~ .nav-for-accessory-19,
+#accessory-20:checked ~ .nav-for-accessory-20,
+#accessory-21:checked ~ .nav-for-accessory-21 {
+   display: flex;
+}
+
+/* Transform accessories carousel based on checked radio button */
+#accessory-1:checked ~ .gallery-carousel {
+   transform: translateX(0%);
+}
+
+#accessory-2:checked ~ .gallery-carousel {
+   transform: translateX(-100%);
+}
+
+#accessory-3:checked ~ .gallery-carousel {
+   transform: translateX(-200%);
+}
+
+#accessory-4:checked ~ .gallery-carousel {
+   transform: translateX(-300%);
+}
+
+#accessory-5:checked ~ .gallery-carousel {
+   transform: translateX(-400%);
+}
+
+#accessory-6:checked ~ .gallery-carousel {
+   transform: translateX(-500%);
+}
+
+#accessory-7:checked ~ .gallery-carousel {
+   transform: translateX(-600%);
+}
+
+#accessory-8:checked ~ .gallery-carousel {
+   transform: translateX(-700%);
+}
+
+#accessory-9:checked ~ .gallery-carousel {
+   transform: translateX(-800%);
+}
+
+#accessory-10:checked ~ .gallery-carousel {
+   transform: translateX(-900%);
+}
+
+#accessory-11:checked ~ .gallery-carousel {
+   transform: translateX(-1000%);
+}
+
+#accessory-12:checked ~ .gallery-carousel {
+   transform: translateX(-1100%);
+}
+
+#accessory-13:checked ~ .gallery-carousel {
+   transform: translateX(-1200%);
+}
+
+#accessory-14:checked ~ .gallery-carousel {
+   transform: translateX(-1300%);
+}
+
+#accessory-15:checked ~ .gallery-carousel {
+   transform: translateX(-1400%);
+}
+
+#accessory-16:checked ~ .gallery-carousel {
+   transform: translateX(-1500%);
+}
+
+#accessory-17:checked ~ .gallery-carousel {
+   transform: translateX(-1600%);
+}
+
+#accessory-18:checked ~ .gallery-carousel {
+   transform: translateX(-1700%);
+}
+
+#accessory-19:checked ~ .gallery-carousel {
+   transform: translateX(-1800%);
+}
+
+#accessory-20:checked ~ .gallery-carousel {
+   transform: translateX(-1900%);
+}
+
+#accessory-21:checked ~ .gallery-carousel {
+   transform: translateX(-2000%);
 }
 
 .accessories-container {
@@ -413,6 +708,66 @@
 
 .accessory-description {
    display:block;
+   font-size: var(--fontsize-small);
+}
+
+.catalogue-number {
+   font-style: italic;
+   font-size: var(--fontsize-small);
+   opacity: 0.8;
+}
+
+/* Ensure accessory images fit well in carousel */
+.accessories-gallery {
+   margin-top: 4rem;
+   min-height: 650px; /* Ensure enough height for buttons positioned at 300px */
+   position: relative; /* Ensure buttons are positioned relative to this container */
+}
+
+.intro-text {
+   max-width: 60rem;
+   margin: 1rem auto;
+   text-align: center;
+}
+
+.accessories-gallery .carousel-item {
+   border: var(--border-weight) var(--border-style) var(--colour-effective-headings-text);
+   border-radius: var(--border-radius);
+   background-color: var(--colour-effective-headings-background);
+   color: var(--colour-effective-headings-text);
+   padding: 1.5rem;
+   max-width: 45rem;
+   margin: 0 auto;
+}
+
+.accessories-gallery .carousel-item hr {
+   width: 80%;
+   margin: 1rem auto;
+   border: none;
+   border-top: var(--border-weight) var(--border-style) var(--colour-effective-headings-text);
+   opacity: 0.5;
+}
+
+.accessories-gallery .accessory-image {
+   max-width: 15rem;
+   width: 100%;
+   height: auto;
+}
+
+.accessories-gallery .accessory-name {
+   margin-top: 1rem;
+   margin-bottom: 0.5rem;
+}
+
+.accessories-gallery .accessory-description {
+   max-width: 50rem;
+   text-align: center;
+   margin-bottom: 0.5rem;
+}
+
+.accessories-gallery .catalogue-number,
+.accessories-gallery .accessory-description strong {
+   font-style: italic;
    font-size: var(--fontsize-small);
 }
 

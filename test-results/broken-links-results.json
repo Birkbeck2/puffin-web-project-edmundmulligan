@@ -52,7 +52,7 @@
       "url": "pages/gallery.html",
       "links": [],
       "brokenCount": 0,
-      "totalCount": 28
+      "totalCount": 49
     },
     {
       "url": "pages/accessories.html",
@@ -82,11 +82,11 @@
       "url": "pages/start.html",
       "links": [],
       "brokenCount": 0,
-      "totalCount": 26
+      "totalCount": 25
     }
   ],
   "summary": {
-    "totalLinks": 386,
+    "totalLinks": 406,
     "brokenLinks": 0,
     "excludedLinks": 0
   }
