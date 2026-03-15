@@ -97,9 +97,9 @@ TESTED=0
 SKIPPED=0
 for page in $PAGES; do
   TESTED=$((TESTED + 1))
-  echo "[$TESTED/$PAGE_COUNT] Analyzing $page"
+  echo "[$TESTED/$PAGE_COUNT] Analysing $page"
 
-  # Analyze readability using Node.js
+  # Analyse readability using Node.js
   node -e "
     const fs = require('fs');
     const cheerio = require('cheerio');
@@ -126,7 +126,7 @@ for page in $PAGES; do
       // Need at least 3 sentences to get meaningful readability scores
       const sentenceCount = text.split(/[.!?]+/).filter(s => s.trim().length > 0).length;
       if (!text || text.length < 50 || sentenceCount < 3) {
-        console.log('  ⚠️  Not enough text content to analyze (need at least 3 sentences)');
+        console.log('  ⚠️  Not enough text content to analyse (need at least 3 sentences)');
         process.exit(0);
       }
 
@@ -134,7 +134,7 @@ for page in $PAGES; do
       const wordCount = text.split(/\s+/).filter(w => w.length > 0).length;
 
       if (sentenceCount === 0 || wordCount === 0) {
-        console.log('  ⚠️  Not enough text content to analyze');
+        console.log('  ⚠️  Not enough text content to analyse');
         process.exit(0);
       }
 
@@ -230,7 +230,7 @@ node -e "
   const data = JSON.parse(fs.readFileSync('$RESULT_FILE', 'utf8'));
 
   if (data.pages.length === 0) {
-    console.log('No pages analyzed');
+    console.log('No pages analysed');
     process.exit(0);
   }
 
@@ -238,7 +238,7 @@ node -e "
   const avgGrade = data.pages.reduce((sum, p) => sum + p.averageGradeLevel, 0) / data.pages.length;
   const totalWords = data.pages.reduce((sum, p) => sum + p.wordCount, 0);
 
-  console.log('Pages analyzed: ' + data.pages.length);
+  console.log('Pages analysed: ' + data.pages.length);
   console.log('Total words: ' + totalWords);
   console.log('Average Grade Level: ' + Math.round(avgGrade * 10) / 10);
   console.log('');

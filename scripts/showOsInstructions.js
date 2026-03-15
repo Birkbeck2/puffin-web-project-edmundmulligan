@@ -1,6 +1,6 @@
 /*
  **********************************************************************
- * File       : scripts/show-os-instructions.js
+ * File       : scripts/showOsInstructions.js
  * Author     : Edmund Mulligan <edmund@edmundmulligan.name>
  * Copyright  : (c) 6 The Embodied Mind
  * License    : MIT License (see license-and-credits.html page)

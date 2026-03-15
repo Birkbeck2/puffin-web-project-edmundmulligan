@@ -226,13 +226,13 @@ if [ -f "$RESULTS_DIR/readability-results.json" ]; then
     const data = JSON.parse(fs.readFileSync('$RESULTS_DIR/readability-results.json', 'utf8'));
 
     if (data.pages.length === 0) {
-      console.log('  No pages analyzed');
+      console.log('  No pages analysed');
     } else {
       const avgGrade = data.pages.reduce((sum, p) => sum + p.averageGradeLevel, 0) / data.pages.length;
       const totalWords = data.pages.reduce((sum, p) => sum + p.wordCount, 0);
       const difficult = data.pages.filter(p => p.averageGradeLevel > 12);
 
-      console.log('  Pages analyzed: ' + data.pages.length);
+      console.log('  Pages analysed: ' + data.pages.length);
       console.log('  Total words: ' + totalWords);
       console.log('  Average grade level: ' + Math.round(avgGrade * 10) / 10);
 
