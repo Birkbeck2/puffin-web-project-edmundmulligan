@@ -62,7 +62,7 @@ module.exports = [
         fetch: "readonly",
         DOMParser: "readonly",
         FormData: "readonly",
-        FormDataStorage: "readonly",
+        LocalStorage: "readonly",
         TextEncoder: "readonly",
         TextDecoder: "readonly",
         URLSearchParams: "readonly",

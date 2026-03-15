@@ -1,12 +1,13 @@
-/**
+/**************************************************************************************************
  * File: colourPalette.js
  * Author: Edmund Mulligan <edmund@edmundmulligan.name>
  * Copyright: (c) 2026 The Embodied Mind
  * License: MIT
  * Description: JavaScript for the colour palette preview page
- * 
- * This file runs in the browser and uses browser APIs like getComputedStyle and document.
- */
+ * - Handles colour conversion, contrast calculation, and display of results
+ * - Reads CSS variables, including relative colour syntax, and computes contrast ratios
+ * - Displays WCAG compliance levels and logs detailed information for debugging
+ **************************************************************************************************/
 
 /* eslint-env browser */
 /* global getComputedStyle, document */
@@ -17,6 +18,7 @@
 class ColourPalette {
     /**
      * Convert HSL to RGB
+     * Adapted from https://www.w3.org/TR/css-color-4/#hsl-to-rgb
      * @param {number} h - Hue (0-360)
      * @param {number} s - Saturation (0-100)
      * @param {number} l - Lightness (0-100)
@@ -52,10 +54,11 @@ class ColourPalette {
     }
 
     /**
- * Calculate relative luminance
- * @param {Array} rgb - [r, g, b] values (0-255)
- * @returns {number} Relative luminance (0-1)
- */
+     * Calculate relative luminance
+     * Adapted from https://www.w3.org/TR/WCAG22/#dfn-relative-luminance
+     * @param {Array} rgb - [r, g, b] values (0-255)
+     * @returns {number} Relative luminance (0-1)
+     */
     relativeLuminance(rgb) {
         const [r, g, b] = rgb.map(val => {
             val = val / 255;
@@ -65,11 +68,12 @@ class ColourPalette {
     }
 
     /**
- * Calculate contrast ratio between two colors
- * @param {string} colour1 - HSL or RGB colour string
- * @param {string} colour2 - HSL or RGB colour string
- * @returns {number} Contrast ratio
- */
+    * Calculate contrast ratio between two colours
+     * Adapted from https://www.w3.org/TR/WCAG22/#dfn-contrast-ratio
+     * @param {string} colour1 - HSL or RGB colour string
+     * @param {string} colour2 - HSL or RGB colour string
+     * @returns {number} Contrast ratio
+     */
     calculateContrast(colour1, colour2) {
     // Convert RGB to HSL if needed
         if (colour1.startsWith('rgb(') || colour1.startsWith('rgb ')) {
@@ -79,7 +83,7 @@ class ColourPalette {
             colour2 = this.rgbToHsl(colour2);
         }
     
-        // Normalize both colors to handle different HSL formats
+        // Normalize both colours to handle different HSL formats
         const normalized1 = this.normalizeHSL(colour1);
         const normalized2 = this.normalizeHSL(colour2);
     
@@ -90,7 +94,7 @@ class ColourPalette {
         const match2 = normalized2.match(hslRegex);
     
         if (!match1 || !match2) {
-            console.warn('Could not parse colors:', {
+            console.warn('Could not parse colours:', {
                 original1: colour1,
                 original2: colour2,
                 normalized1: normalized1,
@@ -98,30 +102,19 @@ class ColourPalette {
             });
             return 0;
         }
-    
-        const rgb1 = this.hslToRgb(parseFloat(match1[1]), parseFloat(match1[2]), parseFloat(match1[3]));
-        const rgb2 = this.hslToRgb(parseFloat(match2[1]), parseFloat(match2[2]), parseFloat(match2[3]));
-    
-        const lum1 = this.relativeLuminance(rgb1);
-        const lum2 = this.relativeLuminance(rgb2);
-    
-        const lighter = Math.max(lum1, lum2);
-        const darker = Math.min(lum1, lum2);
-    
-        return (lighter + 0.05) / (darker + 0.05);
     }
 
     /**
- * Blend a foreground color with a background color at given opacity
- * @param {string} fgColor - Foreground HSL color string
- * @param {string} bgColor - Background HSL color string  
- * @param {number} opacity - Opacity value (0-1)
- * @returns {string} Blended HSL color string
- */
-    blendColors(fgColor, bgColor, opacity) {
-        // Normalize both colors
-        const normFg = this.normalizeHSL(fgColor);
-        const normBg = this.normalizeHSL(bgColor);
+     * Blend a foreground colour with a background colour at given opacity
+     * @param {string} fgColour - Foreground HSL colour string
+     * @param {string} bgColour - Background HSL colour string  
+     * @param {number} opacity - Opacity value (0-1)
+     * @returns {string} Blended HSL colour string
+     */
+    blendColours(fgColour, bgColour, opacity) {
+        // Normalize both colours
+        const normFg = this.normalizeHSL(fgColour);
+        const normBg = this.normalizeHSL(bgColour);
         
         // Parse HSL values
         const hslRegex = /hsl\(\s*(\d+(?:\.\d+)?)\s*,?\s*(\d+(?:\.\d+)?)\s*%\s*,?\s*(\d+(?:\.\d+)?)\s*%\s*\)/;
@@ -129,8 +122,8 @@ class ColourPalette {
         const matchBg = normBg.match(hslRegex);
         
         if (!matchFg || !matchBg) {
-            console.warn('Could not parse colors for blending:', { fgColor, bgColor });
-            return fgColor;
+            console.warn('Could not parse colours for blending:', { fgColour, bgColour });
+            return fgColour;
         }
         
         // Convert to RGB for blending
@@ -149,10 +142,10 @@ class ColourPalette {
     }
 
     /**
- * Determine WCAG compliance level
- * @param {number} ratio - Contrast ratio
- * @returns {string} WCAG level (AAA, AA, A, or Fail)
- */
+     * Determine WCAG compliance level
+     * @param {number} ratio - Contrast ratio
+     * @returns {string} WCAG level (AAA, AA, A, or Fail)
+    */
     getWCAGLevel(ratio) {
         if (ratio >= 7) return 'AAA';
         if (ratio >= 4.5) return 'AA';
@@ -161,12 +154,13 @@ class ColourPalette {
     }
 
     /**
- * Parse RGB colour to HSL format
- * @param {string} rgbString - RGB colour string like 'rgb(255, 0, 0)' or 'rgb(255 0 0)'
- * @returns {string} HSL colour string
- */
+     * Parse RGB colour to HSL format
+     * Adapted from https://www.w3.org/TR/css-color-4/#color-conversion-code
+    * @param {string} rgbString - RGB colour string
+    * @returns {string} HSL colour string
+     */
     rgbToHsl(rgbString) {
-    // Parse RGB values - handle multiple formats: rgb(255, 0, 0), rgb(255 0 0), rgba(255, 0, 0, 1)
+        // Parse RGB values - handle multiple formats: rgb(255, 0, 0), rgb(255 0 0), rgba(255, 0, 0, 1)
         // Try comma-separated first
         let match = rgbString.match(/rgba?\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)/);
         // If that fails, try space-separated
@@ -213,13 +207,13 @@ class ColourPalette {
     }
 
     /**
- * Parse relative colour syntax: hsl(from var(...) h s 18%)
- * @param {string} relativeColorString - String like "hsl(from hsl(180deg 100% 40%) h s 18%)"
- * @returns {string} Computed HSL string
- */
-    parseRelativeColorSyntax(relativeColorString) {
-        // Match: hsl(from <color> h s l) where h/s/l can be values or keywords
-        const match = relativeColorString.match(/hsl\(\s*from\s+hsl\(([^)]+)\)\s+([^)]+)\)/);
+     * Parse relative colour syntax: hsl(from var(...) h s 18%)
+     * @param {string} relativeColourString - String like "hsl(from hsl(180deg 100% 40%) h s 18%)"
+     * @returns {string} Computed HSL string
+     */
+    parseRelativeColourSyntax(relativeColourString) {
+        // Match: hsl(from <colour> h s l) where h/s/l can be values or keywords
+        const match = relativeColourString.match(/hsl\(\s*from\s+hsl\(([^)]+)\)\s+([^)]+)\)/);
         
         if (!match) {
             return null;
@@ -282,16 +276,16 @@ class ColourPalette {
             }
         }
         
-        console.log(`[parseRelativeColor] "${relativeColorString}" -> hsl(${h}, ${s}%, ${l}%)`);
+        console.log(`[parseRelativeColour] "${relativeColourString}" -> hsl(${h}, ${s}%, ${l}%)`);
         
         return `hsl(${h}, ${s}%, ${l}%)`;
     }
 
     /**
- * Get computed CSS variable value
- * @param {string} varName - CSS variable name (e.g., '--colour-warning-background')
- * @returns {string} Computed colour value in HSL format
- */
+     * Get computed CSS variable value
+     * @param {string} varName - CSS variable name (e.g., '--colour-warning-background')
+     * @returns {string} Computed colour value in HSL format
+     */
     getCSSVariableValue(varName) {
         const value = getComputedStyle(document.documentElement).getPropertyValue(varName).trim();
     
@@ -302,7 +296,7 @@ class ColourPalette {
     
         // Check if it's a relative colour syntax that the browser didn't compute
         if (value.startsWith('hsl(from ') || value.startsWith('hsl( from ')) {
-            const parsed = this.parseRelativeColorSyntax(value);
+            const parsed = this.parseRelativeColourSyntax(value);
             if (parsed) {
                 return parsed;
             }
@@ -320,12 +314,12 @@ class ColourPalette {
     }
 
     /**
- * Normalize HSL colour string to standard format
- * @param {string} hslString - HSL colour string (may have 'deg' suffix) or RGB string
- * @returns {string} Normalized HSL string
- */
+     * Normalize HSL colour string to standard format
+     * @param {string} hslString - HSL colour string (may have 'deg' suffix) or RGB string
+     * @returns {string} Normalized HSL string
+     */
     normalizeHSL(hslString) {
-    // If it's an RGB string, convert it first
+        // If it's an RGB string, convert it first
         if (hslString.startsWith('rgb(') || hslString.startsWith('rgb ') || hslString.startsWith('rgba(')) {
             hslString = this.rgbToHsl(hslString);
         }
@@ -351,7 +345,7 @@ class ColourPalette {
         }
         
         if (match) {
-            // Convert to standardized comma-separated format
+            // Convert to standardised comma-separated format
             return `hsl(${match[1]}, ${match[2]}%, ${match[3]}%)`;
         }
     
@@ -359,10 +353,18 @@ class ColourPalette {
         return hslString;
     }
 
+    /**************************************************************
+     * Remaining methods are specific to ColourPalette.html page
+     * - initializeColourValues: Reads CSS variables and updates the display
+     * - initializeContrastInfo: Calculates contrast ratios and updates the display
+     * - initialize: Calls the above two methods to set up the page
+      *************************************************************
+     */
+    
     /**
- * Initialize colour value from CSS variables
- */
-    initializeColorValues() {
+     * Initialize colour values from CSS variables
+    */
+    initializeColourValues() {
         const colourValueDivs = document.querySelectorAll('.colour-value[data-var]');
     
         colourValueDivs.forEach(div => {
@@ -383,8 +385,8 @@ class ColourPalette {
     }
 
     /**
- * Initialize contrast information for all colour swatches
- */
+     * Initialize contrast information for all colour swatches
+     */
     initializeContrastInfo() {
         const contrastDivs = document.querySelectorAll('.contrast-info');
         
@@ -412,11 +414,11 @@ class ColourPalette {
                 page = this.getCSSVariableValue(pageVar);
             }
             
-            // If opacity and page background are specified, blend the colors
+            // If opacity and page background are specified, blend the colours
             if (opacity && page && opacity < 1) {
                 const normalizedPage = this.normalizeHSL(page);
-                bg = this.blendColors(bg, normalizedPage, opacity);
-                fg = this.blendColors(fg, normalizedPage, opacity);
+                bg = this.blendColours(bg, normalizedPage, opacity);
+                fg = this.blendColours(fg, normalizedPage, opacity);
                 console.log(`[${index+1}] Blending with opacity ${opacity} on page background ${pageVar}`);
             }
         
@@ -470,10 +472,10 @@ class ColourPalette {
     }
 
     /**
- * Initialize the colour palette display
- */
+     * Initialize the colour palette display
+     */
     initialize() {
-        this.initializeColorValues();
+        this.initializeColourValues();
         this.initializeContrastInfo();
     }
 }
@@ -483,9 +485,9 @@ const colourPalette = new ColourPalette();
 
 function initializeWhenReady() {
     // Check if a known CSS variable is available (indicates CSS is loaded)
-    const testColor = getComputedStyle(document.documentElement).getPropertyValue('--colour-white').trim();
+    const testColour = getComputedStyle(document.documentElement).getPropertyValue('--colour-white').trim();
     
-    if (testColor) {
+    if (testColour) {
         // CSS is loaded, initialize
         colourPalette.initialize();
     } else {

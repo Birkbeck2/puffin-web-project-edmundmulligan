@@ -1,6 +1,6 @@
 /*
  **********************************************************************
- * File       : student-form-storage.js
+ * File       : localStorage.js
  * Author     : Edmund Mulligan <edmund@edmundmulligan.name>
  * Copyright  : (c) 2026 The Embodied Mind
  * License    : MIT License (see license-and-credits.html page)
@@ -17,7 +17,7 @@
     /**
      * Generic class for managing encrypted form data storage
      */
-    class FormDataStorage {
+    class LocalStorage {
         constructor(encryptionKey = 'witchcraft-and-wizardry-school-secure-key-2026') {
             this.ENCRYPTION_KEY = encryptionKey;
         }
@@ -173,14 +173,14 @@
     }
 
     /**
-     * Specialized class for managing student form data with avatar preview
+     * Specialised class for managing student form data with avatar preview
      */
     class StudentFormManager {
         constructor(formId, storageKeyPrefix = 'studentFormData_') {
             this.formId = formId;
             this.storageKeyPrefix = storageKeyPrefix;
             this.CURRENT_PROFILE_KEY = `${storageKeyPrefix}currentProfile`;
-            this.storage = new FormDataStorage();
+            this.storage = new LocalStorage();
         }
 
         /**
@@ -660,13 +660,14 @@
         mentorFormManager.init();
     }
 
-    // Export both base storage class and student form manager for use by other scripts
-    window.FormDataStorage = FormDataStorage;
-    window.StudentFormStorage = {
+    // Export the renamed base storage class and manager API.
+    window.LocalStorage = LocalStorage;
+    window.LocalStorageManager = {
         get: (profileIdentifier) => studentFormManager.get(profileIdentifier),
         clear: (profileIdentifier) => studentFormManager.clear(profileIdentifier),
         getCurrentProfile: () => studentFormManager.getCurrentProfile(),
         setCurrentProfile: (profileIdentifier) => studentFormManager.setCurrentProfile(profileIdentifier),
         populateStudentImage: () => studentFormManager.populateStudentImage()
     };
+    window.StudentFormStorage = window.LocalStorageManager;
 })();

@@ -5,8 +5,7 @@
  * Copyright  : (c) 2026 The Embodied Mind
  * License    : MIT License (see license-and-credits.html page)
  * Description:
- *   Injects header, footer, and not-implemented content into all pages
- *   to follow DRY principle
+ *   Injects header and footer into all pages to follow DRY principle
  **********************************************************************
  */
 
@@ -179,33 +178,11 @@
         }
 
         /**
-         * Inject popover content for not-implemented feature
-         */
-        injectPopover() {
-            const popover = document.getElementById('not-implemented');
-            if (!popover) {
-                return;
-            }
-
-            popover.innerHTML = `
-                <h2>Under Construction</h2>
-                <p>
-                    This feature has not been implemented yet&nbsp;&mdash;&nbsp;please
-                    check back later!
-                </p>
-                <button popovertarget="not-implemented" popovertargetaction="hide">
-                    Close
-                </button>
-            `;
-        }
-
-        /**
          * Initialize and inject all common code elements
          */
         init() {
             this.injectHeader();
             this.injectFooter();
-            this.injectPopover();
         }
     }
 

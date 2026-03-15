@@ -1,6 +1,6 @@
 /*
 **********************************************************************
- * File       : test-results.js
+ * File       : displayTestResults.js
  * Author     : Edmund Mulligan <edmund@edmundmulligan.name>
  * Copyright  : (c) 2026 The Embodied Mind
  * License    : MIT License (see ../license-and-credits.html page)
@@ -392,7 +392,7 @@ function formatColourAuditDetails(data) {
     let html = '';
     
     if (data.hardcodedColors && data.hardcodedColors.length > 0) {
-        html += '<h3>Hardcoded Colors</h3>';
+        html += '<h3>Hardcoded Colours</h3>';
         data.hardcodedColors.forEach(item => {
             html += `<div class="error-item">
                 <h4>${item.file}</h4>
@@ -711,7 +711,7 @@ async function loadAllResults() {
             'fas fa-book-reader',
             status,
             [
-                { label: 'Pages Analyzed', value: readability.pages ? readability.pages.length : 0 },
+                { label: 'Pages Analysed', value: readability.pages ? readability.pages.length : 0 },
                 { label: 'Average Grade Level', value: avgGrade },
                 { label: 'Total Words', value: totalWords }
             ],
@@ -738,7 +738,7 @@ async function loadAllResults() {
             'fas fa-palette',
             status,
             [
-                { label: 'Hardcoded Colors', value: colourAudit.hardcodedColors ? colourAudit.hardcodedColors.length : 0 },
+                { label: 'Hardcoded Colours', value: colourAudit.hardcodedColors ? colourAudit.hardcodedColors.length : 0 },
                 { label: 'Theme-Specific Vars', value: colourAudit.themeSpecificVars ? colourAudit.themeSpecificVars.length : 0 },
                 { label: 'Missing Theme System', value: colourAudit.missingThemeSystem ? colourAudit.missingThemeSystem.length : 0 },
                 { label: 'Total Issues', value: totalIssues }

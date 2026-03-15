@@ -7,7 +7,7 @@
   "strict": false,
   "globals": {
     "Debug": true,
-    "FormDataStorage": true,
+    "LocalStorage": true,
     "console": true,
     "alert": true
   }

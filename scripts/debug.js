@@ -5,7 +5,7 @@
  * Copyright  : (c) 2026 The Embodied Mind
  * License    : MIT License (see license-and-credits.html page)
  * Description:
- *   Centralized debug utility for conditional console logging.
+ *   Centralised debug utility for conditional console logging.
  *   Controls logging across all scripts via ?debug=on|off query parameter.
  *   Usage: Debug.log('message'), Debug.warn('warning'), Debug.error('error')
  **********************************************************************

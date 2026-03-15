@@ -115,7 +115,7 @@
         }
 
         /**
-         * Populate a single popover with glossary content (legacy individual popover support)
+         * Populate a single popover with glossary content
          * @param {HTMLElement} popover - The popover element to populate
          */
         populatePopover(popover) {

@@ -41,6 +41,29 @@
          * Set up event listeners for modal functionality
          */
         setupEventListeners() {
+            // Open modal when clicking a configured image button.
+            // Event delegation keeps this working for dynamically injected content.
+            document.addEventListener('click', (event) => {
+                const target = event.target;
+                if (!target || typeof target !== 'object' || typeof target.closest !== 'function') {
+                    return;
+                }
+
+                const imageButton = target.closest('.image-button');
+                if (!imageButton || typeof imageButton.getAttribute !== 'function') {
+                    return;
+                }
+
+                const imageSrc = imageButton.getAttribute('data-image-src');
+                if (!imageSrc) {
+                    return;
+                }
+
+                const nestedImage = imageButton.querySelector('img');
+                const imageCaption = imageButton.getAttribute('data-image-caption') || nestedImage?.getAttribute('alt') || 'Image preview';
+                this.open(imageSrc, imageCaption);
+            });
+
             // Close modal when pressing Escape key
             document.addEventListener('keydown', (event) => {
                 if (event.key === 'Escape') {
@@ -59,6 +82,11 @@
                 this.initElements();
             }
 
+            if (!this.modal || !this.modalImg || !this.captionText) {
+                console.error('Image modal elements are missing from the page.');
+                return;
+            }
+
             this.modal.style.display = 'block';
             this.modalImg.src = imageSrc;
             this.modalImg.alt = imageAlt;
@@ -75,6 +103,10 @@
         close() {
             if (!this.modal) {
                 this.initElements();
+            }
+
+            if (!this.modal) {
+                return;
             }
 
             this.modal.style.display = 'none';
