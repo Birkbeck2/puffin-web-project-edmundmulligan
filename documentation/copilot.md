@@ -40,7 +40,6 @@ web/
 │   ├── globals.css         # CSS custom properties
 │   ├── main.css            # Base styles
 │   ├── components/         # Component-specific styles
-│   └── media-queries.css   # Responsive breakpoints
 ├── scripts/                # JavaScript files
 │   ├── debug.js            # Debugging utilities
 │   ├── injectCommonCode.js # DRY principle for header/footer
@@ -56,7 +55,6 @@ web/
 2. `main.css` - Base styles
 3. Component stylesheets (buttons, navigation, etc.)
 4. Page-specific styles
-5. `media-queries.css` (must load last)
 
 #### CSS Custom Properties
 All colors, fonts, spacing, and common values are defined as CSS custom properties in `globals.css`. Always use these variables rather than hard-coded values.

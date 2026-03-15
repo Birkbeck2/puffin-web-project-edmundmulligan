@@ -166,3 +166,19 @@
     cursor: pointer;
 }
 
+
+/* Responsive layout for small screens */
+@media (width < 800px) {
+    .intro-container {
+        display: block;
+    }
+
+    .student-image {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .intro-content {
+        width: 100%;
+    }
+}
