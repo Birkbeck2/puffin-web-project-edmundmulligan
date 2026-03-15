@@ -73,6 +73,44 @@
         }
 
         /**
+         * Validate that the modal image source is safe before assigning it to the DOM.
+         * @param {string} imageSrc - Candidate image source URL
+         * @returns {string|null} Safe absolute URL or null
+         */
+        getSafeImageSource(imageSrc) {
+            const trimmedSrc = typeof imageSrc === 'string' ? imageSrc.trim() : '';
+            if (!trimmedSrc) {
+                return null;
+            }
+
+            try {
+                const parsedUrl = new window.URL(trimmedSrc, window.location.href);
+                const allowedProtocols = ['http:', 'https:'];
+                const hasAllowedProtocol = allowedProtocols.includes(parsedUrl.protocol);
+                const isSameOrigin = parsedUrl.origin === window.location.origin;
+                const hasImageExtension = /\.(?:avif|bmp|gif|ico|jpe?g|png|svg|webp)(?:$|[?#])/i.test(parsedUrl.pathname);
+
+                if (!hasAllowedProtocol || !isSameOrigin || !hasImageExtension) {
+                    return null;
+                }
+
+                return parsedUrl.href;
+            } catch (error) {
+                return null;
+            }
+        }
+
+        /**
+         * Normalize user-provided caption text for safe plain-text rendering.
+         * @param {string} imageAlt - Candidate caption text
+         * @returns {string} Safe caption text
+         */
+        getSafeCaption(imageAlt) {
+            const normalizedCaption = typeof imageAlt === 'string' ? imageAlt.trim() : '';
+            return normalizedCaption || 'Image preview';
+        }
+
+        /**
          * Opens the image modal with the specified image
          * @param {string} imageSrc - The source URL of the image to display
          * @param {string} imageAlt - The alt text for the image
@@ -87,10 +125,18 @@
                 return;
             }
 
+            const safeImageSrc = this.getSafeImageSource(imageSrc);
+            if (!safeImageSrc) {
+                console.warn('Blocked unsafe image source for modal preview.');
+                return;
+            }
+
+            const safeCaption = this.getSafeCaption(imageAlt);
+
             this.modal.style.display = 'block';
-            this.modalImg.src = imageSrc;
-            this.modalImg.alt = imageAlt;
-            this.captionText.textContent = imageAlt;
+            this.modalImg.src = safeImageSrc;
+            this.modalImg.alt = safeCaption;
+            this.captionText.textContent = safeCaption;
         
             // Store original overflow and prevent body scroll when modal is open
             this.originalOverflow = document.body.style.overflow || 'auto';

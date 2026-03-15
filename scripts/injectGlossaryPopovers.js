@@ -46,14 +46,112 @@
         }
 
         /**
-         * Sanitise text content to prevent XSS attacks
-         * @param {string} text - Text to sanitise
-         * @returns {string} Sanitised text
+         * Check whether a link target is safe to copy into the live DOM
+         * @param {string} href - Link target to validate
+         * @returns {boolean} True when the link protocol is allowed
          */
-        escapeHtml(text) {
-            const div = document.createElement('div');
-            div.textContent = text;
-            return div.innerHTML;
+        isSafeHref(href) {
+            try {
+                const url = new URL(href, window.location.href);
+                return ['http:', 'https:', 'mailto:', 'tel:'].includes(url.protocol);
+            } catch (error) {
+                return false;
+            }
+        }
+
+        /**
+         * Clone glossary markup using a small allowlist so fetched HTML is not injected directly
+         * @param {Node} node - Node to clone
+         * @returns {Node|null} Safe cloned node
+         */
+        cloneSafeNode(node) {
+            const elementNodeType = 1;
+            const textNodeType = 3;
+            const allowedTags = new Set(['A', 'B', 'BR', 'CODE', 'EM', 'I', 'LI', 'OL', 'P', 'SPAN', 'STRONG', 'UL']);
+
+            if (node.nodeType === textNodeType) {
+                return document.createTextNode(node.textContent || '');
+            }
+
+            if (node.nodeType !== elementNodeType) {
+                return null;
+            }
+
+            const tagName = node.tagName.toUpperCase();
+            if (!allowedTags.has(tagName)) {
+                const fragment = document.createDocumentFragment();
+                Array.from(node.childNodes).forEach(childNode => {
+                    const safeChild = this.cloneSafeNode(childNode);
+                    if (safeChild) {
+                        fragment.appendChild(safeChild);
+                    }
+                });
+                return fragment;
+            }
+
+            const safeElement = document.createElement(node.tagName.toLowerCase());
+
+            if (tagName === 'A') {
+                const href = node.getAttribute('href');
+                if (href && this.isSafeHref(href)) {
+                    safeElement.setAttribute('href', href);
+                }
+
+                if (node.getAttribute('target') === '_blank') {
+                    safeElement.setAttribute('target', '_blank');
+                    safeElement.setAttribute('rel', 'noopener noreferrer');
+                }
+            }
+
+            Array.from(node.childNodes).forEach(childNode => {
+                const safeChild = this.cloneSafeNode(childNode);
+                if (safeChild) {
+                    safeElement.appendChild(safeChild);
+                }
+            });
+
+            return safeElement;
+        }
+
+        /**
+         * Build a safe definition fragment from glossary markup
+         * @param {HTMLElement} definitionElement - Source glossary definition element
+         * @returns {DocumentFragment} Safe fragment for insertion into the live DOM
+         */
+        buildSafeDefinition(definitionElement) {
+            const fragment = document.createDocumentFragment();
+
+            Array.from(definitionElement.childNodes).forEach(childNode => {
+                const safeChild = this.cloneSafeNode(childNode);
+                if (safeChild) {
+                    fragment.appendChild(safeChild);
+                }
+            });
+
+            return fragment;
+        }
+
+        /**
+         * Replace popover contents with safe glossary content
+         * @param {HTMLElement} popover - Popover element to populate
+         * @param {string} popoverTargetId - Popover id used by the close button
+         * @param {Object} content - Glossary content object
+         */
+        renderPopoverContent(popover, popoverTargetId, content) {
+            const heading = document.createElement('h2');
+            heading.textContent = content.termText;
+
+            const definitionContainer = document.createElement('div');
+            definitionContainer.appendChild(this.buildSafeDefinition(content.definitionElement));
+
+            const closeButton = document.createElement('button');
+            closeButton.type = 'button';
+            closeButton.setAttribute('popovertarget', popoverTargetId);
+            closeButton.setAttribute('popovertargetaction', 'hide');
+            closeButton.className = 'popover-close-button';
+            closeButton.textContent = 'Close';
+
+            popover.replaceChildren(heading, definitionContainer, closeButton);
         }
 
         /**
@@ -69,7 +167,7 @@
         /**
          * Get glossary term and definition content
          * @param {string} term - The term identifier (e.g., 'html', 'css')
-         * @returns {Object|null} Object with termText and definition, or null if not found
+         * @returns {Object|null} Object with termText and definitionElement, or null if not found
          */
         getGlossaryContent(term) {
             const glossaryId = `glossary-${term}`;
@@ -90,9 +188,7 @@
                 return null;
             }
 
-            const definition = dd.innerHTML.trim(); // Use innerHTML to preserve formatting
-
-            return { termText, definition };
+            return { termText, definitionElement: dd };
         }
 
         /**
@@ -106,12 +202,7 @@
                 return;
             }
 
-            // Populate the popover with sanitised content
-            popover.innerHTML = `
-<h2>${this.escapeHtml(content.termText)}</h2>
-<div>${content.definition}</div>
-<button type="button" popovertarget="${popover.id}" popovertargetaction="hide" class="popover-close-button">Close</button>
-`;
+            this.renderPopoverContent(popover, popover.id, content);
         }
 
         /**
@@ -131,12 +222,7 @@
                 return;
             }
 
-            // Populate the popover with sanitised content
-            popover.innerHTML = `
-<h2>${this.escapeHtml(content.termText)}</h2>
-<div>${content.definition}</div>
-<button type="button" popovertarget="${popoverId}" popovertargetaction="hide" class="popover-close-button">Close</button>
-`;
+            this.renderPopoverContent(popover, popoverId, content);
         }
 
         /**
