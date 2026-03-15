@@ -1,6 +1,6 @@
 /*
  **********************************************************************
- * File       : scripts/toggle-section.js
+ * File       : scripts/toggleSection.js
  * Author     : Edmund Mulligan <edmund@edmundmulligan.name>
  * Copyright  : (c) 2026 The Embodied Mind
  * License    : MIT License (see license-and-credits.html page)

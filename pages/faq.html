@@ -56,8 +56,6 @@
     <link rel="stylesheet" href="../styles/components/toggle.css">
     <link rel="stylesheet" href="../styles/pages.css">
 
-    <!-- media-queries must be the last stylesheets loaded -->
-    <link rel="stylesheet" href="../styles/media-queries.css">
     <!-- End of CSS stylesheets section -->
 
     <!-- Page-specific styles -->
@@ -74,9 +72,9 @@
     <!-- Load JavaScript files -->
     <script src="../scripts/debug.js"></script>
     <script src="../scripts/themeSwitcher.js"></script>
-    <script src="../scripts/toggle-header-footer.js" defer></script>
+    <script src="../scripts/toggleHeaderAndFooter.js" defer></script>
     <script src="../scripts/injectCommonCode.js" defer></script>
-    <script src="../scripts/toggle-section.js" defer></script>
+    <script src="../scripts/toggleSection.js" defer></script>
         <script src="../scripts/populateLineNumbers.js" defer></script>
 
     <!-- End JavaScript file links -->
@@ -102,7 +100,7 @@
                     between the Internet and the World Wide Web?</h4>
                 <div id="web-basics-01" class="hidden">
                     <p>
-                        The Internet was invented in the 1960s as a way to connect computers together so they could share information. It was originally a military project started during the Cold War, and so it was designed to be a decentralized network that could withstand a nuclear attack. That made it very robust and reliable, but it was also very complex and difficult to use. Although it allowed computers to share information at a basic level, it was not user-friendly and required a lot of technical knowledge to use.
+                        The Internet was invented in the 1960s as a way to connect computers together so they could share information. It was originally a military project started during the Cold War, and so it was designed to be a decentralised network that could withstand a nuclear attack. That made it very robust and reliable, but it was also very complex and difficult to use. Although it allowed computers to share information at a basic level, it was not user-friendly and required a lot of technical knowledge to use.
                     </p>
                     <p>
                         The World Wide Web was created as a way to make the Internet more user-friendly. It was designed to be a system of interlinked hypertext documents that could be accessed via the Internet using a web browser. The World Wide Web made it much easier for people to access and share information on the Internet, and it quickly became the dominant way people used the Internet.
@@ -169,7 +167,7 @@
                     </p>
 
                     <p>
-                        CSS allows developers to separate the content of a web page from its presentation, making it easier to maintain and update the design of a website. It provides a way to apply styles to HTML elements, such as colors, fonts, spacing, and positioning. CSS can be applied to a web page in several ways, including inline styles, internal style sheets, and external style sheets.
+                        CSS allows developers to separate the content of a web page from its presentation, making it easier to maintain and update the design of a website. It provides a way to apply styles to HTML elements, such as colours, fonts, spacing, and positioning. CSS can be applied to a web page in several ways, including inline styles, internal style sheets, and external style sheets.
                     </p>
 
                     <p>
@@ -181,7 +179,7 @@
                 <h4 onclick="toggleSection('web-basics-08', event);" onkeydown="toggleSection('web-basics-08', event);" class="magic-invisible faq-question-title">What is JavaScript?</h4>
                 <div id="web-basics-08" class="hidden">
                     <p>
-                        JavaScript is a programming language that is commonly used to create interactive effects within web browsers. It is used to add dynamic behavior to web pages.
+                        JavaScript is a programming language that is commonly used to create interactive effects within web browsers. It is used to add dynamic behaviour to web pages.
                     </p>
 
                     <p>
@@ -232,11 +230,11 @@
                     </p>
 
                     <p>
-                        When a user visits a website, the server can send a cookie to the user&rsquo;s browser, which stores it on the user&rsquo;s computer. The browser then sends the cookie back to the server with each subsequent request to the same website. This allows the server to recognize the user and provide a personalized experience.
+                        When a user visits a website, the server can send a cookie to the user&rsquo;s browser, which stores it on the user&rsquo;s computer. The browser then sends the cookie back to the server with each subsequent request to the same website. This allows the server to recognise the user and provide a personalised experience.
                     </p>
 
                     <p>
-                        Cookies can be used for various purposes, such as tracking user behavior, remembering user preferences, and maintaining session state. They can also be used for advertising and analytics purposes.
+                        Cookies can be used for various purposes, such as tracking user behaviour, remembering user preferences, and maintaining session state. They can also be used for advertising and analytics purposes.
                     </p>
 
                     <p>
@@ -275,7 +273,7 @@
                     </p>
 
                     <p>
-                        When you enter a search query into a search engine, it uses algorithms to analyze the index and return a list of relevant pages. The search engine ranks the pages based on various factors, such as the relevance of the content to the search query, the quality of the page, and the authority of the website.
+                        When you enter a search query into a search engine, it uses algorithms to analyse the index and return a list of relevant pages. The search engine ranks the pages based on various factors, such as the relevance of the content to the search query, the quality of the page, and the authority of the website.
                     </p>
 
                     <p>
@@ -283,7 +281,7 @@
                     </p>
 
                     <p>
-                        Some search engines, like Google, collect data about users' search behavior to improve their algorithms and provide personalized results. This data can include information about the user&rsquo;s location, search history, and preferences. Others focus on privacy and do not track users' search behavior, such as DuckDuckGo.
+                        Some search engines, like Google, collect data about users' search behaviour to improve their algorithms and provide personalised results. This data can include information about the user&rsquo;s location, search history, and preferences. Others focus on privacy and do not track users' search behaviour, such as DuckDuckGo.
                     </p>
 
                     <p>
@@ -307,7 +305,7 @@
                     </p>
 
                     <p>
-                        SEO is an ongoing process that requires continuous monitoring and adjustment to keep up with changes in search engine algorithms and user behavior. It is an essential part of digital marketing and can help drive organic traffic to a website, increase brand visibility, and improve user experience.
+                        SEO is an ongoing process that requires continuous monitoring and adjustment to keep up with changes in search engine algorithms and user behaviour. It is an essential part of digital marketing and can help drive organic traffic to a website, increase brand visibility, and improve user experience.
                     </p>
                     <button type="button" class="magic-block-close h5-level" onclick="toggleSectionCollapse('web-basics-14', event);" onkeydown="toggleSectionCollapse('web-basics-14', event);" tabindex="0" aria-label="Collapse section"></button>
                 </div>
@@ -379,7 +377,7 @@
                 <h4 onclick="toggleSection('web-development-basics-07', event);" onkeydown="toggleSection('web-development-basics-07', event);" class="magic-invisible faq-question-title">What is a function?</h4>
                 <div id="web-development-basics-07" class="hidden">
                     <p>
-                        A function is a block of code that performs a specific task. It can take input parameters and return a value. Functions are used to organize code and make it reusable.
+                        A function is a block of code that performs a specific task. It can take input parameters and return a value. Functions are used to organise code and make it reusable.
                     </p>
                     <button type="button" class="magic-block-close h5-level" onclick="toggleSectionCollapse('web-development-basics-07', event);" onkeydown="toggleSectionCollapse('web-development-basics-07', event);" tabindex="0" aria-label="Collapse section"></button>
                 </div>
@@ -395,7 +393,7 @@
                 <h4 onclick="toggleSection('web-development-basics-09', event);" onkeydown="toggleSection('web-development-basics-09', event);" class="magic-invisible faq-question-title">What is an object?</h4>
                 <div id="web-development-basics-09" class="hidden">
                     <p>
-                        An object is a data structure that contains properties and methods. It is used to represent real-world entities and their behavior in a program.
+                        An object is a data structure that contains properties and methods. It is used to represent real-world entities and their behaviour in a program.
                     </p>
                     <button type="button" class="magic-block-close h5-level" onclick="toggleSectionCollapse('web-development-basics-09', event);" onkeydown="toggleSectionCollapse('web-development-basics-09', event);" tabindex="0" aria-label="Collapse section"></button>
                 </div>
@@ -477,10 +475,10 @@
                 </div>
 
 
-                <h4 onclick="toggleSection('tips-and-tricks-03', event);" onkeydown="toggleSection('tips-and-tricks-03', event);" class="magic-invisible faq-question-title">Use folders to organize your files.</h4>
+                <h4 onclick="toggleSection('tips-and-tricks-03', event);" onkeydown="toggleSection('tips-and-tricks-03', event);" class="magic-invisible faq-question-title">Use folders to organise your files.</h4>
                 <div id="tips-and-tricks-03" class="hidden">
                     <p>
-                        Organize your files into folders to make it easier to find what you need. Use descriptive names for your folders and files to help you remember what they contain.
+                        Organise your files into folders to make it easier to find what you need. Use descriptive names for your folders and files to help you remember what they contain.
                     </p>
 
                     <p>

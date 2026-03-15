@@ -1,6 +1,6 @@
 /*
  **********************************************************************
- * File       : scripts/populateLessonsNav.js
+ * File       : scripts/populatgeLessonsMenu.js
  * Author     : Edmund Mulligan <edmund@edmundmulligan.name>
  * Copyright  : (c) 2026 The Embodied Mind
  * License    : MIT License (see license-and-credits.html page)

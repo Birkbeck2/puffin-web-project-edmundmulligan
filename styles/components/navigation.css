@@ -104,6 +104,31 @@ nav.site-navigation {
     }
 }
 
+/* handle very small screens (e.g. very narrow browser windows) */
+@media (width < 200px) {
+    /* Hide navigation icons at extreme narrow widths to improve wrapping */
+    nav.site-navigation a::before,
+    nav.site-navigation button::before,
+    nav.site-navigation a:hover::before,
+    nav.site-navigation a:focus-visible::before,
+    nav.site-navigation button:hover::before,
+    nav.site-navigation button:focus-visible::before {
+        display: none;
+    }
+
+    /* Allow text to wrap within navigation items at extreme narrow widths */
+    nav.site-navigation li {
+        max-width: 100%;
+    }
+
+    nav.site-navigation a,
+    nav.site-navigation button {
+        white-space: normal;
+        overflow-wrap: break-word;
+        padding: clamp(0.2rem, 1vw, 0.4rem);
+    }
+}
+
 /*
 nav.site-navigation ul {
     display: flex;
