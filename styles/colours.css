@@ -102,8 +102,8 @@
     --colour-subdued-light-button-text-hover:            hsl(from var(--colour-grey) h s 0%);
     --colour-subdued-light-button-background-selected:   hsl(from var(--colour-grey) h s 25%);
     --colour-subdued-light-button-text-selected:         hsl(from var(--colour-grey) h s 100%);
-    --colour-subdued-light-button-background-disabled:   hsl(from var(--colour-grey) h s 95%);
-    --colour-subdued-light-button-text-disabled:         hsl(from var(--colour-grey) h s 60%);
+    --colour-subdued-light-button-background-disabled:   hsl(from var(--colour-grey) h s 90%);
+    --colour-subdued-light-button-text-disabled:         hsl(from var(--colour-grey) h s 35%);
 
     /* subdued light theme menu links */
     --colour-subdued-light-link-background:              hsl(from var(--colour-grey) h s 75%);
@@ -129,7 +129,7 @@
     --colour-subdued-dark-button-background-selected:  hsl(from var(--colour-grey) h s 95%);
     --colour-subdued-dark-button-text-selected:        hsl(from var(--colour-grey) h s 40%);
     --colour-subdued-dark-button-background-disabled:  hsl(from var(--colour-grey) h s 10%);
-    --colour-subdued-dark-button-text-disabled:        hsl(from var(--colour-grey) h s 50%);
+    --colour-subdued-dark-button-text-disabled:        hsl(from var(--colour-grey) h s 52%);
 
     /* subdued dark theme menu links */
     --colour-subdued-dark-link-background:             hsl(from var(--colour-grey) h s 25%);
@@ -155,7 +155,7 @@
     --colour-vibrant-light-button-background-selected: hsl(from var(--colour-magenta) h s 25%);
     --colour-vibrant-light-button-text-selected:       hsl(from var(--colour-green) h s 75%);
     --colour-vibrant-light-button-background-disabled: hsl(from var(--colour-grey) h s 85%);
-    --colour-vibrant-light-button-text-disabled:       hsl(from var(--colour-grey) h s 55%);
+    --colour-vibrant-light-button-text-disabled:       hsl(from var(--colour-grey) h s 30%);
 
     /* vibrant light theme menu links */
     --colour-vibrant-light-link-background:             hsl(from var(--colour-green) h s 75%);
@@ -180,8 +180,8 @@
     --colour-vibrant-dark-button-text-hover:           hsl(from var(--colour-navy) h s 20%);
     --colour-vibrant-dark-button-background-selected:  hsl(from var(--colour-navy) h s 20%);
     --colour-vibrant-dark-button-text-selected:        hsl(from var(--colour-orange) h s 60%);
-    --colour-vibrant-dark-button-background-disabled:  hsl(from var(--colour-grey) h s 30%);
-    --colour-vibrant-dark-button-text-disabled:        hsl(from var(--colour-grey) h s 60%);
+    --colour-vibrant-dark-button-background-disabled:  hsl(from var(--colour-grey) h s 25%);
+    --colour-vibrant-dark-button-text-disabled:        hsl(from var(--colour-grey) h s 70%);
     
     /* vibrant dark theme menu links */
     --colour-vibrant-dark-link-background:             hsl(from var(--colour-orange) h s 60%);
