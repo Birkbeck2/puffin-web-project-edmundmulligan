@@ -10,7 +10,7 @@
  */
 
 :root {
-    /* Primary colours used in themes */
+    /* Basic colours used in themes */
     --colour-white:         hsl(0deg 0% 100%);
     --colour-grey:          hsl(0deg 0% 50%);
     --colour-black:         hsl(0deg 0% 0%);
@@ -25,13 +25,13 @@
     --colour-navy:          hsl(240deg 100% 50%);
     --colour-magenta:       hsl(300deg 100% 50%);
     --colour-pink:          hsl(330deg 100% 50%);
-    --colour-purple:        hsl(270deg 50% 50%);
+    --colour-purple:        hsl(270deg 100% 50%);
 
     /* non-theme colours */
     --colour-warning-background:                         hsl(from var(--colour-red) h s 25%);
-    --colour-warning-text:                               hsl(from var(--colour-white) h s l);
+    --colour-warning-text:                               hsl(from var(--colour-grey) h s 100%);
     --colour-error-background:                           hsl(from var(--colour-red) h s 75%);
-    --colour-error-text:                                 hsl(from var(--colour-black) h s l);
+    --colour-error-text:                                 hsl(from var(--colour-grey) h s 0%);
     --colour-success-background:                         hsl(from var(--colour-green) h s 35%);
     --colour-success-text:                               hsl(from var(--colour-white) h s l);
 
@@ -93,15 +93,15 @@
     --colour-subdued-light-headings-background:          hsl(from var(--colour-grey) h s 95%);
     --colour-subdued-light-headings-text:                hsl(from var(--colour-grey) h s 10%);
     --colour-subdued-light-code-background:              hsl(from var(--colour-grey) h s 90%);
-    --colour-subdued-light-code-text:                    hsl(from var(--colour-black) h s l);
+    --colour-subdued-light-code-text:                    hsl(from var(--colour-grey) h s 0%);
 
     /* subdued light theme buttons */
     --colour-subdued-light-button-background:            hsl(from var(--colour-grey) h s 90%);
     --colour-subdued-light-button-text:                  hsl(from var(--colour-grey) h s 15%);
     --colour-subdued-light-button-background-hover:      hsl(from var(--colour-grey) h s 75%);
-    --colour-subdued-light-button-text-hover:            hsl(from var(--colour-black) h s l);
+    --colour-subdued-light-button-text-hover:            hsl(from var(--colour-grey) h s 0%);
     --colour-subdued-light-button-background-selected:   hsl(from var(--colour-grey) h s 25%);
-    --colour-subdued-light-button-text-selected:         hsl(from var(--colour-white) h s l);
+    --colour-subdued-light-button-text-selected:         hsl(from var(--colour-grey) h s 100%);
     --colour-subdued-light-button-background-disabled:   hsl(from var(--colour-grey) h s 95%);
     --colour-subdued-light-button-text-disabled:         hsl(from var(--colour-grey) h s 60%);
 
@@ -109,7 +109,7 @@
     --colour-subdued-light-link-background:              hsl(from var(--colour-grey) h s 75%);
     --colour-subdued-light-link-text:                    hsl(from var(--colour-grey) h s 15%);
     --colour-subdued-light-link-background-hover:        hsl(from var(--colour-grey) h s 60%);
-    --colour-subdued-light-link-text-hover:              hsl(from var(--colour-black) h s l);
+    --colour-subdued-light-link-text-hover:              hsl(from var(--colour-grey) h s 0%);
     --colour-subdued-light-link-background-visited:      hsl(from var(--colour-grey) h s 75%);
     --colour-subdued-light-link-text-visited:            hsl(from var(--colour-grey) h s 5%);
 
@@ -117,7 +117,7 @@
     --colour-subdued-dark-page-background:             hsl(from var(--colour-grey) h s 5%);
     --colour-subdued-dark-page-text:                   hsl(from var(--colour-grey) h s 75%);
     --colour-subdued-dark-headings-background:         hsl(from var(--colour-grey) h s 35%);
-    --colour-subdued-dark-headings-text:               hsl(from var(--colour-white) h s l);
+    --colour-subdued-dark-headings-text:               hsl(from var(--colour-grey) h s 100%);
     --colour-subdued-dark-code-background:             hsl(from var(--colour-grey) h s 15%);
     --colour-subdued-dark-code-text:                   hsl(from var(--colour-grey) h s 75%);
 

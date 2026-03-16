@@ -9,14 +9,12 @@
  **********************************************************************
  */
 
-/* Import colour, typography and layout definitions from respective CSS files */
+/* Import colour definitions from colours.css */
 @import url("./colours.css");
 @import url("./typography.css");
-@import url("./layout.css");
 
 :root {
     /* Background image sources */
-/*
     --bg-landscape-normal-light:              url('../images/backgrounds/background-web-landscape-normal-light.svg');
     --bg-landscape-normal-dark:               url('../images/backgrounds/background-web-landscape-normal-dark.svg');
     --bg-portrait-normal-light:               url('../images/backgrounds/background-web-portrait-normal-light.svg');
@@ -29,7 +27,7 @@
     --bg-landscape-vibrant-dark:              url('../images/backgrounds/background-web-landscape-vibrant-dark.svg');
     --bg-portrait-vibrant-light:              url('../images/backgrounds/background-web-portrait-vibrant-light.svg');
     --bg-portrait-vibrant-dark:               url('../images/backgrounds/background-web-portrait-vibrant-dark.svg');
-*/    
+    
     /* Active background images - default to normal-light, overridden by theme-switcher.js */
     --bg-landscape:                    var(--bg-landscape-normal-light);
     --bg-portrait:                     var(--bg-portrait-normal-light);
@@ -50,11 +48,4 @@
     --border-weight-thin:     0.1rem;
     --border-style:           solid;
 
-
-
-    /* 
-        there are probably more things that could be defined here 
-        to ensure sitewide consistency such as margin and padding
-        sizes, but that means more refactoring and this is a good start
-    */
 }

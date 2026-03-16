@@ -85,26 +85,23 @@ footer {
 h1, h2, h3, h4, h5, h6 {
     /* Use Cinzel font for headings */
     font-family: var(--font-family-serif);
-    font-weight: 600;
+    font-weight: 700;
     text-align: center;
 }
 
 /* make h1 and h2 larger and bolder */
 h1, h2{
     font-size: var(--fontsize-header-large);
-    font-weight: 700;
 }
 
 /* h3 not quite as big */
 h3, h4{
     font-size: var(--fontsize-header-medium);
-    font-weight: 700;
 }
 
 /* h5 and h6 smaller again */
 h5, h6{
     font-size: var(--fontsize-header-small);
-    font-weight: 700;
 }
 
 /* increas spacing for paragraphs in accordance with WCAG 2.2 */
@@ -142,11 +139,6 @@ a:focus-visible {
 a:focus-visible {
     outline: var(--border-weight-thin) dashed var(--colour-effective-link-text-focus);
     outline-offset: 0.2rem;
-}
-
-/* Utility class to mirror an image horizontally. */
-.mirror {
-    transform: scaleX(-1);
 }
 
 /* Make SVG images with black strokes/fills lighter in dark mode */
