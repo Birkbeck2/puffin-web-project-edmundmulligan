@@ -5,20 +5,20 @@
  * Copyright  : (c) 2026 The Embodied Mind
  * License    : MIT License (see ../license-and-credits.html page)
  * Description:
- *    Color palette preview page showing all colors defined in globals.css
- *    Uses CSS Grid layout to display color swatches with their variable names
+ *    Colour palette preview page showing all colours defined in globals.css
+ *    Uses CSS Grid layout to display colour swatches with their variable names
 **********************************************************************
 -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Color Palette Preview - Web Witchcraft and Wizardry">
-    <meta name="keywords" content="color palette, design system, CSS variables, HSL colors">
+    <meta name="description" content="Colour Palette Preview - Web Witchcraft and Wizardry">
+    <meta name="keywords" content="colour palette, design system, CSS variables, HSL colours">
     <meta name="author" content="Edmund Mulligan">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Color Palette - Web Witchcraft and Wizardry</title>
+    <title>Colour Palette - Web Witchcraft and Wizardry</title>
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="../images/icons/favicon.svg">
@@ -42,16 +42,16 @@
 </head>
 <body>
     <header>
-        <h1><i class="fas fa-palette"></i> Web Witchcraft and Wizardry Color Palette</h1>
+        <h1><i class="fas fa-palette"></i> Web Witchcraft and Wizardry Colour Palette</h1>
         <nav aria-label="breadcrumb">
             <a href="../index.html">Home</a> &gt;
-            <a href="colourPalette.html" aria-current="page">Color Palette</a>
+            <a href="colourPalette.html" aria-current="page">Colour Palette</a>
         </nav>
     </header>
 
     <main class="colour-preview">
         <div class="description">
-            <p>This page displays all color variables defined in <code>colours.css</code>. The color system includes three style variants (normal, subdued, and vibrant) with both light and dark themes. All color combinations meet at least WCAG 2.2 AA contrast standards (4.5:1 ratio). Normal theme and popovers meet AAA standards (7:1 ratio). Each card shows the background color with its corresponding text color applied, along with both CSS variable names and sample text to preview readability.</p>
+            <p>This page displays all colour variables defined in <code>colours.css</code>. The colour system includes three style variants (normal, subdued, and vibrant) with both light and dark themes. All colour combinations meet at least WCAG 2.2 AA contrast standards (4.5:1 ratio). Normal theme and popovers meet AAA standards (7:1 ratio). Each card shows the background colour with its corresponding text colour applied, along with both CSS variable names and sample text to preview readability.</p>
         </div>
 
         <!-- Tab Navigation -->
@@ -65,10 +65,10 @@
             <button type="button" class="tab-button" data-tab="vibrant-dark" role="tab" aria-selected="false" aria-controls="tab-vibrant-dark">Vibrant Dark</button>
         </div>
 
-        <!-- Tab Panel: Non-theme Colors -->
+        <!-- Tab Panel: Non-theme Colours -->
         <div class="tab-panel active" id="tab-non-theme" role="tabpanel">
         <section class="colour-section">
-            <h2>Non-theme Colors</h2>
+            <h2>Non-theme Colours</h2>
             <div class="colour-grid">
                 <div class="colour-card">
                     <div class="colour-swatch" data-scheme="warning">
@@ -771,36 +771,8 @@
     </main>
 
     <footer>
-        <p>&copy; 2026 The Embodied Mind. Licensed under the <a href="../license-and-credits.html">MIT License</a>.</p>
+        <p>&copy; 2026 The Embodied Mind. Licensed under the <a href="../pages/license.html">MIT License</a>.</p>
     </footer>
 
-    <script>
-        // Tab switching functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const tabButtons = document.querySelectorAll('.tab-button');
-            const tabPanels = document.querySelectorAll('.tab-panel');
-
-            tabButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    const targetTab = this.getAttribute('data-tab');
-
-                    // Remove active class from all buttons and panels
-                    tabButtons.forEach(btn => {
-                        btn.classList.remove('active');
-                        btn.setAttribute('aria-selected', 'false');
-                    });
-                    tabPanels.forEach(panel => panel.classList.remove('active'));
-
-                    // Add active class to clicked button and corresponding panel
-                    this.classList.add('active');
-                    this.setAttribute('aria-selected', 'true');
-                    const targetPanel = document.getElementById('tab-' + targetTab);
-                    if (targetPanel) {
-                        targetPanel.classList.add('active');
-                    }
-                });
-            });
-        });
-    </script>
 </body>
 </html>

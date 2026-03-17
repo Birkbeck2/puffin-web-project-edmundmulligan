@@ -232,7 +232,7 @@ class ColourPalette {
         // Extract everything after "from" and before the closing paren
         const afterFrom = relativeColourString.substring(fromIndex + 4).trim();
         
-        // Find the end of the source color (tracking nested parentheses)
+        // Find the end of the source colour (tracking nested parentheses)
         let parenDepth = 0;
         let sourceEnd = 0;
         for (let i = 0; i < afterFrom.length; i++) {
@@ -266,7 +266,7 @@ class ColourPalette {
             }
         }
         
-        // Parse the base color
+        // Parse the base colour
         const hslMatch = source.match(/hsla?\(\s*(\d+(?:\.\d+)?)(?:deg)?\s*[,\s]\s*(\d+(?:\.\d+)?)\s*%?\s*[,\s]?\s*(\d+(?:\.\d+)?)\s*%?\s*\)/i);
         
         if (!hslMatch) {
@@ -512,6 +512,35 @@ class ColourPalette {
 // Create singleton instance and initialize when DOM and CSS are loaded
 const colourPalette = new ColourPalette();
 
+/**
+ * Initialize tab navigation for theme sections.
+ */
+function initializeTabNavigation() {
+    const tabButtons = document.querySelectorAll('.tab-button');
+    const tabPanels = document.querySelectorAll('.tab-panel');
+
+    tabButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const targetTab = this.getAttribute('data-tab');
+
+            // Remove active state from all buttons and panels.
+            tabButtons.forEach(btn => {
+                btn.classList.remove('active');
+                btn.setAttribute('aria-selected', 'false');
+            });
+            tabPanels.forEach(panel => panel.classList.remove('active'));
+
+            // Activate clicked button and its matching panel.
+            this.classList.add('active');
+            this.setAttribute('aria-selected', 'true');
+            const targetPanel = document.getElementById(`tab-${targetTab}`);
+            if (targetPanel) {
+                targetPanel.classList.add('active');
+            }
+        });
+    });
+}
+
 function initializeWhenReady() {
     // Check if a known CSS variable is available (indicates CSS is loaded)
     const testColour = getComputedStyle(document.documentElement).getPropertyValue('--colour-white').trim();
@@ -528,10 +557,12 @@ function initializeWhenReady() {
 
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => {
+        initializeTabNavigation();
         // Give CSS a moment to fully load
         setTimeout(initializeWhenReady, 50);
     });
 } else {
     // DOM already loaded
+    initializeTabNavigation();
     initializeWhenReady();
 }
