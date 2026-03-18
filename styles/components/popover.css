@@ -11,9 +11,6 @@
  */
 
 
-/* Popover styling It's a bit in-your-face but it's only used for a warning 
-   when something isn't implemented yet at the moment, so that's OK. */
-
 .popover {
     background-color: var(--colour-error-background);
     color: var(--colour-error-text);
