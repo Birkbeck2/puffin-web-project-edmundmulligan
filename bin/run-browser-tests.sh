@@ -10,8 +10,8 @@ source "$SCRIPT_DIR/test-helpers.sh"
 # Accept optional folder parameter
 FOLDER="${1:-.}"
 if [ ! -d "$FOLDER" ]; then
-  echo "❌ Error: '$FOLDER' is not a valid directory"
-  exit 1
+    echo "❌ Error: '$FOLDER' is not a valid directory"
+    exit 1
 fi
 
 # Get any command line options (skip folder parameter)

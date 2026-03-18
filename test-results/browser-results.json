@@ -126,46 +126,6 @@
           "status": "passed"
         },
         {
-          "name": "Accessories page title",
-          "status": "passed"
-        },
-        {
-          "name": "Accessories navigation links",
-          "status": "passed"
-        },
-        {
-          "name": "Accessories JavaScript execution",
-          "status": "passed"
-        },
-        {
-          "name": "Accessories CSS Grid",
-          "status": "passed"
-        },
-        {
-          "name": "Accessories CSS Flexbox",
-          "status": "passed"
-        },
-        {
-          "name": "Accessories CSS Variables",
-          "status": "passed"
-        },
-        {
-          "name": "Accessories SVG support",
-          "status": "passed"
-        },
-        {
-          "name": "Accessories responsive viewport",
-          "status": "passed"
-        },
-        {
-          "name": "Accessories CSS calc()",
-          "status": "passed"
-        },
-        {
-          "name": "Accessories font rendering",
-          "status": "passed"
-        },
-        {
           "name": "Facts page title",
           "status": "passed"
         },
@@ -693,46 +653,6 @@
           "status": "passed"
         },
         {
-          "name": "Accessories page title",
-          "status": "passed"
-        },
-        {
-          "name": "Accessories navigation links",
-          "status": "passed"
-        },
-        {
-          "name": "Accessories JavaScript execution",
-          "status": "passed"
-        },
-        {
-          "name": "Accessories CSS Grid",
-          "status": "passed"
-        },
-        {
-          "name": "Accessories CSS Flexbox",
-          "status": "passed"
-        },
-        {
-          "name": "Accessories CSS Variables",
-          "status": "passed"
-        },
-        {
-          "name": "Accessories SVG support",
-          "status": "passed"
-        },
-        {
-          "name": "Accessories responsive viewport",
-          "status": "passed"
-        },
-        {
-          "name": "Accessories CSS calc()",
-          "status": "passed"
-        },
-        {
-          "name": "Accessories font rendering",
-          "status": "passed"
-        },
-        {
           "name": "Facts page title",
           "status": "passed"
         },
@@ -1257,46 +1177,6 @@
         },
         {
           "name": "Gallery font rendering",
-          "status": "passed"
-        },
-        {
-          "name": "Accessories page title",
-          "status": "passed"
-        },
-        {
-          "name": "Accessories navigation links",
-          "status": "passed"
-        },
-        {
-          "name": "Accessories JavaScript execution",
-          "status": "passed"
-        },
-        {
-          "name": "Accessories CSS Grid",
-          "status": "passed"
-        },
-        {
-          "name": "Accessories CSS Flexbox",
-          "status": "passed"
-        },
-        {
-          "name": "Accessories CSS Variables",
-          "status": "passed"
-        },
-        {
-          "name": "Accessories SVG support",
-          "status": "passed"
-        },
-        {
-          "name": "Accessories responsive viewport",
-          "status": "passed"
-        },
-        {
-          "name": "Accessories CSS calc()",
-          "status": "passed"
-        },
-        {
-          "name": "Accessories font rendering",
           "status": "passed"
         },
         {

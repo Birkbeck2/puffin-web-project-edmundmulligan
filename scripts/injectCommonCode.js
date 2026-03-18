@@ -13,9 +13,18 @@
     'use strict';
 
     /**
-     * Class for injecting common code elements (header, footer, popovers)
+     * Inject shared header and footer markup so each page can reuse the same shell.
+     *
+     * @remarks Preconditions:
+     * - The page must contain `header.header` and `footer.footer` placeholders.
+     * - `Debug` must already be available because this class logs during setup.
      */
     class CommonCodeInjector {
+        /**
+         * Create the injector and determine the resource prefix for the current page depth.
+         *
+         * @returns {void}
+         */
         constructor() {
             Debug.log('CommonCodeInjector: Initializing...');
             this.pathPrefix = this.determinePathPrefix();

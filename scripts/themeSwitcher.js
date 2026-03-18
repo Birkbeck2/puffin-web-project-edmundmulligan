@@ -18,9 +18,18 @@
     'use strict';
 
     /**
-     * Class for managing theme and style switching functionality
+     * Manage theme/style selection and apply the corresponding CSS variable set to the document.
+     *
+     * @remarks Preconditions:
+     * - The page must load the theme variable definitions from the stylesheet layer first.
+     * - Theme and style controls are expected to use the selectors referenced throughout this class.
      */
     class ThemeSwitcher {
+        /**
+         * Create the switcher and configure the localStorage keys used for persistence.
+         *
+         * @returns {void}
+         */
         constructor() {
             this.THEME_STORAGE_KEY = 'themePreference';
             this.STYLE_STORAGE_KEY = 'stylePreference';

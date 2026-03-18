@@ -109,7 +109,6 @@ h5, h6{
 /* increase spacing for paragraphs in accordance with WCAG 2.2 */
 p, li {
     font-size: var(--fontsize-normal);
-    margin-bottom: 1.5rem;
     max-width: 100%;
     box-sizing: border-box;
     overflow-wrap: break-word;

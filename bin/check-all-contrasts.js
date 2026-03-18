@@ -14,6 +14,18 @@
 
 'use strict';
 
+/**
+ * Convert an HSL colour into an RGB object.
+ *
+ * @remarks Preconditions:
+ * - `h` is supplied in degrees.
+ * - `s` and `l` are supplied as percentages between 0 and 100.
+ *
+ * @param {number} h - Hue in degrees.
+ * @param {number} s - Saturation percentage.
+ * @param {number} l - Lightness percentage.
+ * @returns {{r: number, g: number, b: number}} RGB representation of the colour.
+ */
 function hslToRgb(h, s, l) {
     s /= 100;
     l /= 100;
@@ -36,6 +48,15 @@ function hslToRgb(h, s, l) {
     };
 }
 
+/**
+ * Calculate WCAG relative luminance for an RGB colour.
+ *
+ * @remarks Preconditions:
+ * - `rgb` must contain numeric `r`, `g`, and `b` channels in the range 0-255.
+ *
+ * @param {{r: number, g: number, b: number}} rgb - RGB object to evaluate.
+ * @returns {number} Relative luminance.
+ */
 function relativeLuminance(rgb) {
     const rsRGB = rgb.r / 255;
     const gsRGB = rgb.g / 255;
@@ -48,6 +69,20 @@ function relativeLuminance(rgb) {
     return 0.2126 * r + 0.7152 * g + 0.0722 * b;
 }
 
+/**
+ * Calculate the contrast ratio between two HSL colours.
+ *
+ * @remarks Preconditions:
+ * - Both colours must be expressed as HSL channel values using degrees and percentages.
+ *
+ * @param {number} h1 - First hue.
+ * @param {number} s1 - First saturation.
+ * @param {number} l1 - First lightness.
+ * @param {number} h2 - Second hue.
+ * @param {number} s2 - Second saturation.
+ * @param {number} l2 - Second lightness.
+ * @returns {number} WCAG contrast ratio.
+ */
 function calculateContrast(h1, s1, l1, h2, s2, l2) {
     const rgb1 = hslToRgb(h1, s1, l1);
     const rgb2 = hslToRgb(h2, s2, l2);
@@ -61,6 +96,12 @@ function calculateContrast(h1, s1, l1, h2, s2, l2) {
     return (lighter + 0.05) / (darker + 0.05);
 }
 
+/**
+ * Convert a numeric contrast ratio into the reporting label used by this script.
+ *
+ * @param {number} ratio - Contrast ratio to classify.
+ * @returns {string} WCAG grade string.
+ */
 function getWCAGLevel(ratio) {
     if (ratio >= 7) return 'AAA';
     if (ratio >= 4.5) return 'AA';

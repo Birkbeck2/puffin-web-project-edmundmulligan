@@ -82,15 +82,6 @@
       "issues": []
     },
     {
-      "url": "pages/accessories.html",
-      "theme": "light",
-      "style": "normal",
-      "viewport": "900",
-      "documentTitle": "Accessories|Web Witchcraft and Wizardry",
-      "pageUrl": "http://localhost:8080/pages/accessories",
-      "issues": []
-    },
-    {
       "url": "pages/faq.html",
       "theme": "light",
       "style": "normal",
@@ -205,15 +196,6 @@
       "viewport": "900",
       "documentTitle": "Gallery|Web Witchcraft and Wizardry",
       "pageUrl": "http://localhost:8080/pages/gallery",
-      "issues": []
-    },
-    {
-      "url": "pages/accessories.html",
-      "theme": "dark",
-      "style": "normal",
-      "viewport": "900",
-      "documentTitle": "Accessories|Web Witchcraft and Wizardry",
-      "pageUrl": "http://localhost:8080/pages/accessories",
       "issues": []
     },
     {
@@ -334,15 +316,6 @@
       "issues": []
     },
     {
-      "url": "pages/accessories.html",
-      "theme": "light",
-      "style": "subdued",
-      "viewport": "900",
-      "documentTitle": "Accessories|Web Witchcraft and Wizardry",
-      "pageUrl": "http://localhost:8080/pages/accessories",
-      "issues": []
-    },
-    {
       "url": "pages/faq.html",
       "theme": "light",
       "style": "subdued",
@@ -457,15 +430,6 @@
       "viewport": "900",
       "documentTitle": "Gallery|Web Witchcraft and Wizardry",
       "pageUrl": "http://localhost:8080/pages/gallery",
-      "issues": []
-    },
-    {
-      "url": "pages/accessories.html",
-      "theme": "dark",
-      "style": "subdued",
-      "viewport": "900",
-      "documentTitle": "Accessories|Web Witchcraft and Wizardry",
-      "pageUrl": "http://localhost:8080/pages/accessories",
       "issues": []
     },
     {
@@ -586,15 +550,6 @@
       "issues": []
     },
     {
-      "url": "pages/accessories.html",
-      "theme": "light",
-      "style": "vibrant",
-      "viewport": "900",
-      "documentTitle": "Accessories|Web Witchcraft and Wizardry",
-      "pageUrl": "http://localhost:8080/pages/accessories",
-      "issues": []
-    },
-    {
       "url": "pages/faq.html",
       "theme": "light",
       "style": "vibrant",
@@ -709,15 +664,6 @@
       "viewport": "900",
       "documentTitle": "Gallery|Web Witchcraft and Wizardry",
       "pageUrl": "http://localhost:8080/pages/gallery",
-      "issues": []
-    },
-    {
-      "url": "pages/accessories.html",
-      "theme": "dark",
-      "style": "vibrant",
-      "viewport": "900",
-      "documentTitle": "Accessories|Web Witchcraft and Wizardry",
-      "pageUrl": "http://localhost:8080/pages/accessories",
       "issues": []
     },
     {

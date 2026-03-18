@@ -14,6 +14,18 @@
 
 'use strict';
 
+/**
+ * Convert HSL channel values into an RGB object.
+ *
+ * @remarks Preconditions:
+ * - `h` should be expressed in degrees.
+ * - `s` and `l` should be supplied as percentages in the range 0-100.
+ *
+ * @param {number} h - Hue in degrees.
+ * @param {number} s - Saturation percentage.
+ * @param {number} l - Lightness percentage.
+ * @returns {{r: number, g: number, b: number}} RGB representation of the colour.
+ */
 function hslToRgb(h, s, l) {
     s /= 100;
     l /= 100;
@@ -36,6 +48,15 @@ function hslToRgb(h, s, l) {
     };
 }
 
+/**
+ * Calculate WCAG relative luminance from an RGB object.
+ *
+ * @remarks Preconditions:
+ * - `rgb` must contain integer `r`, `g`, and `b` channels in the range 0-255.
+ *
+ * @param {{r: number, g: number, b: number}} rgb - RGB object to evaluate.
+ * @returns {number} Relative luminance value in the range 0-1.
+ */
 function relativeLuminance(rgb) {
     const rsRGB = rgb.r / 255;
     const gsRGB = rgb.g / 255;
@@ -48,6 +69,21 @@ function relativeLuminance(rgb) {
     return 0.2126 * r + 0.7152 * g + 0.0722 * b;
 }
 
+/**
+ * Compute the contrast ratio between two HSL colours.
+ *
+ * @remarks Preconditions:
+ * - Each colour channel set must describe a valid HSL colour in degrees/percentages.
+ * - Both colours are assumed to use the sRGB colour space before luminance conversion.
+ *
+ * @param {number} h1 - First hue.
+ * @param {number} s1 - First saturation percentage.
+ * @param {number} l1 - First lightness percentage.
+ * @param {number} h2 - Second hue.
+ * @param {number} s2 - Second saturation percentage.
+ * @param {number} l2 - Second lightness percentage.
+ * @returns {number} WCAG contrast ratio.
+ */
 function calculateContrast(h1, s1, l1, h2, s2, l2) {
     const rgb1 = hslToRgb(h1, s1, l1);
     const rgb2 = hslToRgb(h2, s2, l2);

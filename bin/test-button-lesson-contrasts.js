@@ -11,7 +11,18 @@
  **********************************************************************
 */
 
-// Function to convert HSL to RGB
+/**
+ * Convert an HSL triplet into integer RGB channel values.
+ *
+ * @remarks Preconditions:
+ * - `h` is expected to be in degrees.
+ * - `s` and `l` are expected to be percentages in the range 0-100.
+ *
+ * @param {number} h - Hue in degrees.
+ * @param {number} s - Saturation percentage.
+ * @param {number} l - Lightness percentage.
+ * @returns {number[]} RGB values as `[r, g, b]` in the range 0-255.
+ */
 function hslToRgb(h, s, l) {
     s /= 100;
     l /= 100;
@@ -21,7 +32,17 @@ function hslToRgb(h, s, l) {
     return [Math.round(255 * f(0)), Math.round(255 * f(8)), Math.round(255 * f(4))];
 }
 
-// Function to calculate relative luminance
+/**
+ * Calculate WCAG relative luminance for an RGB colour.
+ *
+ * @remarks Preconditions:
+ * - Channel values should already be gamma-encoded sRGB integers between 0 and 255.
+ *
+ * @param {number} r - Red channel.
+ * @param {number} g - Green channel.
+ * @param {number} b - Blue channel.
+ * @returns {number} Relative luminance in the range 0-1.
+ */
 function getLuminance(r, g, b) {
     const [rs, gs, bs] = [r, g, b].map(c => {
         c = c / 255;
@@ -30,7 +51,16 @@ function getLuminance(r, g, b) {
     return 0.2126 * rs + 0.7152 * gs + 0.0722 * bs;
 }
 
-// Function to calculate contrast ratio
+/**
+ * Calculate the WCAG contrast ratio between two RGB colours.
+ *
+ * @remarks Preconditions:
+ * - Each RGB argument must be a three-item array produced in the same colour space.
+ *
+ * @param {number[]} rgb1 - First RGB colour as `[r, g, b]`.
+ * @param {number[]} rgb2 - Second RGB colour as `[r, g, b]`.
+ * @returns {number} Contrast ratio where `1` means no contrast and larger is better.
+ */
 function getContrastRatio(rgb1, rgb2) {
     const lum1 = getLuminance(...rgb1);
     const lum2 = getLuminance(...rgb2);

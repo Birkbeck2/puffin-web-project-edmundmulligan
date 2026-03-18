@@ -86,23 +86,6 @@
       "readingAge": "17-18 years"
     },
     {
-      "file": "./pages/accessories.html",
-      "wordCount": 743,
-      "fleschReadingEase": 42.8,
-      "fleschKincaidGrade": 10.2,
-      "smogIndex": 11.9,
-      "colemanLiauIndex": 14,
-      "automatedReadabilityIndex": 12.1,
-      "gunningFogIndex": 8.6,
-      "daleChallScore": 7.2,
-      "averageGradeLevel": 11.4,
-      "textStandard": "8th and 9th grade",
-      "difficultWords": 139,
-      "averageSentenceLength": 11.6,
-      "readingLevel": "Fairly Difficult (High School)",
-      "readingAge": "17-18 years"
-    },
-    {
       "file": "./pages/faq.html",
       "wordCount": 3777,
       "fleschReadingEase": 53.5,
