@@ -1,0 +1,25 @@
+name: Push Code to Prod Server
+
+on:
+    push:
+      branches: [ main]
+    pull_request:
+      branches: [ main ]
+
+jobs:
+  deploy-to-server:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Copy files to server
+      uses: appleboy/scp-action@v0.1.7
+      with:
+        host: prod.edmundmulligan.name
+        username: ${{ secrets.SERVER_USERNAME }}
+        key: ${{ secrets.SERVER_SSH_KEY }}
+        source: "index.html,data/,diagnostics/,images/,mentors/,pages/,scripts/,students/,styles/,test-results/"
+        target: /var/www/web.witchcraft-and-wizardry.school
+        rm: false

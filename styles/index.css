@@ -1,0 +1,88 @@
+/*
+ **********************************************************************
+ * File       : index.css
+ * Author     : Edmund Mulligan <edmund@edmundmulligan.name>
+ * Copyright  : (c) 6 The Embodied Mind
+ * License    : MIT License (see license-and-credits.html page)
+ * Description:
+ *   This is the page specific stylesheet for the Web Witchcraft and
+ *   Wizardry index page. It defines styles that apply only to the
+ *   landing page.
+ *   Styles here are not in pages.css as the landing page is 
+ *   sufficiently different from other pages to warrant its own
+ *   stylesheet.
+ **********************************************************************
+ */
+
+/* Use body:before to stop the background image scrolling */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    /* set background image handling (actual image is selected in media query) */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    opacity: 0.4;
+    z-index: -1;
+}
+
+
+/* Center main content horizontally and vertically on the index page */
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+    padding-bottom: 10rem;
+}
+
+/* Index blocks with border for visual grouping */
+.index-block {
+    border: var(--border-weight) var(--border-style) var(--colour-effective-headings-text);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    margin: 1rem 0;
+    max-width: 100%;
+    background-color: transparent;
+    box-sizing: border-box;
+}
+
+
+.circular-button-container {
+   display: flex;
+   flex-flow: row wrap;
+   gap: 2rem;
+   justify-content: center;
+   align-items: center;
+   margin-top: 3rem;
+   width: 100%;
+   box-sizing: border-box;
+}
+
+/* For path buttons: make Start button take full row when wrapping while keeping it circular */
+.path-buttons #start-button {
+   flex: 0 0 100%;
+   min-width: var(--buttonsize-circle);
+   max-width: var(--buttonsize-circle);
+}
+
+/* insert the landing page background image */
+@media (orientation: landscape) {
+    body::before {
+        background-image: var(--bg-landscape);
+    }
+}
+
+@media (orientation: portrait) {
+    body::before {
+        background-image: var(--bg-portrait);
+    }
+}

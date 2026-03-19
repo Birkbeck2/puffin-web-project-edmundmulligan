@@ -1,0 +1,122 @@
+<!--
+ **********************************************************************
+ * File       : diagnostics/test-navigation.html
+ * Author     : Edmund Mulligan <edmund@edmundmulligan.name>
+ * Copyright  : (c) 2026 The Embodied Mind
+ * License    : MIT License
+ * Description:
+ *   Test page for navigation wrapping behaviour at various viewport widths.
+ *   Contains only the site navigation without JavaScript injection.
+ **********************************************************************
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Start of meta tags -->
+    <meta charset="UTF-8">
+    <meta name="description" content="Navigation Test Page">
+    <meta name="author" content="Edmund Mulligan">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- End of meta tags -->
+
+    <!-- Set the document title-->
+    <title>Navigation Test - Web Witchcraft and Wizardry</title>
+
+    <!-- Link to Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../images/icons/favicon.svg">
+
+    <!--Links for Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cinzel+Decorative:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- End Google Fonts links -->
+
+    <!-- Link to Font Awesome Icons (using CSS rather than JS)-->
+    <link rel="stylesheet" href="https://kit.fontawesome.com/3895b3f1a4.css" crossorigin="anonymous">
+    <!-- End Font Awesome Icons -->
+
+    <!-- Start of CSS stylesheets section -->
+
+    <!-- globals.css and main.css must be the first stylesheets loaded -->
+    <link rel="stylesheet" href="../styles/globals.css">
+    <link rel="stylesheet" href="../styles/main.css">
+
+    <!-- These stylesheets are common to all pages -->
+    <link rel="stylesheet" href="../styles/components/buttons.css">
+    <link rel="stylesheet" href="../styles/components/code.css">
+    <link rel="stylesheet" href="../styles/components/header-and-footer.css">
+    <link rel="stylesheet" href="../styles/components/navigation.css">
+    <link rel="stylesheet" href="../styles/components/popover.css">
+    <link rel="stylesheet" href="../styles/components/titles.css">
+    <link rel="stylesheet" href="../styles/pages.css">
+
+    <!-- End of CSS stylesheets section -->
+
+    <!-- Inline styles moved to style block for validation -->
+    <style>
+        .header-minimal {
+            display: block;
+        }
+
+        .test-wizard-icon {
+            mask-image: url('../images/icons/wizard.svg');
+            -webkit-mask-image: url('../images/icons/wizard.svg');
+        }
+
+        .test-witch-icon {
+            mask-image: url('../images/icons/witch.svg');
+            -webkit-mask-image: url('../images/icons/witch.svg');
+        }
+
+        .test-content-wrapper {
+            text-align: center;
+            padding: 2rem;
+        }
+    </style>
+
+    <!-- Load themeSwitcher for theme functionality -->
+    <script src="../scripts/themeSwitcher.js" defer></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-minimal">
+            <div class="header-text">
+                <div class="header-image inline-header test-wizard-icon" role="img" aria-label="Wizard icon"></div>
+                <div class="inline-header">
+                    <h1 class="site-title">Web Witchcraft and Wizardry</h1>
+                    <nav class="site-navigation" aria-label="Site navigation">
+                        <ul>
+                            <li><a href="../index.html">Home</a></li>
+                            <li><a href="../pages/start.html">Start</a></li>
+                            <li><a href="../pages/students.html">Students</a></li>
+                            <li><a href="../pages/mentors.html">Mentors</a></li>
+                            <li><a href="../pages/gallery.html">Gallery</a></li>
+                            <li><a href="../pages/accessories.html">Accessories</a></li>
+                            <li><a href="../pages/facts.html">Facts</a></li>
+                            <li><a href="../pages/glossary.html">Glossary</a></li>
+                            <li><a href="../pages/faq.html">FAQ</a></li>
+                            <li><a href="../pages/license.html">License</a></li>
+                            <li><a href="../pages/credits.html">Credits</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="header-image inline-header test-witch-icon" role="img" aria-label="Witch icon"></div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="test-content-wrapper">
+            <h2 class="page-title">Navigation Test Page</h2>
+            <p>Resize the browser window to test navigation wrapping behaviour.</p>
+            <p>The navigation should wrap to multiple lines at narrow viewport widths.</p>
+        </div>
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,233 @@
+/*
+ **********************************************************************
+ * File       : components/navigation.css
+ * Author     : Edmund Mulligan <edmund@edmundmulligan.name>
+ * Copyright  : (c) 2026 The Embodied Mind
+ * License    : MIT License (see license-and-credits.html page)
+ * Description:
+ *   This stylesheet defines styles for sitewide and in-page navigation
+ *   elements. These styles ensure a consistent look and feel
+ *   across all pages of the Web Witchcraft and Wizardry website.
+ **********************************************************************
+ */
+
+/********************************************************
+ * Styles for sitewide navigation elements
+ ********************************************************/
+
+nav.site-navigation {
+    & ul {
+        display: flex;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        max-width: 100%;
+        gap: 0.5rem clamp(0.15rem, 0.5vw, 0.25rem);
+        place-content: center center;
+        flex-wrap: wrap;
+        align-items: stretch;
+        box-sizing: border-box;
+        line-height: 1;
+    }
+
+    & li {
+        flex: 0 1 auto;
+        max-width: calc(100% - 0.5rem);
+        margin: 0;
+        background-color: var(--colour-effective-button-background);
+        color: var(--colour-effective-button-text);
+        border-radius: var(--border-radius);
+        border: var(--border-weight-thin) var(--border-style) var(--colour-effective-button-text);
+        font-size: var(--fontsize-nav-site);
+        box-sizing: border-box;
+        line-height: 1;
+    }
+
+    & button {
+        display: block;
+        color: var(--colour-effective-button-text);
+        text-decoration: none;
+        padding: var(--padding-nav);
+        border-radius: var(--border-radius);
+        background: var(--colour-effective-button-background);
+        border: none;
+        font-family: inherit;
+        font-size: inherit;
+        font-weight: inherit;
+        cursor: pointer;
+        text-align: left;
+        white-space: nowrap;
+        box-sizing: border-box;
+    }
+
+    & a {
+        display: block;
+        color: var(--colour-effective-button-text);
+        text-decoration: none;
+        padding: var(--padding-nav);
+        border-radius: var(--border-radius);
+        background: var(--colour-effective-button-background);
+        border: none;
+        font-family: inherit;
+        font-size: inherit;
+        font-weight: inherit;
+        text-align: left;
+        white-space: nowrap;
+        box-sizing: border-box;
+    }
+
+    & a::before,
+    & button::before {
+        content: "\f0d0";  /* Font Awesome Magic Wand */
+        font-family: var(--font-family-icons);
+        font-weight: 900; /* needed for solid style icons */
+        margin-right: clamp(0.15rem, 1vw, 0.35rem);
+        font-size: clamp(0.6em, 1.5vw, 1em);
+    }
+
+    & a:hover,
+    & a:focus-visible,
+    & button:hover,
+    & button:focus-visible {
+        background-color: var(--colour-effective-button-background-hover);
+        color: var(--colour-effective-button-text-hover);
+    }
+
+    & a:hover::before,
+    & a:focus-visible::before,
+    & button:hover::before,
+    & button:focus-visible::before {
+        content: "\e2ca";  /* Font Awesome Magic Wand with sparkles */
+        font-family: var(--font-family-icons);
+        font-weight: 900; /* needed for solid style icons */
+    }
+}
+
+/* handle very small screens (e.g. very narrow browser windows) */
+@media (width < 200px) {
+    /* Hide navigation icons at extreme narrow widths to improve wrapping */
+    nav.site-navigation a::before,
+    nav.site-navigation button::before,
+    nav.site-navigation a:hover::before,
+    nav.site-navigation a:focus-visible::before,
+    nav.site-navigation button:hover::before,
+    nav.site-navigation button:focus-visible::before {
+        display: none;
+    }
+
+    /* Allow text to wrap within navigation items at extreme narrow widths */
+    nav.site-navigation li {
+        max-width: 100%;
+    }
+
+    nav.site-navigation a,
+    nav.site-navigation button {
+        white-space: normal;
+        overflow-wrap: break-word;
+        padding: clamp(0.2rem, 1vw, 0.4rem);
+    }
+}
+
+/*
+nav.site-navigation ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    max-width: 100%;
+    gap: clamp(0.15rem, 0.5vw, 0.25rem);
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    box-sizing: border-box;
+}
+*/
+
+/*
+nav.site-navigation li {
+    flex: 0 1 auto;
+    max-width: calc(100% - 0.5rem);
+    background-color: var(--colour-effective-button-background);
+    color: var(--colour-effective-button-text);
+    border-radius: var(--border-radius);
+    border: var(--border-weight-thin) var(--border-style) var(--colour-effective-button-text);
+    font-size: var(--fontsize-nav-site);
+    box-sizing: border-box;
+}
+*/
+
+/*
+nav.site-navigation button {
+    display: block;
+    color: var(--colour-effective-button-text);
+    background-color: var(--colour-effective-button-background);
+    text-decoration: none;
+    padding: var(--padding-nav);
+    border-radius: var(--border-radius);
+    background: none;
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    cursor: pointer;
+    text-align: left;
+    white-space: nowrap;
+    box-sizing: border-box;
+}
+*/
+
+/*
+nav.site-navigation a {
+    display: block;
+    color: var(--colour-effective-button-text);
+    background-color: var(--colour-effective-button-background);
+    text-decoration: none;
+    padding: var(--padding-nav);
+    border-radius: var(--border-radius);
+    background: none;
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    text-align: left;
+    white-space: nowrap;
+    box-sizing: border-box;
+}
+*/
+
+/* Pseudo classes and elements for nav links This makes the 
+   wand sparkle when it is hovered over or gets focus */
+
+/* 
+nav.site-navigation a::before,
+nav.site-navigation button::before {
+    content: "\f0d0";
+    font-family: var(--font-family-icons);
+    font-weight: 900;
+    margin-right: clamp(0.15rem, 1vw, 0.35rem);
+    font-size: clamp(0.6em, 1.5vw, 1em);
+}
+*/
+
+/*
+nav.site-navigation a:hover,
+nav.site-navigation a:focus-visible,
+nav.site-navigation button:hover,
+nav.site-navigation button:focus-visible {
+    background-color: var(--colour-effective-button-background-hover);
+    color: var(--colour-effective-button-text-hover);
+}
+*/
+
+/*
+nav.site-navigation a:hover::before,
+nav.site-navigation a:focus-visible::before,
+nav.site-navigation button:hover::before,
+nav.site-navigation button:focus-visible::before {
+    content: "\e2ca"; 
+    font-family: var(--font-family-icons);
+    font-weight: 900;
+}
+*/
