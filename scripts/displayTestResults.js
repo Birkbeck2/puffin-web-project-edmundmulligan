@@ -10,9 +10,23 @@
 **********************************************************************
 */
 
-// Store full test data for modal display
+/**
+ * Cached raw test payloads keyed by card title for reuse in the modal detail view.
+ *
+ * @type {Record<string, unknown>}
+ */
 let testData = {};
 
+/**
+ * Fetch and parse a JSON result file for the dashboard.
+ *
+ * @remarks Preconditions:
+ * - `path` must resolve from the current page to a JSON asset served by the site.
+ * - Network and parsing failures are tolerated and reported by returning `null`.
+ *
+ * @param {string} path - Relative URL of the JSON file to load.
+ * @returns {Promise<(object|null)>} Parsed JSON object or `null` when loading fails.
+ */
 async function loadJSON(path) {
     try {
         const response = await fetch(path);
@@ -26,6 +40,21 @@ async function loadJSON(path) {
     }
 }
 
+/**
+ * Build the HTML markup for one dashboard summary card.
+ *
+ * @remarks Preconditions:
+ * - `metrics` must be an array of `{ label, value }` objects ready for direct rendering.
+ * - `testType` must match the keys later stored in `testData` when details are available.
+ *
+ * @param {string} title - Human-readable card title.
+ * @param {string} icon - Font Awesome class list for the card icon.
+ * @param {string} status - Summary status such as `pass`, `fail`, or `warning`.
+ * @param {Array<{label: string, value: (string|number)}>} metrics - Metrics to render inside the card body.
+ * @param {string} testType - Lookup key used when opening the modal.
+ * @param {boolean} hasDetails - Whether the card should expose a details modal.
+ * @returns {string} HTML string for insertion into the results container.
+ */
 function createTestCard(title, icon, status, metrics, testType, hasDetails) {
     const statusClass = status.toLowerCase();
     const statusBadge = `<span class="status-badge ${statusClass}">${status}</span>`;
@@ -61,12 +90,30 @@ function createTestCard(title, icon, status, metrics, testType, hasDetails) {
     `;
 }
 
+/**
+ * Hide the details modal.
+ *
+ * @remarks Preconditions:
+ * - The page must contain an element with id `detailsModal`.
+ *
+ * @returns {void}
+ */
 function closeModal() {
     document.getElementById('detailsModal').style.display = 'none';
 }
 
 // showTestDetails is called from dynamically generated onclick handlers
 /* exported showTestDetails */
+/**
+ * Populate and display the modal for a specific test card.
+ *
+ * @remarks Preconditions:
+ * - `testType` must already have a corresponding entry in `testData`.
+ * - The modal title and body elements must exist in the document.
+ *
+ * @param {string} testType - The card/test identifier used as a `testData` key.
+ * @returns {void}
+ */
 function showTestDetails(testType) {
     const modal = document.getElementById('detailsModal');
     const modalTitle = document.getElementById('modalTitle');
@@ -80,7 +127,15 @@ function showTestDetails(testType) {
     modal.style.display = 'block';
 }
 
-// Close modal when clicking outside of it
+/**
+ * Close the modal when the overlay itself is clicked.
+ *
+ * @remarks Preconditions:
+ * - The details modal uses the overlay element itself as the click target for dismissal.
+ *
+ * @param {MouseEvent} event - Click event dispatched on the window.
+ * @returns {void}
+ */
 window.onclick = function(event) {
     const modal = document.getElementById('detailsModal');
     if (event.target === modal) {
@@ -88,6 +143,17 @@ window.onclick = function(event) {
     }
 };
 
+/**
+ * Route a test payload to the formatter that knows how to render its details.
+ *
+ * @remarks Preconditions:
+ * - `testType` must use the same labels assigned when building cards in `loadAllResults`.
+ * - `data` is assumed to match the JSON schema for the selected test type.
+ *
+ * @param {string} testType - Dashboard test identifier.
+ * @param {object} data - Raw JSON payload for the selected test.
+ * @returns {string} HTML string for the modal body.
+ */
 function formatTestDetails(testType, data) {
     switch(testType) {
     case 'Code Validation':
@@ -113,6 +179,15 @@ function formatTestDetails(testType, data) {
     }
 }
 
+/**
+ * Render validation report details for HTML, CSS, and JavaScript checks.
+ *
+ * @remarks Preconditions:
+ * - `data.summary` and the per-file arrays are expected to follow the validation report schema.
+ *
+ * @param {object} data - Validation report payload.
+ * @returns {string} HTML fragment for the modal.
+ */
 function formatValidationDetails(data) {
     let html = '';
     
@@ -151,6 +226,15 @@ function formatValidationDetails(data) {
     return html || '<p>No validation errors found.</p>';
 }
 
+/**
+ * Render broken-link details extracted from the link checker report.
+ *
+ * @remarks Preconditions:
+ * - `data.pages` should contain page summaries with `links`, `brokenCount`, and `totalCount` data.
+ *
+ * @param {object} data - Broken-link report payload.
+ * @returns {string} HTML fragment describing broken links, if any.
+ */
 function formatBrokenLinksDetails(data) {
     let brokenLinks = [];
     
@@ -186,6 +270,15 @@ function formatBrokenLinksDetails(data) {
     return html;
 }
 
+/**
+ * Render Axe accessibility violations grouped by rule identifier.
+ *
+ * @remarks Preconditions:
+ * - `data.violations` must be an array of Axe-style violation objects when present.
+ *
+ * @param {object} data - Axe report payload.
+ * @returns {string} HTML fragment for the modal.
+ */
 function formatAxeDetails(data) {
     if (!data.violations || data.violations.length === 0) {
         return '<p>No accessibility violations found.</p>';
@@ -220,6 +313,15 @@ function formatAxeDetails(data) {
     return html;
 }
 
+/**
+ * Render Pa11y issues separated into errors and warnings.
+ *
+ * @remarks Preconditions:
+ * - `data.pages` must contain issue arrays using the expected Pa11y JSON schema.
+ *
+ * @param {object} data - Pa11y report payload.
+ * @returns {string} HTML fragment for the modal.
+ */
 function formatPa11yDetails(data) {
     const errors = [];
     const warnings = [];
@@ -264,6 +366,15 @@ function formatPa11yDetails(data) {
     return html || '<p>No issues found.</p>';
 }
 
+/**
+ * Render WAVE accessibility results for pages with errors, alerts, or contrast issues.
+ *
+ * @remarks Preconditions:
+ * - `data.pages` must contain WAVE page summaries with numeric issue counters.
+ *
+ * @param {object} data - WAVE report payload.
+ * @returns {string} HTML fragment for the modal.
+ */
 function formatWaveDetails(data) {
     const pagesWithIssues = data.pages.filter(p => p.errors > 0 || p.alerts > 0 || p.contrast > 0);
     
@@ -317,6 +428,15 @@ function formatWaveDetails(data) {
     return html;
 }
 
+/**
+ * Render Lighthouse audit failures for any pages that did not achieve a clean run.
+ *
+ * @remarks Preconditions:
+ * - `data.pages` should contain a `failedAudits` array for each tested page.
+ *
+ * @param {object} data - Lighthouse report payload.
+ * @returns {string} HTML fragment for the modal.
+ */
 function formatLighthouseDetails(data) {
     const pagesWithIssues = data.pages.filter(p => p.failedAudits && p.failedAudits.length > 0);
     
@@ -343,6 +463,15 @@ function formatLighthouseDetails(data) {
     return html;
 }
 
+/**
+ * Render failed browser-engine results from the cross-browser test runner.
+ *
+ * @remarks Preconditions:
+ * - `data` must expose either a `browsers` array or a `results` array.
+ *
+ * @param {object} data - Browser test payload.
+ * @returns {string} HTML fragment for the modal.
+ */
 function formatBrowserDetails(data) {
     const browserList = data.browsers || data.results || [];
     const failed = browserList.filter(b => b.status === 'failed' || b.passed === false);
@@ -362,6 +491,15 @@ function formatBrowserDetails(data) {
     return html;
 }
 
+/**
+ * Render readability issues for pages above the target reading grade.
+ *
+ * @remarks Preconditions:
+ * - `data.pages` must contain readability metrics with `averageGradeLevel` when present.
+ *
+ * @param {object} data - Readability report payload.
+ * @returns {string} HTML fragment for the modal.
+ */
 function formatReadabilityDetails(data) {
     if (!data.pages || data.pages.length === 0) {
         return '<p>No readability data available.</p>';
@@ -388,6 +526,15 @@ function formatReadabilityDetails(data) {
     return html;
 }
 
+/**
+ * Render colour-audit findings covering hardcoded colours, direct theme variables, and missing setup.
+ *
+ * @remarks Preconditions:
+ * - `data` is expected to follow the `colour-audit-report.json` schema.
+ *
+ * @param {object} data - Colour audit payload.
+ * @returns {string} HTML fragment for the modal.
+ */
 function formatColourAuditDetails(data) {
     let html = '';
     
@@ -426,6 +573,16 @@ function formatColourAuditDetails(data) {
     return html || '<p>No colour issues found. All colours use the theme system correctly.</p>';
 }
 
+/**
+ * Load every available dashboard result file, update summary metrics, and render the cards.
+ *
+ * @remarks Preconditions:
+ * - The diagnostics page must contain the expected container and summary elements by id.
+ * - Missing JSON files are tolerated; the dashboard simply omits cards for reports that were not generated.
+ * - Individual result files must follow the schemas assumed by the formatter functions above.
+ *
+ * @returns {Promise<void>} Resolves after the dashboard has been populated.
+ */
 async function loadAllResults() {
     const resultsContainer = document.getElementById('test-results');
     resultsContainer.innerHTML = '<div class="loading"><i class="fas fa-spinner fa-spin"></i> Loading test results...</div>';

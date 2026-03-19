@@ -13,9 +13,18 @@
     'use strict';
 
     /**
-     * Class for showing OS-specific instructions based on radio button selection
+     * Show or hide OS-specific lesson instructions in response to the selected radio button.
+     *
+     * @remarks Preconditions:
+     * - The page must use `input[name="os"]` radio controls.
+     * - OS-specific sections must follow the `lesson-install-<os>` class naming convention.
      */
     class OSInstructionSwitcher {
+        /**
+         * Create the instruction switcher and initialise its cached radio collection.
+         *
+         * @returns {void}
+         */
         constructor() {
             this.osRadios = null;
         }

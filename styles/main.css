@@ -21,6 +21,8 @@ html {
     height: 100%;
     margin: 0;
     padding: 0;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 body {
@@ -85,37 +87,48 @@ footer {
 h1, h2, h3, h4, h5, h6 {
     /* Use Cinzel font for headings */
     font-family: var(--font-family-serif);
-    font-weight: 600;
+    font-weight: 700;
     text-align: center;
 }
 
 /* make h1 and h2 larger and bolder */
 h1, h2{
     font-size: var(--fontsize-header-large);
-    font-weight: 700;
 }
 
 /* h3 not quite as big */
 h3, h4{
     font-size: var(--fontsize-header-medium);
-    font-weight: 700;
 }
 
 /* h5 and h6 smaller again */
 h5, h6{
     font-size: var(--fontsize-header-small);
-    font-weight: 700;
 }
 
-/* increas spacing for paragraphs in accordance with WCAG 2.2 */
+/* increase spacing for paragraphs in accordance with WCAG 2.2 */
 p, li {
     font-size: var(--fontsize-normal);
-    margin-bottom: 1.5rem;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+    margin: var(--margin-vertical) var(--margin-horizontal);
 }
 
 /* Make inline code elements the same size as paragraph text */
 code {
     font-family: var(--font-family-mono);
+    font-size: var(--fontsize-normal);
+}
+
+ul {
+    margin: var(--margin-vertical) var(--margin-horizontal);
+    padding-left: 2rem;
+    padding-right: 2rem;
+    line-height: 1.5;
+    text-align: left;
+    max-width: 100%;
+    box-sizing: border-box;
     font-size: var(--fontsize-normal);
 }
 
@@ -142,11 +155,6 @@ a:focus-visible {
 a:focus-visible {
     outline: var(--border-weight-thin) dashed var(--colour-effective-link-text-focus);
     outline-offset: 0.2rem;
-}
-
-/* Utility class to mirror an image horizontally. */
-.mirror {
-    transform: scaleX(-1);
 }
 
 /* Make SVG images with black strokes/fills lighter in dark mode */

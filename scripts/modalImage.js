@@ -16,9 +16,18 @@
     'use strict';
 
     /**
-     * Class for managing image modal functionality
+     * Display safe same-origin images inside the shared modal overlay.
+     *
+     * @remarks Preconditions:
+     * - The page must define `#imageModal`, `#modalImage`, and `#modalCaption` elements.
+     * - Clickable triggers are expected to use the `.image-button` convention with `data-image-src`.
      */
     class ImageModal {
+        /**
+         * Create the modal controller, cache DOM references, and register global listeners.
+         *
+         * @returns {void}
+         */
         constructor() {
             this.modal = null;
             this.modalImg = null;

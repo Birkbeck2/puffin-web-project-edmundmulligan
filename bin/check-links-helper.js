@@ -32,7 +32,19 @@ const pageResult = {
   totalCount: 0
 };
 
-// Fetch HTML content with redirect handling
+/**
+ * Fetch a page body while following a bounded redirect chain.
+ *
+ * @remarks Preconditions:
+ * - `url` must be an absolute HTTP or HTTPS URL.
+ * - The fetched response body is assumed to be text content that fits comfortably in memory.
+ * - `maxRedirects` should remain positive to prevent immediate failure.
+ *
+ * @param {string} url - Absolute URL to request.
+ * @param {number} [maxRedirects=5] - Maximum redirect hops to follow.
+ * @param {number} [depth=0] - Current recursion depth used internally when following redirects.
+ * @returns {Promise<string>} Promise resolving to the fetched HTML content.
+ */
 function fetchWithRedirects(url, maxRedirects = 5, depth = 0) {
   return new Promise((resolve, reject) => {
     if (depth >= maxRedirects) {
@@ -59,6 +71,16 @@ function fetchWithRedirects(url, maxRedirects = 5, depth = 0) {
   });
 }
 
+/**
+ * Parse the target page, collect eligible links, validate them, and persist the page report.
+ *
+ * @remarks Preconditions:
+ * - CLI arguments must provide `pageUrl`, `urlPath`, and `resultFile`.
+ * - `resultFile` must point to a JSON document compatible with `finalize`.
+ * - The target page must be reachable from the current environment.
+ *
+ * @returns {Promise<void>} Resolves after the page result has been finalized.
+ */
 async function main() {
   try {
     const html = await fetchWithRedirects(pageUrl);
@@ -137,6 +159,16 @@ async function main() {
   }
 }
 
+/**
+ * Validate a single discovered link using a lightweight HEAD request.
+ *
+ * @remarks Preconditions:
+ * - `link.fullUrl` must be an absolute HTTP or HTTPS URL.
+ * - `pageResult` is mutated in place to accumulate failures for the current page.
+ *
+ * @param {{fullUrl: string, href: string, tagName: string, text: string}} link - Link descriptor extracted from the page.
+ * @returns {Promise<void>} Promise resolving after the request completes or the failure is recorded.
+ */
 function checkLink(link) {
   return new Promise((resolve, reject) => {
     const linkUrl = link.fullUrl;
@@ -188,6 +220,15 @@ function checkLink(link) {
   });
 }
 
+/**
+ * Merge the current page result into the shared broken-link report and print a one-line summary.
+ *
+ * @remarks Preconditions:
+ * - `resultFile` must already exist and contain a JSON object with `pages` and `summary` properties.
+ * - `pageResult` must have been populated for the current page before this function runs.
+ *
+ * @returns {void}
+ */
 function finalize() {
   const combined = JSON.parse(fs.readFileSync(resultFile, 'utf8'));
   combined.pages.push(pageResult);

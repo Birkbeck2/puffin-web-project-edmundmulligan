@@ -22,9 +22,18 @@
     'use strict';
 
     /**
-     * Class for injecting lesson navigation
+     * Build and inject the lesson navigation panel based on visible lesson sections.
+     *
+     * @remarks Preconditions:
+     * - Lesson pages must use the `.lesson-section` convention.
+     * - Hidden OS-specific sections must keep the `lesson-install-` naming scheme so they can be excluded.
      */
     class LessonNavigationInjector {
+        /**
+         * Create the injector, reset derived state, and begin initialization.
+         *
+         * @returns {void}
+         */
         constructor() {
             this.lessonNumber = null;
             this.pageTitle = '';

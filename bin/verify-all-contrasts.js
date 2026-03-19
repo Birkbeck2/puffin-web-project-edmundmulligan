@@ -14,7 +14,18 @@
 const fs = require('fs');
 const path = require('path');
 
-// Function to convert HSL to RGB
+/**
+ * Convert HSL values into RGB channel values.
+ *
+ * @remarks Preconditions:
+ * - `h` should be supplied in degrees.
+ * - `s` and `l` should be supplied as percentages between 0 and 100.
+ *
+ * @param {number} h - Hue in degrees.
+ * @param {number} s - Saturation percentage.
+ * @param {number} l - Lightness percentage.
+ * @returns {number[]} RGB values as `[r, g, b]`.
+ */
 function hslToRgb(h, s, l) {
     h = h / 360;
     s = s / 100;
@@ -44,7 +55,17 @@ function hslToRgb(h, s, l) {
     return [Math.round(r * 255), Math.round(g * 255), Math.round(b * 255)];
 }
 
-// Function to calculate relative luminance
+/**
+ * Calculate WCAG relative luminance for an RGB colour.
+ *
+ * @remarks Preconditions:
+ * - Channel inputs are expected to be 0-255 sRGB values.
+ *
+ * @param {number} r - Red channel.
+ * @param {number} g - Green channel.
+ * @param {number} b - Blue channel.
+ * @returns {number} Relative luminance value.
+ */
 function getLuminance(r, g, b) {
     const [rs, gs, bs] = [r, g, b].map(c => {
         c = c / 255;
@@ -53,7 +74,16 @@ function getLuminance(r, g, b) {
     return 0.2126 * rs + 0.7152 * gs + 0.0722 * bs;
 }
 
-// Function to calculate contrast ratio
+/**
+ * Calculate the WCAG contrast ratio between two RGB colours.
+ *
+ * @remarks Preconditions:
+ * - Each input must be a three-item RGB array in the same colour space.
+ *
+ * @param {number[]} rgb1 - First RGB colour.
+ * @param {number[]} rgb2 - Second RGB colour.
+ * @returns {number} Contrast ratio.
+ */
 function getContrastRatio(rgb1, rgb2) {
     const lum1 = getLuminance(...rgb1);
     const lum2 = getLuminance(...rgb2);
@@ -62,7 +92,16 @@ function getContrastRatio(rgb1, rgb2) {
     return (lighter + 0.05) / (darker + 0.05);
 }
 
-// Parse HSL color
+/**
+ * Parse a CSS `hsl(...)` string into numeric HSL channels.
+ *
+ * @remarks Preconditions:
+ * - The function expects either degree-based or comma-separated HSL syntax.
+ * - Unsupported colour syntaxes return `null` rather than throwing.
+ *
+ * @param {string} hslString - CSS HSL string to parse.
+ * @returns {{h: number, s: number, l: number}|null} Parsed channels or `null`.
+ */
 function parseHSL(hslString) {
     // Handle both "hsl(180deg 100% 50%)" and "hsl(180, 100%, 50%)" formats
     const match = hslString.match(/hsl\(\s*(\d+(?:\.\d+)?)(?:deg)?\s*[,\s]\s*(\d+(?:\.\d+)?)\s*%\s*[,\s]?\s*(\d+(?:\.\d+)?)\s*%/);
@@ -76,7 +115,17 @@ function parseHSL(hslString) {
     return null;
 }
 
-// Read CSS file and extract colour value
+/**
+ * Extract theme colour definitions from the CSS source.
+ *
+ * @remarks Preconditions:
+ * - `cssContent` should contain the full contents of `styles/colours.css`.
+ * - This parser only understands `--colour-*` variables expressed directly in HSL syntax.
+ *
+ * @param {string} cssContent - CSS source to inspect.
+ * @returns {Object<string, {hsl: string, h: number, s: number, l: number, rgb: number[]}>}
+ * Extracted colour map keyed by CSS variable name.
+ */
 function extractColors(cssContent) {
     const colors = {};
     const lines = cssContent.split('\n');
@@ -102,7 +151,15 @@ function extractColors(cssContent) {
     return colors;
 }
 
-// Extract colour pair from HTML
+/**
+ * Extract unique background/foreground variable pairs from the diagnostic HTML.
+ *
+ * @remarks Preconditions:
+ * - `htmlContent` should come from the diagnostics page that uses `data-bg-var` and `data-fg-var` attributes.
+ *
+ * @param {string} htmlContent - Diagnostic HTML content to scan.
+ * @returns {Array<{bg: string, fg: string}>} Unique colour-variable pairs.
+ */
 function extractColorPairs(htmlContent) {
     const pairs = [];
     const regex = /data-bg-var="(--colour-[^"]+)"\s+data-fg-var="(--colour-[^"]+)"/g;
@@ -129,7 +186,15 @@ function extractColorPairs(htmlContent) {
     return uniquePairs;
 }
 
-// Main verification
+/**
+ * Run the full contrast verification for every unique pair defined in the diagnostics page.
+ *
+ * @remarks Preconditions:
+ * - `styles/colours.css` and `diagnostics/colourPalette.html` must both exist.
+ * - The diagnostic HTML must reference colour pairs using the expected data attributes.
+ *
+ * @returns {void}
+ */
 function main() {
     const cssPath = path.join(__dirname, '../styles/colours.css');
     const htmlPath = path.join(__dirname, '../diagnostics/colourPalette.html');

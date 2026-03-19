@@ -11,6 +11,17 @@
  **********************************************************************
 */
 
+/**
+ * Convert an HSL colour to RGB channel values.
+ *
+ * @remarks Preconditions:
+ * - `h` is in degrees and `s`/`l` are percentages between 0 and 100.
+ *
+ * @param {number} h - Hue in degrees.
+ * @param {number} s - Saturation percentage.
+ * @param {number} l - Lightness percentage.
+ * @returns {number[]} RGB values as `[r, g, b]`.
+ */
 function hslToRgb(h, s, l) {
     h = h / 360;
     s = s / 100;
@@ -40,6 +51,15 @@ function hslToRgb(h, s, l) {
     return [Math.round(r * 255), Math.round(g * 255), Math.round(b * 255)];
 }
 
+/**
+ * Calculate WCAG relative luminance for an RGB colour.
+ *
+ * @remarks Preconditions:
+ * - `rgb` must contain exactly three 0-255 sRGB channel values.
+ *
+ * @param {number[]} rgb - RGB triplet.
+ * @returns {number} Relative luminance value in the range 0-1.
+ */
 function relativeLuminance(rgb) {
     const [r, g, b] = rgb.map(val => {
         val = val / 255;
@@ -48,6 +68,16 @@ function relativeLuminance(rgb) {
     return 0.2126 * r + 0.7152 * g + 0.0722 * b;
 }
 
+/**
+ * Calculate the contrast ratio between two HSL colours.
+ *
+ * @remarks Preconditions:
+ * - Both inputs must be `[h, s, l]` arrays using degrees and percentages.
+ *
+ * @param {number[]} hsl1 - First HSL colour.
+ * @param {number[]} hsl2 - Second HSL colour.
+ * @returns {number} WCAG contrast ratio.
+ */
 function calculateContrast(hsl1, hsl2) {
     const rgb1 = hslToRgb(...hsl1);
     const rgb2 = hslToRgb(...hsl2);

@@ -17,9 +17,18 @@
     'use strict';
 
     /**
-     * Class for managing collapsible header and footer sections
+     * Manage expand/collapse behaviour for injected header and footer variants.
+     *
+     * @remarks Preconditions:
+     * - `injectCommonCode.js` must dispatch the `headerInjected` and `footerInjected` events.
+     * - The generated markup must contain the expected minimal/full wrappers and toggle buttons.
      */
     class HeaderFooterToggler {
+        /**
+         * Create storage keys used to persist header and footer state between page loads.
+         *
+         * @returns {void}
+         */
         constructor() {
             this.HEADER_STATE_KEY = 'headerState';
             this.FOOTER_STATE_KEY = 'footerState';

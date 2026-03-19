@@ -141,7 +141,7 @@
             const heading = document.createElement('h2');
             heading.textContent = content.termText;
 
-            const definitionContainer = document.createElement('div');
+            const definitionContainer = document.createElement('p');
             definitionContainer.appendChild(this.buildSafeDefinition(content.definitionElement));
 
             const closeButton = document.createElement('button');

@@ -71,6 +71,17 @@ function isExemptFromColorChecks(filePath) {
     return EXEMPT_FROM_COLOR_CHECKS.some(exempt => filePath.startsWith(exempt));
 }
 
+/**
+ * Scan a file for hardcoded colour literals that bypass the theme system.
+ *
+ * @remarks Preconditions:
+ * - `content` should be the full text of the file referenced by `filePath`.
+ * - The scan is heuristic and assumes one file can be processed entirely in memory.
+ *
+ * @param {string} filePath - Relative path used for reporting and exemption checks.
+ * @param {string} content - File contents to analyse.
+ * @returns {Array<object>} List of hardcoded-colour findings.
+ */
 function findHardcodedColors(filePath, content) {
     const issues = [];
     
@@ -142,6 +153,17 @@ function findHardcodedColors(filePath, content) {
     return issues;
 }
 
+/**
+ * Identify direct usage of theme-specific CSS variables outside the approved files.
+ *
+ * @remarks Preconditions:
+ * - `content` should match the file referenced by `filePath`.
+ * - The caller is responsible for excluding generated or third-party files.
+ *
+ * @param {string} filePath - Relative file path used for allow-list checks.
+ * @param {string} content - File contents to analyse.
+ * @returns {Array<object>} Theme-specific variable usage findings.
+ */
 function findThemeSpecificVars(filePath, content) {
     const issues = [];
     
@@ -186,6 +208,18 @@ function findThemeSpecificVars(filePath, content) {
     return issues;
 }
 
+/**
+ * Verify that an HTML page includes the CSS and JavaScript needed for theme switching.
+ *
+ * @remarks Preconditions:
+ * - This function is intended for HTML files only.
+ * - `content` should contain the complete HTML source for the page.
+ *
+ * @param {string} filePath - Relative HTML file path.
+ * @param {string} content - HTML source to inspect.
+ * @returns {{file: string, missing: {globals: boolean, themeSwitcher: boolean}}|null}
+ * Missing-theme report or `null` when the page looks compliant.
+ */
 function checkFileLoadsThemeSystem(filePath, content) {
     if (!filePath.endsWith('.html')) {
         return null;
@@ -212,6 +246,17 @@ function checkFileLoadsThemeSystem(filePath, content) {
     return null;
 }
 
+/**
+ * Recursively collect files beneath a directory that match a set of extensions.
+ *
+ * @remarks Preconditions:
+ * - `dir` must exist and be readable.
+ * - The traversal intentionally skips large/generated directories listed in the function body.
+ *
+ * @param {string} dir - Root directory to walk.
+ * @param {string[]} extensions - Allowed filename suffixes.
+ * @returns {string[]} Matching file paths.
+ */
 function getAllFiles(dir, extensions) {
     let results = [];
     const list = fs.readdirSync(dir);
@@ -235,6 +280,15 @@ function getAllFiles(dir, extensions) {
     return results;
 }
 
+/**
+ * Run the full colour-usage audit, print a human-readable summary, and write a JSON report.
+ *
+ * @remarks Preconditions:
+ * - The repository root is assumed to be the parent of this script's directory.
+ * - The caller must be able to write to `test-results/colour-audit-report.json`.
+ *
+ * @returns {void}
+ */
 function main() {
     console.log('\n' + '='.repeat(100));
     console.log('colour usage AUDIT - Theme Compliance Check');
