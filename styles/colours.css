@@ -211,7 +211,6 @@
     --colour-effective-link-text-hover:            var(--colour-normal-light-link-text-hover);
     --colour-effective-link-background-visited:    var(--colour-normal-light-link-background-visited);
     --colour-effective-link-text-visited:          var(--colour-normal-light-link-text-visited);
-    --colour-effective-link-text-focus:            var(--colour-normal-light-link-text-hover);
     
     /* Additional effective colours for navigation components */
     --colour-effective-background: var(--colour-effective-page-background);
