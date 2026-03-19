@@ -102,6 +102,19 @@ class ColourPalette {
             });
             return 0;
         }
+        
+        // Extract HSL values and convert to RGB
+        const rgb1 = this.hslToRgb(parseFloat(match1[1]), parseFloat(match1[2]), parseFloat(match1[3]));
+        const rgb2 = this.hslToRgb(parseFloat(match2[1]), parseFloat(match2[2]), parseFloat(match2[3]));
+        
+        // Calculate relative luminance for each colour
+        const lum1 = this.relativeLuminance(rgb1);
+        const lum2 = this.relativeLuminance(rgb2);
+        
+        // Calculate contrast ratio: (L1 + 0.05) / (L2 + 0.05) where L1 is the lighter colour
+        const lighter = Math.max(lum1, lum2);
+        const darker = Math.min(lum1, lum2);
+        return (lighter + 0.05) / (darker + 0.05);
     }
 
     /**
@@ -208,71 +221,87 @@ class ColourPalette {
 
     /**
      * Parse relative colour syntax: hsl(from var(...) h s 18%)
-     * @param {string} relativeColourString - String like "hsl(from hsl(180deg 100% 40%) h s 18%)"
+     * @param {string} relativeColourString - String like "hsl(from var(...) h s 18%)" or "hsl(from hsl(...) h s 18%)"
      * @returns {string} Computed HSL string
      */
     parseRelativeColourSyntax(relativeColourString) {
-        // Match: hsl(from <colour> h s l) where h/s/l can be values or keywords
-        const match = relativeColourString.match(/hsl\(\s*from\s+hsl\(([^)]+)\)\s+([^)]+)\)/);
+        // Find "from" and extract the source and output values
+        const fromIndex = relativeColourString.indexOf('from');
+        if (fromIndex === -1) return null;
         
-        if (!match) {
-            return null;
-        }
+        // Extract everything after "from" and before the closing paren
+        const afterFrom = relativeColourString.substring(fromIndex + 4).trim();
         
-        // Parse the base colour: "180deg 100% 40%" or "180, 100%, 40%"
-        const baseColourStr = match[1];
-        const baseMatch = baseColourStr.match(/(\d+(?:\.\d+)?)(?:deg)?\s*[,\s]\s*(\d+(?:\.\d+)?)\s*%\s*[,\s]?\s*(\d+(?:\.\d+)?)\s*%/);
-        
-        if (!baseMatch) {
-            console.warn('Could not parse base colour:', baseColourStr);
-            return null;
-        }
-        
-        const baseH = parseFloat(baseMatch[1]);
-        const baseS = parseFloat(baseMatch[2]);
-        const baseL = parseFloat(baseMatch[3]);
-        
-        // Parse the output components: "h s 18%"
-        const outputStr = match[2].trim();
-        const parts = outputStr.split(/\s+/);
-        
-        // The output format is always: <hue> <saturation> <lightness>
-        // Each can be 'h', 's', 'l' (use from base) or a literal value
-        
-        let h = baseH;
-        let s = baseS;
-        let l = baseL;
-        
-        if (parts.length >= 1) {
-            // First component is hue
-            if (parts[0] === 'h') {
-                h = baseH;
-            } else if (parts[0].endsWith('deg')) {
-                h = parseFloat(parts[0]);
-            } else if (!isNaN(parseFloat(parts[0]))) {
-                h = parseFloat(parts[0]);
+        // Find the end of the source colour (tracking nested parentheses)
+        let parenDepth = 0;
+        let sourceEnd = 0;
+        for (let i = 0; i < afterFrom.length; i++) {
+            if (afterFrom[i] === '(') parenDepth++;
+            else if (afterFrom[i] === ')') {
+                if (parenDepth === 0) break;
+                parenDepth--;
+            } else if (afterFrom[i] === ' ' && parenDepth === 0) {
+                sourceEnd = i;
+                break;
             }
         }
         
-        if (parts.length >= 2) {
-            // Second component is saturation
-            if (parts[1] === 's') {
-                s = baseS;
-            } else if (parts[1].endsWith('%')) {
-                s = parseFloat(parts[1]);
-            } else if (!isNaN(parseFloat(parts[1]))) {
-                s = parseFloat(parts[1]);
+        if (sourceEnd === 0) {
+            sourceEnd = afterFrom.indexOf(' ');
+            if (sourceEnd === -1) sourceEnd = afterFrom.length;
+        }
+        
+        let source = afterFrom.substring(0, sourceEnd).trim();
+        const outputStr = afterFrom.substring(sourceEnd).trim();
+        
+        // Resolve var() references
+        if (source.startsWith('var(')) {
+            const varMatch = source.match(/var\(--([^)]+)\)/);
+            if (varMatch) {
+                const varName = '--' + varMatch[1];
+                const resolvedValue = getComputedStyle(document.documentElement).getPropertyValue(varName).trim();
+                if (resolvedValue && !resolvedValue.startsWith('hsl(from')) {
+                    source = resolvedValue;
+                }
             }
         }
         
-        if (parts.length >= 3) {
-            // Third component is lightness
-            if (parts[2] === 'l') {
-                l = baseL;
-            } else if (parts[2].endsWith('%')) {
-                l = parseFloat(parts[2]);
-            } else if (!isNaN(parseFloat(parts[2]))) {
-                l = parseFloat(parts[2]);
+        // Parse the base colour
+        const hslMatch = source.match(/hsla?\(\s*(\d+(?:\.\d+)?)(?:deg)?\s*[,\s]\s*(\d+(?:\.\d+)?)\s*%?\s*[,\s]?\s*(\d+(?:\.\d+)?)\s*%?\s*\)/i);
+        
+        if (!hslMatch) {
+            console.warn('Could not parse base colour:', source);
+            return null;
+        }
+        
+        let baseH = parseFloat(hslMatch[1]);
+        let baseS = parseFloat(hslMatch[2]);
+        let baseL = parseFloat(hslMatch[3]);
+        
+        // Parse output values: h, s, l (or keyword or value)
+        const parts = outputStr.split(/\s+/).filter(p => p);
+        
+        let h = baseH, s = baseS, l = baseL;
+        
+        for (let i = 0; i < Math.min(3, parts.length); i++) {
+            const part = parts[i].toLowerCase();
+            
+            if (part === 'h') {
+                // Keep base hue
+            } else if (part === 's') {
+                // Keep base saturation
+            } else if (part === 'l') {
+                // Keep base lightness
+            } else if (part.endsWith('%')) {
+                const val = parseFloat(part);
+                if (i === 0) h = val;
+                else if (i === 1) s = val;
+                else if (i === 2) l = val;
+            } else if (!isNaN(parseFloat(part))) {
+                const val = parseFloat(part);
+                if (i === 0) h = val;
+                else if (i === 1) s = val;
+                else if (i === 2) l = val;
             }
         }
         
@@ -483,6 +512,35 @@ class ColourPalette {
 // Create singleton instance and initialize when DOM and CSS are loaded
 const colourPalette = new ColourPalette();
 
+/**
+ * Initialize tab navigation for theme sections.
+ */
+function initializeTabNavigation() {
+    const tabButtons = document.querySelectorAll('.tab-button');
+    const tabPanels = document.querySelectorAll('.tab-panel');
+
+    tabButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const targetTab = this.getAttribute('data-tab');
+
+            // Remove active state from all buttons and panels.
+            tabButtons.forEach(btn => {
+                btn.classList.remove('active');
+                btn.setAttribute('aria-selected', 'false');
+            });
+            tabPanels.forEach(panel => panel.classList.remove('active'));
+
+            // Activate clicked button and its matching panel.
+            this.classList.add('active');
+            this.setAttribute('aria-selected', 'true');
+            const targetPanel = document.getElementById(`tab-${targetTab}`);
+            if (targetPanel) {
+                targetPanel.classList.add('active');
+            }
+        });
+    });
+}
+
 function initializeWhenReady() {
     // Check if a known CSS variable is available (indicates CSS is loaded)
     const testColour = getComputedStyle(document.documentElement).getPropertyValue('--colour-white').trim();
@@ -499,10 +557,12 @@ function initializeWhenReady() {
 
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => {
+        initializeTabNavigation();
         // Give CSS a moment to fully load
         setTimeout(initializeWhenReady, 50);
     });
 } else {
     // DOM already loaded
+    initializeTabNavigation();
     initializeWhenReady();
 }

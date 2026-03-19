@@ -21,7 +21,6 @@ const pages = [
   { url: '/index.html', name: 'Home' },
   { url: '/pages/start.html', name: 'Start' },
   { url: '/pages/gallery.html', name: 'Gallery' },
-  { url: '/pages/accessories.html', name: 'Accessories' },
   { url: '/pages/facts.html', name: 'Facts' },
   { url: '/pages/students.html', name: 'Students' },
   { url: '/pages/mentors.html', name: 'Mentors' },

@@ -15,9 +15,18 @@
     'use strict';
 
     /**
-     * Debug utility class for conditional logging
+     * Central debug logger that turns console output on or off for the whole site.
+     *
+     * @remarks Preconditions:
+     * - Browser support for `URLSearchParams` is assumed.
+     * - localStorage access may fail in restricted contexts, so callers should treat logging as best effort.
      */
     class DebugLogger {
+        /**
+         * Create the logger, resolve its enabled state, and emit the current status.
+         *
+         * @returns {void}
+         */
         constructor() {
             this.enabled = this.checkDebugMode();
             this.logDebugStatus();

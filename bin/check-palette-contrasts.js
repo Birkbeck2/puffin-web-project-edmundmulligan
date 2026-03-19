@@ -16,7 +16,16 @@ const fs = require('fs');
 const path = require('path');
 
 /**
- * Convert HSL to RGB
+ * Convert an HSL colour into RGB channel values.
+ *
+ * @remarks Preconditions:
+ * - `h` is expected in degrees.
+ * - `s` and `l` are expected as percentages in the range 0-100.
+ *
+ * @param {number} h - Hue in degrees.
+ * @param {number} s - Saturation percentage.
+ * @param {number} l - Lightness percentage.
+ * @returns {number[]} RGB values as `[r, g, b]`.
  */
 function hslToRgb(h, s, l) {
     h = h / 360;
@@ -48,7 +57,13 @@ function hslToRgb(h, s, l) {
 }
 
 /**
- * Calculate relative luminance
+ * Calculate WCAG relative luminance for an RGB colour.
+ *
+ * @remarks Preconditions:
+ * - `rgb` must contain exactly three 0-255 sRGB channel values.
+ *
+ * @param {number[]} rgb - RGB triplet.
+ * @returns {number} Relative luminance in the range 0-1.
  */
 function relativeLuminance(rgb) {
     const [r, g, b] = rgb.map(val => {
@@ -59,7 +74,14 @@ function relativeLuminance(rgb) {
 }
 
 /**
- * Calculate contrast ratio between two colors
+ * Calculate the WCAG contrast ratio between two HSL colours.
+ *
+ * @remarks Preconditions:
+ * - Each input must be an `[h, s, l]` array using degrees and percentages.
+ *
+ * @param {number[]} hsl1 - First HSL colour.
+ * @param {number[]} hsl2 - Second HSL colour.
+ * @returns {number} Contrast ratio.
  */
 function calculateContrast(hsl1, hsl2) {
     const rgb1 = hslToRgb(...hsl1);
@@ -75,7 +97,13 @@ function calculateContrast(hsl1, hsl2) {
 }
 
 /**
- * Parse HSL value from CSS
+ * Parse a CSS HSL string into numeric channel values.
+ *
+ * @remarks Preconditions:
+ * - The parser only handles direct `hsl(...)` syntax supported by the stylesheet in this project.
+ *
+ * @param {string} cssValue - CSS value to parse.
+ * @returns {(number[]|null)} Parsed `[h, s, l]` values or `null`.
  */
 function parseHSL(cssValue) {
     // Match patterns like: hsl(275deg 100% 25%) or hsl(0, 100%, 27%)
@@ -87,7 +115,14 @@ function parseHSL(cssValue) {
 }
 
 /**
- * Parse the CSS file and extract color variables
+ * Parse the colour stylesheet and resolve supported variable references.
+ *
+ * @remarks Preconditions:
+ * - `cssPath` must point to a readable CSS file.
+ * - The stylesheet is expected to use direct HSL values or the limited `hsl(from var(...))` patterns handled below.
+ *
+ * @param {string} cssPath - Path to the CSS file to analyse.
+ * @returns {Object<string, number[]>} Resolved colour variables keyed by variable name.
  */
 function parseCSSColors(cssPath) {
     const content = fs.readFileSync(cssPath, 'utf-8');

@@ -16,6 +16,17 @@ const fs = require('fs');
 const path = require('path');
 const { JSDOM } = require('jsdom');
 
+/**
+ * Run the colour palette diagnostic page inside JSDOM and verify that each rendered
+ * contrast summary both parses successfully and meets WCAG expectations.
+ *
+ * @remarks Preconditions:
+ * - The referenced diagnostic HTML, CSS, and JavaScript files must exist on disk.
+ * - `jsdom` must be installed and able to execute the dashboard script in a DOM context.
+ * - The diagnostic page is expected to render `.contrast-info` elements after initialization.
+ *
+ * @returns {Promise<void>} Resolves after printing a summary and exiting the process.
+ */
 async function testColourPalette() {
     console.log('\n' + '='.repeat(100));
     console.log('BROWSER CONTEXT COLOR CONTRAST VERIFICATION');

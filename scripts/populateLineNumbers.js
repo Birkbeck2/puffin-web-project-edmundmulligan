@@ -17,7 +17,11 @@
     'use strict';
 
     /**
-     * Class for populating code snippets with line numbers
+        * Populate plain-text code snippets with aligned line numbers.
+        *
+        * @remarks Preconditions:
+        * - Each snippet container must include a `script[type="text/plain"].code-snippet-source` element.
+        * - Each snippet container must also include an empty `.code-snippet-table` target element.
      */
     class CodeSnippetPopulator {
         /**
@@ -91,6 +95,11 @@
     }
 
     // Run when DOM is ready
+    /**
+     * Create and run the snippet populator once the DOM is available.
+     *
+     * @returns {void}
+     */
     const initPopulator = () => {
         const populator = new CodeSnippetPopulator();
         populator.init();
