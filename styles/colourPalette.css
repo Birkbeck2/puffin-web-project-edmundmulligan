@@ -218,11 +218,17 @@
     cursor: pointer;
 }
 
-.demo-button-round:disabled,
+.demo-button-round:disabled {
+    opacity: 1;
+    cursor: not-allowed;
+}
+
+/* Unused selector retained for reference:
 .demo-button-rect:disabled {
     opacity: 1;
     cursor: not-allowed;
 }
+*/
 
 .demo-button-round.selected-state {
     /* Selected state colours come from data-scheme attribute */
@@ -230,6 +236,7 @@
     transform: scale(0.95);
 }
 
+/* Unused selector retained for reference:
 .demo-button-rect {
     padding: 0.75rem 1.5rem;
     border-radius: 0.5rem;
@@ -238,12 +245,14 @@
     font-size: 0.9rem;
     cursor: pointer;
 }
+*/
 
+/* Unused selector retained for reference:
 .demo-button-rect.selected-state {
-    /* Selected state colours come from data-scheme attribute */
     border-width: 3px;
     transform: scale(0.95);
 }
+*/
 
 .demo-nav {
     list-style: none;

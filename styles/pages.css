@@ -375,12 +375,7 @@
 /* Second row: theme and element (each spans 3 columns for 2 equal items) */
 .student-info form .student-form-avatar fieldset:nth-child(4) {
    grid-row: 2;
-   grid-column: 1 / 4;    <!-- generic stylesheets -->
-    <link rel="stylesheet" href="../styles/globals.css">
-    <link rel="stylesheet" href="../styles/main.css">
-    <link rel="stylesheet" href="../styles/pages.css">
-
-    <!-- page specific stylesheets -->
+   grid-column: 1 / 4;
 }
 
 .student-info form .student-form-avatar fieldset:nth-child(5) {
@@ -487,17 +482,21 @@
    box-sizing: border-box;
 }
 
+/* Unused selector retained for reference:
 .lessons-container {
    display: flex;
    flex-flow: row wrap;
    justify-content: center;
 }
+*/
 
+/* Unused selector retained for reference:
 .intro-text {
    max-width: 60rem;
    margin: 1rem auto;
    text-align: center;
 }
+*/
 
 .facts-item {
    display: block;
@@ -610,7 +609,9 @@
    font-size: var(--fontsize-header-medium);
 }
 
+/* Unused selector retained for reference:
 .lesson-description {
    display: block;
    font-size: var(--fontsize-normal);
 }
+*/
