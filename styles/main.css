@@ -141,10 +141,16 @@ ul {
  */
 
  /* do not distinguish between a visited and non-visited link */
- a:link,
- a:visited {
+ a:link {
     color: var(--colour-effective-link-text);
     background-color: var(--colour-effective-link-background);
+    text-decoration: underline;
+    font-weight: var(--font-weight-bold);
+}
+
+a:visited {
+    color: var(--colour-effective-link-text-visited);
+    background-color: var(--colour-effective-link-background-visited);
     text-decoration: underline;
     font-weight: var(--font-weight-bold);
 }

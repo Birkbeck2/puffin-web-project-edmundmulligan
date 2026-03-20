@@ -77,14 +77,14 @@
 .lesson-nav button {
    display: block;
    padding: 0.75rem 1rem;
-   color: var(--colour-effective-headings-text);
+   color: var(--colour-effective-menu-text);
    text-decoration: none;
    border-radius: var(--border-radius);
    margin-bottom: 0.5rem;
    transition: background-color 0.2s ease;
    text-align: left;
    width: 100%;
-   background: none;
+   background: var(--colour-effective-menu-background);
    border: none;
    font-family: inherit;
    font-size: inherit;
@@ -92,15 +92,21 @@
    box-sizing: border-box;
 }
 
+.lesson-nav a:visited {
+   background-color: var(--colour-effective-menu-background-visited);
+   color: var(--colour-effective-menu-text-visited);
+}
+
 .lesson-nav a:hover,
-.lesson-nav a:focus-visible,
-.lesson-nav button:hover,
-.lesson-nav button:focus-visible {
-   background-color: var(--colour-effective-link-text-hover);
+.lesson-nav button:hover {
+   background-color: var(--colour-effective-menu-background-hover);
+   color: var(--colour-effective-menu-text-hover);
 }
 
 .lesson-nav a:focus-visible,
 .lesson-nav button:focus-visible {
+   background-color: var(--colour-effective-menu-background-focus);
+   color: var(--colour-effective-menu-text-focus);
    outline: var(--border-weight-thin) var(--border-style) currentcolor;
    outline-offset: 0.1rem;
 }

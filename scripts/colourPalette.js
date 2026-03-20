@@ -541,6 +541,65 @@ function initializeTabNavigation() {
     });
 }
 
+function appendContentLinkCards() {
+    const themePanels = [
+        'normal-light',
+        'normal-dark',
+        'subdued-light',
+        'subdued-dark',
+        'vibrant-light',
+        'vibrant-dark'
+    ];
+
+    themePanels.forEach(themeKey => {
+        const panel = document.getElementById(`tab-${themeKey}`);
+        const grid = panel ? panel.querySelector('.colour-grid') : null;
+
+        if (!grid || grid.querySelector(`.content-link-card[data-theme-key="${themeKey}"]`)) {
+            return;
+        }
+
+        const heading = themeKey
+            .split('-')
+            .map(part => part.charAt(0).toUpperCase() + part.slice(1))
+            .join(' ');
+
+        const card = document.createElement('div');
+        card.className = 'colour-card wide content-link-card';
+        card.setAttribute('data-theme-key', themeKey);
+        card.innerHTML = `
+            <div class="colour-swatch" data-scheme="${themeKey}-page">
+                <div class="card-title">Content Links ${heading} Theme</div>
+                <div class="content-link-examples">
+                    <a href="#" class="content-link-example" style="color: var(--colour-${themeKey}-link-text); background-color: var(--colour-${themeKey}-link-background);">Normal content link</a>
+                    <a href="#" class="content-link-example" style="color: var(--colour-${themeKey}-link-text-hover); background-color: var(--colour-${themeKey}-link-background-hover);">Hover content link</a>
+                    <a href="#" class="content-link-example" style="color: var(--colour-${themeKey}-link-text-visited); background-color: var(--colour-${themeKey}-link-background-visited);">Visited content link</a>
+                </div>
+                <div class="colour-name">Link Background: --colour-${themeKey}-link-background</div>
+                <div class="colour-value" data-var="--colour-${themeKey}-link-background"></div>
+                <div class="colour-name">Link Text: --colour-${themeKey}-link-text</div>
+                <div class="colour-value" data-var="--colour-${themeKey}-link-text"></div>
+                <div class="contrast-section-title">On page background</div>
+                <div class="contrast-info" data-bg-var="--colour-${themeKey}-page-background" data-fg-var="--colour-${themeKey}-link-text"></div>
+                <div class="contrast-section-title">On headings background</div>
+                <div class="contrast-info" data-bg-var="--colour-${themeKey}-headings-background" data-fg-var="--colour-${themeKey}-link-text"></div>
+                <div class="colour-name">Link Background Hover: --colour-${themeKey}-link-background-hover</div>
+                <div class="colour-value" data-var="--colour-${themeKey}-link-background-hover"></div>
+                <div class="colour-name">Link Text Hover: --colour-${themeKey}-link-text-hover</div>
+                <div class="colour-value" data-var="--colour-${themeKey}-link-text-hover"></div>
+                <div class="contrast-info" data-bg-var="--colour-${themeKey}-page-background" data-fg-var="--colour-${themeKey}-link-text-hover"></div>
+                <div class="colour-name">Link Background Visited: --colour-${themeKey}-link-background-visited</div>
+                <div class="colour-value" data-var="--colour-${themeKey}-link-background-visited"></div>
+                <div class="colour-name">Link Text Visited: --colour-${themeKey}-link-text-visited</div>
+                <div class="colour-value" data-var="--colour-${themeKey}-link-text-visited"></div>
+                <div class="contrast-info" data-bg-var="--colour-${themeKey}-page-background" data-fg-var="--colour-${themeKey}-link-text-visited"></div>
+            </div>
+        `;
+
+        grid.appendChild(card);
+    });
+}
+
 function initializeWhenReady() {
     const MAX_RETRIES = 30;
 
@@ -553,6 +612,7 @@ function initializeWhenReady() {
     ].some(varName => rootStyles.getPropertyValue(varName).trim());
 
     if (cssReady) {
+        appendContentLinkCards();
         colourPalette.initialize();
         return;
     }
@@ -561,6 +621,7 @@ function initializeWhenReady() {
 
     if (initializeWhenReady.retryCount >= MAX_RETRIES) {
         console.warn('CSS variables not detected after retries; initializing anyway.');
+        appendContentLinkCards();
         colourPalette.initialize();
         return;
     }

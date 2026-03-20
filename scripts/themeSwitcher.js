@@ -79,6 +79,14 @@
             root.style.setProperty('--colour-effective-button-text-selected', `var(${prefix}-button-text-selected)`);
             root.style.setProperty('--colour-effective-button-background-disabled', `var(${prefix}-button-background-disabled)`);
             root.style.setProperty('--colour-effective-button-text-disabled', `var(${prefix}-button-text-disabled)`);
+            root.style.setProperty('--colour-effective-menu-background', `var(${prefix}-menu-background)`);
+            root.style.setProperty('--colour-effective-menu-text', `var(${prefix}-menu-text)`);
+            root.style.setProperty('--colour-effective-menu-background-hover', `var(${prefix}-menu-background-hover)`);
+            root.style.setProperty('--colour-effective-menu-text-hover', `var(${prefix}-menu-text-hover)`);
+            root.style.setProperty('--colour-effective-menu-background-visited', `var(${prefix}-menu-background-visited)`);
+            root.style.setProperty('--colour-effective-menu-text-visited', `var(${prefix}-menu-text-visited)`);
+            root.style.setProperty('--colour-effective-menu-background-focus', `var(${prefix}-menu-background-focus)`);
+            root.style.setProperty('--colour-effective-menu-text-focus', `var(${prefix}-menu-text-focus)`);
             root.style.setProperty('--colour-effective-link-background', `var(${prefix}-link-background)`);
             root.style.setProperty('--colour-effective-link-text', `var(${prefix}-link-text)`);
             root.style.setProperty('--colour-effective-link-background-hover', `var(${prefix}-link-background-hover)`);
