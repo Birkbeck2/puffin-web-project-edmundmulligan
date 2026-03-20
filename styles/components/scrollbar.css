@@ -9,10 +9,12 @@
  *   regardless of shape or size.
  **********************************************************************
  */
+ 
 ::-webkit-scrollbar {
     width: var(--scrollbar-width);
     height: var(--scrollbar-width);
 }
+
 ::-webkit-scrollbar-track {
     background: var(--colour-effective-button-background);
     border-radius: var(--border-radius);

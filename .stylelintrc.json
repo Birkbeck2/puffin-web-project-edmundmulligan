@@ -3,11 +3,6 @@
   "rules": {
     "no-descending-specificity": null,
     "font-family-no-missing-generic-family-keyword": null,
-    "property-no-vendor-prefix": [
-      true,
-      {
-        "ignoreProperties": ["mask-size", "mask-repeat", "mask-position", "mask-image"]
-      }
-    ]
+    "property-no-vendor-prefix": null
   }
 }
