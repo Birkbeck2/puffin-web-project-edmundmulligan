@@ -47,17 +47,6 @@
 
     <!-- page specific stylesheets -->
 
-    <!-- Page-specific styles -->
-    <style>
-        .faq h3,
-        .faq h4 {
-            text-align: left;
-        }
-        .faq h4 {
-            font-size: var(--fontsize-header-small);
-        }
-    </style>
-
     <!-- Load JavaScript files -->
     <script src="../scripts/debug.js"></script>
     <script src="../scripts/themeSwitcher.js"></script>
@@ -85,6 +74,9 @@
             <h3 onclick="toggleSection('web-basics', event);" onkeydown="toggleSection('web-basics', event);" class="magic-invisible faq-section-title">Web Basics</h3>
             <div id="web-basics" class="hidden">
                 <p>Here are some basic questions and answers about the web:</p>
+                    <p>
+                        Use the questions below to explore each web concept in more detail.
+                    </p>
                 <h4 onclick="toggleSection('web-basics-01', event);" onkeydown="toggleSection('web-basics-01', event);" class="magic-invisible faq-question-title">What is the difference
                     between the Internet and the World Wide Web?</h4>
                 <div id="web-basics-01" class="hidden">
@@ -98,39 +90,46 @@
                     <p>
                         The World Wide Web started as a way to share text dissertations and research papers among scientists, but the language used to create web pages (HTML) and the protocols used to access them (HTTP) quickly evolved to allow for more complex and interactive content.
                     </p>
-                    <button type="button" class="magic-block-close h5-level" onclick="toggleSectionCollapse('web-basics-01', event);" onkeydown="toggleSectionCollapse('web-basics-01', event);" tabindex="0" aria-label="Collapse section"></button>
                 </div>
 
                 <h4 onclick="toggleSection('web-basics-02', event);" onkeydown="toggleSection('web-basics-02', event);" class="magic-invisible faq-question-title">Who invented the World Wide Web?</h4>
                 <div id="web-basics-02" class="hidden">
                     <p>
-                        The World Wide Web was invented by Tim Berners-Lee in 1989 while he was working at CERN (the European Organization for Nuclear Research) in Switzerland. He created the first web browser and web server, and he also developed the first version of HTML (Hypertext Markup Language), which is the standard language used to create web pages.
+                        The World Wide Web was invented by Tim Berners-Lee in 1989 while he was working at CERN (the European Organization for Nuclear Research) in Switzerland.
                     </p>
-                    <button type="button" class="magic-block-close h5-level" onclick="toggleSectionCollapse('web-basics-02', event);" onkeydown="toggleSectionCollapse('web-basics-02', event);" tabindex="0" aria-label="Collapse section"></button>
+                    <p>
+                        He created the first web browser and web server, and he also developed the first version of HTML (Hypertext Markup Language), which is the standard language used to create web pages.
+                    </p>
                 </div>
 
                 <h4 onclick="toggleSection('web-basics-03', event);" onkeydown="toggleSection('web-basics-03', event);" class="magic-invisible faq-question-title">How does the web work?</h4>
                 <div id="web-basics-03" class="hidden">
                     <p>
-                        The web works by using a system of interlinked hypertext documents that are accessed via the Internet. When you click on a link, your web browser sends a request to the server that hosts the document, and the server sends the document back to your browser.
+                        The web works by using a system of interlinked hypertext documents that are accessed via the Internet.
                     </p>
-                    <button type="button" class="magic-block-close h5-level" onclick="toggleSectionCollapse('web-basics-03', event);" onkeydown="toggleSectionCollapse('web-basics-03', event);" tabindex="0" aria-label="Collapse section"></button>
+                    <p>
+                        When you click on a link, your web browser sends a request to the server that hosts the document, and the server sends the document back to your browser.
+                    </p>
                 </div>
 
                 <h4 onclick="toggleSection('web-basics-04', event);" onkeydown="toggleSection('web-basics-04', event);" class="magic-invisible faq-question-title">What is a web server?</h4>
                 <div id="web-basics-04" class="hidden">
                     <p>
-                        A web server is a computer that stores web pages and serves them to users when they request them. It uses HTTP (Hyper Text Transfer Protocol) to communicate with web browsers. A web server can host multiple websites and can handle many requests at the same time. Any computer can be a web server so long as it is connected to the Internet and has the necessary software installed. Usually, though, it is a powerful computer with a lot of storage space and a fast Internet connection.
+                        A web server is a computer that stores web pages and serves them to users when they request them.
                     </p>
-                    <button type="button" class="magic-block-close h5-level" onclick="toggleSectionCollapse('web-basics-04', event);" onkeydown="toggleSectionCollapse('web-basics-04', event);" tabindex="0" aria-label="Collapse section"></button>
+                    <p>
+                        It uses HTTP (Hyper Text Transfer Protocol) to communicate with web browsers. A web server can host multiple websites and can handle many requests at the same time. Any computer can be a web server so long as it is connected to the Internet and has the necessary software installed. Usually, though, it is a powerful computer with a lot of storage space and a fast Internet connection.
+                    </p>
                 </div>
 
                 <h4 onclick="toggleSection('web-basics-05', event);" onkeydown="toggleSection('web-basics-05', event);" class="magic-invisible faq-question-title">What is URL?</h4>
                 <div id="web-basics-05" class="hidden">
                     <p>
-                        A URL (Uniform Resource Locator) is the address of a web page and is the basic way to access resources on the web. It specifies the location of a resource on the Internet and consists of a protocol (usually HTTP or HTTPS), a domain name, and a path to the specific page. It may also contain a query string or fragment identifier to specify additional parameters or sections of the page.
+                        A URL (Uniform Resource Locator) is the address of a web page and is the basic way to access resources on the web.
                     </p>
-                    <button type="button" class="magic-block-close h5-level" onclick="toggleSectionCollapse('web-basics-05', event);" onkeydown="toggleSectionCollapse('web-basics-05', event);" tabindex="0" aria-label="Collapse section"></button>
+                    <p>
+                        It specifies the location of a resource on the Internet and consists of a protocol (usually HTTP or HTTPS), a domain name, and a path to the specific page. It may also contain a query string or fragment identifier to specify additional parameters or sections of the page.
+                    </p>
                 </div>
 
                 <h4 onclick="toggleSection('web-basics-06', event);" onkeydown="toggleSection('web-basics-06', event);" class="magic-invisible faq-question-title">What is HTML?</h4>
@@ -146,7 +145,6 @@
                     <p>
                         HTML is the backbone of web development and is used in conjunction with CSS (Cascading Style Sheets) and JavaScript to create dynamic and interactive web pages.
                     </p>
-                    <button type="button" class="magic-block-close h5-level" onclick="toggleSectionCollapse('web-basics-06', event);" onkeydown="toggleSectionCollapse('web-basics-06', event);" tabindex="0" aria-label="Collapse section"></button>
                 </div>
 
                 <h4 onclick="toggleSection('web-basics-07', event);" onkeydown="toggleSection('web-basics-07', event);" class="magic-invisible faq-question-title">What is CSS?</h4>
@@ -162,7 +160,6 @@
                     <p>
                         CSS is an essential part of web development and is used in conjunction with HTML and JavaScript to create visually appealing and responsive web pages.
                     </p>
-                    <button type="button" class="magic-block-close h5-level" onclick="toggleSectionCollapse('web-basics-07', event);" onkeydown="toggleSectionCollapse('web-basics-07', event);" tabindex="0" aria-label="Collapse section"></button>
                 </div>
 
                 <h4 onclick="toggleSection('web-basics-08', event);" onkeydown="toggleSection('web-basics-08', event);" class="magic-invisible faq-question-title">What is JavaScript?</h4>
@@ -174,7 +171,6 @@
                     <p>
                         JavaScript can be used to manipulate HTML and CSS, allowing developers to create interactive elements such as forms, animations, and real-time updates. It is a versatile language that is an essential part of modern web development and is used in conjunction with HTML and CSS to create dynamic and interactive web applications.
                     </p>
-                    <button type="button" class="magic-block-close h5-level" onclick="toggleSectionCollapse('web-basics-08', event);" onkeydown="toggleSectionCollapse('web-basics-08', event);" tabindex="0" aria-label="Collapse section"></button>
                 </div>
 
                 <h4 onclick="toggleSection('web-basics-09', event);" onkeydown="toggleSection('web-basics-09', event);" class="magic-invisible faq-question-title">What does a web browser do?</h4>
@@ -189,7 +185,6 @@
                     <p>
                         Popular web browsers include Google Chrome, Mozilla Firefox, Microsoft Edge, and Apple Safari. Each browser has its own features and capabilities, but they all serve the same basic purpose of allowing users to access and interact with web content.
                     </p>
-                    <button type="button" class="magic-block-close h5-level" onclick="toggleSectionCollapse('web-basics-09', event);" onkeydown="toggleSectionCollapse('web-basics-09', event);" tabindex="0" aria-label="Collapse section"></button>
                 </div>
 
                 <h4 onclick="toggleSection('web-basics-10', event);" onkeydown="toggleSection('web-basics-10', event);" class="magic-invisible faq-question-title">What is a 404 error?</h4>
@@ -209,7 +204,6 @@
                     <p>
                         A full list of HTTP status codes can be found on the <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status" target="_blank">MDN Web Docs</a>.
                     </p>
-                    <button type="button" class="magic-block-close h5-level" onclick="toggleSectionCollapse('web-basics-10', event);" onkeydown="toggleSectionCollapse('web-basics-10', event);" tabindex="0" aria-label="Collapse section"></button>
                 </div>
 
                 <h4 onclick="toggleSection('web-basics-11', event);" onkeydown="toggleSection('web-basics-11', event);" class="magic-invisible faq-question-title">What is a cookie?</h4>
@@ -229,7 +223,6 @@
                     <p>
                         Cookies can be classified into two types: session cookies and persistent cookies. Session cookies are temporary and are deleted when the user closes the browser, while persistent cookies are stored on the user&rsquo;s computer for a specified period of time.
                     </p>
-                    <button type="button" class="magic-block-close h5-level" onclick="toggleSectionCollapse('web-basics-11', event);" onkeydown="toggleSectionCollapse('web-basics-11', event);" tabindex="0" aria-label="Collapse section"></button>
                 </div>
 
                 <h4 onclick="toggleSection('web-basics-12', event);" onkeydown="toggleSection('web-basics-12', event);" class="magic-invisible faq-question-title">What is streaming?</h4>
@@ -248,7 +241,6 @@
                     <p>
                         Streaming can be done using various protocols, such as HTTP Live Streaming (HLS) and Real-Time Messaging Protocol (RTMP). It requires a stable Internet connection and sufficient bandwidth to ensure smooth playback without interruptions.
                     </p>
-                    <button type="button" class="magic-block-close h5-level" onclick="toggleSectionCollapse('web-basics-12', event);" onkeydown="toggleSectionCollapse('web-basics-12', event);" tabindex="0" aria-label="Collapse section"></button>
                 </div>
 
                 <h4 onclick="toggleSection('web-basics-13', event);" onkeydown="toggleSection('web-basics-13', event);" class="magic-invisible faq-question-title">What is a Search Engine?</h4>
@@ -276,7 +268,6 @@
                     <p>
                         Popular search engines include Google, Bing, and DuckDuckGo. Each search engine has its own unique algorithms and ranking factors, which can affect the results returned for a given search query.
                     </p>
-                    <button type="button" class="magic-block-close h5-level" onclick="toggleSectionCollapse('web-basics-13', event);" onkeydown="toggleSectionCollapse('web-basics-13', event);" tabindex="0" aria-label="Collapse section"></button>
                 </div>
 
                 <h4 onclick="toggleSection('web-basics-14', event);" onkeydown="toggleSection('web-basics-14', event);" class="magic-invisible faq-question-title">What is SEO?</h4>
@@ -296,7 +287,6 @@
                     <p>
                         SEO is an ongoing process that requires continuous monitoring and adjustment to keep up with changes in search engine algorithms and user behaviour. It is an essential part of digital marketing and can help drive organic traffic to a website, increase brand visibility, and improve user experience.
                     </p>
-                    <button type="button" class="magic-block-close h5-level" onclick="toggleSectionCollapse('web-basics-14', event);" onkeydown="toggleSectionCollapse('web-basics-14', event);" tabindex="0" aria-label="Collapse section"></button>
                 </div>
                 <button type="button" class="magic-block-close h4-level" onclick="toggleSectionCollapse('web-basics', event);" onkeydown="toggleSectionCollapse('web-basics', event);" tabindex="0" aria-label="Collapse Web Basics section"></button>
             </div>
@@ -306,6 +296,9 @@
                 <p>
                     Here are some basic questions and answers about web development:
                 </p>
+                    <p>
+                        The questions below explain core concepts that developers use every day.
+                    </p>
 
                 <h4 onclick="toggleSection('web-development-basics-01', event);" onkeydown="toggleSection('web-development-basics-01', event);" class="magic-invisible faq-question-title">What is web development?</h4>
                 <div id="web-development-basics-01" class="hidden">
@@ -316,31 +309,36 @@
                     <p>
                         Web development can be divided into two main categories: front-end development and back-end development. Front-end development focuses on the user interface and user experience, while back-end development focuses on the server-side of a website.
                     </p>
-                    <button type="button" class="magic-block-close h5-level" onclick="toggleSectionCollapse('web-development-basics-01', event);" onkeydown="toggleSectionCollapse('web-development-basics-01', event);" tabindex="0" aria-label="Collapse section"></button>
                 </div>
 
                 <h4 onclick="toggleSection('web-development-basics-02', event);" onkeydown="toggleSection('web-development-basics-02', event);" class="magic-invisible faq-question-title">What is front-end development?</h4>
                 <div id="web-development-basics-02" class="hidden">
                     <p>
-                        Front-end development is the part of web development that deals with the user interface and user experience. It involves creating the layout, design, and interactivity of a website using HTML, CSS, and JavaScript.
+                        Front-end development is the part of web development that deals with the user interface and user experience.
                     </p>
-                    <button type="button" class="magic-block-close h5-level" onclick="toggleSectionCollapse('web-development-basics-02', event);" onkeydown="toggleSectionCollapse('web-development-basics-02', event);" tabindex="0" aria-label="Collapse section"></button>
+                    <p>
+                        It involves creating the layout, design, and interactivity of a website using HTML, CSS, and JavaScript.
+                    </p>
                 </div>
 
                 <h4 onclick="toggleSection('web-development-basics-03', event);" onkeydown="toggleSection('web-development-basics-03', event);" class="magic-invisible faq-question-title">What is back-end development?</h4>
                 <div id="web-development-basics-03" class="hidden">
                     <p>
-                        Back-end development is the part of web development that deals with the server-side of a website. It involves creating and managing the database, server, and application logic using programming languages like PHP, Python, Ruby, Java or C#.
+                        Back-end development is the part of web development that deals with the server-side of a website.
                     </p>
-                    <button type="button" class="magic-block-close h5-level" onclick="toggleSectionCollapse('web-development-basics-03', event);" onkeydown="toggleSectionCollapse('web-development-basics-03', event);" tabindex="0" aria-label="Collapse section"></button>
+                    <p>
+                        It involves creating and managing the database, server, and application logic using programming languages like PHP, Python, Ruby, Java or C#.
+                    </p>
                 </div>
 
                 <h4 onclick="toggleSection('web-development-basics-04', event);" onkeydown="toggleSection('web-development-basics-04', event);" class="magic-invisible faq-question-title">What is full-stack development?</h4>
                 <div id="web-development-basics-04" class="hidden">
                     <p>
-                        Full-stack development is the practice of working on both the front-end and back-end of a website. A full-stack developer has the skills to work on all aspects of web development.
+                        Full-stack development is the practice of working on both the front-end and back-end of a website.
                     </p>
-                    <button type="button" class="magic-block-close h5-level" onclick="toggleSectionCollapse('web-development-basics-04', event);" onkeydown="toggleSectionCollapse('web-development-basics-04', event);" tabindex="0" aria-label="Collapse section"></button>
+                    <p>
+                        A full-stack developer has the skills to work on all aspects of web development.
+                    </p>
                 </div>
 
                 <h4 onclick="toggleSection('web-development-basics-05', event);" onkeydown="toggleSection('web-development-basics-05', event);" class="magic-invisible faq-question-title">What is a program or algorithm?</h4>
@@ -352,87 +350,106 @@
                     <p>
                         For practical purposes, a program is an implementation of an algorithm in a specific programming language. Algorithms can be expressed in many different ways, including natural language, pseudocode, or flowcharts.
                     </p>
-                    <button type="button" class="magic-block-close h5-level" onclick="toggleSectionCollapse('web-development-basics-05', event);" onkeydown="toggleSectionCollapse('web-development-basics-05', event);" tabindex="0" aria-label="Collapse section"></button>
                 </div>
 
                 <h4 onclick="toggleSection('web-development-basics-06', event);" onkeydown="toggleSection('web-development-basics-06', event);" class="magic-invisible faq-question-title">What is a variable?</h4>
                 <div id="web-development-basics-06" class="hidden">
                     <p>
-                        A variable is a named storage location in a program that can hold a value. It can be used to store data that can be changed during the execution of the program.
+                        A variable is a named storage location in a program that can hold a value.
                     </p>
-                    <button type="button" class="magic-block-close h5-level" onclick="toggleSectionCollapse('web-development-basics-06', event);" onkeydown="toggleSectionCollapse('web-development-basics-06', event);" tabindex="0" aria-label="Collapse section"></button>
+                    <p>
+                        It can be used to store data that can be changed during the execution of the program.
+                    </p>
                 </div>
 
                 <h4 onclick="toggleSection('web-development-basics-07', event);" onkeydown="toggleSection('web-development-basics-07', event);" class="magic-invisible faq-question-title">What is a function?</h4>
                 <div id="web-development-basics-07" class="hidden">
                     <p>
-                        A function is a block of code that performs a specific task. It can take input parameters and return a value. Functions are used to organise code and make it reusable.
+                        A function is a block of code that performs a specific task.
                     </p>
-                    <button type="button" class="magic-block-close h5-level" onclick="toggleSectionCollapse('web-development-basics-07', event);" onkeydown="toggleSectionCollapse('web-development-basics-07', event);" tabindex="0" aria-label="Collapse section"></button>
+                    <p>
+                        It can take input parameters and return a value. Functions are used to organise code and make it reusable.
+                    </p>
                 </div>
 
                 <h4 onclick="toggleSection('web-development-basics-08', event);" onkeydown="toggleSection('web-development-basics-08', event);" class="magic-invisible faq-question-title">What is a parameter?</h4>
                 <div id="web-development-basics-08" class="hidden">
                     <p>
-                        A parameter is a variable that is passed to a function when it is called. It allows the function to receive input data and use it in its calculations.
+                        A parameter is a variable that is passed to a function when it is called.
                     </p>
-                    <button type="button" class="magic-block-close h5-level" onclick="toggleSectionCollapse('web-development-basics-08', event);" onkeydown="toggleSectionCollapse('web-development-basics-08', event);" tabindex="0" aria-label="Collapse section"></button>
+                    <p>
+                        It allows the function to receive input data and use it in its calculations.
+                    </p>
                 </div>
 
                 <h4 onclick="toggleSection('web-development-basics-09', event);" onkeydown="toggleSection('web-development-basics-09', event);" class="magic-invisible faq-question-title">What is an object?</h4>
                 <div id="web-development-basics-09" class="hidden">
                     <p>
-                        An object is a data structure that contains properties and methods. It is used to represent real-world entities and their behaviour in a program.
+                        An object is a data structure that contains properties and methods.
                     </p>
-                    <button type="button" class="magic-block-close h5-level" onclick="toggleSectionCollapse('web-development-basics-09', event);" onkeydown="toggleSectionCollapse('web-development-basics-09', event);" tabindex="0" aria-label="Collapse section"></button>
+                    <p>
+                        It is used to represent real-world entities and their behaviour in a program.
+                    </p>
                 </div>
 
                 <h4 onclick="toggleSection('web-development-basics-10', event);" onkeydown="toggleSection('web-development-basics-10', event);" class="magic-invisible faq-question-title">What is a method?</h4>
                 <div id="web-development-basics-10" class="hidden">
                     <p>
-                        A method is a function that is associated with an object. It can be used to perform actions on the object's properties or to manipulate the object itself.
+                        A method is a function that is associated with an object.
                     </p>
-                    <button type="button" class="magic-block-close h5-level" onclick="toggleSectionCollapse('web-development-basics-10', event);" onkeydown="toggleSectionCollapse('web-development-basics-10', event);" tabindex="0" aria-label="Collapse section"></button>
+                    <p>
+                        It can be used to perform actions on the object's properties or to manipulate the object itself.
+                    </p>
                 </div>
 
                 <h4 onclick="toggleSection('web-development-basics-11', event);" onkeydown="toggleSection('web-development-basics-11', event);" class="magic-invisible faq-question-title">What is data?</h4>
                 <div id="web-development-basics-11" class="hidden">
                     <p>
-                        Data is information that is processed or stored by a computer. It can be in the form of text, numbers, images, or any other type of information.
+                        Data is information that is processed or stored by a computer.
                     </p>
-                    <button type="button" class="magic-block-close h5-level" onclick="toggleSectionCollapse('web-development-basics-11', event);" onkeydown="toggleSectionCollapse('web-development-basics-11', event);" tabindex="0" aria-label="Collapse section"></button>
+                    <p>
+                        It can be in the form of text, numbers, images, or any other type of information.
+                    </p>
                 </div>
 
                 <h4 onclick="toggleSection('web-development-basics-12', event);" onkeydown="toggleSection('web-development-basics-12', event);" class="magic-invisible faq-question-title">What is a data structure?</h4>
                 <div id="web-development-basics-12" class="hidden">
                     <p>
-                        A data structure is a way of organising and storing data in a computer so that it can be accessed and modified efficiently. Common data structures include arrays, linked lists, stacks, queues, and trees.
+                        A data structure is a way of organising and storing data in a computer so that it can be accessed and modified efficiently.
                     </p>
-                    <button type="button" class="magic-block-close h5-level" onclick="toggleSectionCollapse('web-development-basics-12', event);" onkeydown="toggleSectionCollapse('web-development-basics-12', event);" tabindex="0" aria-label="Collapse section"></button>
+                    <p>
+                        Common data structures include arrays, linked lists, stacks, queues, and trees.
+                    </p>
                 </div>
 
                 <h4 onclick="toggleSection('web-development-basics-13', event);" onkeydown="toggleSection('web-development-basics-13', event);" class="magic-invisible faq-question-title">What is a database?</h4>
                 <div id="web-development-basics-13" class="hidden">
                     <p>
-                        A database is an organised collection of data that can be accessed and managed using a database management system (DBMS). It allows for efficient storage, retrieval, and manipulation of data.
+                        A database is an organised collection of data that can be accessed and managed using a database management system (DBMS).
                     </p>
-                    <button type="button" class="magic-block-close h5-level" onclick="toggleSectionCollapse('web-development-basics-13', event);" onkeydown="toggleSectionCollapse('web-development-basics-13', event);" tabindex="0" aria-label="Collapse section"></button>
+                    <p>
+                        It allows for efficient storage, retrieval, and manipulation of data.
+                    </p>
                 </div>
 
                 <h4 onclick="toggleSection('web-development-basics-14', event);" onkeydown="toggleSection('web-development-basics-14', event);" class="magic-invisible faq-question-title">What is responsive design?</h4>
                 <div id="web-development-basics-14" class="hidden">
                     <p>
-                        Responsive design is an approach to web design that makes web pages render well on a variety of devices and window or screen sizes. It uses fluid grids, flexible images, and CSS media queries to adapt the layout to the viewing environment.
+                        Responsive design is an approach to web design that makes web pages render well on a variety of devices and window or screen sizes.
                     </p>
-                    <button type="button" class="magic-block-close h5-level" onclick="toggleSectionCollapse('web-development-basics-14', event);" onkeydown="toggleSectionCollapse('web-development-basics-14', event);" tabindex="0" aria-label="Collapse section"></button>
+                    <p>
+                        It uses fluid grids, flexible images, and CSS media queries to adapt the layout to the viewing environment.
+                    </p>
                 </div>
 
                 <h4 onclick="toggleSection('web-development-basics-15', event);" onkeydown="toggleSection('web-development-basics-15', event);" class="magic-invisible faq-question-title">What is accessibility?</h4>
                 <div id="web-development-basics-15" class="hidden">
                     <p>
-                        Accessibility is the practice of making web pages usable by people with disabilities. It involves designing and developing web content that can be accessed by all users, regardless of their abilities or disabilities.
+                        Accessibility is the practice of making web pages usable by people with disabilities.
                     </p>
-                    <button type="button" class="magic-block-close h5-level" onclick="toggleSectionCollapse('web-development-basics-15', event);" onkeydown="toggleSectionCollapse('web-development-basics-15', event);" tabindex="0" aria-label="Collapse section"></button>
+                    <p>
+                        It involves designing and developing web content that can be accessed by all users, regardless of their abilities or disabilities.
+                    </p>
                 </div>
                 <button type="button" class="magic-block-close h4-level" onclick="toggleSectionCollapse('web-development-basics', event);" onkeydown="toggleSectionCollapse('web-development-basics', event);" tabindex="0" aria-label="Collapse Web Development Basics section"></button>
             </div>
@@ -442,6 +459,9 @@
                 <p>
                     Here are some tips and tricks that real developers use to make their lives easier:
                 </p>
+                    <p>
+                        The questions below cover simple habits and tools that save time.
+                    </p>
 
                 <h4 onclick="toggleSection('tips-and-tricks-01', event);" onkeydown="toggleSection('tips-and-tricks-01', event);" class="magic-invisible faq-question-title">Make backups of your work.</h4>
                 <div id="tips-and-tricks-01" class="hidden">
@@ -452,15 +472,16 @@
                     <p>
                         If you ignore all the other tips on this page, at least remember this one. It will save you a lot of wasted time and frustration.
                     </p>
-                    <button type="button" class="magic-block-close h5-level" onclick="toggleSectionCollapse('tips-and-tricks-01', event);" onkeydown="toggleSectionCollapse('tips-and-tricks-01', event);" tabindex="0" aria-label="Collapse section"></button>
                 </div>
 
                 <h4 onclick="toggleSection('tips-and-tricks-02', event);" onkeydown="toggleSection('tips-and-tricks-02', event);" class="magic-invisible faq-question-title">Use a version control tool.</h4>
                 <div id="tips-and-tricks-02" class="hidden">
                     <p>
-                        Version control tools allow you to keep track of changes to your code, collaborate with others, and revert to previous versions if needed. The most popular version control tool is Git, which is widely used in the software development industry.
+                        Version control tools allow you to keep track of changes to your code, collaborate with others, and revert to previous versions if needed.
                     </p>
-                    <button type="button" class="magic-block-close h5-level" onclick="toggleSectionCollapse('tips-and-tricks-02', event);" onkeydown="toggleSectionCollapse('tips-and-tricks-02', event);" tabindex="0" aria-label="Collapse section"></button>
+                    <p>
+                        The most popular version control tool is Git, which is widely used in the software development industry.
+                    </p>
                 </div>
 
 
@@ -473,7 +494,6 @@
                     <p>
                         A good example is to have four folders, one for HTML files, one for CSS files, one for JavaScript files, and one for images. This way, you can easily find the files you need when you are working on a project.
                     </p>
-                    <button type="button" class="magic-block-close h5-level" onclick="toggleSectionCollapse('tips-and-tricks-03', event);" onkeydown="toggleSectionCollapse('tips-and-tricks-03', event);" tabindex="0" aria-label="Collapse section"></button>
                 </div>
 
                 <h4 onclick="toggleSection('tips-and-tricks-04', event);" onkeydown="toggleSection('tips-and-tricks-04', event);" class="magic-invisible faq-question-title">Use consistent naming conventions.</h4>
@@ -489,11 +509,10 @@
                     <p>
                         Using consistent names doesn't just apply to files and folders, it also applies to variables, functions, classes and other code elements. For example, if you have a variable that stores a user&rsquo;s name, you might call it <code>user_name</code> or <code>userName</code>. The important thing is to be consistent in your naming conventions so that you can easily understand your code.
                     </p>
-                    <button type="button" class="magic-block-close h5-level" onclick="toggleSectionCollapse('tips-and-tricks-04', event);" onkeydown="toggleSectionCollapse('tips-and-tricks-04', event);" tabindex="0" aria-label="Collapse section"></button>
                 </div>
 
                 <h4 onclick="toggleSection('tips-and-tricks-05', event);" onkeydown="toggleSection('tips-and-tricks-05', event);" class="magic-invisible faq-question-title">Don't repeat yourself.</h4>
-                <div id="tips-and-tricks-05" class="hidden">
+                <div id="tips-and-tricks-05" class="hidden has-code-snippet">
                     <p>
                         Don&rsquo;t repeat yourself (DRY) is a principle of software development that states that you should not write the same code multiple times. If you find you are writing the same or similar code in multiple places, it is a sign that you need to refactor your code to make it more modular and reusable. You can do this by creating functions or classes that encapsulate the reusable code.
                     </p>
@@ -512,30 +531,35 @@
                     <p>
                         You could write the event handlers for each button like this:
                     </p>
-                    <pre><code>
+                    <div class="code-snippet-container">
+                        <script type="text/plain" class="code-snippet-source">
 document.getElementById("button1").addEventListener("click", function() { alert("Button 1 clicked!"); });
 document.getElementById("button2").addEventListener("click", function() { alert("Button 2 clicked!"); });
 document.getElementById("button3").addEventListener("click", function() { alert("Button 3 clicked!"); });
-                    </code></pre>
+                        </script>
+                        <div class="code-snippet-table"></div>
+                    </div>
                     <p>
                         But this is not very DRY, because you are repeating the same code three times. Instead, you could create a function that handles the button click event and pass the button ID as a parameter:
                     </p>
-                    <pre><code>
+                    <div class="code-snippet-container">
+                        <script type="text/plain" class="code-snippet-source">
 function handleButtonClick(buttonId) {
     alert(buttonId + " clicked!");
 }
 document.getElementById("button1").addEventListener("click", function() { handleButtonClick("Button 1"); });
 document.getElementById("button2").addEventListener("click", function() { handleButtonClick("Button 2"); });
 document.getElementById("button3").addEventListener("click", function() { handleButtonClick("Button 3"); });
-                    </code></pre>
+                        </script>
+                        <div class="code-snippet-table"></div>
+                    </div>
                     <p>
                         Now you have a single function that handles the button click event, and you can easily add more buttons without repeating the same code. It may not look much better in this simple example, but in larger programs, it can make a big difference in terms of readability and maintainability.
                     </p>
-                    <button type="button" class="magic-block-close h5-level" onclick="toggleSectionCollapse('tips-and-tricks-05', event);" onkeydown="toggleSectionCollapse('tips-and-tricks-05', event);" tabindex="0" aria-label="Collapse section"></button>
                 </div>
 
                 <h4 onclick="toggleSection('tips-and-tricks-06', event);" onkeydown="toggleSection('tips-and-tricks-06', event);" class="magic-invisible faq-question-title">Comment your code.</h4>
-                <div id="tips-and-tricks-06" class="hidden">
+                <div id="tips-and-tricks-06" class="hidden has-code-snippet">
                     <p>
                         Comment your code to explain what it does and how it works. This will help you and others understand your code when you come back to it later.
                     </p>
@@ -545,16 +569,18 @@ document.getElementById("button3").addEventListener("click", function() { handle
                     <p>
                         For example, you could add a TODO comment like this:
                     </p>
-                    <pre><code>
+                    <div class="code-snippet-container">
+                        <script type="text/plain" class="code-snippet-source">
 // TODO: Fix the bug in this function
 function myFunction() {
     // Some code which doesn't work here
 }
-                    </code></pre>
+                        </script>
+                        <div class="code-snippet-table"></div>
+                    </div>
                     <p>
                         Then, when you come back to your code later, you can search for "TODO" to find all the places where you need to make changes.
                     </p>
-                    <button type="button" class="magic-block-close h5-level" onclick="toggleSectionCollapse('tips-and-tricks-06', event);" onkeydown="toggleSectionCollapse('tips-and-tricks-06', event);" tabindex="0" aria-label="Collapse section"></button>
                 </div>
 
                 <h4 onclick="toggleSection('tips-and-tricks-07', event);" onkeydown="toggleSection('tips-and-tricks-07', event);" class="magic-invisible faq-question-title">Always test everything.</h4>
@@ -574,11 +600,10 @@ function myFunction() {
                     <p>
                         Real software developers spend more time testing their code than writing it. They know that testing is the key to delivering high-quality software that meets the needs of users.
                     </p>
-                    <button type="button" class="magic-block-close h5-level" onclick="toggleSectionCollapse('tips-and-tricks-07', event);" onkeydown="toggleSectionCollapse('tips-and-tricks-07', event);" tabindex="0" aria-label="Collapse section"></button>
                 </div>
 
                 <h4 onclick="toggleSection('tips-and-tricks-08', event);" onkeydown="toggleSection('tips-and-tricks-08', event);" class="magic-invisible faq-question-title">Make sure your web page is secure so it can't be hacked.</h4>
-                <div id="tips-and-tricks-08" class="hidden">
+                <div id="tips-and-tricks-08" class="hidden has-code-snippet">
                     <p>
                         Make sure your web page is secure to prevent unauthorised access and data breaches. Use HTTPS, validate user input, and keep your software up to date.
                     </p>
@@ -588,7 +613,8 @@ function myFunction() {
                     <p>
                         Here is an example of a simple web page that is vulnerable to hacking:
                     </p>
-                    <pre><code>
+                    <div class="code-snippet-container">
+                        <script type="text/plain" class="code-snippet-source">
 &lt;html&gt;
     &lt;head&gt;
         &lt;title&gt;My Web Page&lt;/title&gt;
@@ -605,7 +631,9 @@ function myFunction() {
         &lt;/form&gt;
     &lt;/body&gt;
 &lt;/html&gt;
-                    </code></pre>
+                        </script>
+                        <div class="code-snippet-table"></div>
+                    </div>
                     <p>
                         This web page has a form that allows users to enter their username and password. However, it does not validate the input or use HTTPS, which makes it vulnerable to hacking.
                     </p>
@@ -615,7 +643,8 @@ function myFunction() {
                     <p>
                         Here is an example of a more secure web page:
                     </p>
-                    <pre><code>
+                    <div class="code-snippet-container">
+                        <script type="text/plain" class="code-snippet-source">
     &lt;html&gt;
     &lt;head&gt;
         &lt;title&gt;My Secure Web Page&lt;/title&gt;
@@ -643,7 +672,9 @@ function myFunction() {
         &lt;/form&gt;
     &lt;/body&gt;
 &lt;/html&gt;
-                    </code></pre>
+                        </script>
+                        <div class="code-snippet-table"></div>
+                    </div>
                     <p>
                         This web page uses JavaScript to validate the input before submitting the form, and it also uses the "required" attribute to ensure that the user enters a value for both fields. This makes it more secure and less vulnerable to hacking.
                     </p>
@@ -651,7 +682,6 @@ function myFunction() {
                     <p>
                         Note that this is a good start but it is not enough to make your web page completely secure. You would also need to implement server-side validation, use prepared statements to prevent SQL injection attacks, and implement other security measures to protect your web page from hacking.
                     </p>
-                    <button type="button" class="magic-block-close h5-level" onclick="toggleSectionCollapse('tips-and-tricks-08', event);" onkeydown="toggleSectionCollapse('tips-and-tricks-08', event);" tabindex="0" aria-label="Collapse section"></button>
                 </div>
                 <button type="button" class="magic-block-close h4-level" onclick="toggleSectionCollapse('tips-and-tricks', event);" onkeydown="toggleSectionCollapse('tips-and-tricks', event);" tabindex="0" aria-label="Collapse Tips And Tricks section"></button>
             </div>

@@ -256,6 +256,32 @@
     margin: 0.25rem 1rem 1rem;
 }
 
+/* FAQ page */
+.faq h3,
+.faq h4 {
+   text-align: left;
+}
+
+.faq h4 {
+   font-size: var(--fontsize-header-small);
+}
+
+/* Apply multi-column layout to answer text blocks only (h4 + div). */
+.faq h4 + div {
+   column-width: var(--faq-column-width);
+   column-gap: 2rem;
+   column-fill: balance;
+}
+
+.faq h4 + div p {
+   break-inside: avoid;
+}
+
+/* Keep snippet-heavy answers in one column so code does not overlap. */
+.faq h4 + div.has-code-snippet {
+   columns: 1;
+}
+
 
 
 /* these class names are the same as the section id names in the HTML files 

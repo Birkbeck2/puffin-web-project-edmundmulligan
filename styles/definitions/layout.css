@@ -55,4 +55,5 @@
     --carousel-portrait-height: clamp(20rem, 15vw + 10rem, 30rem);
     --carousel-accessory-width: clamp(20rem, 15vw + 10rem, 30rem);
     --carousel-accessory-height: clamp(20rem, 15vw + 10rem, 30rem);
+    --faq-column-width:         clamp(80ch, 44vw, 120ch);
 }
