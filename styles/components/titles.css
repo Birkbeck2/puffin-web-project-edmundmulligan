@@ -40,7 +40,7 @@
     overflow-wrap: break-word;
     hyphens: auto;
 
-    /* specify these so that page title is legiible on pages with background images */
+    /* specify these so that page title is legible on pages with background images */
     color: var(--colour-effective-page-text);
     background-color: var(--colour-effective-page-background);
     border-radius: var(--border-radius);

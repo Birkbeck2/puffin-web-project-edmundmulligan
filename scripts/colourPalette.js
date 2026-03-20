@@ -542,17 +542,31 @@ function initializeTabNavigation() {
 }
 
 function initializeWhenReady() {
-    // Check if a known CSS variable is available (indicates CSS is loaded)
-    const testColour = getComputedStyle(document.documentElement).getPropertyValue('--colour-white').trim();
-    
-    if (testColour) {
-        // CSS is loaded, initialize
+    const MAX_RETRIES = 30;
+
+    // Check multiple known variables from colours.css to confirm styles are ready.
+    const rootStyles = getComputedStyle(document.documentElement);
+    const cssReady = [
+        '--colour-page-text',
+        '--colour-warning-background',
+        '--colour-normal-light-page-background'
+    ].some(varName => rootStyles.getPropertyValue(varName).trim());
+
+    if (cssReady) {
         colourPalette.initialize();
-    } else {
-        // CSS not ready yet, wait a bit and try again
-        console.warn('CSS not loaded yet, retrying...');
-        setTimeout(initializeWhenReady, 100);
+        return;
     }
+
+    initializeWhenReady.retryCount = (initializeWhenReady.retryCount || 0) + 1;
+
+    if (initializeWhenReady.retryCount >= MAX_RETRIES) {
+        console.warn('CSS variables not detected after retries; initializing anyway.');
+        colourPalette.initialize();
+        return;
+    }
+
+    console.warn(`CSS not loaded yet, retrying... (${initializeWhenReady.retryCount}/${MAX_RETRIES})`);
+    setTimeout(initializeWhenReady, 100);
 }
 
 if (document.readyState === 'loading') {
