@@ -30,9 +30,24 @@
          * @returns {string} Decoded snippet text
          */
         decodeHtmlEntities(text) {
-            const textarea = document.createElement('textarea');
-            textarea.innerHTML = text;
-            return textarea.value;
+            if (typeof text !== 'string' || text.length === 0) {
+                return '';
+            }
+
+            // Decode numeric entities (decimal and hex) and a small named-entity set.
+            const named = {
+                amp: '&',
+                lt: '<',
+                gt: '>',
+                quot: '"',
+                apos: '\'',
+                nbsp: ' '
+            };
+
+            return text
+                .replace(/&#(\d+);/g, (_match, dec) => String.fromCodePoint(Number.parseInt(dec, 10)))
+                .replace(/&#x([\da-fA-F]+);/g, (_match, hex) => String.fromCodePoint(Number.parseInt(hex, 16)))
+                .replace(/&([a-zA-Z]+);/g, (match, entity) => (named[entity] ?? match));
         }
 
         /**
