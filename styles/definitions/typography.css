@@ -30,4 +30,14 @@
     --margin-horizontal:      clamp(0.333rem, 1vw + 1rem, 2rem);
     --padding-nav:            clamp(0.25rem, 1vw + 0.25rem, 0.5rem);
     --padding-title:          clamp(0.1rem, 1vw + 0.25rem, 1rem);
+    --scrollbar-width:        3rem;
+
+    /* other typography definitions */
+    --line-height-normal: 1.6;
+    --text-align:         left;
+    --font-style-normal:  normal;
+    --font-style-italic:  italic;
+    --font-weight-normal: 400;
+    --font-weight-bold:   700;
+    --font-weight-light: 300;
 }

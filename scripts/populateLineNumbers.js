@@ -25,6 +25,32 @@
      */
     class CodeSnippetPopulator {
         /**
+         * Decode HTML entities from snippet source text.
+         * @param {string} text - Source snippet text
+         * @returns {string} Decoded snippet text
+         */
+        decodeHtmlEntities(text) {
+            if (typeof text !== 'string' || text.length === 0) {
+                return '';
+            }
+
+            // Decode numeric entities (decimal and hex) and a small named-entity set.
+            const named = {
+                amp: '&',
+                lt: '<',
+                gt: '>',
+                quot: '"',
+                apos: '\'',
+                nbsp: ' '
+            };
+
+            return text
+                .replace(/&#(\d+);/g, (_match, dec) => String.fromCodePoint(Number.parseInt(dec, 10)))
+                .replace(/&#x([\da-fA-F]+);/g, (_match, hex) => String.fromCodePoint(Number.parseInt(hex, 16)))
+                .replace(/&([a-zA-Z]+);/g, (match, entity) => (named[entity] ?? match));
+        }
+
+        /**
          * Remove leading and trailing empty lines from code
          * @param {Array<string>} lines - Array of code lines
          * @returns {Array<string>} Trimmed array of lines
@@ -87,7 +113,7 @@
                 const tableElement = container.querySelector('.code-snippet-table');
 
                 if (sourceElement && tableElement) {
-                    const codeText = sourceElement.textContent;
+                    const codeText = this.decodeHtmlEntities(sourceElement.textContent);
                     this.populate(tableElement, codeText);
                 }
             });

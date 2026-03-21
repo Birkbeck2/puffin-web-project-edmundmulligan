@@ -237,17 +237,22 @@ main {
     margin: 1rem 0;
 }
 
+/* Unused selector retained for reference:
 .details-section {
     margin-top: 2rem;
     padding-top: 2rem;
     border-top: 3px solid var(--colour-headings-background);
 }
+*/
 
+/* Unused selector retained for reference:
 .details-section h3 {
     font-size: 1.3rem;
     margin-bottom: 1rem;
 }
+*/
 
+/* Unused selector retained for reference:
 .details-content {
     background: var(--colour-code-background);
     color: var(--colour-code-text);
@@ -259,6 +264,7 @@ main {
     white-space: pre-wrap;
     overflow-wrap: break-word;
 }
+*/
 
 .timestamp {
     text-align: center;
