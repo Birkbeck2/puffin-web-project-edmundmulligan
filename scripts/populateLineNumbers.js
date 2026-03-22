@@ -25,6 +25,29 @@
      */
     class CodeSnippetPopulator {
         /**
+         * Build a snippet container element that matches the existing site markup.
+         * @param {string} codeText - Plain-text code to display
+         * @returns {HTMLDivElement} Snippet container element
+         */
+        createSnippetContainer(codeText) {
+            const container = document.createElement('div');
+            container.className = 'code-snippet-container';
+
+            const sourceElement = document.createElement('script');
+            sourceElement.type = 'text/plain';
+            sourceElement.className = 'code-snippet-source';
+            sourceElement.textContent = codeText;
+
+            const tableElement = document.createElement('div');
+            tableElement.className = 'code-snippet-table';
+
+            container.appendChild(sourceElement);
+            container.appendChild(tableElement);
+
+            return container;
+        }
+
+        /**
          * Decode HTML entities from snippet source text.
          * @param {string} text - Source snippet text
          * @returns {string} Decoded snippet text
@@ -75,6 +98,8 @@
          * @param {string} codeText - The code text to display
          */
         populate(tableElement, codeText) {
+            tableElement.textContent = '';
+
             // Split code into lines and remove empty first/last lines
             let lines = codeText.split('\n');
             lines = this.trimEmptyLines(lines);
@@ -101,9 +126,45 @@
         }
 
         /**
+         * Replace raw pre > code blocks with the shared snippet-container markup.
+         *
+         * @remarks Preconditions:
+         * - Skip any code block that already lives inside a `.code-snippet-container`.
+         */
+        upgradePreCodeBlocks() {
+            const rawBlocks = document.querySelectorAll('pre > code');
+
+            rawBlocks.forEach(codeElement => {
+                if (codeElement.closest('.code-snippet-container')) {
+                    return;
+                }
+
+                const preElement = codeElement.parentElement;
+
+                if (!(preElement instanceof HTMLElement)) {
+                    return;
+                }
+
+                const snippetContainer = this.createSnippetContainer(codeElement.textContent || '');
+
+                if (preElement.id) {
+                    snippetContainer.id = preElement.id;
+                }
+
+                if (preElement.className) {
+                    snippetContainer.classList.add(...preElement.className.split(/\s+/).filter(Boolean));
+                }
+
+                preElement.replaceWith(snippetContainer);
+            });
+        }
+
+        /**
          * Initialize all code snippets on the page
          */
         init() {
+            this.upgradePreCodeBlocks();
+
             // Find all code snippet containers
             const containers = document.querySelectorAll('.code-snippet-container');
 

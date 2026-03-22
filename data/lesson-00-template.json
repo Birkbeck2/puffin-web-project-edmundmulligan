@@ -1,0 +1,148 @@
+{
+  "lesson": {
+    "number": 0,
+    "title": "Getting Started",
+    "page_title": "Lesson 0 - Getting Started"
+  },
+  "operating_systems": [
+    {
+      "id": "windows",
+      "name": "Windows",
+      "tools": [
+        {
+          "id": "vsc",
+          "name": "Visual Studio Code",
+          "title": "Visual Studio Code",
+          "sections": []
+        },
+        {
+          "id": "firefox",
+          "name": "Mozilla Firefox",
+          "title": "Mozilla Firefox",
+          "sections": []
+        },
+        {
+          "id": "nodejs",
+          "name": "Node.js",
+          "title": "Node.js",
+          "sections": []
+        },
+        {
+          "id": "git",
+          "name": "Git",
+          "title": "Git",
+          "sections": []
+        },
+        {
+          "id": "sqlite",
+          "name": "SQLite",
+          "title": "SQLite",
+          "sections": []
+        }
+      ]
+    },
+    {
+      "id": "macos",
+      "name": "macOS",
+      "tools": [
+        {
+          "id": "vsc",
+          "name": "Visual Studio Code",
+          "title": "Visual Studio Code",
+          "sections": []
+        },
+        {
+          "id": "firefox",
+          "name": "Mozilla Firefox",
+          "title": "Mozilla Firefox",
+          "sections": []
+        },
+        {
+          "id": "nodejs",
+          "name": "Node.js",
+          "title": "Node.js",
+          "sections": []
+        },
+        {
+          "id": "git",
+          "name": "Git",
+          "title": "Git",
+          "sections": []
+        },
+        {
+          "id": "sqlite",
+          "name": "SQLite",
+          "title": "SQLite",
+          "sections": []
+        }
+      ]
+    },
+    {
+      "id": "linux",
+      "name": "Linux",
+      "distributions": [
+        {
+          "name": "Ubuntu / Debian-based Linux",
+          "distrib_id": "ubuntu"
+        },
+        {
+          "name": "Fedora / Red Hat-based Linux",
+          "distrib_id": "fedora"
+        },
+        {
+          "name": "Arch Linux",
+          "distrib_id": "arch"
+        }
+      ],
+      "tools": [
+        {
+          "id": "vsc",
+          "name": "Visual Studio Code",
+          "title": "Visual Studio Code",
+          "sections": []
+        },
+        {
+          "id": "firefox",
+          "name": "Mozilla Firefox",
+          "title": "Mozilla Firefox",
+          "sections": []
+        },
+        {
+          "id": "nodejs",
+          "name": "Node.js",
+          "title": "Node.js",
+          "sections": []
+        },
+        {
+          "id": "git",
+          "name": "Git",
+          "title": "Git",
+          "sections": []
+        },
+        {
+          "id": "sqlite",
+          "name": "SQLite",
+          "title": "SQLite",
+          "sections": []
+        }
+      ]
+    }
+  ],
+  "common_sections": {
+    "extensions": {
+      "id": "vsc-extensions",
+      "name": "Visual Studio Code Extensions",
+      "title": "Visual Studio Code Extensions"
+    },
+    "projects_folder": {
+      "id": "projects-folder",
+      "name": "Create a Projects Folder",
+      "title": "Create a Projects Folder"
+    },
+    "dev_server": {
+      "id": "dev-server",
+      "name": "Setting Up the Development Server",
+      "title": "Setting Up the Development Server"
+    }
+  }
+}

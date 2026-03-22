@@ -63,5 +63,9 @@
         "testport",
         "testurl",
         "VARS"
-    ]
+    ],
+    "files.associations": {
+        "*.mustache": "html",
+        "**/*.mustache": "html"
+    }
 }
