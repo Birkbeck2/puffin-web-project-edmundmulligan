@@ -1,0 +1,14 @@
+/*
+ **********************************************************************
+ * File       : styles/pages/lessons.css
+ * Author     : Edmund Mulligan <edmund@edmundmulligan.name>
+ * Copyright  : (c) 2026 The Embodied Mind
+ * License    : MIT License (see license-and-credits.html page)
+ * Description:
+ *   Styles used by all the lesson pages.
+ **********************************************************************
+ */
+
+.lesson-title {
+    text-align: left;
+}

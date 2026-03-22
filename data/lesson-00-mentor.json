@@ -1,0 +1,103 @@
+{
+  "comment": "Mentor version - same data structure as student version for now. Mentor-specific customizations can be added later.",
+  "lesson": {
+    "number": 0,
+    "title": "Getting Started",
+    "page_title": "Lesson 0 - Getting Started (Mentor Guide)"
+  },
+  "platforms": [
+    {
+      "id": "chromebook",
+      "name": "Chromebook",
+      "cap_name": "Chromebook",
+      "non_developer": true,
+      "description": "<p>Chromebooks are inexpensive laptops that run Chrome OS, but they are not great for web development. It is possible to install Linux on some Chromebooks, but Google makes it difficult to do this without opening the computer up and making changes to the hardware. <strong>This will, at the very least, void your warranty and I honestly do not recommend doing this.</strong> I destroyed one Chromebook when I tried. If you want a cheap laptop for web development, consider a Windows or Linux machine instead.</p>"
+    },
+    {
+      "id": "android",
+      "name": "Android",
+      "cap_name": "Android",
+      "non_developer": true,
+      "description": "<p>Android phones and tablets are not ideal for web development. While there are some code editors available for Android, the experience is limited compared to using a laptop or desktop computer. If possible, use a Windows, or Linux machine for the best experience.</p>"
+    },
+    {
+      "id": "ios",
+      "name": "iOS",
+      "cap_name": "iOS (iPhone/iPad)",
+      "non_developer": true,
+      "description": "<p>Apple iPhones and iPads are not ideal for web development. While there are some code editors available for iOS, the experience is limited compared to using a laptop or desktop computer. If possible, use a macOS machine such as an iMac or MacBook for the best experience.</p>"
+    }
+  ],
+  "common_sections": [
+    {
+      "section": true,
+      "section_id": "introduction",
+      "title": "Introduction",
+      "container_class": "intro-container",
+      "content_class": "intro-content",
+      "title_class": "lesson-title",
+      "class_list": "lesson-install-windows lesson-install-macos lesson-install-linux",
+      "content": "<p>In this lesson, you will ensure that your students have all the necessary tools installed on their computers to start learning web development. By the end of this lesson, they will be ready to create their first web page.</p><p><strong>Note for Mentors:</strong> If you are running this lesson at a Code Dojo with club computers, these tools will already be installed, so students can skip to the next lesson.</p>"
+    },
+    {
+      "section": true,
+      "section_id": "warning",
+      "title": "Important Considerations",
+      "container_class": "warning-container",
+      "content_class": "warning-content",
+      "title_class": "lesson-title",
+      "class_list": "lesson-install-windows lesson-install-macos lesson-install-linux",
+      "content": "<p>This lesson involves installing software on students' computers. Key points for mentors:</p><ul><li><strong>Permissions:</strong> Ensure students have permission from parents/guardians/teachers before installing software</li><li><strong>Admin Access:</strong> Students will need administrator passwords for various steps. Offer to help or coordinate with IT if needed</li><li><strong>Shared/School Computers:</strong> These instructions may not work on managed devices. Check with school IT first</li><li><strong>Time Management:</strong> This lesson is longer than typical. Allocate extra time and be patient with students</li><li><strong>Support:</strong> Be available to help troubleshoot. Common issues include permission errors, network restrictions, or outdated antivirus software blocking downloads</li></ul>"
+    },
+    {
+      "section": true,
+      "section_id": "installing-required-software",
+      "title": "Required Software Overview",
+      "container_class": "",
+      "content_class": "",
+      "title_class": "lesson-title",
+      "class_list": "lesson-install-windows lesson-install-macos lesson-install-linux",
+      "content": "<p>Students should install these tools. Some may already be installed, so have them check first:</p>\n<ul>\n<li><strong>Code Editor:</strong> Microsoft Visual Studio Code (or alternative like Sublime, Atom, etc.)</li>\n<li><strong>Web Browser:</strong> Mozilla Firefox (or Chrome, Safari, Edge)</li>\n<li><strong>Runtime:</strong> Node.js (for local development servers and tooling)</li>\n<li><strong>Version Control:</strong> Git (for repository management)</li>\n<li><strong>Database:</strong> SQLite (for working with databases)</li>\n</ul>\n<p><strong>Teaching Tip:</strong> Explain why each tool is important. This helps students understand that development requires multiple specialized tools.</p>"
+    }
+  ],
+  "developer_platforms": [
+    {
+      "os_id": "windows",
+      "os_name": "Windows",
+      "tools": [
+        {
+          "tool_id": "vsc",
+          "tool_name": "Visual Studio Code",
+          "tool_content": "<p>Visual Studio Code (VS Code) is a lightweight, free code editor that's perfect for web development education.</p>\n<h4>Download and Install</h4>\n<ol>\n<li>Go to <a href='https://code.visualstudio.com/' target='_blank' rel='noopener noreferrer'>https://code.visualstudio.com/</a></li>\n<li>Click the Windows download button</li>\n<li>Run the installer (VSCodeUserSetup-x64-*.exe)</li>\n<li>Accept the license and choose install location</li>\n<li>Check the boxes to \"Add to PATH\" - this is important</li>\n<li>Click Install and wait for completion</li>\n<li>Click Finish to launch VS Code</li>\n</ol>\n<p><strong>Mentor Note:</strong> Ensure students check 'Add to PATH' so they can launch VS Code from terminal/command prompt.</p>"
+        },
+        {
+          "tool_id": "firefox",
+          "tool_name": "Mozilla Firefox",
+          "tool_content": "<p>Firefox is a standards-compliant browser great for web development. Students can use Chrome, Safari, or Edge instead if preferred.</p>\n<h4>Check if Already Installed</h4>\n<p>Open the Start menu and search for 'Firefox'. If found, it's already installed; skip this section.</p>\n<h4>Download and Install</h4>\n<ol>\n<li>Go to <a href='https://www.mozilla.org/firefox/' target='_blank' rel='noopener noreferrer'>https://www.mozilla.org/firefox/</a></li>\n<li>Click \"Download Firefox\"</li>\n<li>Run the installer</li>\n<li>Follow the installation prompts (default settings are fine)</li>\n<li>Click Finish when complete</li>\n</ol>"
+        },
+        {
+          "tool_id": "nodejs",
+          "tool_name": "Node.js",
+          "tool_content": "<p>Node.js is a JavaScript runtime that lets students run JavaScript outside the browser and use development tools.</p>\n<h4>Check if Already Installed</h4>\n<ol>\n<li>Open Command Prompt (Win + R, type 'cmd', press Enter)</li>\n<li>Type: <code>node --version</code> and press Enter</li>\n<li>If you see a version number (like v18.x.x), Node.js is installed - skip to next tool</li>\n<li>If you see \"'node' is not recognized\", continue with installation</li>\n</ol>\n<h4>Download and Install</h4>\n<ol>\n<li>Go to <a href='https://nodejs.org/' target='_blank' rel='noopener noreferrer'>https://nodejs.org/</a></li>\n<li>Download the LTS (Long Term Support) version</li>\n<li>Run the installer</li>\n<li>Click Next through the setup wizard</li>\n<li>Accept the license agreement</li>\n<li>Keep the default installation paths</li>\n<li>At \"Tools for Native Modules\", uncheck the optional box unless students specifically need build tools</li>\n<li>Click Install and wait for completion</li>\n<li>Click Finish</li>\n<li>Close and reopen Command Prompt</li>\n<li>Verify: type <code>npm --version</code> to confirm npm is installed</li>\n</ol>\n<p><strong>Mentor Note:</strong> Closing and reopening Command Prompt ensures the PATH is updated. This is a common source of \"command not found\" errors.</p>"
+        }
+      ]
+    }
+  ],
+  "common_dev_sections": [
+    {
+      "section_id": "vsc-extensions",
+      "section_title": "Visual Studio Code Extensions",
+      "section_content": "<p>Recommended extensions to enhance the coding experience. Have students install these in order:</p>\n<ol>\n<li><strong>Live Server</strong> (ritwickdey.LiveServer) - Launches a local dev server with auto-reload when files are saved</li>\n<li><strong>Prettier</strong> (esbenp.prettier-vscode) - Automatically formats code for consistency</li>\n<li><strong>Auto Rename Tag</strong> (formulahendry.auto-rename-tag) - When you change an opening HTML tag, the closing tag updates automatically</li>\n<li><strong>HTML CSS Support</strong> (ecmel.vscode-html-css) - Better autocomplete suggestions for HTML and CSS</li>\n</ol>\n<p><strong>Teaching Tip:</strong> Live Server is especially useful as it shows changes immediately when files are saved, giving instant feedback during coding practice.</p>"
+    },
+    {
+      "section_id": "projects-folder",
+      "section_title": "Create a Projects Folder",
+      "section_content": "<p>Have students create a dedicated folder for their coding projects. This keeps work organized and makes file management easier throughout the course.</p>\n<ol>\n<li>Open File Explorer and navigate to the home directory (usually C:\\\\Users\\\\YourName)</li>\n<li>Create a new folder:</li>\n<li>Right-click in empty space → New → Folder</li>\n<li>Name it 'Projects'</li>\n</ol>\n<p>All future coding projects will go in: <code>C:\\\\Users\\\\YourName\\\\Projects</code></p>\n<p><strong>Teaching Tip:</strong> Compare this to having a labeled folder for schoolwork. It keeps everything organized in one place.</p>"
+    },
+    {
+      "section_id": "dev-server",
+      "section_title": "Setting Up a Development Server",
+      "section_content": "<p>Students need a local web server because modern browsers have security restrictions on local file access. A development server solves this.</p>\n<h4>The Easy Way: Use Live Server Extension</h4>\n<p>If students installed the Live Server extension in VS Code, they can simply right-click an HTML file and select \"Open with Live Server\".</p>\n<h4>Manual Setup with npm</h4>\n<ol>\n<li>Open VS Code</li>\n<li>In VS Code, select File → Open Folder and choose the Projects folder</li>\n<li>Create a new file: package.json</li>\n<li>Add this content:</li>\n</ol>\n<pre><code>{\n    \"name\": \"my-web-projects\",\n    \"version\": \"1.0.0\",\n    \"scripts\": {\n        \"start\": \"http-server -p 8000\"\n    },\n    \"devDependencies\": {\n        \"http-server\": \"^14.1.1\"\n    }\n}</code></pre>\n<ol start=\"5\">\n<li>Open the integrated terminal in VS Code (Ctrl + `)</li>\n<li>Run: <code>npm install</code> (this installs http-server)</li>\n<li>Run: <code>npm start</code> (this starts the server)</li>\n<li>Students should see: \"Server running at http://localhost:8000\"</li>\n<li>They can now open a browser to http://localhost:8000 to test their pages</li>\n</ol>\n<p><strong>Mentor Note:</strong> The first <code>npm install</code> takes a bit longer as it downloads packages. Prepare students for this.</p>"
+    }
+  ]
+}

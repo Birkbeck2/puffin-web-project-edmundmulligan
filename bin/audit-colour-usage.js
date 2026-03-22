@@ -48,7 +48,7 @@ const APPROVED_GENERIC_VARS = [
 
 // Direct use of theme-specific variables is allowed in:
 const THEME_SPECIFIC_ALLOWED_FILES = [
-    'styles/colours.css',          // Defines them
+    'styles/definitions/colours.css', // Defines them
     'scripts/themeSwitcher.js',    // Maps them
     'diagnostics/colourPalette.html', // Shows them
     'scripts/colourPalette.js',    // Analyses them
@@ -59,7 +59,8 @@ const THEME_SPECIFIC_ALLOWED_FILES = [
 const EXEMPT_FROM_COLOR_CHECKS = [
     'diagnostics/',                // All diagnostic/test pages
     'bin/',                        // Build and test scripts
-    'styles/test-results.css'      // Styles for test results
+    'styles/test-results.css',     // Styles for test results
+    'styles/definitions/colours.css' // Colour palette definitions (raw values expected here)
 ];
 
 /**

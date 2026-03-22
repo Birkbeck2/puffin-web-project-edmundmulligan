@@ -3,9 +3,9 @@
  * File       : gallery.css
  * Author     : Edmund Mulligan <edmund@edmundmulligan.name>
  * Copyright  : (c) 2026 The Embodied Mind
- * License    : MIT License (see license-and-credits.html page)
+ * License    : MIT License (see license.html page)
  * Description:
- *   This is the stylesheet for the gallery section of the Web Witchcraft and Wizardry website.
+ *   Styles used only by pages/gallery.html.
  **********************************************************************
  */
 
@@ -38,7 +38,6 @@
     width: var(--carousel-portrait-width);
 }
 
-
 .accessory-item {
     display: grid;
     align-items: start;
@@ -55,9 +54,8 @@
     max-width: 100%;
 }
 
-
 .portrait-image {
-    display:block;
+    display: block;
     width: var(--carousel-portrait-width);
     max-width: 100%;
     height: var(--carousel-portrait-height);
@@ -89,14 +87,14 @@
 }
 
 .accessory-name {
-    display:block;
+    display: block;
     font-family: var(--font-family-serif);
     font-weight: bold;
     margin: 0.25rem 1rem 0;
 }
 
 .accessory-description {
-    display:block;
+    display: block;
     font-size: var(--fontsize-small);
     margin: 0.25rem 1rem 0;
 }
@@ -107,4 +105,3 @@
     opacity: 0.8;
     margin: 0.25rem 1rem 1rem;
 }
-
