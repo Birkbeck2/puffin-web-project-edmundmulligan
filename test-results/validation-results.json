@@ -1,11 +1,544 @@
 {
-  "files": [],
+  "files": [
+    {
+      "file": "./students/lesson-00-bak.html",
+      "type": "html",
+      "errors": [
+        {
+          "line": 84,
+          "column": 6,
+          "message": "Unclosed element '<div>'",
+          "ruleId": "close-order",
+          "severity": "error"
+        },
+        {
+          "line": 93,
+          "column": 14,
+          "message": "Unclosed element '<div>'",
+          "ruleId": "close-order",
+          "severity": "error"
+        },
+        {
+          "line": 227,
+          "column": 25,
+          "message": "Attribute \"class\" using unquoted value",
+          "ruleId": "attr-quotes",
+          "severity": "error"
+        },
+        {
+          "line": 227,
+          "column": 40,
+          "message": "Raw \"\"\" must be encoded as \"&quot;\"",
+          "ruleId": "no-raw-characters",
+          "severity": "error"
+        },
+        {
+          "line": 1279,
+          "column": 54,
+          "message": "Trailing whitespace",
+          "ruleId": "no-trailing-whitespace",
+          "severity": "error"
+        },
+        {
+          "line": 1431,
+          "column": 42,
+          "message": "Trailing whitespace",
+          "ruleId": "no-trailing-whitespace",
+          "severity": "error"
+        },
+        {
+          "line": 2115,
+          "column": 37,
+          "message": "Attribute \"id\" used ' instead of expected \"",
+          "ruleId": "attr-quotes",
+          "severity": "error"
+        },
+        {
+          "line": 2133,
+          "column": 26,
+          "message": "Attribute \"id\" used ' instead of expected \"",
+          "ruleId": "attr-quotes",
+          "severity": "error"
+        },
+        {
+          "line": 2166,
+          "column": 1,
+          "message": "Trailing whitespace",
+          "ruleId": "no-trailing-whitespace",
+          "severity": "error"
+        },
+        {
+          "line": 2481,
+          "column": 30,
+          "message": "Element <li> is implicitly closed by parent </ol>",
+          "ruleId": "no-implicit-close",
+          "severity": "error"
+        },
+        {
+          "line": 2525,
+          "column": 36,
+          "message": "Raw \">\" must be encoded as \"&gt;\"",
+          "ruleId": "no-raw-characters",
+          "severity": "error"
+        },
+        {
+          "line": 2526,
+          "column": 26,
+          "message": "Stray end tag '</ol>'",
+          "ruleId": "close-order",
+          "severity": "error"
+        },
+        {
+          "line": 2738,
+          "column": 18,
+          "message": "Unclosed element '<div>'",
+          "ruleId": "close-order",
+          "severity": "error"
+        },
+        {
+          "line": 2750,
+          "column": 26,
+          "message": "Unclosed element '<ol>'",
+          "ruleId": "close-order",
+          "severity": "error"
+        },
+        {
+          "line": 2773,
+          "column": 30,
+          "message": "Unclosed element '<li>'",
+          "ruleId": "close-order",
+          "severity": "error"
+        },
+        {
+          "line": 2773,
+          "column": 30,
+          "message": "Element <li> is implicitly closed by adjacent <#document>",
+          "ruleId": "no-implicit-close",
+          "severity": "error"
+        },
+        {
+          "line": 2787,
+          "column": 38,
+          "message": "Unclosed element '<li>'",
+          "ruleId": "close-order",
+          "severity": "error"
+        },
+        {
+          "line": 2787,
+          "column": 38,
+          "message": "Element <li> is implicitly closed by adjacent <#document>",
+          "ruleId": "no-implicit-close",
+          "severity": "error"
+        },
+        {
+          "line": 2802,
+          "column": 46,
+          "message": "Element <li> is implicitly closed by adjacent <#document>",
+          "ruleId": "no-implicit-close",
+          "severity": "error"
+        },
+        {
+          "line": 2803,
+          "column": 50,
+          "message": "<ore> is not a valid element name",
+          "ruleId": "element-name",
+          "severity": "error"
+        },
+        {
+          "line": 2803,
+          "column": 50,
+          "message": "Unclosed element '<ore>'",
+          "ruleId": "close-order",
+          "severity": "error"
+        },
+        {
+          "line": 2805,
+          "column": 57,
+          "message": "Stray end tag '</pre>'",
+          "ruleId": "close-order",
+          "severity": "error"
+        },
+        {
+          "line": 2806,
+          "column": 80,
+          "message": "End tag '</li>' seen but there were open elements",
+          "ruleId": "close-order",
+          "severity": "error"
+        },
+        {
+          "line": 2807,
+          "column": 42,
+          "message": "End tag '</ul>' seen but there were open elements",
+          "ruleId": "close-order",
+          "severity": "error"
+        },
+        {
+          "line": 2808,
+          "column": 38,
+          "message": "End tag '</li>' seen but there were open elements",
+          "ruleId": "close-order",
+          "severity": "error"
+        },
+        {
+          "line": 2809,
+          "column": 38,
+          "message": "<li> element requires a <ul>, <ol>, <menu> or <template> element as parent",
+          "ruleId": "element-permitted-parent",
+          "severity": "error"
+        },
+        {
+          "line": 2848,
+          "column": 34,
+          "message": "End tag '</ol>' seen but there were open elements",
+          "ruleId": "close-order",
+          "severity": "error"
+        },
+        {
+          "line": 2849,
+          "column": 30,
+          "message": "End tag '</li>' seen but there were open elements",
+          "ruleId": "close-order",
+          "severity": "error"
+        },
+        {
+          "line": 2850,
+          "column": 26,
+          "message": "End tag '</ol>' seen but there were open elements",
+          "ruleId": "close-order",
+          "severity": "error"
+        },
+        {
+          "line": 2851,
+          "column": 22,
+          "message": "End tag '</div>' seen but there were open elements",
+          "ruleId": "close-order",
+          "severity": "error"
+        },
+        {
+          "line": 2910,
+          "column": 18,
+          "message": "End tag '</div>' seen but there were open elements",
+          "ruleId": "close-order",
+          "severity": "error"
+        },
+        {
+          "line": 2911,
+          "column": 14,
+          "message": "End tag '</section>' seen but there were open elements",
+          "ruleId": "close-order",
+          "severity": "error"
+        },
+        {
+          "line": 3158,
+          "column": 10,
+          "message": "End tag '</div>' seen but there were open elements",
+          "ruleId": "close-order",
+          "severity": "error"
+        },
+        {
+          "line": 3159,
+          "column": 6,
+          "message": "End tag '</main>' seen but there were open elements",
+          "ruleId": "close-order",
+          "severity": "error"
+        },
+        {
+          "line": 3160,
+          "column": 6,
+          "message": "End tag '</div>' seen but there were open elements",
+          "ruleId": "close-order",
+          "severity": "error"
+        },
+        {
+          "line": 3168,
+          "column": 2,
+          "message": "End tag '</body>' seen but there were open elements",
+          "ruleId": "close-order",
+          "severity": "error"
+        },
+        {
+          "line": 3169,
+          "column": 2,
+          "message": "End tag '</html>' seen but there were open elements",
+          "ruleId": "close-order",
+          "severity": "error"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "file": "./students/lesson-00.html",
+      "type": "html",
+      "errors": [
+        {
+          "line": 85,
+          "column": 6,
+          "message": "Unclosed element '<div>'",
+          "ruleId": "close-order",
+          "severity": "error"
+        },
+        {
+          "line": 94,
+          "column": 14,
+          "message": "Unclosed element '<div>'",
+          "ruleId": "close-order",
+          "severity": "error"
+        },
+        {
+          "line": 1280,
+          "column": 54,
+          "message": "Trailing whitespace",
+          "ruleId": "no-trailing-whitespace",
+          "severity": "error"
+        },
+        {
+          "line": 1432,
+          "column": 42,
+          "message": "Trailing whitespace",
+          "ruleId": "no-trailing-whitespace",
+          "severity": "error"
+        },
+        {
+          "line": 2152,
+          "column": 37,
+          "message": "Attribute \"id\" used ' instead of expected \"",
+          "ruleId": "attr-quotes",
+          "severity": "error"
+        },
+        {
+          "line": 2170,
+          "column": 26,
+          "message": "Attribute \"id\" used ' instead of expected \"",
+          "ruleId": "attr-quotes",
+          "severity": "error"
+        },
+        {
+          "line": 2203,
+          "column": 1,
+          "message": "Trailing whitespace",
+          "ruleId": "no-trailing-whitespace",
+          "severity": "error"
+        },
+        {
+          "line": 2518,
+          "column": 30,
+          "message": "Element <li> is implicitly closed by parent </ol>",
+          "ruleId": "no-implicit-close",
+          "severity": "error"
+        },
+        {
+          "line": 2562,
+          "column": 36,
+          "message": "Raw \">\" must be encoded as \"&gt;\"",
+          "ruleId": "no-raw-characters",
+          "severity": "error"
+        },
+        {
+          "line": 2563,
+          "column": 26,
+          "message": "Stray end tag '</ol>'",
+          "ruleId": "close-order",
+          "severity": "error"
+        },
+        {
+          "line": 2771,
+          "column": 18,
+          "message": "Unclosed element '<div>'",
+          "ruleId": "close-order",
+          "severity": "error"
+        },
+        {
+          "line": 2783,
+          "column": 26,
+          "message": "Unclosed element '<ol>'",
+          "ruleId": "close-order",
+          "severity": "error"
+        },
+        {
+          "line": 2806,
+          "column": 30,
+          "message": "Unclosed element '<li>'",
+          "ruleId": "close-order",
+          "severity": "error"
+        },
+        {
+          "line": 2806,
+          "column": 30,
+          "message": "Element <li> is implicitly closed by adjacent <#document>",
+          "ruleId": "no-implicit-close",
+          "severity": "error"
+        },
+        {
+          "line": 2820,
+          "column": 38,
+          "message": "Unclosed element '<li>'",
+          "ruleId": "close-order",
+          "severity": "error"
+        },
+        {
+          "line": 2820,
+          "column": 38,
+          "message": "Element <li> is implicitly closed by adjacent <#document>",
+          "ruleId": "no-implicit-close",
+          "severity": "error"
+        },
+        {
+          "line": 2835,
+          "column": 46,
+          "message": "Element <li> is implicitly closed by adjacent <#document>",
+          "ruleId": "no-implicit-close",
+          "severity": "error"
+        },
+        {
+          "line": 2836,
+          "column": 50,
+          "message": "<ore> is not a valid element name",
+          "ruleId": "element-name",
+          "severity": "error"
+        },
+        {
+          "line": 2836,
+          "column": 50,
+          "message": "Unclosed element '<ore>'",
+          "ruleId": "close-order",
+          "severity": "error"
+        },
+        {
+          "line": 2838,
+          "column": 57,
+          "message": "Stray end tag '</pre>'",
+          "ruleId": "close-order",
+          "severity": "error"
+        },
+        {
+          "line": 2839,
+          "column": 80,
+          "message": "End tag '</li>' seen but there were open elements",
+          "ruleId": "close-order",
+          "severity": "error"
+        },
+        {
+          "line": 2840,
+          "column": 42,
+          "message": "End tag '</ul>' seen but there were open elements",
+          "ruleId": "close-order",
+          "severity": "error"
+        },
+        {
+          "line": 2841,
+          "column": 38,
+          "message": "End tag '</li>' seen but there were open elements",
+          "ruleId": "close-order",
+          "severity": "error"
+        },
+        {
+          "line": 2842,
+          "column": 38,
+          "message": "<li> element requires a <ul>, <ol>, <menu> or <template> element as parent",
+          "ruleId": "element-permitted-parent",
+          "severity": "error"
+        },
+        {
+          "line": 2881,
+          "column": 34,
+          "message": "End tag '</ol>' seen but there were open elements",
+          "ruleId": "close-order",
+          "severity": "error"
+        },
+        {
+          "line": 2882,
+          "column": 30,
+          "message": "End tag '</li>' seen but there were open elements",
+          "ruleId": "close-order",
+          "severity": "error"
+        },
+        {
+          "line": 2883,
+          "column": 26,
+          "message": "End tag '</ol>' seen but there were open elements",
+          "ruleId": "close-order",
+          "severity": "error"
+        },
+        {
+          "line": 2884,
+          "column": 22,
+          "message": "End tag '</div>' seen but there were open elements",
+          "ruleId": "close-order",
+          "severity": "error"
+        },
+        {
+          "line": 2943,
+          "column": 18,
+          "message": "End tag '</div>' seen but there were open elements",
+          "ruleId": "close-order",
+          "severity": "error"
+        },
+        {
+          "line": 2944,
+          "column": 14,
+          "message": "End tag '</section>' seen but there were open elements",
+          "ruleId": "close-order",
+          "severity": "error"
+        },
+        {
+          "line": 3191,
+          "column": 10,
+          "message": "End tag '</div>' seen but there were open elements",
+          "ruleId": "close-order",
+          "severity": "error"
+        },
+        {
+          "line": 3192,
+          "column": 6,
+          "message": "End tag '</main>' seen but there were open elements",
+          "ruleId": "close-order",
+          "severity": "error"
+        },
+        {
+          "line": 3193,
+          "column": 6,
+          "message": "End tag '</div>' seen but there were open elements",
+          "ruleId": "close-order",
+          "severity": "error"
+        },
+        {
+          "line": 3201,
+          "column": 2,
+          "message": "End tag '</body>' seen but there were open elements",
+          "ruleId": "close-order",
+          "severity": "error"
+        },
+        {
+          "line": 3202,
+          "column": 2,
+          "message": "End tag '</html>' seen but there were open elements",
+          "ruleId": "close-order",
+          "severity": "error"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "file": "./data/lesson-00-student.js",
+      "type": "js",
+      "errors": [
+        {
+          "line": 1,
+          "column": 1,
+          "message": "'module' is not defined.",
+          "ruleId": null,
+          "severity": "error"
+        }
+      ],
+      "warnings": []
+    }
+  ],
   "summary": {
-    "htmlErrors": 0,
+    "htmlErrors": 72,
     "htmlWarnings": 0,
     "cssErrors": 0,
     "cssWarnings": 0,
-    "jsErrors": 0,
+    "jsErrors": 1,
     "jsWarnings": 0
   }
 }

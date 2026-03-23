@@ -1,0 +1,107 @@
+/*
+ **********************************************************************
+ * File       : gallery.css
+ * Author     : Edmund Mulligan <edmund@edmundmulligan.name>
+ * Copyright  : (c) 2026 The Embodied Mind
+ * License    : MIT License (see license.html page)
+ * Description:
+ *   Styles used only by pages/gallery.html.
+ **********************************************************************
+ */
+
+.carousel {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: var(--carousel-item-width);
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    scroll-snap-type: x mandatory;
+    gap: var(--grid-gap);
+    padding: var(--grid-padding);
+}
+
+.carousel:focus-visible {
+    outline: var(--border-weight-thin) dashed var(--colour-effective-link-text-focus);
+    outline-offset: 0.2rem;
+}
+
+.portrait-item {
+    display: grid;
+    justify-items: center;
+    align-content: start;
+    scroll-snap-align: start;
+    border: var(--border-weight) solid var(--colour-effective-headings-text);
+    border-radius: var(--border-radius);
+    padding: var(--grid-padding);
+    background-color: var(--colour-effective-headings-background);
+    color: var(--colour-effective-headings-text);
+    width: var(--carousel-portrait-width);
+}
+
+.accessory-item {
+    display: grid;
+    align-items: start;
+    scroll-snap-align: start;
+    gap: var(--grid-gap);
+    border: var(--border-weight) var(--border-style) var(--colour-effective-headings-text);
+    border-radius: var(--border-radius);
+    padding: var(--grid-padding);
+    background-color: var(--colour-effective-headings-background);
+    color: var(--colour-effective-headings-text);
+    grid-template-rows: var(--carousel-accessory-height) auto auto auto auto;
+    text-align: center;
+    width: var(--carousel-accessory-width);
+    max-width: 100%;
+}
+
+.portrait-image {
+    display: block;
+    width: var(--carousel-portrait-width);
+    max-width: 100%;
+    height: var(--carousel-portrait-height);
+    object-fit: contain;
+    object-position: center;
+    margin: 0 auto;
+    border-radius: 0.5rem;
+}
+
+.portrait-caption {
+    display: block;
+    margin: var(--margin-vertical) var(--margin-horizontal);
+    font-weight: bold;
+}
+
+.accessory-item hr {
+    width: 100%;
+}
+
+.accessory-image {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    padding: var(--image-padding);
+    height: var(--accessory-image-slot-height);
+    object-fit: contain;
+    object-position: center;
+    margin: 0 auto;
+}
+
+.accessory-name {
+    display: block;
+    font-family: var(--font-family-serif);
+    font-weight: bold;
+    margin: 0.25rem 1rem 0;
+}
+
+.accessory-description {
+    display: block;
+    font-size: var(--fontsize-small);
+    margin: 0.25rem 1rem 0;
+}
+
+.catalogue-number {
+    font-style: italic;
+    font-size: var(--fontsize-small);
+    opacity: 0.8;
+    margin: 0.25rem 1rem 1rem;
+}

@@ -2,13 +2,6 @@
   "violations": [],
   "passes": [
     {
-      "pageUrl": "mentors/lesson-00.html",
-      "theme": "light",
-      "style": "normal",
-      "viewport": "900",
-      "count": 42
-    },
-    {
       "pageUrl": "index.html",
       "theme": "light",
       "style": "normal",
@@ -23,14 +16,21 @@
       "count": 42
     },
     {
-      "pageUrl": "students/lesson-00.html",
+      "pageUrl": "students/lesson-00-bak.html",
       "theme": "light",
       "style": "normal",
       "viewport": "900",
       "count": 44
     },
     {
-      "pageUrl": "pages/glossary.html",
+      "pageUrl": "students/lesson-00.html",
+      "theme": "light",
+      "style": "normal",
+      "viewport": "900",
+      "count": 43
+    },
+    {
+      "pageUrl": "mentors/lesson-00.html",
       "theme": "light",
       "style": "normal",
       "viewport": "900",
@@ -44,35 +44,7 @@
       "count": 41
     },
     {
-      "pageUrl": "pages/mentors.html",
-      "theme": "light",
-      "style": "normal",
-      "viewport": "900",
-      "count": 39
-    },
-    {
-      "pageUrl": "pages/students.html",
-      "theme": "light",
-      "style": "normal",
-      "viewport": "900",
-      "count": 43
-    },
-    {
-      "pageUrl": "pages/gallery.html",
-      "theme": "light",
-      "style": "normal",
-      "viewport": "900",
-      "count": 41
-    },
-    {
-      "pageUrl": "pages/faq.html",
-      "theme": "light",
-      "style": "normal",
-      "viewport": "900",
-      "count": 39
-    },
-    {
-      "pageUrl": "pages/license.html",
+      "pageUrl": "pages/start.html",
       "theme": "light",
       "style": "normal",
       "viewport": "900",
@@ -86,18 +58,46 @@
       "count": 39
     },
     {
-      "pageUrl": "pages/start.html",
+      "pageUrl": "pages/mentors.html",
       "theme": "light",
       "style": "normal",
       "viewport": "900",
       "count": 39
     },
     {
-      "pageUrl": "mentors/lesson-00.html",
-      "theme": "dark",
+      "pageUrl": "pages/faq.html",
+      "theme": "light",
       "style": "normal",
       "viewport": "900",
-      "count": 42
+      "count": 39
+    },
+    {
+      "pageUrl": "pages/students.html",
+      "theme": "light",
+      "style": "normal",
+      "viewport": "900",
+      "count": 43
+    },
+    {
+      "pageUrl": "pages/license.html",
+      "theme": "light",
+      "style": "normal",
+      "viewport": "900",
+      "count": 39
+    },
+    {
+      "pageUrl": "pages/glossary.html",
+      "theme": "light",
+      "style": "normal",
+      "viewport": "900",
+      "count": 41
+    },
+    {
+      "pageUrl": "pages/gallery.html",
+      "theme": "light",
+      "style": "normal",
+      "viewport": "900",
+      "count": 41
     },
     {
       "pageUrl": "index.html",
@@ -111,7 +111,14 @@
       "theme": "dark",
       "style": "normal",
       "viewport": "900",
-      "count": 42
+      "count": 41
+    },
+    {
+      "pageUrl": "students/lesson-00-bak.html",
+      "theme": "dark",
+      "style": "normal",
+      "viewport": "900",
+      "count": 43
     },
     {
       "pageUrl": "students/lesson-00.html",
@@ -121,11 +128,11 @@
       "count": 44
     },
     {
-      "pageUrl": "pages/glossary.html",
+      "pageUrl": "mentors/lesson-00.html",
       "theme": "dark",
       "style": "normal",
       "viewport": "900",
-      "count": 41
+      "count": 42
     },
     {
       "pageUrl": "pages/facts.html",
@@ -135,35 +142,7 @@
       "count": 41
     },
     {
-      "pageUrl": "pages/mentors.html",
-      "theme": "dark",
-      "style": "normal",
-      "viewport": "900",
-      "count": 39
-    },
-    {
-      "pageUrl": "pages/students.html",
-      "theme": "dark",
-      "style": "normal",
-      "viewport": "900",
-      "count": 43
-    },
-    {
-      "pageUrl": "pages/gallery.html",
-      "theme": "dark",
-      "style": "normal",
-      "viewport": "900",
-      "count": 41
-    },
-    {
-      "pageUrl": "pages/faq.html",
-      "theme": "dark",
-      "style": "normal",
-      "viewport": "900",
-      "count": 39
-    },
-    {
-      "pageUrl": "pages/license.html",
+      "pageUrl": "pages/start.html",
       "theme": "dark",
       "style": "normal",
       "viewport": "900",
@@ -177,18 +156,46 @@
       "count": 39
     },
     {
-      "pageUrl": "pages/start.html",
+      "pageUrl": "pages/mentors.html",
       "theme": "dark",
       "style": "normal",
       "viewport": "900",
       "count": 39
     },
     {
-      "pageUrl": "mentors/lesson-00.html",
-      "theme": "light",
-      "style": "subdued",
+      "pageUrl": "pages/faq.html",
+      "theme": "dark",
+      "style": "normal",
       "viewport": "900",
-      "count": 42
+      "count": 39
+    },
+    {
+      "pageUrl": "pages/students.html",
+      "theme": "dark",
+      "style": "normal",
+      "viewport": "900",
+      "count": 43
+    },
+    {
+      "pageUrl": "pages/license.html",
+      "theme": "dark",
+      "style": "normal",
+      "viewport": "900",
+      "count": 39
+    },
+    {
+      "pageUrl": "pages/glossary.html",
+      "theme": "dark",
+      "style": "normal",
+      "viewport": "900",
+      "count": 41
+    },
+    {
+      "pageUrl": "pages/gallery.html",
+      "theme": "dark",
+      "style": "normal",
+      "viewport": "900",
+      "count": 41
     },
     {
       "pageUrl": "index.html",
@@ -202,7 +209,14 @@
       "theme": "light",
       "style": "subdued",
       "viewport": "900",
-      "count": 42
+      "count": 41
+    },
+    {
+      "pageUrl": "students/lesson-00-bak.html",
+      "theme": "light",
+      "style": "subdued",
+      "viewport": "900",
+      "count": 44
     },
     {
       "pageUrl": "students/lesson-00.html",
@@ -212,7 +226,7 @@
       "count": 44
     },
     {
-      "pageUrl": "pages/glossary.html",
+      "pageUrl": "mentors/lesson-00.html",
       "theme": "light",
       "style": "subdued",
       "viewport": "900",
@@ -226,35 +240,7 @@
       "count": 41
     },
     {
-      "pageUrl": "pages/mentors.html",
-      "theme": "light",
-      "style": "subdued",
-      "viewport": "900",
-      "count": 39
-    },
-    {
-      "pageUrl": "pages/students.html",
-      "theme": "light",
-      "style": "subdued",
-      "viewport": "900",
-      "count": 43
-    },
-    {
-      "pageUrl": "pages/gallery.html",
-      "theme": "light",
-      "style": "subdued",
-      "viewport": "900",
-      "count": 41
-    },
-    {
-      "pageUrl": "pages/faq.html",
-      "theme": "light",
-      "style": "subdued",
-      "viewport": "900",
-      "count": 39
-    },
-    {
-      "pageUrl": "pages/license.html",
+      "pageUrl": "pages/start.html",
       "theme": "light",
       "style": "subdued",
       "viewport": "900",
@@ -268,18 +254,46 @@
       "count": 39
     },
     {
-      "pageUrl": "pages/start.html",
+      "pageUrl": "pages/mentors.html",
       "theme": "light",
       "style": "subdued",
       "viewport": "900",
       "count": 39
     },
     {
-      "pageUrl": "mentors/lesson-00.html",
-      "theme": "dark",
+      "pageUrl": "pages/faq.html",
+      "theme": "light",
       "style": "subdued",
       "viewport": "900",
-      "count": 42
+      "count": 39
+    },
+    {
+      "pageUrl": "pages/students.html",
+      "theme": "light",
+      "style": "subdued",
+      "viewport": "900",
+      "count": 43
+    },
+    {
+      "pageUrl": "pages/license.html",
+      "theme": "light",
+      "style": "subdued",
+      "viewport": "900",
+      "count": 39
+    },
+    {
+      "pageUrl": "pages/glossary.html",
+      "theme": "light",
+      "style": "subdued",
+      "viewport": "900",
+      "count": 41
+    },
+    {
+      "pageUrl": "pages/gallery.html",
+      "theme": "light",
+      "style": "subdued",
+      "viewport": "900",
+      "count": 41
     },
     {
       "pageUrl": "index.html",
@@ -293,17 +307,24 @@
       "theme": "dark",
       "style": "subdued",
       "viewport": "900",
-      "count": 42
+      "count": 41
     },
     {
-      "pageUrl": "students/lesson-00.html",
+      "pageUrl": "students/lesson-00-bak.html",
       "theme": "dark",
       "style": "subdued",
       "viewport": "900",
       "count": 44
     },
     {
-      "pageUrl": "pages/glossary.html",
+      "pageUrl": "students/lesson-00.html",
+      "theme": "dark",
+      "style": "subdued",
+      "viewport": "900",
+      "count": 43
+    },
+    {
+      "pageUrl": "mentors/lesson-00.html",
       "theme": "dark",
       "style": "subdued",
       "viewport": "900",
@@ -317,35 +338,7 @@
       "count": 41
     },
     {
-      "pageUrl": "pages/mentors.html",
-      "theme": "dark",
-      "style": "subdued",
-      "viewport": "900",
-      "count": 39
-    },
-    {
-      "pageUrl": "pages/students.html",
-      "theme": "dark",
-      "style": "subdued",
-      "viewport": "900",
-      "count": 43
-    },
-    {
-      "pageUrl": "pages/gallery.html",
-      "theme": "dark",
-      "style": "subdued",
-      "viewport": "900",
-      "count": 41
-    },
-    {
-      "pageUrl": "pages/faq.html",
-      "theme": "dark",
-      "style": "subdued",
-      "viewport": "900",
-      "count": 39
-    },
-    {
-      "pageUrl": "pages/license.html",
+      "pageUrl": "pages/start.html",
       "theme": "dark",
       "style": "subdued",
       "viewport": "900",
@@ -359,18 +352,46 @@
       "count": 39
     },
     {
-      "pageUrl": "pages/start.html",
+      "pageUrl": "pages/mentors.html",
       "theme": "dark",
       "style": "subdued",
       "viewport": "900",
       "count": 39
     },
     {
-      "pageUrl": "mentors/lesson-00.html",
-      "theme": "light",
-      "style": "vibrant",
+      "pageUrl": "pages/faq.html",
+      "theme": "dark",
+      "style": "subdued",
       "viewport": "900",
-      "count": 42
+      "count": 39
+    },
+    {
+      "pageUrl": "pages/students.html",
+      "theme": "dark",
+      "style": "subdued",
+      "viewport": "900",
+      "count": 43
+    },
+    {
+      "pageUrl": "pages/license.html",
+      "theme": "dark",
+      "style": "subdued",
+      "viewport": "900",
+      "count": 39
+    },
+    {
+      "pageUrl": "pages/glossary.html",
+      "theme": "dark",
+      "style": "subdued",
+      "viewport": "900",
+      "count": 41
+    },
+    {
+      "pageUrl": "pages/gallery.html",
+      "theme": "dark",
+      "style": "subdued",
+      "viewport": "900",
+      "count": 41
     },
     {
       "pageUrl": "index.html",
@@ -384,7 +405,14 @@
       "theme": "light",
       "style": "vibrant",
       "viewport": "900",
-      "count": 42
+      "count": 41
+    },
+    {
+      "pageUrl": "students/lesson-00-bak.html",
+      "theme": "light",
+      "style": "vibrant",
+      "viewport": "900",
+      "count": 44
     },
     {
       "pageUrl": "students/lesson-00.html",
@@ -394,11 +422,11 @@
       "count": 44
     },
     {
-      "pageUrl": "pages/glossary.html",
+      "pageUrl": "mentors/lesson-00.html",
       "theme": "light",
       "style": "vibrant",
       "viewport": "900",
-      "count": 41
+      "count": 42
     },
     {
       "pageUrl": "pages/facts.html",
@@ -408,35 +436,7 @@
       "count": 41
     },
     {
-      "pageUrl": "pages/mentors.html",
-      "theme": "light",
-      "style": "vibrant",
-      "viewport": "900",
-      "count": 39
-    },
-    {
-      "pageUrl": "pages/students.html",
-      "theme": "light",
-      "style": "vibrant",
-      "viewport": "900",
-      "count": 43
-    },
-    {
-      "pageUrl": "pages/gallery.html",
-      "theme": "light",
-      "style": "vibrant",
-      "viewport": "900",
-      "count": 41
-    },
-    {
-      "pageUrl": "pages/faq.html",
-      "theme": "light",
-      "style": "vibrant",
-      "viewport": "900",
-      "count": 39
-    },
-    {
-      "pageUrl": "pages/license.html",
+      "pageUrl": "pages/start.html",
       "theme": "light",
       "style": "vibrant",
       "viewport": "900",
@@ -450,18 +450,46 @@
       "count": 39
     },
     {
-      "pageUrl": "pages/start.html",
+      "pageUrl": "pages/mentors.html",
       "theme": "light",
       "style": "vibrant",
       "viewport": "900",
       "count": 39
     },
     {
-      "pageUrl": "mentors/lesson-00.html",
-      "theme": "dark",
+      "pageUrl": "pages/faq.html",
+      "theme": "light",
       "style": "vibrant",
       "viewport": "900",
-      "count": 42
+      "count": 39
+    },
+    {
+      "pageUrl": "pages/students.html",
+      "theme": "light",
+      "style": "vibrant",
+      "viewport": "900",
+      "count": 43
+    },
+    {
+      "pageUrl": "pages/license.html",
+      "theme": "light",
+      "style": "vibrant",
+      "viewport": "900",
+      "count": 39
+    },
+    {
+      "pageUrl": "pages/glossary.html",
+      "theme": "light",
+      "style": "vibrant",
+      "viewport": "900",
+      "count": 41
+    },
+    {
+      "pageUrl": "pages/gallery.html",
+      "theme": "light",
+      "style": "vibrant",
+      "viewport": "900",
+      "count": 41
     },
     {
       "pageUrl": "index.html",
@@ -475,7 +503,14 @@
       "theme": "dark",
       "style": "vibrant",
       "viewport": "900",
-      "count": 42
+      "count": 41
+    },
+    {
+      "pageUrl": "students/lesson-00-bak.html",
+      "theme": "dark",
+      "style": "vibrant",
+      "viewport": "900",
+      "count": 44
     },
     {
       "pageUrl": "students/lesson-00.html",
@@ -485,7 +520,7 @@
       "count": 44
     },
     {
-      "pageUrl": "pages/glossary.html",
+      "pageUrl": "mentors/lesson-00.html",
       "theme": "dark",
       "style": "vibrant",
       "viewport": "900",
@@ -499,35 +534,7 @@
       "count": 41
     },
     {
-      "pageUrl": "pages/mentors.html",
-      "theme": "dark",
-      "style": "vibrant",
-      "viewport": "900",
-      "count": 39
-    },
-    {
-      "pageUrl": "pages/students.html",
-      "theme": "dark",
-      "style": "vibrant",
-      "viewport": "900",
-      "count": 43
-    },
-    {
-      "pageUrl": "pages/gallery.html",
-      "theme": "dark",
-      "style": "vibrant",
-      "viewport": "900",
-      "count": 41
-    },
-    {
-      "pageUrl": "pages/faq.html",
-      "theme": "dark",
-      "style": "vibrant",
-      "viewport": "900",
-      "count": 39
-    },
-    {
-      "pageUrl": "pages/license.html",
+      "pageUrl": "pages/start.html",
       "theme": "dark",
       "style": "vibrant",
       "viewport": "900",
@@ -541,17 +548,52 @@
       "count": 39
     },
     {
-      "pageUrl": "pages/start.html",
+      "pageUrl": "pages/mentors.html",
       "theme": "dark",
       "style": "vibrant",
       "viewport": "900",
       "count": 39
+    },
+    {
+      "pageUrl": "pages/faq.html",
+      "theme": "dark",
+      "style": "vibrant",
+      "viewport": "900",
+      "count": 39
+    },
+    {
+      "pageUrl": "pages/students.html",
+      "theme": "dark",
+      "style": "vibrant",
+      "viewport": "900",
+      "count": 43
+    },
+    {
+      "pageUrl": "pages/license.html",
+      "theme": "dark",
+      "style": "vibrant",
+      "viewport": "900",
+      "count": 39
+    },
+    {
+      "pageUrl": "pages/glossary.html",
+      "theme": "dark",
+      "style": "vibrant",
+      "viewport": "900",
+      "count": 41
+    },
+    {
+      "pageUrl": "pages/gallery.html",
+      "theme": "dark",
+      "style": "vibrant",
+      "viewport": "900",
+      "count": 41
     }
   ],
   "incomplete": [],
   "metadata": {
-    "pagesTestedCount": 13,
-    "totalTestRuns": 78,
+    "pagesTestedCount": 14,
+    "totalTestRuns": 84,
     "viewports": [
       "900"
     ],
