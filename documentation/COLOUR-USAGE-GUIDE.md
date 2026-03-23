@@ -1,4 +1,4 @@
-# colour usage Guide
+# Web Witchcraft and Wizardry colour usage Guide
 
 ## Overview
 
@@ -17,7 +17,7 @@ themeSwitcher.js
   ├── Maps generic variables to theme-specific colors
   └── Updates all pages dynamically
 
-Your CSS/HTML
+CSS/HTML
   └── Uses ONLY generic variables (never theme-specific ones)
 ```
 
@@ -29,26 +29,36 @@ Your CSS/HTML
 
 **Always use these generic variables** defined by `themeSwitcher.js`:
 
-| Variable | Purpose | Example |
-|----------|---------|---------|
-| `--colour-page-background` | Page background color | `background: var(--colour-page-background);` |
-| `--colour-page-text` | Body text color | `color: var(--colour-page-text);` |
-| `--colour-headings-background` | Heading backgrounds | `background: var(--colour-headings-background);` |
-| `--colour-headings-text` | Heading text color | `color: var(--colour-headings-text);` |
-| `--colour-link-text` | Link text color | `a { color: var(--colour-link-text); }` |
-| `--colour-link-text-hover` | Link hover color | `a:hover { color: var(--colour-link-text-hover); }` |
-| `--colour-link-text-visited` | Visited link color | `a:visited { color: var(--colour-link-text-visited); }` |
-| `--colour-link-text-focus` | Focused link color | `a:focus { color: var(--colour-link-text-focus); }` |
-| `--colour-code-background` | Code block background | `code { background: var(--colour-code-background); }` |
-| `--colour-code-text` | Code block text | `code { color: var(--colour-code-text); }` |
-| `--colour-error-background` | Error message background | For error alerts |
-| `--colour-error-text` | Error message text | For error alerts |
-| `--colour-warning-background` | Warning message background | For warnings |
-| `--colour-warning-text` | Warning message text | For warnings |
-| `--bg-landscape` | Landscape background image | For page backgrounds |
-| `--bg-portrait` | Portrait background image | For page backgrounds |
+| Variable                                        | Purpose
+|-------------------------------------------------|---------------------------------------
+| `--colour-effective-page-background`            | Page background colour
+| `--colour-effective-page-text`                  | Body text colour
+| `--colour-effective-headings-background`        | Headings background colour
+| `--colour-effective-headings-text`              | Headings text colour
+| `--colour-effective-code-background`            | Code snippet background colour
+| `--colour-effective-code-text`                  | Code snippet text colour
+| `--colour-effective-button-background`          | Button background colour
+| `--colour-effective-button-text`                | Button text colour
+| `--colour-effective-button-background-hover`    | Hover/focus button background colour
+| `--colour-effective-button-text-hover`          | Hover/focus button text colour
+| `--colour-effective-button-background-selected` | Selected button background colour
+| `--colour-effective-button-text-selected`       | Selected button text colour
+| `--colour-effective-button-background-disabled` | Disabled button background colour
+| `--colour-effective-button-text-disabled`       | Diabled button text colour
+| `--colour-effective-link-background`            | Menu/link background colour
+| `--colour-effective-link-text`                  | Menu/link text colour
+| `--colour-effective-link-background-hover`      | Hover menu/link background colour
+| `--colour-effective-link-text-hover`            | Hover menu/link text colour
+| `--colour-effective-link-background-visited`    | Visited menu/link background colour
+| `--colour-effective-link-text-visited`          | Visited menu/link text colour
+| `--colour-effective-link-background-focus`      | Focus menu/link background colour
+| `--colour-effective-link-text-focus`            | Focus menu/link text colour
+| `--colour-error-background`                     | Error message background colour
+| `--colour-error-text`                           | Error message text colour
+| `--colour-warning-background`                   | Warning message background colour
+| `--colour-warning-text`                         | Warning message text colour
 
-**Why?** These automatically change when the user switches themes. Your code works with all 6 theme combinations without modification.
+**Why?** These automatically change when the user switches themes. Code works with all 6 theme combinations without modification.
 
 ---
 
@@ -59,7 +69,7 @@ Your CSS/HTML
 - `--colour-subdued-dark-headings-text` ❌
 - `--colour-vibrant-light-code-background` ❌
 
-**Why not?** These are hard-coded to specific themes. If a user switches from Normal to Subdued, your colors won't update.
+**Why not?** These are hard-coded to specific themes. If a user switches from Normal to Subdued, the colours won't update.
 
 **Exception:** Only `colours.css`, `themeSwitcher.js`, and diagnostic pages (`colourPalette.html`) may use these directly.
 
@@ -68,12 +78,12 @@ Your CSS/HTML
 ### ❌ NEVER: Use hardcoded colours
 
 **Never use:**
-- Hex colors: `#fff`, `#007bff`, `#ccc` ❌
+- Hex colours: `#fff`, `#007bff`, `#ccc` ❌
 - RGB: `rgb(255, 0, 0)`, `rgba(0, 0, 0, 0.5)` ❌
 - HSL: `hsl(180, 100%, 50%)` ❌
-- Named colors: `white`, `black`, `red` ❌
+- Named colours: `white`, `black`, `red` ❌
 
-**Why?** Hard-coded colors bypass the theme system entirely and may fail WCAG contrast standards in different themes.
+**Why?** Hard-coded colours bypass the theme system entirely and may fail WCAG contrast standards in different themes.
 
 **Limited exceptions:**
 - Shadows with transparency: `box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);` ✅ (transparency needed)
@@ -81,7 +91,7 @@ Your CSS/HTML
 
 ---
 
-## 📋 How to Use Colors Correctly
+## 📋 How to Use Colours Correctly
 
 ### Step 1: Ensure Theme System is Loaded
 
@@ -156,7 +166,7 @@ Users can choose from 6 combinations:
 | **Subdued** | Light gray background, dark gray text | Dark gray background, light gray text |
 | **Vibrant** | White background, bright colors | Black background, neon colors |
 
-**Your code doesn't need to know which theme is active** - the generic variables automatically point to the right colors.
+**Code doesn't need to know which theme is active** - the generic variables automatically point to the right colors.
 
 ---
 
@@ -185,7 +195,7 @@ This will identify:
 
 ## 🛠️ Fixing Common Issues
 
-### Issue: Hardcoded Color in CSS
+### Issue: Hardcoded Colour in CSS
 
 **Bad:**
 ```css
