@@ -1,0 +1,47 @@
+/* Favicon sparkle star colours */
+
+.sparkle-1 {
+    fill: #ff0000; /* Red sparkle */
+}
+
+.sparkle-2 {
+    fill: #00ff00; /* Green sparkle */
+}
+
+.sparkle-3 {
+    fill: #0000ff; /* Blue sparkle */
+}
+
+/* Animated sparkle colors - activated when parent svg has 'animated' class */
+svg.animated .sparkle-1 {
+    animation: colorChange1 1.5s infinite;
+}
+
+svg.animated .sparkle-2 {
+    animation: colorChange2 1.5s infinite;
+    animation-delay: 0.5s;
+}
+
+svg.animated .sparkle-3 {
+    animation: colorChange3 1.5s infinite;
+    animation-delay: 1s;
+}
+
+@keyframes colorChange1 {
+    0%, 100% { fill: #FF1744; } /* Deep Red */
+    33% { fill: #00E676; } /* Bright Green */
+    66% { fill: #FFD600; } /* Vibrant Yellow */
+}
+
+@keyframes colorChange2 {
+    0%, 100% { fill: #2979FF; } /* Bright Blue */
+    33% { fill: #FF6D00; } /* Deep Orange */
+    66% { fill: #E040FB; } /* Bright Purple */
+}
+
+@keyframes colorChange3 {
+    0%, 100% { fill: #00E5FF; } /* Cyan */
+    33% { fill: #FF4081; } /* Hot Pink */
+    66% { fill: #76FF03; } /* Lime Green */
+}
+

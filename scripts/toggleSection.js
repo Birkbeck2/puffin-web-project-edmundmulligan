@@ -44,15 +44,11 @@
         
             // Toggle visibility
             section.classList.toggle('hidden');
+            const isNowHidden = section.classList.contains('hidden');
         
-            // Toggle icon classes
-            if (event.currentTarget.classList.contains('magic-visible')) {
-                event.currentTarget.classList.remove('magic-visible');
-                event.currentTarget.classList.add('magic-invisible');
-            } else {
-                event.currentTarget.classList.remove('magic-invisible');
-                event.currentTarget.classList.add('magic-visible');
-            }
+            // Keep magic classes in sync with section visibility state.
+            event.currentTarget.classList.toggle('magic-invisible', isNowHidden);
+            event.currentTarget.classList.toggle('magic-visible', !isNowHidden);
         
             // Update ARIA attributes for accessibility
             event.currentTarget.setAttribute('aria-expanded', isExpanded ? 'false' : 'true');
