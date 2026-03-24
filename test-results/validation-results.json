@@ -1,11 +1,782 @@
 {
-  "files": [],
+  "files": [
+    {
+      "file": "./students/lesson-00.html",
+      "type": "html",
+      "errors": [
+        {
+          "line": 84,
+          "column": 6,
+          "message": "Unclosed element '<div>'",
+          "ruleId": "close-order",
+          "severity": "error"
+        },
+        {
+          "line": 93,
+          "column": 14,
+          "message": "Unclosed element '<div>'",
+          "ruleId": "close-order",
+          "severity": "error"
+        },
+        {
+          "line": 227,
+          "column": 25,
+          "message": "Attribute \"class\" using unquoted value",
+          "ruleId": "attr-quotes",
+          "severity": "error"
+        },
+        {
+          "line": 227,
+          "column": 40,
+          "message": "Raw \"\"\" must be encoded as \"&quot;\"",
+          "ruleId": "no-raw-characters",
+          "severity": "error"
+        },
+        {
+          "line": 1279,
+          "column": 54,
+          "message": "Trailing whitespace",
+          "ruleId": "no-trailing-whitespace",
+          "severity": "error"
+        },
+        {
+          "line": 1431,
+          "column": 42,
+          "message": "Trailing whitespace",
+          "ruleId": "no-trailing-whitespace",
+          "severity": "error"
+        },
+        {
+          "line": 2142,
+          "column": 37,
+          "message": "Attribute \"id\" used ' instead of expected \"",
+          "ruleId": "attr-quotes",
+          "severity": "error"
+        },
+        {
+          "line": 2160,
+          "column": 26,
+          "message": "Attribute \"id\" used ' instead of expected \"",
+          "ruleId": "attr-quotes",
+          "severity": "error"
+        },
+        {
+          "line": 2193,
+          "column": 1,
+          "message": "Trailing whitespace",
+          "ruleId": "no-trailing-whitespace",
+          "severity": "error"
+        },
+        {
+          "line": 2508,
+          "column": 30,
+          "message": "Element <li> is implicitly closed by parent </ol>",
+          "ruleId": "no-implicit-close",
+          "severity": "error"
+        },
+        {
+          "line": 2552,
+          "column": 36,
+          "message": "Raw \">\" must be encoded as \"&gt;\"",
+          "ruleId": "no-raw-characters",
+          "severity": "error"
+        },
+        {
+          "line": 2553,
+          "column": 26,
+          "message": "Stray end tag '</ol>'",
+          "ruleId": "close-order",
+          "severity": "error"
+        },
+        {
+          "line": 2765,
+          "column": 18,
+          "message": "Unclosed element '<div>'",
+          "ruleId": "close-order",
+          "severity": "error"
+        },
+        {
+          "line": 2777,
+          "column": 26,
+          "message": "Unclosed element '<ol>'",
+          "ruleId": "close-order",
+          "severity": "error"
+        },
+        {
+          "line": 2800,
+          "column": 30,
+          "message": "Unclosed element '<li>'",
+          "ruleId": "close-order",
+          "severity": "error"
+        },
+        {
+          "line": 2800,
+          "column": 30,
+          "message": "Element <li> is implicitly closed by adjacent <#document>",
+          "ruleId": "no-implicit-close",
+          "severity": "error"
+        },
+        {
+          "line": 2814,
+          "column": 38,
+          "message": "Unclosed element '<li>'",
+          "ruleId": "close-order",
+          "severity": "error"
+        },
+        {
+          "line": 2814,
+          "column": 38,
+          "message": "Element <li> is implicitly closed by adjacent <#document>",
+          "ruleId": "no-implicit-close",
+          "severity": "error"
+        },
+        {
+          "line": 2829,
+          "column": 46,
+          "message": "Element <li> is implicitly closed by adjacent <#document>",
+          "ruleId": "no-implicit-close",
+          "severity": "error"
+        },
+        {
+          "line": 2830,
+          "column": 50,
+          "message": "<ore> is not a valid element name",
+          "ruleId": "element-name",
+          "severity": "error"
+        },
+        {
+          "line": 2830,
+          "column": 50,
+          "message": "Unclosed element '<ore>'",
+          "ruleId": "close-order",
+          "severity": "error"
+        },
+        {
+          "line": 2832,
+          "column": 57,
+          "message": "Stray end tag '</pre>'",
+          "ruleId": "close-order",
+          "severity": "error"
+        },
+        {
+          "line": 2833,
+          "column": 80,
+          "message": "End tag '</li>' seen but there were open elements",
+          "ruleId": "close-order",
+          "severity": "error"
+        },
+        {
+          "line": 2834,
+          "column": 42,
+          "message": "End tag '</ul>' seen but there were open elements",
+          "ruleId": "close-order",
+          "severity": "error"
+        },
+        {
+          "line": 2835,
+          "column": 38,
+          "message": "End tag '</li>' seen but there were open elements",
+          "ruleId": "close-order",
+          "severity": "error"
+        },
+        {
+          "line": 2836,
+          "column": 38,
+          "message": "<li> element requires a <ul>, <ol>, <menu> or <template> element as parent",
+          "ruleId": "element-permitted-parent",
+          "severity": "error"
+        },
+        {
+          "line": 2875,
+          "column": 34,
+          "message": "End tag '</ol>' seen but there were open elements",
+          "ruleId": "close-order",
+          "severity": "error"
+        },
+        {
+          "line": 2876,
+          "column": 30,
+          "message": "End tag '</li>' seen but there were open elements",
+          "ruleId": "close-order",
+          "severity": "error"
+        },
+        {
+          "line": 2877,
+          "column": 26,
+          "message": "End tag '</ol>' seen but there were open elements",
+          "ruleId": "close-order",
+          "severity": "error"
+        },
+        {
+          "line": 2878,
+          "column": 22,
+          "message": "End tag '</div>' seen but there were open elements",
+          "ruleId": "close-order",
+          "severity": "error"
+        },
+        {
+          "line": 2937,
+          "column": 18,
+          "message": "End tag '</div>' seen but there were open elements",
+          "ruleId": "close-order",
+          "severity": "error"
+        },
+        {
+          "line": 2938,
+          "column": 14,
+          "message": "End tag '</section>' seen but there were open elements",
+          "ruleId": "close-order",
+          "severity": "error"
+        },
+        {
+          "line": 3185,
+          "column": 10,
+          "message": "End tag '</div>' seen but there were open elements",
+          "ruleId": "close-order",
+          "severity": "error"
+        },
+        {
+          "line": 3186,
+          "column": 6,
+          "message": "End tag '</main>' seen but there were open elements",
+          "ruleId": "close-order",
+          "severity": "error"
+        },
+        {
+          "line": 3187,
+          "column": 6,
+          "message": "End tag '</div>' seen but there were open elements",
+          "ruleId": "close-order",
+          "severity": "error"
+        },
+        {
+          "line": 3195,
+          "column": 2,
+          "message": "End tag '</body>' seen but there were open elements",
+          "ruleId": "close-order",
+          "severity": "error"
+        },
+        {
+          "line": 3196,
+          "column": 2,
+          "message": "End tag '</html>' seen but there were open elements",
+          "ruleId": "close-order",
+          "severity": "error"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "file": "./manipulated-images/image2.html",
+      "type": "html",
+      "errors": [
+        {
+          "line": 102,
+          "column": 108,
+          "message": "Trailing whitespace",
+          "ruleId": "no-trailing-whitespace",
+          "severity": "error"
+        },
+        {
+          "line": 104,
+          "column": 107,
+          "message": "Trailing whitespace",
+          "ruleId": "no-trailing-whitespace",
+          "severity": "error"
+        },
+        {
+          "line": 106,
+          "column": 108,
+          "message": "Trailing whitespace",
+          "ruleId": "no-trailing-whitespace",
+          "severity": "error"
+        },
+        {
+          "line": 248,
+          "column": 1,
+          "message": "Trailing whitespace",
+          "ruleId": "no-trailing-whitespace",
+          "severity": "error"
+        },
+        {
+          "line": 250,
+          "column": 1,
+          "message": "Trailing whitespace",
+          "ruleId": "no-trailing-whitespace",
+          "severity": "error"
+        },
+        {
+          "line": 254,
+          "column": 1,
+          "message": "Trailing whitespace",
+          "ruleId": "no-trailing-whitespace",
+          "severity": "error"
+        },
+        {
+          "line": 266,
+          "column": 1,
+          "message": "Trailing whitespace",
+          "ruleId": "no-trailing-whitespace",
+          "severity": "error"
+        },
+        {
+          "line": 269,
+          "column": 1,
+          "message": "Trailing whitespace",
+          "ruleId": "no-trailing-whitespace",
+          "severity": "error"
+        },
+        {
+          "line": 272,
+          "column": 1,
+          "message": "Trailing whitespace",
+          "ruleId": "no-trailing-whitespace",
+          "severity": "error"
+        },
+        {
+          "line": 291,
+          "column": 1,
+          "message": "Trailing whitespace",
+          "ruleId": "no-trailing-whitespace",
+          "severity": "error"
+        },
+        {
+          "line": 295,
+          "column": 1,
+          "message": "Trailing whitespace",
+          "ruleId": "no-trailing-whitespace",
+          "severity": "error"
+        },
+        {
+          "line": 302,
+          "column": 1,
+          "message": "Trailing whitespace",
+          "ruleId": "no-trailing-whitespace",
+          "severity": "error"
+        },
+        {
+          "line": 306,
+          "column": 1,
+          "message": "Trailing whitespace",
+          "ruleId": "no-trailing-whitespace",
+          "severity": "error"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "file": "./manipulated-images/index.html",
+      "type": "html",
+      "errors": [
+        {
+          "line": 24,
+          "column": 1,
+          "message": "Trailing whitespace",
+          "ruleId": "no-trailing-whitespace",
+          "severity": "error"
+        },
+        {
+          "line": 27,
+          "column": 1,
+          "message": "Trailing whitespace",
+          "ruleId": "no-trailing-whitespace",
+          "severity": "error"
+        },
+        {
+          "line": 93,
+          "column": 134,
+          "message": "Attribute \"width\" has invalid value \"400px\"",
+          "ruleId": "attribute-allowed-values",
+          "severity": "error"
+        },
+        {
+          "line": 104,
+          "column": 114,
+          "message": "Attribute \"width\" has invalid value \"400px\"",
+          "ruleId": "attribute-allowed-values",
+          "severity": "error"
+        },
+        {
+          "line": 120,
+          "column": 62,
+          "message": "Inline style is not allowed",
+          "ruleId": "no-inline-style",
+          "severity": "error"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "file": "./manipulated-images/image1.html",
+      "type": "html",
+      "errors": [
+        {
+          "line": 22,
+          "column": 1,
+          "message": "Trailing whitespace",
+          "ruleId": "no-trailing-whitespace",
+          "severity": "error"
+        },
+        {
+          "line": 23,
+          "column": 106,
+          "message": "Trailing whitespace",
+          "ruleId": "no-trailing-whitespace",
+          "severity": "error"
+        },
+        {
+          "line": 29,
+          "column": 1,
+          "message": "Trailing whitespace",
+          "ruleId": "no-trailing-whitespace",
+          "severity": "error"
+        },
+        {
+          "line": 30,
+          "column": 106,
+          "message": "Trailing whitespace",
+          "ruleId": "no-trailing-whitespace",
+          "severity": "error"
+        },
+        {
+          "line": 31,
+          "column": 102,
+          "message": "Trailing whitespace",
+          "ruleId": "no-trailing-whitespace",
+          "severity": "error"
+        },
+        {
+          "line": 35,
+          "column": 102,
+          "message": "Trailing whitespace",
+          "ruleId": "no-trailing-whitespace",
+          "severity": "error"
+        },
+        {
+          "line": 68,
+          "column": 1,
+          "message": "Trailing whitespace",
+          "ruleId": "no-trailing-whitespace",
+          "severity": "error"
+        },
+        {
+          "line": 69,
+          "column": 93,
+          "message": "Trailing whitespace",
+          "ruleId": "no-trailing-whitespace",
+          "severity": "error"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "file": "./manipulated-images/image5.html",
+      "type": "html",
+      "errors": [
+        {
+          "line": 18,
+          "column": 155,
+          "message": "Attribute \"width\" has invalid value \"400px\"",
+          "ruleId": "attribute-allowed-values",
+          "severity": "error"
+        },
+        {
+          "line": 23,
+          "column": 134,
+          "message": "Attribute \"width\" has invalid value \"400px\"",
+          "ruleId": "attribute-allowed-values",
+          "severity": "error"
+        },
+        {
+          "line": 27,
+          "column": 1,
+          "message": "Trailing whitespace",
+          "ruleId": "no-trailing-whitespace",
+          "severity": "error"
+        },
+        {
+          "line": 33,
+          "column": 114,
+          "message": "Attribute \"width\" has invalid value \"400px\"",
+          "ruleId": "attribute-allowed-values",
+          "severity": "error"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "file": "./manipulated-images/image4.html",
+      "type": "html",
+      "errors": [
+        {
+          "line": 18,
+          "column": 132,
+          "message": "Attribute \"width\" has invalid value \"400px\"",
+          "ruleId": "attribute-allowed-values",
+          "severity": "error"
+        },
+        {
+          "line": 23,
+          "column": 127,
+          "message": "Attribute \"width\" has invalid value \"400px\"",
+          "ruleId": "attribute-allowed-values",
+          "severity": "error"
+        },
+        {
+          "line": 33,
+          "column": 134,
+          "message": "Attribute \"width\" has invalid value \"400px\"",
+          "ruleId": "attribute-allowed-values",
+          "severity": "error"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "file": "./manipulated-images/image6.html",
+      "type": "html",
+      "errors": [
+        {
+          "line": 22,
+          "column": 1,
+          "message": "Trailing whitespace",
+          "ruleId": "no-trailing-whitespace",
+          "severity": "error"
+        },
+        {
+          "line": 56,
+          "column": 1,
+          "message": "Trailing whitespace",
+          "ruleId": "no-trailing-whitespace",
+          "severity": "error"
+        },
+        {
+          "line": 80,
+          "column": 336,
+          "message": "Stray end tag '</p>'",
+          "ruleId": "close-order",
+          "severity": "error"
+        },
+        {
+          "line": 173,
+          "column": 26,
+          "message": "failed to tokenize \"<< 'FILTER...\", state TEXT failed to consume data or change state.",
+          "ruleId": "parser-error",
+          "severity": "error"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "file": "./manipulated-images/scripts/animated-web-switcher.js",
+      "type": "js",
+      "errors": [
+        {
+          "line": 31,
+          "column": 11,
+          "message": "'animatedWeb' is defined but never used.",
+          "ruleId": null,
+          "severity": "error"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "file": "./manipulated-images/image3.html",
+      "type": "html",
+      "errors": [
+        {
+          "line": 29,
+          "column": 1,
+          "message": "Trailing whitespace",
+          "ruleId": "no-trailing-whitespace",
+          "severity": "error"
+        },
+        {
+          "line": 44,
+          "column": 1,
+          "message": "Trailing whitespace",
+          "ruleId": "no-trailing-whitespace",
+          "severity": "error"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "file": "./manipulated-images/styles/favicon.css",
+      "type": "css",
+      "errors": [
+        {
+          "line": 4,
+          "column": 11,
+          "message": "Expected \"#ff0000\" to be \"#f00\" (color-hex-length)",
+          "ruleId": "color-hex-length",
+          "severity": "error"
+        },
+        {
+          "line": 8,
+          "column": 11,
+          "message": "Expected \"#00ff00\" to be \"#0f0\" (color-hex-length)",
+          "ruleId": "color-hex-length",
+          "severity": "error"
+        },
+        {
+          "line": 12,
+          "column": 11,
+          "message": "Expected \"#0000ff\" to be \"#00f\" (color-hex-length)",
+          "ruleId": "color-hex-length",
+          "severity": "error"
+        },
+        {
+          "line": 30,
+          "column": 12,
+          "message": "Expected keyframe name \"colorChange1\" to be kebab-case (keyframes-name-pattern)",
+          "ruleId": "keyframes-name-pattern",
+          "severity": "error"
+        },
+        {
+          "line": 36,
+          "column": 12,
+          "message": "Expected keyframe name \"colorChange2\" to be kebab-case (keyframes-name-pattern)",
+          "ruleId": "keyframes-name-pattern",
+          "severity": "error"
+        },
+        {
+          "line": 42,
+          "column": 12,
+          "message": "Expected keyframe name \"colorChange3\" to be kebab-case (keyframes-name-pattern)",
+          "ruleId": "keyframes-name-pattern",
+          "severity": "error"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "file": "./manipulated-images/styles/main.css",
+      "type": "css",
+      "errors": [
+        {
+          "line": 24,
+          "column": 51,
+          "message": "Expected \"0.1\" to be \"10%\" (alpha-value-notation)",
+          "ruleId": "alpha-value-notation",
+          "severity": "error"
+        },
+        {
+          "line": 110,
+          "column": 52,
+          "message": "Expected \"0.05\" to be \"5%\" (alpha-value-notation)",
+          "ruleId": "alpha-value-notation",
+          "severity": "error"
+        },
+        {
+          "line": 203,
+          "column": 52,
+          "message": "Expected \"0.05\" to be \"5%\" (alpha-value-notation)",
+          "ruleId": "alpha-value-notation",
+          "severity": "error"
+        },
+        {
+          "line": 24,
+          "column": 37,
+          "message": "Expected \"rgba\" to be \"rgb\" (color-function-alias-notation)",
+          "ruleId": "color-function-alias-notation",
+          "severity": "error"
+        },
+        {
+          "line": 110,
+          "column": 38,
+          "message": "Expected \"rgba\" to be \"rgb\" (color-function-alias-notation)",
+          "ruleId": "color-function-alias-notation",
+          "severity": "error"
+        },
+        {
+          "line": 203,
+          "column": 38,
+          "message": "Expected \"rgba\" to be \"rgb\" (color-function-alias-notation)",
+          "ruleId": "color-function-alias-notation",
+          "severity": "error"
+        },
+        {
+          "line": 24,
+          "column": 37,
+          "message": "Expected modern color-function notation (color-function-notation)",
+          "ruleId": "color-function-notation",
+          "severity": "error"
+        },
+        {
+          "line": 110,
+          "column": 38,
+          "message": "Expected modern color-function notation (color-function-notation)",
+          "ruleId": "color-function-notation",
+          "severity": "error"
+        },
+        {
+          "line": 203,
+          "column": 38,
+          "message": "Expected modern color-function notation (color-function-notation)",
+          "ruleId": "color-function-notation",
+          "severity": "error"
+        },
+        {
+          "line": 229,
+          "column": 8,
+          "message": "Expected \"context\" media feature range notation (media-feature-range-notation)",
+          "ruleId": "media-feature-range-notation",
+          "severity": "error"
+        },
+        {
+          "line": 261,
+          "column": 8,
+          "message": "Expected \"context\" media feature range notation (media-feature-range-notation)",
+          "ruleId": "media-feature-range-notation",
+          "severity": "error"
+        },
+        {
+          "line": 288,
+          "column": 5,
+          "message": "Expected \"word-wrap\" to be \"overflow-wrap\" (property-no-deprecated)",
+          "ruleId": "property-no-deprecated",
+          "severity": "error"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "file": "./styles/components/favicon.css",
+      "type": "css",
+      "errors": [
+        {
+          "line": 30,
+          "column": 12,
+          "message": "Expected keyframe name \"colourChange1\" to be kebab-case (keyframes-name-pattern)",
+          "ruleId": "keyframes-name-pattern",
+          "severity": "error"
+        },
+        {
+          "line": 36,
+          "column": 12,
+          "message": "Expected keyframe name \"colourChange2\" to be kebab-case (keyframes-name-pattern)",
+          "ruleId": "keyframes-name-pattern",
+          "severity": "error"
+        },
+        {
+          "line": 42,
+          "column": 12,
+          "message": "Expected keyframe name \"colourChange3\" to be kebab-case (keyframes-name-pattern)",
+          "ruleId": "keyframes-name-pattern",
+          "severity": "error"
+        }
+      ],
+      "warnings": []
+    }
+  ],
   "summary": {
-    "htmlErrors": 0,
+    "htmlErrors": 76,
     "htmlWarnings": 0,
-    "cssErrors": 0,
+    "cssErrors": 21,
     "cssWarnings": 0,
-    "jsErrors": 0,
+    "jsErrors": 1,
     "jsWarnings": 0
   }
 }
