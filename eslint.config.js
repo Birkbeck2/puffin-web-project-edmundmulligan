@@ -44,6 +44,36 @@ module.exports = [
       "no-unused-expressions": "error"
     }
   },
+  // CommonJS data modules used by the lesson build pipeline
+  {
+    files: ["data/**/*.js"],
+    languageOptions: {
+      ecmaVersion: 2021,
+      sourceType: "commonjs",
+      globals: {
+        console: "readonly",
+        process: "readonly",
+        require: "readonly",
+        module: "readonly",
+        exports: "readonly",
+        __dirname: "readonly",
+        __filename: "readonly",
+        Buffer: "readonly",
+        setTimeout: "readonly",
+        setInterval: "readonly",
+        clearTimeout: "readonly",
+        clearInterval: "readonly"
+      }
+    },
+    rules: {
+      "indent": ["error", 4],
+      "linebreak-style": ["error", "unix"],
+      "quotes": ["error", "single"],
+      "semi": ["error", "always"],
+      "no-undef": "error",
+      "no-unused-expressions": "error"
+    }
+  },
   // Browser JavaScript configuration
   {
     files: ["scripts/**/*.js", "pages/**/*.js", "students/**/*.js", "mentors/**/*.js"],

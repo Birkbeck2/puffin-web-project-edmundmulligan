@@ -14,7 +14,7 @@ File Header Comments Check Results
 =====================================
 Summary
 =====================================
-Total files checked: 77
+Total files checked: 76
 Files with issues: 3
   Missing header blocks: 1
   Missing required fields: 2

@@ -1,54 +1,54 @@
 module.exports = {
-  lesson: {
-    number: 0,
-    title: "Getting Started",
-    page_title: "Lesson 0 - Getting Started"
-  },
-  platforms: [
-    {
-      id: "chromebook",
-      name: "Chromebook",
-      cap_name: "Chromebook",
-      non_developer: true,
-      description: `<div id="instructions-chromebook">
+    lesson: {
+        number: 0,
+        title: 'Getting Started',
+        page_title: 'Lesson 0 - Getting Started'
+    },
+    platforms: [
+        {
+            id: 'chromebook',
+            name: 'Chromebook',
+            cap_name: 'Chromebook',
+            non_developer: true,
+            description: `<div id="instructions-chromebook">
                     <p>
                         Chromebooks are inexpensive laptops that run Chrome OS, but they are not great for web development. It is possible to install Linux on some Chromebooks, but Google makes it difficult to do this without opening the computer up and making changes to the hardware. <strong>This will, at the very least, void your warranty and I honestly do not recommend doing this.</strong> I destroyed one Chromebook when I tried. If you want a cheap laptop for web  development, consider a Windows or Linux machine instead.
                     </p>
                 </div>`
-    },
-    {
-      id: "android",
-      name: "Android",
-      cap_name: "Android",
-      non_developer: true,
-      description: `<div id="instructions-android">
+        },
+        {
+            id: 'android',
+            name: 'Android',
+            cap_name: 'Android',
+            non_developer: true,
+            description: `<div id="instructions-android">
                     <p>
                         Android phones and tablets are not ideal for web development. While there are some code editors available for Android, the experience is limited compared to using a laptop or desktop computer. If possible, use a Windows, or Linux machine for the best experience.
                     </p>
                 </div>`
-    },
-    {
-      id: "ios",
-      name: "Ios",
-      cap_name: "iOS (iPhone/iPad)",
-      non_developer: true,
-      description: `<div id="instructions-ios">
+        },
+        {
+            id: 'ios',
+            name: 'Ios',
+            cap_name: 'iOS (iPhone/iPad)',
+            non_developer: true,
+            description: `<div id="instructions-ios">
                     <p>
                         Apple iPhones and iPads are not ideal for web development. While there are some code editors available for iOS, the experience is limited compared to using a laptop or desktop computer. If possible, use a macOS machine such as an iMac or MacBook for the best experience.
                     </p>
                 </div>`
-    }
-  ],
-  common_sections: [
-    {
-      section: true,
-      section_id: "introduction",
-      title: "Introduction",
-      container_class: "intro-container",
-      content_class: "intro-content",
-      title_class: "lesson-title",
-      class_list: "lesson-install-windows lesson-install-macos lesson-install-linux",
-      content: `<div class="intro-container">
+        }
+    ],
+    common_sections: [
+        {
+            section: true,
+            section_id: 'introduction',
+            title: 'Introduction',
+            container_class: 'intro-container',
+            content_class: 'intro-content',
+            title_class: 'lesson-title',
+            class_list: 'lesson-install-windows lesson-install-macos lesson-install-linux',
+            content: `<div class="intro-container">
                     <div class="intro-content">
                         <div id="introduction-block">
                             <p>
@@ -57,32 +57,32 @@ module.exports = {
                         </div>
                     </div>
                 </div>`
-    },
-    {
-      section: true,
-      section_id: "warning",
-      title: "Warning",
-      container_class: "warning-container",
-      content_class: "warning-content",
-      title_class: "lesson-title",
-      class_list: "lesson-install-windows lesson-install-macos lesson-install-linux",
-      content: `<div class="warning-container">
+        },
+        {
+            section: true,
+            section_id: 'warning',
+            title: 'Warning',
+            container_class: 'warning-container',
+            content_class: 'warning-content',
+            title_class: 'lesson-title',
+            class_list: 'lesson-install-windows lesson-install-macos lesson-install-linux',
+            content: `<div class="warning-container">
                     <div class="warning-content">
                         <p>
                             This lesson involves installing software on your computer. If you are using a shared or school computer, please check with a parent, guardian, or teacher before proceeding with the installations. Also, you will need administrative privileges to install the software. This means you will need an administrator password at various stages. If you are not using your own computer, you may need to get the owner to do those steps for you. Finally be aware that the instructions are long and detailed to ensure you get everything set up correctly. Take your time and follow each step carefully. Ask for help from a mentor, if one is available. The rest of the lessons are much shorter and easier once you have the tools installed!
                         </p>
                     </div>
                 </div>`
-    },
-    {
-      section: true,
-      section_id: "installing-required-software",
-      title: "Installing Required Software",
-      container_class: "",
-      content_class: "",
-      title_class: "lesson-title",
-      class_list: "lesson-install-windows lesson-install-macos lesson-install-linux",
-      content: `<div id="installing-required-software-block">
+        },
+        {
+            section: true,
+            section_id: 'installing-required-software',
+            title: 'Installing Required Software',
+            container_class: '',
+            content_class: '',
+            title_class: 'lesson-title',
+            class_list: 'lesson-install-windows lesson-install-macos lesson-install-linux',
+            content: `<div id="installing-required-software-block">
                     <p>These are the tools you need to install. Some may already be installed on your computer, in which case you can skip those sections. You may use other tools if you prefer, but these are the ones the lessons will assume you have.</p>
                     <ul>
                         <li>Microsoft Visual Studio Code (or another code editor).</li>
@@ -95,18 +95,18 @@ module.exports = {
                         Node.js is required from the start to run the development server. If you don't want to install Git or SQLite right now, that's okay; you can install them later when you get to the lessons that need them.
                     </p>
                 </div>`
-    }
-  ],
-  developer_platforms: [
-    {
-      os_id: "windows",
-      os_name: "Windows",
-      tools: [
+        }
+    ],
+    developer_platforms: [
         {
-          tool_id: "vsc",
-          tool_name: "Visual Studio Code",
-          tool_content: `<div id="vsc-windows">
-                    <h4 class=faq-title">Check whether Visual Studio Code is already installed</h4>
+            os_id: 'windows',
+            os_name: 'Windows',
+            tools: [
+                {
+                    tool_id: 'vsc',
+                    tool_name: 'Visual Studio Code',
+                    tool_content: `<div id="vsc-windows">
+                    <h4 class="faq-title">Check whether Visual Studio Code is already installed</h4>
                     <ul>
                         <li>Press <code>Windows key + R</code></li>
                         <li>Type <code>code</code> and press Enter</li>
@@ -172,11 +172,11 @@ module.exports = {
                         </li>
                     </ol>
                 </div>`
-        },
-        {
-          tool_id: "firefox",
-          tool_name: "Mozilla Firefox",
-          tool_content: `<div id="firefox-windows">
+                },
+                {
+                    tool_id: 'firefox',
+                    tool_name: 'Mozilla Firefox',
+                    tool_content: `<div id="firefox-windows">
                     <h4 class="faq-title">Check whether Firefox is already installed</h4>
                     <ul>
                         <li>Press <code>Windows key</code></li>
@@ -238,11 +238,11 @@ module.exports = {
                         </li>
                     </ol>
                 </div>`
-        },
-        {
-          tool_id: "nodejs",
-          tool_name: "Node.js",
-          tool_content: `<div id="nodejs-windows">
+                },
+                {
+                    tool_id: 'nodejs',
+                    tool_name: 'Node.js',
+                    tool_content: `<div id="nodejs-windows">
                     <h4 class="faq-title">Check whether Node.js is already installed</h4>
                     <ul>
                         <li>Press <code>Windows key + R</code></li>
@@ -369,11 +369,11 @@ echo const http = require('http'); http.createServer((req, res) =&gt; {res.write
                         </li>
                     </ol>
                 </div>`
-        },
-        {
-          tool_id: "git",
-          tool_name: "Git",
-          tool_content: `<div id="git-windows">
+                },
+                {
+                    tool_id: 'git',
+                    tool_name: 'Git',
+                    tool_content: `<div id="git-windows">
                     <h4 class="faq-title">Check whether Git is already installed</h4>
                     <ul>
                         <li>Press <code>Windows key + R</code></li>
@@ -493,11 +493,11 @@ git config --global --list
                         </li>
                     </ol>
                 </div>`
-        },
-        {
-          tool_id: "sqlite",
-          tool_name: "SQLite",
-          tool_content: `<div id="sqlite-windows">
+                },
+                {
+                    tool_id: 'sqlite',
+                    tool_name: 'SQLite',
+                    tool_content: `<div id="sqlite-windows">
                     <h4 class="faq-title">Check whether SQLite is already installed</h4>
                     <ul>
                         <li>Press <code>Windows key + R</code></li>
@@ -608,17 +608,17 @@ SELECT * FROM users;
                         </li>
                     </ol>
                 </div>`
-        }
-      ]
-    },
-    {
-      os_id: "macos",
-      os_name: "macOS",
-      tools: [
+                }
+            ]
+        },
         {
-          tool_id: "vsc",
-          tool_name: "Visual Studio Code",
-          tool_content: `<div id="vsc-macos">
+            os_id: 'macos',
+            os_name: 'macOS',
+            tools: [
+                {
+                    tool_id: 'vsc',
+                    tool_name: 'Visual Studio Code',
+                    tool_content: `<div id="vsc-macos">
                     <h4 class="faq-title">Check whether Visual Studio Code is already installed:</h4>
                     <ul>
                         <li>Open Finder</li>
@@ -690,11 +690,11 @@ SELECT * FROM users;
                         </li>
                     </ol>
                 </div>`
-        },
-        {
-          tool_id: "firefox",
-          tool_name: "Mozilla Firefox",
-          tool_content: `<div id="firefox-macos">
+                },
+                {
+                    tool_id: 'firefox',
+                    tool_name: 'Mozilla Firefox',
+                    tool_content: `<div id="firefox-macos">
                     <h4 class="faq-title">Check whether Firefox is already installed:</h4>
                     <ul>
                         <li>Open Finder</li>
@@ -765,11 +765,11 @@ SELECT * FROM users;
                         </li>
                     </ol>
                 </div>`
-        },
-        {
-          tool_id: "nodejs",
-          tool_name: "Node.js",
-          tool_content: `<div id="nodejs-macos">
+                },
+                {
+                    tool_id: 'nodejs',
+                    tool_name: 'Node.js',
+                    tool_content: `<div id="nodejs-macos">
                     <h4 class="faq-title">Check whether Node.js is already installed:</h4>
                     <ul>
                         <li>Open Terminal (<code>Command + Space</code>, type "Terminal")</li>
@@ -886,7 +886,7 @@ brew --version
                                     <li>If you get "command not found", install Homebrew with:
                                         <pre><code>
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-                                        </code></pre> 
+                                        </code></pre>
                                     </li>
                                     <li>Follow the on-screen instructions</li>
                                 </ul>
@@ -967,11 +967,11 @@ node server.js
                         </ol>
                     </div>
                 </div>`
-        },
-        {
-          tool_id: "git",
-          tool_name: "Git",
-          tool_content: `<div id="git-macos">
+                },
+                {
+                    tool_id: 'git',
+                    tool_name: 'Git',
+                    tool_content: `<div id="git-macos">
                     <h4 class="faq-title">Check whether Git is already installed:</h4>
                     <ul>
                         <li>Open Terminal (<code>Command + Space</code>, type "Terminal")</li>
@@ -1035,7 +1035,7 @@ git --version
                                         <pre><code>
 git config --global --list
                                         </code></pre>
-                                    </li>                                           
+                                    </li>
                                     <li>You should see your name and email listed</li>
                                 </ul>
                             </li>
@@ -1162,11 +1162,11 @@ git config --global --list
                         </ol>
                     </div>
                 </div>`
-        },
-        {
-          tool_id: "sqlite",
-          tool_name: "SQLite",
-          tool_content: `<div id="sqlite-macos">
+                },
+                {
+                    tool_id: 'sqlite',
+                    tool_name: 'SQLite',
+                    tool_content: `<div id="sqlite-macos">
                     <p><strong>Good News:</strong> macOS comes with SQLite pre-installed! You usually don't need to install it separately.</p>
 
                     <h4 onclick="toggleSection('sqlite-macos-list-1', event);" onkeydown="toggleSection('sqlite-macos-list-1', event);" class="faq-title magic-invisible">Verify Existing Installation</h4>
@@ -1281,17 +1281,17 @@ ls -lh
                         </li>
                     </ol>
                 </div>`
-        }
-      ]
-    },
-    {
-      os_id: "linux",
-      os_name: "Linux",
-      tools: [
+                }
+            ]
+        },
         {
-          tool_id: "vsc",
-          tool_name: "Visual Studio Code",
-          tool_content: `<div id="vsc-linux">
+            os_id: 'linux',
+            os_name: 'Linux',
+            tools: [
+                {
+                    tool_id: 'vsc',
+                    tool_name: 'Visual Studio Code',
+                    tool_content: `<div id="vsc-linux">
                     <p>Check whether Visual Studio Code is already installed:</p>
                     <ul>
                         <li>Open Terminal (usually <code>Ctrl + Alt + T</code>)</li>
@@ -1426,11 +1426,11 @@ sudo apt-get install -f</code></pre>
                         </ol>
                     </div>
                 </div>`
-        },
-        {
-          tool_id: "firefox",
-          tool_name: "Mozilla Firefox",
-          tool_content: `<div id="firefox-linux">
+                },
+                {
+                    tool_id: 'firefox',
+                    tool_name: 'Mozilla Firefox',
+                    tool_content: `<div id="firefox-linux">
                     <p>Check whether Firefox is already installed:</p>
                     <ul>
                         <li>Open Terminal (usually <code>Ctrl + Alt + T</code>)</li>
@@ -1464,7 +1464,7 @@ sudo apt-get install -f</code></pre>
                             </li>
                             <li>
                                 <span  onclick="toggleSection('firefox-linux-ubuntu-list-3', event);" onkeydown="toggleSection('firefox-linux-ubuntu-list-3', event);" class="faq-title magic-invisible">Launch Firefox</span>
-                                <ul id='firefox-linux-ubuntu-list-3' class="hidden">
+                                <ul id="firefox-linux-ubuntu-list-3" class="hidden">
                                     <li>Type <code>firefox</code> in Terminal and press Enter, or</li>
                                     <li>Find "Firefox" in your application menu</li>
                                     <li>Click to open Firefox</li>
@@ -1482,7 +1482,7 @@ sudo apt-get install -f</code></pre>
                     </div>
 
                     <h4 onclick="toggleSection('firefox-linux-fedora-list', event);" onkeydown="toggleSection('firefox-linux-fedora-list', event);" class="faq-title magic-invisible">Fedora / Red Hat-based Linux</h4>
-                    <div id='firefox-linux-fedora-list' class="hidden">
+                    <div id="firefox-linux-fedora-list" class="hidden">
                         <p>If you need to install Firefox on Fedora, follow these steps:</p>
                         <ol>
                             <li>
@@ -1515,7 +1515,7 @@ sudo apt-get install -f</code></pre>
                                     <li>You should see the Firefox version number</li>
                                 </ul>
                             </li>
- 
+
                         </ol>
                     </div>
 
@@ -1582,11 +1582,11 @@ sudo apt-get install -f</code></pre>
                         </ol>
                     </div>
                 </div>`
-        },
-        {
-          tool_id: "nodejs",
-          tool_name: "Node.js",
-          tool_content: `<div id="nodejs-linux">
+                },
+                {
+                    tool_id: 'nodejs',
+                    tool_name: 'Node.js',
+                    tool_content: `<div id="nodejs-linux">
                     <p>Check whether Node.js is already installed:</p>
                     <ul>
                         <li>Open Terminal (usually <code>Ctrl + Alt + T</code>)</li>
@@ -1871,15 +1871,15 @@ sudo apt install nodejs npm</code></pre>
                                         </ul>
                                     </li>
                                 </ol>
-                            </ol>li>
+                            </li>
                         </ol>
                     </div>
                 </div>`
-        },
-        {
-          tool_id: "git",
-          tool_name: "Git",
-          tool_content: `<div id="git-linux">
+                },
+                {
+                    tool_id: 'git',
+                    tool_name: 'Git',
+                    tool_content: `<div id="git-linux">
                     <p>Check whether Git is already installed:</p>
                     <ul>
                         <li>Open Terminal (usually <code>Ctrl + Alt + T</code>)</li>
@@ -2074,11 +2074,11 @@ git config --global user.email "your.email@example.com"
                         </ol>
                     </div>
                 </div>`
-        },
-        {
-          tool_id: "sqlite",
-          tool_name: "SQLite",
-          tool_content: `<div id="sqlite-linux">
+                },
+                {
+                    tool_id: 'sqlite',
+                    tool_name: 'SQLite',
+                    tool_content: `<div id="sqlite-linux">
                     <p>Check whether SQLite is already installed:</p>
                     <ul>
                         <li>Open Terminal (usually <code>Ctrl + Alt + T</code>)</li>
@@ -2106,7 +2106,7 @@ sudo apt install sqlite3
                                 </ul>
                             </li>
                             <li>
-                                <span onclick="toggleSection('sqlite-linux-ubuntu-list-2', event);" onkeydown="toggleSection('sqlite-linux-ubuntu-list-2, event);" class="faq-title magic-invisible">Install SQLite Development Files (Optional)</span>
+                                <span onclick="toggleSection('sqlite-linux-ubuntu-list-2', event);" onkeydown="toggleSection('sqlite-linux-ubuntu-list-2', event);" class="faq-title magic-invisible">Install SQLite Development Files (Optional)</span>
                                 <ul id="sqlite-linux-ubuntu-list-2" class="hidden">
                                     <li>If you plan to develop with SQLite or use it with programming languages:
                                         <pre><code>sudo apt install libsqlite3-dev</code></pre>
@@ -2114,10 +2114,10 @@ sudo apt install sqlite3
                                 </ul>
                             </li>
                             <li>
-                                <span onclick="toggleSection('sqlite-linux-ubuntu-list-3', event);" onkeydown="toggleSection('sqlite-linux-ubuntu-list-3, event);" class="faq-title magic-invisible">Verify Installation (All Distributions):</span>
+                                <span onclick="toggleSection('sqlite-linux-ubuntu-list-3', event);" onkeydown="toggleSection('sqlite-linux-ubuntu-list-3', event);" class="faq-title magic-invisible">Verify Installation (All Distributions):</span>
                                 <ol id="sqlite-linux-ubuntu-list-3" class="hidden">
                                     <li>
-                                        <span onclick="toggleSection('sqlite-linux-ubuntu-list-3-1', event);" onkeydown="toggleSection('sqlite-linux-ubuntu-list-3-1, event);" class="faq-title magic-invisible">Check Version</span>
+                                        <span onclick="toggleSection('sqlite-linux-ubuntu-list-3-1', event);" onkeydown="toggleSection('sqlite-linux-ubuntu-list-3-1', event);" class="faq-title magic-invisible">Check Version</span>
                                         <ul id="sqlite-linux-ubuntu-list-3-1" class="hidden">
                                             <li>In Terminal, type:
                                                 <pre><code>
@@ -2128,7 +2128,7 @@ sqlite3 --version
                                         </ul>
                                     </li>
                                     <li>
-                                        <strong  onclick="toggleSection('sqlite-linux-ubuntu-list-3-2', event);" onkeydown="toggleSection('sqlite-linux-ubuntu-list-3-2, event);" class="magic-invisible">Test SQLite</strong>
+                                        <strong onclick="toggleSection('sqlite-linux-ubuntu-list-3-2', event);" onkeydown="toggleSection('sqlite-linux-ubuntu-list-3-2', event);" class="magic-invisible">Test SQLite</strong>
                                         <ul id="sqlite-linux-ubuntu-list-3-2" class="hidden">
                                             <li>Type:
                                                 <pre><code>
@@ -2143,7 +2143,7 @@ SELECT 'SQLite is working!';
                                             </li>
                                             <li>You should see the message printed</li>
                                             <li>Type
-                                                <ore><code>
+                                                <pre><code>
 .quit
                                                 </code></pre>
                                                 and press Enter to exit SQLite</li>
@@ -2251,15 +2251,15 @@ SELECT * FROM users;
                         <li><code>.headers on</code> - Show column headers</li>
                     </ul>
                 </div>`
+                }
+            ]
         }
-      ]
-    }
-  ],
-  common_dev_sections: [
-    {
-      section_id: "vsc-extensions",
-      section_title: "Visual Studio Code Extensions",
-      section_content: `<div id="extensions-windows">
+    ],
+    common_dev_sections: [
+        {
+            section_id: 'vsc-extensions',
+            section_title: 'Visual Studio Code Extensions',
+            section_content: `<div id="extensions-windows">
                     <p>VS Code extensions add extra features and functionality to your editor. Here are the recommended extensions for web development:</p>
 
                     <h4 onclick="toggleSection('vsc-extensions-windows-list-1', event);" onkeydown="toggleSection('vsc-extensions-windows-list-1', event);" class="faq-title magic-invisible">How to Install Extensions</h4>
@@ -2399,11 +2399,11 @@ SELECT * FROM users;
                         </ol>
                     </div>
                 </div>`
-    },
-    {
-      section_id: "projects-folder",
-      section_title: "Create a Projects Folder",
-      section_content: `<div id="projects-folder-windows">
+        },
+        {
+            section_id: 'projects-folder',
+            section_title: 'Create a Projects Folder',
+            section_content: `<div id="projects-folder-windows">
                     <p>It's helpful to keep all your coding projects organised in one place. Let's create a dedicated Projects folder:</p>
                     <ol>
                         <li>
@@ -2434,11 +2434,11 @@ SELECT * FROM users;
                     <p>Your Projects folder is now at: <code>C:\Users\YourUsername\Projects</code></p>
                     <p>In future lessons, you'll save your coding projects in this folder.</p>
                 </div>`
-    },
-    {
-      section_id: "dev-server",
-      section_title: "Setting Up the Development Server",
-      section_content: `<div id="dev-server-windows">
+        },
+        {
+            section_id: 'dev-server',
+            section_title: 'Setting Up the Development Server',
+            section_content: `<div id="dev-server-windows">
                     <p>To view your web pages as you develop them, you'll need to run a local development server. This is important because some web features don't work when opening HTML files directly in a browser. If you installed the Live Server extension in Visual Studio Code, you can skip this step as that will do the same thing. Using this method lets you run and test your web pages even if you are not using Visual Studio Code.</p>
 
                     <h4 onclick="toggleSection('dev-server-windows-list-1', event);" onkeydown="toggleSection('dev-server-windows-list-1', event);" class="faq-title magic-invisible">Create a package.json File</h4>
@@ -2493,6 +2493,6 @@ SELECT * FROM users;
                         <li>To restart the server later, just run <code>npm start</code> again from your Projects folder</li>
                     </ul>
                 </div>`
-    }
-  ]
+        }
+    ]
 };

@@ -7,7 +7,7 @@
  * Copyright  : (c) 2026 The Embodied Mind
  * License    : MIT License
  * Description:
- *   Comprehensive contrast verification for all colors in colourPalette.html
+ *   Comprehensive contrast verification for all colours in colourPalette.html
  **********************************************************************
 */
 

@@ -5,9 +5,9 @@
  * Author: Edmund Mulligan <edmund@edmundmulligan.name>
  * Copyright: (c) 2026 The Embodied Mind
  * License: MIT
- * Description: Reusable script to verify WCAG 2.2 color contrast compliance for theme colors
+ * Description: Reusable script to verify WCAG 2.2 colour contrast compliance for theme colours
  * 
- * This script verifies color contrast ratios against WCAG 2.2 standards:
+ * This script verifies colour contrast ratios against WCAG 2.2 standards:
  * - AAA: ≥7:1 (enhanced contrast)
  * - AA:  ≥4.5:1 (minimum contrast for normal text)
  * - A:   ≥3:1 (large text only)
@@ -32,11 +32,11 @@
  *   const ratio = calculateContrast([180, 100, 75], [0, 0, 0]);
  * 
  * CSS File Format:
- *   The script parses CSS files containing color variables in HSL format:
+ *   The script parses CSS files containing colour variables in HSL format:
  *   --colour-normal-light-button-background: hsl(180, 100%, 75%);
  *   --colour-normal-light-code-text: hsl(from var(--colour-medium-purple) h s 30%);
  *   
- *   Supports CSS Color Module Level 5 "from" syntax for color derivation
+ *   Supports CSS Colour Module Level 5 "from" syntax for colour derivation
  */
 
 'use strict';
