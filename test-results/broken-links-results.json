@@ -65,10 +65,22 @@
       "links": [],
       "brokenCount": 0,
       "totalCount": 12
+    },
+    {
+      "url": "pages/credits.html",
+      "links": [],
+      "brokenCount": 0,
+      "totalCount": 25
+    },
+    {
+      "url": "pages/start.html",
+      "links": [],
+      "brokenCount": 0,
+      "totalCount": 17
     }
   ],
   "summary": {
-    "totalLinks": 224,
+    "totalLinks": 266,
     "brokenLinks": 0,
     "excludedLinks": 0
   }
