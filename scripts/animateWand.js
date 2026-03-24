@@ -1,11 +1,11 @@
 /*
  **********************************************************************
- * File       : scripts/animateConclusionWand.js
+ * File       : scripts/animateWand.js
  * Author     : Edmund Mulligan <edmund@edmundmulligan.name>
  * Copyright  : (c) 2026 The Embodied Mind
  * License    : MIT License (see license-and-credits.html page)
  * Description:
- *   Loads the conclusion wand SVG inline so sparkle paths can animate
+ *   Loads the wand SVG inline so sparkle paths can animate
  *   via styles/components/favicon.css (same mechanism as image 3).
  **********************************************************************
  */
@@ -14,7 +14,7 @@
     'use strict';
 
     document.addEventListener('DOMContentLoaded', async () => {
-        const container = document.getElementById('conclusion-wand-container');
+        const container = document.getElementById('wand-container');
         if (!container) {
             return;
         }
@@ -57,11 +57,11 @@
                 }
             });
 
-            svg.classList.add('animated', 'conclusion-wand-icon');
+            svg.classList.add('animated', 'wand-icon');
 
             container.appendChild(svg);
         } catch (error) {
-            console.error('Error loading conclusion wand SVG:', error);
+            console.error('Error loading wand SVG:', error);
 
             // Fallback for robustness if inline loading fails.
             const fallback = document.createElement('img');
@@ -69,7 +69,7 @@
             fallback.alt = 'Sparkling wand icon';
             fallback.width = 150;
             fallback.height = 150;
-            fallback.className = 'conclusion-wand-fallback';
+            fallback.className = 'wand-fallback';
             container.appendChild(fallback);
         }
     });

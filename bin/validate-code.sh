@@ -20,8 +20,44 @@
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 source "$SCRIPT_DIR/test-helpers.sh"
 
-# Get any command line options
-parse_test_options "$@"
+print_usage() {
+  print_standard_usage "$0 [folder] [options]" help exclude-validation
+}
+
+# Parse command line arguments
+EXCLUDE_LIST=""
+FOLDER=""
+
+while [[ $# -gt 0 ]]; do
+  case "$1" in
+    -h|--help)
+      print_usage
+      exit 0
+      ;;
+    -x|--exclude)
+      shift
+      if [ $# -eq 0 ] || [[ "$1" == -* ]]; then
+        echo "❌ Error: --exclude requires at least one file or folder"
+        exit 1
+      fi
+      while [[ $# -gt 0 ]] && [[ "$1" != -* ]]; do
+        EXCLUDE_LIST="$(normalize_exclude_list "$EXCLUDE_LIST" "$1")"
+        shift
+      done
+      ;;
+    *)
+      if [ -z "$FOLDER" ]; then
+        FOLDER="$1"
+      else
+        echo "❌ Error: Unexpected argument '$1'"
+        exit 1
+      fi
+      shift
+      ;;
+  esac
+done
+
+[ -z "$FOLDER" ] && FOLDER="."
 
 # Silently install dependencies if not already installed
 echo "Installing dependencies..."
@@ -32,7 +68,6 @@ echo "📄 Validating HTML, CSS, and JavaScript files..."
 echo ""
 
 ORIGINAL_DIR=$(pwd)
-FOLDER="${1:-.}"
 if [ ! -d "$FOLDER" ]; then
   echo "Error: Provided folder '$FOLDER' does not exist."
   exit 1
@@ -68,7 +103,14 @@ should_skip_validation() {
 
 # Find all HTML, CSS, and JS files in the specified folder
 FILES=$(find "$FOLDER" \( -name "*.html" -o -name "*.css" -o -name "*.js" \) -not -path "*/node_modules/*" -not -path "*/tests/*" -not -path "*/bin/*" -not -name "eslint.config.js" -print)
-FILE_COUNT=$(echo "$FILES" | wc -l)
+
+if [ -n "$EXCLUDE_LIST" ]; then
+  filter_excluded_paths "$FILES" "$EXCLUDE_LIST"
+  FILES="$FILTERED_PATHS_RESULT"
+  echo "Excluded $FILTERED_PATHS_EXCLUDED_COUNT files using: $EXCLUDE_LIST"
+fi
+
+FILE_COUNT=$(echo "$FILES" | sed '/^$/d' | wc -l)
 TESTED=0
 
 # Validate each file

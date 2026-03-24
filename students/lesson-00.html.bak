@@ -224,7 +224,7 @@
                 </div>
                 <h3 class="faq-title">Visual Studio Code</h3>
                 <div id="vsc-windows">
-                    <h4 class=faq-title">Check whether Visual Studio Code is already installed</h4>
+                    <h4 class="faq-title">Check whether Visual Studio Code is already installed</h4>
                     <ul>
                         <li>Press <code>Windows key + R</code></li>
                         <li>Type <code>code</code> and press Enter</li>
@@ -859,7 +859,7 @@ SELECT * FROM users;
                     <ol id="vsc-extensions-windows-list-5" class="hidden">
                         <li>
                             <span onclick="toggleSection('vsc-extensions-windows-list-5-1', event);" onkeydown="toggleSection('vsc-extensions-windows-list-5-1', event);" class="faq-title magic-invisible">Better Comments</span> (aaron-bond.better-comments)
-                            <ul id="vsc-extensions-windows-list-5-1">
+                            <ul id="vsc-extensions-windows-list-5-1" class="hidden">
                                 <li>Colour-codes different types of comments (TODO, FIXME, etc.)</li>
                                 <li>Makes comments more organised and noticeable</li>
                             </ul>
@@ -1276,7 +1276,7 @@ brew --version
                                     <li>If you get "command not found", install Homebrew with:
                                         <pre><code>
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-                                        </code></pre> 
+                                        </code></pre>
                                     </li>
                                     <li>Follow the on-screen instructions</li>
                                 </ul>
@@ -1401,8 +1401,8 @@ git --version
                                 <span onclick="toggleSection('git-macos-list-1-1-3', event);" onkeydown="toggleSection('git-macos-list-1-1-3', event);" class="faq-title magic-invisible">Configure Git</span>
                                 <ul id="git-macos-list-1-1-3" class="hidden">
                                     <li>
-                                        <strong>Set Your Name and Email</strong>
-                                        <ul>
+                                        <span onclick="toggleSection('git-macos-list-1-1-3-1', event);" onkeydown="toggleSection('git-macos-list-1-1-3-1', event);" class="faq-title magic-invisible">Set Your Name and Email</span>
+                                        <ul id="git-macos-list-1-1-3-1" class="hidden">
                                             <li>Open Terminal</li>
                                             <li>Set your name (replace "Your Name" with your actual name):
                                                 <pre><code>git config --global user.name "Your Name"</code></pre>
@@ -1428,7 +1428,7 @@ git --version
                                         <pre><code>
 git config --global --list
                                         </code></pre>
-                                    </li>                                           
+                                    </li>
                                     <li>You should see your name and email listed</li>
                                 </ul>
                             </li>
@@ -1517,8 +1517,8 @@ git config --global --list
                                 <span onclick="toggleSection('git-macos-list-3-3', event);" onkeydown="toggleSection('git-macos-list-3-3', event);" class="faq-title magic-invisible">Configure Git</span>
                                 <ul id="git-macos-list-3-3" class="hidden">
                                     <li>
-                                        <strong>Set Your Name and Email</strong>
-                                        <ul>
+                                        <span onclick="toggleSection('git-macos-list-3-3-1', event);" onkeydown="toggleSection('git-macos-list-3-3-1', event);" class="faq-title magic-invisible">Set Your Name and Email</span>
+                                        <ul id="git-macos-list-3-3-1" class="hidden">
                                             <li>Open Terminal</li>
                                             <li>Set your name (replace "Your Name" with your actual name):
                                                 <pre><code>
@@ -1750,23 +1750,23 @@ ls -lh
                     <h4 onclick="toggleSection('vsc-extensions-macos-list-3', event);" onkeydown="toggleSection('vsc-extensions-macos-list-3', event);" class="faq-title magic-invisible">Helpful Extensions</h4>
                     <ol id="vsc-extensions-macos-list-3" class="hidden">
                         <li>
-                            <strong>Path Intellisense</strong> (christian-kohler.path-intellisense)
-                            <ul>
+                            <span onclick="toggleSection('vsc-extensions-macos-list-3-1', event);" onkeydown="toggleSection('vsc-extensions-macos-list-3-1', event);" class="faq-title magic-invisible">Path Intellisense</span> (christian-kohler.path-intellisense)
+                            <ul id="vsc-extensions-macos-list-3-1" class="hidden">
                                 <li>Autocompletes file paths in your code</li>
                                 <li>Helpful when linking CSS files, images, or other resources</li>
                             </ul>
                         </li>
                         <li>
-                            <strong>Indent-Rainbow</strong> (oderwat.indent-rainbow)
-                            <ul>
+                            <span onclick="toggleSection('vsc-extensions-macos-list-3-2', event);" onkeydown="toggleSection('vsc-extensions-macos-list-3-2', event);" class="faq-title magic-invisible">Indent-Rainbow</span> (oderwat.indent-rainbow)
+                            <ul id="vsc-extensions-macos-list-3-2" class="hidden">
                                 <li>Colours indentation levels with subtle colours</li>
                                 <li>Makes code structure more visible</li>
                                 <li>Helps you spot indentation errors quickly</li>
                             </ul>
                         </li>
                         <li>
-                            <strong>Error Lens</strong> (usernamehw.errorlens)
-                            <ul>
+                            <span onclick="toggleSection('vsc-extensions-macos-list-3-3', event);" onkeydown="toggleSection('vsc-extensions-macos-list-3-3', event);" class="faq-title magic-invisible">Error Lens</span> (usernamehw.errorlens)
+                            <ul id="vsc-extensions-macos-list-3-3" class="hidden">
                                 <li>Shows errors and warnings inline in your code</li>
                                 <li>Makes debugging easier by highlighting problems immediately</li>
                             </ul>
@@ -1778,15 +1778,15 @@ ls -lh
                         <p>Install these when you reach the relevant lessons:</p>
                         <ol>
                             <li>
-                                <strong>ESLint</strong> (dbaeumer.vscode-eslint)
-                                <ul>
+                                <span onclick="toggleSection('vsc-extensions-macos-list-4-1', event);" onkeydown="toggleSection('vsc-extensions-macos-list-4-1', event);" class="faq-title magic-invisible">ESLint</span> (dbaeumer.vscode-eslint)
+                                <ul id="vsc-extensions-macos-list-4-1" class="hidden">
                                     <li>JavaScript and Node.js code quality and style checking</li>
                                     <li>Install when you start learning JavaScript</li>
                                 </ul>
                             </li>
                             <li>
-                                <strong>SQLite Viewer</strong> (qwtel.sqlite-viewer)
-                                <ul>
+                                <span onclick="toggleSection('vsc-extensions-macos-list-4-2', event);" onkeydown="toggleSection('vsc-extensions-macos-list-4-2', event);" class="faq-title magic-invisible">SQLite Viewer</span> (qwtel.sqlite-viewer)
+                                <ul id="vsc-extensions-macos-list-4-2" class="hidden">
                                     <li>View and query SQLite databases directly in VS Code</li>
                                     <li>Install when you start working with databases</li>
                                 </ul>
@@ -1797,15 +1797,15 @@ ls -lh
                     <h4 onclick="toggleSection('vsc-extensions-macos-list-5', event);" onkeydown="toggleSection('vsc-extensions-macos-list-5', event);" class="faq-title magic-invisible">Optional Extensions</h4>
                     <ol id="vsc-extensions-macos-list-5" class="hidden">
                         <li>
-                            <strong>Better Comments</strong> (aaron-bond.better-comments)
-                            <ul>
+                            <span onclick="toggleSection('vsc-extensions-macos-list-5-1', event);" onkeydown="toggleSection('vsc-extensions-macos-list-5-1', event);" class="faq-title magic-invisible">Better Comments</span> (aaron-bond.better-comments)
+                            <ul id="vsc-extensions-macos-list-5-1" class="hidden">
                                 <li>Colour-codes different types of comments (TODO, FIXME, etc.)</li>
                                 <li>Makes comments more organised and noticeable</li>
                             </ul>
                         </li>
                         <li>
-                            <strong>axe Accessibility Linter</strong> (deque-systems.vscode-axe-linter)
-                            <ul>
+                            <span onclick="toggleSection('vsc-extensions-macos-list-5-2', event);" onkeydown="toggleSection('vsc-extensions-macos-list-5-2', event);" class="faq-title magic-invisible">axe Accessibility Linter</span> (deque-systems.vscode-axe-linter)
+                            <ul id="vsc-extensions-macos-list-5-2" class="hidden">
                                 <li>Checks HTML for accessibility issues</li>
                                 <li>Helps you build websites that everyone can use</li>
                             </ul>
@@ -2034,6 +2034,33 @@ sudo yum install code</code></pre>
                             </li>
                         </ol>
                     </div>
+
+                    <h4 onclick="toggleSection('vsc-linux-arch-list', event);" onkeydown="toggleSection('vsc-linux-arch-list', event);" class="faq-title magic-invisible">Arch Linux</h4>
+                    <div id="vsc-linux-arch-list" class="hidden">
+                        <p>If you need to install Visual Studio Code on Arch Linux, follow these steps:</p>
+                        <ol>
+                            <li>
+                                <span onclick="toggleSection('vsc-linux-arch-list-1', event);" onkeydown="toggleSection('vsc-linux-arch-list-1', event);" class="faq-title magic-invisible">Install VS Code</span>
+                                <ul id="vsc-linux-arch-list-1" class="hidden">
+                                    <li>Open Terminal</li>
+                                    <li>Run this command:
+                                        <pre><code>sudo pacman -S code</code></pre>
+                                    </li>
+                                    <li>Type <code>Y</code> when asked to confirm</li>
+                                    <li>Wait for installation to complete</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <span onclick="toggleSection('vsc-linux-arch-list-2', event);" onkeydown="toggleSection('vsc-linux-arch-list-2', event);" class="faq-title magic-invisible">Launch VS Code</span>
+                                <ul id="vsc-linux-arch-list-2" class="hidden">
+                                    <li>Type <code>code</code> in Terminal and press Enter, or</li>
+                                    <li>Find "Visual Studio Code" in your application menu</li>
+                                    <li>Click to open VS Code</li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </div>
+
                     <h4 onclick="toggleSection('vsc-linux-alt-list', event);" onkeydown="toggleSection('vsc-linux-alt-list', event);" class="faq-title magic-invisible">Alternative: Download .deb or .rpm Package</h4>
                     <div id="vsc-linux-alt-list" class="hidden">
                         <p>You can also download VS Code directly from the website:</p>
@@ -2112,7 +2139,7 @@ sudo apt-get install -f</code></pre>
                             </li>
                             <li>
                                 <span  onclick="toggleSection('firefox-linux-ubuntu-list-3', event);" onkeydown="toggleSection('firefox-linux-ubuntu-list-3', event);" class="faq-title magic-invisible">Launch Firefox</span>
-                                <ul id='firefox-linux-ubuntu-list-3' class="hidden">
+                                <ul id="firefox-linux-ubuntu-list-3" class="hidden">
                                     <li>Type <code>firefox</code> in Terminal and press Enter, or</li>
                                     <li>Find "Firefox" in your application menu</li>
                                     <li>Click to open Firefox</li>
@@ -2130,7 +2157,7 @@ sudo apt-get install -f</code></pre>
                     </div>
 
                     <h4 onclick="toggleSection('firefox-linux-fedora-list', event);" onkeydown="toggleSection('firefox-linux-fedora-list', event);" class="faq-title magic-invisible">Fedora / Red Hat-based Linux</h4>
-                    <div id='firefox-linux-fedora-list' class="hidden">
+                    <div id="firefox-linux-fedora-list" class="hidden">
                         <p>If you need to install Firefox on Fedora, follow these steps:</p>
                         <ol>
                             <li>
@@ -2163,7 +2190,7 @@ sudo apt-get install -f</code></pre>
                                     <li>You should see the Firefox version number</li>
                                 </ul>
                             </li>
- 
+
                         </ol>
                     </div>
 
@@ -2522,7 +2549,7 @@ sudo apt install nodejs npm</code></pre>
                                         </ul>
                                     </li>
                                 </ol>
-                            </ol>li>
+                            </li>
                         </ol>
                     </div>
                 </div>
@@ -2763,7 +2790,7 @@ sudo apt install sqlite3
                                 </ul>
                             </li>
                             <li>
-                                <span onclick="toggleSection('sqlite-linux-ubuntu-list-2', event);" onkeydown="toggleSection('sqlite-linux-ubuntu-list-2, event);" class="faq-title magic-invisible">Install SQLite Development Files (Optional)</span>
+                                <span onclick="toggleSection('sqlite-linux-ubuntu-list-2', event);" onkeydown="toggleSection('sqlite-linux-ubuntu-list-2', event);" class="faq-title magic-invisible">Install SQLite Development Files (Optional)</span>
                                 <ul id="sqlite-linux-ubuntu-list-2" class="hidden">
                                     <li>If you plan to develop with SQLite or use it with programming languages:
                                         <pre><code>sudo apt install libsqlite3-dev</code></pre>
@@ -2771,10 +2798,10 @@ sudo apt install sqlite3
                                 </ul>
                             </li>
                             <li>
-                                <span onclick="toggleSection('sqlite-linux-ubuntu-list-3', event);" onkeydown="toggleSection('sqlite-linux-ubuntu-list-3, event);" class="faq-title magic-invisible">Verify Installation (All Distributions):</span>
+                                <span onclick="toggleSection('sqlite-linux-ubuntu-list-3', event);" onkeydown="toggleSection('sqlite-linux-ubuntu-list-3', event);" class="faq-title magic-invisible">Verify Installation (All Distributions):</span>
                                 <ol id="sqlite-linux-ubuntu-list-3" class="hidden">
                                     <li>
-                                        <span onclick="toggleSection('sqlite-linux-ubuntu-list-3-1', event);" onkeydown="toggleSection('sqlite-linux-ubuntu-list-3-1, event);" class="faq-title magic-invisible">Check Version</span>
+                                        <span onclick="toggleSection('sqlite-linux-ubuntu-list-3-1', event);" onkeydown="toggleSection('sqlite-linux-ubuntu-list-3-1', event);" class="faq-title magic-invisible">Check Version</span>
                                         <ul id="sqlite-linux-ubuntu-list-3-1" class="hidden">
                                             <li>In Terminal, type:
                                                 <pre><code>
@@ -2785,7 +2812,7 @@ sqlite3 --version
                                         </ul>
                                     </li>
                                     <li>
-                                        <strong  onclick="toggleSection('sqlite-linux-ubuntu-list-3-2', event);" onkeydown="toggleSection('sqlite-linux-ubuntu-list-3-2, event);" class="magic-invisible">Test SQLite</strong>
+                                        <span onclick="toggleSection('sqlite-linux-ubuntu-list-3-2', event);" onkeydown="toggleSection('sqlite-linux-ubuntu-list-3-2', event);" class="faq-title magic-invisible">Test SQLite</span>
                                         <ul id="sqlite-linux-ubuntu-list-3-2" class="hidden">
                                             <li>Type:
                                                 <pre><code>
@@ -2800,26 +2827,26 @@ SELECT 'SQLite is working!';
                                             </li>
                                             <li>You should see the message printed</li>
                                             <li>Type
-                                                <ore><code>
+                                                <pre><code>
 .quit
                                                 </code></pre>
                                                 and press Enter to exit SQLite</li>
                                         </ul>
                                     </li>
                                     <li>
-                                        <strong>Create a Test Database (Optional):</strong>
-                                        <ol>
+                                        <span onclick="toggleSection('sqlite-linux-ubuntu-list-3-3', event);" onkeydown="toggleSection('sqlite-linux-ubuntu-list-3-3', event);" class="faq-title magic-invisible">Create a Test Database (Optional)</span>
+                                        <ol id="sqlite-linux-ubuntu-list-3-3" class="hidden">
                                             <li>
-                                                <strong>Create a Test Directory</strong>
-                                                <ul>
+                                                <span onclick="toggleSection('sqlite-linux-ubuntu-list-3-3-1', event);" onkeydown="toggleSection('sqlite-linux-ubuntu-list-3-3-1', event);" class="faq-title magic-invisible">Create a Test Directory</span>
+                                                <ul id="sqlite-linux-ubuntu-list-3-3-1" class="hidden">
                                                     <li>In Terminal, run:
                                                         <pre><code>mkdir ~/test-sqlite &amp;&amp; cd ~/test-sqlite</code></pre>
                                                     </li>
                                                 </ul>
                                             </li>
                                             <li>
-                                                <strong>Create a Database</strong>
-                                                <ul>
+                                                <span onclick="toggleSection('sqlite-linux-ubuntu-list-3-3-2', event);" onkeydown="toggleSection('sqlite-linux-ubuntu-list-3-3-2', event);" class="faq-title magic-invisible">Create a Database</span>
+                                                <ul id="sqlite-linux-ubuntu-list-3-3-2" class="hidden">
                                                     <li>Run:
                                                         <pre><code>sqlite3 test.db</code></pre>
                                                     </li>
@@ -2835,8 +2862,8 @@ SELECT * FROM users;
                                                 </ul>
                                             </li>
                                             <li>
-                                                <strong>View the Database File</strong>
-                                                <ul>
+                                                <span onclick="toggleSection('sqlite-linux-ubuntu-list-3-3-3', event);" onkeydown="toggleSection('sqlite-linux-ubuntu-list-3-3-3', event);" class="faq-title magic-invisible">View the Database File</span>
+                                                <ul id="sqlite-linux-ubuntu-list-3-3-3" class="hidden">
                                                     <li>List files in the directory:
                                                         <pre><code>ls -lh</code></pre>
                                                     </li>
@@ -2854,8 +2881,8 @@ SELECT * FROM users;
                     <p>If you need to install SQLite on Fedora, follow these steps:</p>
                     <ol id="sqlite-linux-fedora-list" class="hidden">
                         <li>
-                            <strong>Install SQLite</strong>
-                            <ul>
+                            <span onclick="toggleSection('sqlite-linux-fedora-list-1-1', event);" onkeydown="toggleSection('sqlite-linux-fedora-list-1-1', event);" class="faq-title magic-invisible">Install SQLite</span>
+                            <ul id="sqlite-linux-fedora-list-1-1" class="hidden">
                                 <li>Open Terminal</li>
                                 <li>For Fedora 22 and later:
                                     <pre><code>sudo dnf install sqlite</code></pre>
@@ -2868,8 +2895,8 @@ SELECT * FROM users;
                             </ul>
                         </li>
                         <li>
-                            <strong>Install Development Files (Optional)</strong>
-                            <ul>
+                            <span onclick="toggleSection('sqlite-linux-fedora-list-2-1', event);" onkeydown="toggleSection('sqlite-linux-fedora-list-2-1', event);" class="faq-title magic-invisible">Install Development Files (Optional)</span>
+                            <ul id="sqlite-linux-fedora-list-2-1" class="hidden">
                                 <li>If you plan to develop with SQLite:
                                     <pre><code>sudo dnf install sqlite-devel</code></pre>
                                 </li>
@@ -2884,8 +2911,8 @@ SELECT * FROM users;
                     <p onclick="toggleSection('sqlite-linux-arch-list', event);" onkeydown="toggleSection('sqlite-linux-arch-list', event);" class="magic-invisible">If you're using Arch Linux:</p>
                     <ol id="sqlite-linux-arch-list" class="hidden">
                         <li>
-                            <strong>Install SQLite</strong>
-                            <ul>
+                            <span onclick="toggleSection('sqlite-linux-arch-list-1-1', event);" onkeydown="toggleSection('sqlite-linux-arch-list-1-1', event);" class="faq-title magic-invisible">Install SQLite</span>
+                            <ul id="sqlite-linux-arch-list-1-1" class="hidden">
                                 <li>Open Terminal</li>
                                 <li>Run this command:
                                     <pre><code>sudo pacman -S sqlite</code></pre>
@@ -2921,16 +2948,16 @@ SELECT * FROM users;
                     <h4 onclick="toggleSection('vsc-extensions-linux-list-1', event);" onkeydown="toggleSection('vsc-extensions-linux-list-1', event);" class="faq-title magic-invisible">How to Install Extensions</h4>
                     <ol id="vsc-extensions-linux-list-1" class="hidden">
                         <li>
-                            <strong>Open Extensions Panel</strong>
-                            <ul>
+                            <span onclick="toggleSection('vsc-extensions-linux-list-1-1', event);" onkeydown="toggleSection('vsc-extensions-linux-list-1-1', event);" class="faq-title magic-invisible">Open Extensions Panel</span>
+                            <ul id="vsc-extensions-linux-list-1-1" class="hidden">
                                 <li>Open VS Code</li>
                                 <li>Press <code>Ctrl + Shift + X</code> to open the Extensions panel, or</li>
                                 <li>Click the Extensions icon in the left sidebar (looks like four squares)</li>
                             </ul>
                         </li>
                         <li>
-                            <strong>Search and Install</strong>
-                            <ul>
+                            <span onclick="toggleSection('vsc-extensions-linux-list-1-2', event);" onkeydown="toggleSection('vsc-extensions-linux-list-1-2', event);" class="faq-title magic-invisible">Search and Install</span>
+                            <ul id="vsc-extensions-linux-list-1-2" class="hidden">
                                 <li>Type the extension name in the search box</li>
                                 <li>Be careful! Some extensions may have similar names. Check the extension publisher to ensure you are installing the correct one</li>
                                 <li>Click the "Install" button for the extension you want</li>
@@ -2943,8 +2970,8 @@ SELECT * FROM users;
                     <h4 onclick="toggleSection('vsc-extensions-linux-list-2', event);" onkeydown="toggleSection('vsc-extensions-linux-list-2', event);" class="faq-title magic-invisible">Recommended Extensions (Install Now)</h4>
                     <ol id="vsc-extensions-linux-list-2" class="hidden">
                         <li>
-                            <strong>Live Server</strong> (ritwickdey.LiveServer)
-                            <ul>
+                            <span onclick="toggleSection('vsc-extensions-linux-list-2-1', event);" onkeydown="toggleSection('vsc-extensions-linux-list-2-1', event);" class="faq-title magic-invisible">Live Server</span> (ritwickdey.LiveServer)
+                            <ul id="vsc-extensions-linux-list-2-1" class="hidden">
                                 <li>Launches a local development server with live reload</li>
                                 <li>Your browser automatically refreshes when you save changes</li>
                                 <li>Essential for testing HTML/CSS/JavaScript</li>
@@ -2952,8 +2979,8 @@ SELECT * FROM users;
                             </ul>
                         </li>
                         <li>
-                            <strong>Prettier - Code formatter</strong> (esbenp.prettier-vscode)
-                            <ul>
+                            <span onclick="toggleSection('vsc-extensions-linux-list-2-2', event);" onkeydown="toggleSection('vsc-extensions-linux-list-2-2', event);" class="faq-title magic-invisible">Prettier - Code formatter</span> (esbenp.prettier-vscode)
+                            <ul id="vsc-extensions-linux-list-2-2" class="hidden">
                                 <li>Automatically formats your code consistently</li>
                                 <li>Makes your code easier to read</li>
                                 <li>After installing, you can format by pressing <code>Shift + Alt + F</code></li>
@@ -2961,16 +2988,16 @@ SELECT * FROM users;
                             </ul>
                         </li>
                         <li>
-                            <strong>Auto Rename Tag</strong> (formulahendry.auto-rename-tag)
-                            <ul>
+                            <span onclick="toggleSection('vsc-extensions-linux-list-2-3', event);" onkeydown="toggleSection('vsc-extensions-linux-list-2-3', event);" class="faq-title magic-invisible">Auto Rename Tag</span> (formulahendry.auto-rename-tag)
+                            <ul id="vsc-extensions-linux-list-2-3" class="hidden">
                                 <li>Automatically renames paired HTML/XML tags</li>
                                 <li>When you rename an opening tag, the closing tag updates too</li>
                                 <li>Saves time and prevents errors</li>
                             </ul>
                         </li>
                         <li>
-                            <strong>HTML CSS Support</strong> (ecmel.vscode-html-css)
-                            <ul>
+                            <span onclick="toggleSection('vsc-extensions-linux-list-2-4', event);" onkeydown="toggleSection('vsc-extensions-linux-list-2-4', event);" class="faq-title magic-invisible">HTML CSS Support</span> (ecmel.vscode-html-css)
+                            <ul id="vsc-extensions-linux-list-2-4" class="hidden">
                                 <li>Provides better autocomplete for HTML class and ID attributes</li>
                                 <li>Suggests CSS classes from your stylesheets</li>
                                 <li>Makes writing HTML faster and more accurate</li>
@@ -2981,23 +3008,23 @@ SELECT * FROM users;
                     <h4 onclick="toggleSection('vsc-extensions-linux-list-3', event);" onkeydown="toggleSection('vsc-extensions-linux-list-3', event);" class="faq-title magic-invisible">Helpful Extensions</h4>
                     <ol id="vsc-extensions-linux-list-3" class="hidden">
                         <li>
-                            <strong>Path Intellisense</strong> (christian-kohler.path-intellisense)
-                            <ul>
+                            <span onclick="toggleSection('vsc-extensions-linux-list-3-1', event);" onkeydown="toggleSection('vsc-extensions-linux-list-3-1', event);" class="faq-title magic-invisible">Path Intellisense</span> (christian-kohler.path-intellisense)
+                            <ul id="vsc-extensions-linux-list-3-1" class="hidden">
                                 <li>Autocompletes file paths in your code</li>
                                 <li>Helpful when linking CSS files, images, or other resources</li>
                             </ul>
                         </li>
                         <li>
-                            <strong>Indent-Rainbow</strong> (oderwat.indent-rainbow)
-                            <ul>
+                            <span onclick="toggleSection('vsc-extensions-linux-list-3-2', event);" onkeydown="toggleSection('vsc-extensions-linux-list-3-2', event);" class="faq-title magic-invisible">Indent-Rainbow</span> (oderwat.indent-rainbow)
+                            <ul id="vsc-extensions-linux-list-3-2" class="hidden">
                                 <li>Colours indentation levels with subtle colours</li>
                                 <li>Makes code structure more visible</li>
                                 <li>Helps you spot indentation errors quickly</li>
                             </ul>
                         </li>
                         <li>
-                            <strong>Error Lens</strong> (usernamehw.errorlens)
-                            <ul>
+                            <span onclick="toggleSection('vsc-extensions-linux-list-3-3', event);" onkeydown="toggleSection('vsc-extensions-linux-list-3-3', event);" class="faq-title magic-invisible">Error Lens</span> (usernamehw.errorlens)
+                            <ul id="vsc-extensions-linux-list-3-3" class="hidden">
                                 <li>Shows errors and warnings inline in your code</li>
                                 <li>Makes debugging easier by highlighting problems immediately</li>
                             </ul>
@@ -3009,15 +3036,15 @@ SELECT * FROM users;
                         <p>Install these when you reach the relevant lessons:</p>
                         <ol>
                             <li>
-                                <strong>ESLint</strong> (dbaeumer.vscode-eslint)
-                                <ul>
+                                <span onclick="toggleSection('vsc-extensions-linux-list-4-1', event);" onkeydown="toggleSection('vsc-extensions-linux-list-4-1', event);" class="faq-title magic-invisible">ESLint</span> (dbaeumer.vscode-eslint)
+                                <ul id="vsc-extensions-linux-list-4-1" class="hidden">
                                     <li>JavaScript and Node.js code quality and style checking</li>
                                     <li>Install when you start learning JavaScript</li>
                                 </ul>
                             </li>
                             <li>
-                                <strong>SQLite Viewer</strong> (qwtel.sqlite-viewer)
-                                <ul>
+                                <span onclick="toggleSection('vsc-extensions-linux-list-4-2', event);" onkeydown="toggleSection('vsc-extensions-linux-list-4-2', event);" class="faq-title magic-invisible">SQLite Viewer</span> (qwtel.sqlite-viewer)
+                                <ul id="vsc-extensions-linux-list-4-2" class="hidden">
                                     <li>View and query SQLite databases directly in VS Code</li>
                                     <li>Install when you start working with databases</li>
                                 </ul>
@@ -3028,15 +3055,15 @@ SELECT * FROM users;
                     <h4 onclick="toggleSection('vsc-extensions-linux-list-5', event);" onkeydown="toggleSection('vsc-extensions-linux-list-5', event);" class="faq-title magic-invisible">Optional Extensions</h4>
                     <ol id="vsc-extensions-linux-list-5" class="hidden">
                         <li>
-                            <strong>Better Comments</strong> (aaron-bond.better-comments)
-                            <ul>
+                            <span onclick="toggleSection('vsc-extensions-linux-list-5-1', event);" onkeydown="toggleSection('vsc-extensions-linux-list-5-1', event);" class="faq-title magic-invisible">Better Comments</span> (aaron-bond.better-comments)
+                            <ul id="vsc-extensions-linux-list-5-1" class="hidden">
                                 <li>Colour-codes different types of comments (TODO, FIXME, etc.)</li>
                                 <li>Makes comments more organised and noticeable</li>
                             </ul>
                         </li>
                         <li>
-                            <strong>axe Accessibility Linter</strong> (deque-systems.vscode-axe-linter)
-                            <ul>
+                            <span onclick="toggleSection('vsc-extensions-linux-list-5-2', event);" onkeydown="toggleSection('vsc-extensions-linux-list-5-2', event);" class="faq-title magic-invisible">axe Accessibility Linter</span> (deque-systems.vscode-axe-linter)
+                            <ul id="vsc-extensions-linux-list-5-2" class="hidden">
                                 <li>Checks HTML for accessibility issues</li>
                                 <li>Helps you build websites that everyone can use</li>
                             </ul>
@@ -3155,7 +3182,7 @@ SELECT * FROM users;
                     </ul>
                 </div>
             </section>
-        </div> <!-- End lesson-content -->
+            </div>
     </main>
     </div> <!-- End page-container -->
 

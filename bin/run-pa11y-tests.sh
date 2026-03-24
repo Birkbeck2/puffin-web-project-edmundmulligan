@@ -7,28 +7,59 @@
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 source "$SCRIPT_DIR/test-helpers.sh"
 
+print_usage() {
+  print_standard_usage "$0 [folder] [options]" help quick url exclude-discovery
+}
+
 # Get any command line options
 TEST_URL="http://localhost:8080"
 QUICK_MODE=false
+EXCLUDE_LIST=""
 
 # Parse command line arguments
 FOLDER=""
 while [[ $# -gt 0 ]]; do
   case $1 in
+    -h|--help)
+      print_usage
+      exit 0
+      ;;
     -q|--quick)
       QUICK_MODE=true
       shift
       ;;
+    -u|--url)
+      shift
+      if [ $# -eq 0 ] || [[ "$1" == -* ]]; then
+        echo "❌ Error: --url requires a URL argument"
+        exit 1
+      fi
+      TEST_URL="$1"
+      shift
+      ;;
+    -x|--exclude)
+      shift
+      if [ $# -eq 0 ] || [[ "$1" == -* ]]; then
+        echo "❌ Error: --exclude requires at least one file or folder"
+        exit 1
+      fi
+      while [[ $# -gt 0 ]] && [[ "$1" != -* ]]; do
+        EXCLUDE_LIST="$(normalize_exclude_list "$EXCLUDE_LIST" "$1")"
+        shift
+      done
+      ;;
     *)
       if [ -z "$FOLDER" ]; then
         FOLDER="$1"
+      else
+        echo "❌ Error: Unexpected argument '$1'"
+        print_usage
+        exit 1
       fi
       shift
       ;;
   esac
 done
-
-parse_test_options
 
 # Install dependencies locally if not already installed
 npm install pa11y > /dev/null 2>&1
@@ -51,7 +82,7 @@ cd "$FOLDER" || exit 1
 
 # Start server and setup
 start_server_if_needed "$TEST_URL"
-discover_html_pages "."
+discover_html_pages "." "$EXCLUDE_LIST"
 
 # Initialize combined results
 echo '{"pages":[]}' > "$RESULTS_DIR/pa11y-results.json"
