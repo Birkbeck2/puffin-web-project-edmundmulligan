@@ -1,4 +1,17 @@
-/* Favicon sparkle star colours */
+/*
+ **********************************************************************
+ * File       : components/favicon.css
+ * Author     : Edmund Mulligan <edmund@edmundmulligan.name>
+ * Copyright  : (c) 2026 The Embodied Mind
+ * License    : MIT License (see license-and-credits.html page)
+ * Description:
+ *   This stylesheet defines styles for the favicon sparkles used across the Web Witchcraft and Wizardry website.
+ **********************************************************************
+ */
+
+ *   used across the Web Witchcraft and Wizardry website.
+ **********************************************************************
+ */
 
 .sparkle-1 {
     fill: var(--colour-red); /* Red sparkle */
@@ -14,32 +27,32 @@
 
 /* Animated sparkle colours - activated when parent svg has 'animated' class */
 svg.animated .sparkle-1 {
-    animation: colourChange1 1.5s infinite;
+    animation: colour-change-1 1.5s infinite;
 }
 
 svg.animated .sparkle-2 {
-    animation: colourChange2 1.5s infinite;
+    animation: colour-change-2 1.5s infinite;
     animation-delay: 0.5s;
 }
 
 svg.animated .sparkle-3 {
-    animation: colourChange3 1.5s infinite;
+    animation: colour-change-3 1.5s infinite;
     animation-delay: 1s;
 }
 
-@keyframes colourChange1 {
+@keyframes colour-change-1 {
     0%, 100% { fill:var(--colour-red); } /* Deep Red */
     33% { fill: var(--colour-green); } /* Bright Green */
     66% { fill: var(--colour-yellow); } /* Vibrant Yellow */
 }
 
-@keyframes colourChange2 {
+@keyframes colour-change-2 {
     0%, 100% { fill: var(--colour-blue); } /* Bright Blue */
     33% { fill: var(--colour-orange); } /* Deep Orange */
     66% { fill: var(--colour-purple); } /* Bright Purple */
 }
 
-@keyframes colourChange3 {
+@keyframes colour-change-3 {
     0%, 100% { fill: var(--colour-cyan); } /* Cyan */
     33% { fill: var(--colour-hot-pink); } /* Hot Pink */
     66% { fill: var(--colour-lime-green); } /* Lime Green */

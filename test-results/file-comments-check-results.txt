@@ -4,17 +4,17 @@ File Header Comments Check Results
 ./bin/build-lessons.js
   ⚠️  Missing required fields: File, Author, Copyright, License, Description
 
-./bin/extract-lesson-content.js
-  ⚠️  Missing required fields: File, Author, Copyright, License, Description
-
 ./data/lesson-00-student.js
   ❌ Missing header comment block
+
+./styles/components/favicon.css
+  ⚠️  Missing required fields: File, Author, Copyright, License, Description
 
 
 =====================================
 Summary
 =====================================
-Total files checked: 76
+Total files checked: 68
 Files with issues: 3
   Missing header blocks: 1
   Missing required fields: 2

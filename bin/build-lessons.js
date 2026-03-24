@@ -1,15 +1,21 @@
 #!/usr/bin/env node
-
-/**
- * Build script for generating lesson HTML files from Mustache templates
+/*
+ **********************************************************************
+ * File       : bin/build-lessons.js
+ * Author     : Edmund Mulligan <edmund@edmundmulligan.name>
+ * Copyright  : (c) 2026 The Embodied Mind
+ * License    : MIT License (see license-and-credits.html page)
+ * Description:
+ *     Build script for generating lesson HTML files from Mustache templates
  * 
- * Usage: npm run build
+ *     Usage: npm run build
  * 
- * This script:
- * 1. Reads template files from templates/
- * 2. Reads data files from data/
- * 3. Generates HTML output files in students/ and mentors/
- * 4. Uses Mustache for templating
+ *     This script:
+ *       1. Reads template files from templates/
+ *       2. Reads data files from data/
+ *       3. Generates HTML output files in students/ and mentors/
+ *       4. Uses Mustache for templating
+ **********************************************************************
  */
 
 const fs = require('fs');

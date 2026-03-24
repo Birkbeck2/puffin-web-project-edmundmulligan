@@ -209,6 +209,8 @@ function formatTestDetails(testType, data) {
         return formatReadabilityDetails(data);
     case 'Colour Audit':
         return formatColourAuditDetails(data);
+    case 'File Comments':
+        return formatFileCommentsDetails(data);
     default:
         return '<p>No details available</p>';
     }
@@ -574,6 +576,46 @@ function formatReadabilityDetails(data) {
                 Average Sentence Length: ${page.averageSentenceLength || 'n/a'}
             </div>
         </div>`;
+    });
+    
+    return html;
+}
+
+/**
+ * Render file comment check results, displaying files missing headers or required fields.
+ *
+ * @remarks Preconditions:
+ * - `data` is expected to have a `files` array and `summary` object following the file-comments-check schema.
+ *
+ * @param {object} data - File comments check payload.
+ * @returns {string} HTML fragment for the modal.
+ */
+function formatFileCommentsDetails(data) {
+    const filesWithIssues = data.files || [];
+    
+    if (filesWithIssues.length === 0) {
+        return '<p>All files have proper header comments with required fields.</p>';
+    }
+    
+    let html = '<h3>Files with Issues</h3>';
+    filesWithIssues.forEach(file => {
+        html += `<div class="error-item">
+            <h4>${file.file}</h4>`;
+        
+        if (file.issues && file.issues.length > 0) {
+            file.issues.forEach(issue => {
+                if (issue.type === 'missing-header') {
+                    html += `<div class="error-detail">❌ Missing header comment block</div>`;
+                } else if (issue.type === 'missing-fields') {
+                    const fields = issue.missingFields ? issue.missingFields.join(', ') : '';
+                    html += `<div class="error-detail">⚠️ Missing required fields: ${fields}</div>`;
+                } else {
+                    html += `<div class="error-detail">${issue.message}</div>`;
+                }
+            });
+        }
+        
+        html += '</div>';
     });
     
     return html;
@@ -955,6 +997,31 @@ async function loadAllResults() {
             ],
             'Colour Audit',
             totalIssues > 0
+        ));
+    }
+
+    // Load File Comments Check Results
+    const fileComments = await loadJSON('../test-results/file-comments-check-results.json');
+    if (fileComments && fileComments.summary) {
+        const status = fileComments.summary.filesWithIssues === 0 ? 'pass' : 'fail';
+        
+        totalTests++;
+        if (status === 'pass') passedTests++;
+        else failedTests++;
+
+        testData['File Comments'] = fileComments;
+        cards.push(createTestCard(
+            'File Comments',
+            'fas fa-file-alt',
+            status,
+            [
+                { label: 'Total Files Checked', value: fileComments.summary.totalFiles },
+                { label: 'Files with Issues', value: fileComments.summary.filesWithIssues },
+                { label: 'Missing Headers', value: fileComments.summary.missingHeaderBlocks },
+                { label: 'Missing Fields', value: fileComments.summary.missingRequiredFields }
+            ],
+            'File Comments',
+            fileComments.summary.filesWithIssues > 0
         ));
     }
 

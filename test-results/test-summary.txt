@@ -8,13 +8,19 @@
   Total errors: 0
   Total warnings: 0
 
+📝 File Comments Results:
+  Files checked: 68
+  Files with issues: 3
+  Missing header blocks: 1
+  Missing required fields: 2
+
 [Links] Broken Links Results:
   Pages checked: 13
   Total links: 266
   Broken links: 0
 
 ======================
-[OK] All tests passed (no critical/serious issues)
+[X] Critical or serious accessibility issues found
 [Browser] Browser Compatibility Results:
   Browsers tested: 3
   Passed: 3
@@ -43,7 +49,7 @@
 
 [Reading] Reading Age Results:
   Pages analysed: 7
-  Total words: 6121
-  Average grade level: 9.7
+  Total words: 6119
+  Average grade level: 9.6
   [OK] All pages at high school level or below
 

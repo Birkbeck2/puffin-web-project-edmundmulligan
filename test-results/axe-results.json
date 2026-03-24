@@ -20,7 +20,7 @@
       "theme": "light",
       "style": "normal",
       "viewport": "900",
-      "count": 43
+      "count": 42
     },
     {
       "pageUrl": "students/lesson-00.html",
@@ -34,7 +34,7 @@
       "theme": "light",
       "style": "normal",
       "viewport": "900",
-      "count": 42
+      "count": 41
     },
     {
       "pageUrl": "pages/facts.html",
@@ -111,14 +111,7 @@
       "theme": "dark",
       "style": "normal",
       "viewport": "900",
-      "count": 41
-    },
-    {
-      "pageUrl": "students/lesson-00-bak.html",
-      "theme": "dark",
-      "style": "normal",
-      "viewport": "900",
-      "count": 44
+      "count": 42
     },
     {
       "pageUrl": "students/lesson-00.html",
@@ -202,7 +195,7 @@
       "theme": "light",
       "style": "subdued",
       "viewport": "900",
-      "count": 42
+      "count": 39
     },
     {
       "pageUrl": "students/lesson-01.html",
@@ -223,7 +216,7 @@
       "theme": "light",
       "style": "subdued",
       "viewport": "900",
-      "count": 42
+      "count": 41
     },
     {
       "pageUrl": "pages/facts.html",
@@ -300,14 +293,7 @@
       "theme": "dark",
       "style": "subdued",
       "viewport": "900",
-      "count": 41
-    },
-    {
-      "pageUrl": "students/lesson-00-bak.html",
-      "theme": "dark",
-      "style": "subdued",
-      "viewport": "900",
-      "count": 43
+      "count": 42
     },
     {
       "pageUrl": "students/lesson-00.html",
@@ -321,7 +307,7 @@
       "theme": "dark",
       "style": "subdued",
       "viewport": "900",
-      "count": 42
+      "count": 41
     },
     {
       "pageUrl": "pages/facts.html",
@@ -492,13 +478,6 @@
       "count": 42
     },
     {
-      "pageUrl": "students/lesson-00-bak.html",
-      "theme": "dark",
-      "style": "vibrant",
-      "viewport": "900",
-      "count": 44
-    },
-    {
       "pageUrl": "students/lesson-00.html",
       "theme": "dark",
       "style": "vibrant",
@@ -510,7 +489,7 @@
       "theme": "dark",
       "style": "vibrant",
       "viewport": "900",
-      "count": 42
+      "count": 41
     },
     {
       "pageUrl": "pages/facts.html",

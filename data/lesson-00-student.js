@@ -1,3 +1,14 @@
+/*
+ **********************************************************************
+ * File       : data/lesson-00-student.js
+ * Author     : Edmund Mulligan <edmund@edmundmulligan.name>
+ * Copyright  : (c) 2026 The Embodied Mind
+ * License    : MIT License (see license-and-credits.html page)
+ * Description:
+ *   This module defines the data for Lesson 0 - Getting Started
+ **********************************************************************
+ */
+
 module.exports = {
     lesson: {
         number: 0,
