@@ -56,6 +56,27 @@ else
   echo ""
 fi
 
+# Check File Comments results
+if [ -f "$RESULTS_DIR/file-comments-check-results.json" ]; then
+  echo "📝 File Comments Results:"
+  node -e "
+    const fs = require('fs');
+    const data = JSON.parse(fs.readFileSync('$RESULTS_DIR/file-comments-check-results.json', 'utf8'));
+
+    console.log('  Files checked: ' + data.summary.totalFiles);
+    console.log('  Files with issues: ' + data.summary.filesWithIssues);
+    console.log('  Missing header blocks: ' + data.summary.missingHeaderBlocks);
+    console.log('  Missing required fields: ' + data.summary.missingRequiredFields);
+
+    if (data.summary.filesWithIssues > 0) {
+      process.exit(1);
+    }
+  " && echo "" || { echo ""; echo "1" > "$TEMP_EXIT_FILE"; }
+else
+  echo "📝 File Comments: No issues found"
+  echo ""
+fi
+
 # Check Broken Links results
 if [ -f "$RESULTS_DIR/broken-links-results.json" ]; then
   echo "🔗 Broken Links Results:"

@@ -35,6 +35,33 @@ const browserTests = require(browserTestsPath);
 
 // Base URL for tests (can be overridden by TEST_URL environment variable)
 const BASE_URL = process.env.TEST_URL || 'http://localhost:8080';
+const EXCLUDE_LIST = (process.env.BROWSER_TEST_EXCLUDES || '')
+    .split(/[\s,]+/)
+    .map(item => item.trim())
+    .filter(Boolean)
+    .map(item => item.replace(/^\.\//, '').replace(/\/+$/, ''));
+
+function shouldExcludePage(pageInfo) {
+    if (EXCLUDE_LIST.length === 0) {
+        return false;
+    }
+
+    const rawUrl = (pageInfo.url || '').split('?')[0].replace(/^\//, '');
+    const pageBase = path.basename(rawUrl || '/');
+
+    return EXCLUDE_LIST.some(exclude => {
+        const excludeBase = path.basename(exclude);
+        if (!exclude) {
+            return false;
+        }
+
+        return rawUrl === exclude ||
+            rawUrl.startsWith(`${exclude}/`) ||
+            pageBase === excludeBase;
+    });
+}
+
+const testPages = (browserTests.pages || []).filter(pageInfo => !shouldExcludePage(pageInfo));
 
 /**
  * Execute the shared browser test suite against a single Playwright browser engine.
@@ -74,7 +101,7 @@ async function testBrowser(browserName) {
         page = await context.newPage();
 
         // Test each page defined in application-specific tests
-        for (const pageInfo of browserTests.pages) {
+        for (const pageInfo of testPages) {
             console.log(`   📄 Testing ${pageInfo.name} page...`);
             const fullUrl = BASE_URL + pageInfo.url;
             await page.goto(fullUrl, { waitUntil: 'networkidle' });
@@ -126,6 +153,15 @@ async function testBrowser(browserName) {
  */
 async function runTests() {
     console.log('🚀 Starting cross-browser tests...');
+
+    if (EXCLUDE_LIST.length > 0) {
+        console.log(`🚫 Excluding browser test pages matching: ${EXCLUDE_LIST.join(', ')}`);
+    }
+
+    if (testPages.length === 0) {
+        console.log('ℹ️  No browser test pages left after exclusions');
+        process.exit(0);
+    }
 
     const browsers = ['chromium', 'firefox', 'webkit'];
 

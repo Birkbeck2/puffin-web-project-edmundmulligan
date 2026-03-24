@@ -7,38 +7,43 @@
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 source "$SCRIPT_DIR/test-helpers.sh"
 
-# Install dependencies
-echo "Installing dependencies..."
-npm install text-readability cheerio > /dev/null 2>&1
+print_usage() {
+  print_standard_usage "$0 [folder] [options]" help exclude-discovery
+}
 
-# Validate folder parameter
+# Parse command line arguments
 FOLDER=""
 EXCLUDE_LIST=""
+
 while [[ $# -gt 0 ]]; do
-  case $1 in
+  case "$1" in
+    -h|--help)
+      print_usage
+      exit 0
+      ;;
     -x|--exclude)
       shift
-      if [[ $1 == *","* ]]; then
-        # Comma-separated list
-        EXCLUDE_LIST=$(echo "$1" | tr ',' ' ')
-      else
-        # Space-separated list (take all remaining arguments)
-        EXCLUDE_LIST="$*"
-        break
+      if [ $# -eq 0 ] || [[ "$1" == -* ]]; then
+        echo "❌ Error: --exclude requires at least one file or folder"
+        exit 1
       fi
+      while [[ $# -gt 0 ]] && [[ "$1" != -* ]]; do
+        EXCLUDE_LIST="$(normalize_exclude_list "$EXCLUDE_LIST" "$1")"
+        shift
+      done
       ;;
     *)
       # First non-option argument is the folder
       if [ -z "$FOLDER" ]; then
         FOLDER="$1"
       else
-        echo "❌ Unknown option: $1"
-        echo "Usage: $0 [folder] [-x|--exclude file1.html,file2.html] or [folder] [-x|--exclude file1.html file2.html]"
+        echo "❌ Error: Unexpected argument: $1"
+        print_usage
         exit 1
       fi
+      shift
       ;;
   esac
-  shift
 done
 
 # Set default folder if not provided
@@ -50,7 +55,9 @@ if [ ! -d "$FOLDER" ]; then
   exit 1
 fi
 
-EXCLUDED_COUNT=0
+# Install dependencies
+echo "Installing dependencies..."
+npm install text-readability cheerio > /dev/null 2>&1
 
 # Setup results directory in application folder
 ORIGINAL_DIR=$(pwd)
@@ -59,31 +66,7 @@ mkdir -p "$RESULTS_DIR"
 RESULT_FILE="$RESULTS_DIR/readability-results.json"
 
 # Find all HTML pages
-discover_html_pages "$FOLDER"
-
-# Filter out excluded pages
-if [ -n "$EXCLUDE_LIST" ]; then
-  FILTERED_PAGES=""
-  for page in $PAGES; do
-    # Get basename for comparison
-    page_base=$(basename "$page")
-    EXCLUDED=0
-    for exclude in $EXCLUDE_LIST; do
-      exclude_base=$(basename "$exclude")
-      # Match against basename or full path (with or without ./ prefix)
-      if [ "$page_base" = "$exclude_base" ] || [ "$page" = "./$exclude" ] || [ "$page" = "$exclude" ]; then
-        EXCLUDED=1
-        EXCLUDED_COUNT=$((EXCLUDED_COUNT + 1))
-        break
-      fi
-    done
-    if [ $EXCLUDED -eq 0 ]; then
-      FILTERED_PAGES="$FILTERED_PAGES $page"
-    fi
-  done
-  PAGES="$FILTERED_PAGES"
-  PAGE_COUNT=$(echo "$PAGES" | wc -w)
-fi
+discover_html_pages "$FOLDER" "$EXCLUDE_LIST"
 
 # Initialize results
 echo '{"pages":[]}' > "$RESULT_FILE"
@@ -223,7 +206,9 @@ done
 echo "======================================"
 echo "📊 Readability Summary"
 echo "======================================"
-echo "Pages excluded: $EXCLUDED_COUNT"
+if [ -n "$EXCLUDE_LIST" ]; then
+  echo "Pages excluded via -x: $EXCLUDE_LIST"
+fi
 
 node -e "
   const fs = require('fs');

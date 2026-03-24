@@ -6,13 +6,56 @@
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 source "$SCRIPT_DIR/test-helpers.sh"
 
-# Get any command line options
+print_usage() {
+  print_standard_usage "$0 [folder] [options]" help url exclude-discovery
+}
+
 TEST_URL="http://localhost:8080"
-parse_test_options "$@"
+EXCLUDE_LIST=""
+FOLDER=""
+
+while [[ $# -gt 0 ]]; do
+  case "$1" in
+    -h|--help)
+      print_usage
+      exit 0
+      ;;
+    -u|--url)
+      shift
+      if [ $# -eq 0 ] || [[ "$1" == -* ]]; then
+        echo "❌ Error: --url requires a URL argument"
+        exit 1
+      fi
+      TEST_URL="$1"
+      shift
+      ;;
+    -x|--exclude)
+      shift
+      if [ $# -eq 0 ] || [[ "$1" == -* ]]; then
+        echo "❌ Error: --exclude requires at least one file or folder"
+        exit 1
+      fi
+      while [[ $# -gt 0 ]] && [[ "$1" != -* ]]; do
+        EXCLUDE_LIST="$(normalize_exclude_list "$EXCLUDE_LIST" "$1")"
+        shift
+      done
+      ;;
+    *)
+      if [ -z "$FOLDER" ]; then
+        FOLDER="$1"
+      else
+        echo "❌ Error: Unexpected argument '$1'"
+        exit 1
+      fi
+      shift
+      ;;
+  esac
+done
+
+[ -z "$FOLDER" ] && FOLDER="."
 
 # Validate folder parameter
 ORIGINAL_DIR=$(pwd)
-FOLDER="${1:-.}"
 if [ ! -d "$FOLDER" ]; then
   echo "❌ Error: '$FOLDER' is not a valid directory"
   exit 1
@@ -31,7 +74,7 @@ cd "$FOLDER" || exit 1
 
 # Start server and setup
 start_server_if_needed "$TEST_URL"
-discover_html_pages "."
+discover_html_pages "." "$EXCLUDE_LIST"
 
 # Wait for server to be ready
 echo "Waiting for server to be ready..."

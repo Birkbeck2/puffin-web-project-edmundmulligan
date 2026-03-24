@@ -14,7 +14,6 @@
 
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
 
 // Approved generic variables that should be used (set by themeSwitcher.js)
 const APPROVED_GENERIC_VARS = [
@@ -62,6 +61,77 @@ const EXEMPT_FROM_COLOR_CHECKS = [
     'styles/test-results.css',     // Styles for test results
     'styles/definitions/colours.css' // Colour palette definitions (raw values expected here)
 ];
+
+/**
+ * Parse CLI arguments for this script.
+ *
+ * @returns {{excludeList: string[]}}
+ */
+function parseArgs() {
+    const args = process.argv.slice(2);
+    const excludeItems = [];
+
+    for (let i = 0; i < args.length; i++) {
+        const arg = args[i];
+
+        if (arg === '-h' || arg === '--help') {
+            console.log('Usage: node bin/audit-colour-usage.js [options]');
+            console.log('Options:');
+            console.log('  -h, --help           Show this help message and exit');
+            console.log('  -x, --exclude VALUE  Exclude one or more files/folders from the audit');
+            process.exit(0);
+        }
+
+        if (arg === '-x' || arg === '--exclude') {
+            i++;
+            if (i >= args.length || args[i].startsWith('-')) {
+                console.error('❌ Error: --exclude requires at least one file or folder');
+                process.exit(1);
+            }
+
+            while (i < args.length && !args[i].startsWith('-')) {
+                const splitItems = args[i].split(/[\s,]+/).map(item => item.trim()).filter(Boolean);
+                excludeItems.push(...splitItems);
+                i++;
+            }
+            i--;
+            continue;
+        }
+
+        console.error(`❌ Error: Unexpected argument '${arg}'`);
+        process.exit(1);
+    }
+
+    const excludeList = excludeItems
+        .map(item => item.replace(/^\.\//, '').replace(/\/+$/, ''))
+        .filter(Boolean);
+
+    return { excludeList };
+}
+
+/**
+ * Check whether a file should be excluded by CLI exclude rules.
+ *
+ * @param {string} relativePath - Path relative to repository root.
+ * @param {string[]} excludeList - Normalized exclude entries.
+ * @returns {boolean}
+ */
+function matchesExcludeList(relativePath, excludeList) {
+    if (excludeList.length === 0) {
+        return false;
+    }
+
+    const normalizedPath = relativePath.replace(/\\/g, '/').replace(/^\.\//, '').replace(/\/+$/, '');
+    const baseName = path.basename(normalizedPath);
+
+    return excludeList.some(exclude => {
+        const normalizedExclude = exclude.replace(/\\/g, '/').replace(/^\.\//, '').replace(/\/+$/, '');
+        const excludeBase = path.basename(normalizedExclude);
+        return normalizedPath === normalizedExclude ||
+            normalizedPath.startsWith(`${normalizedExclude}/`) ||
+            baseName === excludeBase;
+    });
+}
 
 /**
  * Check if a file should be exempt from colour compliance checks
@@ -258,7 +328,7 @@ function checkFileLoadsThemeSystem(filePath, content) {
  * @param {string[]} extensions - Allowed filename suffixes.
  * @returns {string[]} Matching file paths.
  */
-function getAllFiles(dir, extensions) {
+function getAllFiles(dir, extensions, excludeList, rootDir, stats) {
     let results = [];
     const list = fs.readdirSync(dir);
     
@@ -269,11 +339,16 @@ function getAllFiles(dir, extensions) {
         if (stat && stat.isDirectory()) {
             // Skip node_modules, .git, test-results, etc.
             if (!['node_modules', '.git', 'test-results', 'artwork'].includes(file)) {
-                results = results.concat(getAllFiles(filePath, extensions));
+                results = results.concat(getAllFiles(filePath, extensions, excludeList, rootDir, stats));
             }
         } else {
             if (extensions.some(ext => file.endsWith(ext))) {
-                results.push(filePath);
+                const relativePath = path.relative(rootDir, filePath).replace(/\\/g, '/');
+                if (matchesExcludeList(relativePath, excludeList)) {
+                    stats.excluded++;
+                } else {
+                    results.push(filePath);
+                }
             }
         }
     });
@@ -291,6 +366,8 @@ function getAllFiles(dir, extensions) {
  * @returns {void}
  */
 function main() {
+    const { excludeList } = parseArgs();
+
     console.log('\n' + '='.repeat(100));
     console.log('colour usage AUDIT - Theme Compliance Check');
     console.log('='.repeat(100) + '\n');
@@ -298,8 +375,14 @@ function main() {
     const rootDir = path.join(__dirname, '..');
     
     // Find all CSS and HTML files
-    const cssFiles = getAllFiles(rootDir, ['.css']);
-    const htmlFiles = getAllFiles(rootDir, ['.html']);
+    const stats = { excluded: 0 };
+    const cssFiles = getAllFiles(rootDir, ['.css'], excludeList, rootDir, stats);
+    const htmlFiles = getAllFiles(rootDir, ['.html'], excludeList, rootDir, stats);
+
+    if (excludeList.length > 0) {
+        console.log(`Excluding files/folders matching: ${excludeList.join(', ')}`);
+        console.log(`Excluded files from scan: ${stats.excluded}\n`);
+    }
     
     console.log(`Scanning ${cssFiles.length} CSS files and ${htmlFiles.length} HTML files...\n`);
     
@@ -390,6 +473,9 @@ function main() {
     console.log(`hardcoded colours: ${allIssues.hardcodedColors.length}`);
     console.log(`Theme-specific var usage: ${allIssues.themeSpecificVars.length}`);
     console.log(`Missing theme system: ${allIssues.missingThemeSystem.length}`);
+    if (excludeList.length > 0) {
+        console.log(`Excluded files: ${stats.excluded}`);
+    }
     console.log('='.repeat(100) + '\n');
     
     // Write detailed report to file

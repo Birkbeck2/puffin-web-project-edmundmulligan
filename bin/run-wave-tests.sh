@@ -8,6 +8,10 @@
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 source "$SCRIPT_DIR/test-helpers.sh"
 
+print_usage() {
+  print_standard_usage "$0 [folder] [options]" help quick url exclude-discovery
+}
+
 # Change to project root directory
 cd "$SCRIPT_DIR/.."
 
@@ -30,25 +34,52 @@ fi
 # Get any command line options
 TEST_URL=""
 QUICK_MODE=false
+EXCLUDE_LIST=""
 
 # Parse command line arguments
 FOLDER=""
 while [[ $# -gt 0 ]]; do
   case $1 in
+    -h|--help)
+      print_usage
+      exit 0
+      ;;
     -q|--quick)
       QUICK_MODE=true
       shift
       ;;
+    -u|--url)
+      shift
+      if [ $# -eq 0 ] || [[ "$1" == -* ]]; then
+        echo "❌ Error: --url requires a URL argument"
+        exit 1
+      fi
+      TEST_URL="$1"
+      shift
+      ;;
+    -x|--exclude)
+      shift
+      if [ $# -eq 0 ] || [[ "$1" == -* ]]; then
+        echo "❌ Error: --exclude requires at least one file or folder"
+        exit 1
+      fi
+      while [[ $# -gt 0 ]] && [[ "$1" != -* ]]; do
+        EXCLUDE_LIST="$(normalize_exclude_list "$EXCLUDE_LIST" "$1")"
+        shift
+      done
+      ;;
     *)
       if [ -z "$FOLDER" ]; then
         FOLDER="$1"
+      else
+        echo "❌ Error: Unexpected argument '$1'"
+        print_usage
+        exit 1
       fi
       shift
       ;;
   esac
 done
-
-parse_test_options
 
 
 # Set default folder if not provided
@@ -69,7 +100,7 @@ cd "$FOLDER" || exit 1
 # Start server
 start_server_if_needed "$TEST_URL"
 
-discover_html_pages "."
+discover_html_pages "." "$EXCLUDE_LIST"
 # Install and run ngrok
 # this is needed to run WAVE as it exposes localhost to the internet
 if ! command -v ngrok &> /dev/null; then
@@ -154,7 +185,7 @@ RESULT_FILE="$RESULTS_DIR/wave-results.json"
 echo '{"pages":[]}' > "$RESULT_FILE"
 
 # Find all HTML pages
-discover_html_pages
+discover_html_pages "." "$EXCLUDE_LIST"
 
 # Define viewport widths to test (Note: WAVE tests via API, viewport simulation limited)
 if [ "$QUICK_MODE" = true ]; then

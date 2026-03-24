@@ -9,8 +9,8 @@ on:
     - cron: "43 4 * * 0"
 
 jobs:
-  analyze:
-    name: Analyze (${{ matrix.language }})
+  analyse:
+    name: Analyse (${{ matrix.language }})
     runs-on: ubuntu-latest
 
     permissions:

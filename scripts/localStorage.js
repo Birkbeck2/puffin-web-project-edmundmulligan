@@ -362,11 +362,13 @@
                 if (submitButton) {
                     const originalText = submitButton.textContent;
                     submitButton.textContent = 'Information Saved!';
-                    submitButton.style.backgroundColor = 'var(--colour-success-background)';
+                    submitButton.style.backgroundColor = 'var(--colour-effective-button-background-selected)';
+                    submitButton.style.color = 'var(--colour-effective-button-text-selected)';
                 
                     setTimeout(() => {
                         submitButton.textContent = originalText;
                         submitButton.style.backgroundColor = '';
+                        submitButton.style.color = '';
                     }, 2000);
                 }
             } catch (error) {
@@ -408,69 +410,6 @@
         }
 
         /**
-         * Set up load button handler
-         */
-        setupLoadButton() {
-            const form = document.getElementById(this.formId);
-            const loadButton = document.getElementById('load-information-btn');
-            
-            if (!loadButton || !form) {
-                return;
-            }
-
-            loadButton.addEventListener('click', async () => {
-                const nameInput = document.getElementById('student-name');
-                if (!nameInput) {
-                    return;
-                }
-
-                const enteredName = nameInput.value.trim();
-                if (!enteredName) {
-                    alert('Please enter a name to load information.');
-                    return;
-                }
-
-                // Determine the profile identifier based on form type
-                const isMentorForm = form.id === 'mentor-info-form';
-                const profileIdentifier = isMentorForm ? 'mentor' : enteredName.toLowerCase();
-
-                try {
-                    // Try to load the data for this profile
-                    const storageKey = this.storageKeyPrefix + profileIdentifier;
-                    
-                    if (!this.storage.exists(storageKey)) {
-                        loadButton.textContent = 'No Data Found!';
-                        loadButton.style.backgroundColor = 'var(--colour-warning-background)';
-                    
-                        setTimeout(() => {
-                            loadButton.textContent = 'Load Information';
-                            loadButton.style.backgroundColor = '';
-                        }, 2000);
-                        return;
-                    }
-
-                    // Set this as the current profile
-                    localStorage.setItem(this.CURRENT_PROFILE_KEY, profileIdentifier);
-
-                    // Load the form data with forced theme application
-                    await this.loadFormData(true);
-
-                    // Visual feedback
-                    loadButton.textContent = 'Information Loaded!';
-                    loadButton.style.backgroundColor = 'var(--colour-success-background)';
-                
-                    setTimeout(() => {
-                        loadButton.textContent = 'Load Information';
-                        loadButton.style.backgroundColor = '';
-                    }, 2000);
-                } catch (error) {
-                    console.error('Error loading information:', error);
-                    alert('There was an error loading the information. Please try again.');
-                }
-            });
-        }
-
-        /**
          * Set up clear button handler
          */
         setupClearButton() {
@@ -502,9 +441,10 @@
                     output.innerHTML = '';
                 }
             
-                // Reset theme to browser default (auto)
+                // Reset theme and style to defaults.
                 if (window.ThemeSwitcher) {
                     window.ThemeSwitcher.set('auto');
+                    window.ThemeSwitcher.setStyle('normal');
                 }
             
                 // Close the popover
@@ -513,11 +453,13 @@
                 // Visual feedback on the clear button
                 if (clearButton) {
                     clearButton.textContent = 'Information Cleared!';
-                    clearButton.style.backgroundColor = 'var(--colour-warning-background)';
+                    clearButton.style.backgroundColor = 'var(--colour-effective-button-background-selected)';
+                    clearButton.style.color = 'var(--colour-effective-button-text-selected)';
                 
                     setTimeout(() => {
                         clearButton.textContent = 'Clear Information';
                         clearButton.style.backgroundColor = '';
+                        clearButton.style.color = '';
                     }, 2000);
                 }
             });
@@ -640,7 +582,6 @@
         
             this.loadFormData();
             this.setupFormListeners();
-            this.setupLoadButton();
             this.setupClearButton();
         }
     }
