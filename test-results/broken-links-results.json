@@ -1,12 +1,6 @@
 {
   "pages": [
     {
-      "url": "mentors/lesson-00.html",
-      "links": [],
-      "brokenCount": 0,
-      "totalCount": 20
-    },
-    {
       "url": "index.html",
       "links": [],
       "brokenCount": 0,
@@ -25,10 +19,52 @@
       "totalCount": 33
     },
     {
-      "url": "pages/glossary.html",
+      "url": "mentors/lesson-00.html",
       "links": [],
       "brokenCount": 0,
-      "totalCount": 13
+      "totalCount": 20
+    },
+    {
+      "url": "manipulated-images/image2.html",
+      "links": [],
+      "brokenCount": 0,
+      "totalCount": 6
+    },
+    {
+      "url": "manipulated-images/index.html",
+      "links": [],
+      "brokenCount": 0,
+      "totalCount": 17
+    },
+    {
+      "url": "manipulated-images/image1.html",
+      "links": [],
+      "brokenCount": 0,
+      "totalCount": 6
+    },
+    {
+      "url": "manipulated-images/image5.html",
+      "links": [],
+      "brokenCount": 0,
+      "totalCount": 7
+    },
+    {
+      "url": "manipulated-images/image4.html",
+      "links": [],
+      "brokenCount": 0,
+      "totalCount": 9
+    },
+    {
+      "url": "manipulated-images/image6.html",
+      "links": [],
+      "brokenCount": 0,
+      "totalCount": 17
+    },
+    {
+      "url": "manipulated-images/image3.html",
+      "links": [],
+      "brokenCount": 0,
+      "totalCount": 6
     },
     {
       "url": "pages/facts.html",
@@ -37,22 +73,22 @@
       "totalCount": 13
     },
     {
+      "url": "pages/start.html",
+      "links": [],
+      "brokenCount": 0,
+      "totalCount": 17
+    },
+    {
+      "url": "pages/credits.html",
+      "links": [],
+      "brokenCount": 0,
+      "totalCount": 25
+    },
+    {
       "url": "pages/mentors.html",
       "links": [],
       "brokenCount": 0,
       "totalCount": 17
-    },
-    {
-      "url": "pages/students.html",
-      "links": [],
-      "brokenCount": 0,
-      "totalCount": 17
-    },
-    {
-      "url": "pages/gallery.html",
-      "links": [],
-      "brokenCount": 0,
-      "totalCount": 42
     },
     {
       "url": "pages/faq.html",
@@ -61,14 +97,32 @@
       "totalCount": 15
     },
     {
+      "url": "pages/students.html",
+      "links": [],
+      "brokenCount": 0,
+      "totalCount": 17
+    },
+    {
       "url": "pages/license.html",
       "links": [],
       "brokenCount": 0,
       "totalCount": 12
+    },
+    {
+      "url": "pages/glossary.html",
+      "links": [],
+      "brokenCount": 0,
+      "totalCount": 13
+    },
+    {
+      "url": "pages/gallery.html",
+      "links": [],
+      "brokenCount": 0,
+      "totalCount": 42
     }
   ],
   "summary": {
-    "totalLinks": 224,
+    "totalLinks": 334,
     "brokenLinks": 0,
     "excludedLinks": 0
   }
