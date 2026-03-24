@@ -1,14 +1,6 @@
 {
   "pages": [
     {
-      "url": "mentors/lesson-00.html",
-      "theme": "light",
-      "style": "normal",
-      "viewport": "900",
-      "score": 1,
-      "failedAudits": []
-    },
-    {
       "url": "index.html",
       "theme": "light",
       "style": "normal",
@@ -33,7 +25,91 @@
       "failedAudits": []
     },
     {
-      "url": "pages/glossary.html",
+      "url": "mentors/lesson-00.html",
+      "theme": "light",
+      "style": "normal",
+      "viewport": "900",
+      "score": 1,
+      "failedAudits": []
+    },
+    {
+      "url": "manipulated-images/image2.html",
+      "theme": "light",
+      "style": "normal",
+      "viewport": "900",
+      "score": 1,
+      "failedAudits": []
+    },
+    {
+      "url": "manipulated-images/index.html",
+      "theme": "light",
+      "style": "normal",
+      "viewport": "900",
+      "score": 0.93,
+      "failedAudits": [
+        {
+          "id": "target-size",
+          "title": "Touch targets do not have sufficient size or spacing.",
+          "description": "Touch targets with sufficient size and spacing help users who may have difficulty targeting small controls to activate the targets. [Learn more about touch targets](https://dequeuniversity.com/rules/axe/4.10/target-size).",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "url": "manipulated-images/image1.html",
+      "theme": "light",
+      "style": "normal",
+      "viewport": "900",
+      "score": 1,
+      "failedAudits": []
+    },
+    {
+      "url": "manipulated-images/image5.html",
+      "theme": "light",
+      "style": "normal",
+      "viewport": "900",
+      "score": 0.91,
+      "failedAudits": [
+        {
+          "id": "color-contrast",
+          "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+          "description": "Low-contrast text is difficult or impossible for many users to read. [Learn how to provide sufficient color contrast](https://dequeuniversity.com/rules/axe/4.10/color-contrast).",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "url": "manipulated-images/image4.html",
+      "theme": "light",
+      "style": "normal",
+      "viewport": "900",
+      "score": 0.91,
+      "failedAudits": [
+        {
+          "id": "color-contrast",
+          "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+          "description": "Low-contrast text is difficult or impossible for many users to read. [Learn how to provide sufficient color contrast](https://dequeuniversity.com/rules/axe/4.10/color-contrast).",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "url": "manipulated-images/image6.html",
+      "theme": "light",
+      "style": "normal",
+      "viewport": "900",
+      "score": 0.93,
+      "failedAudits": [
+        {
+          "id": "color-contrast",
+          "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+          "description": "Low-contrast text is difficult or impossible for many users to read. [Learn how to provide sufficient color contrast](https://dequeuniversity.com/rules/axe/4.10/color-contrast).",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "url": "manipulated-images/image3.html",
       "theme": "light",
       "style": "normal",
       "viewport": "900",
@@ -49,39 +125,7 @@
       "failedAudits": []
     },
     {
-      "url": "pages/mentors.html",
-      "theme": "light",
-      "style": "normal",
-      "viewport": "900",
-      "score": 1,
-      "failedAudits": []
-    },
-    {
-      "url": "pages/students.html",
-      "theme": "light",
-      "style": "normal",
-      "viewport": "900",
-      "score": 1,
-      "failedAudits": []
-    },
-    {
-      "url": "pages/gallery.html",
-      "theme": "light",
-      "style": "normal",
-      "viewport": "900",
-      "score": 1,
-      "failedAudits": []
-    },
-    {
-      "url": "pages/faq.html",
-      "theme": "light",
-      "style": "normal",
-      "viewport": "900",
-      "score": 1,
-      "failedAudits": []
-    },
-    {
-      "url": "pages/license.html",
+      "url": "pages/start.html",
       "theme": "light",
       "style": "normal",
       "viewport": "900",
@@ -97,7 +141,7 @@
       "failedAudits": []
     },
     {
-      "url": "pages/start.html",
+      "url": "pages/mentors.html",
       "theme": "light",
       "style": "normal",
       "viewport": "900",
@@ -105,8 +149,40 @@
       "failedAudits": []
     },
     {
-      "url": "mentors/lesson-00.html",
-      "theme": "dark",
+      "url": "pages/faq.html",
+      "theme": "light",
+      "style": "normal",
+      "viewport": "900",
+      "score": 1,
+      "failedAudits": []
+    },
+    {
+      "url": "pages/students.html",
+      "theme": "light",
+      "style": "normal",
+      "viewport": "900",
+      "score": 1,
+      "failedAudits": []
+    },
+    {
+      "url": "pages/license.html",
+      "theme": "light",
+      "style": "normal",
+      "viewport": "900",
+      "score": 1,
+      "failedAudits": []
+    },
+    {
+      "url": "pages/glossary.html",
+      "theme": "light",
+      "style": "normal",
+      "viewport": "900",
+      "score": 1,
+      "failedAudits": []
+    },
+    {
+      "url": "pages/gallery.html",
+      "theme": "light",
       "style": "normal",
       "viewport": "900",
       "score": 1,
@@ -137,7 +213,91 @@
       "failedAudits": []
     },
     {
-      "url": "pages/glossary.html",
+      "url": "mentors/lesson-00.html",
+      "theme": "dark",
+      "style": "normal",
+      "viewport": "900",
+      "score": 1,
+      "failedAudits": []
+    },
+    {
+      "url": "manipulated-images/image2.html",
+      "theme": "dark",
+      "style": "normal",
+      "viewport": "900",
+      "score": 1,
+      "failedAudits": []
+    },
+    {
+      "url": "manipulated-images/index.html",
+      "theme": "dark",
+      "style": "normal",
+      "viewport": "900",
+      "score": 0.93,
+      "failedAudits": [
+        {
+          "id": "target-size",
+          "title": "Touch targets do not have sufficient size or spacing.",
+          "description": "Touch targets with sufficient size and spacing help users who may have difficulty targeting small controls to activate the targets. [Learn more about touch targets](https://dequeuniversity.com/rules/axe/4.10/target-size).",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "url": "manipulated-images/image1.html",
+      "theme": "dark",
+      "style": "normal",
+      "viewport": "900",
+      "score": 1,
+      "failedAudits": []
+    },
+    {
+      "url": "manipulated-images/image5.html",
+      "theme": "dark",
+      "style": "normal",
+      "viewport": "900",
+      "score": 0.91,
+      "failedAudits": [
+        {
+          "id": "color-contrast",
+          "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+          "description": "Low-contrast text is difficult or impossible for many users to read. [Learn how to provide sufficient color contrast](https://dequeuniversity.com/rules/axe/4.10/color-contrast).",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "url": "manipulated-images/image4.html",
+      "theme": "dark",
+      "style": "normal",
+      "viewport": "900",
+      "score": 0.91,
+      "failedAudits": [
+        {
+          "id": "color-contrast",
+          "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+          "description": "Low-contrast text is difficult or impossible for many users to read. [Learn how to provide sufficient color contrast](https://dequeuniversity.com/rules/axe/4.10/color-contrast).",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "url": "manipulated-images/image6.html",
+      "theme": "dark",
+      "style": "normal",
+      "viewport": "900",
+      "score": 0.93,
+      "failedAudits": [
+        {
+          "id": "color-contrast",
+          "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+          "description": "Low-contrast text is difficult or impossible for many users to read. [Learn how to provide sufficient color contrast](https://dequeuniversity.com/rules/axe/4.10/color-contrast).",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "url": "manipulated-images/image3.html",
       "theme": "dark",
       "style": "normal",
       "viewport": "900",
@@ -153,39 +313,7 @@
       "failedAudits": []
     },
     {
-      "url": "pages/mentors.html",
-      "theme": "dark",
-      "style": "normal",
-      "viewport": "900",
-      "score": 1,
-      "failedAudits": []
-    },
-    {
-      "url": "pages/students.html",
-      "theme": "dark",
-      "style": "normal",
-      "viewport": "900",
-      "score": 1,
-      "failedAudits": []
-    },
-    {
-      "url": "pages/gallery.html",
-      "theme": "dark",
-      "style": "normal",
-      "viewport": "900",
-      "score": 1,
-      "failedAudits": []
-    },
-    {
-      "url": "pages/faq.html",
-      "theme": "dark",
-      "style": "normal",
-      "viewport": "900",
-      "score": 1,
-      "failedAudits": []
-    },
-    {
-      "url": "pages/license.html",
+      "url": "pages/start.html",
       "theme": "dark",
       "style": "normal",
       "viewport": "900",
@@ -201,7 +329,7 @@
       "failedAudits": []
     },
     {
-      "url": "pages/start.html",
+      "url": "pages/mentors.html",
       "theme": "dark",
       "style": "normal",
       "viewport": "900",
@@ -209,9 +337,41 @@
       "failedAudits": []
     },
     {
-      "url": "mentors/lesson-00.html",
-      "theme": "light",
-      "style": "subdued",
+      "url": "pages/faq.html",
+      "theme": "dark",
+      "style": "normal",
+      "viewport": "900",
+      "score": 1,
+      "failedAudits": []
+    },
+    {
+      "url": "pages/students.html",
+      "theme": "dark",
+      "style": "normal",
+      "viewport": "900",
+      "score": 1,
+      "failedAudits": []
+    },
+    {
+      "url": "pages/license.html",
+      "theme": "dark",
+      "style": "normal",
+      "viewport": "900",
+      "score": 1,
+      "failedAudits": []
+    },
+    {
+      "url": "pages/glossary.html",
+      "theme": "dark",
+      "style": "normal",
+      "viewport": "900",
+      "score": 1,
+      "failedAudits": []
+    },
+    {
+      "url": "pages/gallery.html",
+      "theme": "dark",
+      "style": "normal",
       "viewport": "900",
       "score": 1,
       "failedAudits": []
@@ -241,7 +401,91 @@
       "failedAudits": []
     },
     {
-      "url": "pages/glossary.html",
+      "url": "mentors/lesson-00.html",
+      "theme": "light",
+      "style": "subdued",
+      "viewport": "900",
+      "score": 1,
+      "failedAudits": []
+    },
+    {
+      "url": "manipulated-images/image2.html",
+      "theme": "light",
+      "style": "subdued",
+      "viewport": "900",
+      "score": 1,
+      "failedAudits": []
+    },
+    {
+      "url": "manipulated-images/index.html",
+      "theme": "light",
+      "style": "subdued",
+      "viewport": "900",
+      "score": 0.93,
+      "failedAudits": [
+        {
+          "id": "target-size",
+          "title": "Touch targets do not have sufficient size or spacing.",
+          "description": "Touch targets with sufficient size and spacing help users who may have difficulty targeting small controls to activate the targets. [Learn more about touch targets](https://dequeuniversity.com/rules/axe/4.10/target-size).",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "url": "manipulated-images/image1.html",
+      "theme": "light",
+      "style": "subdued",
+      "viewport": "900",
+      "score": 1,
+      "failedAudits": []
+    },
+    {
+      "url": "manipulated-images/image5.html",
+      "theme": "light",
+      "style": "subdued",
+      "viewport": "900",
+      "score": 0.91,
+      "failedAudits": [
+        {
+          "id": "color-contrast",
+          "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+          "description": "Low-contrast text is difficult or impossible for many users to read. [Learn how to provide sufficient color contrast](https://dequeuniversity.com/rules/axe/4.10/color-contrast).",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "url": "manipulated-images/image4.html",
+      "theme": "light",
+      "style": "subdued",
+      "viewport": "900",
+      "score": 0.91,
+      "failedAudits": [
+        {
+          "id": "color-contrast",
+          "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+          "description": "Low-contrast text is difficult or impossible for many users to read. [Learn how to provide sufficient color contrast](https://dequeuniversity.com/rules/axe/4.10/color-contrast).",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "url": "manipulated-images/image6.html",
+      "theme": "light",
+      "style": "subdued",
+      "viewport": "900",
+      "score": 0.93,
+      "failedAudits": [
+        {
+          "id": "color-contrast",
+          "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+          "description": "Low-contrast text is difficult or impossible for many users to read. [Learn how to provide sufficient color contrast](https://dequeuniversity.com/rules/axe/4.10/color-contrast).",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "url": "manipulated-images/image3.html",
       "theme": "light",
       "style": "subdued",
       "viewport": "900",
@@ -257,39 +501,7 @@
       "failedAudits": []
     },
     {
-      "url": "pages/mentors.html",
-      "theme": "light",
-      "style": "subdued",
-      "viewport": "900",
-      "score": 1,
-      "failedAudits": []
-    },
-    {
-      "url": "pages/students.html",
-      "theme": "light",
-      "style": "subdued",
-      "viewport": "900",
-      "score": 1,
-      "failedAudits": []
-    },
-    {
-      "url": "pages/gallery.html",
-      "theme": "light",
-      "style": "subdued",
-      "viewport": "900",
-      "score": 1,
-      "failedAudits": []
-    },
-    {
-      "url": "pages/faq.html",
-      "theme": "light",
-      "style": "subdued",
-      "viewport": "900",
-      "score": 1,
-      "failedAudits": []
-    },
-    {
-      "url": "pages/license.html",
+      "url": "pages/start.html",
       "theme": "light",
       "style": "subdued",
       "viewport": "900",
@@ -305,7 +517,7 @@
       "failedAudits": []
     },
     {
-      "url": "pages/start.html",
+      "url": "pages/mentors.html",
       "theme": "light",
       "style": "subdued",
       "viewport": "900",
@@ -313,8 +525,40 @@
       "failedAudits": []
     },
     {
-      "url": "mentors/lesson-00.html",
-      "theme": "dark",
+      "url": "pages/faq.html",
+      "theme": "light",
+      "style": "subdued",
+      "viewport": "900",
+      "score": 1,
+      "failedAudits": []
+    },
+    {
+      "url": "pages/students.html",
+      "theme": "light",
+      "style": "subdued",
+      "viewport": "900",
+      "score": 1,
+      "failedAudits": []
+    },
+    {
+      "url": "pages/license.html",
+      "theme": "light",
+      "style": "subdued",
+      "viewport": "900",
+      "score": 1,
+      "failedAudits": []
+    },
+    {
+      "url": "pages/glossary.html",
+      "theme": "light",
+      "style": "subdued",
+      "viewport": "900",
+      "score": 1,
+      "failedAudits": []
+    },
+    {
+      "url": "pages/gallery.html",
+      "theme": "light",
       "style": "subdued",
       "viewport": "900",
       "score": 1,
@@ -345,7 +589,91 @@
       "failedAudits": []
     },
     {
-      "url": "pages/glossary.html",
+      "url": "mentors/lesson-00.html",
+      "theme": "dark",
+      "style": "subdued",
+      "viewport": "900",
+      "score": 1,
+      "failedAudits": []
+    },
+    {
+      "url": "manipulated-images/image2.html",
+      "theme": "dark",
+      "style": "subdued",
+      "viewport": "900",
+      "score": 1,
+      "failedAudits": []
+    },
+    {
+      "url": "manipulated-images/index.html",
+      "theme": "dark",
+      "style": "subdued",
+      "viewport": "900",
+      "score": 0.93,
+      "failedAudits": [
+        {
+          "id": "target-size",
+          "title": "Touch targets do not have sufficient size or spacing.",
+          "description": "Touch targets with sufficient size and spacing help users who may have difficulty targeting small controls to activate the targets. [Learn more about touch targets](https://dequeuniversity.com/rules/axe/4.10/target-size).",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "url": "manipulated-images/image1.html",
+      "theme": "dark",
+      "style": "subdued",
+      "viewport": "900",
+      "score": 1,
+      "failedAudits": []
+    },
+    {
+      "url": "manipulated-images/image5.html",
+      "theme": "dark",
+      "style": "subdued",
+      "viewport": "900",
+      "score": 0.91,
+      "failedAudits": [
+        {
+          "id": "color-contrast",
+          "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+          "description": "Low-contrast text is difficult or impossible for many users to read. [Learn how to provide sufficient color contrast](https://dequeuniversity.com/rules/axe/4.10/color-contrast).",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "url": "manipulated-images/image4.html",
+      "theme": "dark",
+      "style": "subdued",
+      "viewport": "900",
+      "score": 0.91,
+      "failedAudits": [
+        {
+          "id": "color-contrast",
+          "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+          "description": "Low-contrast text is difficult or impossible for many users to read. [Learn how to provide sufficient color contrast](https://dequeuniversity.com/rules/axe/4.10/color-contrast).",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "url": "manipulated-images/image6.html",
+      "theme": "dark",
+      "style": "subdued",
+      "viewport": "900",
+      "score": 0.93,
+      "failedAudits": [
+        {
+          "id": "color-contrast",
+          "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+          "description": "Low-contrast text is difficult or impossible for many users to read. [Learn how to provide sufficient color contrast](https://dequeuniversity.com/rules/axe/4.10/color-contrast).",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "url": "manipulated-images/image3.html",
       "theme": "dark",
       "style": "subdued",
       "viewport": "900",
@@ -361,39 +689,7 @@
       "failedAudits": []
     },
     {
-      "url": "pages/mentors.html",
-      "theme": "dark",
-      "style": "subdued",
-      "viewport": "900",
-      "score": 1,
-      "failedAudits": []
-    },
-    {
-      "url": "pages/students.html",
-      "theme": "dark",
-      "style": "subdued",
-      "viewport": "900",
-      "score": 1,
-      "failedAudits": []
-    },
-    {
-      "url": "pages/gallery.html",
-      "theme": "dark",
-      "style": "subdued",
-      "viewport": "900",
-      "score": 1,
-      "failedAudits": []
-    },
-    {
-      "url": "pages/faq.html",
-      "theme": "dark",
-      "style": "subdued",
-      "viewport": "900",
-      "score": 1,
-      "failedAudits": []
-    },
-    {
-      "url": "pages/license.html",
+      "url": "pages/start.html",
       "theme": "dark",
       "style": "subdued",
       "viewport": "900",
@@ -409,7 +705,7 @@
       "failedAudits": []
     },
     {
-      "url": "pages/start.html",
+      "url": "pages/mentors.html",
       "theme": "dark",
       "style": "subdued",
       "viewport": "900",
@@ -417,9 +713,41 @@
       "failedAudits": []
     },
     {
-      "url": "mentors/lesson-00.html",
-      "theme": "light",
-      "style": "vibrant",
+      "url": "pages/faq.html",
+      "theme": "dark",
+      "style": "subdued",
+      "viewport": "900",
+      "score": 1,
+      "failedAudits": []
+    },
+    {
+      "url": "pages/students.html",
+      "theme": "dark",
+      "style": "subdued",
+      "viewport": "900",
+      "score": 1,
+      "failedAudits": []
+    },
+    {
+      "url": "pages/license.html",
+      "theme": "dark",
+      "style": "subdued",
+      "viewport": "900",
+      "score": 1,
+      "failedAudits": []
+    },
+    {
+      "url": "pages/glossary.html",
+      "theme": "dark",
+      "style": "subdued",
+      "viewport": "900",
+      "score": 1,
+      "failedAudits": []
+    },
+    {
+      "url": "pages/gallery.html",
+      "theme": "dark",
+      "style": "subdued",
       "viewport": "900",
       "score": 1,
       "failedAudits": []
@@ -449,7 +777,91 @@
       "failedAudits": []
     },
     {
-      "url": "pages/glossary.html",
+      "url": "mentors/lesson-00.html",
+      "theme": "light",
+      "style": "vibrant",
+      "viewport": "900",
+      "score": 1,
+      "failedAudits": []
+    },
+    {
+      "url": "manipulated-images/image2.html",
+      "theme": "light",
+      "style": "vibrant",
+      "viewport": "900",
+      "score": 1,
+      "failedAudits": []
+    },
+    {
+      "url": "manipulated-images/index.html",
+      "theme": "light",
+      "style": "vibrant",
+      "viewport": "900",
+      "score": 0.93,
+      "failedAudits": [
+        {
+          "id": "target-size",
+          "title": "Touch targets do not have sufficient size or spacing.",
+          "description": "Touch targets with sufficient size and spacing help users who may have difficulty targeting small controls to activate the targets. [Learn more about touch targets](https://dequeuniversity.com/rules/axe/4.10/target-size).",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "url": "manipulated-images/image1.html",
+      "theme": "light",
+      "style": "vibrant",
+      "viewport": "900",
+      "score": 1,
+      "failedAudits": []
+    },
+    {
+      "url": "manipulated-images/image5.html",
+      "theme": "light",
+      "style": "vibrant",
+      "viewport": "900",
+      "score": 0.91,
+      "failedAudits": [
+        {
+          "id": "color-contrast",
+          "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+          "description": "Low-contrast text is difficult or impossible for many users to read. [Learn how to provide sufficient color contrast](https://dequeuniversity.com/rules/axe/4.10/color-contrast).",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "url": "manipulated-images/image4.html",
+      "theme": "light",
+      "style": "vibrant",
+      "viewport": "900",
+      "score": 0.91,
+      "failedAudits": [
+        {
+          "id": "color-contrast",
+          "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+          "description": "Low-contrast text is difficult or impossible for many users to read. [Learn how to provide sufficient color contrast](https://dequeuniversity.com/rules/axe/4.10/color-contrast).",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "url": "manipulated-images/image6.html",
+      "theme": "light",
+      "style": "vibrant",
+      "viewport": "900",
+      "score": 0.93,
+      "failedAudits": [
+        {
+          "id": "color-contrast",
+          "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+          "description": "Low-contrast text is difficult or impossible for many users to read. [Learn how to provide sufficient color contrast](https://dequeuniversity.com/rules/axe/4.10/color-contrast).",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "url": "manipulated-images/image3.html",
       "theme": "light",
       "style": "vibrant",
       "viewport": "900",
@@ -465,39 +877,7 @@
       "failedAudits": []
     },
     {
-      "url": "pages/mentors.html",
-      "theme": "light",
-      "style": "vibrant",
-      "viewport": "900",
-      "score": 1,
-      "failedAudits": []
-    },
-    {
-      "url": "pages/students.html",
-      "theme": "light",
-      "style": "vibrant",
-      "viewport": "900",
-      "score": 1,
-      "failedAudits": []
-    },
-    {
-      "url": "pages/gallery.html",
-      "theme": "light",
-      "style": "vibrant",
-      "viewport": "900",
-      "score": 1,
-      "failedAudits": []
-    },
-    {
-      "url": "pages/faq.html",
-      "theme": "light",
-      "style": "vibrant",
-      "viewport": "900",
-      "score": 1,
-      "failedAudits": []
-    },
-    {
-      "url": "pages/license.html",
+      "url": "pages/start.html",
       "theme": "light",
       "style": "vibrant",
       "viewport": "900",
@@ -513,7 +893,7 @@
       "failedAudits": []
     },
     {
-      "url": "pages/start.html",
+      "url": "pages/mentors.html",
       "theme": "light",
       "style": "vibrant",
       "viewport": "900",
@@ -521,8 +901,40 @@
       "failedAudits": []
     },
     {
-      "url": "mentors/lesson-00.html",
-      "theme": "dark",
+      "url": "pages/faq.html",
+      "theme": "light",
+      "style": "vibrant",
+      "viewport": "900",
+      "score": 1,
+      "failedAudits": []
+    },
+    {
+      "url": "pages/students.html",
+      "theme": "light",
+      "style": "vibrant",
+      "viewport": "900",
+      "score": 1,
+      "failedAudits": []
+    },
+    {
+      "url": "pages/license.html",
+      "theme": "light",
+      "style": "vibrant",
+      "viewport": "900",
+      "score": 1,
+      "failedAudits": []
+    },
+    {
+      "url": "pages/glossary.html",
+      "theme": "light",
+      "style": "vibrant",
+      "viewport": "900",
+      "score": 1,
+      "failedAudits": []
+    },
+    {
+      "url": "pages/gallery.html",
+      "theme": "light",
       "style": "vibrant",
       "viewport": "900",
       "score": 1,
@@ -553,7 +965,91 @@
       "failedAudits": []
     },
     {
-      "url": "pages/glossary.html",
+      "url": "mentors/lesson-00.html",
+      "theme": "dark",
+      "style": "vibrant",
+      "viewport": "900",
+      "score": 1,
+      "failedAudits": []
+    },
+    {
+      "url": "manipulated-images/image2.html",
+      "theme": "dark",
+      "style": "vibrant",
+      "viewport": "900",
+      "score": 1,
+      "failedAudits": []
+    },
+    {
+      "url": "manipulated-images/index.html",
+      "theme": "dark",
+      "style": "vibrant",
+      "viewport": "900",
+      "score": 0.93,
+      "failedAudits": [
+        {
+          "id": "target-size",
+          "title": "Touch targets do not have sufficient size or spacing.",
+          "description": "Touch targets with sufficient size and spacing help users who may have difficulty targeting small controls to activate the targets. [Learn more about touch targets](https://dequeuniversity.com/rules/axe/4.10/target-size).",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "url": "manipulated-images/image1.html",
+      "theme": "dark",
+      "style": "vibrant",
+      "viewport": "900",
+      "score": 1,
+      "failedAudits": []
+    },
+    {
+      "url": "manipulated-images/image5.html",
+      "theme": "dark",
+      "style": "vibrant",
+      "viewport": "900",
+      "score": 0.91,
+      "failedAudits": [
+        {
+          "id": "color-contrast",
+          "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+          "description": "Low-contrast text is difficult or impossible for many users to read. [Learn how to provide sufficient color contrast](https://dequeuniversity.com/rules/axe/4.10/color-contrast).",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "url": "manipulated-images/image4.html",
+      "theme": "dark",
+      "style": "vibrant",
+      "viewport": "900",
+      "score": 0.91,
+      "failedAudits": [
+        {
+          "id": "color-contrast",
+          "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+          "description": "Low-contrast text is difficult or impossible for many users to read. [Learn how to provide sufficient color contrast](https://dequeuniversity.com/rules/axe/4.10/color-contrast).",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "url": "manipulated-images/image6.html",
+      "theme": "dark",
+      "style": "vibrant",
+      "viewport": "900",
+      "score": 0.93,
+      "failedAudits": [
+        {
+          "id": "color-contrast",
+          "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+          "description": "Low-contrast text is difficult or impossible for many users to read. [Learn how to provide sufficient color contrast](https://dequeuniversity.com/rules/axe/4.10/color-contrast).",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "url": "manipulated-images/image3.html",
       "theme": "dark",
       "style": "vibrant",
       "viewport": "900",
@@ -569,39 +1065,7 @@
       "failedAudits": []
     },
     {
-      "url": "pages/mentors.html",
-      "theme": "dark",
-      "style": "vibrant",
-      "viewport": "900",
-      "score": 1,
-      "failedAudits": []
-    },
-    {
-      "url": "pages/students.html",
-      "theme": "dark",
-      "style": "vibrant",
-      "viewport": "900",
-      "score": 1,
-      "failedAudits": []
-    },
-    {
-      "url": "pages/gallery.html",
-      "theme": "dark",
-      "style": "vibrant",
-      "viewport": "900",
-      "score": 1,
-      "failedAudits": []
-    },
-    {
-      "url": "pages/faq.html",
-      "theme": "dark",
-      "style": "vibrant",
-      "viewport": "900",
-      "score": 1,
-      "failedAudits": []
-    },
-    {
-      "url": "pages/license.html",
+      "url": "pages/start.html",
       "theme": "dark",
       "style": "vibrant",
       "viewport": "900",
@@ -617,7 +1081,47 @@
       "failedAudits": []
     },
     {
-      "url": "pages/start.html",
+      "url": "pages/mentors.html",
+      "theme": "dark",
+      "style": "vibrant",
+      "viewport": "900",
+      "score": 1,
+      "failedAudits": []
+    },
+    {
+      "url": "pages/faq.html",
+      "theme": "dark",
+      "style": "vibrant",
+      "viewport": "900",
+      "score": 1,
+      "failedAudits": []
+    },
+    {
+      "url": "pages/students.html",
+      "theme": "dark",
+      "style": "vibrant",
+      "viewport": "900",
+      "score": 1,
+      "failedAudits": []
+    },
+    {
+      "url": "pages/license.html",
+      "theme": "dark",
+      "style": "vibrant",
+      "viewport": "900",
+      "score": 1,
+      "failedAudits": []
+    },
+    {
+      "url": "pages/glossary.html",
+      "theme": "dark",
+      "style": "vibrant",
+      "viewport": "900",
+      "score": 1,
+      "failedAudits": []
+    },
+    {
+      "url": "pages/gallery.html",
       "theme": "dark",
       "style": "vibrant",
       "viewport": "900",

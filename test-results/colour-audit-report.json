@@ -1,5 +1,476 @@
 {
-  "hardcodedColors": [],
+  "hardcodedColors": [
+    {
+      "file": "manipulated-images/styles/favicon.css",
+      "line": 4,
+      "type": "Hex Color",
+      "value": "#ff0000",
+      "context": "fill: #ff0000; /* Red sparkle */"
+    },
+    {
+      "file": "manipulated-images/styles/favicon.css",
+      "line": 8,
+      "type": "Hex Color",
+      "value": "#00ff00",
+      "context": "fill: #00ff00; /* Green sparkle */"
+    },
+    {
+      "file": "manipulated-images/styles/favicon.css",
+      "line": 12,
+      "type": "Hex Color",
+      "value": "#0000ff",
+      "context": "fill: #0000ff; /* Blue sparkle */"
+    },
+    {
+      "file": "manipulated-images/styles/favicon.css",
+      "line": 31,
+      "type": "Hex Color",
+      "value": "#FF1744",
+      "context": "0%, 100% { fill: #FF1744; } /* Deep Red */"
+    },
+    {
+      "file": "manipulated-images/styles/favicon.css",
+      "line": 32,
+      "type": "Hex Color",
+      "value": "#00E676",
+      "context": "33% { fill: #00E676; } /* Bright Green */"
+    },
+    {
+      "file": "manipulated-images/styles/favicon.css",
+      "line": 33,
+      "type": "Hex Color",
+      "value": "#FFD600",
+      "context": "66% { fill: #FFD600; } /* Vibrant Yellow */"
+    },
+    {
+      "file": "manipulated-images/styles/favicon.css",
+      "line": 37,
+      "type": "Hex Color",
+      "value": "#2979FF",
+      "context": "0%, 100% { fill: #2979FF; } /* Bright Blue */"
+    },
+    {
+      "file": "manipulated-images/styles/favicon.css",
+      "line": 38,
+      "type": "Hex Color",
+      "value": "#FF6D00",
+      "context": "33% { fill: #FF6D00; } /* Deep Orange */"
+    },
+    {
+      "file": "manipulated-images/styles/favicon.css",
+      "line": 39,
+      "type": "Hex Color",
+      "value": "#E040FB",
+      "context": "66% { fill: #E040FB; } /* Bright Purple */"
+    },
+    {
+      "file": "manipulated-images/styles/favicon.css",
+      "line": 43,
+      "type": "Hex Color",
+      "value": "#00E5FF",
+      "context": "0%, 100% { fill: #00E5FF; } /* Cyan */"
+    },
+    {
+      "file": "manipulated-images/styles/favicon.css",
+      "line": 44,
+      "type": "Hex Color",
+      "value": "#FF4081",
+      "context": "33% { fill: #FF4081; } /* Hot Pink */"
+    },
+    {
+      "file": "manipulated-images/styles/favicon.css",
+      "line": 45,
+      "type": "Hex Color",
+      "value": "#76FF03",
+      "context": "66% { fill: #76FF03; } /* Lime Green */"
+    },
+    {
+      "file": "manipulated-images/styles/main.css",
+      "line": 14,
+      "type": "Hex Color",
+      "value": "#333",
+      "context": "color: #333;"
+    },
+    {
+      "file": "manipulated-images/styles/main.css",
+      "line": 15,
+      "type": "Hex Color",
+      "value": "#f5f5f5",
+      "context": "background: #f5f5f5;"
+    },
+    {
+      "file": "manipulated-images/styles/main.css",
+      "line": 32,
+      "type": "Hex Color",
+      "value": "#1a1a1a",
+      "context": "color: #1a1a1a;"
+    },
+    {
+      "file": "manipulated-images/styles/main.css",
+      "line": 35,
+      "type": "Hex Color",
+      "value": "#4a90e2",
+      "context": "border-bottom: 0.1875rem solid #4a90e2;"
+    },
+    {
+      "file": "manipulated-images/styles/main.css",
+      "line": 41,
+      "type": "Hex Color",
+      "value": "#2c3e50",
+      "context": "color: #2c3e50;"
+    },
+    {
+      "file": "manipulated-images/styles/main.css",
+      "line": 49,
+      "type": "Hex Color",
+      "value": "#34495e",
+      "context": "color: #34495e;"
+    },
+    {
+      "file": "manipulated-images/styles/main.css",
+      "line": 61,
+      "type": "Hex Color",
+      "value": "#4a90e2",
+      "context": "color: #4a90e2;"
+    },
+    {
+      "file": "manipulated-images/styles/main.css",
+      "line": 67,
+      "type": "Hex Color",
+      "value": "#357ab8",
+      "context": "color: #357ab8;"
+    },
+    {
+      "file": "manipulated-images/styles/main.css",
+      "line": 72,
+      "type": "Hex Color",
+      "value": "#4a90e2",
+      "context": "outline: 0.125rem solid #4a90e2;"
+    },
+    {
+      "file": "manipulated-images/styles/main.css",
+      "line": 95,
+      "type": "Hex Color",
+      "value": "#666",
+      "context": "color: #666;"
+    },
+    {
+      "file": "manipulated-images/styles/main.css",
+      "line": 105,
+      "type": "Hex Color",
+      "value": "#ddd",
+      "context": "border: 0.125rem solid #ddd;"
+    },
+    {
+      "file": "manipulated-images/styles/main.css",
+      "line": 108,
+      "type": "Hex Color",
+      "value": "#fafafa",
+      "context": "background: #fafafa;"
+    },
+    {
+      "file": "manipulated-images/styles/main.css",
+      "line": 124,
+      "type": "Hex Color",
+      "value": "#4a90e2",
+      "context": "outline: 0.125rem solid #4a90e2;"
+    },
+    {
+      "file": "manipulated-images/styles/main.css",
+      "line": 132,
+      "type": "Hex Color",
+      "value": "#555",
+      "context": "color: #555;"
+    },
+    {
+      "file": "manipulated-images/styles/main.css",
+      "line": 137,
+      "type": "Hex Color",
+      "value": "#4a90e2",
+      "context": "color: #4a90e2;"
+    },
+    {
+      "file": "manipulated-images/styles/main.css",
+      "line": 141,
+      "type": "Hex Color",
+      "value": "#4a90e2",
+      "context": "background: #4a90e2;"
+    },
+    {
+      "file": "manipulated-images/styles/main.css",
+      "line": 153,
+      "type": "Hex Color",
+      "value": "#357ab8",
+      "context": "background: #357ab8;"
+    },
+    {
+      "file": "manipulated-images/styles/main.css",
+      "line": 158,
+      "type": "Hex Color",
+      "value": "#4a90e2",
+      "context": "outline: 0.125rem solid #4a90e2;"
+    },
+    {
+      "file": "manipulated-images/styles/main.css",
+      "line": 199,
+      "type": "Hex Color",
+      "value": "#e0e0e0",
+      "context": "border: 0.125rem solid #e0e0e0;"
+    },
+    {
+      "file": "manipulated-images/styles/main.css",
+      "line": 209,
+      "type": "Hex Color",
+      "value": "#f8f9fa",
+      "context": "background-color: #f8f9fa;"
+    },
+    {
+      "file": "manipulated-images/styles/main.css",
+      "line": 210,
+      "type": "Hex Color",
+      "value": "#e0e0e0",
+      "context": "border-bottom: 0.0625rem solid #e0e0e0;"
+    },
+    {
+      "file": "manipulated-images/styles/main.css",
+      "line": 212,
+      "type": "Hex Color",
+      "value": "#2c3e50",
+      "context": "color: #2c3e50;"
+    },
+    {
+      "file": "manipulated-images/styles/main.css",
+      "line": 218,
+      "type": "Hex Color",
+      "value": "#e0e0e0",
+      "context": "border-bottom: 0.0625rem solid #e0e0e0;"
+    },
+    {
+      "file": "manipulated-images/styles/main.css",
+      "line": 219,
+      "type": "Hex Color",
+      "value": "#e0e0e0",
+      "context": "border-left: 0.0625rem solid #e0e0e0;"
+    },
+    {
+      "file": "manipulated-images/styles/main.css",
+      "line": 252,
+      "type": "Hex Color",
+      "value": "#e0e0e0",
+      "context": "border-top: 0.0625rem solid #e0e0e0;"
+    },
+    {
+      "file": "manipulated-images/styles/main.css",
+      "line": 253,
+      "type": "Hex Color",
+      "value": "#fafbfc",
+      "context": "background-color: #fafbfc;"
+    },
+    {
+      "file": "manipulated-images/styles/main.css",
+      "line": 281,
+      "type": "Hex Color",
+      "value": "#f5f5f5",
+      "context": "background: #f5f5f5;"
+    },
+    {
+      "file": "manipulated-images/styles/main.css",
+      "line": 282,
+      "type": "Hex Color",
+      "value": "#ddd",
+      "context": "border: 0.0625rem solid #ddd;"
+    },
+    {
+      "file": "manipulated-images/styles/main.css",
+      "line": 295,
+      "type": "Hex Color",
+      "value": "#f5f5f5",
+      "context": "background: #f5f5f5;"
+    },
+    {
+      "file": "manipulated-images/styles/main.css",
+      "line": 22,
+      "type": "Named Color",
+      "value": ": white;",
+      "context": "background: white;"
+    },
+    {
+      "file": "manipulated-images/styles/main.css",
+      "line": 142,
+      "type": "Named Color",
+      "value": ": white;",
+      "context": "color: white;"
+    },
+    {
+      "file": "manipulated-images/styles/main.css",
+      "line": 220,
+      "type": "Named Color",
+      "value": ": white;",
+      "context": "background: white;"
+    },
+    {
+      "file": "manipulated-images/image3.html",
+      "line": 38,
+      "type": "Hex Color",
+      "value": "#000000",
+      "context": "&lt;path d=\"m 492,42.1 89,89 17,17 -17,17 -416,416 -17,17 -89,-89 -17,-17 17,-17 416,-416 z M 109.9,492 148,530.1 386.1,292 348,253.9 Z M 492,109.9 381.9,220 420,258.1 530.1,148 Z\" style=\"stroke:#000000;stroke-opacity:1\" /&gt;"
+    },
+    {
+      "file": "manipulated-images/image3.html",
+      "line": 39,
+      "type": "Hex Color",
+      "value": "#000000",
+      "context": "&lt;path class=\"sparkle-1\" d=\"m 292.10708,186.94453 -24,-56 -56,-24 56,-23.999997 24,-56 24,56 56,23.999997 -56,24 z\" style=\"stroke:#000000;stroke-opacity:1\" /&gt;"
+    },
+    {
+      "file": "manipulated-images/image3.html",
+      "line": 40,
+      "type": "Hex Color",
+      "value": "#000000",
+      "context": "&lt;path class=\"sparkle-2\" d=\"m 94.206072,123.97209 31.999998,-80.000003 32,80.000003 80.00001,32 -80.00001,32 -32,80 -31.999998,-80 -79.999995,-32 z\" style=\"stroke:#000000;stroke-opacity:1\" /&gt;"
+    },
+    {
+      "file": "manipulated-images/image3.html",
+      "line": 41,
+      "type": "Hex Color",
+      "value": "#000000",
+      "context": "&lt;path class=\"sparkle-3\" d=\"m 353.37735,460.00437 80,-32.00001 32,-80 32,80 80,32.00001 -80,32 -32,80 -32,-80 z\" style=\"stroke:#000000;stroke-opacity:1\" /&gt;"
+    },
+    {
+      "file": "manipulated-images/image3.html",
+      "line": 50,
+      "type": "Hex Color",
+      "value": "#ff0000",
+      "context": "fill: #ff0000; /* Red sparkle */"
+    },
+    {
+      "file": "manipulated-images/image3.html",
+      "line": 54,
+      "type": "Hex Color",
+      "value": "#00ff00",
+      "context": "fill: #00ff00; /* Green sparkle */"
+    },
+    {
+      "file": "manipulated-images/image3.html",
+      "line": 58,
+      "type": "Hex Color",
+      "value": "#0000ff",
+      "context": "fill: #0000ff; /* Blue sparkle */"
+    },
+    {
+      "file": "manipulated-images/image3.html",
+      "line": 77,
+      "type": "Hex Color",
+      "value": "#FF1744",
+      "context": "0%, 100% { fill: #FF1744; } /* Deep Red */"
+    },
+    {
+      "file": "manipulated-images/image3.html",
+      "line": 78,
+      "type": "Hex Color",
+      "value": "#00E676",
+      "context": "33% { fill: #00E676; } /* Bright Green */"
+    },
+    {
+      "file": "manipulated-images/image3.html",
+      "line": 79,
+      "type": "Hex Color",
+      "value": "#FFD600",
+      "context": "66% { fill: #FFD600; } /* Vibrant Yellow */"
+    },
+    {
+      "file": "manipulated-images/image3.html",
+      "line": 83,
+      "type": "Hex Color",
+      "value": "#2979FF",
+      "context": "0%, 100% { fill: #2979FF; } /* Bright Blue */"
+    },
+    {
+      "file": "manipulated-images/image3.html",
+      "line": 84,
+      "type": "Hex Color",
+      "value": "#FF6D00",
+      "context": "33% { fill: #FF6D00; } /* Deep Orange */"
+    },
+    {
+      "file": "manipulated-images/image3.html",
+      "line": 85,
+      "type": "Hex Color",
+      "value": "#E040FB",
+      "context": "66% { fill: #E040FB; } /* Bright Purple */"
+    },
+    {
+      "file": "manipulated-images/image3.html",
+      "line": 89,
+      "type": "Hex Color",
+      "value": "#00E5FF",
+      "context": "0%, 100% { fill: #00E5FF; } /* Cyan */"
+    },
+    {
+      "file": "manipulated-images/image3.html",
+      "line": 90,
+      "type": "Hex Color",
+      "value": "#FF4081",
+      "context": "33% { fill: #FF4081; } /* Hot Pink */"
+    },
+    {
+      "file": "manipulated-images/image3.html",
+      "line": 91,
+      "type": "Hex Color",
+      "value": "#76FF03",
+      "context": "66% { fill: #76FF03; } /* Lime Green */"
+    }
+  ],
   "themeSpecificVars": [],
-  "missingThemeSystem": []
+  "missingThemeSystem": [
+    {
+      "file": "manipulated-images/image1.html",
+      "missing": {
+        "globals": true,
+        "themeSwitcher": true
+      }
+    },
+    {
+      "file": "manipulated-images/image2.html",
+      "missing": {
+        "globals": true,
+        "themeSwitcher": true
+      }
+    },
+    {
+      "file": "manipulated-images/image3.html",
+      "missing": {
+        "globals": true,
+        "themeSwitcher": true
+      }
+    },
+    {
+      "file": "manipulated-images/image4.html",
+      "missing": {
+        "globals": true,
+        "themeSwitcher": true
+      }
+    },
+    {
+      "file": "manipulated-images/image5.html",
+      "missing": {
+        "globals": true,
+        "themeSwitcher": true
+      }
+    },
+    {
+      "file": "manipulated-images/image6.html",
+      "missing": {
+        "globals": true,
+        "themeSwitcher": true
+      }
+    },
+    {
+      "file": "manipulated-images/index.html",
+      "missing": {
+        "globals": true,
+        "themeSwitcher": true
+      }
+    }
+  ]
 }
