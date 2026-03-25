@@ -40,7 +40,7 @@
     margin-top: 0.5rem; 
     font-size: var(--fontsize-normal); 
     font-weight: bold;
-    font-family: var(--font-family-serif);
+    font-family: var(--font-family-subtitle);
 }
 
 /* Visually hidden class for accessibility */
@@ -73,7 +73,7 @@
 .installing-required-software label {
     font-weight: bold;
     font-size: var(--fontsize-header-small);
-    font-family: var(--font-family-serif);
+    font-family: var(--font-family-subtitle);
     margin-top: 2rem;
 }
 

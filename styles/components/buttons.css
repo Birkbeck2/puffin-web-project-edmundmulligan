@@ -65,6 +65,7 @@
 /* Shape modifier: rectangular buttons */
 .button-rectangle {
     display: block;
+    font-family: var(--font-family-button);
     font-size: var(--fontsize-button);
     font-weight: bold;
     border-radius: var(--border-radius);
@@ -82,7 +83,7 @@
     height: var(--buttonsize-circle);
     max-width: 15rem;
     max-height: 15rem;
-    font-family: var(--font-family-serif);
+    font-family: var(--font-family-button);
     font-size: var(--fontsize-button);
 }
 
@@ -97,7 +98,7 @@
     height: calc(var(--buttonsize-circle) * 0.67);
     max-width: 10rem;
     max-height: 10rem;
-    font-family: var(--font-family-serif);
+    font-family: var(--font-family-button);
     font-size: calc(var(--fontsize-button) * 0.67);
 
     /* padding: 0.4rem;

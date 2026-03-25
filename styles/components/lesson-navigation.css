@@ -140,7 +140,7 @@
 }
 
 .context-switch-btn .context-letter {
-    font-family: var(--font-family-decorative);
+    font-family: var(--font-family-title);
     font-weight: 700;
     font-size: 1.2rem;
     line-height: 1;

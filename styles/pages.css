@@ -47,7 +47,7 @@
 
 .lesson-title {
    display: block;
-   font-family: var(--font-family-serif);
+   font-family: var(--font-family-subtitle);
    font-weight: 600;
    font-size: var(--fontsize-header-medium);
 }

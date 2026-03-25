@@ -51,7 +51,7 @@ body {
     * N.B. These are inherited by child elements unless overridden
     */
 
-    font-family: var(--font-family-sans);
+    font-family: var(--font-family-text);
     font-style: var(--font-style-normal);
     line-height: var(--line-height-normal);
     text-align: var(--text-align);
@@ -86,10 +86,10 @@ footer {
     min-width: 0;
 }
 
-/* Center all headings and use Cinzel (an elegant serif Google font) */
+/* Center all headings and use the subtitle font token */
 h1, h2, h3, h4, h5, h6 {
-    /* Use Cinzel font for headings */
-    font-family: var(--font-family-serif);
+    /* Use the shared heading font token */
+    font-family: var(--font-family-subtitle);
     font-weight: var(--font-weight-bold);
     text-align: center;
 }

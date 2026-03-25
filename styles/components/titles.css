@@ -11,7 +11,7 @@
  */
 
 .site-title {
-    font-family: var(--font-family-decorative);
+    font-family: var(--font-family-title);
     font-weight: 700;
     text-align: center;
     margin: 0 auto;
@@ -20,7 +20,7 @@
 }
 
 .site-subtitle {
-    font-family: var(--font-family-serif);
+    font-family: var(--font-family-subtitle);
     font-weight: 400;
     text-align: center;
     margin: 0 auto;
@@ -29,7 +29,7 @@
 }
 
 .page-title {
-    font-family: var(--font-family-decorative);
+    font-family: var(--font-family-title);
     font-weight: 700;
     margin: 0.5rem auto;
     padding: var(--padding-title);

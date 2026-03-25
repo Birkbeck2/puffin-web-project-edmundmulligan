@@ -137,7 +137,7 @@
 }
 
 .lorem-text {
-    font-family: var(--font-family-sans);
+    font-family: var(--font-family-text);
     font-size: 0.9rem;
     line-height: 1.4;
     margin-top: 0.5rem;
