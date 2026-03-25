@@ -64,7 +64,7 @@
             // Build the colour variable prefix based on style and theme
             const prefix = `--colour-${style}-${effectiveTheme}`;
 
-            // Apply theme-specific colors (from colours.css)
+            // Apply theme-specific colours (from colours.css)
             root.style.setProperty('--colour-effective-page-background', `var(${prefix}-page-background)`);
             root.style.setProperty('--colour-effective-page-text', `var(${prefix}-page-text)`);
             root.style.setProperty('--colour-effective-headings-background', `var(${prefix}-headings-background)`);
@@ -96,7 +96,7 @@
             root.style.setProperty('--colour-effective-link-background-focus', `var(${prefix}-link-background-focus)`);
             root.style.setProperty('--colour-effective-link-text-focus', `var(${prefix}-link-text-focus)`);
 
-            // Note: Non-themed colors (error, warning) are defined in colours.css 
+            // Note: Non-themed colours (error, warning) are defined in colours.css 
             // and remain constant across all themes - no need to set them here
             
             // Background images are both style and theme dependent
@@ -106,7 +106,7 @@
             root.style.setProperty('--bg-landscape', `var(${bgPrefix})`);
             root.style.setProperty('--bg-portrait', `var(${bgPortraitPrefix})`);
             
-            // Wand icon filters for proper contrast with backgrounds
+            // Wand icon filters for proper contrast with backgrounds (used in lesson navigation)
             // Set based on theme and style combinations
             if (effectiveTheme === 'dark') {
                 if (style === 'vibrant') {
@@ -127,15 +127,10 @@
                 root.style.setProperty('--wand-filter-on-background', 'invert(0%)'); // black on light background
             }
             
-            // SVG filters and other theme-specific settings
             if (effectiveTheme === 'dark') {
-                root.style.setProperty('--svg-filter', 'var(--svg-filter-dark)');
-                root.style.setProperty('--header-svg-filter', 'var(--header-svg-filter-dark)');
                 root.setAttribute('data-theme', 'dark');
                 this.updateLogo('dark', style);
             } else {
-                root.style.setProperty('--svg-filter', 'var(--svg-filter-light)');
-                root.style.setProperty('--header-svg-filter', 'var(--header-svg-filter-light)');
                 root.setAttribute('data-theme', 'light');
                 this.updateLogo('light', style);
             }
@@ -257,7 +252,11 @@
             Debug.methodEntry('ThemeSwitcher', 'handleThemeChange', { theme });
             this.saveThemePreference(theme);
             const style = this.getStylePreference();
-            this.applyTheme(theme, style);
+            if (document.startViewTransition) {
+                document.startViewTransition(() => this.applyTheme(theme, style));
+            } else {
+                this.applyTheme(theme, style);
+            }
             this.updateThemeButtons(theme);
             Debug.methodExit('ThemeSwitcher', 'handleThemeChange');
         }
@@ -270,7 +269,11 @@
             Debug.methodEntry('ThemeSwitcher', 'handleStyleChange', { style });
             this.saveStylePreference(style);
             const theme = this.getThemePreference();
-            this.applyTheme(theme, style);
+            if (document.startViewTransition) {
+                document.startViewTransition(() => this.applyTheme(theme, style));
+            } else {
+                this.applyTheme(theme, style);
+            }
             this.updateStyleButtons(style);
             Debug.methodExit('ThemeSwitcher', 'handleStyleChange');
         }

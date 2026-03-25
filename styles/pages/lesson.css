@@ -1,6 +1,6 @@
 /*
  **********************************************************************
- * File       : styles/students/lesson.css
+ * File       : styles/pages/lesson.css
  * Author     : Edmund Mulligan <edmund@edmundmulligan.name>
  * Copyright  : (c) 2026 The Embodied Mind
  * License    : MIT License (see license-and-credits.html page)
@@ -78,6 +78,10 @@
 }
 
 .lesson-title {
+    display: block;
+    font-family: var(--font-family-subtitle);
+    font-weight: 600;
+    font-size: var(--fontsize-header-medium);
     text-align: left;
 }
 

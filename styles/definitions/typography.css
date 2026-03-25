@@ -10,11 +10,11 @@
 
 :root {
     /* Font family definitions */
+    --font-family-text:        'Open Sans', 'sans-serif';
     --font-family-title:       'Cinzel Decorative', 'serif';
     --font-family-subtitle:    'Cinzel', 'serif';
-    --font-family-menu:        'Marcellus', 'Times New Roman', serif;
-    --font-family-button:      'Cormorant Garamond', 'Georgia', serif;
-    --font-family-text:        'Open Sans', 'sans-serif';
+    --font-family-menu:        'Marcellus', 'serif';
+    --font-family-button:      'Cormorant Garamond', 'serif';
     --font-family-mono:        'Fira Code', 'monospace';
     --font-family-icons:       'Font Awesome 7 Pro';
 

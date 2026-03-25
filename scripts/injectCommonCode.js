@@ -64,7 +64,7 @@
         </p>
     </div>
     <div class="header-text">
-        <div class="header-image inline-header" style="mask-image: url('${this.pathPrefix}images/icons/wizard.svg'); -webkit-mask-image: url('${this.pathPrefix}images/icons/wizard.svg');" role="img" aria-label="Wizard icon"></div>
+        <div class="header-image header-image-wizard inline-header" role="img" aria-label="Wizard icon"></div>
         <div class="inline-header">
             <h1 class="site-title">Web Witchcraft and Wizardry</h1>
             <nav class="site-navigation" aria-label="Site navigation">
@@ -82,7 +82,7 @@
                 </ul>
             </nav>
         </div>
-        <div class="header-image inline-header" style="mask-image: url('${this.pathPrefix}images/icons/witch.svg'); -webkit-mask-image: url('${this.pathPrefix}images/icons/witch.svg');" role="img" aria-label="Witch icon"></div>
+        <div class="header-image header-image-witch inline-header" role="img" aria-label="Witch icon"></div>
         <div class="header-button">
             <button aria-label="Expand header">
                 <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
@@ -93,7 +93,7 @@
 
 <div class="header-full">
     <div class="header-left">
-        <div class="header-image" style="mask-image: url('${this.pathPrefix}images/icons/wizard.svg'); -webkit-mask-image: url('${this.pathPrefix}images/icons/wizard.svg');" role="img" aria-label="Wizard icon"></div>
+        <div class="header-image header-image-wizard" role="img" aria-label="Wizard icon"></div>
     </div>
 
     <div class="header-center">
@@ -133,7 +133,7 @@
     </div>
 
     <div class="header-right">
-        <div class="header-image" style="mask-image: url('${this.pathPrefix}images/icons/witch.svg'); -webkit-mask-image: url('${this.pathPrefix}images/icons/witch.svg');" role="img" aria-label="Witch icon"></div>
+        <div class="header-image header-image-witch" role="img" aria-label="Witch icon"></div>
     </div>
 </div>
         `;
