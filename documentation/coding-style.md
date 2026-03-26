@@ -57,7 +57,7 @@ web/
 4. Page-specific styles
 
 #### CSS Custom Properties
-All colors, fonts, spacing, and common values are defined as CSS custom properties in `globals.css`. Always use these variables rather than hard-coded values.
+All colours, fonts, spacing, and common values are defined as CSS custom properties in `globals.css`. Always use these variables rather than hard-coded values.
 
 Example:
 ```css
@@ -234,7 +234,7 @@ The site supports light and dark themes:
 - Screen reader friendly
 - Proper heading hierarchy
 - Focus indicators visible
-- Color contrast meets WCAG AA
+- Colour contrast meets WCAG AA
 - `prefers-reduced-motion` support
 - Semantic HTML
 - ARIA labels where needed

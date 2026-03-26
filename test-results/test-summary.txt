@@ -9,14 +9,14 @@
   Total warnings: 0
 
 📝 File Comments Results:
-  Files checked: 68
+  Files checked: 72
   Files with issues: 0
   Missing header blocks: 0
   Missing required fields: 0
 
 [Links] Broken Links Results:
   Pages checked: 13
-  Total links: 266
+  Total links: 254
   Broken links: 0
 
 ======================
@@ -34,7 +34,7 @@
   [Minor] Minor: 0
 
 [Lighthouse] Lighthouse Accessibility Results:
-  Pages tested: 53
+  Pages tested: 78
   Average score: 100%
   Pages with issues: 0
   Total failed audits: 0

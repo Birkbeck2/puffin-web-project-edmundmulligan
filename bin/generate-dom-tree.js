@@ -75,10 +75,10 @@ function getNodeLabel(element) {
 }
 
 /**
- * Get node color based on tag type
+ * Get node colour based on tag type
  */
-function getNodeColor(tagName) {
-    const colors = {
+function getNodeColour(tagName) {
+    const colours = {
         'html': '#FFE6E6',
         'head': '#E6F3FF',
         'body': '#E6FFE6',
@@ -94,7 +94,7 @@ function getNodeColor(tagName) {
         'ol': '#E6E6FF',
         'li': '#F0F0FF'
     };
-    return colors[tagName] || '#FFFFFF';
+    return colours[tagName] || '#FFFFFF';
 }
 
 /**
@@ -110,10 +110,10 @@ function buildGraph(element, parentId = null) {
     nodeMap.set(element, nodeId);
 
     const label = getNodeLabel(element);
-    const color = getNodeColor(element.name);
+    const colour = getNodeColour(element.name);
 
     // Add node
-    dotContent += `    ${nodeId} [label="${label}", fillcolor="${color}", style="rounded,filled"];\n`;
+    dotContent += `    ${nodeId} [label="${label}", fillcolor="${colour}", style="rounded,filled"];\n`;
 
     // Add edge from parent
     if (parentId) {

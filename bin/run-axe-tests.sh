@@ -370,7 +370,7 @@ node -e "
   };
 
   // Count contrast issues
-  const contrastIssues = data.violations.filter(v => v.id === 'color-contrast').length;
+  const contrastIssues = data.violations.filter(v => v.id === 'colour-contrast').length;
 
   console.log('  Total violations: ' + total);
   console.log('  🔴 Critical: ' + bySeverity.critical);
@@ -378,7 +378,7 @@ node -e "
   console.log('  🟡 Moderate: ' + bySeverity.moderate);
   console.log('  ⚪ Minor: ' + bySeverity.minor);
   if (contrastIssues > 0) {
-    console.log('  🎨 Color Contrast Issues: ' + contrastIssues);
+    console.log('  🎨 Colour Contrast Issues: ' + contrastIssues);
   }
   console.log('');
 "
@@ -417,7 +417,7 @@ else
     Object.keys(grouped).forEach(id => {
       const v = grouped[id];
       const icon = v.impact === 'critical' ? '🔴' : v.impact === 'serious' ? '🟠' : v.impact === 'moderate' ? '🟡' : '⚪';
-      const isContrast = id === 'color-contrast' ? ' 🎨' : '';
+      const isContrast = id === 'colour-contrast' ? ' 🎨' : '';
 
       console.log(icon + isContrast + ' ' + id + ' (' + v.impact + ')');
       console.log('  Description: ' + v.description);

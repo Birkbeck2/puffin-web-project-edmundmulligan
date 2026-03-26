@@ -212,7 +212,7 @@
     transition: all 0.3s ease;
 }
 
-/* Current section wand (theme accent colored) */
+/* Current section wand (theme accent coloured) */
 .wand-icon.current {
     background-color: var(--colour-effective-accent);
     border: 2px solid var(--colour-effective-accent);

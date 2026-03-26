@@ -124,7 +124,7 @@ for VIEWPORT in "${VIEWPORTS[@]}"; do
 
         echo "    [$TESTED/$TOTAL_TESTS] Testing $URL_PATH (${VIEWPORT}px, $STYLE-$THEME)"
 
-        # Run lighthouse on this page with emulated color scheme and viewport
+        # Run lighthouse on this page with emulated colour scheme and viewport
         TEMP_RESULT="$RESULTS_DIR/lighthouse-temp-$TESTED.json"
         npx lighthouse "$FULL_URL" --output=json --output-path=$TEMP_RESULT \
           --emulated-form-factor=desktop \

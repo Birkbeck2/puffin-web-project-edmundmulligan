@@ -340,7 +340,7 @@
     border: var(--border-weight-thin) var(--border-style) var(--colour-page-text);
 }
 
-/* Color scheme data attributes - systematic approach to apply inline styles via CSS */
+/* Colour scheme data attributes - systematic approach to apply inline styles via CSS */
 
 /* Non-theme colours */
 [data-scheme="warning"] {

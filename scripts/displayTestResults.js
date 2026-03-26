@@ -633,9 +633,9 @@ function formatFileCommentsDetails(data) {
 function formatColourAuditDetails(data) {
     let html = '';
     
-    if (data.hardcodedColors && data.hardcodedColors.length > 0) {
+    if (data.hardcodedColours && data.hardcodedColours.length > 0) {
         html += '<h3>Hardcoded Colours</h3>';
-        data.hardcodedColors.forEach(item => {
+        data.hardcodedColours.forEach(item => {
             html += `<div class="error-item">
                 <h4>${item.file}</h4>
                 <div class="error-detail">Line ${item.line}: ${item.value}</div>
@@ -975,7 +975,7 @@ async function loadAllResults() {
     // Load Colour Audit Results
     const colourAudit = await loadJSON('../test-results/colour-audit-report.json');
     if (colourAudit) {
-        const totalIssues = (colourAudit.hardcodedColors ? colourAudit.hardcodedColors.length : 0) +
+        const totalIssues = (colourAudit.hardcodedColours ? colourAudit.hardcodedColours.length : 0) +
                           (colourAudit.themeSpecificVars ? colourAudit.themeSpecificVars.length : 0) +
                           (colourAudit.missingThemeSystem ? colourAudit.missingThemeSystem.length : 0);
         const status = totalIssues === 0 ? 'pass' : 'fail';
@@ -990,7 +990,7 @@ async function loadAllResults() {
             'fas fa-palette',
             status,
             [
-                { label: 'Hardcoded Colours', value: colourAudit.hardcodedColors ? colourAudit.hardcodedColors.length : 0 },
+                { label: 'Hardcoded Colours', value: colourAudit.hardcodedColours ? colourAudit.hardcodedColours.length : 0 },
                 { label: 'Theme-Specific Vars', value: colourAudit.themeSpecificVars ? colourAudit.themeSpecificVars.length : 0 },
                 { label: 'Missing Theme System', value: colourAudit.missingThemeSystem ? colourAudit.missingThemeSystem.length : 0 },
                 { label: 'Total Issues', value: totalIssues }

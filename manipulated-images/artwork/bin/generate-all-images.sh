@@ -4,9 +4,9 @@
 # Run from the artwork folder to ensure correct paths
 # Usage: ./generate-all-images.sh
 
-# First, generate LaTeX colors from CSS
-echo "Generating LaTeX colors from CSS..."
-./bin/generate-colors-from-css.py ../styles/colors.css common/colours.tex
+# First, generate LaTeX colours from CSS
+echo "Generating LaTeX colours from CSS..."
+./bin/generate-colours-from-css.py ../styles/colours.css common/colours.tex
 
 echo "Generating image-1 images"
 cd source/image-1
