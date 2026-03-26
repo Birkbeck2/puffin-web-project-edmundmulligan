@@ -88,7 +88,7 @@
 
 .accessory-name {
     display: block;
-    font-family: var(--font-family-serif);
+    font-family: var(--font-family-subtitle);
     font-weight: bold;
     margin: 0.25rem 1rem 0;
 }

@@ -109,20 +109,20 @@
       "totalCount": 12
     },
     {
-      "url": "pages/glossary.html",
+      "url": "pages/credits.html",
       "links": [],
       "brokenCount": 0,
-      "totalCount": 13
+      "totalCount": 25
     },
     {
-      "url": "pages/gallery.html",
+      "url": "pages/start.html",
       "links": [],
       "brokenCount": 0,
-      "totalCount": 42
+      "totalCount": 17
     }
   ],
   "summary": {
-    "totalLinks": 334,
+    "totalLinks": 266,
     "brokenLinks": 0,
     "excludedLinks": 0
   }

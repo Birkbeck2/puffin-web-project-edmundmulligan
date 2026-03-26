@@ -1,6 +1,6 @@
 /*
  **********************************************************************
- * File       : styles/students/lesson.css
+ * File       : styles/pages/lesson.css
  * Author     : Edmund Mulligan <edmund@edmundmulligan.name>
  * Copyright  : (c) 2026 The Embodied Mind
  * License    : MIT License (see license-and-credits.html page)
@@ -40,7 +40,7 @@
     margin-top: 0.5rem; 
     font-size: var(--fontsize-normal); 
     font-weight: bold;
-    font-family: var(--font-family-serif);
+    font-family: var(--font-family-subtitle);
 }
 
 /* Visually hidden class for accessibility */
@@ -73,11 +73,15 @@
 .installing-required-software label {
     font-weight: bold;
     font-size: var(--fontsize-header-small);
-    font-family: var(--font-family-serif);
+    font-family: var(--font-family-subtitle);
     margin-top: 2rem;
 }
 
 .lesson-title {
+    display: block;
+    font-family: var(--font-family-subtitle);
+    font-weight: 600;
+    font-size: var(--fontsize-header-medium);
     text-align: left;
 }
 

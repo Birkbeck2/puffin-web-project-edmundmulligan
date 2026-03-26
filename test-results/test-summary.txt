@@ -2,25 +2,23 @@
 ======================
 
 [Code] Code Validation Results:
-  Files with issues: 10
-  HTML errors: 39
-  CSS errors: 18
-  Total errors: 57
+  Files with issues: 0
+  HTML errors: 0
+  CSS errors: 0
+  Total errors: 0
   Total warnings: 0
 
 📝 File Comments Results:
-  Files checked: 86
-  Files with issues: 13
-  Missing header blocks: 11
-  Missing required fields: 2
+  Files checked: 68
+  Files with issues: 0
+  Missing header blocks: 0
+  Missing required fields: 0
 
 [Links] Broken Links Results:
-  Pages checked: 20
-  Total links: 334
+  Pages checked: 13
+  Total links: 266
   Broken links: 0
 
-======================
-[X] Critical or serious accessibility issues found
 [Browser] Browser Compatibility Results:
   Browsers tested: 3
   Passed: 3
@@ -34,7 +32,7 @@
   [Minor] Minor: 0
 
 [Lighthouse] Lighthouse Accessibility Results:
-  Pages tested: 78
+  Pages tested: 53
   Average score: 100%
   Pages with issues: 0
   Total failed audits: 0
@@ -45,11 +43,7 @@
   [Warning]  Warnings: 0
   Pages with errors: 0
 
-[WAVE] WAVE Accessibility Results:
-  Pages tested: 0
-  [X] Errors: 0
-  [Warning]  Alerts: 0
-  [Contrast] Contrast errors: 0
+[WAVE] WAVE: Not tested or no errors found
 
 [Reading] Reading Age Results:
   Pages analysed: 7

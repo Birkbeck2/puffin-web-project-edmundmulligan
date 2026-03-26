@@ -1,16 +1,16 @@
 /*
  **********************************************************************
- * File       : globals.css
+ * File       : animation.css
  * Author     : Edmund Mulligan <edmund@edmundmulligan.name>
  * Copyright  : (c) 2026 The Embodied Mind
  * License    : MIT License (see license-and-credits.html page)
  * Description:
- *    definition of global CSS variables and styles
+ *    Definition of global animation CSS variables
  **********************************************************************
  */
 
-/* Import colour, typography and layout definitions from respective CSS files */
-@import url("./definitions/colours.css");
-@import url("./definitions/typography.css");
-@import url("./definitions/layout.css");
-@import url("./definitions/animation.css");
+:root {
+        /* View transition animation settings */
+        --view-transition-duration: 2000ms;
+        --view-transition-timing-function: ease-in-out;
+}

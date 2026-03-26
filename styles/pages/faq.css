@@ -1,23 +1,14 @@
 /*
  **********************************************************************
- * File       : pages.css
+ * File       : styles/pages/faq.css
  * Author     : Edmund Mulligan <edmund@edmundmulligan.name>
  * Copyright  : (c) 2026 The Embodied Mind
  * License    : MIT License (see license-and-credits.html page)
  * Description:
- *   This has the page specific styles for all pages except student.html,
- *   which needs significant refactoring before it is ready to be included 
- *   here.
- *
- *   Originally, each page had its own stylesheet and media-query stylesheet,
- *   but there was so much repetition between them that it made sense to
- *   put them all in one file to follow the DRY principle.
- *
- *   TODO: Add styles for student.html 
+ *   FAQ page-specific styles.
  **********************************************************************
  */
 
-/* FAQ page */
 .faq {
    & h3,
    & h4 {
@@ -43,11 +34,4 @@
          columns: 1;
       }
    }
-}
-
-.lesson-title {
-   display: block;
-   font-family: var(--font-family-serif);
-   font-weight: 600;
-   font-size: var(--fontsize-header-medium);
 }

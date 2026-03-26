@@ -11,7 +11,7 @@
  */
 
 .site-title {
-    font-family: var(--font-family-decorative);
+    font-family: var(--font-family-title);
     font-weight: 700;
     text-align: center;
     margin: 0 auto;
@@ -20,7 +20,7 @@
 }
 
 .site-subtitle {
-    font-family: var(--font-family-serif);
+    font-family: var(--font-family-subtitle);
     font-weight: 400;
     text-align: center;
     margin: 0 auto;
@@ -29,7 +29,7 @@
 }
 
 .page-title {
-    font-family: var(--font-family-decorative);
+    font-family: var(--font-family-title);
     font-weight: 700;
     margin: 0.5rem auto;
     padding: var(--padding-title);
@@ -48,4 +48,33 @@
 
 .faq-title {
     text-align: left;
+}
+
+/*
+ **************************************************
+ * Heading element sizes and alignment
+ **************************************************
+ */
+
+/* Center all headings and use the subtitle font token */
+h1, h2, h3, h4, h5, h6 {
+    /* Use the shared heading font token */
+    font-family: var(--font-family-subtitle);
+    font-weight: var(--font-weight-bold);
+    text-align: center;
+}
+
+/* make h1 and h2 larger and bolder */
+h1, h2 {
+    font-size: var(--fontsize-header-large);
+}
+
+/* h3 and h4 not quite as big */
+h3, h4 {
+    font-size: var(--fontsize-header-medium);
+}
+
+/* h5 and h6 smaller again */
+h5, h6 {
+    font-size: var(--fontsize-header-small);
 }
