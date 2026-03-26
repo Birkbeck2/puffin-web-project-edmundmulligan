@@ -1,11 +1,488 @@
 {
-  "files": [],
+  "files": [
+    {
+      "file": "./manipulated-images/image2.html",
+      "type": "html",
+      "errors": [
+        {
+          "line": 102,
+          "column": 108,
+          "message": "Trailing whitespace",
+          "ruleId": "no-trailing-whitespace",
+          "severity": "error"
+        },
+        {
+          "line": 104,
+          "column": 107,
+          "message": "Trailing whitespace",
+          "ruleId": "no-trailing-whitespace",
+          "severity": "error"
+        },
+        {
+          "line": 106,
+          "column": 108,
+          "message": "Trailing whitespace",
+          "ruleId": "no-trailing-whitespace",
+          "severity": "error"
+        },
+        {
+          "line": 248,
+          "column": 1,
+          "message": "Trailing whitespace",
+          "ruleId": "no-trailing-whitespace",
+          "severity": "error"
+        },
+        {
+          "line": 250,
+          "column": 1,
+          "message": "Trailing whitespace",
+          "ruleId": "no-trailing-whitespace",
+          "severity": "error"
+        },
+        {
+          "line": 254,
+          "column": 1,
+          "message": "Trailing whitespace",
+          "ruleId": "no-trailing-whitespace",
+          "severity": "error"
+        },
+        {
+          "line": 266,
+          "column": 1,
+          "message": "Trailing whitespace",
+          "ruleId": "no-trailing-whitespace",
+          "severity": "error"
+        },
+        {
+          "line": 269,
+          "column": 1,
+          "message": "Trailing whitespace",
+          "ruleId": "no-trailing-whitespace",
+          "severity": "error"
+        },
+        {
+          "line": 272,
+          "column": 1,
+          "message": "Trailing whitespace",
+          "ruleId": "no-trailing-whitespace",
+          "severity": "error"
+        },
+        {
+          "line": 291,
+          "column": 1,
+          "message": "Trailing whitespace",
+          "ruleId": "no-trailing-whitespace",
+          "severity": "error"
+        },
+        {
+          "line": 295,
+          "column": 1,
+          "message": "Trailing whitespace",
+          "ruleId": "no-trailing-whitespace",
+          "severity": "error"
+        },
+        {
+          "line": 302,
+          "column": 1,
+          "message": "Trailing whitespace",
+          "ruleId": "no-trailing-whitespace",
+          "severity": "error"
+        },
+        {
+          "line": 306,
+          "column": 1,
+          "message": "Trailing whitespace",
+          "ruleId": "no-trailing-whitespace",
+          "severity": "error"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "file": "./manipulated-images/index.html",
+      "type": "html",
+      "errors": [
+        {
+          "line": 24,
+          "column": 1,
+          "message": "Trailing whitespace",
+          "ruleId": "no-trailing-whitespace",
+          "severity": "error"
+        },
+        {
+          "line": 27,
+          "column": 1,
+          "message": "Trailing whitespace",
+          "ruleId": "no-trailing-whitespace",
+          "severity": "error"
+        },
+        {
+          "line": 93,
+          "column": 134,
+          "message": "Attribute \"width\" has invalid value \"400px\"",
+          "ruleId": "attribute-allowed-values",
+          "severity": "error"
+        },
+        {
+          "line": 104,
+          "column": 114,
+          "message": "Attribute \"width\" has invalid value \"400px\"",
+          "ruleId": "attribute-allowed-values",
+          "severity": "error"
+        },
+        {
+          "line": 120,
+          "column": 62,
+          "message": "Inline style is not allowed",
+          "ruleId": "no-inline-style",
+          "severity": "error"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "file": "./manipulated-images/image1.html",
+      "type": "html",
+      "errors": [
+        {
+          "line": 22,
+          "column": 1,
+          "message": "Trailing whitespace",
+          "ruleId": "no-trailing-whitespace",
+          "severity": "error"
+        },
+        {
+          "line": 23,
+          "column": 106,
+          "message": "Trailing whitespace",
+          "ruleId": "no-trailing-whitespace",
+          "severity": "error"
+        },
+        {
+          "line": 29,
+          "column": 1,
+          "message": "Trailing whitespace",
+          "ruleId": "no-trailing-whitespace",
+          "severity": "error"
+        },
+        {
+          "line": 30,
+          "column": 106,
+          "message": "Trailing whitespace",
+          "ruleId": "no-trailing-whitespace",
+          "severity": "error"
+        },
+        {
+          "line": 31,
+          "column": 102,
+          "message": "Trailing whitespace",
+          "ruleId": "no-trailing-whitespace",
+          "severity": "error"
+        },
+        {
+          "line": 35,
+          "column": 102,
+          "message": "Trailing whitespace",
+          "ruleId": "no-trailing-whitespace",
+          "severity": "error"
+        },
+        {
+          "line": 68,
+          "column": 1,
+          "message": "Trailing whitespace",
+          "ruleId": "no-trailing-whitespace",
+          "severity": "error"
+        },
+        {
+          "line": 69,
+          "column": 93,
+          "message": "Trailing whitespace",
+          "ruleId": "no-trailing-whitespace",
+          "severity": "error"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "file": "./manipulated-images/image5.html",
+      "type": "html",
+      "errors": [
+        {
+          "line": 18,
+          "column": 155,
+          "message": "Attribute \"width\" has invalid value \"400px\"",
+          "ruleId": "attribute-allowed-values",
+          "severity": "error"
+        },
+        {
+          "line": 23,
+          "column": 134,
+          "message": "Attribute \"width\" has invalid value \"400px\"",
+          "ruleId": "attribute-allowed-values",
+          "severity": "error"
+        },
+        {
+          "line": 27,
+          "column": 1,
+          "message": "Trailing whitespace",
+          "ruleId": "no-trailing-whitespace",
+          "severity": "error"
+        },
+        {
+          "line": 33,
+          "column": 114,
+          "message": "Attribute \"width\" has invalid value \"400px\"",
+          "ruleId": "attribute-allowed-values",
+          "severity": "error"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "file": "./manipulated-images/image4.html",
+      "type": "html",
+      "errors": [
+        {
+          "line": 18,
+          "column": 132,
+          "message": "Attribute \"width\" has invalid value \"400px\"",
+          "ruleId": "attribute-allowed-values",
+          "severity": "error"
+        },
+        {
+          "line": 23,
+          "column": 127,
+          "message": "Attribute \"width\" has invalid value \"400px\"",
+          "ruleId": "attribute-allowed-values",
+          "severity": "error"
+        },
+        {
+          "line": 33,
+          "column": 134,
+          "message": "Attribute \"width\" has invalid value \"400px\"",
+          "ruleId": "attribute-allowed-values",
+          "severity": "error"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "file": "./manipulated-images/image6.html",
+      "type": "html",
+      "errors": [
+        {
+          "line": 22,
+          "column": 1,
+          "message": "Trailing whitespace",
+          "ruleId": "no-trailing-whitespace",
+          "severity": "error"
+        },
+        {
+          "line": 56,
+          "column": 1,
+          "message": "Trailing whitespace",
+          "ruleId": "no-trailing-whitespace",
+          "severity": "error"
+        },
+        {
+          "line": 80,
+          "column": 336,
+          "message": "Stray end tag '</p>'",
+          "ruleId": "close-order",
+          "severity": "error"
+        },
+        {
+          "line": 173,
+          "column": 26,
+          "message": "failed to tokenize \"<< 'FILTER...\", state TEXT failed to consume data or change state.",
+          "ruleId": "parser-error",
+          "severity": "error"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "file": "./manipulated-images/scripts/animated-web-switcher.js",
+      "type": "js",
+      "errors": [
+        {
+          "line": 31,
+          "column": 11,
+          "message": "'animatedWeb' is defined but never used.",
+          "ruleId": null,
+          "severity": "error"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "file": "./manipulated-images/image3.html",
+      "type": "html",
+      "errors": [
+        {
+          "line": 29,
+          "column": 1,
+          "message": "Trailing whitespace",
+          "ruleId": "no-trailing-whitespace",
+          "severity": "error"
+        },
+        {
+          "line": 44,
+          "column": 1,
+          "message": "Trailing whitespace",
+          "ruleId": "no-trailing-whitespace",
+          "severity": "error"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "file": "./manipulated-images/styles/favicon.css",
+      "type": "css",
+      "errors": [
+        {
+          "line": 4,
+          "column": 11,
+          "message": "Expected \"#ff0000\" to be \"#f00\" (color-hex-length)",
+          "ruleId": "color-hex-length",
+          "severity": "error"
+        },
+        {
+          "line": 8,
+          "column": 11,
+          "message": "Expected \"#00ff00\" to be \"#0f0\" (color-hex-length)",
+          "ruleId": "color-hex-length",
+          "severity": "error"
+        },
+        {
+          "line": 12,
+          "column": 11,
+          "message": "Expected \"#0000ff\" to be \"#00f\" (color-hex-length)",
+          "ruleId": "color-hex-length",
+          "severity": "error"
+        },
+        {
+          "line": 30,
+          "column": 12,
+          "message": "Expected keyframe name \"colorChange1\" to be kebab-case (keyframes-name-pattern)",
+          "ruleId": "keyframes-name-pattern",
+          "severity": "error"
+        },
+        {
+          "line": 36,
+          "column": 12,
+          "message": "Expected keyframe name \"colorChange2\" to be kebab-case (keyframes-name-pattern)",
+          "ruleId": "keyframes-name-pattern",
+          "severity": "error"
+        },
+        {
+          "line": 42,
+          "column": 12,
+          "message": "Expected keyframe name \"colorChange3\" to be kebab-case (keyframes-name-pattern)",
+          "ruleId": "keyframes-name-pattern",
+          "severity": "error"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "file": "./manipulated-images/styles/main.css",
+      "type": "css",
+      "errors": [
+        {
+          "line": 24,
+          "column": 51,
+          "message": "Expected \"0.1\" to be \"10%\" (alpha-value-notation)",
+          "ruleId": "alpha-value-notation",
+          "severity": "error"
+        },
+        {
+          "line": 110,
+          "column": 52,
+          "message": "Expected \"0.05\" to be \"5%\" (alpha-value-notation)",
+          "ruleId": "alpha-value-notation",
+          "severity": "error"
+        },
+        {
+          "line": 203,
+          "column": 52,
+          "message": "Expected \"0.05\" to be \"5%\" (alpha-value-notation)",
+          "ruleId": "alpha-value-notation",
+          "severity": "error"
+        },
+        {
+          "line": 24,
+          "column": 37,
+          "message": "Expected \"rgba\" to be \"rgb\" (color-function-alias-notation)",
+          "ruleId": "color-function-alias-notation",
+          "severity": "error"
+        },
+        {
+          "line": 110,
+          "column": 38,
+          "message": "Expected \"rgba\" to be \"rgb\" (color-function-alias-notation)",
+          "ruleId": "color-function-alias-notation",
+          "severity": "error"
+        },
+        {
+          "line": 203,
+          "column": 38,
+          "message": "Expected \"rgba\" to be \"rgb\" (color-function-alias-notation)",
+          "ruleId": "color-function-alias-notation",
+          "severity": "error"
+        },
+        {
+          "line": 24,
+          "column": 37,
+          "message": "Expected modern color-function notation (color-function-notation)",
+          "ruleId": "color-function-notation",
+          "severity": "error"
+        },
+        {
+          "line": 110,
+          "column": 38,
+          "message": "Expected modern color-function notation (color-function-notation)",
+          "ruleId": "color-function-notation",
+          "severity": "error"
+        },
+        {
+          "line": 203,
+          "column": 38,
+          "message": "Expected modern color-function notation (color-function-notation)",
+          "ruleId": "color-function-notation",
+          "severity": "error"
+        },
+        {
+          "line": 229,
+          "column": 8,
+          "message": "Expected \"context\" media feature range notation (media-feature-range-notation)",
+          "ruleId": "media-feature-range-notation",
+          "severity": "error"
+        },
+        {
+          "line": 261,
+          "column": 8,
+          "message": "Expected \"context\" media feature range notation (media-feature-range-notation)",
+          "ruleId": "media-feature-range-notation",
+          "severity": "error"
+        },
+        {
+          "line": 288,
+          "column": 5,
+          "message": "Expected \"word-wrap\" to be \"overflow-wrap\" (property-no-deprecated)",
+          "ruleId": "property-no-deprecated",
+          "severity": "error"
+        }
+      ],
+      "warnings": []
+    }
+  ],
   "summary": {
-    "htmlErrors": 0,
+    "htmlErrors": 39,
     "htmlWarnings": 0,
-    "cssErrors": 0,
+    "cssErrors": 18,
     "cssWarnings": 0,
-    "jsErrors": 0,
+    "jsErrors": 1,
     "jsWarnings": 0
   }
 }
