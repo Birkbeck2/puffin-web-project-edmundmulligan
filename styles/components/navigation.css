@@ -39,6 +39,7 @@ nav.site-navigation {
         color: var(--colour-effective-menu-text);
         border-radius: var(--border-radius);
         border: var(--border-weight-thin) var(--border-style) var(--colour-effective-menu-text);
+        font-family: var(--font-family-menu);
         font-size: var(--fontsize-nav-site);
         box-sizing: border-box;
         line-height: 1;

@@ -1,0 +1,16 @@
+/*
+ **********************************************************************
+ * File       : animation.css
+ * Author     : Edmund Mulligan <edmund@edmundmulligan.name>
+ * Copyright  : (c) 2026 The Embodied Mind
+ * License    : MIT License (see license-and-credits.html page)
+ * Description:
+ *    Definition of global animation CSS variables
+ **********************************************************************
+ */
+
+:root {
+        /* View transition animation settings */
+        --view-transition-duration: 2000ms;
+        --view-transition-timing-function: ease-in-out;
+}

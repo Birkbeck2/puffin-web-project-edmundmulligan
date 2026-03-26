@@ -227,7 +227,7 @@
     /* vibrant dark theme colours - op-art inspired with bold colours */
     --colour-vibrant-dark-page-background:     hsl(from var(--colour-blue) h s 22%);
     --colour-vibrant-dark-page-text:           hsl(from var(--colour-cyan) h s 88%);
-    --colour-vibrant-dark-headings-background: hsl(from var(--colour-orange) h s 35%);
+    --colour-vibrant-dark-headings-background: hsl(from var(--colour-orange) h s 50%);
     --colour-vibrant-dark-headings-text:       hsl(from var(--colour-navy) h s 20%);
     --colour-vibrant-dark-code-background:     hsl(from var(--colour-pink) h s 22%);
     --colour-vibrant-dark-code-text:           hsl(from var(--colour-cyan) h s 88%);
@@ -254,7 +254,7 @@
 
     /* vibrant dark theme content links */
     --colour-vibrant-dark-link-background:         transparent;
-    --colour-vibrant-dark-link-text:               hsl(180deg 100% 50%);
+    --colour-vibrant-dark-link-text:               hsl(from var(--colour-grey) h s 90%);
     --colour-vibrant-dark-link-background-hover:   transparent;
     --colour-vibrant-dark-link-text-hover:         hsl(from var(--colour-lime) h s 70%);
     --colour-vibrant-dark-link-background-visited: transparent;

@@ -13,19 +13,4 @@
 @import url("./definitions/colours.css");
 @import url("./definitions/typography.css");
 @import url("./definitions/layout.css");
-
-:root {
-    /* Active background images - default to normal-light, overridden by theme-switcher.js */
-    --bg-landscape:                    var(--bg-landscape-normal-light);
-    --bg-portrait:                     var(--bg-portrait-normal-light);
-
-    /* SVG filter for theme switching */
-    --svg-filter-light:                none;
-    --svg-filter-dark:                 none;
-    --svg-filter:                      var(--svg-filter-light);
-
-    /* SVG filter for header silhouettes - match heading text color */
-    --header-svg-filter-light:         brightness(0) saturate(100%) invert(13%) sepia(100%) saturate(7426%) hue-rotate(275deg) brightness(86%) contrast(123%);
-    --header-svg-filter-dark:          brightness(0) saturate(100%) invert(91%) sepia(68%) saturate(3706%) hue-rotate(142deg) brightness(104%) contrast(101%);
-    --header-svg-filter:               var(--header-svg-filter-light);
-}
+@import url("./definitions/animation.css");

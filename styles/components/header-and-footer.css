@@ -277,6 +277,16 @@
     background-color: var(--colour-effective-headings-text);
 }
 
+.header-image-wizard {
+    -webkit-mask-image: url('../../images/icons/wizard.svg');
+    mask-image: url('../../images/icons/wizard.svg');
+}
+
+.header-image-witch {
+    -webkit-mask-image: url('../../images/icons/witch.svg');
+    mask-image: url('../../images/icons/witch.svg');
+}
+
 .header-button {
     position: absolute;
     bottom: 1rem;

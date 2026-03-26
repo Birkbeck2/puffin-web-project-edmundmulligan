@@ -40,9 +40,7 @@ const APPROVED_GENERIC_VARS = [
     '--colour-warning-background',
     '--colour-warning-text',
     '--bg-landscape',
-    '--bg-portrait',
-    '--svg-filter',
-    '--header-svg-filter'
+    '--bg-portrait'
 ];
 
 // Direct use of theme-specific variables is allowed in:
