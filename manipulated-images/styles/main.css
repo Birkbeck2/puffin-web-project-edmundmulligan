@@ -257,7 +257,7 @@ button:active {
 }
 
 /* Responsive Design */
-@media (width <= 768px) {
+@media (width <= 800px) {
     body {
         padding: 0.625rem;
     }

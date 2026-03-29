@@ -152,6 +152,26 @@ function positionPopover(popover, trigger) {
     const triggerRect = trigger.getBoundingClientRect();
     const popoverRect = popover.getBoundingClientRect();
     
+    // For narrow viewports (<600px), center the popover horizontally
+    if (window.innerWidth < 600) {
+        const left = (window.innerWidth - popoverRect.width) / 2;
+        let top = triggerRect.bottom + 10;
+        
+        // Check if popover would go off the bottom of viewport
+        if (top + popoverRect.height > window.innerHeight) {
+            top = triggerRect.top - popoverRect.height - 10;
+        }
+        
+        // Ensure popover doesn't go off the top
+        if (top < 10) {
+            top = 10;
+        }
+        
+        popover.style.left = `${Math.max(10, left)}px`;
+        popover.style.top = `${top}px`;
+        return;
+    }
+    
     // Position to the right of the trigger element
     let left = triggerRect.right + 10; // 10px gap
     let top = triggerRect.top;
