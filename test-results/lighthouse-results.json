@@ -1,7 +1,7 @@
 {
   "pages": [
     {
-      "url": "mentors/lesson-00.html",
+      "url": "mentors/lesson-00",
       "theme": "light",
       "style": "normal",
       "viewport": "900",
@@ -9,7 +9,7 @@
       "failedAudits": []
     },
     {
-      "url": "index.html",
+      "url": "index",
       "theme": "light",
       "style": "normal",
       "viewport": "900",
@@ -17,7 +17,7 @@
       "failedAudits": []
     },
     {
-      "url": "students/lesson-01.html",
+      "url": "students/lesson-01",
       "theme": "light",
       "style": "normal",
       "viewport": "900",
@@ -25,7 +25,7 @@
       "failedAudits": []
     },
     {
-      "url": "students/lesson-00.html",
+      "url": "students/lesson-00",
       "theme": "light",
       "style": "normal",
       "viewport": "900",
@@ -33,7 +33,7 @@
       "failedAudits": []
     },
     {
-      "url": "pages/glossary.html",
+      "url": "pages/glossary",
       "theme": "light",
       "style": "normal",
       "viewport": "900",
@@ -41,7 +41,7 @@
       "failedAudits": []
     },
     {
-      "url": "pages/facts.html",
+      "url": "pages/facts",
       "theme": "light",
       "style": "normal",
       "viewport": "900",
@@ -49,7 +49,7 @@
       "failedAudits": []
     },
     {
-      "url": "pages/mentors.html",
+      "url": "pages/mentors",
       "theme": "light",
       "style": "normal",
       "viewport": "900",
@@ -57,7 +57,7 @@
       "failedAudits": []
     },
     {
-      "url": "pages/students.html",
+      "url": "pages/students",
       "theme": "light",
       "style": "normal",
       "viewport": "900",
@@ -65,7 +65,7 @@
       "failedAudits": []
     },
     {
-      "url": "pages/gallery.html",
+      "url": "pages/gallery",
       "theme": "light",
       "style": "normal",
       "viewport": "900",
@@ -73,7 +73,7 @@
       "failedAudits": []
     },
     {
-      "url": "pages/faq.html",
+      "url": "pages/faq",
       "theme": "light",
       "style": "normal",
       "viewport": "900",
@@ -81,7 +81,7 @@
       "failedAudits": []
     },
     {
-      "url": "pages/license.html",
+      "url": "pages/license",
       "theme": "light",
       "style": "normal",
       "viewport": "900",
@@ -89,7 +89,7 @@
       "failedAudits": []
     },
     {
-      "url": "pages/credits.html",
+      "url": "pages/credits",
       "theme": "light",
       "style": "normal",
       "viewport": "900",
@@ -97,7 +97,7 @@
       "failedAudits": []
     },
     {
-      "url": "pages/start.html",
+      "url": "pages/start",
       "theme": "light",
       "style": "normal",
       "viewport": "900",
@@ -105,7 +105,70 @@
       "failedAudits": []
     },
     {
-      "url": "mentors/lesson-00.html",
+      "url": "manipulated-images/image1",
+      "theme": "light",
+      "style": "normal",
+      "viewport": "900",
+      "score": 1,
+      "failedAudits": []
+    },
+    {
+      "url": "manipulated-images/image4",
+      "theme": "light",
+      "style": "normal",
+      "viewport": "900",
+      "score": 1,
+      "failedAudits": []
+    },
+    {
+      "url": "manipulated-images/image3",
+      "theme": "light",
+      "style": "normal",
+      "viewport": "900",
+      "score": 1,
+      "failedAudits": []
+    },
+    {
+      "url": "manipulated-images/index",
+      "theme": "light",
+      "style": "normal",
+      "viewport": "900",
+      "score": 0.93,
+      "failedAudits": [
+        {
+          "id": "target-size",
+          "title": "Touch targets do not have sufficient size or spacing.",
+          "description": "Touch targets with sufficient size and spacing help users who may have difficulty targeting small controls to activate the targets. [Learn more about touch targets](https://dequeuniversity.com/rules/axe/4.10/target-size).",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "url": "manipulated-images/image2",
+      "theme": "light",
+      "style": "normal",
+      "viewport": "900",
+      "score": 1,
+      "failedAudits": []
+    },
+    {
+      "url": "manipulated-images/image6",
+      "theme": "light",
+      "style": "normal",
+      "viewport": "900",
+      "score": 1,
+      "failedAudits": []
+    },
+    {
+      "url": "manipulated-images/image5",
+      "theme": "light",
+      "style": "normal",
+      "viewport": "900",
+      "score": 1,
+      "failedAudits": []
+    },
+    {
+      "url": "mentors/lesson-00",
       "theme": "dark",
       "style": "normal",
       "viewport": "900",
@@ -113,7 +176,7 @@
       "failedAudits": []
     },
     {
-      "url": "index.html",
+      "url": "index",
       "theme": "dark",
       "style": "normal",
       "viewport": "900",
@@ -121,7 +184,7 @@
       "failedAudits": []
     },
     {
-      "url": "students/lesson-01.html",
+      "url": "students/lesson-01",
       "theme": "dark",
       "style": "normal",
       "viewport": "900",
@@ -129,7 +192,7 @@
       "failedAudits": []
     },
     {
-      "url": "students/lesson-00.html",
+      "url": "students/lesson-00",
       "theme": "dark",
       "style": "normal",
       "viewport": "900",
@@ -137,7 +200,7 @@
       "failedAudits": []
     },
     {
-      "url": "pages/glossary.html",
+      "url": "pages/glossary",
       "theme": "dark",
       "style": "normal",
       "viewport": "900",
@@ -145,7 +208,7 @@
       "failedAudits": []
     },
     {
-      "url": "pages/facts.html",
+      "url": "pages/facts",
       "theme": "dark",
       "style": "normal",
       "viewport": "900",
@@ -153,7 +216,7 @@
       "failedAudits": []
     },
     {
-      "url": "pages/mentors.html",
+      "url": "pages/mentors",
       "theme": "dark",
       "style": "normal",
       "viewport": "900",
@@ -161,7 +224,7 @@
       "failedAudits": []
     },
     {
-      "url": "pages/students.html",
+      "url": "pages/students",
       "theme": "dark",
       "style": "normal",
       "viewport": "900",
@@ -169,7 +232,7 @@
       "failedAudits": []
     },
     {
-      "url": "pages/gallery.html",
+      "url": "pages/gallery",
       "theme": "dark",
       "style": "normal",
       "viewport": "900",
@@ -177,7 +240,7 @@
       "failedAudits": []
     },
     {
-      "url": "pages/faq.html",
+      "url": "pages/faq",
       "theme": "dark",
       "style": "normal",
       "viewport": "900",
@@ -185,7 +248,7 @@
       "failedAudits": []
     },
     {
-      "url": "pages/license.html",
+      "url": "pages/license",
       "theme": "dark",
       "style": "normal",
       "viewport": "900",
@@ -193,7 +256,7 @@
       "failedAudits": []
     },
     {
-      "url": "pages/credits.html",
+      "url": "pages/credits",
       "theme": "dark",
       "style": "normal",
       "viewport": "900",
@@ -201,7 +264,7 @@
       "failedAudits": []
     },
     {
-      "url": "pages/start.html",
+      "url": "pages/start",
       "theme": "dark",
       "style": "normal",
       "viewport": "900",
@@ -209,7 +272,70 @@
       "failedAudits": []
     },
     {
-      "url": "mentors/lesson-00.html",
+      "url": "manipulated-images/image1",
+      "theme": "dark",
+      "style": "normal",
+      "viewport": "900",
+      "score": 1,
+      "failedAudits": []
+    },
+    {
+      "url": "manipulated-images/image4",
+      "theme": "dark",
+      "style": "normal",
+      "viewport": "900",
+      "score": 1,
+      "failedAudits": []
+    },
+    {
+      "url": "manipulated-images/image3",
+      "theme": "dark",
+      "style": "normal",
+      "viewport": "900",
+      "score": 1,
+      "failedAudits": []
+    },
+    {
+      "url": "manipulated-images/index",
+      "theme": "dark",
+      "style": "normal",
+      "viewport": "900",
+      "score": 0.93,
+      "failedAudits": [
+        {
+          "id": "target-size",
+          "title": "Touch targets do not have sufficient size or spacing.",
+          "description": "Touch targets with sufficient size and spacing help users who may have difficulty targeting small controls to activate the targets. [Learn more about touch targets](https://dequeuniversity.com/rules/axe/4.10/target-size).",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "url": "manipulated-images/image2",
+      "theme": "dark",
+      "style": "normal",
+      "viewport": "900",
+      "score": 1,
+      "failedAudits": []
+    },
+    {
+      "url": "manipulated-images/image6",
+      "theme": "dark",
+      "style": "normal",
+      "viewport": "900",
+      "score": 1,
+      "failedAudits": []
+    },
+    {
+      "url": "manipulated-images/image5",
+      "theme": "dark",
+      "style": "normal",
+      "viewport": "900",
+      "score": 1,
+      "failedAudits": []
+    },
+    {
+      "url": "mentors/lesson-00",
       "theme": "light",
       "style": "subdued",
       "viewport": "900",
@@ -217,7 +343,7 @@
       "failedAudits": []
     },
     {
-      "url": "index.html",
+      "url": "index",
       "theme": "light",
       "style": "subdued",
       "viewport": "900",
@@ -225,7 +351,7 @@
       "failedAudits": []
     },
     {
-      "url": "students/lesson-01.html",
+      "url": "students/lesson-01",
       "theme": "light",
       "style": "subdued",
       "viewport": "900",
@@ -233,7 +359,7 @@
       "failedAudits": []
     },
     {
-      "url": "students/lesson-00.html",
+      "url": "students/lesson-00",
       "theme": "light",
       "style": "subdued",
       "viewport": "900",
@@ -241,7 +367,7 @@
       "failedAudits": []
     },
     {
-      "url": "pages/glossary.html",
+      "url": "pages/glossary",
       "theme": "light",
       "style": "subdued",
       "viewport": "900",
@@ -249,7 +375,7 @@
       "failedAudits": []
     },
     {
-      "url": "pages/facts.html",
+      "url": "pages/facts",
       "theme": "light",
       "style": "subdued",
       "viewport": "900",
@@ -257,7 +383,7 @@
       "failedAudits": []
     },
     {
-      "url": "pages/mentors.html",
+      "url": "pages/mentors",
       "theme": "light",
       "style": "subdued",
       "viewport": "900",
@@ -265,7 +391,7 @@
       "failedAudits": []
     },
     {
-      "url": "pages/students.html",
+      "url": "pages/students",
       "theme": "light",
       "style": "subdued",
       "viewport": "900",
@@ -273,7 +399,7 @@
       "failedAudits": []
     },
     {
-      "url": "pages/gallery.html",
+      "url": "pages/gallery",
       "theme": "light",
       "style": "subdued",
       "viewport": "900",
@@ -281,7 +407,7 @@
       "failedAudits": []
     },
     {
-      "url": "pages/faq.html",
+      "url": "pages/faq",
       "theme": "light",
       "style": "subdued",
       "viewport": "900",
@@ -289,7 +415,7 @@
       "failedAudits": []
     },
     {
-      "url": "pages/license.html",
+      "url": "pages/license",
       "theme": "light",
       "style": "subdued",
       "viewport": "900",
@@ -297,7 +423,7 @@
       "failedAudits": []
     },
     {
-      "url": "pages/credits.html",
+      "url": "pages/credits",
       "theme": "light",
       "style": "subdued",
       "viewport": "900",
@@ -305,7 +431,7 @@
       "failedAudits": []
     },
     {
-      "url": "pages/start.html",
+      "url": "pages/start",
       "theme": "light",
       "style": "subdued",
       "viewport": "900",
@@ -313,7 +439,70 @@
       "failedAudits": []
     },
     {
-      "url": "mentors/lesson-00.html",
+      "url": "manipulated-images/image1",
+      "theme": "light",
+      "style": "subdued",
+      "viewport": "900",
+      "score": 1,
+      "failedAudits": []
+    },
+    {
+      "url": "manipulated-images/image4",
+      "theme": "light",
+      "style": "subdued",
+      "viewport": "900",
+      "score": 1,
+      "failedAudits": []
+    },
+    {
+      "url": "manipulated-images/image3",
+      "theme": "light",
+      "style": "subdued",
+      "viewport": "900",
+      "score": 1,
+      "failedAudits": []
+    },
+    {
+      "url": "manipulated-images/index",
+      "theme": "light",
+      "style": "subdued",
+      "viewport": "900",
+      "score": 0.93,
+      "failedAudits": [
+        {
+          "id": "target-size",
+          "title": "Touch targets do not have sufficient size or spacing.",
+          "description": "Touch targets with sufficient size and spacing help users who may have difficulty targeting small controls to activate the targets. [Learn more about touch targets](https://dequeuniversity.com/rules/axe/4.10/target-size).",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "url": "manipulated-images/image2",
+      "theme": "light",
+      "style": "subdued",
+      "viewport": "900",
+      "score": 1,
+      "failedAudits": []
+    },
+    {
+      "url": "manipulated-images/image6",
+      "theme": "light",
+      "style": "subdued",
+      "viewport": "900",
+      "score": 1,
+      "failedAudits": []
+    },
+    {
+      "url": "manipulated-images/image5",
+      "theme": "light",
+      "style": "subdued",
+      "viewport": "900",
+      "score": 1,
+      "failedAudits": []
+    },
+    {
+      "url": "mentors/lesson-00",
       "theme": "dark",
       "style": "subdued",
       "viewport": "900",
@@ -321,7 +510,7 @@
       "failedAudits": []
     },
     {
-      "url": "index.html",
+      "url": "index",
       "theme": "dark",
       "style": "subdued",
       "viewport": "900",
@@ -329,7 +518,7 @@
       "failedAudits": []
     },
     {
-      "url": "students/lesson-01.html",
+      "url": "students/lesson-01",
       "theme": "dark",
       "style": "subdued",
       "viewport": "900",
@@ -337,7 +526,7 @@
       "failedAudits": []
     },
     {
-      "url": "students/lesson-00.html",
+      "url": "students/lesson-00",
       "theme": "dark",
       "style": "subdued",
       "viewport": "900",
@@ -345,7 +534,7 @@
       "failedAudits": []
     },
     {
-      "url": "pages/glossary.html",
+      "url": "pages/glossary",
       "theme": "dark",
       "style": "subdued",
       "viewport": "900",
@@ -353,7 +542,7 @@
       "failedAudits": []
     },
     {
-      "url": "pages/facts.html",
+      "url": "pages/facts",
       "theme": "dark",
       "style": "subdued",
       "viewport": "900",
@@ -361,7 +550,7 @@
       "failedAudits": []
     },
     {
-      "url": "pages/mentors.html",
+      "url": "pages/mentors",
       "theme": "dark",
       "style": "subdued",
       "viewport": "900",
@@ -369,7 +558,7 @@
       "failedAudits": []
     },
     {
-      "url": "pages/students.html",
+      "url": "pages/students",
       "theme": "dark",
       "style": "subdued",
       "viewport": "900",
@@ -377,7 +566,7 @@
       "failedAudits": []
     },
     {
-      "url": "pages/gallery.html",
+      "url": "pages/gallery",
       "theme": "dark",
       "style": "subdued",
       "viewport": "900",
@@ -385,7 +574,7 @@
       "failedAudits": []
     },
     {
-      "url": "pages/faq.html",
+      "url": "pages/faq",
       "theme": "dark",
       "style": "subdued",
       "viewport": "900",
@@ -393,7 +582,7 @@
       "failedAudits": []
     },
     {
-      "url": "pages/license.html",
+      "url": "pages/license",
       "theme": "dark",
       "style": "subdued",
       "viewport": "900",
@@ -401,7 +590,7 @@
       "failedAudits": []
     },
     {
-      "url": "pages/credits.html",
+      "url": "pages/credits",
       "theme": "dark",
       "style": "subdued",
       "viewport": "900",
@@ -409,7 +598,7 @@
       "failedAudits": []
     },
     {
-      "url": "pages/start.html",
+      "url": "pages/start",
       "theme": "dark",
       "style": "subdued",
       "viewport": "900",
@@ -417,7 +606,70 @@
       "failedAudits": []
     },
     {
-      "url": "mentors/lesson-00.html",
+      "url": "manipulated-images/image1",
+      "theme": "dark",
+      "style": "subdued",
+      "viewport": "900",
+      "score": 1,
+      "failedAudits": []
+    },
+    {
+      "url": "manipulated-images/image4",
+      "theme": "dark",
+      "style": "subdued",
+      "viewport": "900",
+      "score": 1,
+      "failedAudits": []
+    },
+    {
+      "url": "manipulated-images/image3",
+      "theme": "dark",
+      "style": "subdued",
+      "viewport": "900",
+      "score": 1,
+      "failedAudits": []
+    },
+    {
+      "url": "manipulated-images/index",
+      "theme": "dark",
+      "style": "subdued",
+      "viewport": "900",
+      "score": 0.93,
+      "failedAudits": [
+        {
+          "id": "target-size",
+          "title": "Touch targets do not have sufficient size or spacing.",
+          "description": "Touch targets with sufficient size and spacing help users who may have difficulty targeting small controls to activate the targets. [Learn more about touch targets](https://dequeuniversity.com/rules/axe/4.10/target-size).",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "url": "manipulated-images/image2",
+      "theme": "dark",
+      "style": "subdued",
+      "viewport": "900",
+      "score": 1,
+      "failedAudits": []
+    },
+    {
+      "url": "manipulated-images/image6",
+      "theme": "dark",
+      "style": "subdued",
+      "viewport": "900",
+      "score": 1,
+      "failedAudits": []
+    },
+    {
+      "url": "manipulated-images/image5",
+      "theme": "dark",
+      "style": "subdued",
+      "viewport": "900",
+      "score": 1,
+      "failedAudits": []
+    },
+    {
+      "url": "mentors/lesson-00",
       "theme": "light",
       "style": "vibrant",
       "viewport": "900",
@@ -425,7 +677,7 @@
       "failedAudits": []
     },
     {
-      "url": "index.html",
+      "url": "index",
       "theme": "light",
       "style": "vibrant",
       "viewport": "900",
@@ -433,7 +685,7 @@
       "failedAudits": []
     },
     {
-      "url": "students/lesson-01.html",
+      "url": "students/lesson-01",
       "theme": "light",
       "style": "vibrant",
       "viewport": "900",
@@ -441,7 +693,7 @@
       "failedAudits": []
     },
     {
-      "url": "students/lesson-00.html",
+      "url": "students/lesson-00",
       "theme": "light",
       "style": "vibrant",
       "viewport": "900",
@@ -449,7 +701,7 @@
       "failedAudits": []
     },
     {
-      "url": "pages/glossary.html",
+      "url": "pages/glossary",
       "theme": "light",
       "style": "vibrant",
       "viewport": "900",
@@ -457,7 +709,7 @@
       "failedAudits": []
     },
     {
-      "url": "pages/facts.html",
+      "url": "pages/facts",
       "theme": "light",
       "style": "vibrant",
       "viewport": "900",
@@ -465,7 +717,7 @@
       "failedAudits": []
     },
     {
-      "url": "pages/mentors.html",
+      "url": "pages/mentors",
       "theme": "light",
       "style": "vibrant",
       "viewport": "900",
@@ -473,7 +725,7 @@
       "failedAudits": []
     },
     {
-      "url": "pages/students.html",
+      "url": "pages/students",
       "theme": "light",
       "style": "vibrant",
       "viewport": "900",
@@ -481,7 +733,7 @@
       "failedAudits": []
     },
     {
-      "url": "pages/gallery.html",
+      "url": "pages/gallery",
       "theme": "light",
       "style": "vibrant",
       "viewport": "900",
@@ -489,7 +741,7 @@
       "failedAudits": []
     },
     {
-      "url": "pages/faq.html",
+      "url": "pages/faq",
       "theme": "light",
       "style": "vibrant",
       "viewport": "900",
@@ -497,7 +749,7 @@
       "failedAudits": []
     },
     {
-      "url": "pages/license.html",
+      "url": "pages/license",
       "theme": "light",
       "style": "vibrant",
       "viewport": "900",
@@ -505,7 +757,7 @@
       "failedAudits": []
     },
     {
-      "url": "pages/credits.html",
+      "url": "pages/credits",
       "theme": "light",
       "style": "vibrant",
       "viewport": "900",
@@ -513,7 +765,7 @@
       "failedAudits": []
     },
     {
-      "url": "pages/start.html",
+      "url": "pages/start",
       "theme": "light",
       "style": "vibrant",
       "viewport": "900",
@@ -521,7 +773,70 @@
       "failedAudits": []
     },
     {
-      "url": "mentors/lesson-00.html",
+      "url": "manipulated-images/image1",
+      "theme": "light",
+      "style": "vibrant",
+      "viewport": "900",
+      "score": 1,
+      "failedAudits": []
+    },
+    {
+      "url": "manipulated-images/image4",
+      "theme": "light",
+      "style": "vibrant",
+      "viewport": "900",
+      "score": 1,
+      "failedAudits": []
+    },
+    {
+      "url": "manipulated-images/image3",
+      "theme": "light",
+      "style": "vibrant",
+      "viewport": "900",
+      "score": 1,
+      "failedAudits": []
+    },
+    {
+      "url": "manipulated-images/index",
+      "theme": "light",
+      "style": "vibrant",
+      "viewport": "900",
+      "score": 0.93,
+      "failedAudits": [
+        {
+          "id": "target-size",
+          "title": "Touch targets do not have sufficient size or spacing.",
+          "description": "Touch targets with sufficient size and spacing help users who may have difficulty targeting small controls to activate the targets. [Learn more about touch targets](https://dequeuniversity.com/rules/axe/4.10/target-size).",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "url": "manipulated-images/image2",
+      "theme": "light",
+      "style": "vibrant",
+      "viewport": "900",
+      "score": 1,
+      "failedAudits": []
+    },
+    {
+      "url": "manipulated-images/image6",
+      "theme": "light",
+      "style": "vibrant",
+      "viewport": "900",
+      "score": 1,
+      "failedAudits": []
+    },
+    {
+      "url": "manipulated-images/image5",
+      "theme": "light",
+      "style": "vibrant",
+      "viewport": "900",
+      "score": 1,
+      "failedAudits": []
+    },
+    {
+      "url": "mentors/lesson-00",
       "theme": "dark",
       "style": "vibrant",
       "viewport": "900",
@@ -529,7 +844,7 @@
       "failedAudits": []
     },
     {
-      "url": "index.html",
+      "url": "index",
       "theme": "dark",
       "style": "vibrant",
       "viewport": "900",
@@ -537,7 +852,7 @@
       "failedAudits": []
     },
     {
-      "url": "students/lesson-01.html",
+      "url": "students/lesson-01",
       "theme": "dark",
       "style": "vibrant",
       "viewport": "900",
@@ -545,7 +860,7 @@
       "failedAudits": []
     },
     {
-      "url": "students/lesson-00.html",
+      "url": "students/lesson-00",
       "theme": "dark",
       "style": "vibrant",
       "viewport": "900",
@@ -553,7 +868,7 @@
       "failedAudits": []
     },
     {
-      "url": "pages/glossary.html",
+      "url": "pages/glossary",
       "theme": "dark",
       "style": "vibrant",
       "viewport": "900",
@@ -561,7 +876,7 @@
       "failedAudits": []
     },
     {
-      "url": "pages/facts.html",
+      "url": "pages/facts",
       "theme": "dark",
       "style": "vibrant",
       "viewport": "900",
@@ -569,7 +884,7 @@
       "failedAudits": []
     },
     {
-      "url": "pages/mentors.html",
+      "url": "pages/mentors",
       "theme": "dark",
       "style": "vibrant",
       "viewport": "900",
@@ -577,7 +892,7 @@
       "failedAudits": []
     },
     {
-      "url": "pages/students.html",
+      "url": "pages/students",
       "theme": "dark",
       "style": "vibrant",
       "viewport": "900",
@@ -585,7 +900,7 @@
       "failedAudits": []
     },
     {
-      "url": "pages/gallery.html",
+      "url": "pages/gallery",
       "theme": "dark",
       "style": "vibrant",
       "viewport": "900",
@@ -593,7 +908,7 @@
       "failedAudits": []
     },
     {
-      "url": "pages/faq.html",
+      "url": "pages/faq",
       "theme": "dark",
       "style": "vibrant",
       "viewport": "900",
@@ -601,7 +916,7 @@
       "failedAudits": []
     },
     {
-      "url": "pages/license.html",
+      "url": "pages/license",
       "theme": "dark",
       "style": "vibrant",
       "viewport": "900",
@@ -609,7 +924,7 @@
       "failedAudits": []
     },
     {
-      "url": "pages/credits.html",
+      "url": "pages/credits",
       "theme": "dark",
       "style": "vibrant",
       "viewport": "900",
@@ -617,7 +932,70 @@
       "failedAudits": []
     },
     {
-      "url": "pages/start.html",
+      "url": "pages/start",
+      "theme": "dark",
+      "style": "vibrant",
+      "viewport": "900",
+      "score": 1,
+      "failedAudits": []
+    },
+    {
+      "url": "manipulated-images/image1",
+      "theme": "dark",
+      "style": "vibrant",
+      "viewport": "900",
+      "score": 1,
+      "failedAudits": []
+    },
+    {
+      "url": "manipulated-images/image4",
+      "theme": "dark",
+      "style": "vibrant",
+      "viewport": "900",
+      "score": 1,
+      "failedAudits": []
+    },
+    {
+      "url": "manipulated-images/image3",
+      "theme": "dark",
+      "style": "vibrant",
+      "viewport": "900",
+      "score": 1,
+      "failedAudits": []
+    },
+    {
+      "url": "manipulated-images/index",
+      "theme": "dark",
+      "style": "vibrant",
+      "viewport": "900",
+      "score": 0.93,
+      "failedAudits": [
+        {
+          "id": "target-size",
+          "title": "Touch targets do not have sufficient size or spacing.",
+          "description": "Touch targets with sufficient size and spacing help users who may have difficulty targeting small controls to activate the targets. [Learn more about touch targets](https://dequeuniversity.com/rules/axe/4.10/target-size).",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "url": "manipulated-images/image2",
+      "theme": "dark",
+      "style": "vibrant",
+      "viewport": "900",
+      "score": 1,
+      "failedAudits": []
+    },
+    {
+      "url": "manipulated-images/image6",
+      "theme": "dark",
+      "style": "vibrant",
+      "viewport": "900",
+      "score": 1,
+      "failedAudits": []
+    },
+    {
+      "url": "manipulated-images/image5",
       "theme": "dark",
       "style": "vibrant",
       "viewport": "900",

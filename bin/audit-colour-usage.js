@@ -140,6 +140,37 @@ function isExemptFromColourChecks(filePath) {
 }
 
 /**
+ * Check if a CSS file has an "Audit Colours: false" directive in its header comment
+ * @param {string} content - File contents
+ * @returns {boolean} - True if audit should be skipped
+ */
+function hasCssAuditSkip(content) {
+    // Only check the leading header comment block
+    const headerMatch = content.match(/^\s*\/\*[\s\S]*?\*\//);
+    if (!headerMatch) return false;
+    
+    // Matches "Audit Colours: false" with arbitrary spacing (case-insensitive)
+    return /Audit\s*Colours\s*:\s*false/i.test(headerMatch[0]);
+}
+
+/**
+ * Check if an HTML file has a meta tag to skip the audit
+ * @param {string} content - File contents
+ * @returns {boolean} - True if audit should be skipped
+ */
+function hasHtmlAuditSkip(content) {
+    // Find all meta tags
+    const metaTags = content.match(/<meta\b[^>]*>/gi) || [];
+    
+    // Check if any meta tag has name="audit-colour-usage" and content="false"
+    return metaTags.some(tag => {
+        const hasName = /\bname\s*=\s*["']audit-colour-usage["']/i.test(tag);
+        const hasFalseContent = /\bcontent\s*=\s*["']false["']/i.test(tag);
+        return hasName && hasFalseContent;
+    });
+}
+
+/**
  * Scan a file for hardcoded colour literals that bypass the theme system.
  *
  * @remarks Preconditions:
@@ -155,6 +186,15 @@ function findHardcodedColours(filePath, content) {
     
     // Skip files exempt from colour checks
     if (isExemptFromColourChecks(filePath)) {
+        return issues;
+    }
+    
+    // Check for skip directives in the file content
+    const ext = path.extname(filePath).toLowerCase();
+    if (ext === '.css' && hasCssAuditSkip(content)) {
+        return issues;
+    }
+    if ((ext === '.html' || ext === '.htm') && hasHtmlAuditSkip(content)) {
         return issues;
     }
     
@@ -240,6 +280,15 @@ function findThemeSpecificVars(filePath, content) {
         return issues;
     }
     
+    // Check for skip directives in the file content
+    const ext = path.extname(filePath).toLowerCase();
+    if (ext === '.css' && hasCssAuditSkip(content)) {
+        return issues;
+    }
+    if ((ext === '.html' || ext === '.htm') && hasHtmlAuditSkip(content)) {
+        return issues;
+    }
+    
     const lines = content.split('\n');
     
     // Check if this file is allowed to use theme-specific variables
@@ -295,6 +344,11 @@ function checkFileLoadsThemeSystem(filePath, content) {
     
     // Skip files exempt from colour checks
     if (isExemptFromColourChecks(filePath)) {
+        return null;
+    }
+    
+    // Check for skip directive in HTML content
+    if (hasHtmlAuditSkip(content)) {
         return null;
     }
     

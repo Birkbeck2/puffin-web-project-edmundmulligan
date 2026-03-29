@@ -25,7 +25,7 @@
       "totalCount": 32
     },
     {
-      "url": "mentors/lesson-00.html",
+      "url": "pages/glossary.html",
       "links": [],
       "brokenCount": 0,
       "totalCount": 12
@@ -35,18 +35,6 @@
       "links": [],
       "brokenCount": 0,
       "totalCount": 12
-    },
-    {
-      "url": "pages/start.html",
-      "links": [],
-      "brokenCount": 0,
-      "totalCount": 17
-    },
-    {
-      "url": "pages/credits.html",
-      "links": [],
-      "brokenCount": 0,
-      "totalCount": 25
     },
     {
       "url": "pages/mentors.html",
@@ -73,12 +61,6 @@
       "totalCount": 15
     },
     {
-      "url": "pages/students.html",
-      "links": [],
-      "brokenCount": 0,
-      "totalCount": 17
-    },
-    {
       "url": "pages/license.html",
       "links": [],
       "brokenCount": 0,
@@ -88,17 +70,59 @@
       "url": "pages/credits.html",
       "links": [],
       "brokenCount": 0,
-      "totalCount": 24
+      "totalCount": 28
     },
     {
       "url": "pages/start.html",
       "links": [],
       "brokenCount": 0,
       "totalCount": 16
+    },
+    {
+      "url": "manipulated-images/image1.html",
+      "links": [],
+      "brokenCount": 0,
+      "totalCount": 6
+    },
+    {
+      "url": "manipulated-images/image4.html",
+      "links": [],
+      "brokenCount": 0,
+      "totalCount": 9
+    },
+    {
+      "url": "manipulated-images/image3.html",
+      "links": [],
+      "brokenCount": 0,
+      "totalCount": 6
+    },
+    {
+      "url": "manipulated-images/index.html",
+      "links": [],
+      "brokenCount": 0,
+      "totalCount": 17
+    },
+    {
+      "url": "manipulated-images/image2.html",
+      "links": [],
+      "brokenCount": 0,
+      "totalCount": 6
+    },
+    {
+      "url": "manipulated-images/image6.html",
+      "links": [],
+      "brokenCount": 0,
+      "totalCount": 17
+    },
+    {
+      "url": "manipulated-images/image5.html",
+      "links": [],
+      "brokenCount": 0,
+      "totalCount": 7
     }
   ],
   "summary": {
-    "totalLinks": 254,
+    "totalLinks": 326,
     "brokenLinks": 0,
     "excludedLinks": 0
   }

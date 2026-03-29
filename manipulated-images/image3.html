@@ -1,11 +1,22 @@
+<!--
+ **********************************************************************
+ * File       : image3.html
+ * Author     : Edmund Mulligan <edmund@edmundmulligan.name>
+ * Copyright  : (c) 2026 The Embodied Mind
+ * License    : MIT License (see license-and-credits.html page)
+ * Description:
+ *   This is page that displays how image3 was created
+ **********************************************************************
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="check-reading-age" content="false">
+    <meta name="audit-colour-usage" content="false">
     <title>Visual Design and Web Project Assignment 1 - Image 3</title>
     <script src="scripts/favicon-animation.js"></script>
-    <link rel="stylesheet" href="styles/globals.css">
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/favicon.css">
     <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
@@ -27,7 +38,7 @@
             <figcaption>Recoloured favicon with custom color scheme</figcaption>
         </figure>
         <p>To achieve the animation, the svg file was edited as a text file to add sparkle-1, sparkle-2 and sparkle-3 classes to the different elements in the svg, which could be animated with CSS. </p>
-            
+
         <pre><code>
 &lt;?xml version="1.0" encoding="UTF-8" standalone="no"?&gt;
 &lt;svg
@@ -42,7 +53,7 @@
     &lt;path class="sparkle-3" d="m 353.37735,460.00437 80,-32.00001 32,-80 32,80 80,32.00001 -80,32 -32,80 -32,-80 z" style="stroke:#000000;stroke-opacity:1" /&gt;
 &lt;/svg&gt;
  </code></pre>
-            
+
             <p>The resulting svg file was injected into the page as embedded SVG with JavaScript (which allows it to be used on multiple pages) so that the CSS animation could be applied to the different elements of the SVG. The animation was created using CSS keyframes to create a simple sparkle effect on the wand icon.</p>
             <pre><code>
 /* Favicon sparkle star colours */

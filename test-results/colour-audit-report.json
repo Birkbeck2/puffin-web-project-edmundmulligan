@@ -1,55 +1,5 @@
 {
   "hardcodedColours": [],
   "themeSpecificVars": [],
-  "missingThemeSystem": [
-    {
-      "file": "manipulated-images/image1.html",
-      "missing": {
-        "globals": true,
-        "themeSwitcher": true
-      }
-    },
-    {
-      "file": "manipulated-images/image2.html",
-      "missing": {
-        "globals": true,
-        "themeSwitcher": true
-      }
-    },
-    {
-      "file": "manipulated-images/image3.html",
-      "missing": {
-        "globals": true,
-        "themeSwitcher": true
-      }
-    },
-    {
-      "file": "manipulated-images/image4.html",
-      "missing": {
-        "globals": true,
-        "themeSwitcher": true
-      }
-    },
-    {
-      "file": "manipulated-images/image5.html",
-      "missing": {
-        "globals": true,
-        "themeSwitcher": true
-      }
-    },
-    {
-      "file": "manipulated-images/image6.html",
-      "missing": {
-        "globals": true,
-        "themeSwitcher": true
-      }
-    },
-    {
-      "file": "manipulated-images/index.html",
-      "missing": {
-        "globals": true,
-        "themeSwitcher": true
-      }
-    }
-  ]
+  "missingThemeSystem": []
 }

@@ -1,11 +1,22 @@
+<!--
+ **********************************************************************
+ * File       : image6.html
+ * Author     : Edmund Mulligan <edmund@edmundmulligan.name>
+ * Copyright  : (c) 2026 The Embodied Mind
+ * License    : MIT License (see license-and-credits.html page)
+ * Description:
+ *   This is page that displays how image6 was created
+ **********************************************************************
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="check-reading-age" content="false">
+    <meta name="audit-colour-usage" content="false">
     <title>Visual Design and Web Project Assignment 1 - Image 6</title>
     <script src="scripts/animated-web-switcher.js"></script>
-    <link rel="stylesheet" href="styles/globals.css">
     <link rel="stylesheet" href="styles/main.css">
     <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
 </head>
@@ -20,7 +31,7 @@
             <img src="artwork/source/image-6/5d03695a4cf2704a454ffd68.jpeg" alt="NASA Spider-Web Patterns" width="600">
             <figcaption>NASA spider web patterns study (1995)</figcaption>
         </figure>
-        
+
         <p>This was first cropped to extract the control and caffeine webs which were saves as JPEG files. These were then converted to vector format using Inkscape, to trace the bitmap. Unfortunately, the contrast between the web and the background was low (especially in the control web) so these SVG files were imported into Krita and manually traced to remove the background and colour transformed to make the web strands dark gray.</p>
         <figure>
             <img src="artwork/source/image-6/web-bad.png" alt="Trace of bad Web" width="300">
@@ -54,7 +65,7 @@
             <img src="artwork/source/image-6/logo-embodied-mind-with-name-black.png" alt="Embodied Mind Logo PNG" width="300">
             <figcaption>Embodied Mind logo (PNG format for Krita)</figcaption>
         </figure>
-        
+
         <p>The colour and typography of the text used was taken from the website (Open Sans for the san serif text and Cinzano Decorative for the site name), again giving a connection to the theme of Web Witchcraft and Wizardry. The opacity of the web was reduced when the central text was displayed to ensure readability and the text was emphasised with subtle inner glow and shadow effects</p>
         <p>The animation was created by compositing the images and text in Krita, and exporting each frame as a PNG file.</p>
         <figure>
@@ -78,7 +89,7 @@
             <figcaption>Frame 5: Embodied Mind branding</figcaption>
         </figure>
 
-        <p></p>The frames were then composited into an animation using ffmpeg, and exported in MP4, WEBP and GIF formats. This was done with a shell script to make the process more repeatable. All three formats were generated as it was unclear, a priori, which format would produce the smallest file size. (Spoiler alert: it was MP4).</p>
+        <p>The frames were then composited into an animation using ffmpeg, and exported in MP4, WEBP and GIF formats. This was done with a shell script to make the process more repeatable. All three formats were generated as it was unclear, a priori, which format would produce the smallest file size. (Spoiler alert: it was MP4).</p>
         <pre><code>
 #!/bin/bash
 # Create animated WEBP and GIF from 8 layers with fades
@@ -145,7 +156,7 @@ FADE_FRAMES=72  # 3 seconds at 24fps
 
 # Create black background
 echo -e "${CYAN}Creating base images...${NC}"
-ffmpeg -f lavfi -i color=c=black:s=${WIDTH}x${HEIGHT}:d=1 -frames:v 1 -y blank.png 2>/dev/null
+ffmpeg -f lavfi -i color=c=black:s=${WIDTH}x${HEIGHT}:d=1 -frames:v 1 -y blank.png 2&gt;/dev/null
 
 if [ $? -ne 0 ]; then
     echo -e "${RED}Error: Failed to create blank image${NC}"
@@ -171,7 +182,7 @@ FADE_DUR=3
 HOLD_DUR=0  # Time to hold each state (adjust if needed)
 
 # Build ffmpeg filter
-cat > filter_complex.txt << 'FILTER_EOF'
+cat &gt; filter_complex.txt &lt;&lt; 'FILTER_EOF'
 # Input mapping:
 # [0:v] = blank.png
 # [1:v] = layer1.png
@@ -234,48 +245,48 @@ ffmpeg  -loop 1 -t 3 -i blank.png \
 
 if [ $? -ne 0 ]; then
     echo -e "${RED}Filter complex method failed. Trying simpler approach...${NC}"
-    
+
     # sequential approach
     echo -e "${CYAN}Using sequential composition method...${NC}"
-    
+
     # Create each segment separately
     # Segment 1: Fade from blank to layer 1
     ffmpeg  -loop 1 -t 3 -i blank.png -loop 1 -t 3 -i "$LAYER1" \
             -filter_complex "[0:v][1:v]blend=all_expr='A*(1-T/3)+B*(T/3)':shortest=1" \
             -r ${FPS} -y seg1.mp4
-    
+
     # Segment 2: Fade from layer 1 to layer 2
     ffmpeg  -loop 1 -t 3 -i "$LAYER1" -loop 1 -t 3 -i "$LAYER2" \
             -filter_complex "[0:v][1:v]blend=all_expr='A*(1-T/3)+B*(T/3)':shortest=1" \
             -r ${FPS} -y seg2.mp4
-    
+
     # Segment 3: Show layer 2
     ffmpeg -loop 1 -t 3 -i "$LAYER2" -r ${FPS} -y seg3.mp4
-    
+
     # Segment 4: Show layer 3 (no fade)
     ffmpeg -loop 1 -t 3 -i "$LAYER3" -r ${FPS} -y seg4.mp4
-    
+
     # Segment 5: Fade from layer 3 to layer 4
     ffmpeg  -loop 1 -t 3 -i "$LAYER3" -loop 1 -t 3 -i "$LAYER4" \
             -filter_complex "[0:v][1:v]blend=all_expr='A*(1-T/3)+B*(T/3)':shortest=1" \
             -r ${FPS} -y seg5.mp4
-    
+
     # Segment 6: Show layer 4
     ffmpeg -loop 1 -t 3 -i "$LAYER4" -r ${FPS} -y seg6.mp4
-    
+
     # Segment 7: Show layer 5
     ffmpeg -loop 1 -t 3 -i "$LAYER5" -r ${FPS} -y seg7.mp4
-    
+
 
     # Concatenate all segments
-    echo "file 'seg1.mp4'" > concat_list.txt
-    echo "file 'seg2.mp4'" >> concat_list.txt
-    echo "file 'seg3.mp4'" >> concat_list.txt
-    echo "file 'seg4.mp4'" >> concat_list.txt
-    echo "file 'seg5.mp4'" >> concat_list.txt
-    echo "file 'seg6.mp4'" >> concat_list.txt
-    echo "file 'seg7.mp4'" >> concat_list.txt
-    
+    echo "file 'seg1.mp4'" &gt; concat_list.txt
+    echo "file 'seg2.mp4'" &gt;&gt; concat_list.txt
+    echo "file 'seg3.mp4'" &gt;&gt; concat_list.txt
+    echo "file 'seg4.mp4'" &gt;&gt; concat_list.txt
+    echo "file 'seg5.mp4'" &gt;&gt; concat_list.txt
+    echo "file 'seg6.mp4'" &gt;&gt; concat_list.txt
+    echo "file 'seg7.mp4'" &gt;&gt; concat_list.txt
+
     ffmpeg -f concat -safe 0 -i concat_list.txt -c copy -y ${FILEBASE}.mp4
 fi
 
@@ -290,7 +301,7 @@ echo ""
 
 # Convert to WEBP
 echo -e "${CYAN}Step 2: Converting to WEBP...${NC}"
-ffmpeg -i ${FILEBASE}.mp4 -c:v libwebp -lossless 0 -compression_level 6 -quality 75 -loop 1 -y ${FILEBASE}.webp 2>/dev/null
+ffmpeg -i ${FILEBASE}.mp4 -c:v libwebp -lossless 0 -compression_level 6 -quality 75 -loop 1 -y ${FILEBASE}.webp 2&gt;/dev/null
 
 if [ -f ${FILEBASE}.webp ]; then
     WEBP_SIZE=$(du -h ${FILEBASE}.webp | cut -f1)
@@ -306,10 +317,10 @@ GIF_FPS=10
 echo -e "${CYAN}Step 3: Converting to GIF at ${GIF_FPS}fps (single-pass method)...${NC}"
 
 # First re-encode the video with consistent frame timing to avoid dropping initial frames
-ffmpeg -i ${FILEBASE}.mp4 -vf fps=fps=${FPS} -pix_fmt yuv420p -y ${FILEBASE}-temp.mp4 2>/dev/null
+ffmpeg -i ${FILEBASE}.mp4 -vf fps=fps=${FPS} -pix_fmt yuv420p -y ${FILEBASE}-temp.mp4 2&gt;/dev/null
 
 # Then convert to GIF with tpad to ensure the first frame is captured
-ffmpeg -i ${FILEBASE}-temp.mp4 -vf "tpad=start_duration=0.1:start_mode=clone,fps=fps=${GIF_FPS}:start_time=0,scale=${WIDTH}:${HEIGHT}:flags=lanczos,split[s0][s1];[s0]palettegen[p];[s1][p]paletteuse" -loop -1 -y ${FILEBASE}.gif 2>/dev/null
+ffmpeg -i ${FILEBASE}-temp.mp4 -vf "tpad=start_duration=0.1:start_mode=clone,fps=fps=${GIF_FPS}:start_time=0,scale=${WIDTH}:${HEIGHT}:flags=lanczos,split[s0][s1];[s0]palettegen[p];[s1][p]paletteuse" -loop -1 -y ${FILEBASE}.gif 2&gt;/dev/null
 
 # Clean up temp file
 rm -f ${FILEBASE}-temp.mp4
@@ -327,9 +338,9 @@ echo -e "${GREEN}Animation creation complete!${NC}"
 echo -e "${GREEN}════════════════════════════════════════${NC}"
 echo ""
 echo "Output files:"
-[ -f ${FILEBASE}.mp4 ] && echo "  • ${FILEBASE}.mp4 ($(du -h ${FILEBASE}.mp4 | cut -f1))"
-[ -f ${FILEBASE}.webp ] && echo "  • ${FILEBASE}.webp ($(du -h ${FILEBASE}.webp | cut -f1))"
-[ -f ${FILEBASE}.gif ] && echo "  • ${FILEBASE}.gif ($(du -h ${FILEBASE}.gif | cut -f1))"
+[ -f ${FILEBASE}.mp4 ] &amp;&amp; echo "  • ${FILEBASE}.mp4 ($(du -h ${FILEBASE}.mp4 | cut -f1))"
+[ -f ${FILEBASE}.webp ] &amp;&amp; echo "  • ${FILEBASE}.webp ($(du -h ${FILEBASE}.webp | cut -f1))"
+[ -f ${FILEBASE}.gif ] &amp;&amp; echo "  • ${FILEBASE}.gif ($(du -h ${FILEBASE}.gif | cut -f1))"
 echo ""
 
 mkdir -p "$OUTPUT_FOLDER"
@@ -354,7 +365,7 @@ echo -e "${GREEN}✓ Cleanup complete${NC}"
                 <label for="webp">WEBP</label>
                 <input type="radio" id="gif" name="animation-format" value="gif">
                 <label for="gif">GIF</label>
-                <button type="button" id="restart-animation" style="margin-left: 20px;">Restart Animation</button>
+                <button type="button" id="restart-animation" class="restart-animation-button">Restart Animation</button>
             </div>
             <div id="animated-web"></div>
         </div>

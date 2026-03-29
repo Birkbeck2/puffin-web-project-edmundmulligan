@@ -1,14 +1,26 @@
+<!--
+ **********************************************************************
+ * File       : manipulated-images/index.html
+ * Author     : Edmund Mulligan <edmund@edmundmulligan.name>
+ * Copyright  : (c) 2026 The Embodied Mind
+ * License    : MIT License (see license-and-credits.html page)
+ * Description:
+ *   This is the landing page for the manipulated images section of the Web Witchcraft and Wizardry website.
+ **********************************************************************
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="check-reading-age" content="false">
+    <meta name="audit-colour-usage" content="false">
     <title>Visual Design and Web Project Assignment 1</title>
     <script src="scripts/logo-switcher.js"></script>
     <script src="scripts/background-switcher.js"></script>
     <script src="scripts/favicon-animation.js"></script>
     <script src="scripts/animated-web-switcher.js"></script>
-    <link rel="stylesheet" href="styles/globals.css">
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/favicon.css">
     <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
@@ -21,11 +33,11 @@
         <p>This project showcases various visual design elements and web development techniques. The tools used are as follows:</p>
         <dl class="tools-list">
             <dt>LaTeX with tikz</dt>
-            <dd>Programatic creation of images as PDF</dd>
-            
+            <dd>Programmatic creation of images as PDF</dd>
+
             <dt>Inkscape</dt>
             <dd>Generation of vector graphics and tracing bitmap files</dd>
-            
+
             <dt>Krita</dt>
             <dd>Generation of raster graphics, digital painting and animation</dd>
 
@@ -91,7 +103,7 @@
         <div class="with-border">
             <picture>
                 <source srcset="images/picture_grayscale.webp" type="image/webp">
-                <img src="images/picture_grayscale.jpg" alt="A man viewing a painting of an old male witch in an art gallery" width="400px">
+                <img src="images/picture_grayscale.jpg" alt="A man viewing a painting of an old male witch in an art gallery" width="400">
             </picture>
         </div>
 
@@ -102,7 +114,7 @@
         <div class="with-border">
             <picture>
                 <source srcset="images/shot-morgana.webp" type="image/webp">
-                <img src="images/shot-morgana.jpg" alt="Six silk screen printed images of Morgana Le Fey" width="400px">
+                <img src="images/shot-morgana.jpg" alt="Six silk screen printed images of Morgana Le Fey" width="400">
             </picture>
         </div>
 
@@ -118,7 +130,7 @@
                 <label for="webp">WEBP</label>
                 <input type="radio" id="gif" name="animation-format" value="gif">
                 <label for="gif">GIF</label>
-                <button type="button" id="restart-animation" style="margin-left: 20px;">Restart Animation</button>
+                <button type="button" id="restart-animation" class="restart-animation-button">Restart Animation</button>
             </div>
             <div id="animated-web"></div>
         </div>

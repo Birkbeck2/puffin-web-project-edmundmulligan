@@ -25,6 +25,7 @@
     }
 }
 
+/* Respect user's motion preferences */
 @keyframes fade-out {
     from { opacity: 1; }
     to   { opacity: 0; }
@@ -55,4 +56,93 @@
     to   { clip-path: circle( 0% at 50% 50%); }
 }
 
+
+/* Toggle fade animation keyframes */
+@keyframes toggle-fade-out {
+        from {
+                opacity: 1;
+                visibility: visible;
+        }
+
+        to {
+                opacity: 0;
+                visibility: hidden;
+        }
+}
+
+@keyframes toggle-fade-in {
+        from {
+                opacity: 0;
+                visibility: hidden;
+        }
+
+        to {
+                opacity: 1;
+                visibility: visible;
+        }
+}
+
+/* Theme switcher fade animation keyframes */
+
+/* Header and Footer slide animation keyframes */
+@keyframes slide-header-down {
+        from {
+                transform: translateY(-100%);
+        }
+
+        to {
+                transform: translateY(0);
+        }
+}
+
+@keyframes slide-header-up {
+        from {
+                transform: translateY(0);
+        }
+
+        to {
+                transform: translateY(-100%);
+        }
+}
+
+@keyframes slide-footer-up {
+        from {
+                transform: translateY(100%);
+        }
+
+        to {
+                transform: translateY(0);
+        }
+}
+
+@keyframes slide-footer-down {
+        from {
+                transform: translateY(0);
+        }
+
+        to {
+                transform: translateY(100%);
+        }
+}
+
+/* Theme switcher fade animation keyframes */
+@keyframes theme-switch-fade-out {
+        from {
+                opacity: 1;
+        }
+
+        to {
+                opacity: 0;
+        }
+}
+
+@keyframes theme-switch-fade-in {
+        from {
+                opacity: 0;
+        }
+
+        to {
+                opacity: 1;
+        }
+}
 
