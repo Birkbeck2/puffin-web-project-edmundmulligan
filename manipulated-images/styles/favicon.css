@@ -1,0 +1,57 @@
+/*
+ **********************************************************************
+ * File         : favicon.css
+ * Author       : Edmund Mulligan <edmund@edmundmulligan.name>
+ * Copyright    : (c) 2026 The Embodied Mind
+ * License      : MIT License (see license-and-credits.html page)
+ * Audit Colours: false
+ * Description  :
+ *   This is the stylesheet for the favicon animations on the Web Witchcraft and Wizardry website.
+ **********************************************************************
+ */
+
+.sparkle-1 {
+    fill: #f00; /* Red sparkle */
+}
+
+.sparkle-2 {
+    fill: #0f0; /* Green sparkle */
+}
+
+.sparkle-3 {
+    fill: #00f; /* Blue sparkle */
+}
+
+/* Animated sparkle colours - activated when parent svg has 'animated' class */
+svg.animated .sparkle-1 {
+    animation: colour-change1 1.5s infinite;
+}
+
+svg.animated .sparkle-2 {
+    animation: colour-change2 1.5s infinite;
+    animation-delay: 0.5s;
+}
+
+svg.animated .sparkle-3 {
+    animation: colour-change3 1.5s infinite;
+    animation-delay: 1s;
+}
+
+@keyframes colour-change1 {
+    0%, 100% { fill: #FF1744; } /* Deep Red */
+    33% { fill: #00E676; } /* Bright Green */
+    66% { fill: #FFD600; } /* Vibrant Yellow */
+}
+
+@keyframes colour-change2 {
+    0%, 100% { fill: #2979FF; } /* Bright Blue */
+    33% { fill: #FF6D00; } /* Deep Orange */
+    66% { fill: #E040FB; } /* Bright Purple */
+}
+
+@keyframes colour-change3 {
+    0%, 100% { fill: #00E5FF; } /* Cyan */
+    33% { fill: #FF4081; } /* Hot Pink */
+    66% { fill: #76FF03; } /* Lime Green */
+}
+

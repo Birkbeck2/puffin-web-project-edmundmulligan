@@ -1,0 +1,16 @@
+/*
+ **********************************************************************
+ * File       : globals.css
+ * Author     : Edmund Mulligan <edmund@edmundmulligan.name>
+ * Copyright  : (c) 2026 The Embodied Mind
+ * License    : MIT License (see license-and-credits.html page)
+ * Description:
+ *    definition of global CSS variables and styles
+ **********************************************************************
+ */
+
+/* Import colour, typography and layout definitions from respective CSS files */
+@import url("./definitions/colours.css");
+@import url("./definitions/typography.css");
+@import url("./definitions/layout.css");
+@import url("./definitions/animation.css");

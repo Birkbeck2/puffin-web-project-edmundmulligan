@@ -1,0 +1,106 @@
+/*
+ **********************************************************************
+ * File       : components/buttons.css
+ * Author     : Edmund Mulligan <edmund@edmundmulligan.name>
+ * Copyright  : (c) 2026 The Embodied Mind
+ * License    : MIT License (see license-and-credits.html page)
+ * Description:
+ *   Simplified button styles - all buttons behave consistently
+ *   regardless of shape or size.
+ **********************************************************************
+ */
+
+/* Base styles for all buttons */
+.button-circle,
+.button-rectangle,
+.button-circle-small {
+    padding: 1rem;
+    color: var(--colour-effective-button-text);
+    background-color: var(--colour-effective-button-background);
+    border: var(--border-style) var(--border-weight) var(--colour-effective-button-text);
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+/* Hover and focus states - all buttons behave the same */
+.button-circle:hover,
+.button-rectangle:hover,
+.button-circle-small:hover,
+.button-circle:focus-visible,
+.button-rectangle:focus-visible,
+.button-circle-small:focus-visible {
+    color: var(--colour-effective-button-text-hover);
+    background-color: var(--colour-effective-button-background-hover);
+    transform: scale(1.1);
+}
+
+/* Active (pressed) state - all buttons behave the same */
+.button-circle:active,
+.button-rectangle:active,
+.button-circle-small:active {
+    transform: scale(0.98);
+}
+
+/* Selected/pressed state - all buttons behave the same */
+.button-circle.pressed,
+.button-rectangle.pressed,
+.button-circle-small.pressed {
+    background-color: var(--colour-effective-button-background-selected);
+    color: var(--colour-effective-button-text-selected);
+    transform: scale(0.98);
+}
+
+/* Links styled as buttons */
+.button-circle:link,
+.button-rectangle:link,
+.button-circle-small:link,
+.button-circle:visited,
+.button-rectangle:visited,
+.button-circle-small:visited {
+    text-decoration: none;
+}
+
+/* Shape modifier: rectangular buttons */
+.button-rectangle {
+    display: block;
+    font-family: var(--font-family-button);
+    font-size: var(--fontsize-button);
+    font-weight: bold;
+    border-radius: var(--border-radius);
+    margin: 1rem auto;
+}
+
+/* Shape modifier: circular buttons */
+.button-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    aspect-ratio: 1 / 1;
+    width: var(--buttonsize-circle);
+    height: var(--buttonsize-circle);
+    max-width: 15rem;
+    max-height: 15rem;
+    font-family: var(--font-family-button);
+    font-size: var(--fontsize-button);
+}
+
+/* Size modifier: smaller buttons (e.g., style buttons) */
+.button-circle-small {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    aspect-ratio: 1 / 1;
+    width: calc(var(--buttonsize-circle) * 0.67);
+    height: calc(var(--buttonsize-circle) * 0.67);
+    max-width: 10rem;
+    max-height: 10rem;
+    font-family: var(--font-family-button);
+    font-size: calc(var(--fontsize-button) * 0.67);
+
+    /* padding: 0.4rem;
+    line-height: 1.15; */
+}
