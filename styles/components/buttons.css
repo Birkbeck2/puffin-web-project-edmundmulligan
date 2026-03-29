@@ -100,7 +100,4 @@
     max-height: 10rem;
     font-family: var(--font-family-button);
     font-size: calc(var(--fontsize-button) * 0.67);
-
-    /* padding: 0.4rem;
-    line-height: 1.15; */
 }

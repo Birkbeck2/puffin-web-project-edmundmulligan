@@ -11,7 +11,7 @@
 
 /* Utility class to visually hide elements */
 .hidden.hidden {
-    /* Higher specificity than single utility/layout classes like .text-container */
+    /* Using .hidden twice to increase specificity and avoid needing !important */
     display: none;
 }
 
