@@ -113,17 +113,17 @@ def generate_file(orientation, mode, style, source_dir='.'):
     package_orientation = orientation
     position_params = PORTRAIT_PARAMS if orientation == 'portrait' else LANDSCAPE_PARAMS
     
-    # Select opacities and colors based on mode
+    # Select opacities and colours based on mode
     if mode == 'light':
         opacity_params = LIGHT_OPACITIES
-        bg_color = f"web_background_{style}_light"
-        color_one = f"web_background_{style}_light_highlight"
-        color_two = f"web_background_{style}_light_alt"
+        bg_colour = f"web_background_{style}_light"
+        colour_one = f"web_background_{style}_light_highlight"
+        colour_two = f"web_background_{style}_light_alt"
     else:
         opacity_params = DARK_OPACITIES
-        bg_color = f"web_background_{style}_dark"
-        color_one = f"web_background_{style}_dark_highlight"
-        color_two = f"web_background_{style}_dark_alt"
+        bg_colour = f"web_background_{style}_dark"
+        colour_one = f"web_background_{style}_dark_highlight"
+        colour_two = f"web_background_{style}_dark_alt"
     
     # Combine all parameters
     all_params = {**position_params, **opacity_params}
@@ -140,10 +140,10 @@ def generate_file(orientation, mode, style, source_dir='.'):
 \\input{{../../common/colours.tex}}
 
 % {orientation.capitalize()} dimensions ({mode} mode)
-\\def\\bgcolorbase{{{bg_color}}}
-\\def\\colorone{{{color_one}}}
-\\def\\colortwo{{{color_two}}}
-\\def\\gridcolor{{{color_two}}}
+\\def\\bgcolourbase{{{bg_colour}}}
+\\def\\colourone{{{colour_one}}}
+\\def\\colourtwo{{{colour_two}}}
+\\def\\gridcolour{{{colour_two}}}
 {param_defs}
 
 \\begin{{document}}

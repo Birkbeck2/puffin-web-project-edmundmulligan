@@ -8,7 +8,7 @@
  * License    : MIT License
  * Description:
  *   Audit all HTML and CSS files for colour usage
- *   Identifies hardcoded colours and non-theme-compliant color references
+ *   Identifies hardcoded colours and non-theme-compliant colour references
  **********************************************************************
 */
 
@@ -49,15 +49,14 @@ const THEME_SPECIFIC_ALLOWED_FILES = [
     'scripts/themeSwitcher.js',    // Maps them
     'diagnostics/colourPalette.html', // Shows them
     'scripts/colourPalette.js',    // Analyses them
-    'styles/colourPalette.css'     // Diagnostic stylesheet
+    'styles/diagnostics/colourPalette.css'     // Diagnostic stylesheet
 ];
 
 // Files/folders exempt from colour compliance checks (diagnostic/test files)
-const EXEMPT_FROM_COLOR_CHECKS = [
-    'diagnostics/',                // All diagnostic/test pages
-    'bin/',                        // Build and test scripts
-    'styles/test-results.css',     // Styles for test results
-    'styles/definitions/colours.css' // Colour palette definitions (raw values expected here)
+const EXEMPT_FROM_COLOUR_CHECKS = [
+    'diagnostics/',                        // All diagnostic/test pages
+    'bin/',                                // Build and test scripts
+    'styles/diagnostics',                  // Diagnostics/test styles
 ];
 
 /**
@@ -136,8 +135,39 @@ function matchesExcludeList(relativePath, excludeList) {
  * @param {string} filePath - Relative path to file
  * @returns {boolean} - True if file is exempt
  */
-function isExemptFromColorChecks(filePath) {
-    return EXEMPT_FROM_COLOR_CHECKS.some(exempt => filePath.startsWith(exempt));
+function isExemptFromColourChecks(filePath) {
+    return EXEMPT_FROM_COLOUR_CHECKS.some(exempt => filePath.startsWith(exempt));
+}
+
+/**
+ * Check if a CSS file has an "Audit Colours: false" directive in its header comment
+ * @param {string} content - File contents
+ * @returns {boolean} - True if audit should be skipped
+ */
+function hasCssAuditSkip(content) {
+    // Only check the leading header comment block
+    const headerMatch = content.match(/^\s*\/\*[\s\S]*?\*\//);
+    if (!headerMatch) return false;
+    
+    // Matches "Audit Colours: false" with arbitrary spacing (case-insensitive)
+    return /Audit\s*Colours\s*:\s*false/i.test(headerMatch[0]);
+}
+
+/**
+ * Check if an HTML file has a meta tag to skip the audit
+ * @param {string} content - File contents
+ * @returns {boolean} - True if audit should be skipped
+ */
+function hasHtmlAuditSkip(content) {
+    // Find all meta tags
+    const metaTags = content.match(/<meta\b[^>]*>/gi) || [];
+    
+    // Check if any meta tag has name="audit-colour-usage" and content="false"
+    return metaTags.some(tag => {
+        const hasName = /\bname\s*=\s*["']audit-colour-usage["']/i.test(tag);
+        const hasFalseContent = /\bcontent\s*=\s*["']false["']/i.test(tag);
+        return hasName && hasFalseContent;
+    });
 }
 
 /**
@@ -151,11 +181,20 @@ function isExemptFromColorChecks(filePath) {
  * @param {string} content - File contents to analyse.
  * @returns {Array<object>} List of hardcoded-colour findings.
  */
-function findHardcodedColors(filePath, content) {
+function findHardcodedColours(filePath, content) {
     const issues = [];
     
     // Skip files exempt from colour checks
-    if (isExemptFromColorChecks(filePath)) {
+    if (isExemptFromColourChecks(filePath)) {
+        return issues;
+    }
+    
+    // Check for skip directives in the file content
+    const ext = path.extname(filePath).toLowerCase();
+    if (ext === '.css' && hasCssAuditSkip(content)) {
+        return issues;
+    }
+    if ((ext === '.html' || ext === '.htm') && hasHtmlAuditSkip(content)) {
         return issues;
     }
     
@@ -163,12 +202,12 @@ function findHardcodedColors(filePath, content) {
     
     // Regex patterns for hardcoded colours
     const patterns = [
-        { type: 'Hex Color', regex: /#[0-9a-fA-F]{3,6}(?![0-9a-fA-F])/g },
+        { type: 'Hex Colour', regex: /#[0-9a-fA-F]{3,6}(?![0-9a-fA-F])/g },
         { type: 'RGB', regex: /\brgb\s*\(\s*\d+\s*,\s*\d+\s*,\s*\d+\s*\)/g },
         { type: 'RGBA', regex: /\brgba\s*\(\s*\d+\s*,\s*\d+\s*,\s*\d+\s*,\s*[\d.]+\s*\)/g },
         { type: 'HSL', regex: /\bhsl\s*\(\s*\d+\s*,\s*\d+%\s*,\s*\d+%\s*\)/g },
         { type: 'HSLA', regex: /\bhsla\s*\(\s*\d+\s*,\s*\d+%\s*,\s*\d+%\s*,\s*[\d.]+\s*\)/g },
-        { type: 'Named Color', regex: /:\s*(black|white|red|blue|green|yellow|orange|purple|pink|gray|grey|cyan|magenta)\s*[;}]/gi }
+        { type: 'Named Colour', regex: /:\s*(black|white|red|blue|green|yellow|orange|purple|pink|gray|grey|cyan|magenta)\s*[;}]/gi }
     ];
     
     patterns.forEach(({ type, regex }) => {
@@ -192,17 +231,17 @@ function findHardcodedColors(filePath, content) {
                 }
                 
                 // Allow #fff and #000 in some special cases
-                if (type === 'Hex Color' && (match[0] === '#fff' || match[0] === '#000') && 
+                if (type === 'Hex Colour' && (match[0] === '#fff' || match[0] === '#000') && 
                     line.includes('fallback')) {
                     continue;
                 }
                 
                 // Skip hex patterns that are part of CSS ID selectors
                 // ID selectors have additional identifier characters after the hex portion
-                if (type === 'Hex Color') {
+                if (type === 'Hex Colour') {
                     const matchEnd = match.index + match[0].length;
                     const nextChar = line[matchEnd];
-                    // If followed by -, _, or any letter, it's likely an ID selector, not a color
+                    // If followed by -, _, or any letter, it's likely an ID selector, not a colour
                     if (nextChar && /[-_a-zA-Z]/.test(nextChar)) {
                         continue;
                     }
@@ -237,7 +276,16 @@ function findThemeSpecificVars(filePath, content) {
     const issues = [];
     
     // Skip files exempt from colour checks
-    if (isExemptFromColorChecks(filePath)) {
+    if (isExemptFromColourChecks(filePath)) {
+        return issues;
+    }
+    
+    // Check for skip directives in the file content
+    const ext = path.extname(filePath).toLowerCase();
+    if (ext === '.css' && hasCssAuditSkip(content)) {
+        return issues;
+    }
+    if ((ext === '.html' || ext === '.htm') && hasHtmlAuditSkip(content)) {
         return issues;
     }
     
@@ -295,7 +343,12 @@ function checkFileLoadsThemeSystem(filePath, content) {
     }
     
     // Skip files exempt from colour checks
-    if (isExemptFromColorChecks(filePath)) {
+    if (isExemptFromColourChecks(filePath)) {
+        return null;
+    }
+    
+    // Check for skip directive in HTML content
+    if (hasHtmlAuditSkip(content)) {
         return null;
     }
     
@@ -385,7 +438,7 @@ function main() {
     console.log(`Scanning ${cssFiles.length} CSS files and ${htmlFiles.length} HTML files...\n`);
     
     const allIssues = {
-        hardcodedColors: [],
+        hardcodedColours: [],
         themeSpecificVars: [],
         missingThemeSystem: []
     };
@@ -395,7 +448,7 @@ function main() {
         const content = fs.readFileSync(file, 'utf8');
         const relativePath = path.relative(rootDir, file);
         
-        allIssues.hardcodedColors.push(...findHardcodedColors(relativePath, content));
+        allIssues.hardcodedColours.push(...findHardcodedColours(relativePath, content));
         allIssues.themeSpecificVars.push(...findThemeSpecificVars(relativePath, content));
     });
     
@@ -404,7 +457,7 @@ function main() {
         const content = fs.readFileSync(file, 'utf8');
         const relativePath = path.relative(rootDir, file);
         
-        allIssues.hardcodedColors.push(...findHardcodedColors(relativePath, content));
+        allIssues.hardcodedColours.push(...findHardcodedColours(relativePath, content));
         allIssues.themeSpecificVars.push(...findThemeSpecificVars(relativePath, content));
         
         const missing = checkFileLoadsThemeSystem(relativePath, content);
@@ -418,17 +471,17 @@ function main() {
     console.log('RESULTS');
     console.log('='.repeat(100) + '\n');
     
-    if (allIssues.hardcodedColors.length > 0) {
-        console.log(`❌ Found ${allIssues.hardcodedColors.length} hardcoded color(s):\n`);
-        allIssues.hardcodedColors.slice(0, 20).forEach(issue => {
+    if (allIssues.hardcodedColours.length > 0) {
+        console.log(`❌ Found ${allIssues.hardcodedColours.length} hardcoded colour(s):\n`);
+        allIssues.hardcodedColours.slice(0, 20).forEach(issue => {
             console.log(`  ${issue.file}:${issue.line}`);
             console.log(`    Type: ${issue.type}`);
             console.log(`    Value: ${issue.value}`);
             console.log(`    Context: ${issue.context.substring(0, 80)}...`);
             console.log('');
         });
-        if (allIssues.hardcodedColors.length > 20) {
-            console.log(`  ... and ${allIssues.hardcodedColors.length - 20} more\n`);
+        if (allIssues.hardcodedColours.length > 20) {
+            console.log(`  ... and ${allIssues.hardcodedColours.length - 20} more\n`);
         }
     } else {
         console.log('✅ No hardcoded colours found\n');
@@ -468,7 +521,7 @@ function main() {
     console.log('='.repeat(100));
     console.log('SUMMARY');
     console.log('='.repeat(100));
-    console.log(`hardcoded colours: ${allIssues.hardcodedColors.length}`);
+    console.log(`hardcoded colours: ${allIssues.hardcodedColours.length}`);
     console.log(`Theme-specific var usage: ${allIssues.themeSpecificVars.length}`);
     console.log(`Missing theme system: ${allIssues.missingThemeSystem.length}`);
     if (excludeList.length > 0) {
@@ -481,7 +534,7 @@ function main() {
     fs.writeFileSync(reportPath, JSON.stringify(allIssues, null, 2));
     console.log(`Detailed report written to: ${reportPath}\n`);
     
-    process.exit(allIssues.hardcodedColors.length + allIssues.themeSpecificVars.length + allIssues.missingThemeSystem.length);
+    process.exit(allIssues.hardcodedColours.length + allIssues.themeSpecificVars.length + allIssues.missingThemeSystem.length);
 }
 
 main();

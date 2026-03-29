@@ -493,27 +493,52 @@ function formatWaveDetails(data) {
  * @returns {string} HTML fragment for the modal.
  */
 function formatLighthouseDetails(data) {
-    const pagesWithIssues = data.pages.filter(p => p.failedAudits && p.failedAudits.length > 0);
+    const pagesWithErrors = data.pages.filter(p => p.score < 0.9);
+    const pagesWithWarnings = data.pages.filter(p => p.score >= 0.9 && p.score < 1.0);
     
-    if (pagesWithIssues.length === 0) {
-        return '<p>All pages passed Lighthouse audits.</p>';
+    if (pagesWithErrors.length === 0 && pagesWithWarnings.length === 0) {
+        return '<p>All pages passed Lighthouse audits with 100% score.</p>';
     }
     
-    let html = '<h3>Pages with Issues</h3>';
-    pagesWithIssues.forEach(page => {
-        html += `<div class="error-item">
-            <h4>${page.url} [${page.viewport}px, ${page.style}-${page.theme}]</h4>
-            <div class="error-detail">Score: ${Math.round(page.score * 100)}%</div>`;
-        
-        if (page.failedAudits) {
-            html += '<div style="margin-top: 0.5rem;">';
-            page.failedAudits.forEach(audit => {
-                html += `<div>• ${audit.title || audit}</div>`;
-            });
+    let html = '';
+    
+    // Show errors (< 90%)
+    if (pagesWithErrors.length > 0) {
+        html += '<h3>❌ Pages Below 90% Accessibility</h3>';
+        pagesWithErrors.forEach(page => {
+            html += `<div class="error-item">
+                <h4>${page.url} [${page.viewport}px, ${page.style}-${page.theme}]</h4>
+                <div class="error-detail">Score: ${Math.round(page.score * 100)}%</div>`;
+            
+            if (page.failedAudits && page.failedAudits.length > 0) {
+                html += '<div style="margin-top: 0.5rem;">';
+                page.failedAudits.forEach(audit => {
+                    html += `<div>• ${audit.title || audit}</div>`;
+                });
+                html += '</div>';
+            }
             html += '</div>';
-        }
-        html += '</div>';
-    });
+        });
+    }
+    
+    // Show warnings (90-99%)
+    if (pagesWithWarnings.length > 0) {
+        html += '<h3>⚠️ Pages Between 90-99% Accessibility</h3>';
+        pagesWithWarnings.forEach(page => {
+            html += `<div class="warning-item">
+                <h4>${page.url} [${page.viewport}px, ${page.style}-${page.theme}]</h4>
+                <div class="warning-detail">Score: ${Math.round(page.score * 100)}%</div>`;
+            
+            if (page.failedAudits && page.failedAudits.length > 0) {
+                html += '<div style="margin-top: 0.5rem;">';
+                page.failedAudits.forEach(audit => {
+                    html += `<div>• ${audit.title || audit}</div>`;
+                });
+                html += '</div>';
+            }
+            html += '</div>';
+        });
+    }
     
     return html;
 }
@@ -633,9 +658,9 @@ function formatFileCommentsDetails(data) {
 function formatColourAuditDetails(data) {
     let html = '';
     
-    if (data.hardcodedColors && data.hardcodedColors.length > 0) {
+    if (data.hardcodedColours && data.hardcodedColours.length > 0) {
         html += '<h3>Hardcoded Colours</h3>';
-        data.hardcodedColors.forEach(item => {
+        data.hardcodedColours.forEach(item => {
             html += `<div class="error-item">
                 <h4>${item.file}</h4>
                 <div class="error-detail">Line ${item.line}: ${item.value}</div>
@@ -884,12 +909,14 @@ async function loadAllResults() {
         const avgScore = lighthouse.pages.length > 0 ?
             Math.round((lighthouse.pages.reduce((sum, page) => sum + page.score, 0) / lighthouse.pages.length) * 100) :
             0;
-        const pagesWithIssues = lighthouse.pages.filter(p => p.failedAudits && p.failedAudits.length > 0).length;
-        const status = pagesWithIssues === 0 ? 'pass' : 'fail';
+        const pagesWithErrors = lighthouse.pages.filter(p => p.score < 0.9).length;
+        const pagesWithWarnings = lighthouse.pages.filter(p => p.score >= 0.9 && p.score < 1.0).length;
+        const status = pagesWithErrors > 0 ? 'fail' : (pagesWithWarnings > 0 ? 'warning' : 'pass');
         
         totalTests++;
         if (status === 'pass') passedTests++;
-        else failedTests++;
+        else if (status === 'fail') failedTests++;
+        else if (status === 'warning') totalWarnings++;
 
         testData.Lighthouse = lighthouse;
         cards.push(createTestCard(
@@ -899,10 +926,11 @@ async function loadAllResults() {
             [
                 { label: 'Pages Tested', value: lighthouse.pages.length },
                 { label: 'Average Score', value: `${avgScore}%` },
-                { label: 'Pages with Issues', value: pagesWithIssues }
+                { label: 'Errors (<90%)', value: pagesWithErrors },
+                { label: 'Warnings (90-99%)', value: pagesWithWarnings }
             ],
             'Lighthouse',
-            pagesWithIssues > 0
+            pagesWithErrors > 0 || pagesWithWarnings > 0
         ));
     }
 
@@ -975,7 +1003,7 @@ async function loadAllResults() {
     // Load Colour Audit Results
     const colourAudit = await loadJSON('../test-results/colour-audit-report.json');
     if (colourAudit) {
-        const totalIssues = (colourAudit.hardcodedColors ? colourAudit.hardcodedColors.length : 0) +
+        const totalIssues = (colourAudit.hardcodedColours ? colourAudit.hardcodedColours.length : 0) +
                           (colourAudit.themeSpecificVars ? colourAudit.themeSpecificVars.length : 0) +
                           (colourAudit.missingThemeSystem ? colourAudit.missingThemeSystem.length : 0);
         const status = totalIssues === 0 ? 'pass' : 'fail';
@@ -990,7 +1018,7 @@ async function loadAllResults() {
             'fas fa-palette',
             status,
             [
-                { label: 'Hardcoded Colours', value: colourAudit.hardcodedColors ? colourAudit.hardcodedColors.length : 0 },
+                { label: 'Hardcoded Colours', value: colourAudit.hardcodedColours ? colourAudit.hardcodedColours.length : 0 },
                 { label: 'Theme-Specific Vars', value: colourAudit.themeSpecificVars ? colourAudit.themeSpecificVars.length : 0 },
                 { label: 'Missing Theme System', value: colourAudit.missingThemeSystem ? colourAudit.missingThemeSystem.length : 0 },
                 { label: 'Total Issues', value: totalIssues }

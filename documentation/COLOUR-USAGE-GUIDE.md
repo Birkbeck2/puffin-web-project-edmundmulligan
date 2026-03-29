@@ -2,19 +2,19 @@
 
 ## Overview
 
-This project uses a **theme-based colour system** with three styles (Normal, Subdued, Vibrant) and two brightness modes (Light, Dark), giving users 6 theme combinations. All colors are defined in `colours.css` and managed by `themeSwitcher.js`.
+This project uses a **theme-based colour system** with three styles (Normal, Subdued, Vibrant) and two brightness modes (Light, Dark), giving users 6 theme combinations. All colours are defined in `colours.css` and managed by `themeSwitcher.js`.
 
 ## colour system Architecture
 
 ```
 colours.css (221 lines)
-  ├── Base colors (--colour-indigo, --colour-cyan, etc.)
-  ├── Non-theme colors (warnings, errors)
-  └── Theme-specific colors (6 themes × ~18 colors each)
+  ├── Base colours (--colour-indigo, --colour-cyan, etc.)
+  ├── Non-theme colours (warnings, errors)
+  └── Theme-specific colours (6 themes × ~18 colours each)
 
 themeSwitcher.js
   ├── Reads user preference (localStorage or browser default)
-  ├── Maps generic variables to theme-specific colors
+  ├── Maps generic variables to theme-specific colours
   └── Updates all pages dynamically
 
 CSS/HTML
@@ -23,7 +23,7 @@ CSS/HTML
 
 ---
 
-## ⚠️ RULES: What Colors to Use
+## ⚠️ RULES: What Colours to Use
 
 ### ✅ DO: Use Generic Variables
 
@@ -44,7 +44,7 @@ CSS/HTML
 | `--colour-effective-button-background-selected` | Selected button background colour
 | `--colour-effective-button-text-selected`       | Selected button text colour
 | `--colour-effective-button-background-disabled` | Disabled button background colour
-| `--colour-effective-button-text-disabled`       | Diabled button text colour
+| `--colour-effective-button-text-disabled`       | Disabled button text colour
 | `--colour-effective-link-background`            | Menu/link background colour
 | `--colour-effective-link-text`                  | Menu/link text colour
 | `--colour-effective-link-background-hover`      | Hover menu/link background colour
@@ -132,7 +132,7 @@ Every HTML page **must** load:
 /* ❌ WRONG */
 .my-component {
     background: #fff;  /* Hardcoded - won't change with theme */
-    color: black;      /* Named color - won't change with theme */
+    color: black;      /* Named colour - won't change with theme */
 }
 
 .my-link {
@@ -164,9 +164,9 @@ Users can choose from 6 combinations:
 |-------|------------|-----------|
 | **Normal** | Light cyan background, purple headings | Dark purple background, cyan headings |
 | **Subdued** | Light gray background, dark gray text | Dark gray background, light gray text |
-| **Vibrant** | White background, bright colors | Black background, neon colors |
+| **Vibrant** | White background, bright colours | Black background, neon colours |
 
-**Code doesn't need to know which theme is active** - the generic variables automatically point to the right colors.
+**Code doesn't need to know which theme is active** - the generic variables automatically point to the right colours.
 
 ---
 
@@ -179,7 +179,7 @@ node bin/audit-colour-usage.js
 ```
 
 This will identify:
-1. **hardcoded colours** (hex, rgb, hsl, named colors)
+1. **hardcoded colours** (hex, rgb, hsl, named colours)
 2. **Direct theme-specific variable usage** (should use generic instead)
 3. **Missing theme system** (HTML pages without globals.css or themeSwitcher.js)
 
@@ -230,7 +230,7 @@ root.style.setProperty('--colour-button-text', `var(${prefix}-button-text)`);
 <script src="../scripts/themeSwitcher.js"></script>
 ```
 
-### Issue: Modal/Overlay Needs Semi-Transparent Color
+### Issue: Modal/Overlay Needs Semi-Transparent Colour
 
 **Allowed exception:**
 ```css
@@ -239,7 +239,7 @@ root.style.setProperty('--colour-button-text', `var(${prefix}-button-text)`);
 }
 
 .modal-content {
-    background: var(--colour-page-background);  /* ✅ Use theme color for content */
+    background: var(--colour-page-background);  /* ✅ Use theme colour for content */
     color: var(--colour-page-text);
 }
 ```
@@ -261,16 +261,16 @@ Run `node bin/audit-colour-usage.js` to see:
 ## 🚀 Best Practices
 
 1. **Always use generic variables** from theme switcher
-2. **Test colors in all 6 themes** before committing (use URL params: `?style=vibrant&theme=dark`)
+2. **Test colours in all 6 themes** before committing (use URL params: `?style=vibrant&theme=dark`)
 3. **Run audit before commits:** `node bin/audit-colour-usage.js`
-4. **Verify WCAG compliance:** All theme colors already meet AAA standards
+4. **Verify WCAG compliance:** All theme colours already meet AAA standards
 5. **Never bypass the theme system** unless absolutely necessary (shadows/overlays only)
 
 ---
 
-## 📝 Adding New Generic Color Variables
+## 📝 Adding New Generic Colour Variables
 
-If you need a new color type (e.g., buttons, badges, alerts):
+If you need a new colour type (e.g., buttons, badges, alerts):
 
 ### Step 1: Define in all themes in `colours.css`
 
@@ -310,9 +310,9 @@ Add to the table in the "✅ DO: Use Generic Variables" section.
 ## ❓ FAQ
 
 **Q: Can I use `#fff` as a fallback?**  
-A: Only in very rare cases like `color: var(--my-color, #fff)`. Prefer defining a proper theme variable.
+A: Only in very rare cases like `color: var(--my-colour, #fff)`. Prefer defining a proper theme variable.
 
-**Q: What about SVG fill colors?**  
+**Q: What about SVG fill colours?**  
 A: Same rules apply. Use `fill: var(--colour-headings-text);` etc.
 
 **Q: Can diagnostic/test files use hardcoded colours?**  
@@ -337,6 +337,6 @@ A: Add URL parameters: `?style=vibrant&theme=dark` or use the theme switcher UI 
 
 ✅ **Use generic variables** (`--colour-page-text`, etc.)  
 ❌ **Never use theme-specific** (`--colour-normal-light-*`)  
-❌ **Never hardcode** (`#fff`, `rgb()`, named colors)  
+❌ **Never hardcode** (`#fff`, `rgb()`, named colours)  
 🔍 **Audit regularly** (`node bin/audit-colour-usage.js`)  
 🎨 **All themes work automatically** - no manual updates needed

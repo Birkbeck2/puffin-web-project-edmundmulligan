@@ -1,3 +1,14 @@
+/*
+ **********************************************************************
+ * File       : background-switcher.js
+ * Author     : Edmund Mulligan <edmund@edmundmulligan.name>
+ * Copyright  : (c) 2026 The Embodied Mind
+ * License    : MIT License (see license-and-credits.html page)
+ * Description:
+ *   Handles switching between different background themes and orientations
+ **********************************************************************
+ */
+
 function switchBackground() {
     const selectedTheme = document.querySelector('input[name="backgroundTheme"]:checked').value;
     const selectedOrientation = document.querySelector('input[name="backgroundOrientation"]:checked').value;

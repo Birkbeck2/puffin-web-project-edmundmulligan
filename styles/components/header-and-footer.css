@@ -52,7 +52,7 @@
     }
 
     .header-minimal {
-        display: none;
+        display: block;
         width: 100%;
         max-width: 100%;
         margin: 0 auto;
@@ -107,7 +107,7 @@
     }
 
     & .footer-minimal {
-        display: none;
+        display: flex;
         justify-content: center;
         align-items: flex-start;
     }
@@ -167,7 +167,7 @@
     flex: 0 0 auto;
     display: block;
 
-    /* Use mask to apply headings-text color to SVG icons */
+    /* Use mask to apply headings-text colour to SVG icons */
     background-color: var(--colour-effective-headings-text);
     -webkit-mask-size: contain;
     -webkit-mask-repeat: no-repeat;
@@ -256,7 +256,7 @@
     height: clamp(3rem, 15vw, 15rem);
     object-fit: contain;
 
-    /* Use mask to apply headings-text color to SVG icons */
+    /* Use mask to apply headings-text colour to SVG icons */
     background-color: var(--colour-effective-headings-text);
     -webkit-mask-size: contain;
     -webkit-mask-repeat: no-repeat;
@@ -412,3 +412,51 @@
     }
 }
 
+/* Header and Footer toggle animation classes */
+.header-minimal,
+.header-full {
+    transition: transform var(--toggle-duration) var(--toggle-timing-function), 
+            opacity var(--toggle-duration) var(--toggle-timing-function),
+            visibility var(--toggle-duration) var(--toggle-timing-function);
+}
+
+.footer-minimal,
+.footer-full {
+    transition: transform var(--toggle-duration) var(--toggle-timing-function), 
+            opacity var(--toggle-duration) var(--toggle-timing-function),
+            visibility var(--toggle-duration) var(--toggle-timing-function);
+}
+
+/* Header animations */
+.header-minimal.hidden,
+.header-full.hidden {
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.header-minimal.visible,
+.header-full.visible {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+/* Footer animations */
+.footer-minimal.hidden,
+.footer-full.hidden {
+    transform: translateY(100%);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.footer-minimal.visible,
+.footer-full.visible {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}

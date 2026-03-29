@@ -362,13 +362,13 @@
                 if (submitButton) {
                     const originalText = submitButton.textContent;
                     submitButton.textContent = 'Information Saved!';
-                    submitButton.style.backgroundColor = 'var(--colour-effective-button-background-selected)';
-                    submitButton.style.color = 'var(--colour-effective-button-text-selected)';
+                    submitButton.style.backgroundColour = 'var(--colour-effective-button-background-selected)';
+                    submitButton.style.colour = 'var(--colour-effective-button-text-selected)';
                 
                     setTimeout(() => {
                         submitButton.textContent = originalText;
-                        submitButton.style.backgroundColor = '';
-                        submitButton.style.color = '';
+                        submitButton.style.backgroundColour = '';
+                        submitButton.style.colour = '';
                     }, 2000);
                 }
             } catch (error) {

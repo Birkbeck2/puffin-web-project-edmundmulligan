@@ -113,10 +113,10 @@ def generate_file(orientation, mode, style, source_dir='artwork/source/image-2')
     package_orientation = orientation
     position_params = PORTRAIT_PARAMS if orientation == 'portrait' else LANDSCAPE_PARAMS
     
-    # Select opacities and colors based on mode
-    bg_color = f"colour_{style}_{mode}_page_background"
-    color_one = f"colour_{style}_{mode}_page_text"
-    color_two = f"colour_{style}_{mode}_button_background_hover"
+    # Select opacities and colours based on mode
+    bg_colour = f"colour_{style}_{mode}_page_background"
+    colour_one = f"colour_{style}_{mode}_page_text"
+    colour_two = f"colour_{style}_{mode}_button_background_hover"
     if mode == 'light':
         opacity_params = LIGHT_OPACITIES
     else:
@@ -125,10 +125,10 @@ def generate_file(orientation, mode, style, source_dir='artwork/source/image-2')
     # Combine all parameters including colours
     all_params = {**position_params, **opacity_params}
     # Add colour parameters as expandable definitions
-    all_params['bgcolorbase'] = bg_color
-    all_params['colorone'] = color_one
-    all_params['colortwo'] = color_two
-    all_params['gridcolor'] = color_two
+    all_params['bgcolourbase'] = bg_colour
+    all_params['colourone'] = colour_one
+    all_params['colourtwo'] = colour_two
+    all_params['gridcolour'] = colour_two
     
     # Generate parameter definitions using edef for full expansion
     param_defs = '\n'.join([f'\\edef\\{key}{{{value}}}' for key, value in all_params.items()])

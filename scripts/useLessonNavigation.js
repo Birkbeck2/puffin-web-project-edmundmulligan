@@ -455,7 +455,7 @@
                     }
                 } else if (index === this.currentSectionIndex) {
                     wand.classList.add('current');
-                    // Current section gets the sparkling wand with favicon colors
+                    // Current section gets the sparkling wand with favicon colours
                     const img = wand.querySelector('img');
                     if (img) {
                         img.src = '../images/icons/favicon.svg';
