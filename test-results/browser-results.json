@@ -1,0 +1,46 @@
+{
+  "browsers": [
+    {
+      "name": "chromium",
+      "status": "failed",
+      "error": "Home CSS Grid/Flex not working: display is block",
+      "tests": [
+        {
+          "name": "browser test",
+          "status": "failed",
+          "error": "Home CSS Grid/Flex not working: display is block"
+        }
+      ]
+    },
+    {
+      "name": "firefox",
+      "status": "failed",
+      "error": "Home CSS Grid/Flex not working: display is block",
+      "tests": [
+        {
+          "name": "browser test",
+          "status": "failed",
+          "error": "Home CSS Grid/Flex not working: display is block"
+        }
+      ]
+    },
+    {
+      "name": "webkit",
+      "status": "failed",
+      "error": "Home CSS Grid/Flex not working: display is block",
+      "tests": [
+        {
+          "name": "browser test",
+          "status": "failed",
+          "error": "Home CSS Grid/Flex not working: display is block"
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "passed": 0,
+    "failed": 3,
+    "skipped": 0,
+    "total": 3
+  }
+}
