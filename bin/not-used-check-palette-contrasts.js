@@ -7,7 +7,7 @@
  * Copyright  : (c) 2026 The Embodied Mind
  * License    : MIT License
  * Description:
- *   Script to check all color contrasts in the palette
+ *   Script to check all colour contrasts in the palette
  *   Parses colours.css and calculates WCAG contrast ratios
  **********************************************************************
 */
@@ -124,9 +124,9 @@ function parseHSL(cssValue) {
  * @param {string} cssPath - Path to the CSS file to analyse.
  * @returns {Object<string, number[]>} Resolved colour variables keyed by variable name.
  */
-function parseCSSColors(cssPath) {
+function parseCSSColours(cssPath) {
     const content = fs.readFileSync(cssPath, 'utf-8');
-    const colors = {};
+    const colours = {};
     const rawValues = {};
     
     // First pass: Extract all variable definitions
@@ -141,19 +141,19 @@ function parseCSSColors(cssPath) {
         // Try to parse direct HSL values
         const hsl = parseHSL(value);
         if (hsl) {
-            colors[varName] = hsl;
+            colours[varName] = hsl;
         }
     }
     
     // Second pass: Resolve "hsl(from var(--name) h s l)" references
     for (const [varName, value] of Object.entries(rawValues)) {
-        if (!colors[varName]) {
+        if (!colours[varName]) {
             // Check if it references another variable directly
             const fromMatch = value.match(/hsl\(from var\(--([a-z0-9-]+)\) h s l\)/);
             if (fromMatch) {
                 const refVar = fromMatch[1];
-                if (colors[refVar]) {
-                    colors[varName] = colors[refVar];
+                if (colours[refVar]) {
+                    colours[varName] = colours[refVar];
                 }
             }
             
@@ -162,25 +162,25 @@ function parseCSSColors(cssPath) {
             if (modMatch) {
                 const refVar = modMatch[1];
                 const newL = parseFloat(modMatch[2]);
-                if (colors[refVar]) {
-                    colors[varName] = [colors[refVar][0], colors[refVar][1], newL];
+                if (colours[refVar]) {
+                    colours[varName] = [colours[refVar][0], colours[refVar][1], newL];
                 }
             }
             
             // Check if it's a direct hsl without deg
             const directMatch = value.match(/hsl\((\d+)\s+(\d+)%\s+(\d+)%\)/);
             if (directMatch) {
-                colors[varName] = [parseFloat(directMatch[1]), parseFloat(directMatch[2]), parseFloat(directMatch[3])];
+                colours[varName] = [parseFloat(directMatch[1]), parseFloat(directMatch[2]), parseFloat(directMatch[3])];
             }
         }
     }
     
-    return colors;
+    return colours;
 }
 
 // colour pair definitions from the palette
-const colorPairs = [
-    // Non-theme colors
+const colourPairs = [
+    // Non-theme colours
     { bg: 'colour-warning-background', fg: 'colour-warning-text', name: 'Warning Popovers' },
     { bg: 'colour-error-background', fg: 'colour-error-text', name: 'Error Popovers' },
     
@@ -253,7 +253,7 @@ const colorPairs = [
 
 // Main execution
 const cssPath = path.join(__dirname, '..', 'styles', 'colours.css');
-const colors = parseCSSColors(cssPath);
+const colours = parseCSSColours(cssPath);
 
 console.log('\n=== WCAG Contrast Analysis ===\n');
 console.log('AA Standard: 4.5:1 for normal text, 3:1 for large text');
@@ -262,16 +262,16 @@ console.log('AAA Standard: 7:1 for normal text, 4.5:1 for large text\n');
 let failCount = 0;
 let warningCount = 0;
 
-colorPairs.forEach(pair => {
-    const bgColor = colors[pair.bg];
-    const fgColor = colors[pair.fg];
+colourPairs.forEach(pair => {
+    const bgColour = colours[pair.bg];
+    const fgColour = colours[pair.fg];
     
-    if (!bgColor || !fgColor) {
+    if (!bgColour || !fgColour) {
         console.log(`⚠️  ${pair.name}: Missing colour definition`);
         return;
     }
     
-    const ratio = calculateContrast(bgColor, fgColor);
+    const ratio = calculateContrast(bgColour, fgColour);
     let status = '';
     let emoji = '';
     
@@ -285,29 +285,29 @@ colorPairs.forEach(pair => {
         // Show AA-only (not AAA) contrasts
         console.log(`${emoji} ${pair.name}`);
         console.log(`   Ratio: ${ratio.toFixed(2)}:1 - ${status} (below AAA threshold)`);
-        console.log(`   BG: hsl(${bgColor.join(', ')}) | FG: hsl(${fgColor.join(', ')})\n`);
+        console.log(`   BG: hsl(${bgColour.join(', ')}) | FG: hsl(${fgColour.join(', ')})\n`);
     } else if (ratio >= 3) {
         status = 'FAIL (only passes large text)';
         emoji = '⚠️';
         failCount++;
         console.log(`${emoji} ${pair.name}`);
         console.log(`   Ratio: ${ratio.toFixed(2)}:1 - ${status}`);
-        console.log(`   BG: hsl(${bgColor.join(', ')}) | FG: hsl(${fgColor.join(', ')})\n`);
+        console.log(`   BG: hsl(${bgColour.join(', ')}) | FG: hsl(${fgColour.join(', ')})\n`);
     } else {
         status = 'FAIL';
         emoji = '❌';
         failCount++;
         console.log(`${emoji} ${pair.name}`);
         console.log(`   Ratio: ${ratio.toFixed(2)}:1 - ${status}`);
-        console.log(`   BG: hsl(${bgColor.join(', ')}) | FG: hsl(${fgColor.join(', ')})\n`);
+        console.log(`   BG: hsl(${bgColour.join(', ')}) | FG: hsl(${fgColour.join(', ')})\n`);
     }
 });
 
 console.log('\n=== Summary ===');
-console.log(`Total pairs checked: ${colorPairs.length}`);
+console.log(`Total pairs checked: ${colourPairs.length}`);
 console.log(`Failing AA (< 4.5:1): ${failCount}`);
 console.log(`Passing AA only (4.5-7): ${warningCount}`);
-console.log(`Passing AAA (>= 7): ${colorPairs.length - failCount - warningCount}`);
+console.log(`Passing AAA (>= 7): ${colourPairs.length - failCount - warningCount}`);
 
 if (failCount > 0) {
     console.log('\n⚠️  WARNING: Some colour pair do not meet WCAG AA standards!');

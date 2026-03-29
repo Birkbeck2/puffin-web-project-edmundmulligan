@@ -91,7 +91,7 @@ function relativeLuminance(rgb) {
 }
 
 /**
- * Calculate contrast ratio between two colors
+ * Calculate contrast ratio between two colours
  * @param {Array} colour1 - [h, s, l] HSL values
  * @param {Array} colour2 - [h, s, l] HSL values
  * @returns {number} Contrast ratio (1-21)
@@ -145,14 +145,14 @@ function meetsRequirement(ratio, requirement = 'AA') {
 }
 
 /**
- * Parse HSL color from CSS value
+ * Parse HSL colour from CSS value
  * @param {string} cssValue - CSS colour value (e.g., "hsl(180, 100%, 50%)" or "hsl(from hsl(180, 100%, 75%) h s l)")
  * @returns {Array|null} [h, s, l] values or null if not parseable
  */
 function parseHSL(cssValue) {
     if (!cssValue) return null;
     
-    // Check if this uses "from" syntax: hsl(from <color> h s l)
+    // Check if this uses "from" syntax: hsl(from <colour> h s l)
     // Supports both old comma-separated and new space-separated formats
     const fromRegex = /hsl\(\s*from\s+hsl\((\d+(?:\.\d+)?)(?:deg)?,?\s+(\d+(?:\.\d+)?)%?,?\s+(\d+(?:\.\d+)?)%?\)\s+([\dh]+)(?:,?\s+)?([\ds]+)%?(?:,?\s+)?([\dl]+)%?\s*\)/;
     const fromMatch = cssValue.match(fromRegex);
@@ -188,13 +188,13 @@ function parseHSL(cssValue) {
 }
 
 /**
- * Parse CSS file and extract color variables
+ * Parse CSS file and extract colour variables
  * @param {string} cssFilePath - Path to CSS file
- * @returns {Object} Color variables keyed by name
+ * @returns {Object} Colour variables keyed by name
  */
 function parseCSSFile(cssFilePath) {
     const cssContent = fs.readFileSync(cssFilePath, 'utf8');
-    const colors = {};
+    const colours = {};
     
     // Extract all CSS variable definitions
     const varRegex = /--([a-z0-9-]+):\s*([^;]+);/gi;
@@ -203,19 +203,19 @@ function parseCSSFile(cssFilePath) {
     while ((match = varRegex.exec(cssContent)) !== null) {
         const varName = match[1];
         const varValue = match[2].trim();
-        colors[varName] = varValue;
+        colours[varName] = varValue;
     }
     
-    return colors;
+    return colours;
 }
 
 /**
  * Resolve CSS variable references
  * @param {string} value - CSS value (may contain var() references)
- * @param {Object} colors - All color variables
+ * @param {Object} colours - All colour variables
  * @returns {string} Resolved value
  */
-function resolveCSSVar(value, colors) {
+function resolveCSSVar(value, colours) {
     if (!value) return value;
     
     // Handle var() references
@@ -225,8 +225,8 @@ function resolveCSSVar(value, colors) {
     
     while ((match = varRefRegex.exec(resolved)) !== null) {
         const refName = match[1];
-        if (colors[refName]) {
-            resolved = resolved.replace(match[0], colors[refName]);
+        if (colours[refName]) {
+            resolved = resolved.replace(match[0], colours[refName]);
         }
     }
     
@@ -235,31 +235,31 @@ function resolveCSSVar(value, colors) {
 
 /**
  * Extract colour value with resolution of references
- * @param {Object} colors - All color variables
+ * @param {Object} colours - All colour variables
  * @param {string} varName - Variable name to extract
  * @returns {Array|null} [h, s, l] values or null
  */
-function getColorValue(colors, varName) {
-    const rawValue = colors[varName];
+function getColourValue(colours, varName) {
+    const rawValue = colours[varName];
     if (!rawValue) return null;
     
-    const resolved = resolveCSSVar(rawValue, colors);
+    const resolved = resolveCSSVar(rawValue, colours);
     return parseHSL(resolved);
 }
 
 /**
  * Build theme definitions from parsed CSS
- * @param {Object} colors - All color variables from CSS
+ * @param {Object} colours - All colour variables from CSS
  * @returns {Array} Theme definitions
  */
-function buildThemesFromCSS(colors) {
+function buildThemesFromCSS(colours) {
     const themeNames = [
-        { name: 'Normal-Light', prefix: 'color-normal-light' },
-        { name: 'Normal-Dark', prefix: 'color-normal-dark' },
-        { name: 'Subdued-Light', prefix: 'color-subdued-light' },
-        { name: 'Subdued-Dark', prefix: 'color-subdued-dark' },
-        { name: 'Vibrant-Light', prefix: 'color-vibrant-light' },
-        { name: 'Vibrant-Dark', prefix: 'color-vibrant-dark' }
+        { name: 'Normal-Light', prefix: 'colour-normal-light' },
+        { name: 'Normal-Dark', prefix: 'colour-normal-dark' },
+        { name: 'Subdued-Light', prefix: 'colour-subdued-light' },
+        { name: 'Subdued-Dark', prefix: 'colour-subdued-dark' },
+        { name: 'Vibrant-Light', prefix: 'colour-vibrant-light' },
+        { name: 'Vibrant-Dark', prefix: 'colour-vibrant-dark' }
     ];
     
     const themes = [];
@@ -268,45 +268,45 @@ function buildThemesFromCSS(colors) {
         const theme = {
             name,
             headings: {
-                bg: getColorValue(colors, `${prefix}-headings-background`),
-                text: getColorValue(colors, `${prefix}-headings-text`)
+                bg: getColourValue(colours, `${prefix}-headings-background`),
+                text: getColourValue(colours, `${prefix}-headings-text`)
             },
             code: {
-                bg: getColorValue(colors, `${prefix}-code-background`),
-                text: getColorValue(colors, `${prefix}-code-text`)
+                bg: getColourValue(colours, `${prefix}-code-background`),
+                text: getColourValue(colours, `${prefix}-code-text`)
             },
             buttons: [
                 {
                     state: 'normal',
-                    bg: getColorValue(colors, `${prefix}-button-background`),
-                    text: getColorValue(colors, `${prefix}-button-text`)
+                    bg: getColourValue(colours, `${prefix}-button-background`),
+                    text: getColourValue(colours, `${prefix}-button-text`)
                 },
                 {
                     state: 'hover',
-                    bg: getColorValue(colors, `${prefix}-button-background-hover`),
-                    text: getColorValue(colors, `${prefix}-button-text-hover`)
+                    bg: getColourValue(colours, `${prefix}-button-background-hover`),
+                    text: getColourValue(colours, `${prefix}-button-text-hover`)
                 },
                 {
                     state: 'selected',
-                    bg: getColorValue(colors, `${prefix}-button-background-selected`),
-                    text: getColorValue(colors, `${prefix}-button-text-selected`)
+                    bg: getColourValue(colours, `${prefix}-button-background-selected`),
+                    text: getColourValue(colours, `${prefix}-button-text-selected`)
                 }
             ],
             links: [
                 {
                     state: 'normal',
-                    bg: getColorValue(colors, `${prefix}-link-background`),
-                    text: getColorValue(colors, `${prefix}-link-text`)
+                    bg: getColourValue(colours, `${prefix}-link-background`),
+                    text: getColourValue(colours, `${prefix}-link-text`)
                 },
                 {
                     state: 'hover',
-                    bg: getColorValue(colors, `${prefix}-link-background-hover`),
-                    text: getColorValue(colors, `${prefix}-link-text-hover`)
+                    bg: getColourValue(colours, `${prefix}-link-background-hover`),
+                    text: getColourValue(colours, `${prefix}-link-text-hover`)
                 },
                 {
                     state: 'visited',
-                    bg: getColorValue(colors, `${prefix}-link-background-visited`),
-                    text: getColorValue(colors, `${prefix}-link-text-visited`)
+                    bg: getColourValue(colours, `${prefix}-link-background-visited`),
+                    text: getColourValue(colours, `${prefix}-link-text-visited`)
                 }
             ]
         };
@@ -319,18 +319,18 @@ function buildThemesFromCSS(colors) {
 
 /**
  * Build non-theme colour definition from CSS
- * @param {Object} colors - All color variables from CSS
+ * @param {Object} colours - All colour variables from CSS
  * @returns {Object} Non-theme colour definition
  */
-function buildNonThemeColorsFromCSS(colors) {
+function buildNonThemeColoursFromCSS(colours) {
     return {
         warning: {
-            bg: getColorValue(colors, 'color-warning-background'),
-            text: getColorValue(colors, 'color-warning-text')
+            bg: getColourValue(colours, 'colour-warning-background'),
+            text: getColourValue(colours, 'colour-warning-text')
         },
         error: {
-            bg: getColorValue(colors, 'color-error-background'),
-            text: getColorValue(colors, 'color-error-text')
+            bg: getColourValue(colours, 'colour-error-background'),
+            text: getColourValue(colours, 'colour-error-text')
         }
     };
 }
@@ -429,40 +429,40 @@ const defaultThemes = [
     }
 ];
 
-// Default non-theme colors (used if no CSS file provided)
-const defaultNonThemeColors = {
+// Default non-theme colours (used if no CSS file provided)
+const defaultNonThemeColours = {
     warning: { bg: [0, 100, 27], text: [0, 0, 100] },
     error: { bg: [0, 100, 35], text: [0, 0, 100] }
 };
 
 /**
- * Format HSL color for display
- * @param {Array} color - [h, s, l] values
- * @returns {string} Formatted color string
+ * Format HSL colour for display
+ * @param {Array} colour - [h, s, l] values
+ * @returns {string} Formatted colour string
  */
-function formatColor(color) {
-    return `hsl(${color[0]}, ${color[1]}%, ${color[2]}%)`;
+function formatColour(colour) {
+    return `hsl(${colour[0]}, ${colour[1]}%, ${colour[2]}%)`;
 }
 
 /**
  * Verify all theme contrasts
- * @param {string} [cssFilePath] - Optional path to CSS file. If provided, colors will be parsed from the file.
+ * @param {string} [cssFilePath] - Optional path to CSS file. If provided, colours will be parsed from the file.
  * @returns {Object} Verification results with counts
  */
 function verifyAllContrasts(cssFilePath) {
-    console.log('WCAG 2.2 Color Contrast Verification');
+    console.log('WCAG 2.2 Colour Contrast Verification');
     console.log('=' .repeat(80));
     
     let themes = defaultThemes;
-    let nonThemeColors = defaultNonThemeColors;
+    let nonThemeColours = defaultNonThemeColours;
     
     // Parse CSS file if provided
     if (cssFilePath) {
         try {
-            console.log(`Parsing colors from: ${cssFilePath}`);
-            const colors = parseCSSFile(cssFilePath);
-            themes = buildThemesFromCSS(colors);
-            nonThemeColors = buildNonThemeColorsFromCSS(colors);
+            console.log(`Parsing colours from: ${cssFilePath}`);
+            const colours = parseCSSFile(cssFilePath);
+            themes = buildThemesFromCSS(colours);
+            nonThemeColours = buildNonThemeColoursFromCSS(colours);
             console.log('✓ Successfully parsed CSS file');
         } catch (error) {
             console.warn(`⚠ Warning: Could not parse CSS file: ${error.message}`);
@@ -481,12 +481,12 @@ function verifyAllContrasts(cssFilePath) {
     let passedA = 0;
     let failed = 0;
     
-    // Check non-theme colors
-    console.log('Non-Theme Colors:');
+    // Check non-theme colours
+    console.log('Non-Theme Colours:');
     console.log('-'.repeat(80));
     
-    Object.entries(nonThemeColors).forEach(([name, colors]) => {
-        const ratio = calculateContrast(colors.bg, colors.text);
+    Object.entries(nonThemeColours).forEach(([name, colours]) => {
+        const ratio = calculateContrast(colours.bg, colours.text);
         const level = getWCAGLevel(ratio);
         totalChecks++;
         
@@ -496,7 +496,7 @@ function verifyAllContrasts(cssFilePath) {
         else failed++;
         
         console.log(`${name.padEnd(20)}: ${ratio.toFixed(2)}:1 - ${level}`);
-        console.log(`  bg: ${formatColor(colors.bg)}, text: ${formatColor(colors.text)}`);
+        console.log(`  bg: ${formatColour(colours.bg)}, text: ${formatColour(colours.text)}`);
     });
     
     console.log('');
@@ -599,13 +599,13 @@ if (typeof module !== 'undefined' && module.exports) {
         meetsRequirement,
         hslToRgb,
         relativeLuminance,
-        formatColor,
+        formatColour,
         parseHSL,
         parseCSSFile,
         resolveCSSVar,
-        getColorValue,
+        getColourValue,
         buildThemesFromCSS,
-        buildNonThemeColorsFromCSS,
+        buildNonThemeColoursFromCSS,
         verifyAllContrasts
     };
 }

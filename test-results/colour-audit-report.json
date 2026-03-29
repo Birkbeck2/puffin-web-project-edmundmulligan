@@ -309,1340 +309,166 @@
       "context": "background: white;"
     },
     {
-      "file": "styles/diagnostics/test-results.css",
-      "line": 184,
-      "type": "Named Color",
-      "value": ": white;",
-      "context": "color: white;"
-    },
-    {
-      "file": "styles/diagnostics/test-results.css",
-      "line": 189,
-      "type": "Named Color",
-      "value": ": white;",
-      "context": "color: white;"
-    },
-    {
-      "file": "styles/diagnostics/test-results.css",
-      "line": 199,
-      "type": "Named Color",
-      "value": ": white;",
-      "context": "color: white;"
-    },
-    {
       "file": "manipulated-images/image3.html",
-      "line": 39,
+      "line": 38,
       "type": "Hex Color",
       "value": "#000000",
       "context": "&lt;path d=\"m 492,42.1 89,89 17,17 -17,17 -416,416 -17,17 -89,-89 -17,-17 17,-17 416,-416 z M 109.9,492 148,530.1 386.1,292 348,253.9 Z M 492,109.9 381.9,220 420,258.1 530.1,148 Z\" style=\"stroke:#000000;stroke-opacity:1\" /&gt;"
     },
     {
       "file": "manipulated-images/image3.html",
-      "line": 40,
+      "line": 39,
       "type": "Hex Color",
       "value": "#000000",
       "context": "&lt;path class=\"sparkle-1\" d=\"m 292.10708,186.94453 -24,-56 -56,-24 56,-23.999997 24,-56 24,56 56,23.999997 -56,24 z\" style=\"stroke:#000000;stroke-opacity:1\" /&gt;"
     },
     {
       "file": "manipulated-images/image3.html",
-      "line": 41,
+      "line": 40,
       "type": "Hex Color",
       "value": "#000000",
       "context": "&lt;path class=\"sparkle-2\" d=\"m 94.206072,123.97209 31.999998,-80.000003 32,80.000003 80.00001,32 -80.00001,32 -32,80 -31.999998,-80 -79.999995,-32 z\" style=\"stroke:#000000;stroke-opacity:1\" /&gt;"
     },
     {
       "file": "manipulated-images/image3.html",
-      "line": 42,
+      "line": 41,
       "type": "Hex Color",
       "value": "#000000",
       "context": "&lt;path class=\"sparkle-3\" d=\"m 353.37735,460.00437 80,-32.00001 32,-80 32,80 80,32.00001 -80,32 -32,80 -32,-80 z\" style=\"stroke:#000000;stroke-opacity:1\" /&gt;"
     },
     {
       "file": "manipulated-images/image3.html",
-      "line": 51,
+      "line": 50,
       "type": "Hex Color",
       "value": "#ff0000",
       "context": "fill: #ff0000; /* Red sparkle */"
     },
     {
       "file": "manipulated-images/image3.html",
-      "line": 55,
+      "line": 54,
       "type": "Hex Color",
       "value": "#00ff00",
       "context": "fill: #00ff00; /* Green sparkle */"
     },
     {
       "file": "manipulated-images/image3.html",
-      "line": 59,
+      "line": 58,
       "type": "Hex Color",
       "value": "#0000ff",
       "context": "fill: #0000ff; /* Blue sparkle */"
     },
     {
       "file": "manipulated-images/image3.html",
-      "line": 78,
+      "line": 77,
       "type": "Hex Color",
       "value": "#FF1744",
       "context": "0%, 100% { fill: #FF1744; } /* Deep Red */"
     },
     {
       "file": "manipulated-images/image3.html",
-      "line": 79,
+      "line": 78,
       "type": "Hex Color",
       "value": "#00E676",
       "context": "33% { fill: #00E676; } /* Bright Green */"
     },
     {
       "file": "manipulated-images/image3.html",
-      "line": 80,
+      "line": 79,
       "type": "Hex Color",
       "value": "#FFD600",
       "context": "66% { fill: #FFD600; } /* Vibrant Yellow */"
     },
     {
       "file": "manipulated-images/image3.html",
-      "line": 84,
+      "line": 83,
       "type": "Hex Color",
       "value": "#2979FF",
       "context": "0%, 100% { fill: #2979FF; } /* Bright Blue */"
     },
     {
       "file": "manipulated-images/image3.html",
-      "line": 85,
+      "line": 84,
       "type": "Hex Color",
       "value": "#FF6D00",
       "context": "33% { fill: #FF6D00; } /* Deep Orange */"
     },
     {
       "file": "manipulated-images/image3.html",
-      "line": 86,
+      "line": 85,
       "type": "Hex Color",
       "value": "#E040FB",
       "context": "66% { fill: #E040FB; } /* Bright Purple */"
     },
     {
       "file": "manipulated-images/image3.html",
-      "line": 90,
+      "line": 89,
       "type": "Hex Color",
       "value": "#00E5FF",
       "context": "0%, 100% { fill: #00E5FF; } /* Cyan */"
     },
     {
       "file": "manipulated-images/image3.html",
-      "line": 91,
+      "line": 90,
       "type": "Hex Color",
       "value": "#FF4081",
       "context": "33% { fill: #FF4081; } /* Hot Pink */"
     },
     {
       "file": "manipulated-images/image3.html",
-      "line": 92,
+      "line": 91,
       "type": "Hex Color",
       "value": "#76FF03",
       "context": "66% { fill: #76FF03; } /* Lime Green */"
     }
   ],
-  "themeSpecificVars": [
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 358,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-normal-light-...",
-      "context": "background: var(--colour-normal-light-page-background);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 359,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-normal-light-...",
-      "context": "color: var(--colour-normal-light-page-text);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 363,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-normal-light-...",
-      "context": "background: var(--colour-normal-light-headings-background);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 364,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-normal-light-...",
-      "context": "color: var(--colour-normal-light-headings-text);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 368,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-normal-light-...",
-      "context": "background: var(--colour-normal-light-code-background);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 369,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-normal-light-...",
-      "context": "color: var(--colour-normal-light-code-text);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 373,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-normal-light-...",
-      "context": "background: var(--colour-normal-light-button-background);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 374,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-normal-light-...",
-      "context": "color: var(--colour-normal-light-button-text);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 375,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-normal-light-...",
-      "context": "border-color: var(--colour-normal-light-button-text);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 379,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-normal-light-...",
-      "context": "background: var(--colour-normal-light-button-background-hover);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 380,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-normal-light-...",
-      "context": "color: var(--colour-normal-light-button-text-hover);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 381,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-normal-light-...",
-      "context": "border-color: var(--colour-normal-light-button-text-hover);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 385,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-normal-light-...",
-      "context": "background: var(--colour-normal-light-button-background-selected);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 386,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-normal-light-...",
-      "context": "color: var(--colour-normal-light-button-text-selected);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 387,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-normal-light-...",
-      "context": "border-color: var(--colour-normal-light-button-text-selected);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 391,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-normal-light-...",
-      "context": "background: var(--colour-normal-light-button-background-disabled);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 392,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-normal-light-...",
-      "context": "color: var(--colour-normal-light-button-text-disabled);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 393,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-normal-light-...",
-      "context": "border-color: var(--colour-normal-light-button-text-disabled);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 397,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-normal-light-...",
-      "context": "background: var(--colour-normal-light-menu-background);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 398,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-normal-light-...",
-      "context": "color: var(--colour-normal-light-menu-text);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 402,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-normal-light-...",
-      "context": "background: var(--colour-normal-light-menu-background-hover);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 403,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-normal-light-...",
-      "context": "color: var(--colour-normal-light-menu-text-hover);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 407,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-normal-light-...",
-      "context": "background: var(--colour-normal-light-menu-background-visited);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 408,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-normal-light-...",
-      "context": "color: var(--colour-normal-light-menu-text-visited);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 413,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-normal-dark-...",
-      "context": "background: var(--colour-normal-dark-page-background);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 414,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-normal-dark-...",
-      "context": "color: var(--colour-normal-dark-page-text);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 418,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-normal-dark-...",
-      "context": "background: var(--colour-normal-dark-headings-background);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 419,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-normal-dark-...",
-      "context": "color: var(--colour-normal-dark-headings-text);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 423,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-normal-dark-...",
-      "context": "background: var(--colour-normal-dark-code-background);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 424,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-normal-dark-...",
-      "context": "color: var(--colour-normal-dark-code-text);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 428,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-normal-dark-...",
-      "context": "background: var(--colour-normal-dark-button-background);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 429,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-normal-dark-...",
-      "context": "color: var(--colour-normal-dark-button-text);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 430,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-normal-dark-...",
-      "context": "border-color: var(--colour-normal-dark-button-text);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 434,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-normal-dark-...",
-      "context": "background: var(--colour-normal-dark-button-background-hover);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 435,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-normal-dark-...",
-      "context": "color: var(--colour-normal-dark-button-text-hover);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 436,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-normal-dark-...",
-      "context": "border-color: var(--colour-normal-dark-button-text-hover);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 440,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-normal-dark-...",
-      "context": "background: var(--colour-normal-dark-button-background-selected);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 441,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-normal-dark-...",
-      "context": "color: var(--colour-normal-dark-button-text-selected);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 442,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-normal-dark-...",
-      "context": "border-color: var(--colour-normal-dark-button-text-selected);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 446,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-normal-dark-...",
-      "context": "background: var(--colour-normal-dark-button-background-disabled);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 447,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-normal-dark-...",
-      "context": "color: var(--colour-normal-dark-button-text-disabled);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 448,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-normal-dark-...",
-      "context": "border-color: var(--colour-normal-dark-button-text-disabled);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 452,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-normal-dark-...",
-      "context": "background: var(--colour-normal-dark-menu-background);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 453,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-normal-dark-...",
-      "context": "color: var(--colour-normal-dark-menu-text);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 457,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-normal-dark-...",
-      "context": "background: var(--colour-normal-dark-menu-background-hover);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 458,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-normal-dark-...",
-      "context": "color: var(--colour-normal-dark-menu-text-hover);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 462,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-normal-dark-...",
-      "context": "background: var(--colour-normal-dark-menu-background-visited);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 463,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-normal-dark-...",
-      "context": "color: var(--colour-normal-dark-menu-text-visited);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 468,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-subdued-light-...",
-      "context": "background: var(--colour-subdued-light-page-background);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 469,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-subdued-light-...",
-      "context": "color: var(--colour-subdued-light-page-text);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 473,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-subdued-light-...",
-      "context": "background: var(--colour-subdued-light-headings-background);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 474,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-subdued-light-...",
-      "context": "color: var(--colour-subdued-light-headings-text);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 478,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-subdued-light-...",
-      "context": "background: var(--colour-subdued-light-code-background);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 479,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-subdued-light-...",
-      "context": "color: var(--colour-subdued-light-code-text);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 483,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-subdued-light-...",
-      "context": "background: var(--colour-subdued-light-button-background);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 484,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-subdued-light-...",
-      "context": "color: var(--colour-subdued-light-button-text);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 485,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-subdued-light-...",
-      "context": "border-color: var(--colour-subdued-light-button-text);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 489,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-subdued-light-...",
-      "context": "background: var(--colour-subdued-light-button-background-hover);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 490,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-subdued-light-...",
-      "context": "color: var(--colour-subdued-light-button-text-hover);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 491,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-subdued-light-...",
-      "context": "border-color: var(--colour-subdued-light-button-text-hover);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 495,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-subdued-light-...",
-      "context": "background: var(--colour-subdued-light-button-background-selected);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 496,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-subdued-light-...",
-      "context": "color: var(--colour-subdued-light-button-text-selected);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 497,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-subdued-light-...",
-      "context": "border-color: var(--colour-subdued-light-button-text-selected);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 501,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-subdued-light-...",
-      "context": "background: var(--colour-subdued-light-button-background-disabled);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 502,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-subdued-light-...",
-      "context": "color: var(--colour-subdued-light-button-text-disabled);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 503,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-subdued-light-...",
-      "context": "border-color: var(--colour-subdued-light-button-text-disabled);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 507,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-subdued-light-...",
-      "context": "background: var(--colour-subdued-light-menu-background);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 508,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-subdued-light-...",
-      "context": "color: var(--colour-subdued-light-menu-text);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 512,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-subdued-light-...",
-      "context": "background: var(--colour-subdued-light-menu-background-hover);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 513,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-subdued-light-...",
-      "context": "color: var(--colour-subdued-light-menu-text-hover);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 517,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-subdued-light-...",
-      "context": "background: var(--colour-subdued-light-menu-background-visited);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 518,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-subdued-light-...",
-      "context": "color: var(--colour-subdued-light-menu-text-visited);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 523,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-subdued-dark-...",
-      "context": "background: var(--colour-subdued-dark-page-background);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 524,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-subdued-dark-...",
-      "context": "color: var(--colour-subdued-dark-page-text);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 528,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-subdued-dark-...",
-      "context": "background: var(--colour-subdued-dark-headings-background);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 529,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-subdued-dark-...",
-      "context": "color: var(--colour-subdued-dark-headings-text);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 533,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-subdued-dark-...",
-      "context": "background: var(--colour-subdued-dark-code-background);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 534,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-subdued-dark-...",
-      "context": "color: var(--colour-subdued-dark-code-text);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 538,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-subdued-dark-...",
-      "context": "background: var(--colour-subdued-dark-button-background);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 539,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-subdued-dark-...",
-      "context": "color: var(--colour-subdued-dark-button-text);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 540,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-subdued-dark-...",
-      "context": "border-color: var(--colour-subdued-dark-button-text);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 544,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-subdued-dark-...",
-      "context": "background: var(--colour-subdued-dark-button-background-hover);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 545,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-subdued-dark-...",
-      "context": "color: var(--colour-subdued-dark-button-text-hover);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 546,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-subdued-dark-...",
-      "context": "border-color: var(--colour-subdued-dark-button-text-hover);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 550,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-subdued-dark-...",
-      "context": "background: var(--colour-subdued-dark-button-background-selected);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 551,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-subdued-dark-...",
-      "context": "color: var(--colour-subdued-dark-button-text-selected);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 552,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-subdued-dark-...",
-      "context": "border-color: var(--colour-subdued-dark-button-text-selected);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 556,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-subdued-dark-...",
-      "context": "background: var(--colour-subdued-dark-button-background-disabled);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 557,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-subdued-dark-...",
-      "context": "color: var(--colour-subdued-dark-button-text-disabled);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 558,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-subdued-dark-...",
-      "context": "border-color: var(--colour-subdued-dark-button-text-disabled);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 562,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-subdued-dark-...",
-      "context": "background: var(--colour-subdued-dark-menu-background);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 563,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-subdued-dark-...",
-      "context": "color: var(--colour-subdued-dark-menu-text);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 567,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-subdued-dark-...",
-      "context": "background: var(--colour-subdued-dark-menu-background-hover);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 568,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-subdued-dark-...",
-      "context": "color: var(--colour-subdued-dark-menu-text-hover);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 572,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-subdued-dark-...",
-      "context": "background: var(--colour-subdued-dark-menu-background-visited);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 573,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-subdued-dark-...",
-      "context": "color: var(--colour-subdued-dark-menu-text-visited);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 578,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-vibrant-light-...",
-      "context": "background: var(--colour-vibrant-light-page-background);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 579,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-vibrant-light-...",
-      "context": "color: var(--colour-vibrant-light-page-text);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 583,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-vibrant-light-...",
-      "context": "background: var(--colour-vibrant-light-headings-background);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 584,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-vibrant-light-...",
-      "context": "color: var(--colour-vibrant-light-headings-text);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 588,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-vibrant-light-...",
-      "context": "background: var(--colour-vibrant-light-code-background);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 589,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-vibrant-light-...",
-      "context": "color: var(--colour-vibrant-light-code-text);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 593,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-vibrant-light-...",
-      "context": "background: var(--colour-vibrant-light-button-background);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 594,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-vibrant-light-...",
-      "context": "color: var(--colour-vibrant-light-button-text);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 595,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-vibrant-light-...",
-      "context": "border-color: var(--colour-vibrant-light-button-text);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 599,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-vibrant-light-...",
-      "context": "background: var(--colour-vibrant-light-button-background-hover);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 600,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-vibrant-light-...",
-      "context": "color: var(--colour-vibrant-light-button-text-hover);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 601,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-vibrant-light-...",
-      "context": "border-color: var(--colour-vibrant-light-button-text-hover);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 605,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-vibrant-light-...",
-      "context": "background: var(--colour-vibrant-light-button-background-selected);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 606,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-vibrant-light-...",
-      "context": "color: var(--colour-vibrant-light-button-text-selected);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 607,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-vibrant-light-...",
-      "context": "border-color: var(--colour-vibrant-light-button-text-selected);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 611,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-vibrant-light-...",
-      "context": "background: var(--colour-vibrant-light-button-background-disabled);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 612,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-vibrant-light-...",
-      "context": "color: var(--colour-vibrant-light-button-text-disabled);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 613,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-vibrant-light-...",
-      "context": "border-color: var(--colour-vibrant-light-button-text-disabled);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 617,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-vibrant-light-...",
-      "context": "background: var(--colour-vibrant-light-menu-background);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 618,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-vibrant-light-...",
-      "context": "color: var(--colour-vibrant-light-menu-text);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 622,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-vibrant-light-...",
-      "context": "background: var(--colour-vibrant-light-menu-background-hover);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 623,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-vibrant-light-...",
-      "context": "color: var(--colour-vibrant-light-menu-text-hover);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 627,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-vibrant-light-...",
-      "context": "background: var(--colour-vibrant-light-menu-background-visited);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 628,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-vibrant-light-...",
-      "context": "color: var(--colour-vibrant-light-menu-text-visited);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 633,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-vibrant-dark-...",
-      "context": "background: var(--colour-vibrant-dark-page-background);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 634,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-vibrant-dark-...",
-      "context": "color: var(--colour-vibrant-dark-page-text);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 638,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-vibrant-dark-...",
-      "context": "background: var(--colour-vibrant-dark-headings-background);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 639,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-vibrant-dark-...",
-      "context": "color: var(--colour-vibrant-dark-headings-text);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 643,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-vibrant-dark-...",
-      "context": "background: var(--colour-vibrant-dark-code-background);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 644,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-vibrant-dark-...",
-      "context": "color: var(--colour-vibrant-dark-code-text);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 648,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-vibrant-dark-...",
-      "context": "background: var(--colour-vibrant-dark-button-background);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 649,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-vibrant-dark-...",
-      "context": "color: var(--colour-vibrant-dark-button-text);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 650,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-vibrant-dark-...",
-      "context": "border-color: var(--colour-vibrant-dark-button-text);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 654,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-vibrant-dark-...",
-      "context": "background: var(--colour-vibrant-dark-button-background-hover);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 655,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-vibrant-dark-...",
-      "context": "color: var(--colour-vibrant-dark-button-text-hover);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 656,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-vibrant-dark-...",
-      "context": "border-color: var(--colour-vibrant-dark-button-text-hover);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 660,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-vibrant-dark-...",
-      "context": "background: var(--colour-vibrant-dark-button-background-selected);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 661,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-vibrant-dark-...",
-      "context": "color: var(--colour-vibrant-dark-button-text-selected);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 662,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-vibrant-dark-...",
-      "context": "border-color: var(--colour-vibrant-dark-button-text-selected);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 666,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-vibrant-dark-...",
-      "context": "background: var(--colour-vibrant-dark-button-background-disabled);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 667,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-vibrant-dark-...",
-      "context": "color: var(--colour-vibrant-dark-button-text-disabled);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 668,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-vibrant-dark-...",
-      "context": "border-color: var(--colour-vibrant-dark-button-text-disabled);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 672,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-vibrant-dark-...",
-      "context": "background: var(--colour-vibrant-dark-menu-background);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 673,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-vibrant-dark-...",
-      "context": "color: var(--colour-vibrant-dark-menu-text);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 677,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-vibrant-dark-...",
-      "context": "background: var(--colour-vibrant-dark-menu-background-hover);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 678,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-vibrant-dark-...",
-      "context": "color: var(--colour-vibrant-dark-menu-text-hover);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 682,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-vibrant-dark-...",
-      "context": "background: var(--colour-vibrant-dark-menu-background-visited);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    },
-    {
-      "file": "styles/diagnostics/colourPalette.css",
-      "line": 683,
-      "type": "Theme-Specific Variable",
-      "value": "--colour-vibrant-dark-...",
-      "context": "color: var(--colour-vibrant-dark-menu-text-visited);",
-      "suggestion": "Use generic variable from themeSwitcher instead"
-    }
-  ],
+  "themeSpecificVars": [],
   "missingThemeSystem": [
     {
       "file": "manipulated-images/image1.html",
       "missing": {
-        "globals": false,
+        "globals": true,
         "themeSwitcher": true
       }
     },
     {
       "file": "manipulated-images/image2.html",
       "missing": {
-        "globals": false,
+        "globals": true,
         "themeSwitcher": true
       }
     },
     {
       "file": "manipulated-images/image3.html",
       "missing": {
-        "globals": false,
+        "globals": true,
         "themeSwitcher": true
       }
     },
     {
       "file": "manipulated-images/image4.html",
       "missing": {
-        "globals": false,
+        "globals": true,
         "themeSwitcher": true
       }
     },
     {
       "file": "manipulated-images/image5.html",
       "missing": {
-        "globals": false,
+        "globals": true,
         "themeSwitcher": true
       }
     },
     {
       "file": "manipulated-images/image6.html",
       "missing": {
-        "globals": false,
+        "globals": true,
         "themeSwitcher": true
       }
     },
     {
       "file": "manipulated-images/index.html",
       "missing": {
-        "globals": false,
+        "globals": true,
         "themeSwitcher": true
       }
     }

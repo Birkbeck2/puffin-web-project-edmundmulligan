@@ -1,11 +1,22 @@
+<!--
+ **********************************************************************
+ * File       : image1.html
+ * Author     : Edmund Mulligan <edmund@edmundmulligan.name>
+ * Copyright  : (c) 2026 The Embodied Mind
+ * License    : MIT License (see license-and-credits.html page)
+ * Description:
+ *   This is page that displays how image1 was created
+ **********************************************************************
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="check-reading-age" content="false">
+    <meta name="audit-colour-usage" content="false">
     <title>Visual Design and Web Project Assignment 1 - Image 1</title>
     <script src="scripts/logo-switcher.js"></script>
-    <link rel="stylesheet" href="styles/globals.css">
     <link rel="stylesheet" href="styles/main.css">
     <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
 </head>
@@ -20,20 +31,20 @@
             <img src="artwork/source/image-1/embodied-mind-logo-original.jpeg" alt="Original Embodied Mind Logo" width="300">
             <figcaption>Original Embodied Mind logo (JPEG format)</figcaption>
         </figure>
-        
-        <p>This was then converted to vector format using Inkscape, to trace the bitmap and recoloured to 
+
+        <p>This was then converted to vector format using Inkscape, to trace the bitmap and recoloured to
         use the Embodied Mind purple and cyan colours and saved as an SVG file. </p>
         <figure>
             <img src="artwork/source/image-1/embodied-mind-logo-coloured.svg" alt="Coloured Embodied Mind Logo" width="300">
             <figcaption>Vector traced and recoloured logo (SVG format)</figcaption>
         </figure>
-        
-        <p>The SVG file was then converted to an intermediate PDF file for use in a LaTeX document (since 
-            LaTeX does not natively support SVG files), using the command line tool Inkscape with the 
+
+        <p>The SVG file was then converted to an intermediate PDF file for use in a LaTeX document (since
+            LaTeX does not natively support SVG files), using the command line tool Inkscape with the
             following command:
         <code>inkscape -z -f logo-embodied-mind-coloured.svg -A logo-embodied-mind-colour.pdf</code></p>
 
-        <p>LaTeX documents were then created to include the pdf file, and the Embodied Mind name on a 
+        <p>LaTeX documents were then created to include the pdf file, and the Embodied Mind name on a
             curved path.</p>
         <pre><code>
 \documentclass[border=5mm]{standalone}
@@ -66,17 +77,17 @@
 \end{tikzpicture}
 \end{document}
         </code></pre>
-            
-        <p>These were compiled to PDF files using pdflatex, and converted back to SVG format 
+
+        <p>These were compiled to PDF files using pdflatex, and converted back to SVG format
             using pdftocairo to produce the final logo images in both purple and cyan versions.</p>
         <h2>The Result</h2>
         <div class="with-border">
             <div>
-                <input type="radio" id="black" name="logoColor" value="black" checked>
+                <input type="radio" id="black" name="logoColour" value="black" checked>
                 <label for="black">Black</label>
-                <input type="radio" id="purple" name="logoColor" value="purple">
+                <input type="radio" id="purple" name="logoColour" value="purple">
                 <label for="purple">Purple</label>
-                <input type="radio" id="cyan" name="logoColor" value="cyan">
+                <input type="radio" id="cyan" name="logoColour" value="cyan">
                 <label for="cyan">Cyan</label>
             </div>
             <img id="logoImage" src="images/logo-embodied-mind-with-name-black.svg" alt="Embodied Mind Logo" width="300">

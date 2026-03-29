@@ -1,4 +1,14 @@
-// Favicon animation controller - loads SVG and toggles animation class
+/*
+ **********************************************************************
+ * File       : favicon-animation.js
+ * Author     : Edmund Mulligan <edmund@edmundmulligan.name>
+ * Copyright  : (c) 2026 The Embodied Mind
+ * License    : MIT License (see license-and-credits.html page)
+ * Description:
+ *   Favicon animation controller - loads SVG and toggles animation class
+ **********************************************************************
+ */
+
 document.addEventListener('DOMContentLoaded', async () => {
     const faviconContainer = document.getElementById('faviconContainer');
     const animatedRadios = document.querySelectorAll('input[name="animated"]');

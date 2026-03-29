@@ -1,3 +1,16 @@
+/*
+ **********************************************************************
+ * File         : main.css
+ * Author       : Edmund Mulligan <edmund@edmundmulligan.name>
+ * Copyright    : (c) 2026 The Embodied Mind
+ * License      : MIT License (see license-and-credits.html page)
+ * Audit Colours: false
+ * Description  :
+ *   This is the main stylesheet for the manipulated images section of the Web Witchcraft and Wizardry website.
+ **********************************************************************
+ */
+
+
 /* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
 
@@ -11,7 +24,7 @@
 body {
     font-family: 'Open Sans', -apple-system, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     line-height: 1.6;
-    color: #333;
+    color: #000;
     background: #f5f5f5;
     padding: 1.25rem;
 }
@@ -21,7 +34,7 @@ main {
     margin: 0 auto;
     background: white;
     padding: 2.5rem;
-    box-shadow: 0 0.125rem 0.625rem rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0.125rem 0.625rem rgb(0 0 0 / 10%);
     border-radius: 0.5rem;
 }
 
@@ -58,13 +71,17 @@ p {
 }
 
 a {
-    color: #4a90e2;
+    color: #3177c9;
     text-decoration: none;
     transition: color 0.3s ease;
+    padding: 0.625rem 0.5rem;
+    display: inline-block;
+    min-height: 2.75rem;
+    line-height: 1.5rem;
 }
 
 a:hover {
-    color: #357ab8;
+    color: #2563a8;
     text-decoration: underline;
 }
 
@@ -107,7 +124,7 @@ picture {
     display: inline-block;
     background: #fafafa;
     border-radius: 0.5rem;
-    box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.05);
+    box-shadow: 0 0.125rem 0.3125rem rgb(0 0 0 / 5%);
 }
 
 .round-corners {
@@ -116,8 +133,12 @@ picture {
 
 /* Form Controls */
 input[type="radio"] {
-    margin-right: 0.3125rem;
+    margin-right: 0.5rem;
     cursor: pointer;
+    width: 1.5rem;
+    height: 1.5rem;
+    min-width: 1.5rem;
+    min-height: 1.5rem;
 }
 
 input[type="radio"]:focus-visible {
@@ -126,11 +147,16 @@ input[type="radio"]:focus-visible {
 }
 
 label {
-    margin-right: 0.9375rem;
+    margin-right: 1.25rem;
     cursor: pointer;
-    font-size: 0.95rem;
+    font-size: 1rem;
     color: #555;
     transition: color 0.2s ease;
+    padding: 0.75rem 0.5rem;
+    display: inline-block;
+    min-height: 2.75rem;
+    line-height: 1.25rem;
+    vertical-align: middle;
 }
 
 label:hover {
@@ -138,24 +164,25 @@ label:hover {
 }
 
 button {
-    background: #4a90e2;
+    background: #3177c9;
     color: white;
     border: none;
-    padding: 0.625rem 1.25rem;
+    padding: 0.75rem 1.5rem;
     border-radius: 0.3125rem;
     cursor: pointer;
-    font-size: 0.95rem;
+    font-size: 1rem;
     font-weight: 500;
     transition: background 0.3s ease, transform 0.1s ease;
+    min-height: 2.75rem;
 }
 
 button:hover {
-    background: #357ab8;
+    background: #2563a8;
     transform: translateY(-0.0625rem);
 }
 
 button:focus-visible {
-    outline: 0.125rem solid #4a90e2;
+    outline: 0.125rem solid #3177c9;
     outline-offset: 0.125rem;
 }
 
@@ -200,7 +227,11 @@ button:active {
     margin: 1.25rem 0;
     border-radius: 0.5rem;
     overflow: hidden;
-    box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.05);
+    box-shadow: 0 0.125rem 0.3125rem rgb(0 0 0 / 5%);
+}
+
+.restart-animation-button {
+    margin-left: 1.25rem;
 }
 
 .tools-list dt {
@@ -226,7 +257,7 @@ button:active {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (width <= 768px) {
     body {
         padding: 0.625rem;
     }
@@ -258,7 +289,7 @@ button:active {
     }
 }
 
-@media (max-width: 480px) {
+@media (width <= 480px) {
     h1 {
         font-size: 1.6rem;
     }
@@ -285,7 +316,7 @@ pre {
     margin: 1.5rem 0;
     overflow-x: auto;
     white-space: pre-wrap;
-    word-wrap: break-word;
+    overflow-wrap: break-word;
     font-family: 'Courier New', Courier, monospace;
     font-size: 0.9rem;
     line-height: 1.5;

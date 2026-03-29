@@ -126,8 +126,8 @@ function parseHSL(hslString) {
  * @returns {Object<string, {hsl: string, h: number, s: number, l: number, rgb: number[]}>}
  * Extracted colour map keyed by CSS variable name.
  */
-function extractColors(cssContent) {
-    const colors = {};
+function extractColours(cssContent) {
+    const colours = {};
     const lines = cssContent.split('\n');
     
     for (const line of lines) {
@@ -137,7 +137,7 @@ function extractColors(cssContent) {
             const hslValue = match[2];
             const parsed = parseHSL(hslValue);
             if (parsed) {
-                colors[varName] = {
+                colours[varName] = {
                     hsl: hslValue,
                     h: parsed.h,
                     s: parsed.s,
@@ -148,7 +148,7 @@ function extractColors(cssContent) {
         }
     }
     
-    return colors;
+    return colours;
 }
 
 /**
@@ -160,7 +160,7 @@ function extractColors(cssContent) {
  * @param {string} htmlContent - Diagnostic HTML content to scan.
  * @returns {Array<{bg: string, fg: string}>} Unique colour-variable pairs.
  */
-function extractColorPairs(htmlContent) {
+function extractColourPairs(htmlContent) {
     const pairs = [];
     const regex = /data-bg-var="(--colour-[^"]+)"\s+data-fg-var="(--colour-[^"]+)"/g;
     let match;
@@ -202,14 +202,14 @@ function main() {
     const cssContent = fs.readFileSync(cssPath, 'utf8');
     const htmlContent = fs.readFileSync(htmlPath, 'utf8');
     
-    const colors = extractColors(cssContent);
-    const pairs = extractColorPairs(htmlContent);
+    const colours = extractColours(cssContent);
+    const pairs = extractColourPairs(htmlContent);
     
     console.log('\n' + '='.repeat(100));
-    console.log('COMPREHENSIVE COLOR CONTRAST VERIFICATION');
+    console.log('COMPREHENSIVE COLOUR CONTRAST VERIFICATION');
     console.log('='.repeat(100) + '\n');
     
-    console.log(`Total unique color variables: ${Object.keys(colors).length}`);
+    console.log(`Total unique colour variables: ${Object.keys(colours).length}`);
     console.log(`Total colour pair to test: ${pairs.length}\n`);
     
     let passing = 0;
@@ -218,15 +218,15 @@ function main() {
     const results = [];
     
     for (const pair of pairs) {
-        const bgColor = colors[pair.bg];
-        const fgColor = colors[pair.fg];
+        const bgColour = colours[pair.bg];
+        const fgColour = colours[pair.fg];
         
-        if (!bgColor || !fgColor) {
+        if (!bgColour || !fgColour) {
             console.warn(`Warning: Missing colour definition for ${pair.bg} or ${pair.fg}`);
             continue;
         }
         
-        const ratio = getContrastRatio(bgColor.rgb, fgColor.rgb);
+        const ratio = getContrastRatio(bgColour.rgb, fgColour.rgb);
         const wcagAAA = ratio >= 7.0;
         const wcagAA = ratio >= 4.5;
         
@@ -248,8 +248,8 @@ function main() {
         
         results.push({
             pair,
-            bgColor,
-            fgColor,
+            bgColour,
+            fgColour,
             ratio,
             status,
             level
@@ -266,13 +266,13 @@ function main() {
     
     // Display results
     for (const result of results) {
-        const { pair, bgColor, fgColor, ratio, status, level } = result;
+        const { pair, bgColour, fgColour, ratio, status, level } = result;
         
         console.log(`${status} [${level}] ${ratio.toFixed(2)}:1`);
         console.log(`  Background: ${pair.bg}`);
-        console.log(`    Value: ${bgColor.hsl} = rgb(${bgColor.rgb.join(', ')})`);
+        console.log(`    Value: ${bgColour.hsl} = rgb(${bgColour.rgb.join(', ')})`);
         console.log(`  Foreground: ${pair.fg}`);
-        console.log(`    Value: ${fgColor.hsl} = rgb(${fgColor.rgb.join(', ')})`);
+        console.log(`    Value: ${fgColour.hsl} = rgb(${fgColour.rgb.join(', ')})`);
         console.log('');
     }
     

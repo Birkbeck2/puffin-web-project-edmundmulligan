@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-Generate LaTeX color definitions from CSS custom properties
-Reads HSL colors from CSS and converts them to HSB for LaTeX
+Generate LaTeX colour definitions from CSS custom properties
+Reads HSL colours from CSS and converts them to HSB for LaTeX
 Author: Edmund Mulligan <edmund@edmundmulligan.name>
 License: MIT
 """
@@ -14,7 +14,7 @@ from pathlib import Path
 
 def hsl_to_hsb(h, s, l):
     """
-    Convert HSL to HSB (HSV) color space
+    Convert HSL to HSB (HSV) colour space
     
     Args:
         h: Hue (0-360 degrees)
@@ -42,23 +42,23 @@ def hsl_to_hsb(h, s, l):
     return (h_normalized, s_hsb, b)
 
 
-def parse_css_colors(css_file_path):
+def parse_css_colours(css_file_path):
     """
-    Parse CSS file and extract color definitions
+    Parse CSS file and extract colour definitions
     
     Args:
         css_file_path: Path to CSS file
     
     Returns:
-        dict: Dictionary mapping color names to HSL values
+        dict: Dictionary mapping colour names to HSL values
     """
-    colors = {}
+    colours = {}
     
     with open(css_file_path, 'r', encoding='utf-8') as f:
         content = f.read()
     
     # Match CSS custom properties with HSL values
-    # Pattern: --color-name: hsl(h, s%, l%);
+    # Pattern: --colouir-name: hsl(h, s%, l%);
     pattern = r'--([a-z0-9-]+):\s*hsl\((\d+(?:\.\d+)?),\s*(\d+(?:\.\d+)?)%,\s*(\d+(?:\.\d+)?)%\)'
     
     matches = re.finditer(pattern, content)
@@ -68,36 +68,36 @@ def parse_css_colors(css_file_path):
         h = float(match.group(2))
         s = float(match.group(3))
         l = float(match.group(4))
-        colors[name] = (h, s, l)
+        colours[name] = (h, s, l)
     
-    return colors
+    return colours
 
 
-def generate_latex_colors(colors):
+def generate_latex_colours(colours):
     """
-    Generate LaTeX color definitions from HSL colors
+    Generate LaTeX colour definitions from HSL colours
     
     Args:
-        colors: Dictionary mapping color names to HSL tuples
+        colours: Dictionary mapping colour names to HSL tuples
     
     Returns:
-        str: LaTeX color definitions
+        str: LaTeX colour definitions
     """
     output = []
     output.append('%' * 75)
     output.append('% File: colours.tex')
     output.append('% Author: Edmund Mulligan <edmund@edmundmulligan.name>')
     output.append('% Auto-generated from CSS - DO NOT EDIT MANUALLY')
-    output.append('% Run generate-colors-from-css.py to regenerate')
-    output.append('% Description: Contains color definitions converted from CSS HSL to LaTeX HSB')
+    output.append('% Run generate-colours-from-css.py to regenerate')
+    output.append('% Description: Contains colour definitions converted from CSS HSL to LaTeX HSB')
     output.append('%' * 75)
     output.append('')
     
-    for name, (h, s, l) in sorted(colors.items()):
+    for name, (h, s, l) in sorted(colours.items()):
         # Convert HSL to HSB
         h_hsb, s_hsb, b = hsl_to_hsb(h, s, l)
         
-        # Replace hyphens with underscores for LaTeX color names
+        # Replace hyphens with underscores for LaTeX colour names
         latex_name = name.replace('-', '_')
         
         # Format with 3 decimal places
@@ -111,8 +111,8 @@ def generate_latex_colors(colors):
 def main():
     """Main execution function"""
     if len(sys.argv) < 2:
-        print('Usage: generate-colors-from-css.py <css-file> [output-file]')
-        print('Example: generate-colors-from-css.py ../../styles/main.css ../common/colours.tex')
+        print('Usage: generate-colours-from-css.py <css-file> [output-file]')
+        print('Example: generate-colours-from-css.py ../../styles/main.css ../common/colours.tex')
         sys.exit(1)
     
     css_file = sys.argv[1]
@@ -123,26 +123,26 @@ def main():
         print(f'Error: CSS file not found: {css_file}')
         sys.exit(1)
     
-    # Parse colors from CSS
-    print(f'Reading colors from {css_file}...')
-    colors = parse_css_colors(css_file)
+    # Parse colours from CSS
+    print(f'Reading colours from {css_file}...')
+    colours = parse_css_colours(css_file)
     
-    if not colors:
-        print('Warning: No HSL colors found in CSS file')
+    if not colours:
+        print('Warning: No HSL colours found in CSS file')
         print('Make sure your CSS uses custom properties with HSL format:')
-        print('  --color-name: hsl(180, 100%, 50%);')
+        print('  --colour-name: hsl(180, 100%, 50%);')
     else:
-        print(f'Found {len(colors)} color definitions')
+        print(f'Found {len(colours)} colour definitions')
     
-    # Generate LaTeX color definitions
-    latex_output = generate_latex_colors(colors)
+    # Generate LaTeX colour definitions
+    latex_output = generate_latex_colours(colours)
     
     # Write to output file
     os.makedirs(os.path.dirname(output_file), exist_ok=True)
     with open(output_file, 'w', encoding='utf-8') as f:
         f.write(latex_output)
     
-    print(f'Generated LaTeX colors in {output_file}')
+    print(f'Generated LaTeX colours in {output_file}')
     print('Done!')
 
 

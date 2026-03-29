@@ -22,6 +22,8 @@
      * @remarks Preconditions:
      * - `injectCommonCode.js` must dispatch the `headerInjected` and `footerInjected` events.
      * - The generated markup must contain the expected minimal/full wrappers and toggle buttons.
+     * - Animation classes and transitions are defined in `styles/components/header-and-footer.css`.
+     * - Animation timing variables are defined in `styles/definitions/animation.css` (`--toggle-duration` and `--toggle-timing-function`).
      */
     class HeaderFooterToggler {
         /**
@@ -50,11 +52,19 @@
             // Load saved state
             const savedState = localStorage.getItem(this.HEADER_STATE_KEY);
             if (savedState === 'expanded') {
-                headerMinimal.style.display = 'none';
-                headerFull.style.display = 'grid';
+                headerMinimal.classList.remove('visible');
+                headerMinimal.classList.add('hidden');
+                headerFull.classList.remove('hidden');
+                headerFull.classList.add('visible');
             } else if (savedState === 'compact') {
-                headerMinimal.style.display = 'block';
-                headerFull.style.display = 'none';
+                headerMinimal.classList.remove('hidden');
+                headerMinimal.classList.add('visible');
+                headerFull.classList.remove('visible');
+                headerFull.classList.add('hidden');
+            } else {
+                // Default state
+                headerMinimal.classList.add('visible');
+                headerFull.classList.add('hidden');
             }
         
             headerButtons.forEach(button => {
@@ -63,13 +73,17 @@
                 
                     if (icon.classList.contains('fa-chevron-down')) {
                         // Down arrow clicked - show full header
-                        headerMinimal.style.display = 'none';
-                        headerFull.style.display = 'grid';
+                        headerMinimal.classList.remove('visible');
+                        headerMinimal.classList.add('hidden');
+                        headerFull.classList.remove('hidden');
+                        headerFull.classList.add('visible');
                         localStorage.setItem(this.HEADER_STATE_KEY, 'expanded');
                     } else {
                         // Up arrow clicked - show minimal header
-                        headerMinimal.style.display = 'block';
-                        headerFull.style.display = 'none';
+                        headerMinimal.classList.remove('hidden');
+                        headerMinimal.classList.add('visible');
+                        headerFull.classList.remove('visible');
+                        headerFull.classList.add('hidden');
                         localStorage.setItem(this.HEADER_STATE_KEY, 'compact');
                     }
                 });
@@ -92,11 +106,19 @@
             // Load saved state
             const savedState = localStorage.getItem(this.FOOTER_STATE_KEY);
             if (savedState === 'expanded') {
-                footerMinimal.style.display = 'none';
-                footerFull.style.display = 'flex';
+                footerMinimal.classList.remove('visible');
+                footerMinimal.classList.add('hidden');
+                footerFull.classList.remove('hidden');
+                footerFull.classList.add('visible');
             } else if (savedState === 'compact') {
-                footerMinimal.style.display = 'flex';
-                footerFull.style.display = 'none';
+                footerMinimal.classList.remove('hidden');
+                footerMinimal.classList.add('visible');
+                footerFull.classList.remove('visible');
+                footerFull.classList.add('hidden');
+            } else {
+                // Default state
+                footerMinimal.classList.add('visible');
+                footerFull.classList.add('hidden');
             }
         
             footerButtons.forEach(button => {
@@ -105,13 +127,17 @@
                 
                     if (icon.classList.contains('fa-chevron-up')) {
                         // Up arrow clicked - show full footer
-                        footerMinimal.style.display = 'none';
-                        footerFull.style.display = 'flex';
+                        footerMinimal.classList.remove('visible');
+                        footerMinimal.classList.add('hidden');
+                        footerFull.classList.remove('hidden');
+                        footerFull.classList.add('visible');
                         localStorage.setItem(this.FOOTER_STATE_KEY, 'expanded');
                     } else {
                         // Down arrow clicked - show minimal footer
-                        footerMinimal.style.display = 'flex';
-                        footerFull.style.display = 'none';
+                        footerMinimal.classList.remove('hidden');
+                        footerMinimal.classList.add('visible');
+                        footerFull.classList.remove('visible');
+                        footerFull.classList.add('hidden');
                         localStorage.setItem(this.FOOTER_STATE_KEY, 'compact');
                     }
                 });

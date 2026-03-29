@@ -246,7 +246,7 @@ async function populateLessonsNav() {
         nav.id = 'lessons-sidebar';
         
         // Create heading
-        const heading = document.createElement('h3');
+        const heading = document.createElement('h2');
         heading.textContent = 'Lessons';
         nav.appendChild(heading);
         

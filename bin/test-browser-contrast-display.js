@@ -29,7 +29,7 @@ const { JSDOM } = require('jsdom');
  */
 async function testColourPalette() {
     console.log('\n' + '='.repeat(100));
-    console.log('BROWSER CONTEXT COLOR CONTRAST VERIFICATION');
+    console.log('BROWSER CONTEXT COLOUR CONTRAST VERIFICATION');
     console.log('Testing colourPalette.html with actual JavaScript parsing');
     console.log('='.repeat(100) + '\n');
 

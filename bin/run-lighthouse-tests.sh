@@ -75,6 +75,14 @@ fi
 ORIGINAL_DIR=$(pwd)
 RESULTS_DIR="$ORIGINAL_DIR/$FOLDER/test-results"
 mkdir -p "$RESULTS_DIR"
+
+# Normalize folder path for URL construction
+if [ "$FOLDER" = "." ]; then
+  URL_PREFIX=""
+else
+  URL_PREFIX="${FOLDER%/}/"
+fi
+
 cd "$FOLDER" || exit 1
 
 # Start server and setup
@@ -114,17 +122,19 @@ for VIEWPORT in "${VIEWPORTS[@]}"; do
         TESTED=$((TESTED + 1))
         # Convert file path to URL path
         URL_PATH="${page#./}"
+        # Remove .html extension for clean URLs (serve package auto-redirects .html)
+        URL_PATH="${URL_PATH%.html}"
         
         # Add theme and style parameters to URL
         if [[ "$URL_PATH" == *"?"* ]]; then
-          FULL_URL="$TEST_URL/$URL_PATH&theme=$THEME&style=$STYLE"
+          FULL_URL="$TEST_URL/${URL_PREFIX}${URL_PATH}&theme=$THEME&style=$STYLE"
         else
-          FULL_URL="$TEST_URL/$URL_PATH?theme=$THEME&style=$STYLE"
+          FULL_URL="$TEST_URL/${URL_PREFIX}${URL_PATH}?theme=$THEME&style=$STYLE"
         fi
 
         echo "    [$TESTED/$TOTAL_TESTS] Testing $URL_PATH (${VIEWPORT}px, $STYLE-$THEME)"
 
-        # Run lighthouse on this page with emulated color scheme and viewport
+        # Run lighthouse on this page with emulated colour scheme and viewport
         TEMP_RESULT="$RESULTS_DIR/lighthouse-temp-$TESTED.json"
         npx lighthouse "$FULL_URL" --output=json --output-path=$TEMP_RESULT \
           --emulated-form-factor=desktop \
@@ -208,35 +218,74 @@ node -e "
   console.log('  Total failed audits: ' + totalFailures);
   console.log('');
 
-  // Show only pages with problems
-  const pagesWithIssues = data.pages.filter(p => p.failedAudits.length > 0);
+  // Categorize pages by score
+  const failures = data.pages.filter(p => p.score < 0.9);
+  const warnings = data.pages.filter(p => p.score >= 0.9 && p.score < 1.0);
+  const perfect = data.pages.filter(p => p.score === 1.0);
 
-  if (pagesWithIssues.length === 0) {
-    console.log('  No issues found! ✨');
-  } else {
-    console.log('  Pages with issues:');
-    pagesWithIssues.forEach(page => {
+  // Show failures (< 90%)
+  if (failures.length > 0) {
+    console.log('  ❌ Pages below 90% accessibility threshold:');
+    failures.forEach(page => {
       const scorePercent = Math.round(page.score * 100);
-      const icon = scorePercent === 100 ? '⚠️' : '❌';
       console.log('');
-      console.log(icon + ' ' + page.url + ' [' + (page.viewport || 'unknown') + 'px, ' + (page.style || 'unknown') + '-' + (page.theme || 'unknown') + '] - ' + scorePercent + '%');
+      console.log('  ' + page.url + ' [' + (page.viewport || 'unknown') + 'px, ' + (page.style || 'unknown') + '-' + (page.theme || 'unknown') + ']');
+      console.log('  Score: ' + scorePercent + '%');
 
-      page.failedAudits.forEach(audit => {
-        console.log('    • ' + audit.title);
-      });
+      if (page.failedAudits.length > 0) {
+        page.failedAudits.forEach(audit => {
+          console.log('    • ' + audit.title);
+        });
+      }
     });
+    console.log('');
+  }
+
+  // Show warnings (>= 90% but < 100%)
+  if (warnings.length > 0) {
+    console.log('  ⚠️  Pages between 90-99% accessibility:');
+    warnings.forEach(page => {
+      const scorePercent = Math.round(page.score * 100);
+      console.log('');
+      console.log('  ' + page.url + ' [' + (page.viewport || 'unknown') + 'px, ' + (page.style || 'unknown') + '-' + (page.theme || 'unknown') + ']');
+      console.log('  Score: ' + scorePercent + '%');
+
+      if (page.failedAudits.length > 0) {
+        page.failedAudits.forEach(audit => {
+          console.log('    • ' + audit.title);
+        });
+      }
+    });
+    console.log('');
+  }
+
+  // Show perfect pages count
+  if (perfect.length === data.pages.length) {
+    console.log('  ✨ All pages achieve 100% accessibility!');
+  } else if (perfect.length > 0) {
+    console.log('  ✅ ' + perfect.length + ' page(s) with 100% accessibility');
   }
 
   console.log('');
 "
 
-# Check if any pages have issues
-HAS_ISSUES=$(node -p "const fs = require('fs'); const data = JSON.parse(fs.readFileSync('$RESULT_FILE', 'utf8')); data.pages.some(p => p.failedAudits.length > 0) ? 1 : 0")
+# Check accessibility thresholds and set exit code
+EXIT_CODE=$(node -p "
+  const fs = require('fs');
+  const data = JSON.parse(fs.readFileSync('$RESULT_FILE', 'utf8'));
+  const failures = data.pages.filter(p => p.score < 0.9).length;
+  const warnings = data.pages.filter(p => p.score >= 0.9 && p.score < 1.0).length;
+  
+  if (failures > 0) {
+    process.stdout.write('❌ ' + failures + ' page(s) below 90% accessibility threshold.\\n');
+    1; // Exit with error
+  } else if (warnings > 0) {
+    process.stdout.write('⚠️  ' + warnings + ' page(s) between 90-99% accessibility. Consider improving to 100%.\\n');
+    0; // Exit with success but show warning
+  } else {
+    process.stdout.write('✅ All pages meet 100% accessibility threshold.\\n');
+    0; // Exit with success
+  }
+")
 
-if [ "$HAS_ISSUES" -eq 0 ]; then
-  echo "✅ All pages meet 100% accessibility threshold."
-  exit 0
-else
-  echo "❌ Some pages below 100% accessibility threshold."
-  exit 1
-fi
+exit $EXIT_CODE

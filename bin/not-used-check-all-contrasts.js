@@ -7,8 +7,8 @@
  * Copyright  : (c) 2026 The Embodied Mind
  * License    : MIT License
  * Description:
- *   Utility to check and display all color contrast ratios
- *   between all theme colors for WCAG compliance verification
+ *   Utility to check and display all colour contrast ratios
+ *   between all theme colours for WCAG compliance verification
  **********************************************************************
 */
 

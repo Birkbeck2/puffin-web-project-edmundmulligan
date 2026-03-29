@@ -1,3 +1,14 @@
+/*
+ **********************************************************************
+ * File       : animated-web-switcher.js
+ * Author     : Edmund Mulligan <edmund@edmundmulligan.name>
+ * Copyright  : (c) 2026 The Embodied Mind
+ * License    : MIT License (see license-and-credits.html page)
+ * Description:
+ *   Handles switching between different animation formats (MP4, WebP, GIF)
+ **********************************************************************
+ */
+
 function switchAnimatedWeb(restoreScroll = null) {
     const selectedFormat = document.querySelector('input[name="animation-format"]:checked').value;
     const animatedWeb = document.getElementById('animated-web');
@@ -28,7 +39,6 @@ function switchAnimatedWeb(restoreScroll = null) {
 
 function restartAnimation() {
     const selectedFormat = document.querySelector('input[name="animation-format"]:checked').value;
-    const animatedWeb = document.getElementById('animated-web');
     
     if (selectedFormat === 'mp4') {
         // For MP4, find the video element and restart it

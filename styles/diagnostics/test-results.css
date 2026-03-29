@@ -355,7 +355,8 @@ main {
     font-size: 1.1rem;
 }
 
-.error-detail {
+.error-detail,
+.warning-detail {
     font-family: 'Source Code Pro', monospace;
     font-size: 0.9rem;
     line-height: 1.5;
