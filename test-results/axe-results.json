@@ -6,7 +6,7 @@
       "theme": "light",
       "style": "normal",
       "viewport": "900",
-      "count": 41
+      "count": 40
     },
     {
       "pageUrl": "index.html",
@@ -20,7 +20,7 @@
       "theme": "light",
       "style": "normal",
       "viewport": "900",
-      "count": 41
+      "count": 40
     },
     {
       "pageUrl": "students/lesson-01.html",
@@ -188,7 +188,7 @@
       "theme": "light",
       "style": "subdued",
       "viewport": "900",
-      "count": 41
+      "count": 40
     },
     {
       "pageUrl": "index.html",
@@ -293,7 +293,7 @@
       "theme": "dark",
       "style": "subdued",
       "viewport": "900",
-      "count": 41
+      "count": 40
     },
     {
       "pageUrl": "students/lesson-01.html",
@@ -310,7 +310,7 @@
       "count": 36
     },
     {
-      "pageUrl": "pages/students.html",
+      "pageUrl": "pages/start.html",
       "theme": "dark",
       "style": "subdued",
       "viewport": "900",
@@ -384,7 +384,7 @@
       "theme": "light",
       "style": "vibrant",
       "viewport": "900",
-      "count": 41
+      "count": 40
     },
     {
       "pageUrl": "students/lesson-01.html",
@@ -401,7 +401,7 @@
       "count": 36
     },
     {
-      "pageUrl": "pages/students.html",
+      "pageUrl": "pages/start.html",
       "theme": "light",
       "style": "vibrant",
       "viewport": "900",
@@ -482,7 +482,7 @@
       "theme": "dark",
       "style": "vibrant",
       "viewport": "900",
-      "count": 41
+      "count": 40
     },
     {
       "pageUrl": "pages/mentors.html",
@@ -492,7 +492,7 @@
       "count": 36
     },
     {
-      "pageUrl": "pages/students.html",
+      "pageUrl": "pages/start.html",
       "theme": "dark",
       "style": "vibrant",
       "viewport": "900",

@@ -1,9 +1,26 @@
 {
-  "files": [],
+  "files": [
+    {
+      "file": "./bin/capture-css-animation.js",
+      "issues": [
+        {
+          "type": "missing-fields",
+          "message": "Missing required fields: File, Author, Copyright, License, Description",
+          "missingFields": [
+            "File",
+            "Author",
+            "Copyright",
+            "License",
+            "Description"
+          ]
+        }
+      ]
+    }
+  ],
   "summary": {
-    "totalFiles": 92,
-    "filesWithIssues": 0,
+    "totalFiles": 93,
+    "filesWithIssues": 1,
     "missingHeaderBlocks": 0,
-    "missingRequiredFields": 0
+    "missingRequiredFields": 1
   }
 }
