@@ -16,13 +16,6 @@
       "count": 36
     },
     {
-      "pageUrl": "students/lesson-01.html",
-      "theme": "light",
-      "style": "normal",
-      "viewport": "900",
-      "count": 41
-    },
-    {
       "pageUrl": "students/lesson-00.html",
       "theme": "light",
       "style": "normal",
@@ -30,18 +23,11 @@
       "count": 41
     },
     {
-      "pageUrl": "pages/glossary.html",
+      "pageUrl": "students/lesson-01.html",
       "theme": "light",
       "style": "normal",
       "viewport": "900",
-      "count": 38
-    },
-    {
-      "pageUrl": "pages/facts.html",
-      "theme": "light",
-      "style": "normal",
-      "viewport": "900",
-      "count": 38
+      "count": 40
     },
     {
       "pageUrl": "pages/mentors.html",
@@ -51,11 +37,11 @@
       "count": 36
     },
     {
-      "pageUrl": "pages/students.html",
+      "pageUrl": "pages/start.html",
       "theme": "light",
       "style": "normal",
       "viewport": "900",
-      "count": 40
+      "count": 37
     },
     {
       "pageUrl": "pages/gallery.html",
@@ -65,6 +51,13 @@
       "count": 40
     },
     {
+      "pageUrl": "pages/facts.html",
+      "theme": "light",
+      "style": "normal",
+      "viewport": "900",
+      "count": 38
+    },
+    {
       "pageUrl": "pages/faq.html",
       "theme": "light",
       "style": "normal",
@@ -72,11 +65,18 @@
       "count": 36
     },
     {
-      "pageUrl": "pages/license.html",
+      "pageUrl": "pages/glossary.html",
       "theme": "light",
       "style": "normal",
       "viewport": "900",
-      "count": 36
+      "count": 38
+    },
+    {
+      "pageUrl": "pages/students.html",
+      "theme": "light",
+      "style": "normal",
+      "viewport": "900",
+      "count": 40
     },
     {
       "pageUrl": "pages/credits.html",
@@ -86,67 +86,18 @@
       "count": 37
     },
     {
-      "pageUrl": "pages/start.html",
+      "pageUrl": "pages/license.html",
       "theme": "light",
       "style": "normal",
       "viewport": "900",
-      "count": 37
-    },
-    {
-      "pageUrl": "manipulated-images/image1.html",
-      "theme": "light",
-      "style": "normal",
-      "viewport": "900",
-      "count": 21
-    },
-    {
-      "pageUrl": "manipulated-images/image4.html",
-      "theme": "light",
-      "style": "normal",
-      "viewport": "900",
-      "count": 19
-    },
-    {
-      "pageUrl": "manipulated-images/image3.html",
-      "theme": "light",
-      "style": "normal",
-      "viewport": "900",
-      "count": 22
-    },
-    {
-      "pageUrl": "manipulated-images/index.html",
-      "theme": "light",
-      "style": "normal",
-      "viewport": "900",
-      "count": 26
-    },
-    {
-      "pageUrl": "manipulated-images/image2.html",
-      "theme": "light",
-      "style": "normal",
-      "viewport": "900",
-      "count": 21
-    },
-    {
-      "pageUrl": "manipulated-images/image6.html",
-      "theme": "light",
-      "style": "normal",
-      "viewport": "900",
-      "count": 24
-    },
-    {
-      "pageUrl": "manipulated-images/image5.html",
-      "theme": "light",
-      "style": "normal",
-      "viewport": "900",
-      "count": 19
+      "count": 36
     },
     {
       "pageUrl": "mentors/lesson-00.html",
       "theme": "dark",
       "style": "normal",
       "viewport": "900",
-      "count": 41
+      "count": 40
     },
     {
       "pageUrl": "index.html",
@@ -156,32 +107,18 @@
       "count": 36
     },
     {
-      "pageUrl": "students/lesson-01.html",
-      "theme": "dark",
-      "style": "normal",
-      "viewport": "900",
-      "count": 41
-    },
-    {
       "pageUrl": "students/lesson-00.html",
       "theme": "dark",
       "style": "normal",
       "viewport": "900",
-      "count": 41
+      "count": 40
     },
     {
-      "pageUrl": "pages/glossary.html",
+      "pageUrl": "students/lesson-01.html",
       "theme": "dark",
       "style": "normal",
       "viewport": "900",
-      "count": 38
-    },
-    {
-      "pageUrl": "pages/facts.html",
-      "theme": "dark",
-      "style": "normal",
-      "viewport": "900",
-      "count": 38
+      "count": 40
     },
     {
       "pageUrl": "pages/mentors.html",
@@ -191,11 +128,11 @@
       "count": 36
     },
     {
-      "pageUrl": "pages/students.html",
+      "pageUrl": "pages/start.html",
       "theme": "dark",
       "style": "normal",
       "viewport": "900",
-      "count": 40
+      "count": 37
     },
     {
       "pageUrl": "pages/gallery.html",
@@ -205,6 +142,13 @@
       "count": 40
     },
     {
+      "pageUrl": "pages/facts.html",
+      "theme": "dark",
+      "style": "normal",
+      "viewport": "900",
+      "count": 38
+    },
+    {
       "pageUrl": "pages/faq.html",
       "theme": "dark",
       "style": "normal",
@@ -212,11 +156,18 @@
       "count": 36
     },
     {
-      "pageUrl": "pages/license.html",
+      "pageUrl": "pages/glossary.html",
       "theme": "dark",
       "style": "normal",
       "viewport": "900",
-      "count": 36
+      "count": 38
+    },
+    {
+      "pageUrl": "pages/students.html",
+      "theme": "dark",
+      "style": "normal",
+      "viewport": "900",
+      "count": 40
     },
     {
       "pageUrl": "pages/credits.html",
@@ -226,60 +177,11 @@
       "count": 37
     },
     {
-      "pageUrl": "pages/start.html",
+      "pageUrl": "pages/license.html",
       "theme": "dark",
       "style": "normal",
       "viewport": "900",
-      "count": 37
-    },
-    {
-      "pageUrl": "manipulated-images/image1.html",
-      "theme": "dark",
-      "style": "normal",
-      "viewport": "900",
-      "count": 21
-    },
-    {
-      "pageUrl": "manipulated-images/image4.html",
-      "theme": "dark",
-      "style": "normal",
-      "viewport": "900",
-      "count": 19
-    },
-    {
-      "pageUrl": "manipulated-images/image3.html",
-      "theme": "dark",
-      "style": "normal",
-      "viewport": "900",
-      "count": 22
-    },
-    {
-      "pageUrl": "manipulated-images/index.html",
-      "theme": "dark",
-      "style": "normal",
-      "viewport": "900",
-      "count": 26
-    },
-    {
-      "pageUrl": "manipulated-images/image2.html",
-      "theme": "dark",
-      "style": "normal",
-      "viewport": "900",
-      "count": 21
-    },
-    {
-      "pageUrl": "manipulated-images/image6.html",
-      "theme": "dark",
-      "style": "normal",
-      "viewport": "900",
-      "count": 24
-    },
-    {
-      "pageUrl": "manipulated-images/image5.html",
-      "theme": "dark",
-      "style": "normal",
-      "viewport": "900",
-      "count": 19
+      "count": 36
     },
     {
       "pageUrl": "mentors/lesson-00.html",
@@ -296,32 +198,18 @@
       "count": 36
     },
     {
-      "pageUrl": "students/lesson-01.html",
-      "theme": "light",
-      "style": "subdued",
-      "viewport": "900",
-      "count": 41
-    },
-    {
       "pageUrl": "students/lesson-00.html",
       "theme": "light",
       "style": "subdued",
       "viewport": "900",
-      "count": 41
+      "count": 40
     },
     {
-      "pageUrl": "pages/glossary.html",
+      "pageUrl": "students/lesson-01.html",
       "theme": "light",
       "style": "subdued",
       "viewport": "900",
-      "count": 38
-    },
-    {
-      "pageUrl": "pages/facts.html",
-      "theme": "light",
-      "style": "subdued",
-      "viewport": "900",
-      "count": 38
+      "count": 40
     },
     {
       "pageUrl": "pages/mentors.html",
@@ -331,11 +219,11 @@
       "count": 36
     },
     {
-      "pageUrl": "pages/students.html",
+      "pageUrl": "pages/start.html",
       "theme": "light",
       "style": "subdued",
       "viewport": "900",
-      "count": 40
+      "count": 37
     },
     {
       "pageUrl": "pages/gallery.html",
@@ -345,6 +233,13 @@
       "count": 40
     },
     {
+      "pageUrl": "pages/facts.html",
+      "theme": "light",
+      "style": "subdued",
+      "viewport": "900",
+      "count": 38
+    },
+    {
       "pageUrl": "pages/faq.html",
       "theme": "light",
       "style": "subdued",
@@ -352,11 +247,18 @@
       "count": 36
     },
     {
-      "pageUrl": "pages/license.html",
+      "pageUrl": "pages/glossary.html",
       "theme": "light",
       "style": "subdued",
       "viewport": "900",
-      "count": 36
+      "count": 38
+    },
+    {
+      "pageUrl": "pages/students.html",
+      "theme": "light",
+      "style": "subdued",
+      "viewport": "900",
+      "count": 40
     },
     {
       "pageUrl": "pages/credits.html",
@@ -366,67 +268,18 @@
       "count": 37
     },
     {
-      "pageUrl": "pages/start.html",
+      "pageUrl": "pages/license.html",
       "theme": "light",
       "style": "subdued",
       "viewport": "900",
-      "count": 37
-    },
-    {
-      "pageUrl": "manipulated-images/image1.html",
-      "theme": "light",
-      "style": "subdued",
-      "viewport": "900",
-      "count": 21
-    },
-    {
-      "pageUrl": "manipulated-images/image4.html",
-      "theme": "light",
-      "style": "subdued",
-      "viewport": "900",
-      "count": 19
-    },
-    {
-      "pageUrl": "manipulated-images/image3.html",
-      "theme": "light",
-      "style": "subdued",
-      "viewport": "900",
-      "count": 22
-    },
-    {
-      "pageUrl": "manipulated-images/index.html",
-      "theme": "light",
-      "style": "subdued",
-      "viewport": "900",
-      "count": 26
-    },
-    {
-      "pageUrl": "manipulated-images/image2.html",
-      "theme": "light",
-      "style": "subdued",
-      "viewport": "900",
-      "count": 21
-    },
-    {
-      "pageUrl": "manipulated-images/image6.html",
-      "theme": "light",
-      "style": "subdued",
-      "viewport": "900",
-      "count": 24
-    },
-    {
-      "pageUrl": "manipulated-images/image5.html",
-      "theme": "light",
-      "style": "subdued",
-      "viewport": "900",
-      "count": 19
+      "count": 36
     },
     {
       "pageUrl": "mentors/lesson-00.html",
       "theme": "dark",
       "style": "subdued",
       "viewport": "900",
-      "count": 41
+      "count": 40
     },
     {
       "pageUrl": "index.html",
@@ -436,13 +289,6 @@
       "count": 36
     },
     {
-      "pageUrl": "students/lesson-01.html",
-      "theme": "dark",
-      "style": "subdued",
-      "viewport": "900",
-      "count": 41
-    },
-    {
       "pageUrl": "students/lesson-00.html",
       "theme": "dark",
       "style": "subdued",
@@ -450,18 +296,11 @@
       "count": 41
     },
     {
-      "pageUrl": "pages/glossary.html",
+      "pageUrl": "students/lesson-01.html",
       "theme": "dark",
       "style": "subdued",
       "viewport": "900",
-      "count": 38
-    },
-    {
-      "pageUrl": "pages/facts.html",
-      "theme": "dark",
-      "style": "subdued",
-      "viewport": "900",
-      "count": 38
+      "count": 40
     },
     {
       "pageUrl": "pages/mentors.html",
@@ -475,7 +314,7 @@
       "theme": "dark",
       "style": "subdued",
       "viewport": "900",
-      "count": 40
+      "count": 37
     },
     {
       "pageUrl": "pages/gallery.html",
@@ -485,6 +324,13 @@
       "count": 40
     },
     {
+      "pageUrl": "pages/facts.html",
+      "theme": "dark",
+      "style": "subdued",
+      "viewport": "900",
+      "count": 38
+    },
+    {
       "pageUrl": "pages/faq.html",
       "theme": "dark",
       "style": "subdued",
@@ -492,11 +338,18 @@
       "count": 36
     },
     {
-      "pageUrl": "pages/license.html",
+      "pageUrl": "pages/glossary.html",
       "theme": "dark",
       "style": "subdued",
       "viewport": "900",
-      "count": 36
+      "count": 38
+    },
+    {
+      "pageUrl": "pages/students.html",
+      "theme": "dark",
+      "style": "subdued",
+      "viewport": "900",
+      "count": 40
     },
     {
       "pageUrl": "pages/credits.html",
@@ -506,67 +359,18 @@
       "count": 37
     },
     {
-      "pageUrl": "pages/start.html",
+      "pageUrl": "pages/license.html",
       "theme": "dark",
       "style": "subdued",
       "viewport": "900",
-      "count": 37
-    },
-    {
-      "pageUrl": "manipulated-images/image1.html",
-      "theme": "dark",
-      "style": "subdued",
-      "viewport": "900",
-      "count": 21
-    },
-    {
-      "pageUrl": "manipulated-images/image4.html",
-      "theme": "dark",
-      "style": "subdued",
-      "viewport": "900",
-      "count": 19
-    },
-    {
-      "pageUrl": "manipulated-images/image3.html",
-      "theme": "dark",
-      "style": "subdued",
-      "viewport": "900",
-      "count": 22
-    },
-    {
-      "pageUrl": "manipulated-images/index.html",
-      "theme": "dark",
-      "style": "subdued",
-      "viewport": "900",
-      "count": 26
-    },
-    {
-      "pageUrl": "manipulated-images/image2.html",
-      "theme": "dark",
-      "style": "subdued",
-      "viewport": "900",
-      "count": 21
-    },
-    {
-      "pageUrl": "manipulated-images/image6.html",
-      "theme": "dark",
-      "style": "subdued",
-      "viewport": "900",
-      "count": 24
-    },
-    {
-      "pageUrl": "manipulated-images/image5.html",
-      "theme": "dark",
-      "style": "subdued",
-      "viewport": "900",
-      "count": 19
+      "count": 36
     },
     {
       "pageUrl": "mentors/lesson-00.html",
       "theme": "light",
       "style": "vibrant",
       "viewport": "900",
-      "count": 41
+      "count": 40
     },
     {
       "pageUrl": "index.html",
@@ -576,13 +380,6 @@
       "count": 36
     },
     {
-      "pageUrl": "students/lesson-01.html",
-      "theme": "light",
-      "style": "vibrant",
-      "viewport": "900",
-      "count": 41
-    },
-    {
       "pageUrl": "students/lesson-00.html",
       "theme": "light",
       "style": "vibrant",
@@ -590,18 +387,11 @@
       "count": 41
     },
     {
-      "pageUrl": "pages/glossary.html",
+      "pageUrl": "students/lesson-01.html",
       "theme": "light",
       "style": "vibrant",
       "viewport": "900",
-      "count": 38
-    },
-    {
-      "pageUrl": "pages/facts.html",
-      "theme": "light",
-      "style": "vibrant",
-      "viewport": "900",
-      "count": 38
+      "count": 40
     },
     {
       "pageUrl": "pages/mentors.html",
@@ -615,7 +405,7 @@
       "theme": "light",
       "style": "vibrant",
       "viewport": "900",
-      "count": 40
+      "count": 37
     },
     {
       "pageUrl": "pages/gallery.html",
@@ -625,6 +415,13 @@
       "count": 40
     },
     {
+      "pageUrl": "pages/facts.html",
+      "theme": "light",
+      "style": "vibrant",
+      "viewport": "900",
+      "count": 38
+    },
+    {
       "pageUrl": "pages/faq.html",
       "theme": "light",
       "style": "vibrant",
@@ -632,11 +429,18 @@
       "count": 36
     },
     {
-      "pageUrl": "pages/license.html",
+      "pageUrl": "pages/glossary.html",
       "theme": "light",
       "style": "vibrant",
       "viewport": "900",
-      "count": 36
+      "count": 38
+    },
+    {
+      "pageUrl": "pages/students.html",
+      "theme": "light",
+      "style": "vibrant",
+      "viewport": "900",
+      "count": 40
     },
     {
       "pageUrl": "pages/credits.html",
@@ -646,67 +450,18 @@
       "count": 37
     },
     {
-      "pageUrl": "pages/start.html",
+      "pageUrl": "pages/license.html",
       "theme": "light",
       "style": "vibrant",
       "viewport": "900",
-      "count": 37
-    },
-    {
-      "pageUrl": "manipulated-images/image1.html",
-      "theme": "light",
-      "style": "vibrant",
-      "viewport": "900",
-      "count": 21
-    },
-    {
-      "pageUrl": "manipulated-images/image4.html",
-      "theme": "light",
-      "style": "vibrant",
-      "viewport": "900",
-      "count": 19
-    },
-    {
-      "pageUrl": "manipulated-images/image3.html",
-      "theme": "light",
-      "style": "vibrant",
-      "viewport": "900",
-      "count": 22
-    },
-    {
-      "pageUrl": "manipulated-images/index.html",
-      "theme": "light",
-      "style": "vibrant",
-      "viewport": "900",
-      "count": 26
-    },
-    {
-      "pageUrl": "manipulated-images/image2.html",
-      "theme": "light",
-      "style": "vibrant",
-      "viewport": "900",
-      "count": 21
-    },
-    {
-      "pageUrl": "manipulated-images/image6.html",
-      "theme": "light",
-      "style": "vibrant",
-      "viewport": "900",
-      "count": 24
-    },
-    {
-      "pageUrl": "manipulated-images/image5.html",
-      "theme": "light",
-      "style": "vibrant",
-      "viewport": "900",
-      "count": 19
+      "count": 36
     },
     {
       "pageUrl": "mentors/lesson-00.html",
       "theme": "dark",
       "style": "vibrant",
       "viewport": "900",
-      "count": 41
+      "count": 40
     },
     {
       "pageUrl": "index.html",
@@ -716,32 +471,18 @@
       "count": 36
     },
     {
+      "pageUrl": "students/lesson-00.html",
+      "theme": "dark",
+      "style": "vibrant",
+      "viewport": "900",
+      "count": 40
+    },
+    {
       "pageUrl": "students/lesson-01.html",
       "theme": "dark",
       "style": "vibrant",
       "viewport": "900",
       "count": 41
-    },
-    {
-      "pageUrl": "students/lesson-00.html",
-      "theme": "dark",
-      "style": "vibrant",
-      "viewport": "900",
-      "count": 41
-    },
-    {
-      "pageUrl": "pages/glossary.html",
-      "theme": "dark",
-      "style": "vibrant",
-      "viewport": "900",
-      "count": 38
-    },
-    {
-      "pageUrl": "pages/facts.html",
-      "theme": "dark",
-      "style": "vibrant",
-      "viewport": "900",
-      "count": 38
     },
     {
       "pageUrl": "pages/mentors.html",
@@ -755,7 +496,7 @@
       "theme": "dark",
       "style": "vibrant",
       "viewport": "900",
-      "count": 40
+      "count": 37
     },
     {
       "pageUrl": "pages/gallery.html",
@@ -765,6 +506,13 @@
       "count": 40
     },
     {
+      "pageUrl": "pages/facts.html",
+      "theme": "dark",
+      "style": "vibrant",
+      "viewport": "900",
+      "count": 38
+    },
+    {
       "pageUrl": "pages/faq.html",
       "theme": "dark",
       "style": "vibrant",
@@ -772,11 +520,18 @@
       "count": 36
     },
     {
-      "pageUrl": "pages/license.html",
+      "pageUrl": "pages/glossary.html",
       "theme": "dark",
       "style": "vibrant",
       "viewport": "900",
-      "count": 36
+      "count": 38
+    },
+    {
+      "pageUrl": "pages/students.html",
+      "theme": "dark",
+      "style": "vibrant",
+      "viewport": "900",
+      "count": 40
     },
     {
       "pageUrl": "pages/credits.html",
@@ -786,337 +541,17 @@
       "count": 37
     },
     {
-      "pageUrl": "pages/start.html",
+      "pageUrl": "pages/license.html",
       "theme": "dark",
       "style": "vibrant",
       "viewport": "900",
-      "count": 37
-    },
-    {
-      "pageUrl": "manipulated-images/image1.html",
-      "theme": "dark",
-      "style": "vibrant",
-      "viewport": "900",
-      "count": 21
-    },
-    {
-      "pageUrl": "manipulated-images/image4.html",
-      "theme": "dark",
-      "style": "vibrant",
-      "viewport": "900",
-      "count": 19
-    },
-    {
-      "pageUrl": "manipulated-images/image3.html",
-      "theme": "dark",
-      "style": "vibrant",
-      "viewport": "900",
-      "count": 22
-    },
-    {
-      "pageUrl": "manipulated-images/index.html",
-      "theme": "dark",
-      "style": "vibrant",
-      "viewport": "900",
-      "count": 26
-    },
-    {
-      "pageUrl": "manipulated-images/image2.html",
-      "theme": "dark",
-      "style": "vibrant",
-      "viewport": "900",
-      "count": 21
-    },
-    {
-      "pageUrl": "manipulated-images/image6.html",
-      "theme": "dark",
-      "style": "vibrant",
-      "viewport": "900",
-      "count": 24
-    },
-    {
-      "pageUrl": "manipulated-images/image5.html",
-      "theme": "dark",
-      "style": "vibrant",
-      "viewport": "900",
-      "count": 19
+      "count": 36
     }
   ],
-  "incomplete": [
-    {
-      "id": "video-caption",
-      "impact": "critical",
-      "tags": [
-        "cat.text-alternatives",
-        "wcag2a",
-        "wcag122",
-        "section508",
-        "section508.22.a",
-        "TTv5",
-        "TT17.a",
-        "EN-301-549",
-        "EN-9.1.2.2",
-        "RGAAv4",
-        "RGAA-4.3.1"
-      ],
-      "description": "Ensure <video> elements have captions",
-      "help": "<video> elements must have captions",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/video-caption?application=webdriverjs",
-      "nodes": [
-        {
-          "any": [],
-          "all": [],
-          "none": [
-            {
-              "id": "caption",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Check that captions are available for the element"
-            }
-          ],
-          "impact": "critical",
-          "html": "<video id=\"animation-video\" autoplay=\"\" muted=\"\" playsinline=\"\" width=\"800\">\n            <source src=\"images/animated-web.mp4?t=1774812063015\" type=\"video/mp4\">\n        </video>",
-          "target": [
-            "#animation-video"
-          ],
-          "failureSummary": "Fix all of the following:\n  Check that captions are available for the element"
-        }
-      ],
-      "pageUrl": "manipulated-images/image6.html",
-      "theme": "light",
-      "style": "normal",
-      "viewport": "900"
-    },
-    {
-      "id": "video-caption",
-      "impact": "critical",
-      "tags": [
-        "cat.text-alternatives",
-        "wcag2a",
-        "wcag122",
-        "section508",
-        "section508.22.a",
-        "TTv5",
-        "TT17.a",
-        "EN-301-549",
-        "EN-9.1.2.2",
-        "RGAAv4",
-        "RGAA-4.3.1"
-      ],
-      "description": "Ensure <video> elements have captions",
-      "help": "<video> elements must have captions",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/video-caption?application=webdriverjs",
-      "nodes": [
-        {
-          "any": [],
-          "all": [],
-          "none": [
-            {
-              "id": "caption",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Check that captions are available for the element"
-            }
-          ],
-          "impact": "critical",
-          "html": "<video id=\"animation-video\" autoplay=\"\" muted=\"\" playsinline=\"\" width=\"800\">\n            <source src=\"images/animated-web.mp4?t=1774812101765\" type=\"video/mp4\">\n        </video>",
-          "target": [
-            "#animation-video"
-          ],
-          "failureSummary": "Fix all of the following:\n  Check that captions are available for the element"
-        }
-      ],
-      "pageUrl": "manipulated-images/image6.html",
-      "theme": "dark",
-      "style": "normal",
-      "viewport": "900"
-    },
-    {
-      "id": "video-caption",
-      "impact": "critical",
-      "tags": [
-        "cat.text-alternatives",
-        "wcag2a",
-        "wcag122",
-        "section508",
-        "section508.22.a",
-        "TTv5",
-        "TT17.a",
-        "EN-301-549",
-        "EN-9.1.2.2",
-        "RGAAv4",
-        "RGAA-4.3.1"
-      ],
-      "description": "Ensure <video> elements have captions",
-      "help": "<video> elements must have captions",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/video-caption?application=webdriverjs",
-      "nodes": [
-        {
-          "any": [],
-          "all": [],
-          "none": [
-            {
-              "id": "caption",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Check that captions are available for the element"
-            }
-          ],
-          "impact": "critical",
-          "html": "<video id=\"animation-video\" autoplay=\"\" muted=\"\" playsinline=\"\" width=\"800\">\n            <source src=\"images/animated-web.mp4?t=1774812140052\" type=\"video/mp4\">\n        </video>",
-          "target": [
-            "#animation-video"
-          ],
-          "failureSummary": "Fix all of the following:\n  Check that captions are available for the element"
-        }
-      ],
-      "pageUrl": "manipulated-images/image6.html",
-      "theme": "light",
-      "style": "subdued",
-      "viewport": "900"
-    },
-    {
-      "id": "video-caption",
-      "impact": "critical",
-      "tags": [
-        "cat.text-alternatives",
-        "wcag2a",
-        "wcag122",
-        "section508",
-        "section508.22.a",
-        "TTv5",
-        "TT17.a",
-        "EN-301-549",
-        "EN-9.1.2.2",
-        "RGAAv4",
-        "RGAA-4.3.1"
-      ],
-      "description": "Ensure <video> elements have captions",
-      "help": "<video> elements must have captions",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/video-caption?application=webdriverjs",
-      "nodes": [
-        {
-          "any": [],
-          "all": [],
-          "none": [
-            {
-              "id": "caption",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Check that captions are available for the element"
-            }
-          ],
-          "impact": "critical",
-          "html": "<video id=\"animation-video\" autoplay=\"\" muted=\"\" playsinline=\"\" width=\"800\">\n            <source src=\"images/animated-web.mp4?t=1774812185383\" type=\"video/mp4\">\n        </video>",
-          "target": [
-            "#animation-video"
-          ],
-          "failureSummary": "Fix all of the following:\n  Check that captions are available for the element"
-        }
-      ],
-      "pageUrl": "manipulated-images/image6.html",
-      "theme": "dark",
-      "style": "subdued",
-      "viewport": "900"
-    },
-    {
-      "id": "video-caption",
-      "impact": "critical",
-      "tags": [
-        "cat.text-alternatives",
-        "wcag2a",
-        "wcag122",
-        "section508",
-        "section508.22.a",
-        "TTv5",
-        "TT17.a",
-        "EN-301-549",
-        "EN-9.1.2.2",
-        "RGAAv4",
-        "RGAA-4.3.1"
-      ],
-      "description": "Ensure <video> elements have captions",
-      "help": "<video> elements must have captions",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/video-caption?application=webdriverjs",
-      "nodes": [
-        {
-          "any": [],
-          "all": [],
-          "none": [
-            {
-              "id": "caption",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Check that captions are available for the element"
-            }
-          ],
-          "impact": "critical",
-          "html": "<video id=\"animation-video\" autoplay=\"\" muted=\"\" playsinline=\"\" width=\"800\">\n            <source src=\"images/animated-web.mp4?t=1774812227255\" type=\"video/mp4\">\n        </video>",
-          "target": [
-            "#animation-video"
-          ],
-          "failureSummary": "Fix all of the following:\n  Check that captions are available for the element"
-        }
-      ],
-      "pageUrl": "manipulated-images/image6.html",
-      "theme": "light",
-      "style": "vibrant",
-      "viewport": "900"
-    },
-    {
-      "id": "video-caption",
-      "impact": "critical",
-      "tags": [
-        "cat.text-alternatives",
-        "wcag2a",
-        "wcag122",
-        "section508",
-        "section508.22.a",
-        "TTv5",
-        "TT17.a",
-        "EN-301-549",
-        "EN-9.1.2.2",
-        "RGAAv4",
-        "RGAA-4.3.1"
-      ],
-      "description": "Ensure <video> elements have captions",
-      "help": "<video> elements must have captions",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/video-caption?application=webdriverjs",
-      "nodes": [
-        {
-          "any": [],
-          "all": [],
-          "none": [
-            {
-              "id": "caption",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Check that captions are available for the element"
-            }
-          ],
-          "impact": "critical",
-          "html": "<video id=\"animation-video\" autoplay=\"\" muted=\"\" playsinline=\"\" width=\"800\">\n            <source src=\"images/animated-web.mp4?t=1774812269514\" type=\"video/mp4\">\n        </video>",
-          "target": [
-            "#animation-video"
-          ],
-          "failureSummary": "Fix all of the following:\n  Check that captions are available for the element"
-        }
-      ],
-      "pageUrl": "manipulated-images/image6.html",
-      "theme": "dark",
-      "style": "vibrant",
-      "viewport": "900"
-    }
-  ],
+  "incomplete": [],
   "metadata": {
-    "pagesTestedCount": 20,
-    "totalTestRuns": 120,
+    "pagesTestedCount": 13,
+    "totalTestRuns": 78,
     "viewports": [
       "900"
     ],
