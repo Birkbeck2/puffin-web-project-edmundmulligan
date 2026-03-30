@@ -81,3 +81,32 @@
         }
     }
 }
+
+/* Responsive layout for small screens */
+@media (width < 800px) {
+    .facts-container {
+        grid-template-columns: 1fr;
+    }
+
+    .facts-item.wide {
+        grid-column: 1;
+
+        & dl {
+            grid-template-columns: 1fr;
+        }
+
+        & dt {
+            grid-column: 1;
+            border-bottom: var(--border-weight) var(--border-style) var(--colour-effective-headings-text);
+        }
+
+        & dd {
+            grid-column: 1;
+            border-bottom: var(--border-weight) var(--border-style) var(--colour-effective-headings-text);
+        }
+
+        & dd:last-of-type {
+            border-bottom: none;
+        }
+    }
+}

@@ -94,7 +94,7 @@
 
 .lesson-section ul li,
 .lesson-section ol li {
-    margin-left: 2rem;
+    margin-left: 0;
     list-style-position: inside;
 }
 
@@ -181,7 +181,7 @@
 /* Wand uses inline SVG so favicon sparkle classes can animate. */
 .wand-container {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     margin-top: 1rem;
 
     & .wand-icon,
@@ -194,6 +194,11 @@
         border: var(--border-weight-thin) var(--border-style) var(--colour-effective-page-text);
         border-radius: 50%;
         box-sizing: border-box;
+        cursor: default;
+    }
+
+    & .wand-icon:hover {
+        transform: none;
     }
 
     & .wand-fallback {

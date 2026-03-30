@@ -138,7 +138,7 @@ fi
 if [ "$RUN_WAVE" = true ] && [ "$QUICK_MODE" = false ]; then
   echo ""
   echo "🌊 Running Wave accessibility tests..."
-  if ! bin/run-wave-tests.sh "$FOLDER" "${EXCLUDE_ARGS[@]}"; then
+  if ! bin/run-wave-tests.sh -q "$FOLDER" "${EXCLUDE_ARGS[@]}"; then
     echo "⚠️  Wave tests failed"
     FAILED=1
   fi

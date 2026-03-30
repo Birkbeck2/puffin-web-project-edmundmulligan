@@ -98,6 +98,17 @@
     inset: unset;
 }
 
+/* Responsive adjustments for small screens */
+@media (width < 800px) {
+    .lesson-popover {
+        max-width: min(20rem, 85vw);
+        padding: 1rem;
+        left: 50% !important;
+        transform: translateX(-50%);
+        right: auto !important;
+    }
+}
+
 .lesson-popover h3 {
     margin-top: 0;
     margin-bottom: 1rem;

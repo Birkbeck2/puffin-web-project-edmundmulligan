@@ -261,7 +261,7 @@
 /********************************************************
  * Mobile Responsive Design
  ********************************************************/
-@media (width <= 768px) {
+@media (width <= 800px) {
     .lesson-header-fixed {
         padding: 0.75rem 0 0.25rem;
     }

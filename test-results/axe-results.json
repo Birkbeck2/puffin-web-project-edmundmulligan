@@ -310,7 +310,7 @@
       "count": 36
     },
     {
-      "pageUrl": "pages/start.html",
+      "pageUrl": "pages/students.html",
       "theme": "dark",
       "style": "subdued",
       "viewport": "900",
@@ -401,7 +401,7 @@
       "count": 36
     },
     {
-      "pageUrl": "pages/start.html",
+      "pageUrl": "pages/students.html",
       "theme": "light",
       "style": "vibrant",
       "viewport": "900",
@@ -492,7 +492,7 @@
       "count": 36
     },
     {
-      "pageUrl": "pages/start.html",
+      "pageUrl": "pages/students.html",
       "theme": "dark",
       "style": "vibrant",
       "viewport": "900",

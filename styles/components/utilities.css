@@ -11,7 +11,7 @@
 
 /* Utility class to visually hide elements */
 .hidden.hidden {
-    /* Higher specificity than single utility/layout classes like .text-container */
+    /* Using .hidden twice to increase specificity and avoid needing !important */
     display: none;
 }
 
@@ -32,4 +32,12 @@
     padding: 1rem;
     border: 0.1rem solid var(--colour-effective-page-text);
     border-radius: var(--border-radius);
+}
+
+/* Responsive adjustments for smaller screens */
+@media (width < 800px) {
+    .text-block {
+        min-width: 0;
+        flex: 1 1 100%;
+    }
 }

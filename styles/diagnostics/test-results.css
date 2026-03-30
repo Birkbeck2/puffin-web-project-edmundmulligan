@@ -387,7 +387,7 @@ main {
     opacity: 0.8;
 }
 
-@media (width <= 768px) {
+@media (width <= 800px) {
     .test-grid {
         grid-template-columns: 1fr;
     }

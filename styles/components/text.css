@@ -25,10 +25,11 @@ code {
     font-size: var(--fontsize-normal);
 }
 
-ul {
+ul,
+ol {
     margin: var(--margin-vertical) var(--margin-horizontal);
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left: 0;
+    padding-right: 0;
     line-height: 1.5;
     text-align: left;
     max-width: 100%;
