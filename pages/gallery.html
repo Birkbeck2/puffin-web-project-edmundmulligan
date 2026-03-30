@@ -39,11 +39,9 @@
     <link rel="stylesheet" href="https://kit.fontawesome.com/3895b3f1a4.css" crossorigin="anonymous">
     <!-- End Font Awesome Icons -->
 
-    <!-- generic stylesheets -->
+    <!-- stylesheets -->
     <link rel="stylesheet" href="../styles/globals.css">
     <link rel="stylesheet" href="../styles/main.css">
-
-    <!-- page specific stylesheets -->
     <link rel="stylesheet" href="../styles/pages/gallery.css">
 
     <!-- Load JavaScript files -->
@@ -51,6 +49,7 @@
     <script src="../scripts/themeSwitcher.js"></script>
     <script src="../scripts/toggleHeaderAndFooter.js" defer></script>
     <script src="../scripts/injectCommonCode.js" defer></script>
+    <script src="../scripts/carouselNavigation.js" defer></script>
     <!-- End JavaScript file link -->
 
     <noscript>
@@ -66,7 +65,11 @@
         <h2 class="page-title">Galleries</h2>
         <h3>Portraits of Witches and Wizards</h3>
         <p>Here are the portraits of various witches and wizards you can choose for your avatar.</p>
-        <section id="portrait-gallery" class="gallery carousel" tabindex="0" aria-label="Portrait gallery carousel">
+        <div class="carousel-wrapper">
+            <button type="button" class="carousel-nav-button prev" aria-label="Scroll to previous portraits">
+                <i class="fa-duotone fa-backward-step" aria-hidden="true"></i>
+            </button>
+            <section id="portrait-gallery" class="carousel" tabindex="0" aria-label="Portrait gallery carousel">
             <div class="portrait-item">
                 <img
                     src="../images/portraits/rachel-mulligan-witch-old-female.png"
@@ -155,6 +158,10 @@
                 </h3>
             </div>
         </section>
+            <button type="button" class="carousel-nav-button next" aria-label="Scroll to next portraits">
+                <i class="fa-duotone fa-forward-step" aria-hidden="true"></i>
+            </button>
+        </div>
 
         <!-- Accessories Gallery -->
         <section class="gallery">
@@ -169,7 +176,11 @@
                 When you are using these accessories in your web pages, the catalogue number is the file name you use to reference the image.
             </p>
 
-            <section class="carousel" tabindex="0" aria-label="Accessories gallery carousel">
+            <div class="carousel-wrapper">
+                <button type="button" class="carousel-nav-button prev" aria-label="Scroll to previous accessories">
+                    <i class="fa-duotone fa-backward-step" aria-hidden="true"></i>
+                </button>
+                <section id="accessories-gallery" class="carousel" tabindex="0" aria-label="Accessories gallery carousel">
                 <div class="accessory-item">
                     <img
                         src="../images/fontawesome/wand-magic-duotone-regular-full.svg"
@@ -487,6 +498,10 @@
                     </p>
                 </div>
             </section>
+                <button type="button" class="carousel-nav-button next" aria-label="Scroll to next accessories">
+                    <i class="fa-duotone fa-forward-step" aria-hidden="true"></i>
+                </button>
+            </div>
         </section>
     </main>
 

@@ -10,6 +10,9 @@
  */
 
 .glossary {
+    max-width: 100%;
+    box-sizing: border-box;
+
     & dl {
         display: grid;
         grid-template-columns: auto 1fr;
@@ -17,6 +20,8 @@
         padding: 0 1rem;
         align-items: stretch;
         font-size: var(--fontsize-normal);
+        max-width: 100%;
+        box-sizing: border-box;
     }
 
     & dt {
@@ -30,6 +35,8 @@
         align-items: center;
         overflow-wrap: break-word;
         hyphens: auto;
+        min-width: 0;
+        box-sizing: border-box;
     }
 
     & dd {
@@ -43,5 +50,26 @@
         align-items: center;
         overflow-wrap: break-word;
         hyphens: auto;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+}
+
+/* Responsive layout for small screens */
+@media (width < 800px) {
+    .glossary {
+        & dl {
+            grid-template-columns: 1fr;
+            padding: 0;
+        }
+
+        & dt {
+            grid-column: 1;
+        }
+
+        & dd {
+            grid-column: 1;
+            border-left: var(--border-weight) var(--border-style) var(--colour-effective-page-text);
+        }
     }
 }

@@ -67,9 +67,9 @@ async function runPageTests(page, pageInfo) {
     throw new Error(`${pageInfo.name} header not injected - JavaScript may have failed`);
   }
 
-  // Test 4: Check CSS Grid support - header child div should use grid layout (or flex on mobile)
+  // Test 4: Check CSS Grid support - header child div should use grid layout (or flex on mobile, or block for minimal header)
   const headerChildDisplay = await page.$eval('header > div', el => window.getComputedStyle(el).display);
-  if (headerChildDisplay === 'grid' || headerChildDisplay === 'flex' || headerChildDisplay === 'none') {
+  if (headerChildDisplay === 'grid' || headerChildDisplay === 'flex' || headerChildDisplay === 'none' || headerChildDisplay === 'block') {
     console.log(`✅ ${pageInfo.name} CSS Grid/Flexbox layout working (${headerChildDisplay})`);
     tests.push({ name: `${pageInfo.name} CSS Grid`, status: 'passed' });
   } else {

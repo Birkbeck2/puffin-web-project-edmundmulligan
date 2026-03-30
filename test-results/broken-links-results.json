@@ -13,7 +13,7 @@
       "totalCount": 16
     },
     {
-      "url": "index.html",
+      "url": "students/lesson-01.html",
       "links": [],
       "brokenCount": 0,
       "totalCount": 24
@@ -25,16 +25,10 @@
       "totalCount": 32
     },
     {
-      "url": "pages/glossary.html",
+      "url": "students/lesson-01.html",
       "links": [],
       "brokenCount": 0,
-      "totalCount": 12
-    },
-    {
-      "url": "pages/facts.html",
-      "links": [],
-      "brokenCount": 0,
-      "totalCount": 12
+      "totalCount": 24
     },
     {
       "url": "pages/mentors.html",
@@ -43,7 +37,7 @@
       "totalCount": 16
     },
     {
-      "url": "pages/students.html",
+      "url": "pages/start.html",
       "links": [],
       "brokenCount": 0,
       "totalCount": 16
@@ -52,7 +46,7 @@
       "url": "pages/gallery.html",
       "links": [],
       "brokenCount": 0,
-      "totalCount": 41
+      "totalCount": 42
     },
     {
       "url": "pages/faq.html",
@@ -61,10 +55,16 @@
       "totalCount": 15
     },
     {
-      "url": "pages/license.html",
+      "url": "pages/glossary.html",
       "links": [],
       "brokenCount": 0,
-      "totalCount": 11
+      "totalCount": 12
+    },
+    {
+      "url": "pages/students.html",
+      "links": [],
+      "brokenCount": 0,
+      "totalCount": 16
     },
     {
       "url": "pages/credits.html",
@@ -73,13 +73,13 @@
       "totalCount": 28
     },
     {
-      "url": "pages/start.html",
+      "url": "pages/license.html",
       "links": [],
       "brokenCount": 0,
-      "totalCount": 16
+      "totalCount": 11
     },
     {
-      "url": "manipulated-images/image1.html",
+      "url": "manipulated-images/image2.html",
       "links": [],
       "brokenCount": 0,
       "totalCount": 6
@@ -91,16 +91,16 @@
       "totalCount": 9
     },
     {
-      "url": "manipulated-images/image3.html",
+      "url": "manipulated-images/image5.html",
       "links": [],
       "brokenCount": 0,
-      "totalCount": 6
+      "totalCount": 7
     },
     {
       "url": "manipulated-images/index.html",
       "links": [],
       "brokenCount": 0,
-      "totalCount": 12
+      "totalCount": 17
     },
     {
       "url": "manipulated-images/image2.html",
@@ -115,14 +115,20 @@
       "totalCount": 17
     },
     {
-      "url": "manipulated-images/image5.html",
+      "url": "manipulated-images/image3.html",
       "links": [],
       "brokenCount": 0,
-      "totalCount": 7
+      "totalCount": 6
+    },
+    {
+      "url": "manipulated-images/image1.html",
+      "links": [],
+      "brokenCount": 0,
+      "totalCount": 6
     }
   ],
   "summary": {
-    "totalLinks": 326,
+    "totalLinks": 327,
     "brokenLinks": 0,
     "excludedLinks": 0
   }
