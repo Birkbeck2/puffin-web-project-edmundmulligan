@@ -12,6 +12,10 @@ This folder contains comprehensive documentation for the Puffin Web Project.
 - [Copilot Notes](copilot.md) - Development notes and AI assistance documentation
 - [Verification Summary](VERIFICATION-SUMMARY.md) - Testing and validation summaries
 
+### Animation and Media
+- [Blender Coin Animation Guide](blender-coin-animation-guide.md) - Complete tutorial for creating 3D animated coin with embodied mind logo
+- [Blender Quick Reference](blender-quick-reference.md) - Fast reference card for coin animation workflow
+
 ### Sitemaps and Navigation
 - [Sitemap XML](sitemap.xml) - Machine-readable sitemap
 - [Sitemap XSL](sitemap.xsl) - Stylesheet for sitemap display
