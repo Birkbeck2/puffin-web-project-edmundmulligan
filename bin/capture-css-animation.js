@@ -10,11 +10,18 @@
  * @author Edmund Mulligan / Puffin Web Project
  * 
  * Usage:
- *   node capture-css-animation.js <url> <output-name> <duration> [selector]
+ *   node capture-css-animation.js <url> <output-name> <duration> [options]
+ * 
+ * Options:
+ *   --click <selector>    Click element before capturing (to trigger animation)
+ *   --capture <selector>  Capture only this element
+ *   --delay <ms>          Delay before starting capture after click (default: 100ms)
  * 
  * Examples:
  *   node bin/capture-css-animation.js http://localhost:8080/page.html animation 3000
- *   node bin/capture-css-animation.js http://localhost:8080/page.html wand 5000 ".wand-icon"
+ *   node bin/capture-css-animation.js http://localhost:8080 theme 3000 --click ".light-button"
+ *   node bin/capture-css-animation.js http://localhost:8080 wand 5000 --capture ".wand-icon"
+ *   node bin/capture-css-animation.js http://localhost:8080 theme 3000 --click "#theme-toggle" --delay 200
  */
 
 const fs = require('fs');
@@ -80,7 +87,9 @@ function checkDependencies() {
   success('All dependencies found');
 }
 
-async function captureAnimation(url, outputName, duration, selector = null) {
+async function captureAnimation(url, outputName, duration, options = {}) {
+  const { captureSelector = null, clickSelector = null, delay = 100 } = options;
+  
   log('\n' + '='.repeat(60), 'blue');
   log('  CSS Animation Capture', 'blue');
   log('='.repeat(60) + '\n', 'blue');
@@ -88,7 +97,9 @@ async function captureAnimation(url, outputName, duration, selector = null) {
   info(`URL: ${url}`);
   info(`Output: ${outputName}`);
   info(`Duration: ${duration}ms`);
-  if (selector) info(`Selector: ${selector}`);
+  if (captureSelector) info(`Capture selector: ${captureSelector}`);
+  if (clickSelector) info(`Click trigger: ${clickSelector}`);
+  if (delay && clickSelector) info(`Delay after click: ${delay}ms`);
   
   const puppeteer = require('puppeteer');
   
@@ -114,15 +125,33 @@ async function captureAnimation(url, outputName, duration, selector = null) {
     });
     
     // Wait a moment for any initial animations
-    await page.waitForTimeout(500);
+    await new Promise(resolve => setTimeout(resolve, 500));
+    
+    // Click element to trigger animation if specified
+    if (clickSelector) {
+      log(`Finding click element: ${clickSelector}`, 'yellow');
+      const clickElement = await page.$(clickSelector);
+      if (!clickElement) {
+        error(`Click element not found: ${clickSelector}`);
+        await browser.close();
+        process.exit(1);
+      }
+      log('Clicking element to trigger animation...', 'yellow');
+      await clickElement.click();
+      
+      // Wait for animation to start
+      if (delay > 0) {
+        await new Promise(resolve => setTimeout(resolve, delay));
+      }
+    }
     
     // Determine what to screenshot
     let element = null;
-    if (selector) {
-      log(`Finding element: ${selector}`, 'yellow');
-      element = await page.$(selector);
+    if (captureSelector) {
+      log(`Finding capture element: ${captureSelector}`, 'yellow');
+      element = await page.$(captureSelector);
       if (!element) {
-        error(`Element not found: ${selector}`);
+        error(`Capture element not found: ${captureSelector}`);
         await browser.close();
         process.exit(1);
       }
@@ -166,7 +195,7 @@ async function captureAnimation(url, outputName, duration, selector = null) {
         process.stdout.write(`\rProgress: ${Math.round((i / frames) * 100)}%`);
       }
       
-      await page.waitForTimeout(interval);
+      await new Promise(resolve => setTimeout(resolve, interval));
     }
     
     process.stdout.write('\rProgress: 100%\n');
@@ -265,22 +294,48 @@ function main() {
   const args = process.argv.slice(2);
   
   if (args.length < 3) {
-    log('Usage: node capture-css-animation.js <url> <output-name> <duration> [selector]', 'yellow');
+    log('Usage: node capture-css-animation.js <url> <output-name> <duration> [options]', 'yellow');
+    log('\nOptions:');
+    log('  --click <selector>    Click element before capturing (to trigger animation)');
+    log('  --capture <selector>  Capture only this element');
+    log('  --delay <ms>          Delay before starting capture after click (default: 100ms)');
     log('\nExamples:');
-    log('  node bin/capture-css-animation.js http://localhost:8080/page.html animation 3000');
-    log('  node bin/capture-css-animation.js http://localhost:8080/page.html wand 5000 ".wand-icon"');
+    log('  # Capture entire page');
+    log('  node bin/capture-css-animation.js http://localhost:8080 animation 3000');
+    log('');
+    log('  # Click button to trigger theme transition');
+    log('  node bin/capture-css-animation.js http://localhost:8080 theme 3000 --click ".light-button"');
+    log('');
+    log('  # Capture specific element only');
+    log('  node bin/capture-css-animation.js http://localhost:8080 wand 5000 --capture ".wand-icon"');
+    log('');
+    log('  # Click with custom delay');
+    log('  node bin/capture-css-animation.js http://localhost:8080 menu 2000 --click "#menu-toggle" --delay 200');
     log('\nArguments:');
     log('  url          - URL of the page to capture');
     log('  output-name  - Name for output files (without extension)');
     log('  duration     - Duration to capture in milliseconds');
-    log('  selector     - Optional CSS selector for specific element');
     process.exit(1);
   }
   
   const url = args[0];
   const outputName = args[1];
   const duration = parseInt(args[2], 10);
-  const selector = args[3] || null;
+  
+  // Parse options
+  const options = {};
+  for (let i = 3; i < args.length; i++) {
+    if (args[i] === '--click' && args[i + 1]) {
+      options.clickSelector = args[i + 1];
+      i++;
+    } else if (args[i] === '--capture' && args[i + 1]) {
+      options.captureSelector = args[i + 1];
+      i++;
+    } else if (args[i] === '--delay' && args[i + 1]) {
+      options.delay = parseInt(args[i + 1], 10);
+      i++;
+    }
+  }
   
   if (isNaN(duration) || duration <= 0) {
     error('Duration must be a positive number');
@@ -289,7 +344,7 @@ function main() {
   
   checkDependencies();
   
-  captureAnimation(url, outputName, duration, selector)
+  captureAnimation(url, outputName, duration, options)
     .then(() => {
       success('All done! 🎬');
       process.exit(0);

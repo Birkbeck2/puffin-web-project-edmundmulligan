@@ -5,7 +5,7 @@
  * Copyright  : (c) 2026 The Embodied Mind
  * License    : MIT License (see license-and-credits.html page)
  * Description:
- *   View transition animations for theme and style switching.
+ *   Keyframe definitions for animations.
  **********************************************************************
  */
 
@@ -86,63 +86,56 @@
 
 /* Header and Footer slide animation keyframes */
 @keyframes slide-header-down {
-        from {
-                transform: translateY(-100%);
-        }
-
-        to {
-                transform: translateY(0);
-        }
+        from { transform: translateY(-100%); }
+        to { transform: translateY(0); }
 }
 
 @keyframes slide-header-up {
-        from {
-                transform: translateY(0);
-        }
-
-        to {
-                transform: translateY(-100%);
-        }
+        from { transform: translateY(0); }
+        to { transform: translateY(-100%); }
 }
 
 @keyframes slide-footer-up {
-        from {
-                transform: translateY(100%);
-        }
-
-        to {
-                transform: translateY(0);
-        }
+        from { transform: translateY(100%); }
+        to { transform: translateY(0); }
 }
 
 @keyframes slide-footer-down {
-        from {
-                transform: translateY(0);
-        }
-
-        to {
-                transform: translateY(100%);
-        }
+        from { transform: translateY(0); }
+        to { transform: translateY(100%); }
 }
 
 /* Theme switcher fade animation keyframes */
 @keyframes theme-switch-fade-out {
-        from {
-                opacity: 1;
-        }
-
-        to {
-                opacity: 0;
-        }
+        from { opacity: 1; }
+        to { opacity: 0; }
 }
 
 @keyframes theme-switch-fade-in {
-        from {
-                opacity: 0;
-        }
+        from { opacity: 0; }
+        to { opacity: 1; }
+}
 
-        to {
-                opacity: 1;
-        }
+@keyframes zoom {
+        from {transform: scale(0);}
+        to {transform: scale(1);}
+}
+
+@keyframes sparkle-1 {
+    0%, 100% { fill:var(--colour-red); } /* Deep Red */
+    33% { fill: var(--colour-green); } /* Bright Green */
+    66% { fill: var(--colour-navy); } /* Vibrant Yellow */
+}
+
+@keyframes sparkle-2 {
+    0%, 100% { fill: var(--colour-orange); } /* Bright Blue */
+    33% { fill: var(--colour-cyan); } /* Deep Orange */
+    66% { fill: var(--colour-purple); } /* Bright Purple */
+}
+
+@keyframes sparkle-3 {
+    0%, 100% { fill: var(--colour-yellow); } /* Cyan */
+    33% { fill: var(--colour-blue); } /* Hot Pink */
+    66% { fill: var(--colour-magenta); } /* Lime Green */
 }
 

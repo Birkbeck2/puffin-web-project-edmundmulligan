@@ -50,10 +50,20 @@ This is the recommended method for consistent, repeatable results.
 ### Install Dependencies
 
 ```bash
-npm install --save-dev puppeteer puppeteer-screen-recorder
+# Puppeteer is already installed (used by pa11y)
+# No additional dependencies needed - the script uses FFmpeg for video conversion
 ```
 
-### Create Capture Script
+**Check dependencies:**
+```bash
+# Verify puppeteer is installed
+npm list puppeteer
+
+# Verify ffmpeg is available
+ffmpeg -version
+```
+
+### Use the Capture Script
 
 Use the provided script: `bin/capture-css-animation.js`
 
