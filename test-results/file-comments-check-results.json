@@ -1,9 +1,51 @@
 {
-  "files": [],
+  "files": [
+    {
+      "file": "./bin/capture-css-animation.js",
+      "issues": [
+        {
+          "type": "missing-fields",
+          "message": "Missing required fields: File, Author, Copyright, License, Description",
+          "missingFields": [
+            "File",
+            "Author",
+            "Copyright",
+            "License",
+            "Description"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "./bin/capture-webpage.js",
+      "issues": [
+        {
+          "type": "missing-fields",
+          "message": "Missing required fields: File, Author, Copyright, License, Description",
+          "missingFields": [
+            "File",
+            "Author",
+            "Copyright",
+            "License",
+            "Description"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "./diagnostics/test-js-parsing.html",
+      "issues": [
+        {
+          "type": "missing-header",
+          "message": "Missing header comment block"
+        }
+      ]
+    }
+  ],
   "summary": {
-    "totalFiles": 92,
-    "filesWithIssues": 0,
-    "missingHeaderBlocks": 0,
-    "missingRequiredFields": 0
+    "totalFiles": 102,
+    "filesWithIssues": 3,
+    "missingHeaderBlocks": 1,
+    "missingRequiredFields": 2
   }
 }

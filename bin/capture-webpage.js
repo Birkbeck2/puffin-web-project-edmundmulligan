@@ -1,14 +1,18 @@
 #!/usr/bin/env node
 
+/*
+ **********************************************************************
+ * File       : capture-webpage.js
+ * Author     : Edmund Mulligan <edmund@edmundmulligan.name>
+ * Copyright  : (c) 2026 The Embodied Mind
+ * License    : MIT License
+ * Description:
+ *   Captures entire web page as PNG, including content beyond viewport.
+ *   Supports clicking elements to reveal hidden content before capturing.
+ **********************************************************************
+ */
+
 /**
- * Capture Full Web Page Screenshot
- * 
- * Captures entire web page as PNG, including content beyond viewport.
- * Supports clicking elements to reveal hidden content before capturing.
- * 
- * @license MIT
- * @author Edmund Mulligan / Puffin Web Project
- * 
  * Usage:
  *   node capture-webpage.js <url> <output-name> [options]
  * 

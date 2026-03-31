@@ -1,14 +1,18 @@
 #!/usr/bin/env node
 
+/*
+ **********************************************************************
+ * File       : capture-css-animation.js
+ * Author     : Edmund Mulligan <edmund@edmundmulligan.name>
+ * Copyright  : (c) 2026 The Embodied Mind
+ * License    : MIT License
+ * Description:
+ *   Automates the process of capturing a CSS animation from a webpage
+ *   and converting it to an optimized GIF using Puppeteer.
+ **********************************************************************
+ */
+
 /**
- * Capture CSS Animation to GIF
- * 
- * Automates the process of capturing a CSS animation from a webpage
- * and converting it to an optimized GIF using Puppeteer.
- * 
- * @license MIT
- * @author Edmund Mulligan / Puffin Web Project
- * 
  * Usage:
  *   node capture-css-animation.js <url> <output-name> <duration> [options]
  * 
