@@ -50,7 +50,9 @@
     <link rel="stylesheet" href="styles/pages/index.css">
 
     <!-- Load JavaScript files -->
-    <!-- debug.js must load first to be available to all other scripts -->
+    <!-- queryParams.js must load first for centralized URL parameter handling -->
+    <!-- debug.js must load second to be available to all other scripts -->
+    <script src="scripts/queryParams.js" defer></script>
     <script src="scripts/debug.js" defer></script>
     <script src="scripts/themeSwitcher.js" defer></script>
     <script src="scripts/toggleHeaderAndFooter.js" defer></script>

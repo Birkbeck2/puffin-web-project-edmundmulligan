@@ -11,6 +11,7 @@
  *   browser/system preference if no user choice is saved. Also allows
  *   for theme/style to be set via URL parameter for testing purposes.
  *   All colour combination meet WCAG 2.2 AAA standards.
+ *   Requires: queryParams.js (for window.QueryParams)
  **********************************************************************
 */
 
@@ -164,9 +165,8 @@
          */
         getThemePreference() {
             // Check URL parameter first (for testing purposes)
-            const urlParams = new URLSearchParams(window.location.search);
-            const themeParam = urlParams.get('theme');
-            if (themeParam === 'light' || themeParam === 'dark' || themeParam === 'auto') {
+            const themeParam = window.QueryParams.getTheme();
+            if (themeParam) {
                 Debug.log('Theme from URL parameter:', themeParam);
                 return themeParam;
             }
@@ -207,9 +207,8 @@
          */
         getStylePreference() {
             // Check URL parameter first (for testing purposes)
-            const urlParams = new URLSearchParams(window.location.search);
-            const styleParam = urlParams.get('style');
-            if (styleParam === 'normal' || styleParam === 'subdued' || styleParam === 'vibrant') {
+            const styleParam = window.QueryParams.getStyle();
+            if (styleParam) {
                 Debug.log('Style from URL parameter:', styleParam);
                 return styleParam;
             }
