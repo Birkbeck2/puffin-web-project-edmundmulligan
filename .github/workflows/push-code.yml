@@ -14,13 +14,13 @@ jobs:
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v4
+      uses: actions/checkout@v5
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
         fetch-depth: 0
 
     - name: Setup Node.js
-      uses: actions/setup-node@v4
+      uses: actions/setup-node@v5
       with:
         node-version: '24'
 
@@ -60,26 +60,32 @@ jobs:
         git config user.name "github-actions[bot]"
         git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
         
-        # Switch to development branch
-        git fetch origin development
-        git checkout development
-        git pull origin development
-
-        # Add release files
-        git add VERSION releases
-
-        if git diff --cached --quiet; then
-          echo "No generated files changed."
-        else
-          git commit -m "chore(release): v${RELEASE_VERSION} [skip ci]"
-          git push origin development
-        fi
+        # Store current commit for reference
+        CURRENT_COMMIT=$(git rev-parse HEAD)
+        echo "Current commit: $CURRENT_COMMIT"
         
-        # Switch back to main for deployment
-        git checkout main
+        # Fetch all branches to ensure we have latest refs
+        git fetch origin --all
+        
+        # Switch to development branch and ensure we're on the latest
+        git checkout -B development origin/development
+        git reset --hard origin/development
+        
+        # Cherry-pick the version and release changes from main
+        git cherry-pick $CURRENT_COMMIT || {
+          # If cherry-pick fails, manually copy the files
+          git checkout $CURRENT_COMMIT -- VERSION releases/ 2>/dev/null || true
+          git add VERSION releases/
+          git commit -m "chore(release): v${RELEASE_VERSION} [skip ci]" || echo "No changes to commit"
+        }
+        
+        # Push to development branch explicitly
+        git push origin HEAD:development
+        
+        echo "Successfully pushed release v${RELEASE_VERSION} to development branch"
 
     - name: Copy files to server
-      uses: appleboy/scp-action@v0.1.7
+      uses: appleboy/scp-action@v0.1.8
       with:
         host: prod.edmundmulligan.name
         username: ${{ secrets.SERVER_USERNAME }}
