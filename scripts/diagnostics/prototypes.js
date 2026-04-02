@@ -96,7 +96,7 @@
         };
         
         // Add click handler to open modal (only if image loads successfully)
-        img.addEventListener('click', (e) => {
+        img.addEventListener('click', () => {
             if (!img.classList.contains('error')) {
                 openImageModal(img.src, img.alt);
             }

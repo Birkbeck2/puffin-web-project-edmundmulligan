@@ -56,7 +56,6 @@
     to   { clip-path: circle( 0% at 50% 50%); }
 }
 
-
 /* Toggle fade animation keyframes */
 @keyframes toggle-fade-out {
         from {
@@ -139,17 +138,19 @@
     66% { fill: var(--colour-magenta); } /* Lime Green */
 }
 
-
-@keyframes portraitCycle {
+@keyframes portrait-cycle {
     0% {
         opacity: 0;
     }
+
     22.22% { /* 2s / 9s = 22.22% */
         opacity: 1;
     }
+
     77.78% { /* (2s + 5s) / 9s = 77.78% */
         opacity: 1;
     }
+
     100% {
         opacity: 0;
     }

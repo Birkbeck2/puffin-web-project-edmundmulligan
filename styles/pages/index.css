@@ -103,7 +103,7 @@ main {
 
 /* CSS Animation: fade in over 2s, display for 5s, fade out over 2s */
 .portrait-block.animating .portrait-image {
-    animation: portraitCycle 9s ease-in-out infinite;
+    animation: portrait-cycle 9s ease-in-out infinite;
 }
 
 /* Disable animations and show static portraits when reduced motion is preferred */
@@ -120,7 +120,7 @@ main {
 }
 
 /* Responsive: Show single portrait between blocks at 400-800px */
-@media (min-width: 400px) and (max-width: 799px) {
+@media (400px <= width < 800px) {
     .portrait-block#portrait-block-1 {
         display: flex;
         margin: 2rem auto;
@@ -145,7 +145,7 @@ main {
 }
 
 /* Responsive: Show portraits on left and right at >800px */
-@media (min-width: 800px) {
+@media (width >= 800px) {
     main {
         display: grid;
         grid-template-columns: calc(var(--buttonsize-circle) * 1.25) 1fr calc(var(--buttonsize-circle) * 1.25);
@@ -177,8 +177,7 @@ main {
         grid-column: 1;
         grid-row: 1 / span 2;
         margin: 0;
-        align-self: center;
-        justify-self: center;
+        place-self: center;
         transform: translateY(var(--portrait-offset, 0));
     }
     
@@ -187,8 +186,7 @@ main {
         grid-column: 3;
         grid-row: 1 / span 2;
         margin: 0;
-        align-self: center;
-        justify-self: center;
+        place-self: center;
         transform: translateY(var(--portrait-offset, 0));
     }
 }
