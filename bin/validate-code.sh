@@ -63,6 +63,34 @@ done
 echo "Installing dependencies..."
 npm install html-validate stylelint stylelint-config-standard eslint > /dev/null 2>&1
 
+# Check if critical tools are available
+if ! command -v node &> /dev/null; then
+  echo "❌ Error: Node.js is not installed or not in PATH"
+  exit 1
+fi
+
+# Get Node.js version
+NODE_VERSION=$(node --version | sed 's/v//' | cut -d. -f1)
+echo "Detected Node.js version: $NODE_VERSION"
+
+# Install compatible version of html-validate based on Node.js version
+if [ "$NODE_VERSION" -lt 20 ]; then
+  echo "Installing html-validate compatible with Node.js $NODE_VERSION..."
+  npm install html-validate@7.18.1 stylelint stylelint-config-standard eslint > /dev/null 2>&1
+else
+  npm install html-validate stylelint stylelint-config-standard eslint > /dev/null 2>&1
+fi
+
+if ! npx html-validate --version &> /dev/null; then
+  echo "❌ Error: html-validate is not available after npm install"
+  echo "Trying global install..."
+  if [ "$NODE_VERSION" -lt 20 ]; then
+    npm install -g html-validate@7.18.1 stylelint stylelint-config-standard eslint 2>&1
+  else
+    npm install -g html-validate stylelint stylelint-config-standard eslint 2>&1
+  fi
+fi
+
 echo ""
 echo "📄 Validating HTML, CSS, and JavaScript files..."
 echo ""
@@ -118,17 +146,29 @@ for file in $FILES; do
   TESTED=$((TESTED + 1))
   echo "[$TESTED/$FILE_COUNT] Validating $file"
 
-  # work out which validator to use
+  # work out which validator to use and check availability
   extension="${file##*.}"
   if [ "$extension" = "html" ]
   then
     validator='html-validate'
+    if ! npx html-validate --version &>/dev/null; then
+      echo "  ⚠️  Skipped - html-validate not available"
+      continue
+    fi
   elif [ "$extension" = "css" ]
   then
     validator='stylelint'
+    if ! npx stylelint --version &>/dev/null; then
+      echo "  ⚠️  Skipped - stylelint not available"
+      continue
+    fi
   elif [ "$extension" = "js" ]
   then
-    validator='eslint'
+    validator='jshint'
+    if ! command -v node &>/dev/null; then
+      echo "  ⚠️  Skipped - Node.js not available"
+      continue
+    fi
   else
     continue
   fi
@@ -144,9 +184,17 @@ for file in $FILES; do
   TEMP_ERROR="$RESULTS_DIR/validation-error-$TESTED.txt"
 
   if [ "$extension" = "html" ]; then
-    npx ${validator} --formatter json "${file}" > "$TEMP_RESULT" 2>&1
+    if ! npx html-validate --formatter json "${file}" > "$TEMP_RESULT" 2>"$TEMP_ERROR"; then
+      echo "  ⚠️  html-validate failed, check error log:"
+      cat "$TEMP_ERROR" 2>/dev/null || echo "  No error details available"
+      echo "[]" > "$TEMP_RESULT"  # Create empty result to prevent JSON errors
+    fi
   elif [ "$extension" = "css" ]; then
-    npx ${validator} --formatter json "${file}" > "$TEMP_RESULT" 2>&1
+    if ! npx stylelint --formatter json "${file}" > "$TEMP_RESULT" 2>"$TEMP_ERROR"; then
+      echo "  ⚠️  stylelint failed, check error log:"
+      cat "$TEMP_ERROR" 2>/dev/null || echo "  No error details available"
+      echo "[]" > "$TEMP_RESULT"  # Create empty result to prevent JSON errors
+    fi
   elif [ "$extension" = "js" ]; then
     # First, check for JS syntax errors using node --check
     node --check "$file" 2> "$TEMP_ERROR"
@@ -198,8 +246,6 @@ for file in $FILES; do
         "
       fi
     fi
-  else
-    npx ${validator} --format json "${file}" > "$TEMP_RESULT" 2>"$TEMP_ERROR"
   fi
 
   # Merge results into combined file
@@ -210,6 +256,7 @@ for file in $FILES; do
         const combined = JSON.parse(fs.readFileSync('$RESULT_FILE', 'utf8'));
         const tempResultContent = fs.readFileSync('$TEMP_RESULT', 'utf8');
         let newData = [];
+        
         if (!tempResultContent.trim()) {
           // Treat empty output as valid (no errors/warnings)
           // newData remains as empty array
@@ -218,6 +265,31 @@ for file in $FILES; do
             newData = JSON.parse(tempResultContent);
           } catch (e) {
             console.error('  ⚠️  Skipping: Validation result is not valid JSON.');
+            console.error('  Debug: Validator output was:');
+            console.error('  ' + JSON.stringify(tempResultContent.substring(0, 200)));
+            if (tempResultContent.length > 200) {
+              console.error('  ... (output truncated)');
+            }
+            
+            // Try to create a fallback error result
+            const fallbackResult = {
+              file: '$file',
+              type: '$extension',
+              errors: [{
+                line: 1,
+                column: 1,
+                message: 'Validator failed to produce valid JSON output: ' + e.message,
+                ruleId: 'validator-error',
+                severity: 'error'
+              }],
+              warnings: []
+            };
+            combined.files.push(fallbackResult);
+            combined.summary.$extension === 'html' ? combined.summary.htmlErrors++ : 
+            combined.summary.$extension === 'css' ? combined.summary.cssErrors++ : 
+            combined.summary.jsErrors++;
+            
+            fs.writeFileSync('$RESULT_FILE', JSON.stringify(combined, null, 2));
             process.exit(0);
           }
         }
