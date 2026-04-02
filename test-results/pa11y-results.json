@@ -19,12 +19,12 @@
       "issues": []
     },
     {
-      "url": "students/lesson-00.html",
+      "url": "interface-design/index.html",
       "theme": "light",
       "style": "normal",
       "viewport": "900",
-      "documentTitle": "Lesson 0 | Web Witchcraft and Wizardry",
-      "pageUrl": "http://localhost:8080/students/lesson-00",
+      "documentTitle": "Visual Design and Web Project Assignment 2",
+      "pageUrl": "http://localhost:8080/interface-design",
       "issues": []
     },
     {
@@ -37,21 +37,12 @@
       "issues": []
     },
     {
-      "url": "pages/glossary.html",
+      "url": "students/lesson-01.html",
       "theme": "light",
       "style": "normal",
       "viewport": "900",
-      "documentTitle": "Glossary | Web Witchcraft and Wizardry",
-      "pageUrl": "http://localhost:8080/pages/glossary",
-      "issues": []
-    },
-    {
-      "url": "pages/facts.html",
-      "theme": "light",
-      "style": "normal",
-      "viewport": "900",
-      "documentTitle": "Facts | Web Witchcraft and Wizardry",
-      "pageUrl": "http://localhost:8080/pages/facts",
+      "documentTitle": "Lesson 1 | Web Witchcraft and Wizardry",
+      "pageUrl": "http://localhost:8080/students/lesson-01",
       "issues": []
     },
     {
@@ -68,8 +59,8 @@
       "theme": "light",
       "style": "normal",
       "viewport": "900",
-      "documentTitle": "Student Dashboard | Web Witchcraft and Wizardry",
-      "pageUrl": "http://localhost:8080/pages/students",
+      "documentTitle": "About | Web Witchcraft and Wizardry",
+      "pageUrl": "http://localhost:8080/pages/start",
       "issues": []
     },
     {
@@ -82,6 +73,15 @@
       "issues": []
     },
     {
+      "url": "pages/facts.html",
+      "theme": "light",
+      "style": "normal",
+      "viewport": "900",
+      "documentTitle": "Facts | Web Witchcraft and Wizardry",
+      "pageUrl": "http://localhost:8080/pages/facts",
+      "issues": []
+    },
+    {
       "url": "pages/faq.html",
       "theme": "light",
       "style": "normal",
@@ -91,12 +91,21 @@
       "issues": []
     },
     {
-      "url": "pages/license.html",
+      "url": "pages/glossary.html",
       "theme": "light",
       "style": "normal",
       "viewport": "900",
-      "documentTitle": "License | Web Witchcraft and Wizardry",
-      "pageUrl": "http://localhost:8080/pages/license",
+      "documentTitle": "Glossary | Web Witchcraft and Wizardry",
+      "pageUrl": "http://localhost:8080/pages/glossary",
+      "issues": []
+    },
+    {
+      "url": "pages/students.html",
+      "theme": "light",
+      "style": "normal",
+      "viewport": "900",
+      "documentTitle": "Student Dashboard | Web Witchcraft and Wizardry",
+      "pageUrl": "http://localhost:8080/pages/students",
       "issues": []
     },
     {
@@ -113,80 +122,8 @@
       "theme": "light",
       "style": "normal",
       "viewport": "900",
-      "documentTitle": "About | Web Witchcraft and Wizardry",
-      "pageUrl": "http://localhost:8080/pages/start",
-      "issues": []
-    },
-    {
-      "url": "interface-design/index.html",
-      "theme": "light",
-      "style": "normal",
-      "viewport": "900",
-      "documentTitle": "Visual Design and Web Project Assignment 2",
-      "pageUrl": "http://localhost:8080/interface-design",
-      "issues": []
-    },
-    {
-      "url": "manipulated-images/image1.html",
-      "theme": "light",
-      "style": "normal",
-      "viewport": "900",
-      "documentTitle": "Visual Design and Web Project Assignment 1 - Image 1",
-      "pageUrl": "http://localhost:8080/manipulated-images/image1",
-      "issues": []
-    },
-    {
-      "url": "manipulated-images/image4.html",
-      "theme": "light",
-      "style": "normal",
-      "viewport": "900",
-      "documentTitle": "Visual Design and Web Project Assignment 1 - Image 4",
-      "pageUrl": "http://localhost:8080/manipulated-images/image4",
-      "issues": []
-    },
-    {
-      "url": "manipulated-images/image3.html",
-      "theme": "light",
-      "style": "normal",
-      "viewport": "900",
-      "documentTitle": "Visual Design and Web Project Assignment 1 - Image 3",
-      "pageUrl": "http://localhost:8080/manipulated-images/image3",
-      "issues": []
-    },
-    {
-      "url": "manipulated-images/index.html",
-      "theme": "light",
-      "style": "normal",
-      "viewport": "900",
-      "documentTitle": "Visual Design and Web Project Assignment 1",
-      "pageUrl": "http://localhost:8080/manipulated-images",
-      "issues": []
-    },
-    {
-      "url": "manipulated-images/image2.html",
-      "theme": "light",
-      "style": "normal",
-      "viewport": "900",
-      "documentTitle": "Visual Design and Web Project Assignment 1 - Image 2",
-      "pageUrl": "http://localhost:8080/manipulated-images/image2",
-      "issues": []
-    },
-    {
-      "url": "manipulated-images/image6.html",
-      "theme": "light",
-      "style": "normal",
-      "viewport": "900",
-      "documentTitle": "Visual Design and Web Project Assignment 1 - Image 6",
-      "pageUrl": "http://localhost:8080/manipulated-images/image6",
-      "issues": []
-    },
-    {
-      "url": "manipulated-images/image5.html",
-      "theme": "light",
-      "style": "normal",
-      "viewport": "900",
-      "documentTitle": "Visual Design and Web Project Assignment 1 - Image 5",
-      "pageUrl": "http://localhost:8080/manipulated-images/image5",
+      "documentTitle": "License | Web Witchcraft and Wizardry",
+      "pageUrl": "http://localhost:8080/pages/license",
       "issues": []
     },
     {
@@ -208,12 +145,12 @@
       "issues": []
     },
     {
-      "url": "students/lesson-00.html",
+      "url": "interface-design/index.html",
       "theme": "dark",
       "style": "normal",
       "viewport": "900",
-      "documentTitle": "Lesson 0 | Web Witchcraft and Wizardry",
-      "pageUrl": "http://localhost:8080/students/lesson-00",
+      "documentTitle": "Visual Design and Web Project Assignment 2",
+      "pageUrl": "http://localhost:8080/interface-design",
       "issues": []
     },
     {
@@ -226,21 +163,12 @@
       "issues": []
     },
     {
-      "url": "pages/glossary.html",
+      "url": "students/lesson-01.html",
       "theme": "dark",
       "style": "normal",
       "viewport": "900",
-      "documentTitle": "Glossary | Web Witchcraft and Wizardry",
-      "pageUrl": "http://localhost:8080/pages/glossary",
-      "issues": []
-    },
-    {
-      "url": "pages/facts.html",
-      "theme": "dark",
-      "style": "normal",
-      "viewport": "900",
-      "documentTitle": "Facts | Web Witchcraft and Wizardry",
-      "pageUrl": "http://localhost:8080/pages/facts",
+      "documentTitle": "Lesson 1 | Web Witchcraft and Wizardry",
+      "pageUrl": "http://localhost:8080/students/lesson-01",
       "issues": []
     },
     {
@@ -257,8 +185,8 @@
       "theme": "dark",
       "style": "normal",
       "viewport": "900",
-      "documentTitle": "Student Dashboard | Web Witchcraft and Wizardry",
-      "pageUrl": "http://localhost:8080/pages/students",
+      "documentTitle": "About | Web Witchcraft and Wizardry",
+      "pageUrl": "http://localhost:8080/pages/start",
       "issues": []
     },
     {
@@ -271,6 +199,15 @@
       "issues": []
     },
     {
+      "url": "pages/facts.html",
+      "theme": "dark",
+      "style": "normal",
+      "viewport": "900",
+      "documentTitle": "Facts | Web Witchcraft and Wizardry",
+      "pageUrl": "http://localhost:8080/pages/facts",
+      "issues": []
+    },
+    {
       "url": "pages/faq.html",
       "theme": "dark",
       "style": "normal",
@@ -280,12 +217,21 @@
       "issues": []
     },
     {
-      "url": "pages/license.html",
+      "url": "pages/glossary.html",
       "theme": "dark",
       "style": "normal",
       "viewport": "900",
-      "documentTitle": "License | Web Witchcraft and Wizardry",
-      "pageUrl": "http://localhost:8080/pages/license",
+      "documentTitle": "Glossary | Web Witchcraft and Wizardry",
+      "pageUrl": "http://localhost:8080/pages/glossary",
+      "issues": []
+    },
+    {
+      "url": "pages/students.html",
+      "theme": "dark",
+      "style": "normal",
+      "viewport": "900",
+      "documentTitle": "Student Dashboard | Web Witchcraft and Wizardry",
+      "pageUrl": "http://localhost:8080/pages/students",
       "issues": []
     },
     {
@@ -302,80 +248,8 @@
       "theme": "dark",
       "style": "normal",
       "viewport": "900",
-      "documentTitle": "About | Web Witchcraft and Wizardry",
-      "pageUrl": "http://localhost:8080/pages/start",
-      "issues": []
-    },
-    {
-      "url": "interface-design/index.html",
-      "theme": "dark",
-      "style": "normal",
-      "viewport": "900",
-      "documentTitle": "Visual Design and Web Project Assignment 2",
-      "pageUrl": "http://localhost:8080/interface-design",
-      "issues": []
-    },
-    {
-      "url": "manipulated-images/image1.html",
-      "theme": "dark",
-      "style": "normal",
-      "viewport": "900",
-      "documentTitle": "Visual Design and Web Project Assignment 1 - Image 1",
-      "pageUrl": "http://localhost:8080/manipulated-images/image1",
-      "issues": []
-    },
-    {
-      "url": "manipulated-images/image4.html",
-      "theme": "dark",
-      "style": "normal",
-      "viewport": "900",
-      "documentTitle": "Visual Design and Web Project Assignment 1 - Image 4",
-      "pageUrl": "http://localhost:8080/manipulated-images/image4",
-      "issues": []
-    },
-    {
-      "url": "manipulated-images/image3.html",
-      "theme": "dark",
-      "style": "normal",
-      "viewport": "900",
-      "documentTitle": "Visual Design and Web Project Assignment 1 - Image 3",
-      "pageUrl": "http://localhost:8080/manipulated-images/image3",
-      "issues": []
-    },
-    {
-      "url": "manipulated-images/index.html",
-      "theme": "dark",
-      "style": "normal",
-      "viewport": "900",
-      "documentTitle": "Visual Design and Web Project Assignment 1",
-      "pageUrl": "http://localhost:8080/manipulated-images",
-      "issues": []
-    },
-    {
-      "url": "manipulated-images/image2.html",
-      "theme": "dark",
-      "style": "normal",
-      "viewport": "900",
-      "documentTitle": "Visual Design and Web Project Assignment 1 - Image 2",
-      "pageUrl": "http://localhost:8080/manipulated-images/image2",
-      "issues": []
-    },
-    {
-      "url": "manipulated-images/image6.html",
-      "theme": "dark",
-      "style": "normal",
-      "viewport": "900",
-      "documentTitle": "Visual Design and Web Project Assignment 1 - Image 6",
-      "pageUrl": "http://localhost:8080/manipulated-images/image6",
-      "issues": []
-    },
-    {
-      "url": "manipulated-images/image5.html",
-      "theme": "dark",
-      "style": "normal",
-      "viewport": "900",
-      "documentTitle": "Visual Design and Web Project Assignment 1 - Image 5",
-      "pageUrl": "http://localhost:8080/manipulated-images/image5",
+      "documentTitle": "License | Web Witchcraft and Wizardry",
+      "pageUrl": "http://localhost:8080/pages/license",
       "issues": []
     },
     {
@@ -397,12 +271,12 @@
       "issues": []
     },
     {
-      "url": "students/lesson-00.html",
+      "url": "interface-design/index.html",
       "theme": "light",
       "style": "subdued",
       "viewport": "900",
-      "documentTitle": "Lesson 0 | Web Witchcraft and Wizardry",
-      "pageUrl": "http://localhost:8080/students/lesson-00",
+      "documentTitle": "Visual Design and Web Project Assignment 2",
+      "pageUrl": "http://localhost:8080/interface-design",
       "issues": []
     },
     {
@@ -415,21 +289,12 @@
       "issues": []
     },
     {
-      "url": "pages/glossary.html",
+      "url": "students/lesson-01.html",
       "theme": "light",
       "style": "subdued",
       "viewport": "900",
-      "documentTitle": "Glossary | Web Witchcraft and Wizardry",
-      "pageUrl": "http://localhost:8080/pages/glossary",
-      "issues": []
-    },
-    {
-      "url": "pages/facts.html",
-      "theme": "light",
-      "style": "subdued",
-      "viewport": "900",
-      "documentTitle": "Facts | Web Witchcraft and Wizardry",
-      "pageUrl": "http://localhost:8080/pages/facts",
+      "documentTitle": "Lesson 1 | Web Witchcraft and Wizardry",
+      "pageUrl": "http://localhost:8080/students/lesson-01",
       "issues": []
     },
     {
@@ -446,8 +311,8 @@
       "theme": "light",
       "style": "subdued",
       "viewport": "900",
-      "documentTitle": "Student Dashboard | Web Witchcraft and Wizardry",
-      "pageUrl": "http://localhost:8080/pages/students",
+      "documentTitle": "About | Web Witchcraft and Wizardry",
+      "pageUrl": "http://localhost:8080/pages/start",
       "issues": []
     },
     {
@@ -460,6 +325,15 @@
       "issues": []
     },
     {
+      "url": "pages/facts.html",
+      "theme": "light",
+      "style": "subdued",
+      "viewport": "900",
+      "documentTitle": "Facts | Web Witchcraft and Wizardry",
+      "pageUrl": "http://localhost:8080/pages/facts",
+      "issues": []
+    },
+    {
       "url": "pages/faq.html",
       "theme": "light",
       "style": "subdued",
@@ -469,12 +343,21 @@
       "issues": []
     },
     {
-      "url": "pages/license.html",
+      "url": "pages/glossary.html",
       "theme": "light",
       "style": "subdued",
       "viewport": "900",
-      "documentTitle": "License | Web Witchcraft and Wizardry",
-      "pageUrl": "http://localhost:8080/pages/license",
+      "documentTitle": "Glossary | Web Witchcraft and Wizardry",
+      "pageUrl": "http://localhost:8080/pages/glossary",
+      "issues": []
+    },
+    {
+      "url": "pages/students.html",
+      "theme": "light",
+      "style": "subdued",
+      "viewport": "900",
+      "documentTitle": "Student Dashboard | Web Witchcraft and Wizardry",
+      "pageUrl": "http://localhost:8080/pages/students",
       "issues": []
     },
     {
@@ -491,80 +374,8 @@
       "theme": "light",
       "style": "subdued",
       "viewport": "900",
-      "documentTitle": "About | Web Witchcraft and Wizardry",
-      "pageUrl": "http://localhost:8080/pages/start",
-      "issues": []
-    },
-    {
-      "url": "interface-design/index.html",
-      "theme": "light",
-      "style": "subdued",
-      "viewport": "900",
-      "documentTitle": "Visual Design and Web Project Assignment 2",
-      "pageUrl": "http://localhost:8080/interface-design",
-      "issues": []
-    },
-    {
-      "url": "manipulated-images/image1.html",
-      "theme": "light",
-      "style": "subdued",
-      "viewport": "900",
-      "documentTitle": "Visual Design and Web Project Assignment 1 - Image 1",
-      "pageUrl": "http://localhost:8080/manipulated-images/image1",
-      "issues": []
-    },
-    {
-      "url": "manipulated-images/image4.html",
-      "theme": "light",
-      "style": "subdued",
-      "viewport": "900",
-      "documentTitle": "Visual Design and Web Project Assignment 1 - Image 4",
-      "pageUrl": "http://localhost:8080/manipulated-images/image4",
-      "issues": []
-    },
-    {
-      "url": "manipulated-images/image3.html",
-      "theme": "light",
-      "style": "subdued",
-      "viewport": "900",
-      "documentTitle": "Visual Design and Web Project Assignment 1 - Image 3",
-      "pageUrl": "http://localhost:8080/manipulated-images/image3",
-      "issues": []
-    },
-    {
-      "url": "manipulated-images/index.html",
-      "theme": "light",
-      "style": "subdued",
-      "viewport": "900",
-      "documentTitle": "Visual Design and Web Project Assignment 1",
-      "pageUrl": "http://localhost:8080/manipulated-images",
-      "issues": []
-    },
-    {
-      "url": "manipulated-images/image2.html",
-      "theme": "light",
-      "style": "subdued",
-      "viewport": "900",
-      "documentTitle": "Visual Design and Web Project Assignment 1 - Image 2",
-      "pageUrl": "http://localhost:8080/manipulated-images/image2",
-      "issues": []
-    },
-    {
-      "url": "manipulated-images/image6.html",
-      "theme": "light",
-      "style": "subdued",
-      "viewport": "900",
-      "documentTitle": "Visual Design and Web Project Assignment 1 - Image 6",
-      "pageUrl": "http://localhost:8080/manipulated-images/image6",
-      "issues": []
-    },
-    {
-      "url": "manipulated-images/image5.html",
-      "theme": "light",
-      "style": "subdued",
-      "viewport": "900",
-      "documentTitle": "Visual Design and Web Project Assignment 1 - Image 5",
-      "pageUrl": "http://localhost:8080/manipulated-images/image5",
+      "documentTitle": "License | Web Witchcraft and Wizardry",
+      "pageUrl": "http://localhost:8080/pages/license",
       "issues": []
     },
     {
@@ -586,12 +397,12 @@
       "issues": []
     },
     {
-      "url": "students/lesson-00.html",
+      "url": "interface-design/index.html",
       "theme": "dark",
       "style": "subdued",
       "viewport": "900",
-      "documentTitle": "Lesson 0 | Web Witchcraft and Wizardry",
-      "pageUrl": "http://localhost:8080/students/lesson-00",
+      "documentTitle": "Visual Design and Web Project Assignment 2",
+      "pageUrl": "http://localhost:8080/interface-design",
       "issues": []
     },
     {
@@ -604,21 +415,12 @@
       "issues": []
     },
     {
-      "url": "pages/glossary.html",
+      "url": "students/lesson-01.html",
       "theme": "dark",
       "style": "subdued",
       "viewport": "900",
-      "documentTitle": "Glossary | Web Witchcraft and Wizardry",
-      "pageUrl": "http://localhost:8080/pages/glossary",
-      "issues": []
-    },
-    {
-      "url": "pages/facts.html",
-      "theme": "dark",
-      "style": "subdued",
-      "viewport": "900",
-      "documentTitle": "Facts | Web Witchcraft and Wizardry",
-      "pageUrl": "http://localhost:8080/pages/facts",
+      "documentTitle": "Lesson 1 | Web Witchcraft and Wizardry",
+      "pageUrl": "http://localhost:8080/students/lesson-01",
       "issues": []
     },
     {
@@ -635,8 +437,8 @@
       "theme": "dark",
       "style": "subdued",
       "viewport": "900",
-      "documentTitle": "Student Dashboard | Web Witchcraft and Wizardry",
-      "pageUrl": "http://localhost:8080/pages/students",
+      "documentTitle": "About | Web Witchcraft and Wizardry",
+      "pageUrl": "http://localhost:8080/pages/start",
       "issues": []
     },
     {
@@ -649,6 +451,15 @@
       "issues": []
     },
     {
+      "url": "pages/facts.html",
+      "theme": "dark",
+      "style": "subdued",
+      "viewport": "900",
+      "documentTitle": "Facts | Web Witchcraft and Wizardry",
+      "pageUrl": "http://localhost:8080/pages/facts",
+      "issues": []
+    },
+    {
       "url": "pages/faq.html",
       "theme": "dark",
       "style": "subdued",
@@ -658,12 +469,21 @@
       "issues": []
     },
     {
-      "url": "pages/license.html",
+      "url": "pages/glossary.html",
       "theme": "dark",
       "style": "subdued",
       "viewport": "900",
-      "documentTitle": "License | Web Witchcraft and Wizardry",
-      "pageUrl": "http://localhost:8080/pages/license",
+      "documentTitle": "Glossary | Web Witchcraft and Wizardry",
+      "pageUrl": "http://localhost:8080/pages/glossary",
+      "issues": []
+    },
+    {
+      "url": "pages/students.html",
+      "theme": "dark",
+      "style": "subdued",
+      "viewport": "900",
+      "documentTitle": "Student Dashboard | Web Witchcraft and Wizardry",
+      "pageUrl": "http://localhost:8080/pages/students",
       "issues": []
     },
     {
@@ -680,80 +500,8 @@
       "theme": "dark",
       "style": "subdued",
       "viewport": "900",
-      "documentTitle": "About | Web Witchcraft and Wizardry",
-      "pageUrl": "http://localhost:8080/pages/start",
-      "issues": []
-    },
-    {
-      "url": "interface-design/index.html",
-      "theme": "dark",
-      "style": "subdued",
-      "viewport": "900",
-      "documentTitle": "Visual Design and Web Project Assignment 2",
-      "pageUrl": "http://localhost:8080/interface-design",
-      "issues": []
-    },
-    {
-      "url": "manipulated-images/image1.html",
-      "theme": "dark",
-      "style": "subdued",
-      "viewport": "900",
-      "documentTitle": "Visual Design and Web Project Assignment 1 - Image 1",
-      "pageUrl": "http://localhost:8080/manipulated-images/image1",
-      "issues": []
-    },
-    {
-      "url": "manipulated-images/image4.html",
-      "theme": "dark",
-      "style": "subdued",
-      "viewport": "900",
-      "documentTitle": "Visual Design and Web Project Assignment 1 - Image 4",
-      "pageUrl": "http://localhost:8080/manipulated-images/image4",
-      "issues": []
-    },
-    {
-      "url": "manipulated-images/image3.html",
-      "theme": "dark",
-      "style": "subdued",
-      "viewport": "900",
-      "documentTitle": "Visual Design and Web Project Assignment 1 - Image 3",
-      "pageUrl": "http://localhost:8080/manipulated-images/image3",
-      "issues": []
-    },
-    {
-      "url": "manipulated-images/index.html",
-      "theme": "dark",
-      "style": "subdued",
-      "viewport": "900",
-      "documentTitle": "Visual Design and Web Project Assignment 1",
-      "pageUrl": "http://localhost:8080/manipulated-images",
-      "issues": []
-    },
-    {
-      "url": "manipulated-images/image2.html",
-      "theme": "dark",
-      "style": "subdued",
-      "viewport": "900",
-      "documentTitle": "Visual Design and Web Project Assignment 1 - Image 2",
-      "pageUrl": "http://localhost:8080/manipulated-images/image2",
-      "issues": []
-    },
-    {
-      "url": "manipulated-images/image6.html",
-      "theme": "dark",
-      "style": "subdued",
-      "viewport": "900",
-      "documentTitle": "Visual Design and Web Project Assignment 1 - Image 6",
-      "pageUrl": "http://localhost:8080/manipulated-images/image6",
-      "issues": []
-    },
-    {
-      "url": "manipulated-images/image5.html",
-      "theme": "dark",
-      "style": "subdued",
-      "viewport": "900",
-      "documentTitle": "Visual Design and Web Project Assignment 1 - Image 5",
-      "pageUrl": "http://localhost:8080/manipulated-images/image5",
+      "documentTitle": "License | Web Witchcraft and Wizardry",
+      "pageUrl": "http://localhost:8080/pages/license",
       "issues": []
     },
     {
@@ -775,12 +523,12 @@
       "issues": []
     },
     {
-      "url": "students/lesson-00.html",
+      "url": "interface-design/index.html",
       "theme": "light",
       "style": "vibrant",
       "viewport": "900",
-      "documentTitle": "Lesson 0 | Web Witchcraft and Wizardry",
-      "pageUrl": "http://localhost:8080/students/lesson-00",
+      "documentTitle": "Visual Design and Web Project Assignment 2",
+      "pageUrl": "http://localhost:8080/interface-design",
       "issues": []
     },
     {
@@ -793,21 +541,12 @@
       "issues": []
     },
     {
-      "url": "pages/glossary.html",
+      "url": "students/lesson-01.html",
       "theme": "light",
       "style": "vibrant",
       "viewport": "900",
-      "documentTitle": "Glossary | Web Witchcraft and Wizardry",
-      "pageUrl": "http://localhost:8080/pages/glossary",
-      "issues": []
-    },
-    {
-      "url": "pages/facts.html",
-      "theme": "light",
-      "style": "vibrant",
-      "viewport": "900",
-      "documentTitle": "Facts | Web Witchcraft and Wizardry",
-      "pageUrl": "http://localhost:8080/pages/facts",
+      "documentTitle": "Lesson 1 | Web Witchcraft and Wizardry",
+      "pageUrl": "http://localhost:8080/students/lesson-01",
       "issues": []
     },
     {
@@ -824,8 +563,8 @@
       "theme": "light",
       "style": "vibrant",
       "viewport": "900",
-      "documentTitle": "Student Dashboard | Web Witchcraft and Wizardry",
-      "pageUrl": "http://localhost:8080/pages/students",
+      "documentTitle": "About | Web Witchcraft and Wizardry",
+      "pageUrl": "http://localhost:8080/pages/start",
       "issues": []
     },
     {
@@ -838,6 +577,15 @@
       "issues": []
     },
     {
+      "url": "pages/facts.html",
+      "theme": "light",
+      "style": "vibrant",
+      "viewport": "900",
+      "documentTitle": "Facts | Web Witchcraft and Wizardry",
+      "pageUrl": "http://localhost:8080/pages/facts",
+      "issues": []
+    },
+    {
       "url": "pages/faq.html",
       "theme": "light",
       "style": "vibrant",
@@ -847,12 +595,21 @@
       "issues": []
     },
     {
-      "url": "pages/license.html",
+      "url": "pages/glossary.html",
       "theme": "light",
       "style": "vibrant",
       "viewport": "900",
-      "documentTitle": "License | Web Witchcraft and Wizardry",
-      "pageUrl": "http://localhost:8080/pages/license",
+      "documentTitle": "Glossary | Web Witchcraft and Wizardry",
+      "pageUrl": "http://localhost:8080/pages/glossary",
+      "issues": []
+    },
+    {
+      "url": "pages/students.html",
+      "theme": "light",
+      "style": "vibrant",
+      "viewport": "900",
+      "documentTitle": "Student Dashboard | Web Witchcraft and Wizardry",
+      "pageUrl": "http://localhost:8080/pages/students",
       "issues": []
     },
     {
@@ -869,80 +626,8 @@
       "theme": "light",
       "style": "vibrant",
       "viewport": "900",
-      "documentTitle": "About | Web Witchcraft and Wizardry",
-      "pageUrl": "http://localhost:8080/pages/start",
-      "issues": []
-    },
-    {
-      "url": "interface-design/index.html",
-      "theme": "light",
-      "style": "vibrant",
-      "viewport": "900",
-      "documentTitle": "Visual Design and Web Project Assignment 2",
-      "pageUrl": "http://localhost:8080/interface-design",
-      "issues": []
-    },
-    {
-      "url": "manipulated-images/image1.html",
-      "theme": "light",
-      "style": "vibrant",
-      "viewport": "900",
-      "documentTitle": "Visual Design and Web Project Assignment 1 - Image 1",
-      "pageUrl": "http://localhost:8080/manipulated-images/image1",
-      "issues": []
-    },
-    {
-      "url": "manipulated-images/image4.html",
-      "theme": "light",
-      "style": "vibrant",
-      "viewport": "900",
-      "documentTitle": "Visual Design and Web Project Assignment 1 - Image 4",
-      "pageUrl": "http://localhost:8080/manipulated-images/image4",
-      "issues": []
-    },
-    {
-      "url": "manipulated-images/image3.html",
-      "theme": "light",
-      "style": "vibrant",
-      "viewport": "900",
-      "documentTitle": "Visual Design and Web Project Assignment 1 - Image 3",
-      "pageUrl": "http://localhost:8080/manipulated-images/image3",
-      "issues": []
-    },
-    {
-      "url": "manipulated-images/index.html",
-      "theme": "light",
-      "style": "vibrant",
-      "viewport": "900",
-      "documentTitle": "Visual Design and Web Project Assignment 1",
-      "pageUrl": "http://localhost:8080/manipulated-images",
-      "issues": []
-    },
-    {
-      "url": "manipulated-images/image2.html",
-      "theme": "light",
-      "style": "vibrant",
-      "viewport": "900",
-      "documentTitle": "Visual Design and Web Project Assignment 1 - Image 2",
-      "pageUrl": "http://localhost:8080/manipulated-images/image2",
-      "issues": []
-    },
-    {
-      "url": "manipulated-images/image6.html",
-      "theme": "light",
-      "style": "vibrant",
-      "viewport": "900",
-      "documentTitle": "Visual Design and Web Project Assignment 1 - Image 6",
-      "pageUrl": "http://localhost:8080/manipulated-images/image6",
-      "issues": []
-    },
-    {
-      "url": "manipulated-images/image5.html",
-      "theme": "light",
-      "style": "vibrant",
-      "viewport": "900",
-      "documentTitle": "Visual Design and Web Project Assignment 1 - Image 5",
-      "pageUrl": "http://localhost:8080/manipulated-images/image5",
+      "documentTitle": "License | Web Witchcraft and Wizardry",
+      "pageUrl": "http://localhost:8080/pages/license",
       "issues": []
     },
     {
@@ -964,12 +649,12 @@
       "issues": []
     },
     {
-      "url": "students/lesson-00.html",
+      "url": "interface-design/index.html",
       "theme": "dark",
       "style": "vibrant",
       "viewport": "900",
-      "documentTitle": "Lesson 0 | Web Witchcraft and Wizardry",
-      "pageUrl": "http://localhost:8080/students/lesson-00",
+      "documentTitle": "Visual Design and Web Project Assignment 2",
+      "pageUrl": "http://localhost:8080/interface-design",
       "issues": []
     },
     {
@@ -982,21 +667,12 @@
       "issues": []
     },
     {
-      "url": "pages/glossary.html",
+      "url": "students/lesson-01.html",
       "theme": "dark",
       "style": "vibrant",
       "viewport": "900",
-      "documentTitle": "Glossary | Web Witchcraft and Wizardry",
-      "pageUrl": "http://localhost:8080/pages/glossary",
-      "issues": []
-    },
-    {
-      "url": "pages/facts.html",
-      "theme": "dark",
-      "style": "vibrant",
-      "viewport": "900",
-      "documentTitle": "Facts | Web Witchcraft and Wizardry",
-      "pageUrl": "http://localhost:8080/pages/facts",
+      "documentTitle": "Lesson 1 | Web Witchcraft and Wizardry",
+      "pageUrl": "http://localhost:8080/students/lesson-01",
       "issues": []
     },
     {
@@ -1013,8 +689,8 @@
       "theme": "dark",
       "style": "vibrant",
       "viewport": "900",
-      "documentTitle": "Student Dashboard | Web Witchcraft and Wizardry",
-      "pageUrl": "http://localhost:8080/pages/students",
+      "documentTitle": "About | Web Witchcraft and Wizardry",
+      "pageUrl": "http://localhost:8080/pages/start",
       "issues": []
     },
     {
@@ -1027,6 +703,15 @@
       "issues": []
     },
     {
+      "url": "pages/facts.html",
+      "theme": "dark",
+      "style": "vibrant",
+      "viewport": "900",
+      "documentTitle": "Facts | Web Witchcraft and Wizardry",
+      "pageUrl": "http://localhost:8080/pages/facts",
+      "issues": []
+    },
+    {
       "url": "pages/faq.html",
       "theme": "dark",
       "style": "vibrant",
@@ -1036,12 +721,21 @@
       "issues": []
     },
     {
-      "url": "pages/license.html",
+      "url": "pages/glossary.html",
       "theme": "dark",
       "style": "vibrant",
       "viewport": "900",
-      "documentTitle": "License | Web Witchcraft and Wizardry",
-      "pageUrl": "http://localhost:8080/pages/license",
+      "documentTitle": "Glossary | Web Witchcraft and Wizardry",
+      "pageUrl": "http://localhost:8080/pages/glossary",
+      "issues": []
+    },
+    {
+      "url": "pages/students.html",
+      "theme": "dark",
+      "style": "vibrant",
+      "viewport": "900",
+      "documentTitle": "Student Dashboard | Web Witchcraft and Wizardry",
+      "pageUrl": "http://localhost:8080/pages/students",
       "issues": []
     },
     {
@@ -1058,80 +752,8 @@
       "theme": "dark",
       "style": "vibrant",
       "viewport": "900",
-      "documentTitle": "About | Web Witchcraft and Wizardry",
-      "pageUrl": "http://localhost:8080/pages/start",
-      "issues": []
-    },
-    {
-      "url": "interface-design/index.html",
-      "theme": "dark",
-      "style": "vibrant",
-      "viewport": "900",
-      "documentTitle": "Visual Design and Web Project Assignment 2",
-      "pageUrl": "http://localhost:8080/interface-design",
-      "issues": []
-    },
-    {
-      "url": "manipulated-images/image1.html",
-      "theme": "dark",
-      "style": "vibrant",
-      "viewport": "900",
-      "documentTitle": "Visual Design and Web Project Assignment 1 - Image 1",
-      "pageUrl": "http://localhost:8080/manipulated-images/image1",
-      "issues": []
-    },
-    {
-      "url": "manipulated-images/image4.html",
-      "theme": "dark",
-      "style": "vibrant",
-      "viewport": "900",
-      "documentTitle": "Visual Design and Web Project Assignment 1 - Image 4",
-      "pageUrl": "http://localhost:8080/manipulated-images/image4",
-      "issues": []
-    },
-    {
-      "url": "manipulated-images/image3.html",
-      "theme": "dark",
-      "style": "vibrant",
-      "viewport": "900",
-      "documentTitle": "Visual Design and Web Project Assignment 1 - Image 3",
-      "pageUrl": "http://localhost:8080/manipulated-images/image3",
-      "issues": []
-    },
-    {
-      "url": "manipulated-images/index.html",
-      "theme": "dark",
-      "style": "vibrant",
-      "viewport": "900",
-      "documentTitle": "Visual Design and Web Project Assignment 1",
-      "pageUrl": "http://localhost:8080/manipulated-images",
-      "issues": []
-    },
-    {
-      "url": "manipulated-images/image2.html",
-      "theme": "dark",
-      "style": "vibrant",
-      "viewport": "900",
-      "documentTitle": "Visual Design and Web Project Assignment 1 - Image 2",
-      "pageUrl": "http://localhost:8080/manipulated-images/image2",
-      "issues": []
-    },
-    {
-      "url": "manipulated-images/image6.html",
-      "theme": "dark",
-      "style": "vibrant",
-      "viewport": "900",
-      "documentTitle": "Visual Design and Web Project Assignment 1 - Image 6",
-      "pageUrl": "http://localhost:8080/manipulated-images/image6",
-      "issues": []
-    },
-    {
-      "url": "manipulated-images/image5.html",
-      "theme": "dark",
-      "style": "vibrant",
-      "viewport": "900",
-      "documentTitle": "Visual Design and Web Project Assignment 1 - Image 5",
-      "pageUrl": "http://localhost:8080/manipulated-images/image5",
+      "documentTitle": "License | Web Witchcraft and Wizardry",
+      "pageUrl": "http://localhost:8080/pages/license",
       "issues": []
     }
   ]
