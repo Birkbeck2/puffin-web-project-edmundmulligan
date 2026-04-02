@@ -11,6 +11,18 @@
  **********************************************************************
 */
 
+/**
+ * Utility function to escape HTML characters
+ * @param {string} text - Text to escape
+ * @returns {string} Escaped text
+ */
+function escapeHtml(text) {
+    if (typeof text !== 'string') return '';
+    const div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML;
+}
+
 (function() {
     'use strict';
 
@@ -207,8 +219,9 @@
                 const imageName = `rachel-mulligan-${data.avatarChoice}-${data.ageChoice}-${data.genderChoice}.png`;
                 const imagePath = `../images/portraits/${imageName}`;
             
-                // Create and set the image
-                output.innerHTML = `<img src="${imagePath}" alt="Your avatar: ${data.avatarChoice}, ${data.ageChoice}, ${data.genderChoice}" style="width: 100%; height: auto; border-radius: var(--border-radius, 0.5rem);">`;
+                // Create and set the image with escaped data
+                const altText = escapeHtml(`Your avatar: ${data.avatarChoice}, ${data.ageChoice}, ${data.genderChoice}`);
+                output.innerHTML = `<img src="${escapeHtml(imagePath)}" alt="${altText}" style="width: 100%; height: auto; border-radius: var(--border-radius, 0.5rem);">`;
             } else {
                 // Clear output if not all selections are made
                 output.innerHTML = '';
@@ -497,12 +510,13 @@
                     const imagePath = `../images/portraits/${imageName}`;
                     const studentName = data.name || 'Student';
                 
-                    // Create figure with image and caption
+                    // Create figure with image and caption (with escaped data)
+                    const altText = escapeHtml(`Your avatar: ${data.avatarChoice}, ${data.ageChoice}, ${data.genderChoice}`);
                     const imageHTML = `
                     <figure style="margin: 0; text-align: center;">
-                        <img src="${imagePath}" alt="Your avatar: ${data.avatarChoice}, ${data.ageChoice}, ${data.genderChoice}" class="avatar-image">
+                        <img src="${escapeHtml(imagePath)}" alt="${altText}" class="avatar-image">
                         <figcaption class="avatar-caption">
-                            Welcome, ${studentName}
+                            Welcome, ${escapeHtml(studentName)}
                         </figcaption>
                     </figure>
                 `;

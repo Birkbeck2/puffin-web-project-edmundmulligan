@@ -11,6 +11,18 @@
 */
 
 /**
+ * Utility function to escape HTML characters
+ * @param {string} text - Text to escape
+ * @returns {string} Escaped text
+ */
+function escapeHtml(text) {
+    if (typeof text !== 'string') return '';
+    const div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML;
+}
+
+/**
  * Cached raw test payloads keyed by card title for reuse in the modal detail view.
  *
  * @type {Record<string, unknown>}
@@ -130,7 +142,7 @@ function showTestDetails(testType) {
         console.error(`Error displaying details for ${testType}:`, error);
         modalBody.innerHTML = `
             <div class="error-message">
-                Could not render details for ${testType}. Check the console for the underlying error.
+                Could not render details for ${escapeHtml(testType)}. Check the console for the underlying error.
             </div>
         `;
     }
