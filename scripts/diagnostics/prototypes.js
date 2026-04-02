@@ -178,7 +178,7 @@
             // Create close button
             const closeBtn = document.createElement('button');
             closeBtn.className = 'image-modal-close';
-            closeBtn.innerHTML = '&times;';
+            closeBtn.textContent = '×';
             closeBtn.setAttribute('aria-label', 'Close modal');
             closeBtn.addEventListener('click', (e) => {
                 e.stopPropagation();
