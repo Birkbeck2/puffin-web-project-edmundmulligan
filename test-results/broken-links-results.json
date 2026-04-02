@@ -4,82 +4,88 @@
       "url": "mentors/lesson-00.html",
       "links": [],
       "brokenCount": 0,
-      "totalCount": 19
+      "totalCount": 20
     },
     {
       "url": "index.html",
       "links": [],
       "brokenCount": 0,
-      "totalCount": 16
+      "totalCount": 17
     },
     {
       "url": "students/lesson-01.html",
       "links": [],
       "brokenCount": 0,
-      "totalCount": 24
+      "totalCount": 25
     },
     {
       "url": "students/lesson-00.html",
       "links": [],
       "brokenCount": 0,
-      "totalCount": 32
-    },
-    {
-      "url": "students/lesson-01.html",
-      "links": [],
-      "brokenCount": 0,
-      "totalCount": 24
-    },
-    {
-      "url": "pages/mentors.html",
-      "links": [],
-      "brokenCount": 0,
-      "totalCount": 16
-    },
-    {
-      "url": "pages/start.html",
-      "links": [],
-      "brokenCount": 0,
-      "totalCount": 16
-    },
-    {
-      "url": "pages/gallery.html",
-      "links": [],
-      "brokenCount": 0,
-      "totalCount": 42
-    },
-    {
-      "url": "pages/faq.html",
-      "links": [],
-      "brokenCount": 0,
-      "totalCount": 15
+      "totalCount": 33
     },
     {
       "url": "pages/glossary.html",
       "links": [],
       "brokenCount": 0,
-      "totalCount": 12
+      "totalCount": 13
+    },
+    {
+      "url": "pages/facts.html",
+      "links": [],
+      "brokenCount": 0,
+      "totalCount": 13
+    },
+    {
+      "url": "pages/mentors.html",
+      "links": [],
+      "brokenCount": 0,
+      "totalCount": 17
     },
     {
       "url": "pages/students.html",
       "links": [],
       "brokenCount": 0,
-      "totalCount": 16
+      "totalCount": 17
     },
     {
-      "url": "pages/credits.html",
+      "url": "pages/gallery.html",
       "links": [],
       "brokenCount": 0,
-      "totalCount": 28
+      "totalCount": 43
+    },
+    {
+      "url": "pages/faq.html",
+      "links": [],
+      "brokenCount": 0,
+      "totalCount": 16
     },
     {
       "url": "pages/license.html",
       "links": [],
       "brokenCount": 0,
-      "totalCount": 11
+      "totalCount": 12
     },
     {
-      "url": "manipulated-images/image2.html",
+      "url": "pages/credits.html",
+      "links": [],
+      "brokenCount": 0,
+      "totalCount": 29
+    },
+    {
+      "url": "pages/start.html",
+      "links": [],
+      "brokenCount": 0,
+      "totalCount": 17
+    },
+    {
+      "url": "interface-design/index.html",
+      "links": [],
+      "brokenCount": 0,
+      "totalCount": 2
+    },
+    {
+      "url": "manipulated-images/image1.html",
       "links": [],
       "brokenCount": 0,
       "totalCount": 6
@@ -91,16 +97,16 @@
       "totalCount": 9
     },
     {
-      "url": "manipulated-images/image5.html",
+      "url": "manipulated-images/image3.html",
       "links": [],
       "brokenCount": 0,
-      "totalCount": 7
+      "totalCount": 6
     },
     {
       "url": "manipulated-images/index.html",
       "links": [],
       "brokenCount": 0,
-      "totalCount": 17
+      "totalCount": 19
     },
     {
       "url": "manipulated-images/image2.html",
@@ -115,20 +121,14 @@
       "totalCount": 17
     },
     {
-      "url": "manipulated-images/image3.html",
+      "url": "manipulated-images/image5.html",
       "links": [],
       "brokenCount": 0,
-      "totalCount": 6
-    },
-    {
-      "url": "manipulated-images/image1.html",
-      "links": [],
-      "brokenCount": 0,
-      "totalCount": 6
+      "totalCount": 7
     }
   ],
   "summary": {
-    "totalLinks": 327,
+    "totalLinks": 344,
     "brokenLinks": 0,
     "excludedLinks": 0
   }

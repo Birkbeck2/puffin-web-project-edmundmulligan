@@ -3,7 +3,7 @@
 # Build the LaTeX document specified as the first argument
 
 # First, get the word count and save it to wordcount.txt
-texcount -nobib $1.tex | awk -F: ' $1 == "Words in text" {print $2}' > wordcount.txt
+texcount -nobib $1.tex | awk -F: ' $1 == "Words in text" {print $2}' > $1-wordcount.txt
 
 # Generate the PDF
 pdflatex $1.tex

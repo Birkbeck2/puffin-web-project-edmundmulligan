@@ -50,12 +50,15 @@
     <link rel="stylesheet" href="styles/pages/index.css">
 
     <!-- Load JavaScript files -->
-    <!-- debug.js must load first to be available to all other scripts -->
+    <!-- queryParams.js must load first for centralized URL parameter handling -->
+    <!-- debug.js must load second to be available to all other scripts -->
+    <script src="scripts/queryParams.js" defer></script>
     <script src="scripts/debug.js" defer></script>
     <script src="scripts/themeSwitcher.js" defer></script>
     <script src="scripts/toggleHeaderAndFooter.js" defer></script>
     <script src="scripts/injectCommonCode.js" defer></script>
     <script src="scripts/toggleSection.js" defer></script>
+    <script src="scripts/animatePortraits.js" defer></script>
 
     <!-- End JavaScript file link -->
 
@@ -71,7 +74,7 @@
     </header>
 
     <main class="main">
-        <section class="index-block">
+        <section class="index-block" id="index-block-1">
             <h2 class="page-title">Choose your theme and style</h2>
             <div class="circular-button-container">
                 <a href="#" class="button-circle" id="light-button">Light</a>
@@ -84,13 +87,21 @@
             </div>
         </section>
 
-        <section class="index-block">
+        <section class="index-block" id="index-block-2">
             <h2 class="page-title">Click on your chosen path</h2>
             <div class="circular-button-container path-buttons">
                 <a href="pages/start.html" class="button-circle" id="start-button">Start</a>
                 <a href="pages/students.html" class="button-circle" id="students-button">I am a Student</a>
                 <a href="pages/mentors.html" class="button-circle" id="mentors-button">I am a Mentor</a>
             </div>
+        </section>
+
+        <section class="portrait-block" id="portrait-block-1">
+            <!-- Portrait content is injected by JavaScript -->
+        </section>
+
+        <section class="portrait-block" id="portrait-block-2">
+            <!-- Portrait content is injected by JavaScript -->
         </section>
     </main>
 

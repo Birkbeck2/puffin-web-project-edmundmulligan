@@ -17,7 +17,7 @@ This document contains the complete API documentation for the Web Witchcraft and
 
 ## ColourPalette Class
 
-**File**: `scripts/colourPalette.js`
+**File**: `scripts/diagnostics/colourPalette.js`
 
 **Description**: JavaScript for the colour palette preview page. Handles colour conversion, contrast calculation, and display of results. Reads CSS variables, including relative colour syntax, and computes contrast ratios. Displays WCAG compliance levels and logs detailed information for debugging.
 

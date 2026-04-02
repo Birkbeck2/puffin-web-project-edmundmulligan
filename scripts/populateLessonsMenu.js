@@ -46,14 +46,14 @@ function getPageContext() {
             lessonFolder: 'mentors'
         };
     }
-    // Check if we're in pages folder (pages/students.html or pages/mentors.html)
-    else if (path.includes('/pages/students.html')) {
+    // Check if we're in pages folder (pages/students or pages/mentors)
+    else if (path.includes('/pages/students')) {
         return {
             context: 'students',
             pathPrefix: '../',
             lessonFolder: 'students'
         };
-    } else if (path.includes('/pages/mentors.html')) {
+    } else if (path.includes('/pages/mentors')) {
         return {
             context: 'mentors',
             pathPrefix: '../',

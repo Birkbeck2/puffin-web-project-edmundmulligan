@@ -1,6 +1,6 @@
 /*
  **********************************************************************
- * File       : debug.js
+ * File       : scripts/debug.js
  * Author     : Edmund Mulligan <edmund@edmundmulligan.name>
  * Copyright  : (c) 2026 The Embodied Mind
  * License    : MIT License (see license-and-credits.html page)
@@ -8,6 +8,7 @@
  *   Centralised debug utility for conditional console logging.
  *   Controls logging across all scripts via ?debug=on|off query parameter.
  *   Usage: Debug.log('message'), Debug.warn('warning'), Debug.error('error')
+ *   Requires: queryParams.js (for window.QueryParams)
  **********************************************************************
 */
 
@@ -38,10 +39,9 @@
          */
         checkDebugMode() {
             // Check URL parameter first
-            const urlParams = new URLSearchParams(window.location.search);
-            const debugParam = urlParams.get('debug');
+            const debugParam = window.QueryParams.getDebugMode();
 
-            if (debugParam === 'on' || debugParam === 'true') {
+            if (debugParam === true) {
                 // Save to localStorage for persistence
                 try {
                     localStorage.setItem('debugMode', 'on');
@@ -51,7 +51,7 @@
                 return true;
             }
 
-            if (debugParam === 'off' || debugParam === 'false') {
+            if (debugParam === false) {
                 // Remove from localStorage
                 try {
                     localStorage.removeItem('debugMode');
