@@ -1,11 +1,271 @@
 {
-  "files": [],
+  "files": [
+    {
+      "file": "./diagnostics/prototypes.html",
+      "type": "html",
+      "errors": [
+        {
+          "line": 7,
+          "column": 1,
+          "message": "Trailing whitespace",
+          "ruleId": "no-trailing-whitespace",
+          "severity": "error"
+        },
+        {
+          "line": 12,
+          "column": 1,
+          "message": "Trailing whitespace",
+          "ruleId": "no-trailing-whitespace",
+          "severity": "error"
+        },
+        {
+          "line": 28,
+          "column": 14,
+          "message": "<button> is missing recommended \"type\" attribute",
+          "ruleId": "no-implicit-button-type",
+          "severity": "error"
+        },
+        {
+          "line": 29,
+          "column": 14,
+          "message": "<button> is missing recommended \"type\" attribute",
+          "ruleId": "no-implicit-button-type",
+          "severity": "error"
+        },
+        {
+          "line": 30,
+          "column": 14,
+          "message": "<button> is missing recommended \"type\" attribute",
+          "ruleId": "no-implicit-button-type",
+          "severity": "error"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "file": "./scripts/diagnostics/prototypes.js",
+      "type": "js",
+      "errors": [
+        {
+          "line": 99,
+          "column": 40,
+          "message": "'e' is defined but never used.",
+          "ruleId": null,
+          "severity": "error"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "file": "./styles/diagnostics/prototypes.css",
+      "type": "css",
+      "errors": [
+        {
+          "line": 98,
+          "column": 38,
+          "message": "Expected \"0.1\" to be \"10%\" (alpha-value-notation)",
+          "ruleId": "alpha-value-notation",
+          "severity": "error"
+        },
+        {
+          "line": 173,
+          "column": 38,
+          "message": "Expected \"0.1\" to be \"10%\" (alpha-value-notation)",
+          "ruleId": "alpha-value-notation",
+          "severity": "error"
+        },
+        {
+          "line": 216,
+          "column": 31,
+          "message": "Expected \"0.9\" to be \"90%\" (alpha-value-notation)",
+          "ruleId": "alpha-value-notation",
+          "severity": "error"
+        },
+        {
+          "line": 232,
+          "column": 42,
+          "message": "Expected \"0.5\" to be \"50%\" (alpha-value-notation)",
+          "ruleId": "alpha-value-notation",
+          "severity": "error"
+        },
+        {
+          "line": 240,
+          "column": 37,
+          "message": "Expected \"0.9\" to be \"90%\" (alpha-value-notation)",
+          "ruleId": "alpha-value-notation",
+          "severity": "error"
+        },
+        {
+          "line": 98,
+          "column": 27,
+          "message": "Expected \"rgba\" to be \"rgb\" (color-function-alias-notation)",
+          "ruleId": "color-function-alias-notation",
+          "severity": "error"
+        },
+        {
+          "line": 173,
+          "column": 27,
+          "message": "Expected \"rgba\" to be \"rgb\" (color-function-alias-notation)",
+          "ruleId": "color-function-alias-notation",
+          "severity": "error"
+        },
+        {
+          "line": 216,
+          "column": 17,
+          "message": "Expected \"rgba\" to be \"rgb\" (color-function-alias-notation)",
+          "ruleId": "color-function-alias-notation",
+          "severity": "error"
+        },
+        {
+          "line": 232,
+          "column": 28,
+          "message": "Expected \"rgba\" to be \"rgb\" (color-function-alias-notation)",
+          "ruleId": "color-function-alias-notation",
+          "severity": "error"
+        },
+        {
+          "line": 240,
+          "column": 17,
+          "message": "Expected \"rgba\" to be \"rgb\" (color-function-alias-notation)",
+          "ruleId": "color-function-alias-notation",
+          "severity": "error"
+        },
+        {
+          "line": 98,
+          "column": 27,
+          "message": "Expected modern color-function notation (color-function-notation)",
+          "ruleId": "color-function-notation",
+          "severity": "error"
+        },
+        {
+          "line": 173,
+          "column": 27,
+          "message": "Expected modern color-function notation (color-function-notation)",
+          "ruleId": "color-function-notation",
+          "severity": "error"
+        },
+        {
+          "line": 216,
+          "column": 17,
+          "message": "Expected modern color-function notation (color-function-notation)",
+          "ruleId": "color-function-notation",
+          "severity": "error"
+        },
+        {
+          "line": 232,
+          "column": 28,
+          "message": "Expected modern color-function notation (color-function-notation)",
+          "ruleId": "color-function-notation",
+          "severity": "error"
+        },
+        {
+          "line": 240,
+          "column": 17,
+          "message": "Expected modern color-function notation (color-function-notation)",
+          "ruleId": "color-function-notation",
+          "severity": "error"
+        },
+        {
+          "line": 264,
+          "column": 8,
+          "message": "Expected \"context\" media feature range notation (media-feature-range-notation)",
+          "ruleId": "media-feature-range-notation",
+          "severity": "error"
+        },
+        {
+          "line": 97,
+          "column": 20,
+          "message": "Expected \"0 5px 5px 5px\" to be \"0 5px 5px\" (shorthand-property-no-redundant-values)",
+          "ruleId": "shorthand-property-no-redundant-values",
+          "severity": "error"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "file": "./styles/pages/index.css",
+      "type": "css",
+      "errors": [
+        {
+          "line": 181,
+          "column": 9,
+          "message": "Expected shorthand property \"place-self\" (declaration-block-no-redundant-longhand-properties)",
+          "ruleId": "declaration-block-no-redundant-longhand-properties",
+          "severity": "error"
+        },
+        {
+          "line": 191,
+          "column": 9,
+          "message": "Expected shorthand property \"place-self\" (declaration-block-no-redundant-longhand-properties)",
+          "ruleId": "declaration-block-no-redundant-longhand-properties",
+          "severity": "error"
+        },
+        {
+          "line": 123,
+          "column": 8,
+          "message": "Expected \"context\" media feature range notation (media-feature-range-notation)",
+          "ruleId": "media-feature-range-notation",
+          "severity": "error"
+        },
+        {
+          "line": 123,
+          "column": 31,
+          "message": "Expected \"context\" media feature range notation (media-feature-range-notation)",
+          "ruleId": "media-feature-range-notation",
+          "severity": "error"
+        },
+        {
+          "line": 148,
+          "column": 8,
+          "message": "Expected \"context\" media feature range notation (media-feature-range-notation)",
+          "ruleId": "media-feature-range-notation",
+          "severity": "error"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "file": "./styles/definitions/keyframes.css",
+      "type": "css",
+      "errors": [
+        {
+          "line": 143,
+          "column": 12,
+          "message": "Expected keyframe name \"portraitCycle\" to be kebab-case (keyframes-name-pattern)",
+          "ruleId": "keyframes-name-pattern",
+          "severity": "error"
+        },
+        {
+          "line": 147,
+          "column": 5,
+          "message": "Expected empty line before rule (rule-empty-line-before)",
+          "ruleId": "rule-empty-line-before",
+          "severity": "error"
+        },
+        {
+          "line": 150,
+          "column": 5,
+          "message": "Expected empty line before rule (rule-empty-line-before)",
+          "ruleId": "rule-empty-line-before",
+          "severity": "error"
+        },
+        {
+          "line": 153,
+          "column": 5,
+          "message": "Expected empty line before rule (rule-empty-line-before)",
+          "ruleId": "rule-empty-line-before",
+          "severity": "error"
+        }
+      ],
+      "warnings": []
+    }
+  ],
   "summary": {
-    "htmlErrors": 0,
+    "htmlErrors": 5,
     "htmlWarnings": 0,
-    "cssErrors": 0,
+    "cssErrors": 26,
     "cssWarnings": 0,
-    "jsErrors": 0,
+    "jsErrors": 1,
     "jsWarnings": 0
   }
 }

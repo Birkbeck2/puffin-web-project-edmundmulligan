@@ -10,13 +10,13 @@
       "url": "index.html",
       "links": [],
       "brokenCount": 0,
-      "totalCount": 17
+      "totalCount": 18
     },
     {
-      "url": "students/lesson-01.html",
+      "url": "interface-design/index.html",
       "links": [],
       "brokenCount": 0,
-      "totalCount": 25
+      "totalCount": 2
     },
     {
       "url": "students/lesson-00.html",
@@ -25,16 +25,10 @@
       "totalCount": 33
     },
     {
-      "url": "pages/glossary.html",
+      "url": "students/lesson-01.html",
       "links": [],
       "brokenCount": 0,
-      "totalCount": 13
-    },
-    {
-      "url": "pages/facts.html",
-      "links": [],
-      "brokenCount": 0,
-      "totalCount": 13
+      "totalCount": 25
     },
     {
       "url": "pages/mentors.html",
@@ -43,7 +37,7 @@
       "totalCount": 17
     },
     {
-      "url": "pages/students.html",
+      "url": "pages/start.html",
       "links": [],
       "brokenCount": 0,
       "totalCount": 17
@@ -55,16 +49,28 @@
       "totalCount": 43
     },
     {
+      "url": "pages/facts.html",
+      "links": [],
+      "brokenCount": 0,
+      "totalCount": 13
+    },
+    {
       "url": "pages/faq.html",
       "links": [],
       "brokenCount": 0,
       "totalCount": 16
     },
     {
-      "url": "pages/license.html",
+      "url": "pages/glossary.html",
       "links": [],
       "brokenCount": 0,
-      "totalCount": 12
+      "totalCount": 13
+    },
+    {
+      "url": "pages/students.html",
+      "links": [],
+      "brokenCount": 0,
+      "totalCount": 17
     },
     {
       "url": "pages/credits.html",
@@ -73,19 +79,13 @@
       "totalCount": 29
     },
     {
-      "url": "pages/start.html",
+      "url": "pages/license.html",
       "links": [],
       "brokenCount": 0,
-      "totalCount": 17
+      "totalCount": 12
     },
     {
-      "url": "interface-design/index.html",
-      "links": [],
-      "brokenCount": 0,
-      "totalCount": 2
-    },
-    {
-      "url": "manipulated-images/image1.html",
+      "url": "manipulated-images/image2.html",
       "links": [],
       "brokenCount": 0,
       "totalCount": 6
@@ -97,10 +97,10 @@
       "totalCount": 9
     },
     {
-      "url": "manipulated-images/image3.html",
+      "url": "manipulated-images/image5.html",
       "links": [],
       "brokenCount": 0,
-      "totalCount": 6
+      "totalCount": 7
     },
     {
       "url": "manipulated-images/index.html",
@@ -109,26 +109,26 @@
       "totalCount": 19
     },
     {
-      "url": "manipulated-images/image2.html",
-      "links": [],
-      "brokenCount": 0,
-      "totalCount": 6
-    },
-    {
       "url": "manipulated-images/image6.html",
       "links": [],
       "brokenCount": 0,
       "totalCount": 17
     },
     {
-      "url": "manipulated-images/image5.html",
+      "url": "manipulated-images/image3.html",
       "links": [],
       "brokenCount": 0,
-      "totalCount": 7
+      "totalCount": 6
+    },
+    {
+      "url": "manipulated-images/image1.html",
+      "links": [],
+      "brokenCount": 0,
+      "totalCount": 6
     }
   ],
   "summary": {
-    "totalLinks": 344,
+    "totalLinks": 345,
     "brokenLinks": 0,
     "excludedLinks": 0
   }
