@@ -1,0 +1,68 @@
+\documentclass[a4paper, 12pt]{article}
+
+% include required packages
+\usepackage[a4paper, margin=2cm]{geometry} % Set page margins
+\usepackage[round,authoryear]{natbib}      % For citations
+\usepackage{url}                           % For formatting URLs
+\usepackage{indentfirst}                   % Indent first paragraph of sections
+\usepackage{booktabs}                      % For better table formatting
+\usepackage{float}                         % For [H] table placement
+\usepackage{enumitem}                      % For customising lists
+\usepackage{tikz}                          % For drawing diagrams
+\usetikzlibrary{positioning}               % For relative positioning
+
+% set paragraph and list formatting
+\setlength{\parindent}{1.5em}
+\setlength{\parskip}{0pt}
+\setlist[itemize]{noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt,after=\vspace{0.5em}}
+
+
+% set title information
+\title{A Critical Reflection on the Design of the Web Witchcraft and Wizardry Project}
+\author{Edmund Mulligan}
+\date{\today}
+
+% document start
+\begin{document}
+
+% set bibliography style and page numbering
+\bibliographystyle{plainnat}
+\pagenumbering{arabic}
+
+\maketitle
+
+\begin{abstract}
+\textit{Abstract goes here.}
+\end{abstract}
+
+\section{Introduction}
+
+\section{Overarching Concept}
+
+\subsection{History and Inspiration}
+
+\subsection{Design Process}
+
+\section{Digital Images}
+
+\section{User Interface Designs}
+
+\subsection{Colour}
+
+\subsection{Typography}
+
+\subsection{Layout}
+
+\subsection{Animation}
+
+\subsection{Accessibility}
+
+\section{Conclusion}
+
+% Include word count N.B. Run wordcount.sh to generate wordcount.txt before compiling
+\section*{Word count}
+Word count: \input{essay-2-wordcount.txt} words (excluding references)
+\\
+\bibliography{EdmundLibrary}
+
+\end{document}

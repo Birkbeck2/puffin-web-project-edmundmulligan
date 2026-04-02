@@ -1,6 +1,6 @@
 /*
  **********************************************************************
- * File       : localStorage.js
+ * File       : scripts/localStorage.js
  * Author     : Edmund Mulligan <edmund@edmundmulligan.name>
  * Copyright  : (c) 2026 The Embodied Mind
  * License    : MIT License (see license-and-credits.html page)
@@ -10,6 +10,18 @@
  *   Can be used with multiple independent forms on the same site.
  **********************************************************************
 */
+
+/**
+ * Utility function to escape HTML characters
+ * @param {string} text - Text to escape
+ * @returns {string} Escaped text
+ */
+function escapeHtml(text) {
+    if (typeof text !== 'string') return '';
+    const div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML;
+}
 
 (function() {
     'use strict';
@@ -207,8 +219,9 @@
                 const imageName = `rachel-mulligan-${data.avatarChoice}-${data.ageChoice}-${data.genderChoice}.png`;
                 const imagePath = `../images/portraits/${imageName}`;
             
-                // Create and set the image
-                output.innerHTML = `<img src="${imagePath}" alt="Your avatar: ${data.avatarChoice}, ${data.ageChoice}, ${data.genderChoice}" style="width: 100%; height: auto; border-radius: var(--border-radius, 0.5rem);">`;
+                // Create and set the image with escaped data
+                const altText = escapeHtml(`Your avatar: ${data.avatarChoice}, ${data.ageChoice}, ${data.genderChoice}`);
+                output.innerHTML = `<img src="${escapeHtml(imagePath)}" alt="${altText}" style="width: 100%; height: auto; border-radius: var(--border-radius, 0.5rem);">`;
             } else {
                 // Clear output if not all selections are made
                 output.innerHTML = '';
@@ -275,12 +288,16 @@
                     }
                 }
 
-                // Apply theme - handle separately to ensure it always runs when forceTheme is true
+                // Apply theme - but respect query parameters which take precedence
+                // This ensures screenshots with ?theme=dark&style=vibrant work correctly
                 if (data.themeChoice && window.ThemeSwitcher) {
-                    if (forceTheme) {
-                        // Force apply the theme when explicitly loading
+                    // Check if query parameters are present - they take precedence over saved preferences
+                    const hasThemeParam = window.QueryParams && window.QueryParams.getTheme() !== null;
+                    
+                    if (forceTheme && !hasThemeParam) {
+                        // Force apply the saved theme when explicitly loading, but only if no query param overrides it
                         window.ThemeSwitcher.set(data.themeChoice);
-                    } else {
+                    } else if (!forceTheme && !hasThemeParam) {
                         // Only apply the theme if no theme preference is currently set
                         // This prevents overriding the user's active theme choice on page load
                         const currentTheme = window.ThemeSwitcher.get();
@@ -288,6 +305,8 @@
                             window.ThemeSwitcher.set(data.themeChoice);
                         }
                     }
+                    // Note: If hasThemeParam is true, we don't apply the saved theme - query param takes precedence
+                    // The ThemeSwitcher.getThemePreference() already handles query params correctly
                 }
 
                 // Update the avatar preview
@@ -491,12 +510,13 @@
                     const imagePath = `../images/portraits/${imageName}`;
                     const studentName = data.name || 'Student';
                 
-                    // Create figure with image and caption
+                    // Create figure with image and caption (with escaped data)
+                    const altText = escapeHtml(`Your avatar: ${data.avatarChoice}, ${data.ageChoice}, ${data.genderChoice}`);
                     const imageHTML = `
                     <figure style="margin: 0; text-align: center;">
-                        <img src="${imagePath}" alt="Your avatar: ${data.avatarChoice}, ${data.ageChoice}, ${data.genderChoice}" class="avatar-image">
+                        <img src="${escapeHtml(imagePath)}" alt="${altText}" class="avatar-image">
                         <figcaption class="avatar-caption">
-                            Welcome, ${studentName}
+                            Welcome, ${escapeHtml(studentName)}
                         </figcaption>
                     </figure>
                 `;

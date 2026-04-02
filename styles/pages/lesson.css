@@ -158,11 +158,6 @@
     animation-duration: 0.3s;
 }
 
-@keyframes zoom {
-    from {transform: scale(0);}
-    to {transform: scale(1);}
-}
-
 .image-modal-close {
     position: absolute;
     top: 1rem;

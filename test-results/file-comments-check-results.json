@@ -18,8 +18,8 @@
     }
   ],
   "summary": {
-    "totalFiles": 93,
-    "filesWithIssues": 1,
+    "totalFiles": 103,
+    "filesWithIssues": 0,
     "missingHeaderBlocks": 0,
     "missingRequiredFields": 1
   }
