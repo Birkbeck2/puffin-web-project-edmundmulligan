@@ -40,6 +40,7 @@
             <button type="button" class="tab-button active" data-tab="landing">Landing Page</button>
             <button type="button" class="tab-button" data-tab="students">Student Dashboard</button>
             <button type="button" class="tab-button" data-tab="lesson">Sample Lesson</button>
+            <button type="button" class="tab-button" data-tab="animations">Animations</button>
         </div>
 
         <div id="landing-tab" class="tab-content active">
@@ -192,7 +193,7 @@
                         <label for="lesson-expand-expanded">Expanded</label>
                     </div>
                 </div>
-            </div>to select viewport size,
+            </div>
 
             <div class="control-group section-control">
                 <label>Section:</label>
@@ -221,6 +222,10 @@
                         <input type="radio" id="lesson-section-5" name="lesson-section" value="5">
                         <label for="lesson-section-5">5</label>
                     </div>
+                    <div class="radio-option">
+                        <input type="radio" id="lesson-section-6" name="lesson-section" value="6">
+                        <label for="lesson-section-6">6</label>
+                    </div>
                 </div>
             </div>
         </div>
@@ -228,6 +233,28 @@
         <div class="screenshots" id="lesson-screenshots"></div>
     </div>
 
+    <div id="animations-tab" class="tab-content">
+        <div class="controls">
+            <div class="control-group">
+                <label>Animation:</label>
+                <div class="radio-group">
+                    <div class="radio-option">
+                        <input type="radio" id="animations-theme-switch" name="animations-options" value="animation-theme-switch" checked>
+                        <label for="animations-theme-switch">Theme Switch</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="animations-portraits" name="animations-options" value="animation-portraits">
+                        <label for="animations-portraits">Portraits on Landing Page</label>
+                    </div>
+                </div>
+            </div>
+            <button type="button" id="play-animations-btn" class="button-rectangle">
+                <i class="fas fa-play"></i> Play Animation
+            </button>
+        </div>
+
+        <div class="screenshots" id="animations-screenshots"></div>
+    </div>
     </main>
 </body>
 </html>

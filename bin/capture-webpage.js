@@ -218,6 +218,19 @@ async function captureWebpage(url, outputName, options = {}) {
             waitUntil: 'networkidle0'
         });
     
+        // Clear localStorage to ensure query parameters take precedence
+        // This prevents theme/style from previous screenshots persisting
+        log('Clearing localStorage to respect query parameters...', 'yellow');
+        await page.evaluate(() => {
+            localStorage.clear();
+        });
+        
+        // Navigate again (not reload) to preserve query parameters while starting fresh
+        log('Re-navigating with clean localStorage...', 'yellow');
+        await page.goto(url, {
+            waitUntil: 'networkidle0'
+        });
+    
         // Wait for any animations or dynamic content
         if (wait > 0) {
             log(`Waiting ${wait}ms for page to settle...`, 'yellow');

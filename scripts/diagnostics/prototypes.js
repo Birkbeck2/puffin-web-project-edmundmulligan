@@ -117,7 +117,19 @@
         const container = document.getElementById(`${pageType}-screenshots`);
         container.innerHTML = '';
         
-        // Get current options
+        // Special handling for animations tab - just show a single GIF
+        if (pageType === 'animations') {
+            const animationOption = document.querySelector('input[name="animations-options"]:checked');
+            const animationType = animationOption ? animationOption.value : 'animation-theme-switch';
+            const filename = `${animationType}.gif`;
+            const label = animationOption ? animationOption.nextElementSibling.textContent : 'Animation';
+            
+            const element = createScreenshotElement(filename, label);
+            container.appendChild(element);
+            return;
+        }
+        
+        // Get current options based on page type
         const theme = document.querySelector(`input[name="${pageType}-theme"]:checked`).value;
         const style = document.querySelector(`input[name="${pageType}-style"]:checked`).value;
         const expand = document.querySelector(`input[name="${pageType}-expand"]:checked`).value;
@@ -162,6 +174,31 @@
         document.querySelectorAll('input[name="lesson-section"]').forEach(radio => {
             radio.addEventListener('change', () => updateScreenshots('lesson'));
         });
+        
+        // Animation state radios (animations tab)
+        document.querySelectorAll('input[name="animations-options"]').forEach(radio => {
+            radio.addEventListener('change', () => updateScreenshots('animations'));
+        });
+        
+        // Play animations button - restarts the GIF
+        const playAnimationsBtn = document.getElementById('play-animations-btn');
+        if (playAnimationsBtn) {
+            playAnimationsBtn.addEventListener('click', restartAnimation);
+        }
+    }
+
+    /**
+     * Restart the animation by reloading the GIF
+     */
+    function restartAnimation() {
+        const container = document.getElementById('animations-screenshots');
+        const img = container.querySelector('img');
+        
+        if (img && img.src.endsWith('.gif')) {
+            // Force reload by adding a timestamp query parameter
+            const src = img.src.split('?')[0];
+            img.src = src + '?t=' + new Date().getTime();
+        }
     }
 
     /**
@@ -248,6 +285,7 @@
         updateScreenshots('landing');
         updateScreenshots('students');
         updateScreenshots('lesson');
+        updateScreenshots('animations');
     }
 
     // Initialize when DOM is ready
