@@ -64,23 +64,26 @@ jobs:
         CURRENT_COMMIT=$(git rev-parse HEAD)
         echo "Current commit: $CURRENT_COMMIT"
         
-        # Fetch all branches to ensure we have latest refs
-        git fetch origin --all
+        # Fetch all remote branches
+        git fetch origin
         
         # Switch to development branch and ensure we're on the latest
         git checkout -B development origin/development
-        git reset --hard origin/development
         
         # Cherry-pick the version and release changes from main
         git cherry-pick $CURRENT_COMMIT || {
           # If cherry-pick fails, manually copy the files
           git checkout $CURRENT_COMMIT -- VERSION releases/ 2>/dev/null || true
           git add VERSION releases/
-          git commit -m "chore(release): v${RELEASE_VERSION} [skip ci]" || echo "No changes to commit"
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore(release): v${RELEASE_VERSION} [skip ci]"
+          fi
         }
         
         # Push to development branch explicitly
-        git push origin HEAD:development
+        git push origin development
         
         echo "Successfully pushed release v${RELEASE_VERSION} to development branch"
 
