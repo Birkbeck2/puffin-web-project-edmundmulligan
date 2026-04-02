@@ -1,7 +1,7 @@
 {
   "files": [
     {
-      "file": "./bin/capture-css-animation.js",
+      "file": "./diagnostics/prototypes.html",
       "issues": [
         {
           "type": "missing-fields",
@@ -18,8 +18,8 @@
     }
   ],
   "summary": {
-    "totalFiles": 103,
-    "filesWithIssues": 0,
+    "totalFiles": 107,
+    "filesWithIssues": 1,
     "missingHeaderBlocks": 0,
     "missingRequiredFields": 1
   }
