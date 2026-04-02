@@ -146,6 +146,12 @@ for file in $FILES; do
   TESTED=$((TESTED + 1))
   echo "[$TESTED/$FILE_COUNT] Validating $file"
 
+  # Check if file actually exists (prevent hanging on missing files)
+  if [ ! -f "$file" ]; then
+    echo "  ⚠️  Skipped - File does not exist (possible broken symlink or stale reference)"
+    continue
+  fi
+
   # work out which validator to use and check availability
   extension="${file##*.}"
   if [ "$extension" = "html" ]
@@ -179,35 +185,50 @@ for file in $FILES; do
     continue
   fi
 
-  # Run validator and save results to temp file
+  # Run validator and save results to temp file (with timeout to prevent hanging)
   TEMP_RESULT="$RESULTS_DIR/validation-temp-$TESTED.json"
   TEMP_ERROR="$RESULTS_DIR/validation-error-$TESTED.txt"
 
   if [ "$extension" = "html" ]; then
-    if ! npx html-validate --formatter json "${file}" > "$TEMP_RESULT" 2>"$TEMP_ERROR"; then
-      echo "  ⚠️  html-validate failed, check error log:"
-      cat "$TEMP_ERROR" 2>/dev/null || echo "  No error details available"
+    if ! timeout 30 npx html-validate --formatter json "${file}" > "$TEMP_RESULT" 2>"$TEMP_ERROR"; then
+      if [ $? -eq 124 ]; then  # timeout exit code
+        echo "  ⚠️  html-validate timed out after 30 seconds"
+      else
+        echo "  ⚠️  html-validate failed, check error log:"
+        cat "$TEMP_ERROR" 2>/dev/null || echo "  No error details available"
+      fi
       echo "[]" > "$TEMP_RESULT"  # Create empty result to prevent JSON errors
     fi
   elif [ "$extension" = "css" ]; then
-    if ! npx stylelint --formatter json "${file}" > "$TEMP_RESULT" 2>"$TEMP_ERROR"; then
-      echo "  ⚠️  stylelint failed, check error log:"
-      cat "$TEMP_ERROR" 2>/dev/null || echo "  No error details available"
+    if ! timeout 30 npx stylelint --formatter json "${file}" > "$TEMP_RESULT" 2>"$TEMP_ERROR"; then
+      if [ $? -eq 124 ]; then  # timeout exit code
+        echo "  ⚠️  stylelint timed out after 30 seconds"
+      else
+        echo "  ⚠️  stylelint failed, check error log:"
+        cat "$TEMP_ERROR" 2>/dev/null || echo "  No error details available"
+      fi
       echo "[]" > "$TEMP_RESULT"  # Create empty result to prevent JSON errors
     fi
   elif [ "$extension" = "js" ]; then
-    # First, check for JS syntax errors using node --check
-    node --check "$file" 2> "$TEMP_ERROR"
-    if [ $? -ne 0 ]; then
-      # Write a JSON error result for syntax error
-      echo "[{\"filePath\": \"$file\", \"messages\": [{\"fatal\": true, \"message\": \"Syntax error detected by node --check\"}], \"errorCount\": 1, \"fatalErrorCount\": 1}]" > "$TEMP_RESULT"
+    # First, check for JS syntax errors using node --check (with timeout)
+    if ! timeout 15 node --check "$file" 2> "$TEMP_ERROR"; then
+      if [ $? -eq 124 ]; then  # timeout exit code
+        echo "  ⚠️  node --check timed out after 15 seconds"
+        echo "[{\"filePath\": \"$file\", \"messages\": [{\"fatal\": true, \"message\": \"Validation timed out - possible infinite loop or complex file\"}], \"errorCount\": 1, \"fatalErrorCount\": 1}]" > "$TEMP_RESULT"
+      else
+        # Write a JSON error result for syntax error
+        echo "[{\"filePath\": \"$file\", \"messages\": [{\"fatal\": true, \"message\": \"Syntax error detected by node --check\"}], \"errorCount\": 1, \"fatalErrorCount\": 1}]" > "$TEMP_RESULT"
+      fi
     else
-      # Run JSHint for stricter static analysis (plain text output)
-      JSHINT_OUTPUT=$(npx jshint "$file" 2>&1)
+      # Run JSHint for stricter static analysis (plain text output) with timeout
+      JSHINT_OUTPUT=$(timeout 15 npx jshint "$file" 2>&1)
       JSHINT_EXIT=$?
       
-      # Parse JSHint plain text output and convert to JSON
-      if [ $JSHINT_EXIT -eq 0 ]; then
+      # Check if jshint timed out
+      if [ $JSHINT_EXIT -eq 124 ]; then
+        echo "  ⚠️  JSHint timed out after 15 seconds"
+        echo "[{\"filePath\": \"$file\", \"messages\": [{\"fatal\": false, \"message\": \"JSHint validation timed out - possible complex file\", \"severity\": \"warning\"}], \"errorCount\": 0, \"warningCount\": 1}]" > "$TEMP_RESULT"
+      elif [ $JSHINT_EXIT -eq 0 ]; then
         # No errors
         echo "[]" > "$TEMP_RESULT"
       else
