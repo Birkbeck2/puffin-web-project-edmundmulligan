@@ -1244,3 +1244,306 @@ Launching browser...[0m
 [36m[Browser] Theme from URL parameter: light[0m
 [36m[Browser] Style from URL parameter: subdued[0m
 [33mWaiting 10000ms for page to settle...[0m
+[33mCapturing screenshot...[0m
+[32m✓ Screenshot captured[0m
+[34m
+============================================================[0m
+[32m  Capture Complete![0m
+[34m============================================================[0m
+[36m
+Output file:[0m
+[36m  /home/edmund/Projects/Study/puffin-web-project-edmundmulligan/output/homepage-199-light-subdued-minimal.png[0m
+[0m  Size: 0.25 MB[0m
+[34m
+============================================================
+[0m
+[32m✓ All done! 📸[0m
+[32m✓ Puppeteer found[0m
+[34m
+============================================================[0m
+[34m  Web Page Screenshot Capture[0m
+[34m============================================================
+[0m
+[36mℹ URL: http://localhost:8080/pages/students.html?theme=light&style=subdued&expand-header=false&expand-footer=false&debug=on[0m
+[36mℹ Output: students-199-light-subdued-minimal.png[0m
+[36mℹ Viewport: 199x1080 @ 2x scale[0m
+[36mℹ Full page: Yes[0m
+[36mℹ Fill text fields: 1 field(s)[0m
+[36m  1. #student-name = "Edmund"[0m
+[36mℹ Check inputs: 3 input(s)[0m
+[36m  1. #avatar-choice-witch[0m
+[36m  2. #gender-choice-female[0m
+[36m  3. #age-choice-young[0m
+[36mℹ Click sequence: 1 element(s)[0m
+[36m  1. #save-information-btn[0m
+[36mℹ Wait for: #avatar-preview (with content)[0m
+[33m
+Launching browser...[0m
+[33mNavigating to page...[0m
+[33mWaiting 500ms for page to settle...[0m
+[33mFilling text fields...[0m
+[36m  Filling: #student-name = "Edmund"[0m
+[32m✓ All text fields filled[0m
+[33mChecking inputs...[0m
+[36m  Checking: #avatar-choice-witch[0m
+[36m  Checking: #gender-choice-female[0m
+[36m  Checking: #age-choice-young[0m
+[32m✓ All inputs checked[0m
+[33mClicking elements...[0m
+[36m  Clicking: #save-information-btn[0m
+[32m✓ All clicks completed[0m
+[33mWaiting for element to have content: #avatar-preview[0m
+[32m✓ Element has content[0m
+[33mCapturing screenshot...[0m
+[32m✓ Screenshot captured[0m
+[34m
+============================================================[0m
+[32m  Capture Complete![0m
+[34m============================================================[0m
+[36m
+Output file:[0m
+[36m  /home/edmund/Projects/Study/puffin-web-project-edmundmulligan/output/students-199-light-subdued-minimal.png[0m
+[0m  Size: 0.41 MB[0m
+[34m
+============================================================
+[0m
+[32m✓ All done! 📸[0m
+[32m✓ Puppeteer found[0m
+[34m
+============================================================[0m
+[34m  Web Page Screenshot Capture[0m
+[34m============================================================
+[0m
+[36mℹ URL: http://localhost:8080/students/lesson-01.html?theme=light&style=subdued&expand-header=false&expand-footer=false&debug=on[0m
+[36mℹ Output: lesson-01-199-light-subdued-minimal.png[0m
+[36mℹ Viewport: 199x1080 @ 2x scale[0m
+[36mℹ Full page: Yes[0m
+[36mℹ Mock student data: Edmund (witch, female, young)[0m
+[36mℹ Iterate sections: 0 to 5 (6 total)[0m
+[33m
+Launching browser...[0m
+[33mNavigating to page...[0m
+[33mWaiting 500ms for page to settle...[0m
+[33mMocking student data in localStorage...[0m
+[32m✓ Student data mocked and avatar populated[0m
+[33mIterating through 6 sections...[0m
+[36m
+Section 0:[0m
+[36m  Clicking: .wand-icon[data-section="0"][0m
+[36m  Capturing: lesson-01-199-light-subdued-minimal-section-0.png[0m
+[32m✓   Captured (0.41 MB)[0m
+[36m
+Section 1:[0m
+[36m  Clicking: .wand-icon[data-section="1"][0m
+[36m  Capturing: lesson-01-199-light-subdued-minimal-section-1.png[0m
+[32m✓   Captured (0.70 MB)[0m
+[36m
+Section 2:[0m
+[36m  Clicking: .wand-icon[data-section="2"][0m
+[36m  Capturing: lesson-01-199-light-subdued-minimal-section-2.png[0m
+[32m✓   Captured (0.97 MB)[0m
+[36m
+Section 3:[0m
+[36m  Clicking: .wand-icon[data-section="3"][0m
+[36m  Capturing: lesson-01-199-light-subdued-minimal-section-3.png[0m
+[32m✓   Captured (0.37 MB)[0m
+[36m
+Section 4:[0m
+[36m  Clicking: .wand-icon[data-section="4"][0m
+[36m  Capturing: lesson-01-199-light-subdued-minimal-section-4.png[0m
+[32m✓   Captured (0.98 MB)[0m
+[36m
+Section 5:[0m
+[36m  Clicking: .wand-icon[data-section="5"][0m
+[36m  Capturing: lesson-01-199-light-subdued-minimal-section-5.png[0m
+[32m✓   Captured (0.66 MB)[0m
+[34m
+============================================================[0m
+[32m  Capture Complete![0m
+[34m============================================================[0m
+[36m
+Captured 6 section(s):[0m
+[36m  0. lesson-01-199-light-subdued-minimal-section-0.png (0.41 MB)[0m
+[36m  1. lesson-01-199-light-subdued-minimal-section-1.png (0.70 MB)[0m
+[36m  2. lesson-01-199-light-subdued-minimal-section-2.png (0.97 MB)[0m
+[36m  3. lesson-01-199-light-subdued-minimal-section-3.png (0.37 MB)[0m
+[36m  4. lesson-01-199-light-subdued-minimal-section-4.png (0.98 MB)[0m
+[36m  5. lesson-01-199-light-subdued-minimal-section-5.png (0.66 MB)[0m
+[34m
+============================================================
+[0m
+[32m✓ All done! 📸[0m
+[32m✓ Puppeteer found[0m
+[34m
+============================================================[0m
+[34m  Web Page Screenshot Capture[0m
+[34m============================================================
+[0m
+[36mℹ URL: http://localhost:8080?theme=light&style=subdued&expand-header=true&expand-footer=true&debug=on[0m
+[36mℹ Output: homepage-199-light-subdued-expanded.png[0m
+[36mℹ Viewport: 199x1080 @ 2x scale[0m
+[36mℹ Full page: Yes[0m
+[33m
+Launching browser...[0m
+[33mNavigating to page...[0m
+[36m[Browser] === ThemeSwitcher Initializing ===[0m
+[36m[Browser] Theme from URL parameter: light[0m
+[36m[Browser] Style from URL parameter: subdued[0m
+[36m[Browser] === ThemeSwitcher Initialization Complete ===[0m
+[36m[Browser] Theme from URL parameter: light[0m
+[36m[Browser] Style from URL parameter: subdued[0m
+[36m[Browser] Theme from URL parameter: light[0m
+[36m[Browser] Style from URL parameter: subdued[0m
+[33mWaiting 10000ms for page to settle...[0m
+[33mCapturing screenshot...[0m
+[32m✓ Screenshot captured[0m
+[34m
+============================================================[0m
+[32m  Capture Complete![0m
+[34m============================================================[0m
+[36m
+Output file:[0m
+[36m  /home/edmund/Projects/Study/puffin-web-project-edmundmulligan/output/homepage-199-light-subdued-expanded.png[0m
+[0m  Size: 0.32 MB[0m
+[34m
+============================================================
+[0m
+[32m✓ All done! 📸[0m
+[32m✓ Puppeteer found[0m
+[34m
+============================================================[0m
+[34m  Web Page Screenshot Capture[0m
+[34m============================================================
+[0m
+[36mℹ URL: http://localhost:8080/pages/students.html?theme=light&style=subdued&expand-header=true&expand-footer=true&debug=on[0m
+[36mℹ Output: students-199-light-subdued-expanded.png[0m
+[36mℹ Viewport: 199x1080 @ 2x scale[0m
+[36mℹ Full page: Yes[0m
+[36mℹ Fill text fields: 1 field(s)[0m
+[36m  1. #student-name = "Edmund"[0m
+[36mℹ Check inputs: 3 input(s)[0m
+[36m  1. #avatar-choice-witch[0m
+[36m  2. #gender-choice-male[0m
+[36m  3. #age-choice-young[0m
+[36mℹ Click sequence: 1 element(s)[0m
+[36m  1. #save-information-btn[0m
+[36mℹ Wait for: #avatar-preview (with content)[0m
+[33m
+Launching browser...[0m
+[33mNavigating to page...[0m
+[33mWaiting 500ms for page to settle...[0m
+[33mFilling text fields...[0m
+[36m  Filling: #student-name = "Edmund"[0m
+[32m✓ All text fields filled[0m
+[33mChecking inputs...[0m
+[36m  Checking: #avatar-choice-witch[0m
+[36m  Checking: #gender-choice-male[0m
+[36m  Checking: #age-choice-young[0m
+[32m✓ All inputs checked[0m
+[33mClicking elements...[0m
+[36m  Clicking: #save-information-btn[0m
+[32m✓ All clicks completed[0m
+[33mWaiting for element to have content: #avatar-preview[0m
+[32m✓ Element has content[0m
+[33mCapturing screenshot...[0m
+[32m✓ Screenshot captured[0m
+[34m
+============================================================[0m
+[32m  Capture Complete![0m
+[34m============================================================[0m
+[36m
+Output file:[0m
+[36m  /home/edmund/Projects/Study/puffin-web-project-edmundmulligan/output/students-199-light-subdued-expanded.png[0m
+[0m  Size: 0.41 MB[0m
+[34m
+============================================================
+[0m
+[32m✓ All done! 📸[0m
+[32m✓ Puppeteer found[0m
+[34m
+============================================================[0m
+[34m  Web Page Screenshot Capture[0m
+[34m============================================================
+[0m
+[36mℹ URL: http://localhost:8080/students/lesson-01.html?theme=light&style=subdued&expand-header=true&expand-footer=true&debug=on[0m
+[36mℹ Output: lesson-01-199-light-subdued-expanded.png[0m
+[36mℹ Viewport: 199x1080 @ 2x scale[0m
+[36mℹ Full page: Yes[0m
+[36mℹ Mock student data: Edmund (witch, male, young)[0m
+[36mℹ Iterate sections: 0 to 5 (6 total)[0m
+[33m
+Launching browser...[0m
+[33mNavigating to page...[0m
+[33mWaiting 500ms for page to settle...[0m
+[33mMocking student data in localStorage...[0m
+[32m✓ Student data mocked and avatar populated[0m
+[33mIterating through 6 sections...[0m
+[36m
+Section 0:[0m
+[36m  Clicking: .wand-icon[data-section="0"][0m
+[36m  Capturing: lesson-01-199-light-subdued-expanded-section-0.png[0m
+[32m✓   Captured (0.41 MB)[0m
+[36m
+Section 1:[0m
+[36m  Clicking: .wand-icon[data-section="1"][0m
+[36m  Capturing: lesson-01-199-light-subdued-expanded-section-1.png[0m
+[32m✓   Captured (0.70 MB)[0m
+[36m
+Section 2:[0m
+[36m  Clicking: .wand-icon[data-section="2"][0m
+[36m  Capturing: lesson-01-199-light-subdued-expanded-section-2.png[0m
+[32m✓   Captured (0.96 MB)[0m
+[36m
+Section 3:[0m
+[36m  Clicking: .wand-icon[data-section="3"][0m
+[36m  Capturing: lesson-01-199-light-subdued-expanded-section-3.png[0m
+[32m✓   Captured (0.36 MB)[0m
+[36m
+Section 4:[0m
+[36m  Clicking: .wand-icon[data-section="4"][0m
+[36m  Capturing: lesson-01-199-light-subdued-expanded-section-4.png[0m
+[32m✓   Captured (0.97 MB)[0m
+[36m
+Section 5:[0m
+[36m  Clicking: .wand-icon[data-section="5"][0m
+[36m  Capturing: lesson-01-199-light-subdued-expanded-section-5.png[0m
+[32m✓   Captured (0.65 MB)[0m
+[34m
+============================================================[0m
+[32m  Capture Complete![0m
+[34m============================================================[0m
+[36m
+Captured 6 section(s):[0m
+[36m  0. lesson-01-199-light-subdued-expanded-section-0.png (0.41 MB)[0m
+[36m  1. lesson-01-199-light-subdued-expanded-section-1.png (0.70 MB)[0m
+[36m  2. lesson-01-199-light-subdued-expanded-section-2.png (0.96 MB)[0m
+[36m  3. lesson-01-199-light-subdued-expanded-section-3.png (0.36 MB)[0m
+[36m  4. lesson-01-199-light-subdued-expanded-section-4.png (0.97 MB)[0m
+[36m  5. lesson-01-199-light-subdued-expanded-section-5.png (0.65 MB)[0m
+[34m
+============================================================
+[0m
+[32m✓ All done! 📸[0m
+[32m✓ Puppeteer found[0m
+[34m
+============================================================[0m
+[34m  Web Page Screenshot Capture[0m
+[34m============================================================
+[0m
+[36mℹ URL: http://localhost:8080?theme=light&style=subdued&expand-header=false&expand-footer=false&debug=on[0m
+[36mℹ Output: homepage-401-light-subdued-minimal.png[0m
+[36mℹ Viewport: 401x1080 @ 2x scale[0m
+[36mℹ Full page: Yes[0m
+[33m
+Launching browser...[0m
+[33mNavigating to page...[0m
+[36m[Browser] === ThemeSwitcher Initializing ===[0m
+[36m[Browser] Theme from URL parameter: light[0m
+[36m[Browser] Style from URL parameter: subdued[0m
+[36m[Browser] === ThemeSwitcher Initialization Complete ===[0m
+[36m[Browser] Theme from URL parameter: light[0m
+[36m[Browser] Style from URL parameter: subdued[0m
+[36m[Browser] Theme from URL parameter: light[0m
+[36m[Browser] Style from URL parameter: subdued[0m
+[33mWaiting 10000ms for page to settle...[0m
+[33mWaiting for portrait to be visible...[0m
