@@ -48,7 +48,7 @@ async function testColourPalette() {
     const paletteCss = fs.readFileSync(paletteCssPath, 'utf8');
 
     // Read the JavaScript file
-    const jsPath = path.join(__dirname, '../scripts/colourPalette.js');
+    const jsPath = path.join(__dirname, '../scripts/diagnostics/colourPalette.js');
     const jsContent = fs.readFileSync(jsPath, 'utf8');
 
     // Create JSDOM instance

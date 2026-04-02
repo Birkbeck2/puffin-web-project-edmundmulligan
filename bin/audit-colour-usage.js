@@ -48,7 +48,7 @@ const THEME_SPECIFIC_ALLOWED_FILES = [
     'styles/definitions/colours.css', // Defines them
     'scripts/themeSwitcher.js',    // Maps them
     'diagnostics/colourPalette.html', // Shows them
-    'scripts/colourPalette.js',    // Analyses them
+    'scripts/diagnostics/colourPalette.js',    // Analyses them
     'styles/diagnostics/colourPalette.css'     // Diagnostic stylesheet
 ];
 

@@ -6,7 +6,7 @@ This document provides a quick reference for developers working with the Puffin 
 
 | Class | File | Purpose | Key Methods |
 |-------|------|---------|-------------|
-| `ColourPalette` | `colourPalette.js` | Colour conversion & WCAG compliance | `hslToRgb()`, `calculateContrast()`, `getWCAGLevel()` |
+| `ColourPalette` | `diagnostics/colourPalette.js` | Colour conversion & WCAG compliance | `hslToRgb()`, `calculateContrast()`, `getWCAGLevel()` |
 | `ThemeSwitcher` | `themeSwitcher.js` | Theme management | `applyTheme()`, localStorage integration |
 | `DebugLogger` | `debug.js` | Conditional logging | `log()`, `warn()`, `error()`, `methodEntry()` |
 | `ImageModal` | `modalImage.js` | Full-screen image overlay | Auto keyboard navigation, modal display |

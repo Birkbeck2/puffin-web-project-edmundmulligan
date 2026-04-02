@@ -1,6 +1,6 @@
 /*
  **********************************************************************
- * File       : localStorage.js
+ * File       : scripts/localStorage.js
  * Author     : Edmund Mulligan <edmund@edmundmulligan.name>
  * Copyright  : (c) 2026 The Embodied Mind
  * License    : MIT License (see license-and-credits.html page)
@@ -275,12 +275,16 @@
                     }
                 }
 
-                // Apply theme - handle separately to ensure it always runs when forceTheme is true
+                // Apply theme - but respect query parameters which take precedence
+                // This ensures screenshots with ?theme=dark&style=vibrant work correctly
                 if (data.themeChoice && window.ThemeSwitcher) {
-                    if (forceTheme) {
-                        // Force apply the theme when explicitly loading
+                    // Check if query parameters are present - they take precedence over saved preferences
+                    const hasThemeParam = window.QueryParams && window.QueryParams.getTheme() !== null;
+                    
+                    if (forceTheme && !hasThemeParam) {
+                        // Force apply the saved theme when explicitly loading, but only if no query param overrides it
                         window.ThemeSwitcher.set(data.themeChoice);
-                    } else {
+                    } else if (!forceTheme && !hasThemeParam) {
                         // Only apply the theme if no theme preference is currently set
                         // This prevents overriding the user's active theme choice on page load
                         const currentTheme = window.ThemeSwitcher.get();
@@ -288,6 +292,8 @@
                             window.ThemeSwitcher.set(data.themeChoice);
                         }
                     }
+                    // Note: If hasThemeParam is true, we don't apply the saved theme - query param takes precedence
+                    // The ThemeSwitcher.getThemePreference() already handles query params correctly
                 }
 
                 // Update the avatar preview
