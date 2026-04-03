@@ -126,6 +126,9 @@
         if (pageType === 'animations') {
             const animationOption = document.querySelector('input[name="animations-options"]:checked');
             const animationType = animationOption ? animationOption.value : 'animation-theme-switch';
+            // Validate animation type against whitelist to prevent XSS
+            const allowedAnimationTypes = ['animation-theme-switch', 'animation-portraits'];
+            if (!allowedAnimationTypes.includes(animationType)) return;
             const filename = `${animationType}.gif`;
             const label = animationOption ? animationOption.nextElementSibling.textContent : 'Animation';
             
@@ -136,13 +139,24 @@
         }
         
         // Get current options based on page type
-        const theme = document.querySelector(`input[name="${pageType}-theme"]:checked`).value;
-        const style = document.querySelector(`input[name="${pageType}-style"]:checked`).value;
-        const expand = document.querySelector(`input[name="${pageType}-expand"]:checked`).value;
+        const theme = document.querySelector(`input[name="${pageType}-theme"]:checked`)?.value;
+        const style = document.querySelector(`input[name="${pageType}-style"]:checked`)?.value;
+        const expand = document.querySelector(`input[name="${pageType}-expand"]:checked`)?.value;
+        
+        // Validate options against whitelists to prevent XSS
+        const allowedThemes = ['light', 'dark'];
+        const allowedStyles = ['normal', 'subdued', 'vibrant'];
+        const allowedExpand = ['minimal', 'expanded'];
+        
+        if (!theme || !allowedThemes.includes(theme)) return;
+        if (!style || !allowedStyles.includes(style)) return;
+        if (!expand || !allowedExpand.includes(expand)) return;
         
         let section = '0';
         if (pageType === 'lesson') {
-            section = document.querySelector('input[name="lesson-section"]:checked').value;
+            section = document.querySelector('input[name="lesson-section"]:checked')?.value;
+            const allowedSections = ['0', '1', '2', '3', '4', '5', '6'];
+            if (!section || !allowedSections.includes(section)) return;
         }
         
         const options = { theme, style, expand, section };
@@ -283,9 +297,11 @@
      * Digital Images tab - Logo switcher
      */
     function switchLogo() {
-        const selectedColor = document.querySelector('input[name="logo-color"]:checked').value;
+        const selectedColor = document.querySelector('input[name="logo-color"]:checked')?.value;
         const logoImage = document.getElementById('logo-image');
-        if (logoImage) {
+        // Validate color value against whitelist to prevent XSS
+        const allowedColors = ['black', 'purple', 'cyan'];
+        if (logoImage && selectedColor && allowedColors.includes(selectedColor)) {
             logoImage.src = `../diagnostics/images/logo-embodied-mind-with-name-${selectedColor}.svg`;
         }
     }
@@ -294,10 +310,15 @@
      * Digital Images tab - Background switcher
      */
     function switchBackground() {
-        const selectedTheme = document.querySelector('input[name="bg-theme"]:checked').value;
-        const selectedOrientation = document.querySelector('input[name="bg-orientation"]:checked').value;
+        const selectedTheme = document.querySelector('input[name="bg-theme"]:checked')?.value;
+        const selectedOrientation = document.querySelector('input[name="bg-orientation"]:checked')?.value;
         const backgroundImage = document.getElementById('background-image');
-        if (backgroundImage) {
+        // Validate values against whitelist to prevent XSS
+        const allowedThemes = ['light', 'dark'];
+        const allowedOrientations = ['landscape', 'portrait'];
+        if (backgroundImage && selectedTheme && selectedOrientation &&
+            allowedThemes.includes(selectedTheme) && 
+            allowedOrientations.includes(selectedOrientation)) {
             backgroundImage.src = `../diagnostics/images/background-web-${selectedOrientation}-${selectedTheme}.svg`;
         }
     }
@@ -337,11 +358,16 @@
         const svg = faviconContainer?.querySelector('svg');
         if (!svg) return;
 
-        const isAnimated = document.querySelector('input[name="favicon-animated"]:checked').value === 'true';
-        if (isAnimated) {
-            svg.classList.add('animated');
-        } else {
-            svg.classList.remove('animated');
+        const isAnimatedValue = document.querySelector('input[name="favicon-animated"]:checked')?.value;
+        // Validate value against whitelist to prevent XSS
+        const allowedValues = ['true', 'false'];
+        if (isAnimatedValue && allowedValues.includes(isAnimatedValue)) {
+            const isAnimated = isAnimatedValue === 'true';
+            if (isAnimated) {
+                svg.classList.add('animated');
+            } else {
+                svg.classList.remove('animated');
+            }
         }
     }
 
@@ -349,18 +375,42 @@
      * Digital Images tab - Switch promotional montage format
      */
     function switchPromoFormat(restoreScroll = null) {
-        const selectedFormat = document.querySelector('input[name="promo-format"]:checked').value;
+        const selectedFormat = document.querySelector('input[name="promo-format"]:checked')?.value;
         const promoContainer = document.getElementById('promo-container');
         if (!promoContainer) return;
 
+        // Validate format against whitelist to prevent XSS
+        const allowedFormats = ['mp4', 'webp', 'gif'];
+        if (!selectedFormat || !allowedFormats.includes(selectedFormat)) return;
+
         const timestamp = new Date().getTime();
         
+        // Clear existing content
+        promoContainer.innerHTML = '';
+        
         if (selectedFormat === 'mp4') {
-            promoContainer.innerHTML = `<video id="promo-video" autoplay muted playsinline width="800">
-                <source src="../diagnostics/images/animated-web.${selectedFormat}?t=${timestamp}" type="video/mp4">
-            </video>`;
+            // Create video element using DOM API to avoid innerHTML XSS warnings
+            const video = document.createElement('video');
+            video.id = 'promo-video';
+            video.autoplay = true;
+            video.muted = true;
+            video.playsInline = true;
+            video.width = 800;
+            
+            const source = document.createElement('source');
+            source.src = `../diagnostics/images/animated-web.${selectedFormat}?t=${timestamp}`;
+            source.type = 'video/mp4';
+            
+            video.appendChild(source);
+            promoContainer.appendChild(video);
         } else {
-            promoContainer.innerHTML = `<img src="../diagnostics/images/animated-web.${selectedFormat}?t=${timestamp}" alt="Promotional Montage Animation" width="800">`;
+            // Create img element using DOM API to avoid innerHTML XSS warnings
+            const img = document.createElement('img');
+            img.src = `../diagnostics/images/animated-web.${selectedFormat}?t=${timestamp}`;
+            img.alt = 'Promotional Montage Animation';
+            img.width = 800;
+            
+            promoContainer.appendChild(img);
         }
         
         if (restoreScroll) {
@@ -374,7 +424,11 @@
      * Digital Images tab - Restart promotional animation
      */
     function restartPromo() {
-        const selectedFormat = document.querySelector('input[name="promo-format"]:checked').value;
+        const selectedFormat = document.querySelector('input[name="promo-format"]:checked')?.value;
+        
+        // Validate format against whitelist to prevent XSS
+        const allowedFormats = ['mp4', 'webp', 'gif'];
+        if (!selectedFormat || !allowedFormats.includes(selectedFormat)) return;
         
         if (selectedFormat === 'mp4') {
             const video = document.getElementById('promo-video');
