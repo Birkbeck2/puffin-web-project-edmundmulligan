@@ -76,6 +76,7 @@ jobs:
         bin/run-pa11y-tests.sh -q .
 
     - name: Run WAVE accessibility tests
+      if: github.base_ref == 'main'
       continue-on-error: true
       run: |
         bin/run-wave-tests.sh -q .
@@ -114,43 +115,3 @@ jobs:
           diagnostics/test-results/readability-results.json
           diagnostics/test-results/validation-results.json
           diagnostics/test-results/wave-results.json
-
-  deploy:
-    needs: run-pre-deployment-test
-    if: github.ref == 'refs/heads/main'
-    runs-on: ubuntu-latest
-    env:
-      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
-
-    steps:
-    - name: Checkout repository
-      uses: actions/checkout@v5
-
-    - name: Read version number
-      id: version
-      run: echo "number=$(cat VERSION)" >> $GITHUB_OUTPUT
-
-    - name: Create release tarball
-      run: |
-        bin/create-release-tar.sh ${{ steps.version.outputs.number }}
-
-    - name: Copy files to server
-      uses: appleboy/scp-action@v0.1.7
-      with:
-        host: prod.edmundmulligan.name
-        username: ${{ secrets.SERVER_USERNAME }}
-        key: ${{ secrets.SERVER_SSH_KEY }}
-        source: "releases/puffin-web-project-edmundmulligan-v${{ steps.version.outputs.number }}.tar.gz"
-        target: /var/www/puffin.edmundmulligan.name
-        rm: false
-
-    - name: Extract files on server
-      uses: appleboy/ssh-action@v1.0.3
-      with:
-        host: prod.edmundmulligan.name
-        username: ${{ secrets.SERVER_USERNAME }}
-        key: ${{ secrets.SERVER_SSH_KEY }}
-        script: |
-          cd /var/www/puffin.edmundmulligan.name
-          tar -xzf releases/puffin-web-project-edmundmulligan-v${{ steps.version.outputs.number }}.tar.gz
-          rm releases/puffin-web-project-edmundmulligan-v${{ steps.version.outputs.number }}.tar.gz
