@@ -41,67 +41,69 @@
             <button type="button" class="tab-button" data-tab="students">Student Dashboard</button>
             <button type="button" class="tab-button" data-tab="lesson">Sample Lesson</button>
             <button type="button" class="tab-button" data-tab="animations">Animations</button>
+            <button type="button" class="tab-button" data-tab="images">Digital Images</button>
         </div>
 
         <div id="landing-tab" class="tab-content active">
-        <div class="controls">
-            <div class="control-group">
-                <label>Theme:</label>
-                <div class="radio-group">
-                    <div class="radio-option">
-                        <input type="radio" id="landing-theme-light" name="landing-theme" value="light" checked>
-                        <label for="landing-theme-light">Light</label>
+            <div class="controls">
+                <div class="control-group">
+                    <label>Theme:</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="landing-theme-light" name="landing-theme" value="light" checked>
+                            <label for="landing-theme-light">Light</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="landing-theme-dark" name="landing-theme" value="dark">
+                            <label for="landing-theme-dark">Dark</label>
+                        </div>
                     </div>
-                    <div class="radio-option">
-                        <input type="radio" id="landing-theme-dark" name="landing-theme" value="dark">
-                        <label for="landing-theme-dark">Dark</label>
+                </div>
+
+                <div class="control-group">
+                    <label>Style:</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="landing-style-normal" name="landing-style" value="normal" checked>
+                            <label for="landing-style-normal">Normal</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="landing-style-subdued" name="landing-style" value="subdued">
+                            <label for="landing-style-subdued">Subdued</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="landing-style-vibrant" name="landing-style" value="vibrant">
+                            <label for="landing-style-vibrant">Vibrant</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label>Header/Footer:</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="landing-expand-minimal" name="landing-expand" value="minimal" checked>
+                            <label for="landing-expand-minimal">Minimal</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="landing-expand-expanded" name="landing-expand" value="expanded">
+                            <label for="landing-expand-expanded">Expanded</label>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="control-group">
-                <label>Style:</label>
-                <div class="radio-group">
-                    <div class="radio-option">
-                        <input type="radio" id="landing-style-normal" name="landing-style" value="normal" checked>
-                        <label for="landing-style-normal">Normal</label>
-                    </div>
-                    <div class="radio-option">
-                        <input type="radio" id="landing-style-subdued" name="landing-style" value="subdued">
-                        <label for="landing-style-subdued">Subdued</label>
-                    </div>
-                    <div class="radio-option">
-                        <input type="radio" id="landing-style-vibrant" name="landing-style" value="vibrant">
-                        <label for="landing-style-vibrant">Vibrant</label>
-                    </div>
-                </div>
-            </div>
-
-            <div class="control-group">
-                <label>Header/Footer:</label>
-                <div class="radio-group">
-                    <div class="radio-option">
-                        <input type="radio" id="landing-expand-minimal" name="landing-expand" value="minimal" checked>
-                        <label for="landing-expand-minimal">Minimal</label>
-                    </div>
-                    <div class="radio-option">
-                        <input type="radio" id="landing-expand-expanded" name="landing-expand" value="expanded">
-                        <label for="landing-expand-expanded">Expanded</label>
-                    </div>
-                </div>
-            </div>
+            <p>Click on a screenshot to view it in actual size.</p>
+            <div class="screenshots" id="landing-screenshots"></div>
         </div>
-        <p>Click on a screenshot to view it in actual size.</p>
-        <div class="screenshots" id="landing-screenshots"></div>
-    </div>
 
-    <div id="students-tab" class="tab-content">
-        <div class="controls">
-            <div class="control-group">
-                <label>Theme:</label>
-                <div class="radio-group">
-                    <div class="radio-option">
-                        <input type="radio" id="students-theme-light" name="students-theme" value="light" checked>
+        <div id="students-tab" class="tab-content">
+            <div class="controls">
+                <div class="control-group">
+                    <label>Theme:</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="students-theme-light" name="students-theme" value="light" checked>
                         <label for="students-theme-light">Light</label>
                     </div>
                     <div class="radio-option">
@@ -109,13 +111,13 @@
                         <label for="students-theme-dark">Dark</label>
                     </div>
                 </div>
-            </div>
+                </div>
 
-            <div class="control-group">
-                <label>Style:</label>
-                <div class="radio-group">
-                    <div class="radio-option">
-                        <input type="radio" id="students-style-normal" name="students-style" value="normal" checked>
+                <div class="control-group">
+                    <label>Style:</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="students-style-normal" name="students-style" value="normal" checked>
                         <label for="students-style-normal">Normal</label>
                     </div>
                     <div class="radio-option">
@@ -127,13 +129,13 @@
                         <label for="students-style-vibrant">Vibrant</label>
                     </div>
                 </div>
-            </div>
+                </div>
 
-            <div class="control-group">
-                <label>Header/Footer:</label>
-                <div class="radio-group">
-                    <div class="radio-option">
-                        <input type="radio" id="students-expand-minimal" name="students-expand" value="minimal" checked>
+                <div class="control-group">
+                    <label>Header/Footer:</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="students-expand-minimal" name="students-expand" value="minimal" checked>
                         <label for="students-expand-minimal">Minimal</label>
                     </div>
                     <div class="radio-option">
@@ -141,20 +143,20 @@
                         <label for="students-expand-expanded">Expanded</label>
                     </div>
                 </div>
+                </div>
             </div>
+
+            <p>Click on a screenshot to view it in actual size.</p>
+            <div class="screenshots" id="students-screenshots"></div>
         </div>
 
-        <p>Click on a screenshot to view it in actual size.</p>
-        <div class="screenshots" id="students-screenshots"></div>
-    </div>
-
-    <div id="lesson-tab" class="tab-content">
-        <div class="controls">
-            <div class="control-group">
-                <label>Theme:</label>
-                <div class="radio-group">
-                    <div class="radio-option">
-                        <input type="radio" id="lesson-theme-light" name="lesson-theme" value="light" checked>
+        <div id="lesson-tab" class="tab-content">
+            <div class="controls">
+                <div class="control-group">
+                    <label>Theme:</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="lesson-theme-light" name="lesson-theme" value="light" checked>
                         <label for="lesson-theme-light">Light</label>
                     </div>
                     <div class="radio-option">
@@ -162,13 +164,13 @@
                         <label for="lesson-theme-dark">Dark</label>
                     </div>
                 </div>
-            </div>
+                </div>
 
-            <div class="control-group">
-                <label>Style:</label>
-                <div class="radio-group">
-                    <div class="radio-option">
-                        <input type="radio" id="lesson-style-normal" name="lesson-style" value="normal" checked>
+                <div class="control-group">
+                    <label>Style:</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="lesson-style-normal" name="lesson-style" value="normal" checked>
                         <label for="lesson-style-normal">Normal</label>
                     </div>
                     <div class="radio-option">
@@ -180,13 +182,13 @@
                         <label for="lesson-style-vibrant">Vibrant</label>
                     </div>
                 </div>
-            </div>
+                </div>
 
-            <div class="control-group">
-                <label>Header/Footer:</label>
-                <div class="radio-group">
-                    <div class="radio-option">
-                        <input type="radio" id="lesson-expand-minimal" name="lesson-expand" value="minimal" checked>
+                <div class="control-group">
+                    <label>Header/Footer:</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="lesson-expand-minimal" name="lesson-expand" value="minimal" checked>
                         <label for="lesson-expand-minimal">Minimal</label>
                     </div>
                     <div class="radio-option">
@@ -194,13 +196,13 @@
                         <label for="lesson-expand-expanded">Expanded</label>
                     </div>
                 </div>
-            </div>
+                </div>
 
-            <div class="control-group section-control">
-                <label>Section:</label>
-                <div class="radio-group">
-                    <div class="radio-option">
-                        <input type="radio" id="lesson-section-0" name="lesson-section" value="0" checked>
+                <div class="control-group section-control">
+                    <label>Section:</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="lesson-section-0" name="lesson-section" value="0" checked>
                         <label for="lesson-section-0">0</label>
                     </div>
                     <div class="radio-option">
@@ -228,35 +230,155 @@
                         <label for="lesson-section-6">6</label>
                     </div>
                 </div>
+                </div>
             </div>
+
+            <p>Click on a screenshot to view it in actual size.</p>
+            <div class="screenshots" id="lesson-screenshots"></div>
         </div>
 
-        <p>Click on a screenshot to view it in actual size.</p>
-        <div class="screenshots" id="lesson-screenshots"></div>
-    </div>
-
-    <div id="animations-tab" class="tab-content">
-        <div class="controls">
-            <div class="control-group">
-                <label>Animation:</label>
-                <div class="radio-group">
-                    <div class="radio-option">
-                        <input type="radio" id="animations-theme-switch" name="animations-options" value="animation-theme-switch" checked>
-                        <label for="animations-theme-switch">Theme Switch</label>
+        <div id="animations-tab" class="tab-content">
+            <div class="controls">
+                <div class="control-group">
+                    <label>Animation:</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="animations-theme-switch" name="animations-options" value="animation-theme-switch" checked>
+                            <label for="animations-theme-switch">Theme Switch</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="animations-portraits" name="animations-options" value="animation-portraits">
+                            <label for="animations-portraits">Portraits on Landing Page</label>
+                        </div>
                     </div>
-                    <div class="radio-option">
-                        <input type="radio" id="animations-portraits" name="animations-options" value="animation-portraits">
-                        <label for="animations-portraits">Portraits on Landing Page</label>
+                </div>
+
+                <button type="button" id="play-animations-btn" class="button-rectangle">
+                    <i class="fas fa-play"></i> Play Animation
+                </button>
+            </div>
+
+            <p>Click on a screenshot to view it in actual size.</p>
+            <div class="screenshots" id="animations-screenshots"></div>
+        </div>
+
+        <div id="images-tab" class="tab-content">
+            <h2>Image 1 - Embodied Mind Logo</h2>
+            <div class="controls">
+                <div class="control-group">
+                    <label>Color:</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="logo-black" name="logo-color" value="black" checked>
+                            <label for="logo-black">Black</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="logo-purple" name="logo-color" value="purple">
+                            <label for="logo-purple">Purple</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="logo-cyan" name="logo-color" value="cyan">
+                            <label for="logo-cyan">Cyan</label>
+                        </div>
                     </div>
                 </div>
             </div>
-            <button type="button" id="play-animations-btn" class="button-rectangle">
-                <i class="fas fa-play"></i> Play Animation
-            </button>
-        </div>
+            <div class="image-display">
+                <img id="logo-image" src="../diagnostics/images/logo-embodied-mind-with-name-black.svg" alt="Embodied Mind Logo" width="300">
+            </div>
 
-        <div class="screenshots" id="animations-screenshots"></div>
-    </div>
+            <h2>Image 2 - Background for Web Witchcraft and Wizardry Landing Page</h2>
+            <div class="controls">
+                <div class="control-group">
+                    <label>Theme:</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="bg-light" name="bg-theme" value="light" checked>
+                            <label for="bg-light">Light</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="bg-dark" name="bg-theme" value="dark">
+                            <label for="bg-dark">Dark</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label>Orientation:</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="bg-landscape" name="bg-orientation" value="landscape" checked>
+                            <label for="bg-landscape">Landscape</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="bg-portrait" name="bg-orientation" value="portrait">
+                            <label for="bg-portrait">Portrait</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="image-display">
+                <img id="background-image" src="../diagnostics/images/background-web-landscape-light.svg" alt="Web Background" width="600">
+            </div>
+
+            <h2>Image 3 - Favicon</h2>
+            <div class="controls">
+                <div class="control-group">
+                    <label>Animation:</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="favicon-static" name="favicon-animated" value="false" checked>
+                            <label for="favicon-static">Static</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="favicon-animated" name="favicon-animated" value="true">
+                            <label for="favicon-animated">Animated</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="image-display" id="favicon-container"></div>
+
+            <h2>Image 4 - Picture of Dorian Grayscale</h2>
+            <div class="image-display">
+                <picture>
+                    <source srcset="../diagnostics/images/picture_grayscale.webp" type="image/webp">
+                    <img src="../diagnostics/images/picture_grayscale.jpg" alt="A man viewing a painting of an old male witch in an art gallery" width="400">
+                </picture>
+            </div>
+
+            <h2>Image 5 - Shot Morgana</h2>
+            <div class="image-display">
+                <picture>
+                    <source srcset="../diagnostics/images/shot-morgana.webp" type="image/webp">
+                    <img src="../diagnostics/images/shot-morgana.jpg" alt="Six silk screen printed images of Morgana Le Fey" width="400">
+                </picture>
+            </div>
+
+            <h2>Image 6 - Promotional Montage</h2>
+            <div class="controls">
+                <div class="control-group">
+                    <label>Format:</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="promo-mp4" name="promo-format" value="mp4" checked>
+                            <label for="promo-mp4">MP4</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="promo-webp" name="promo-format" value="webp">
+                            <label for="promo-webp">WEBP</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="promo-gif" name="promo-format" value="gif">
+                            <label for="promo-gif">GIF</label>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" id="restart-promo-btn" class="button-rectangle">
+                    <i class="fas fa-play"></i> Restart Animation
+                </button>
+            </div>
+            <div class="image-display" id="promo-container"></div>
+        </div>
     </main>
 </body>
 </html>
