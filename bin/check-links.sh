@@ -66,7 +66,7 @@ echo "Installing dependencies..."
 npm install broken-link-checker cheerio > /dev/null 2>&1
 
 # Setup results directory in application folder
-RESULTS_DIR="$ORIGINAL_DIR/$FOLDER/test-results"
+RESULTS_DIR="$ORIGINAL_DIR/$FOLDER/diagnostics/test-results"
 mkdir -p "$RESULTS_DIR"
 
 # Change to the specified folder to serve files from there

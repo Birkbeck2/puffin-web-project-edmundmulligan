@@ -10,6 +10,11 @@
  *   - Uses CSS animations for fade transitions (2s in, 5s display, 2s out)
  *   - Responsive: hidden <400px, single between blocks 400-800px, sides >800px
  *   - Cross-fading alternation at >800px
+ *   
+ *   Animation preference priority (first match wins):
+ *   1. ?animation=on|off|auto query parameter (for testing)
+ *   2. localStorage 'animationPreference' (user's toggle button choice)
+ *   3. prefers-reduced-motion media query (system accessibility setting)
  **********************************************************************
  */
 
@@ -200,10 +205,40 @@
                 return;
             }
 
-            // Check if user prefers reduced motion
-            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            // Check animation preference in this order:
+            // 1. Query parameter (for testing/screenshots)
+            // 2. localStorage (user's button toggle preference)
+            // 3. prefers-reduced-motion (system accessibility setting)
+            const animationParam = window.QueryParams ? window.QueryParams.getAnimation() : null;
+            let shouldAnimate = true;
             
-            if (prefersReducedMotion) {
+            if (animationParam === 'off') {
+                // Explicitly disabled via query parameter
+                shouldAnimate = false;
+            } else if (animationParam === 'on') {
+                // Explicitly enabled via query parameter
+                shouldAnimate = true;
+            } else {
+                // Check localStorage for user's toggle preference
+                try {
+                    const storedPref = localStorage.getItem('animationPreference');
+                    if (storedPref === 'disabled') {
+                        shouldAnimate = false;
+                    } else if (storedPref === 'enabled') {
+                        shouldAnimate = true;
+                    } else {
+                        // Auto mode: check user's prefers-reduced-motion setting
+                        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+                        shouldAnimate = !prefersReducedMotion;
+                    }
+                } catch (error) {
+                    // If localStorage fails, fall back to prefers-reduced-motion
+                    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+                    shouldAnimate = !prefersReducedMotion;
+                }
+            }
+            
+            if (!shouldAnimate) {
                 // Show static portraits without animation
                 const staticPortrait1 = this.getRandomPortrait();
                 const staticPortrait2 = this.getRandomPortrait();
@@ -211,11 +246,18 @@
                 this.setPortraitImage(portrait1, staticPortrait1);
                 this.setPortraitImage(portrait2, staticPortrait2);
                 
-                portrait1.classList.add('animating'); // Adds the class so CSS can apply static styles
-                portrait2.classList.add('animating');
+                // Remove 'animating' class if present and add 'static' class
+                portrait1.classList.remove('animating');
+                portrait1.classList.add('static');
+                portrait2.classList.remove('animating');
+                portrait2.classList.add('static');
                 
                 return; // Exit early, no animation cycles
             }
+
+            // Ensure 'static' class is removed before starting animations
+            portrait1.classList.remove('static');
+            portrait2.classList.remove('static');
 
             // Clear any existing timers
             this.timers.forEach(timer => clearInterval(timer));
@@ -236,6 +278,37 @@
             setTimeout(() => {
                 this.startPortraitCycle(portrait2);
             }, this.cycleDuration / 2);
+        }
+
+        /**
+         * Restart portrait animations (used when toggling animation preference)
+         */
+        restart() {
+            // Get portrait elements
+            const portrait1 = document.getElementById('portrait-block-1');
+            const portrait2 = document.getElementById('portrait-block-2');
+            
+            // Clear existing timers
+            this.timers.forEach(timer => clearInterval(timer));
+            this.timers = [];
+            
+            // Reset used portraits
+            this.usedPortraits.clear();
+            
+            // Clean up existing state from portrait blocks
+            if (portrait1) {
+                portrait1.classList.remove('static', 'animating');
+                const img1 = portrait1.querySelector('.portrait-image');
+                if (img1) img1.style.opacity = '0';
+            }
+            if (portrait2) {
+                portrait2.classList.remove('static', 'animating');
+                const img2 = portrait2.querySelector('.portrait-image');
+                if (img2) img2.style.opacity = '0';
+            }
+            
+            // Re-setup portraits with new preference
+            this.setupPortraits();
         }
     }
 

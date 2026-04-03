@@ -388,8 +388,8 @@ function getAllFiles(dir, extensions, excludeList, rootDir, stats) {
         const stat = fs.statSync(filePath);
         
         if (stat && stat.isDirectory()) {
-            // Skip node_modules, .git, test-results, etc.
-            if (!['node_modules', '.git', 'test-results', 'artwork'].includes(file)) {
+            // Skip node_modules, .git, diagnostics/test-results, etc.
+            if (!['node_modules', '.git', 'diagnostics', 'artwork'].includes(file)) {
                 results = results.concat(getAllFiles(filePath, extensions, excludeList, rootDir, stats));
             }
         } else {
@@ -412,7 +412,7 @@ function getAllFiles(dir, extensions, excludeList, rootDir, stats) {
  *
  * @remarks Preconditions:
  * - The repository root is assumed to be the parent of this script's directory.
- * - The caller must be able to write to `test-results/colour-audit-report.json`.
+ * - The caller must be able to write to `diagnostics/test-results/colour-audit-report.json`.
  *
  * @returns {void}
  */
@@ -530,7 +530,7 @@ function main() {
     console.log('='.repeat(100) + '\n');
     
     // Write detailed report to file
-    const reportPath = path.join(rootDir, 'test-results/colour-audit-report.json');
+    const reportPath = path.join(rootDir, 'diagnostics/test-results/colour-audit-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(allIssues, null, 2));
     console.log(`Detailed report written to: ${reportPath}\n`);
     

@@ -61,7 +61,7 @@ npm install text-readability cheerio > /dev/null 2>&1
 
 # Setup results directory in application folder
 ORIGINAL_DIR=$(pwd)
-RESULTS_DIR="$ORIGINAL_DIR/$FOLDER/test-results"
+RESULTS_DIR="$ORIGINAL_DIR/$FOLDER/diagnostics/test-results"
 mkdir -p "$RESULTS_DIR"
 RESULT_FILE="$RESULTS_DIR/readability-results.json"
 

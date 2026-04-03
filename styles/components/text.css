@@ -71,3 +71,19 @@ a:focus-visible {
     outline: var(--border-weight-thin) dashed var(--colour-effective-link-text-focus);
     outline-offset: 0.2rem;
 }
+
+/*
+ **************************************************
+ * Styles for form elements
+ **************************************************
+ */
+
+label {
+    font-family: var(--font-family-menu);
+    font-size: var(--fontsize-normal);
+}
+
+fieldset {
+    font-family: var(--font-family-menu);
+    font-size: var(--fontsize-normal);
+}

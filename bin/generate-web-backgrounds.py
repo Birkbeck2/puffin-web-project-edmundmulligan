@@ -125,7 +125,7 @@ def generate_file(orientation, mode, style, source_dir='artwork/source/image-2')
     # Combine all parameters including colours
     all_params = {**position_params, **opacity_params}
     # Add colour parameters as expandable definitions
-    all_params['bgcolourbase'] = bg_colour
+    all_params['bgcolorbase'] = bg_colour
     all_params['colourone'] = colour_one
     all_params['colourtwo'] = colour_two
     all_params['gridcolour'] = colour_two

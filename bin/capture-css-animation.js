@@ -162,7 +162,7 @@ async function captureAnimation(url, outputName, duration, options = {}) {
     }
     
     // Create output directory
-    const outputDir = path.join(process.cwd(), 'output');
+    const outputDir = path.join(process.cwd(), 'diagnostics/screenshots');
     if (!fs.existsSync(outputDir)) {
       fs.mkdirSync(outputDir, { recursive: true });
     }

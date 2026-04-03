@@ -39,7 +39,7 @@ Run pa11y tests and exclude one file:
 bin/run-pa11y-tests.sh . --exclude pages/start.html
 ```
 
-Run browser tests and exclude specific pages used in `tests/browser-tests.js`:
+Run browser tests and exclude specific pages used in `bin/browser-tests.js`:
 
 ```bash
 bin/run-browser-tests.sh . --exclude start.html students

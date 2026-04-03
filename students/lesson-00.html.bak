@@ -24,7 +24,7 @@
     <!-- End of meta tags -->
 
     <!-- Set the document title-->
-    <title>Lesson0|Web Witchcraft and Wizardry</title>
+    <title>Lesson 0 | Web Witchcraft and Wizardry</title>
 
     <!-- Link to Favicon -->
     <link rel="icon" type="image/svg+xml" href="../images/icons/favicon.svg">
@@ -47,15 +47,15 @@
     <link rel="stylesheet" href="../styles/globals.css">
     <link rel="stylesheet" href="../styles/main.css">
 
-    <!-- These stylesheets are common to all pages -->
-    <link rel="stylesheet" href="../styles/pages.css">
+    <!-- component-specific stylesheets for lesson pages -->
     <link rel="stylesheet" href="../styles/components/lessons-sidebar.css">
 
     <!-- page specific stylesheet -->
-    <link rel="stylesheet" href="../styles/students/lesson.css">
+    <link rel="stylesheet" href="../styles/pages/lesson.css">
     <!-- End of CSS stylesheets section -->
 
     <!-- Load JavaScript files -->
+    <script src="../scripts/queryParams.js"></script>
     <script src="../scripts/debug.js"></script>
     <script src="../scripts/themeSwitcher.js"></script>
     <script src="../scripts/localStorage.js" defer></script>
