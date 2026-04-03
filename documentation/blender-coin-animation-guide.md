@@ -413,8 +413,8 @@ To make the loop work, we need the coin to return to original position:
 Using FFmpeg in terminal:
 
 ```bash
-# Navigate to your output directory
-cd /path/to/output/
+# Navigate to your screenshots directory
+cd /path/to/diagnostics/screenshots/
 
 # Convert to WebP (high quality)
 ffmpeg -i coin-animation.mp4 \
@@ -620,7 +620,7 @@ project/
 │   ├── logo-embodied-mind.svg.backup (original backup)
 │   ├── logo-embodied-mind-heads.png (export this)
 │   └── logo-embodied-mind-tails.png (create mirrored)
-├── output/ (create this folder)
+├── diagnostics/screenshots/ (create this folder)
 │   ├── coin-animation.mp4
 │   ├── coin-animation.webp
 │   └── coin-animation.gif

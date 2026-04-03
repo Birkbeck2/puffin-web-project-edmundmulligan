@@ -38,7 +38,7 @@ usage() {
     echo
     echo "Examples:"
     echo "  $0 coin-animation.mp4"
-    echo "  $0 coin-animation.mp4 ./output"
+    echo "  $0 coin-animation.mp4 ./diagnostics/screenshots"
     echo
     echo "This script will create:"
     echo "  - High-quality WebP animation"

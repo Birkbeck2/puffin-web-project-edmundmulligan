@@ -73,7 +73,7 @@ fi
 
 # Change to the specified folder to serve files from there
 ORIGINAL_DIR=$(pwd)
-RESULTS_DIR="$ORIGINAL_DIR/$FOLDER/test-results"
+RESULTS_DIR="$ORIGINAL_DIR/$FOLDER/diagnostics/test-results"
 mkdir -p "$RESULTS_DIR"
 
 # Normalize folder path for URL construction
@@ -277,13 +277,13 @@ EXIT_CODE=$(node -p "
   const warnings = data.pages.filter(p => p.score >= 0.9 && p.score < 1.0).length;
   
   if (failures > 0) {
-    process.stdout.write('❌ ' + failures + ' page(s) below 90% accessibility threshold.\\n');
+    process.stderr.write('❌ ' + failures + ' page(s) below 90% accessibility threshold.\\n');
     1; // Exit with error
   } else if (warnings > 0) {
-    process.stdout.write('⚠️  ' + warnings + ' page(s) between 90-99% accessibility. Consider improving to 100%.\\n');
+    process.stderr.write('⚠️  ' + warnings + ' page(s) between 90-99% accessibility. Consider improving to 100%.\\n');
     0; // Exit with success but show warning
   } else {
-    process.stdout.write('✅ All pages meet 100% accessibility threshold.\\n');
+    process.stderr.write('✅ All pages meet 100% accessibility threshold.\\n');
     0; // Exit with success
   }
 ")

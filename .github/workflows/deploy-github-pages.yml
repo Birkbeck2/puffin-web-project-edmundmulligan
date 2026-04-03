@@ -133,7 +133,7 @@ jobs:
         run: |
           rm -rf _site
           mkdir -p _site
-          cp -a index.html bin data diagnostics images mentors output pages scripts students styles test-results _site/
+          cp -a index.html bin data diagnostics images mentors pages scripts students styles _site/
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3

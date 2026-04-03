@@ -19,11 +19,11 @@
     const VIEWPORTS = [
         { width: 199, label: 'Tiny (<200px)' },
         { width: 401, label: 'Mobile (<600px)' },
-        { width: 901, label: 'Tablet (<1200px)' },
-        { width: 2001, label: 'Desktop (>1200px)' }
+        { width: 901, label: 'Small Computer (<1200px)' },
+        { width: 2001, label: 'Large Computer (>1200px)' }
     ];
 
-    const OUTPUT_PATH = '../output/';
+    const OUTPUT_PATH = '../diagnostics/screenshots/';
 
     /**
      * Set up tab switching functionality

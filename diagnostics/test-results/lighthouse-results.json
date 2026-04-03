@@ -120,69 +120,6 @@
       "failedAudits": []
     },
     {
-      "url": "manipulated-images/image1",
-      "theme": "light",
-      "style": "normal",
-      "viewport": "900",
-      "score": 1,
-      "failedAudits": []
-    },
-    {
-      "url": "manipulated-images/image4",
-      "theme": "light",
-      "style": "normal",
-      "viewport": "900",
-      "score": 1,
-      "failedAudits": []
-    },
-    {
-      "url": "manipulated-images/image3",
-      "theme": "light",
-      "style": "normal",
-      "viewport": "900",
-      "score": 1,
-      "failedAudits": []
-    },
-    {
-      "url": "manipulated-images/index",
-      "theme": "light",
-      "style": "normal",
-      "viewport": "900",
-      "score": 0.93,
-      "failedAudits": [
-        {
-          "id": "target-size",
-          "title": "Touch targets do not have sufficient size or spacing.",
-          "description": "Touch targets with sufficient size and spacing help users who may have difficulty targeting small controls to activate the targets. [Learn more about touch targets](https://dequeuniversity.com/rules/axe/4.10/target-size).",
-          "score": 0
-        }
-      ]
-    },
-    {
-      "url": "manipulated-images/image2",
-      "theme": "light",
-      "style": "normal",
-      "viewport": "900",
-      "score": 1,
-      "failedAudits": []
-    },
-    {
-      "url": "manipulated-images/image6",
-      "theme": "light",
-      "style": "normal",
-      "viewport": "900",
-      "score": 1,
-      "failedAudits": []
-    },
-    {
-      "url": "manipulated-images/image5",
-      "theme": "light",
-      "style": "normal",
-      "viewport": "900",
-      "score": 1,
-      "failedAudits": []
-    },
-    {
       "url": "mentors/lesson-00",
       "theme": "dark",
       "style": "normal",
@@ -295,69 +232,6 @@
     },
     {
       "url": "interface-design/index",
-      "theme": "dark",
-      "style": "normal",
-      "viewport": "900",
-      "score": 1,
-      "failedAudits": []
-    },
-    {
-      "url": "manipulated-images/image1",
-      "theme": "dark",
-      "style": "normal",
-      "viewport": "900",
-      "score": 1,
-      "failedAudits": []
-    },
-    {
-      "url": "manipulated-images/image4",
-      "theme": "dark",
-      "style": "normal",
-      "viewport": "900",
-      "score": 1,
-      "failedAudits": []
-    },
-    {
-      "url": "manipulated-images/image3",
-      "theme": "dark",
-      "style": "normal",
-      "viewport": "900",
-      "score": 1,
-      "failedAudits": []
-    },
-    {
-      "url": "manipulated-images/index",
-      "theme": "dark",
-      "style": "normal",
-      "viewport": "900",
-      "score": 0.93,
-      "failedAudits": [
-        {
-          "id": "target-size",
-          "title": "Touch targets do not have sufficient size or spacing.",
-          "description": "Touch targets with sufficient size and spacing help users who may have difficulty targeting small controls to activate the targets. [Learn more about touch targets](https://dequeuniversity.com/rules/axe/4.10/target-size).",
-          "score": 0
-        }
-      ]
-    },
-    {
-      "url": "manipulated-images/image2",
-      "theme": "dark",
-      "style": "normal",
-      "viewport": "900",
-      "score": 1,
-      "failedAudits": []
-    },
-    {
-      "url": "manipulated-images/image6",
-      "theme": "dark",
-      "style": "normal",
-      "viewport": "900",
-      "score": 1,
-      "failedAudits": []
-    },
-    {
-      "url": "manipulated-images/image5",
       "theme": "dark",
       "style": "normal",
       "viewport": "900",
@@ -484,69 +358,6 @@
       "failedAudits": []
     },
     {
-      "url": "manipulated-images/image1",
-      "theme": "light",
-      "style": "subdued",
-      "viewport": "900",
-      "score": 1,
-      "failedAudits": []
-    },
-    {
-      "url": "manipulated-images/image4",
-      "theme": "light",
-      "style": "subdued",
-      "viewport": "900",
-      "score": 1,
-      "failedAudits": []
-    },
-    {
-      "url": "manipulated-images/image3",
-      "theme": "light",
-      "style": "subdued",
-      "viewport": "900",
-      "score": 1,
-      "failedAudits": []
-    },
-    {
-      "url": "manipulated-images/index",
-      "theme": "light",
-      "style": "subdued",
-      "viewport": "900",
-      "score": 0.93,
-      "failedAudits": [
-        {
-          "id": "target-size",
-          "title": "Touch targets do not have sufficient size or spacing.",
-          "description": "Touch targets with sufficient size and spacing help users who may have difficulty targeting small controls to activate the targets. [Learn more about touch targets](https://dequeuniversity.com/rules/axe/4.10/target-size).",
-          "score": 0
-        }
-      ]
-    },
-    {
-      "url": "manipulated-images/image2",
-      "theme": "light",
-      "style": "subdued",
-      "viewport": "900",
-      "score": 1,
-      "failedAudits": []
-    },
-    {
-      "url": "manipulated-images/image6",
-      "theme": "light",
-      "style": "subdued",
-      "viewport": "900",
-      "score": 1,
-      "failedAudits": []
-    },
-    {
-      "url": "manipulated-images/image5",
-      "theme": "light",
-      "style": "subdued",
-      "viewport": "900",
-      "score": 1,
-      "failedAudits": []
-    },
-    {
       "url": "mentors/lesson-00",
       "theme": "dark",
       "style": "subdued",
@@ -659,69 +470,6 @@
     },
     {
       "url": "interface-design/index",
-      "theme": "dark",
-      "style": "subdued",
-      "viewport": "900",
-      "score": 1,
-      "failedAudits": []
-    },
-    {
-      "url": "manipulated-images/image1",
-      "theme": "dark",
-      "style": "subdued",
-      "viewport": "900",
-      "score": 1,
-      "failedAudits": []
-    },
-    {
-      "url": "manipulated-images/image4",
-      "theme": "dark",
-      "style": "subdued",
-      "viewport": "900",
-      "score": 1,
-      "failedAudits": []
-    },
-    {
-      "url": "manipulated-images/image3",
-      "theme": "dark",
-      "style": "subdued",
-      "viewport": "900",
-      "score": 1,
-      "failedAudits": []
-    },
-    {
-      "url": "manipulated-images/index",
-      "theme": "dark",
-      "style": "subdued",
-      "viewport": "900",
-      "score": 0.93,
-      "failedAudits": [
-        {
-          "id": "target-size",
-          "title": "Touch targets do not have sufficient size or spacing.",
-          "description": "Touch targets with sufficient size and spacing help users who may have difficulty targeting small controls to activate the targets. [Learn more about touch targets](https://dequeuniversity.com/rules/axe/4.10/target-size).",
-          "score": 0
-        }
-      ]
-    },
-    {
-      "url": "manipulated-images/image2",
-      "theme": "dark",
-      "style": "subdued",
-      "viewport": "900",
-      "score": 1,
-      "failedAudits": []
-    },
-    {
-      "url": "manipulated-images/image6",
-      "theme": "dark",
-      "style": "subdued",
-      "viewport": "900",
-      "score": 1,
-      "failedAudits": []
-    },
-    {
-      "url": "manipulated-images/image5",
       "theme": "dark",
       "style": "subdued",
       "viewport": "900",
@@ -848,69 +596,6 @@
       "failedAudits": []
     },
     {
-      "url": "manipulated-images/image1",
-      "theme": "light",
-      "style": "vibrant",
-      "viewport": "900",
-      "score": 1,
-      "failedAudits": []
-    },
-    {
-      "url": "manipulated-images/image4",
-      "theme": "light",
-      "style": "vibrant",
-      "viewport": "900",
-      "score": 1,
-      "failedAudits": []
-    },
-    {
-      "url": "manipulated-images/image3",
-      "theme": "light",
-      "style": "vibrant",
-      "viewport": "900",
-      "score": 1,
-      "failedAudits": []
-    },
-    {
-      "url": "manipulated-images/index",
-      "theme": "light",
-      "style": "vibrant",
-      "viewport": "900",
-      "score": 0.93,
-      "failedAudits": [
-        {
-          "id": "target-size",
-          "title": "Touch targets do not have sufficient size or spacing.",
-          "description": "Touch targets with sufficient size and spacing help users who may have difficulty targeting small controls to activate the targets. [Learn more about touch targets](https://dequeuniversity.com/rules/axe/4.10/target-size).",
-          "score": 0
-        }
-      ]
-    },
-    {
-      "url": "manipulated-images/image2",
-      "theme": "light",
-      "style": "vibrant",
-      "viewport": "900",
-      "score": 1,
-      "failedAudits": []
-    },
-    {
-      "url": "manipulated-images/image6",
-      "theme": "light",
-      "style": "vibrant",
-      "viewport": "900",
-      "score": 1,
-      "failedAudits": []
-    },
-    {
-      "url": "manipulated-images/image5",
-      "theme": "light",
-      "style": "vibrant",
-      "viewport": "900",
-      "score": 1,
-      "failedAudits": []
-    },
-    {
       "url": "mentors/lesson-00",
       "theme": "dark",
       "style": "vibrant",
@@ -1023,69 +708,6 @@
     },
     {
       "url": "interface-design/index",
-      "theme": "dark",
-      "style": "vibrant",
-      "viewport": "900",
-      "score": 1,
-      "failedAudits": []
-    },
-    {
-      "url": "manipulated-images/image1",
-      "theme": "dark",
-      "style": "vibrant",
-      "viewport": "900",
-      "score": 1,
-      "failedAudits": []
-    },
-    {
-      "url": "manipulated-images/image4",
-      "theme": "dark",
-      "style": "vibrant",
-      "viewport": "900",
-      "score": 1,
-      "failedAudits": []
-    },
-    {
-      "url": "manipulated-images/image3",
-      "theme": "dark",
-      "style": "vibrant",
-      "viewport": "900",
-      "score": 1,
-      "failedAudits": []
-    },
-    {
-      "url": "manipulated-images/index",
-      "theme": "dark",
-      "style": "vibrant",
-      "viewport": "900",
-      "score": 0.93,
-      "failedAudits": [
-        {
-          "id": "target-size",
-          "title": "Touch targets do not have sufficient size or spacing.",
-          "description": "Touch targets with sufficient size and spacing help users who may have difficulty targeting small controls to activate the targets. [Learn more about touch targets](https://dequeuniversity.com/rules/axe/4.10/target-size).",
-          "score": 0
-        }
-      ]
-    },
-    {
-      "url": "manipulated-images/image2",
-      "theme": "dark",
-      "style": "vibrant",
-      "viewport": "900",
-      "score": 1,
-      "failedAudits": []
-    },
-    {
-      "url": "manipulated-images/image6",
-      "theme": "dark",
-      "style": "vibrant",
-      "viewport": "900",
-      "score": 1,
-      "failedAudits": []
-    },
-    {
-      "url": "manipulated-images/image5",
       "theme": "dark",
       "style": "vibrant",
       "viewport": "900",

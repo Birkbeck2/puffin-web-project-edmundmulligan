@@ -32,7 +32,7 @@ paths=(
   scripts
   students
   styles
-  test-results
+  diagnostics/test-results
 )
 
 for path in "${paths[@]}"; do

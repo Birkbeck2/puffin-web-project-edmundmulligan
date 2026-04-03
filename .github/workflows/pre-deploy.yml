@@ -104,15 +104,15 @@ jobs:
       with:
         name: test-reports
         path: |
-          test-results/validation-results.json
-          test-results/broken-links-results.json
-          test-results/axe-results.json
-          test-results/pa11y-results.json
-          test-results/lighthouse-results.json
-          test-results/wave-results.json
-          test-results/readability-results.json
-          test-results/browser-results.json
-          test-results/colour-audit-report.json
+          diagnostics/test-results/validation-results.json
+          diagnostics/test-results/broken-links-results.json
+          diagnostics/test-results/axe-results.json
+          diagnostics/test-results/pa11y-results.json
+          diagnostics/test-results/lighthouse-results.json
+          diagnostics/test-results/wave-results.json
+          diagnostics/test-results/readability-results.json
+          diagnostics/test-results/browser-results.json
+          diagnostics/test-results/colour-audit-report.json
 
   deploy:
     needs: run-pre-deployment-test
@@ -131,6 +131,6 @@ jobs:
         host: prod.edmundmulligan.name
         username: ${{ secrets.SERVER_USERNAME }}
         key: ${{ secrets.SERVER_SSH_KEY }}
-        source: "index.html data/ diagnostics/ images/ mentors/ pages/ scripts/ students/ styles/ test-results/"
+        source: "index.html data/ diagnostics/ images/ mentors/ pages/ scripts/ students/ styles/"
         target: /var/www/puffin.edmundmulligan.name
         rm: true
