@@ -62,26 +62,26 @@ jobs:
 
       - name: Run axe accessibility tests
         continue-on-error: true
-        run: bin/run-axe-tests.sh . -q -x manipulated-images
+        run: bin/run-axe-tests.sh . -q
 
       - name: Run Lighthouse accessibility tests
         continue-on-error: true
-        run: bin/run-lighthouse-tests.sh . -q -x manipulated-images
+        run: bin/run-lighthouse-tests.sh . -q
 
       - name: Run Pa11y accessibility tests
         continue-on-error: true
-        run: bin/run-pa11y-tests.sh . -q -x manipulated-images
+        run: bin/run-pa11y-tests.sh . -q
 
       - name: Run WAVE accessibility tests
         continue-on-error: true
-        run: bin/run-wave-tests.sh . -q -x manipulated-images
+        run: bin/run-wave-tests.sh . -q
         env:
           WAVE_API_KEY: ${{ secrets.WAVE_API_KEY }}
           NGROK_AUTHTOKEN: ${{ secrets.NGROK_AUTHTOKEN }}
 
       - name: Check reading levels
         continue-on-error: true
-        run: bin/check-reading-age.sh . -x manipulated-images
+        run: bin/check-reading-age.sh .
 
       - name: Check site works in different browsers
         continue-on-error: true

@@ -1,26 +1,9 @@
 {
-  "files": [
-    {
-      "file": "./diagnostics/prototypes.html",
-      "issues": [
-        {
-          "type": "missing-fields",
-          "message": "Missing required fields: File, Author, Copyright, License, Description",
-          "missingFields": [
-            "File",
-            "Author",
-            "Copyright",
-            "License",
-            "Description"
-          ]
-        }
-      ]
-    }
-  ],
+  "files": [],
   "summary": {
-    "totalFiles": 107,
-    "filesWithIssues": 1,
+    "totalFiles": 108,
+    "filesWithIssues": 0,
     "missingHeaderBlocks": 0,
-    "missingRequiredFields": 1
+    "missingRequiredFields": 0
   }
 }
