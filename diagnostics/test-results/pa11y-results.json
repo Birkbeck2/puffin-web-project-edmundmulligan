@@ -118,15 +118,6 @@
       "issues": []
     },
     {
-      "url": "interface-design/index.html",
-      "theme": "light",
-      "style": "normal",
-      "viewport": "900",
-      "documentTitle": "Visual Design and Web Project Assignment 2",
-      "pageUrl": "http://localhost:8080/interface-design",
-      "issues": []
-    },
-    {
       "url": "mentors/lesson-00.html",
       "theme": "dark",
       "style": "normal",
@@ -241,15 +232,6 @@
       "viewport": "900",
       "documentTitle": "About | Web Witchcraft and Wizardry",
       "pageUrl": "http://localhost:8080/pages/start",
-      "issues": []
-    },
-    {
-      "url": "interface-design/index.html",
-      "theme": "dark",
-      "style": "normal",
-      "viewport": "900",
-      "documentTitle": "Visual Design and Web Project Assignment 2",
-      "pageUrl": "http://localhost:8080/interface-design",
       "issues": []
     },
     {
@@ -370,15 +352,6 @@
       "issues": []
     },
     {
-      "url": "interface-design/index.html",
-      "theme": "light",
-      "style": "subdued",
-      "viewport": "900",
-      "documentTitle": "Visual Design and Web Project Assignment 2",
-      "pageUrl": "http://localhost:8080/interface-design",
-      "issues": []
-    },
-    {
       "url": "mentors/lesson-00.html",
       "theme": "dark",
       "style": "subdued",
@@ -493,15 +466,6 @@
       "viewport": "900",
       "documentTitle": "About | Web Witchcraft and Wizardry",
       "pageUrl": "http://localhost:8080/pages/start",
-      "issues": []
-    },
-    {
-      "url": "interface-design/index.html",
-      "theme": "dark",
-      "style": "subdued",
-      "viewport": "900",
-      "documentTitle": "Visual Design and Web Project Assignment 2",
-      "pageUrl": "http://localhost:8080/interface-design",
       "issues": []
     },
     {
@@ -622,15 +586,6 @@
       "issues": []
     },
     {
-      "url": "interface-design/index.html",
-      "theme": "light",
-      "style": "vibrant",
-      "viewport": "900",
-      "documentTitle": "Visual Design and Web Project Assignment 2",
-      "pageUrl": "http://localhost:8080/interface-design",
-      "issues": []
-    },
-    {
       "url": "mentors/lesson-00.html",
       "theme": "dark",
       "style": "vibrant",
@@ -745,15 +700,6 @@
       "viewport": "900",
       "documentTitle": "About | Web Witchcraft and Wizardry",
       "pageUrl": "http://localhost:8080/pages/start",
-      "issues": []
-    },
-    {
-      "url": "interface-design/index.html",
-      "theme": "dark",
-      "style": "vibrant",
-      "viewport": "900",
-      "documentTitle": "Visual Design and Web Project Assignment 2",
-      "pageUrl": "http://localhost:8080/interface-design",
       "issues": []
     }
   ]

@@ -77,16 +77,10 @@
       "links": [],
       "brokenCount": 0,
       "totalCount": 17
-    },
-    {
-      "url": "interface-design/index.html",
-      "links": [],
-      "brokenCount": 0,
-      "totalCount": 2
     }
   ],
   "summary": {
-    "totalLinks": 276,
+    "totalLinks": 274,
     "brokenLinks": 0,
     "excludedLinks": 0
   }
