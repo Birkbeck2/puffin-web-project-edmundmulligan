@@ -76,7 +76,7 @@ fi
 
 # Change to the specified folder to serve files from there
 ORIGINAL_DIR=$(pwd)
-RESULTS_DIR="$ORIGINAL_DIR/$FOLDER/test-results"
+RESULTS_DIR="$ORIGINAL_DIR/$FOLDER/diagnostics/test-results"
 mkdir -p "$RESULTS_DIR"
 cd "$FOLDER" || exit 1
 

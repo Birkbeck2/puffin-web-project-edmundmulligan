@@ -76,6 +76,7 @@ jobs:
         bin/run-pa11y-tests.sh -q .
 
     - name: Run WAVE accessibility tests
+      if: github.base_ref == 'main'
       continue-on-error: true
       run: |
         bin/run-wave-tests.sh -q .
@@ -104,33 +105,13 @@ jobs:
       with:
         name: test-reports
         path: |
-          test-results/validation-results.json
-          test-results/broken-links-results.json
-          test-results/axe-results.json
-          test-results/pa11y-results.json
-          test-results/lighthouse-results.json
-          test-results/wave-results.json
-          test-results/readability-results.json
-          test-results/browser-results.json
-          test-results/colour-audit-report.json
-
-  deploy:
-    needs: run-pre-deployment-test
-    if: github.ref == 'refs/heads/main'
-    runs-on: ubuntu-latest
-    env:
-      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
-
-    steps:
-    - name: Checkout repository
-      uses: actions/checkout@v5
-
-    - name: Copy files to server
-      uses: appleboy/scp-action@v0.1.7
-      with:
-        host: prod.edmundmulligan.name
-        username: ${{ secrets.SERVER_USERNAME }}
-        key: ${{ secrets.SERVER_SSH_KEY }}
-        source: "index.html data/ diagnostics/ images/ mentors/ pages/ scripts/ students/ styles/ test-results/"
-        target: /var/www/puffin.edmundmulligan.name
-        rm: true
+          diagnostics/test-results/axe-results.json
+          diagnostics/test-results/broken-links-results.json
+          diagnostics/test-results/browser-results.json
+          diagnostics/test-results/colour-audit-report.json
+          diagnostics/test-results/file-comments-check-results.json
+          diagnostics/test-results/lighthouse-results.json
+          diagnostics/test-results/pa11y-results.json
+          diagnostics/test-results/readability-results.json
+          diagnostics/test-results/validation-results.json
+          diagnostics/test-results/wave-results.json

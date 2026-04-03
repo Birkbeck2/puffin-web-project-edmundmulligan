@@ -16,7 +16,7 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  build-test-version:
+  build-and-release:
     if: github.actor != 'github-actions[bot]' && !contains(github.event.head_commit.message, '[skip ci]')
     runs-on: ubuntu-latest
     env:
@@ -33,63 +33,6 @@ jobs:
         uses: actions/setup-node@v5
         with:
           node-version: '24'
-          cache: npm
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Clear previous accessibility results
-        run: bin/clear-tests.sh .
-
-      - name: Validate HTML, CSS and JavaScript
-        continue-on-error: true
-        run: bin/validate-code.sh .
-
-      - name: Audit colour usage
-        continue-on-error: true
-        run: node bin/audit-colour-usage.js
-
-      - name: Check for file comments
-        continue-on-error: true
-        run: bin/check-file-comments.sh .
-
-      - name: Check for broken links
-        continue-on-error: true
-        run: bin/check-links.sh .
-
-      - name: Install Chrome for browser-based tests
-        run: npx puppeteer browsers install chrome
-
-      - name: Run axe accessibility tests
-        continue-on-error: true
-        run: bin/run-axe-tests.sh . -q -x manipulated-images
-
-      - name: Run Lighthouse accessibility tests
-        continue-on-error: true
-        run: bin/run-lighthouse-tests.sh . -q -x manipulated-images
-
-      - name: Run Pa11y accessibility tests
-        continue-on-error: true
-        run: bin/run-pa11y-tests.sh . -q -x manipulated-images
-
-      - name: Run WAVE accessibility tests
-        continue-on-error: true
-        run: bin/run-wave-tests.sh . -q -x manipulated-images
-        env:
-          WAVE_API_KEY: ${{ secrets.WAVE_API_KEY }}
-          NGROK_AUTHTOKEN: ${{ secrets.NGROK_AUTHTOKEN }}
-
-      - name: Check reading levels
-        continue-on-error: true
-        run: bin/check-reading-age.sh . -x manipulated-images
-
-      - name: Check site works in different browsers
-        continue-on-error: true
-        run: bin/run-browser-tests.sh .
-
-      - name: Summarise test results
-        continue-on-error: true
-        run: bin/summarise-tests.sh .
 
       - name: Select automatic version bump type
         id: bump_type
@@ -133,7 +76,7 @@ jobs:
         run: |
           rm -rf _site
           mkdir -p _site
-          cp -a index.html bin data diagnostics images mentors output pages scripts students styles test-results _site/
+          cp -a index.html bin data diagnostics images mentors pages scripts students styles _site/
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
@@ -141,8 +84,8 @@ jobs:
           path: _site
 
   deploy:
-    needs: build-test-version
-    if: needs.build-test-version.result == 'success'
+    needs: build-and-release
+    if: needs.build-and-release.result == 'success'
     runs-on: ubuntu-latest
     env:
       FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true

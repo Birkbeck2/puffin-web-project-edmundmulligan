@@ -24,6 +24,7 @@ archive_path="${output_dir}/${archive_name}"
 
 paths=(
   index.html
+  bin
   data
   diagnostics
   images
@@ -32,7 +33,8 @@ paths=(
   scripts
   students
   styles
-  test-results
+  templates
+  VERSION
 )
 
 for path in "${paths[@]}"; do

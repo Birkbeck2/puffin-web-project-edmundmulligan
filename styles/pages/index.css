@@ -106,6 +106,16 @@ main {
     animation: portrait-cycle 9s ease-in-out infinite;
 }
 
+/* Static portraits: show immediately without animation (used when animation=off or prefers-reduced-motion) */
+.portrait-block.static .portrait-image {
+    animation: none;
+    opacity: 1;
+}
+
+.portrait-block.static {
+    transform: none;
+}
+
 /* Disable animations and show static portraits when reduced motion is preferred */
 @media (prefers-reduced-motion: reduce) {
     .portrait-block.animating .portrait-image {

@@ -1,24 +1,24 @@
 #!/bin/bash
 
 # Video to GIF Converter
-# Converts video files to optimized GIF and WebP animations
+# Converts video files to optimised GIF and WebP animations
 # Usage: ./video-to-gif.sh <input-video> [output-name] [options]
 
 set -e
 
-# Color codes
+# Colour codes
 RED='\033[0;31m'
 GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
 BLUE='\033[0;34m'
 CYAN='\033[0;36m'
-NC='\033[0m' # No Color
+NC='\033[0m' # No Colour
 
 # Default settings
 FPS=15
 WIDTH=800
 LOSSY=80
-COLORS=256
+COLOURS=256
 
 # Functions
 print_header() {
@@ -55,16 +55,16 @@ usage() {
     echo "  --fps <num>       Frame rate (default: 15)"
     echo "  --width <num>     Width in pixels (default: 800, -1 for original)"
     echo "  --lossy <num>     Lossy compression 0-100 (default: 80)"
-    echo "  --colors <num>    Max colors 2-256 (default: 256)"
+    echo "  --colours <num>   Max colours 2-256 (default: 256)"
     echo "  --no-webp         Skip WebP creation"
-    echo "  --no-optimize     Skip gifsicle optimization"
+    echo "  --no-optimise     Skip gifsicle optimisation"
     echo "  --quality <str>   Preset: web, medium, high (overrides other settings)"
     echo "  --trim <start,end> Trim video: --trim 2.5,5 (seconds)"
     echo
     echo "Quality presets:"
-    echo "  web     - Small file, lower quality (fps=10, width=400, lossy=80, colors=128)"
-    echo "  medium  - Balanced (fps=15, width=600, lossy=80, colors=256) [default]"
-    echo "  high    - Large file, best quality (fps=24, width=-1, lossy=100, colors=256)"
+    echo "  web     - Small file, lower quality (fps=10, width=400, lossy=80, colours=128)"
+    echo "  medium  - Balanced (fps=15, width=600, lossy=80, colours=256) [default]"
+    echo "  high    - Large file, best quality (fps=24, width=-1, lossy=100, colours=256)"
     echo
     echo "Examples:"
     echo "  $0 recording.mp4"
@@ -113,7 +113,7 @@ convert_to_gif() {
     local output="$2"
     local fps="$3"
     local width="$4"
-    local colors="$5"
+    local colours="$5"
     local trim_start="$6"
     local trim_duration="$7"
     
@@ -125,7 +125,7 @@ convert_to_gif() {
         scale_filter="scale=-1:-1:flags=lanczos"
     fi
     
-    local filter_complex="fps=${fps},${scale_filter},palettegen=stats_mode=diff:max_colors=${colors}"
+    local filter_complex="fps=${fps},${scale_filter},palettegen=stats_mode=diff:max_colors=${colours}"
     
     # Add trim if specified
     local trim_flags=""
@@ -137,8 +137,8 @@ convert_to_gif() {
     fi
     
     echo
-    print_info "Pass 1/2: Generating optimized palette..."
-    print_info "Settings: ${fps} fps, ${width}px width, ${colors} colors"
+    print_info "Pass 1/2: Generating optimised palette..."
+    print_info "Settings: ${fps} fps, ${width}px width, ${colours} colours"
     
     ffmpeg $trim_flags -i "$input" \
         -vf "$filter_complex" \
@@ -171,33 +171,33 @@ convert_to_gif() {
     fi
 }
 
-optimize_gif() {
+optimise_gif() {
     local input="$1"
     local lossy="$2"
-    local output="${input%.gif}-optimized.gif"
+    local output="${input%.gif}-optimised.gif"
     
     if ! command -v gifsicle &> /dev/null; then
-        print_warning "gifsicle not installed, skipping optimization"
+        print_warning "gifsicle not installed, skipping optimisation"
         print_info "Install with: sudo apt install gifsicle (or brew install gifsicle)"
         return 0
     fi
     
     echo
-    print_info "Optimizing GIF with gifsicle (lossy=${lossy})..."
+    print_info "Optimising GIF with gifsicle (lossy=${lossy})..."
     
     local orig_size=$(du -h "$input" | cut -f1)
     
     gifsicle -O3 --lossy=$lossy -o "$output" "$input" 2>&1 || {
-        print_warning "Optimization failed, keeping original"
+        print_warning "Optimisation failed, keeping original"
         return 0
     }
     
     if [ -f "$output" ]; then
         local new_size=$(du -h "$output" | cut -f1)
         local saving=$(echo "scale=1; (1 - $(stat -f%z "$output" 2>/dev/null || stat -c%s "$output") / $(stat -f%z "$input" 2>/dev/null || stat -c%s "$input")) * 100" | bc 2>/dev/null || echo "?")
-        print_success "Optimized: $output ($orig_size → $new_size, saved ~${saving}%)"
+        print_success "Optimised: $output ($orig_size → $new_size, saved ~${saving}%)"
         
-        # Replace original with optimized
+        # Replace original with optimised
         mv "$output" "$input"
     fi
 }
@@ -253,7 +253,7 @@ fi
 INPUT="$1"
 OUTPUT_NAME=""
 CREATE_WEBP=true
-OPTIMIZE=true
+OPTIMISE=true
 TRIM_START=""
 TRIM_DURATION=""
 
@@ -284,16 +284,16 @@ while [ $# -gt 0 ]; do
             LOSSY="$2"
             shift 2
             ;;
-        --colors)
-            COLORS="$2"
+        --colours)
+            COLOURS="$2"
             shift 2
             ;;
         --no-webp)
             CREATE_WEBP=false
             shift
             ;;
-        --no-optimize)
-            OPTIMIZE=false
+        --no-optimise)
+            OPTIMISE=false
             shift
             ;;
         --quality)
@@ -303,19 +303,19 @@ while [ $# -gt 0 ]; do
                     FPS=10
                     WIDTH=400
                     LOSSY=80
-                    COLORS=128
+                    COLOURS=128
                     ;;
                 medium)
                     FPS=15
                     WIDTH=600
                     LOSSY=80
-                    COLORS=256
+                    COLOURS=256
                     ;;
                 high)
                     FPS=24
                     WIDTH=-1
                     LOSSY=100
-                    COLORS=256
+                    COLOURS=256
                     ;;
                 *)
                     print_error "Invalid quality preset: $QUALITY"
@@ -367,11 +367,11 @@ if [ -n "$TRIM_START" ]; then
 fi
 
 # Convert to GIF
-convert_to_gif "$INPUT" "$GIF_OUTPUT" "$FPS" "$WIDTH" "$COLORS" "$TRIM_START" "$TRIM_DURATION"
+convert_to_gif "$INPUT" "$GIF_OUTPUT" "$FPS" "$WIDTH" "$COLOURS" "$TRIM_START" "$TRIM_DURATION"
 
-# Optimize GIF
-if [ "$OPTIMIZE" = true ]; then
-    optimize_gif "$GIF_OUTPUT" "$LOSSY"
+# Optimise GIF
+if [ "$OPTIMISE" = true ]; then
+    optimise_gif "$GIF_OUTPUT" "$LOSSY"
 fi
 
 # Create WebP

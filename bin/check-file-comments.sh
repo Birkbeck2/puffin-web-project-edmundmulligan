@@ -63,7 +63,7 @@ if [ ! -d "$FOLDER" ]; then
 fi
 
 # Setup results directory in application folder
-RESULTS_DIR="$ORIGINAL_DIR/$FOLDER/test-results"
+RESULTS_DIR="$ORIGINAL_DIR/$FOLDER/diagnostics/test-results"
 mkdir -p "$RESULTS_DIR"
 RESULT_FILE="$RESULTS_DIR/file-comments-check-results.json"
 

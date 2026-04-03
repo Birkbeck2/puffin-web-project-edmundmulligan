@@ -1,10 +1,8 @@
 name: Push Code to Prod Server
 
 on:
-    push:
-      branches: [ main]
-    pull_request:
-      branches: [ main ]
+  push:
+    branches: [ main ]
 
 jobs:
   deploy-to-server:
@@ -30,59 +28,17 @@ jobs:
         echo "Event: ${{ github.event_name }}"
         echo "Ref: ${{ github.ref }}"
         echo "Branch: ${{ github.ref_name }}"
-        
-        # Only do version bumps on push events to main branch, not on pull request events
-        if [[ "${{ github.event_name }}" == "push" && "${{ github.ref }}" == "refs/heads/main" ]]; then
-          echo "value=patch" >> "$GITHUB_OUTPUT"
-          echo "perform_bump=true" >> "$GITHUB_OUTPUT"
-        else
-          echo "Skipping version bump for event: ${{ github.event_name }} on ref: ${{ github.ref }}"
-          echo "perform_bump=false" >> "$GITHUB_OUTPUT"
-        fi
+        echo "value=patch" >> "$GITHUB_OUTPUT"
 
     - name: Bump semantic version
       id: version
-      if: steps.bump_type.outputs.perform_bump == 'true'
       run: |
         new_version="$(bin/bump-version.sh "${{ steps.bump_type.outputs.value }}" VERSION)"
         echo "new_version=${new_version}" >> "$GITHUB_OUTPUT"
         echo "New version: ${new_version}"
 
     - name: Create release tarball
-      if: steps.bump_type.outputs.perform_bump == 'true'
       run: bin/create-release-tar.sh "${{ steps.version.outputs.new_version }}" releases
-
-    - name: Commit generated release files to development branch
-      if: steps.bump_type.outputs.perform_bump == 'true'
-      env:
-        RELEASE_VERSION: ${{ steps.version.outputs.new_version }}
-      run: |
-        git config user.name "github-actions[bot]"
-        git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-        
-        # Store current commit for reference
-        CURRENT_COMMIT=$(git rev-parse HEAD)
-        echo "Current commit: $CURRENT_COMMIT"
-        
-        # Fetch all branches to ensure we have latest refs
-        git fetch origin --all
-        
-        # Switch to development branch and ensure we're on the latest
-        git checkout -B development origin/development
-        git reset --hard origin/development
-        
-        # Cherry-pick the version and release changes from main
-        git cherry-pick $CURRENT_COMMIT || {
-          # If cherry-pick fails, manually copy the files
-          git checkout $CURRENT_COMMIT -- VERSION releases/ 2>/dev/null || true
-          git add VERSION releases/
-          git commit -m "chore(release): v${RELEASE_VERSION} [skip ci]" || echo "No changes to commit"
-        }
-        
-        # Push to development branch explicitly
-        git push origin HEAD:development
-        
-        echo "Successfully pushed release v${RELEASE_VERSION} to development branch"
 
     - name: Copy files to server
       uses: appleboy/scp-action@v0.1.7
@@ -90,6 +46,6 @@ jobs:
         host: prod.edmundmulligan.name
         username: ${{ secrets.SERVER_USERNAME }}
         key: ${{ secrets.SERVER_SSH_KEY }}
-        source: "index.html,bin/,data/,diagnostics/,images/,mentors/,output/,pages/,scripts/,students/,styles/,test-results/"
+        source: "index.html,bin/,data/,diagnostics/,images/,mentors/,pages/,scripts/,students/,styles/"
         target: /var/www/web.witchcraft-and-wizardry.school
         rm: false

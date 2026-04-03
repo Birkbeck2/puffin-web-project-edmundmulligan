@@ -727,7 +727,7 @@ async function loadAllResults() {
     const cards = [];
 
     // Load Validation Results
-    const validation = await loadJSON('../test-results/validation-results.json');
+    const validation = await loadJSON('../diagnostics/test-results/validation-results.json');
     if (validation) {
         const hasErrors = validation.summary.htmlErrors > 0 || 
                         validation.summary.cssErrors > 0 || 
@@ -758,7 +758,7 @@ async function loadAllResults() {
     }
 
     // Load Broken Links Results
-    const links = await loadJSON('../test-results/broken-links-results.json');
+    const links = await loadJSON('../diagnostics/test-results/broken-links-results.json');
     if (links) {
         const totalBroken = links.pages.reduce((sum, page) => sum + page.brokenCount, 0);
         const totalLinks = links.pages.reduce((sum, page) => sum + page.totalCount, 0);
@@ -784,7 +784,7 @@ async function loadAllResults() {
     }
 
     // Load Axe Results
-    const axe = await loadJSON('../test-results/axe-results.json');
+    const axe = await loadJSON('../diagnostics/test-results/axe-results.json');
     if (axe) {
         // Count violations across all pages if structure has pages array
         let totalViolations = 0;
@@ -850,7 +850,7 @@ async function loadAllResults() {
     }
 
     // Load Pa11y Results
-    const pa11y = await loadJSON('../test-results/pa11y-results.json');
+    const pa11y = await loadJSON('../diagnostics/test-results/pa11y-results.json');
     if (pa11y) {
         const totalErrors = pa11y.pages.reduce((sum, page) => 
             sum + page.issues.filter(i => i.type === 'error').length, 0);
@@ -879,7 +879,7 @@ async function loadAllResults() {
     }
 
     // Load WAVE Results
-    const wave = await loadJSON('../test-results/wave-results.json');
+    const wave = await loadJSON('../diagnostics/test-results/wave-results.json');
     if (wave) {
         const totalErrorsW = wave.pages.reduce((sum, page) => sum + (page.errors || 0), 0);
         const totalAlertsW = wave.pages.reduce((sum, page) => sum + (page.alerts || 0), 0);
@@ -916,7 +916,7 @@ async function loadAllResults() {
     }
 
     // Load Lighthouse Results
-    const lighthouse = await loadJSON('../test-results/lighthouse-results.json');
+    const lighthouse = await loadJSON('../diagnostics/test-results/lighthouse-results.json');
     if (lighthouse) {
         const avgScore = lighthouse.pages.length > 0 ?
             Math.round((lighthouse.pages.reduce((sum, page) => sum + page.score, 0) / lighthouse.pages.length) * 100) :
@@ -947,7 +947,7 @@ async function loadAllResults() {
     }
 
     // Load Browser Results
-    const browser = await loadJSON('../test-results/browser-results.json');
+    const browser = await loadJSON('../diagnostics/test-results/browser-results.json');
     if (browser) {
         // Handle both 'browsers' and 'results' array structures
         const browserList = browser.browsers || browser.results || [];
@@ -975,7 +975,7 @@ async function loadAllResults() {
     }
 
     // Load Readability Results
-    const readability = await loadJSON('../test-results/readability-results.json');
+    const readability = await loadJSON('../diagnostics/test-results/readability-results.json');
     if (readability) {
         let avgGrade = 0;
         let totalWords = 0;
@@ -1013,7 +1013,7 @@ async function loadAllResults() {
     }
 
     // Load Colour Audit Results
-    const colourAudit = await loadJSON('../test-results/colour-audit-report.json');
+    const colourAudit = await loadJSON('../diagnostics/test-results/colour-audit-report.json');
     if (colourAudit) {
         const totalIssues = (colourAudit.hardcodedColours ? colourAudit.hardcodedColours.length : 0) +
                           (colourAudit.themeSpecificVars ? colourAudit.themeSpecificVars.length : 0) +
@@ -1041,7 +1041,7 @@ async function loadAllResults() {
     }
 
     // Load File Comments Check Results
-    const fileComments = await loadJSON('../test-results/file-comments-check-results.json');
+    const fileComments = await loadJSON('../diagnostics/test-results/file-comments-check-results.json');
     if (fileComments && fileComments.summary) {
         const status = fileComments.summary.filesWithIssues === 0 ? 'pass' : 'fail';
         

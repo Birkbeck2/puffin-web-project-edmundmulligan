@@ -132,7 +132,7 @@ fi
 ORIGINAL_DIR=$(pwd)
 cd "$FOLDER" || exit 1
 # Use relative path for RESULTS_DIR since axe CLI expects relative paths
-RESULTS_DIR="./test-results"
+RESULTS_DIR="./diagnostics/test-results"
 mkdir -p "$RESULTS_DIR"
 
 # Start server and setup

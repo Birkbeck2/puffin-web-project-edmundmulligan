@@ -34,15 +34,15 @@ for THEME in "${THEMES[@]}"; do
                 AGE_VAL=${AGE_VALUES[$((RANDOM_INDEX + 1))]}
                 
                 # capture the home page with the specified theme, style, viewport size, and expanded state
-                # wait 10 seconds to ensure portrait animation cycle is visible (2s fade in + 5s display)
-                node bin/capture-webpage.js "http://localhost:8080?theme=${THEME}&style=${STYLE}&expand-header=${EXP}&expand-footer=${EXP}" "homepage-${VIEWPORT}-${THEME}-${STYLE}-${${EXP/true/expanded}/false/minimal}" --width ${VIEWPORT} --wait 10000
+                # animation=off shows static portraits immediately (no fade animation), wait 2 seconds for page load
+                node bin/capture-webpage.js "http://localhost:8080?theme=${THEME}&style=${STYLE}&expand-header=${EXP}&expand-footer=${EXP}&animation=off" "homepage-${VIEWPORT}-${THEME}-${STYLE}-${${EXP/true/expanded}/false/minimal}" --width ${VIEWPORT} --wait 2000
 
                 # capture student dashboard with the specified theme, style, and viewport size, with filled form
-                node bin/capture-webpage.js "http://localhost:8080/pages/students.html?theme=${THEME}&style=${STYLE}&expand-header=${EXP}&expand-footer=${EXP}" "students-${VIEWPORT}-${THEME}-${STYLE}-${${EXP/true/expanded}/false/minimal}" --width ${VIEWPORT} --fill-text "#student-name" "Edmund" --check "${AVATAR_SEL}" --check "${GENDER_SEL}" --check "${AGE_SEL}" --click "#save-information-btn" --wait-for "#avatar-preview" --wait-for-content --wait-timeout 10000
+                node bin/capture-webpage.js "http://localhost:8080/pages/students?theme=${THEME}&style=${STYLE}&expand-header=${EXP}&expand-footer=${EXP}" "students-${VIEWPORT}-${THEME}-${STYLE}-${${EXP/true/expanded}/false/minimal}" --width ${VIEWPORT} --fill-text "#student-name" "Edmund" --check "${AVATAR_SEL}" --check "${GENDER_SEL}" --check "${AGE_SEL}" --click "#save-information-btn" --wait-for "#avatar-preview" --wait-for-content --wait-timeout 10000
 
                 # capture lesson 1 page with the specified theme, style, and viewport size, with mocked student data
-                # iterate through all 6 sections (0-5) capturing each one
-                node bin/capture-webpage.js "http://localhost:8080/students/lesson-01.html?theme=${THEME}&style=${STYLE}&expand-header=${EXP}&expand-footer=${EXP}" "lesson-01-${VIEWPORT}-${THEME}-${STYLE}-${${EXP/true/expanded}/false/minimal}" --width ${VIEWPORT} --mock-student-data "Edmund" "${AVATAR_VAL}" "${GENDER_VAL}" "${AGE_VAL}" --iterate-sections 6
+                # iterate through all 7 sections (0-6) capturing each one
+                node bin/capture-webpage.js "http://localhost:8080/students/lesson-01?theme=${THEME}&style=${STYLE}&expand-header=${EXP}&expand-footer=${EXP}" "lesson-01-${VIEWPORT}-${THEME}-${STYLE}-${${EXP/true/expanded}/false/minimal}" --width ${VIEWPORT} --mock-student-data "Edmund" "${AVATAR_VAL}" "${GENDER_VAL}" "${AGE_VAL}" --iterate-sections 7 --wait-for-content --wait-timeout 10000
             done
         done
     done

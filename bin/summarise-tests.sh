@@ -10,7 +10,7 @@ if [ ! -d "$APP_FOLDER" ]; then
   exit 1
 fi
 
-RESULTS_DIR="$APP_FOLDER/test-results"
+RESULTS_DIR="$APP_FOLDER/diagnostics/test-results"
 EXIT_CODE=0
 OUTPUT_FILE="$RESULTS_DIR/test-summary.txt"
 TEMP_EXIT_FILE="$RESULTS_DIR/.exit_code"

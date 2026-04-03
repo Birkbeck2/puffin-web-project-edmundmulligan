@@ -7,7 +7,16 @@
  * Description:
  *   Centralised query parameter handler for the entire site.
  *   Provides a single point of access for reading URL query parameters.
- *   Used by themeSwitcher.js, debug.js, toggleHeaderAndFooter.js, etc.
+ *   Used by themeSwitcher.js, debug.js, toggleHeaderAndFooter.js,
+ *   animatePortraits.js, etc.
+ *   
+ *   Supported parameters:
+ *   - theme: light|dark|auto
+ *   - style: normal|subdued|vibrant
+ *   - debug: on|off|true|false
+ *   - animation: on|off|true|false|auto
+ *   - expand-header: on|off|true|false
+ *   - expand-footer: on|off|true|false
  **********************************************************************
  */
 
@@ -97,6 +106,24 @@
             }
             if (debug === 'off' || debug === 'false') {
                 return false;
+            }
+            return null;
+        }
+
+        /**
+         * Get animation parameter (on|off|true|false|auto)
+         * @returns {string|null} 'on' to enable, 'off' to disable, null for auto (use prefers-reduced-motion)
+         */
+        getAnimation() {
+            const animation = this.get('animation');
+            if (animation === 'on' || animation === 'true') {
+                return 'on';
+            }
+            if (animation === 'off' || animation === 'false') {
+                return 'off';
+            }
+            if (animation === 'auto') {
+                return null; // null means use default (prefers-reduced-motion)
             }
             return null;
         }

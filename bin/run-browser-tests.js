@@ -8,7 +8,7 @@
  * License    : MIT License (see license-and-credits.html page)
  * Description:
  *   Generic cross-browser testing runner using Playwright.
- *   Loads application-specific tests from web/tests/browser-tests.js
+ *   Loads application-specific tests from bin/browser-tests.js
  *   and executes them across Chromium, Firefox, and WebKit.
  **********************************************************************
  */
@@ -21,7 +21,7 @@ const path = require('path');
 
 // Get the folder being tested from environment variable set by shell script
 const testFolderPath = process.env.BROWSER_TEST_FOLDER || process.cwd();
-const browserTestsPath = path.join(testFolderPath, 'tests', 'browser-tests.js');
+const browserTestsPath = path.join(testFolderPath, 'bin', 'browser-tests.js');
 
 // Check if application-specific tests exist
 if (!fs.existsSync(browserTestsPath)) {
@@ -69,7 +69,7 @@ const testPages = (browserTests.pages || []).filter(pageInfo => !shouldExcludePa
  * @remarks Preconditions:
  * - `browserName` must be one of `chromium`, `firefox`, or `webkit`.
  * - The application under test must already be reachable at `BASE_URL`.
- * - `tests/browser-tests.js` must export a `pages` array and a `runPageTests` function.
+ * - `bin/browser-tests.js` must export a `pages` array and a `runPageTests` function.
  *
  * @param {string} browserName - Playwright browser engine to launch.
  * @returns {Promise<{name: string, status: string, error: (string|null), tests: Array<object>}>}
@@ -147,7 +147,7 @@ async function testBrowser(browserName) {
  *
  * @remarks Preconditions:
  * - The local site must be running before this function is called.
- * - The caller must have permission to create or update the `test-results` directory.
+ * - The caller must have permission to create or update the `diagnostics/test-results` directory.
  *
  * @returns {Promise<void>} Resolves only if process termination is intercepted by a caller.
  */
@@ -184,7 +184,7 @@ async function runTests() {
 
     // Get results directory from environment variable set by shell script
     const testFolderPath = process.env.BROWSER_TEST_FOLDER || process.cwd();
-    const resultsDir = path.join(testFolderPath, 'test-results');
+    const resultsDir = path.join(testFolderPath, 'diagnostics/test-results');
     if (!fs.existsSync(resultsDir)) {
         fs.mkdirSync(resultsDir, { recursive: true });
     }

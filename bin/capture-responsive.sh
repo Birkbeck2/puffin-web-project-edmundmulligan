@@ -91,8 +91,8 @@ echo -e "${GREEN}All captures complete!${NC}"
 echo -e "${BLUE}===================================================${NC}"
 echo
 echo -e "${CYAN}Output files:${NC}"
-cd output 2>/dev/null || true
-ls -lh "${BASE_NAME}"-*.png 2>/dev/null | awk '{printf "  %-40s %6s\n", $9, $5}' || echo "  (files in output/ directory)"
+cd diagnostics/screenshots 2>/dev/null || true
+ls -lh "${BASE_NAME}"-*.png 2>/dev/null | awk '{printf "  %-40s %6s\n", $9, $5}' || echo "  (files in diagnostics/screenshots/ directory)"
 cd - > /dev/null 2>&1 || true
 echo
 echo -e "${GREEN}Done! 📱💻${NC}"
