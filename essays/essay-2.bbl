@@ -1,0 +1,35 @@
+\begin{thebibliography}{4}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[{CoderDojo Foundation}(2026)]{coderdojo2026}
+{CoderDojo Foundation}.
+\newblock Coderdojo: Free coding clubs for young people, 2026.
+\newblock URL \url{https://www.coderdojoku.org/about}.
+\newblock Accessed: April 2026.
+
+\bibitem[Lichtenstein(1963)]{lichtenstein1963whaam}
+Roy Lichtenstein.
+\newblock Whaam!, 1963.
+\newblock URL
+  \url{https://www.tate.org.uk/art/artworks/lichtenstein-whaam-t00897}.
+\newblock Acrylic paint and oil paint on canvas, 172.7 × 406.4 cm, Tate
+  Gallery, London.
+
+\bibitem[Mulligan(2024)]{mulligan2024witchcraftandwizardry}
+Edmund Mulligan.
+\newblock Web witchcraft and wizardry.
+\newblock \url{https://github.com/edmundmulligan/Witches-And-Wizards}, 2024.
+\newblock Accessed: April 2026.
+
+\bibitem[{Warner Bros. Television}(1966--1968)]{batman1966}
+{Warner Bros. Television}.
+\newblock Batman.
+\newblock American Broadcasting Company (ABC), 1966--1968.
+\newblock Television series, created by William Dozier, starring Adam West and
+  Burt Ward, ABC.
+
+\end{thebibliography}

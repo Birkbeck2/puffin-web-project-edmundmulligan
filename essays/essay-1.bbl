@@ -1,0 +1,140 @@
+\begin{thebibliography}{20}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Bonnardel et~al.(2011)Bonnardel, Piolat, and
+  Le~Bigot]{bonnardel2011impact}
+Nathalie Bonnardel, Annie Piolat, and Ludovic Le~Bigot.
+\newblock The impact of colour on website appeal and users' cognitive
+  processes.
+\newblock \emph{Displays}, 32\penalty0 (2):\penalty0 69--80, 2011.
+
+\bibitem[Bringhurst(2013)]{bringhurst2013elements}
+Robert Bringhurst.
+\newblock \emph{The Elements of Typographic Style}.
+\newblock Hartley \& Marks Publishers, Vancouver, BC, 4th edition, 2013.
+
+\bibitem[Caldwell et~al.(2024)Caldwell, Cooper, Reid, and
+  Vanderheiden]{caldwell2024}
+Ben Caldwell, Michael Cooper, Loretta~Guarino Reid, and Gregg Vanderheiden.
+\newblock Web content accessibility guidelines (wcag) 2.2.
+\newblock W3c recommendation, World Wide Web Consortium (W3C), 2024.
+\newblock URL \url{https://www.w3.org/TR/WCAG22/}.
+\newblock Accessed: November 2025.
+
+\bibitem[Chevreul(1839)]{chevreul1839principles}
+Michel~Eug{\`e}ne Chevreul.
+\newblock \emph{The Principles of Harmony and Contrast of Colours}.
+\newblock Longman, Orme, Brown, Green and Longmans, London, 1839.
+
+\bibitem[Cyr et~al.(2010)Cyr, Head, and Larios]{cyr2010colour}
+Dianne Cyr, Milena Head, and Hector Larios.
+\newblock Colour appeals in website design within and across cultures: A
+  multi-method evaluation.
+\newblock \emph{International Journal of Human-Computer Studies}, 68\penalty0
+  (1-2):\penalty0 1--21, 2010.
+
+\bibitem[Elliot and Maier(2007)]{elliot2007color}
+Andrew~J Elliot and Markus~A Maier.
+\newblock Color and psychological functioning.
+\newblock \emph{Current Directions in Psychological Science}, 16\penalty0
+  (5):\penalty0 250--254, 2007.
+
+\bibitem[Gage(1993)]{gage1993colour}
+John Gage.
+\newblock \emph{Colour and Culture: Practice and Meaning from Antiquity to
+  Abstraction}.
+\newblock Thames and Hudson, London, 1993.
+
+\bibitem[Garrett(2010)]{garrett2010elements}
+Jesse~James Garrett.
+\newblock \emph{The Elements of User Experience: User-Centered Design for the
+  Web and Beyond}.
+\newblock New Riders, Berkeley, CA, 2nd edition, 2010.
+
+\bibitem[Goethe(1810)]{goethe1810theory}
+Johann Wolfgang~von Goethe.
+\newblock \emph{Theory of Colours}.
+\newblock John Murray, London, 1810.
+\newblock Translated by Charles Lock Eastlake, 1840.
+
+\bibitem[Hill and Scharff(2003)]{hill2003colour}
+Alex Hill and Lauren Scharff.
+\newblock Colour and contrast in website design.
+\newblock \emph{Proceedings of Human Factors and Ergonomics Society Annual
+  Meeting}, 47\penalty0 (11):\penalty0 1368--1372, 2003.
+
+\bibitem[Holmquist and Anderson(2017)]{holmquist2017}
+Kenneth Holmquist and Richard Anderson.
+\newblock \emph{Eye tracking: A comprehensive guide to methods, paradigms, and
+  measures}.
+\newblock CreateSpace Independent Publishing Platform, UK, 2017.
+
+\bibitem[Lupton and Phillips(2008)]{lupton2008}
+Ellen Lupton and Jennifer~Cole Phillips.
+\newblock \emph{Graphic Design: The New Basics}.
+\newblock Princeton Architectural Press, New York, 2008.
+\newblock Covers fundamental principles of layout including scale, hierarchy,
+  layers, transparency, modularity, and grid systems.
+
+\bibitem[McCandless(2012)]{mccandless2012typography}
+David McCandless.
+\newblock \emph{Information is Beautiful}.
+\newblock Collins, London, 2012.
+\newblock Includes discussion of typography in data visualization and web
+  design.
+
+\bibitem[Michailidou et~al.(2008)Michailidou, Harper, and
+  Bechhofer]{michailidou2008}
+Eleni Michailidou, Simon Harper, and Sean Bechhofer.
+\newblock Visual complexity and aesthetic perception of web pages.
+\newblock \emph{Proceedings of the 26th Annual ACM International Conference on
+  Design of Communication}, pages 215--224, 2008.
+\newblock \doi{10.1145/1456536.1456581}.
+
+\bibitem[Mullet and Sano(1995)]{mullet1995}
+Kevin Mullet and Darrell Sano.
+\newblock \emph{Designing Visual Interfaces: Communication Oriented
+  Techniques}.
+\newblock SunSoft Press, Englewood Cliffs, NJ, 1995.
+\newblock Foundational work on visual organization, elegance, and communication
+  through interface layout.
+
+\bibitem[Munsell(1905)]{munsell1905color}
+Albert~H Munsell.
+\newblock \emph{A Color Notation}.
+\newblock G.H. Ellis Company, Boston, 1905.
+
+\bibitem[Noiwan and Norcio(2008)]{noiwan2008color}
+Jiraporn Noiwan and Anthony~F Norcio.
+\newblock The effects of color schemes and banner animation on attention and
+  memory in multimedia advertising.
+\newblock In \emph{Proceedings of the 10th international conference on Human
+  computer interaction with mobile devices and services}, pages 373--376, 2008.
+
+\bibitem[Powell(2025)]{powell_youtube}
+Kevin Powell.
+\newblock Kevin powell --- css evangelist, 2025.
+\newblock URL \url{https://www.youtube.com/@KevinPowell}.
+\newblock Accessed December 2025.
+
+\bibitem[Roth et~al.(2013)Roth, Schmutz, Pauwels, Bargas-Avila, and
+  Opwis]{roth2013}
+Silvia~P. Roth, Peter Schmutz, Sandrine~L. Pauwels, Javier~A. Bargas-Avila, and
+  Klaus Opwis.
+\newblock The effect of webpage layout on user engagement with web content.
+\newblock \emph{Interacting with Computers}, 25\penalty0 (5):\penalty0
+  402--414, 2013.
+\newblock \doi{10.1093/iwc/iwt024}.
+
+\bibitem[Williams(2015)]{williams2015}
+Robin Williams.
+\newblock \emph{The Non-Designer's Design Book}.
+\newblock Peachpit Press, Berkeley, CA, 4th edition, 2015.
+\newblock Accessible introduction to layout principles: contrast, repetition,
+  alignment, and proximity.
+
+\end{thebibliography}

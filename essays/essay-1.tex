@@ -1,0 +1,75 @@
+\documentclass[a4paper, 12pt]{article}
+
+% include required packages
+\usepackage[a4paper, margin=2cm]{geometry} % Set page margins
+\usepackage[round,authoryear]{natbib}      % For citations
+\usepackage{url}                           % For formatting URLs
+\usepackage{indentfirst}                   % Indent first paragraph of sections
+\usepackage{booktabs}                      % For better table formatting
+\usepackage{float}                         % For [H] table placement
+\usepackage{enumitem}                      % For customising lists
+\usepackage{tikz}                          % For drawing diagrams
+\usetikzlibrary{positioning}               % For relative positioning
+
+% set paragraph and list formatting
+\setlength{\parindent}{1.5em}
+\setlength{\parskip}{0pt}
+\setlist[itemize]{noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt,after=\vspace{0.5em}}
+
+
+% set title information
+\title{Outline of the design research required for phase 2 of the Web Witchcraft and Wizardry project}
+\author{Edmund Mulligan}
+\date{\today}
+
+% document start
+\begin{document}
+
+% set bibliography style and page numbering
+\bibliographystyle{plainnat}
+\pagenumbering{arabic}
+
+\maketitle
+
+\begin{abstract}
+\textit{An overview of the design research required for phase 2 of the Web Witchcraft and Wizardry project and beyond, along with a report on the manipulated images submitted alongside this essay.}
+\end{abstract}
+
+\section{Introduction}
+
+This short essay outlines the design strategy for the Web Witchcraft and Wizardry project and includes a brief report on the manipulated images submitted alongside the essay. The Web Witchcraft and Wizardry project is a website that aims to educate children about web development using a metaphor of witchcraft and wizardry. This is a continuing redesign of an existing web site and this phase of the redesign focuses on the visual and aesthetic aspects of the site, along with introducing interaction and automation to the site.
+
+\section{Report on the submitted manipulated images}
+Details of how the manipulated images were created are included in the web site hosting them, \url{https://web.witchcraft-and-wizardry.school/manipulated-images}, so are not included here. The first three images will be used in the redesigned web site while the other three are included to showcase my competence in using digital image manipulation tools and techniques. They have been chosen to demonstrate use of a range of open source tools (LaTeX, Inkscape and Krita) and a variety of techniques (programmatic image generation, tracing, compositing, colour manipulation and typography selection). While more time would have allowed some of the images to be more polished (particularly Shot Morgana), I am happy with the overall quality of the images and the range of techniques demonstrated.
+
+\section{Design Goals}
+The areas for further research are broken down into the four categories covered in the lectures: layout, colour, typography and animation. A search using Google Scholar has been conducted and for each section key papers and books  have been identified for review.
+
+\subsection{Layout}
+The main challenge the web site presents is how to present a large amount of text in a way that is engaging and easy to navigate for children. It would be easy to use large blocks of text, which is what the old site does, but this is not only uninteresting but for many students it will be difficult to capture and maintain their attention. Use of video has been ruled out for now as I don't have the time or skills to edit video content in the quantity required, but this may be considered in the future. Text can be broken up with images but this also presents a challenge in generating sufficient images of a high enough quality to be engaging. Ultimately I may resort to using AI generated artwork, but my experiments thus far have not been promising and I would like to avoid this if possible.
+
+Key concepts in this area to research include the use of whitespace, visual hierarchy and the use of images to break up text and create visual interest. I will also look at how to use layout to create a sense of progression through the site, guiding users through the content in a way that is easy to follow. \cite{lupton2008}, \cite{mullet1995}, \cite{roth2013}, \cite{michailidou2008}, and \cite{williams2015} are all key books and papers that cover these concepts and will be reviewed in detail.
+
+Another area of research which I find fascinating is the use of eye tracking to understand how users interact with web pages and how this can inform layout decisions. This is currently outside the scope of phase 2 of the project but is something I would like to explore in the future. Coincidentally \cite{holmquist2017} is a comprehensive guide to eye tracking methods and techniques and recently appeared in my Amazon recommendations.
+
+\subsection{Colour}
+
+After layout, the next most important aspect of the design is colour. The current site uses a very limited colour palette (essentially black on white), and was not designed with either colour theory or accessibility in mind. My intention is for the new design to support both light and dark themes and will be based around two main colours (purple and cyan) used in the Embodied Mind logo. The design work includes creating a colour palette based on these two main colours, and ensuring that the colours used have sufficient contrast to be accessible to users with visual impairments. I will also look at how to use colour to create a sense of hierarchy and guide users through the content. Although web design is modern, the principles of colour go back centuries and there is a wealth of literature on the subject. For example: \cite{lupton2008}. \cite{chevreul1839principles}, \cite{goethe1810theory}, \cite{gage1993colour} and \cite{munsell1905color} all cover colour theory while \cite{elliot2007color} explores the psychological effects of colour and \cite{cyr2010colour} examines cultural differences in colour perception. \cite{noiwan2008color}, \cite{bonnardel2011impact}, \cite{hill2003colour} relate colour to web design and of course the WCAG 2.2 guidlines \citep{caldwell2024} remain relevant.
+
+\subsection{Typography}
+
+Typography, while important, is of less concern than layout and colour in this project. I have already chosen three font families to use (Cinzel for headings and titles, Open Sans for body text and Fira Mono for code snippets) and these will be used in the new design. The main focus in this area will be on ensuring that the typography is consistent throughout the site and that it supports readability and accessibility. Where typography becomes more relevant is in its interaction with the other elements of the design, particularly colour and layout. For example, I will need to ensure that the typography works well with the colour palette and that it is used in a way that supports the visual hierarchy of the site. Key papers in this area include \cite{lupton2008}, \cite{bringhurst2013elements}, \cite{garrett2010elements} and \cite{mccandless2012typography}.
+
+\subsection{Animation}
+My main design goal with respect to animation is to use it sparingly and to not use JavaScript where CSS animations will suffice. With modern CSS capabilities, there is no need to use JavaScript for what should be style rather than interaction. My main source of design and technique in this area are the YouTube tutorials on CSS by Kevin Powell \citep{powell_youtube} which have served me very well so far in my journey through CSS.
+
+\section*{Conclusion}
+The Web Witchcraft and Wizardry redesign project is a large undertaking and there are many areas to research and explore. Phase 1 covered accessibility and usability and phase 2 will focus on the visual and aesthetic aspects of the site, along with introducing interaction and automation. The design strategy outlined in this essay will likely extend beyond the phase 2 delivery of the project in April, but it will provide me with a clear roadmap for the work that needs to be done and the areas that I need to research after this course is completed.
+
+% Include word count N.B. Run wordcount.sh to generate wordcount.txt before compiling
+\section*{Word count}
+Word count: \input{essay-1-wordcount.txt} words (excluding references)
+\\
+\bibliography{EdmundLibrary}
+
+\end{document}

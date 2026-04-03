@@ -1,0 +1,111 @@
+\documentclass[a4paper, 12pt]{article}
+
+% include required packages
+\usepackage[a4paper, margin=2cm]{geometry} % Set page margins
+\usepackage[round,authoryear]{natbib}      % For citations
+\usepackage{url}                           % For formatting URLs
+\usepackage{indentfirst}                   % Indent first paragraph of sections
+\usepackage{booktabs}                      % For better table formatting
+\usepackage{float}                         % For [H] table placement
+\usepackage{enumitem}                      % For customising lists
+\usepackage{tikz}                          % For drawing diagrams
+\usetikzlibrary{positioning}               % For relative positioning
+
+% set paragraph and list formatting
+\setlength{\parindent}{1.5em}
+\setlength{\parskip}{0pt}
+\setlist[itemize]{noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt,after=\vspace{0.5em}}
+
+
+% set title information
+\title{A Critical Reflection on the Design of the Web Witchcraft and Wizardry Project}
+\author{Edmund Mulligan}
+\date{\today}
+
+% document start
+\begin{document}
+
+% set bibliography style and page numbering
+\bibliographystyle{plainnat}
+\pagenumbering{arabic}
+
+\maketitle
+
+\begin{abstract}
+\textit{Abstract goes here.}
+\end{abstract}
+
+\section{Introduction}
+
+\section{Submission Deliverables}
+High fidelity user interface designs of the following pages:
+\begin{itemize}
+    \item Home page
+    \item Student Dashboard
+    \item Sample Lesson
+\end{itemize}
+Additional deliverables:
+\begin{itemize}
+    \item Colour palette and typography specifications for the above pages
+    \item Animated GIFs demonstrating the animated elements Home page
+    \item (For reference) The six digital images submitted in the last assignment
+\end{itemize}
+These can all be viewed in the Design System section of
+
+\url{https://web.witchcraft-and-wizardry.school/diagnostics}.
+
+A prototype of the website can be accessed at \url{https://web.witchcraft-and-wizardry.school}, although this is still under construction and may be subject to change while this assignment is being assessed.
+
+\section{Overarching Concept}
+
+\subsection{History and Inspiration}
+The Web Witchcraft and Wizardry project, originally  used by Kingston University Code Dojo, was a pdf file with a single html file and some inline CSS and JavaScript to get students started. This was then developed into a web site in github with eight lessons \citep{mulligan2024witchcraftandwizardry}, although no consideration was given to aesthetics or usability. The current project aims to redesign the website with a focus on accessibility and visual design, while maintaining the original Code Dojo concept of teaching kids to code by coding \citep{coderdojo2026}.
+
+Inspiration for the colours of the new website were taken from the Embodied Mind logo, see figure \ref{fig:embodiedmind}. The vibrant style was drawn from 1960's art such as the work of Roy Lichtenstein (e.g. \cite{lichtenstein1963whaam}) and the television series Batman \citep{batman1966}. See figures \ref{fig:wham} and \ref{fig:batman} for examples of this style using bold colours and dramatic contrasts. The subdued style, for users who do not want the strident colours of the other two styles, uses a desaturated theme, arguably evoking a pre-colour black and white television look, although this is admittedly a tenuous link.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.3\textwidth]{logo-embodied-mind.png}
+    \caption{The Embodied Mind logo}
+    \label{fig:embodiedmind}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{Roy_Lichtenstein_Whaam.jpg}
+    \caption{Roy Lichtenstein's Whaam! \citep{lichtenstein1963whaam}}
+    \label{fig:wham}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.3\textwidth]{batman.jpg}
+    \caption{Adam West as Batman \citep{batman1966}}
+    \label{fig:batman}
+\end{figure}
+
+\subsection{Design Process}
+
+\section{Digital Images}
+
+\section{User Interface Designs}
+
+\subsection{Colour}
+
+\subsection{Typography}
+
+\subsection{Layout}
+
+\subsection{Animation}
+
+\subsection{Accessibility}
+
+\section{Conclusion}
+
+% Include word count N.B. Run wordcount.sh to generate wordcount.txt before compiling
+\section*{Word count}
+Word count: \input{essay-2-wordcount.txt} words (excluding references)
+\\
+\bibliography{EdmundLibrary}
+
+\end{document}

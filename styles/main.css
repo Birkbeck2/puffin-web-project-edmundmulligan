@@ -1,0 +1,27 @@
+/*
+ **********************************************************************
+ * File       : main.css
+ * Author     : Edmund Mulligan <edmund@edmundmulligan.name>
+ * Copyright  : (c) 2026 The Embodied Mind
+ * License    : MIT License (see license-and-credits.html page)
+ * Description:
+ *   This is the main stylesheet for the Web Witchcraft and Wizardry website.
+ *   It imports all component stylesheets and should be the first stylesheet
+ *   linked from all HTML files.
+ **********************************************************************
+ */
+
+@import url("./components/page-layout.css");
+@import url("./components/buttons.css");
+@import url("./components/code.css");
+@import url("./components/header-and-footer.css");
+@import url("./components/favicon.css");
+@import url("./components/images.css");
+@import url("./components/lesson-navigation.css");
+@import url("./components/navigation.css");
+@import url("./components/popover.css");
+@import url("./components/scrollbar.css");
+@import url("./components/text.css");
+@import url("./components/titles.css");
+@import url("./components/toggle.css");
+@import url("./components/utilities.css");
