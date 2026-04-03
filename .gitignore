@@ -4,9 +4,6 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Release artifacts
-releases/
-
 # LaTeX build artifacts
 *.aux
 *.bbl
