@@ -148,9 +148,29 @@ h1 {
 
 .screenshots {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: 1fr 3fr 5fr 7fr;
     gap: 2rem;
     margin-top: 2rem;
+}
+
+/* Animations tab displays a single full-width GIF */
+#animations-screenshots {
+    display: block;
+    max-width: 800px;
+}
+
+#animations-screenshots .screenshot-container {
+    width: 100%;
+}
+
+#animations-screenshots .screenshot-wrapper img {
+    width: 100%;
+    max-width: none;
+    cursor: default;
+}
+
+#animations-screenshots .screenshot-wrapper img:hover {
+    opacity: 1;
 }
 
 .screenshot-container {
@@ -259,6 +279,85 @@ h1 {
 
 .image-modal-close:active {
     transform: scale(0.95);
+}
+
+/* Digital Images tab styles */
+#images-tab h2 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+    font-size: 1.5rem;
+}
+
+#images-tab h2:first-child {
+    margin-top: 0;
+}
+
+.image-display {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.image-display img,
+.image-display video {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%);
+}
+
+#favicon-container svg {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 1rem;
+    background: white;
+}
+
+/* Favicon animation styles */
+.sparkle-1 {
+    fill: #f00;
+}
+
+.sparkle-2 {
+    fill: #0f0;
+}
+
+.sparkle-3 {
+    fill: #00f;
+}
+
+svg.animated .sparkle-1 {
+    animation: color-change-1 1.5s infinite;
+}
+
+svg.animated .sparkle-2 {
+    animation: color-change-2 1.5s infinite;
+    animation-delay: 0.5s;
+}
+
+svg.animated .sparkle-3 {
+    animation: color-change-3 1.5s infinite;
+    animation-delay: 1s;
+}
+
+@keyframes color-change-1 {
+    0%, 100% { fill: #FF1744; }
+    33% { fill: #00E676; }
+    66% { fill: #FFD600; }
+}
+
+@keyframes color-change-2 {
+    0%, 100% { fill: #2979FF; }
+    33% { fill: #FF6D00; }
+    66% { fill: #E040FB; }
+}
+
+@keyframes color-change-3 {
+    0%, 100% { fill: #00E5FF; }
+    33% { fill: #FF4081; }
+    66% { fill: #76FF03; }
 }
 
 @media (width <= 768px) {

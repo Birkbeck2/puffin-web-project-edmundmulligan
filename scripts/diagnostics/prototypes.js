@@ -69,9 +69,10 @@
      * Create screenshot display element
      * @param {string} filename - Screenshot filename
      * @param {string} label - Display label for the screenshot
+     * @param {boolean} clickable - Whether the image should open in modal on click (default: true)
      * @returns {HTMLElement} Screenshot container element
      */
-    function createScreenshotElement(filename, label) {
+    function createScreenshotElement(filename, label, clickable = true) {
         const container = document.createElement('div');
         container.className = 'screenshot-container';
         
@@ -95,12 +96,16 @@
             wrapper.appendChild(errorMsg);
         };
         
-        // Add click handler to open modal (only if image loads successfully)
-        img.addEventListener('click', () => {
-            if (!img.classList.contains('error')) {
-                openImageModal(img.src, img.alt);
-            }
-        });
+        // Add click handler to open modal (only if clickable and image loads successfully)
+        if (clickable) {
+            img.addEventListener('click', () => {
+                if (!img.classList.contains('error')) {
+                    openImageModal(img.src, img.alt);
+                }
+            });
+        } else {
+            img.style.cursor = 'default';
+        }
         
         wrapper.appendChild(img);
         container.appendChild(labelDiv);
@@ -121,22 +126,37 @@
         if (pageType === 'animations') {
             const animationOption = document.querySelector('input[name="animations-options"]:checked');
             const animationType = animationOption ? animationOption.value : 'animation-theme-switch';
+            // Validate animation type against whitelist to prevent XSS
+            const allowedAnimationTypes = ['animation-theme-switch', 'animation-portraits'];
+            if (!allowedAnimationTypes.includes(animationType)) return;
             const filename = `${animationType}.gif`;
             const label = animationOption ? animationOption.nextElementSibling.textContent : 'Animation';
             
-            const element = createScreenshotElement(filename, label);
+            // Pass false for clickable parameter - animations are already full size
+            const element = createScreenshotElement(filename, label, false);
             container.appendChild(element);
             return;
         }
         
         // Get current options based on page type
-        const theme = document.querySelector(`input[name="${pageType}-theme"]:checked`).value;
-        const style = document.querySelector(`input[name="${pageType}-style"]:checked`).value;
-        const expand = document.querySelector(`input[name="${pageType}-expand"]:checked`).value;
+        const theme = document.querySelector(`input[name="${pageType}-theme"]:checked`)?.value;
+        const style = document.querySelector(`input[name="${pageType}-style"]:checked`)?.value;
+        const expand = document.querySelector(`input[name="${pageType}-expand"]:checked`)?.value;
+        
+        // Validate options against whitelists to prevent XSS
+        const allowedThemes = ['light', 'dark'];
+        const allowedStyles = ['normal', 'subdued', 'vibrant'];
+        const allowedExpand = ['minimal', 'expanded'];
+        
+        if (!theme || !allowedThemes.includes(theme)) return;
+        if (!style || !allowedStyles.includes(style)) return;
+        if (!expand || !allowedExpand.includes(expand)) return;
         
         let section = '0';
         if (pageType === 'lesson') {
-            section = document.querySelector('input[name="lesson-section"]:checked').value;
+            section = document.querySelector('input[name="lesson-section"]:checked')?.value;
+            const allowedSections = ['0', '1', '2', '3', '4', '5', '6'];
+            if (!section || !allowedSections.includes(section)) return;
         }
         
         const options = { theme, style, expand, section };
@@ -274,18 +294,203 @@
     }
 
     /**
+     * Digital Images tab - Logo switcher
+     */
+    function switchLogo() {
+        const selectedColor = document.querySelector('input[name="logo-color"]:checked')?.value;
+        const logoImage = document.getElementById('logo-image');
+        // Validate color value against whitelist to prevent XSS
+        const allowedColors = ['black', 'purple', 'cyan'];
+        if (logoImage && selectedColor && allowedColors.includes(selectedColor)) {
+            logoImage.src = `../diagnostics/images/logo-embodied-mind-with-name-${selectedColor}.svg`;
+        }
+    }
+
+    /**
+     * Digital Images tab - Background switcher
+     */
+    function switchBackground() {
+        const selectedTheme = document.querySelector('input[name="bg-theme"]:checked')?.value;
+        const selectedOrientation = document.querySelector('input[name="bg-orientation"]:checked')?.value;
+        const backgroundImage = document.getElementById('background-image');
+        // Validate values against whitelist to prevent XSS
+        const allowedThemes = ['light', 'dark'];
+        const allowedOrientations = ['landscape', 'portrait'];
+        if (backgroundImage && selectedTheme && selectedOrientation &&
+            allowedThemes.includes(selectedTheme) && 
+            allowedOrientations.includes(selectedOrientation)) {
+            backgroundImage.src = `../diagnostics/images/background-web-${selectedOrientation}-${selectedTheme}.svg`;
+        }
+    }
+
+    /**
+     * Digital Images tab - Load and setup favicon
+     */
+    async function loadFavicon() {
+        const faviconContainer = document.getElementById('favicon-container');
+        if (!faviconContainer || faviconContainer.hasChildNodes()) return;
+
+        try {
+            const response = await fetch('../diagnostics/images/favicon-inline.svg');
+            const svgText = await response.text();
+            const parser = new DOMParser();
+            const svgDoc = parser.parseFromString(svgText, 'image/svg+xml');
+            const svg = svgDoc.querySelector('svg');
+            
+            svg.setAttribute('width', '150');
+            faviconContainer.appendChild(svg);
+            
+            // Set initial state
+            const checkedRadio = document.querySelector('input[name="favicon-animated"]:checked');
+            if (checkedRadio && checkedRadio.value === 'true') {
+                svg.classList.add('animated');
+            }
+        } catch (error) {
+            console.error('Error loading favicon SVG:', error);
+        }
+    }
+
+    /**
+     * Digital Images tab - Toggle favicon animation
+     */
+    function toggleFaviconAnimation() {
+        const faviconContainer = document.getElementById('favicon-container');
+        const svg = faviconContainer?.querySelector('svg');
+        if (!svg) return;
+
+        const isAnimatedValue = document.querySelector('input[name="favicon-animated"]:checked')?.value;
+        // Validate value against whitelist to prevent XSS
+        const allowedValues = ['true', 'false'];
+        if (isAnimatedValue && allowedValues.includes(isAnimatedValue)) {
+            const isAnimated = isAnimatedValue === 'true';
+            if (isAnimated) {
+                svg.classList.add('animated');
+            } else {
+                svg.classList.remove('animated');
+            }
+        }
+    }
+
+    /**
+     * Digital Images tab - Switch promotional montage format
+     */
+    function switchPromoFormat(restoreScroll = null) {
+        const selectedFormat = document.querySelector('input[name="promo-format"]:checked')?.value;
+        const promoContainer = document.getElementById('promo-container');
+        if (!promoContainer) return;
+
+        // Validate format against whitelist to prevent XSS
+        const allowedFormats = ['mp4', 'webp', 'gif'];
+        if (!selectedFormat || !allowedFormats.includes(selectedFormat)) return;
+
+        const timestamp = new Date().getTime();
+        
+        // Clear existing content
+        promoContainer.innerHTML = '';
+        
+        if (selectedFormat === 'mp4') {
+            // Create video element using DOM API to avoid innerHTML XSS warnings
+            const video = document.createElement('video');
+            video.id = 'promo-video';
+            video.autoplay = true;
+            video.muted = true;
+            video.playsInline = true;
+            video.width = 800;
+            
+            const source = document.createElement('source');
+            source.src = `../diagnostics/images/animated-web.${selectedFormat}?t=${timestamp}`;
+            source.type = 'video/mp4';
+            
+            video.appendChild(source);
+            promoContainer.appendChild(video);
+        } else {
+            // Create img element using DOM API to avoid innerHTML XSS warnings
+            const img = document.createElement('img');
+            img.src = `../diagnostics/images/animated-web.${selectedFormat}?t=${timestamp}`;
+            img.alt = 'Promotional Montage Animation';
+            img.width = 800;
+            
+            promoContainer.appendChild(img);
+        }
+        
+        if (restoreScroll) {
+            const restore = () => window.scrollTo(restoreScroll.x, restoreScroll.y);
+            restore();
+            requestAnimationFrame(restore);
+        }
+    }
+
+    /**
+     * Digital Images tab - Restart promotional animation
+     */
+    function restartPromo() {
+        const selectedFormat = document.querySelector('input[name="promo-format"]:checked')?.value;
+        
+        // Validate format against whitelist to prevent XSS
+        const allowedFormats = ['mp4', 'webp', 'gif'];
+        if (!selectedFormat || !allowedFormats.includes(selectedFormat)) return;
+        
+        if (selectedFormat === 'mp4') {
+            const video = document.getElementById('promo-video');
+            if (video) {
+                video.currentTime = 0;
+                video.play();
+            }
+        } else {
+            const scrollPos = { x: window.scrollX, y: window.scrollY };
+            switchPromoFormat(scrollPos);
+        }
+    }
+
+    /**
+     * Setup event listeners for Digital Images tab
+     */
+    function setupImagesTabListeners() {
+        // Logo color switcher
+        document.querySelectorAll('input[name="logo-color"]').forEach(radio => {
+            radio.addEventListener('change', switchLogo);
+        });
+
+        // Background switcher
+        document.querySelectorAll('input[name="bg-theme"], input[name="bg-orientation"]').forEach(radio => {
+            radio.addEventListener('change', switchBackground);
+        });
+
+        // Favicon animation toggle
+        document.querySelectorAll('input[name="favicon-animated"]').forEach(radio => {
+            radio.addEventListener('change', toggleFaviconAnimation);
+        });
+
+        // Promotional format switcher
+        document.querySelectorAll('input[name="promo-format"]').forEach(radio => {
+            radio.addEventListener('change', () => switchPromoFormat());
+        });
+
+        // Restart promo button
+        const restartBtn = document.getElementById('restart-promo-btn');
+        if (restartBtn) {
+            restartBtn.addEventListener('click', restartPromo);
+        }
+    }
+
+    /**
      * Initialize the screenshot viewer
      */
     function init() {
         setupTabs();
         setupEventListeners();
         setupImageModal();
+        setupImagesTabListeners();
         
         // Load initial screenshots for all tabs
         updateScreenshots('landing');
         updateScreenshots('students');
         updateScreenshots('lesson');
         updateScreenshots('animations');
+        
+        // Initialize digital images tab
+        loadFavicon();
+        switchPromoFormat();
     }
 
     // Initialize when DOM is ready
