@@ -8,6 +8,8 @@
 \usepackage{booktabs}                      % For better table formatting
 \usepackage{float}                         % For [H] table placement
 \usepackage{enumitem}                      % For customising lists
+\usepackage{subcaption}                    % For subfigures
+\usepackage{graphicx}                      % For includegraphics
 \usepackage{tikz}                          % For drawing diagrams
 \usetikzlibrary{positioning}               % For relative positioning
 
@@ -32,10 +34,11 @@
 \maketitle
 
 \begin{abstract}
-\textit{Abstract goes here.}
+This essay discusses the design of Web Witchcraft and Wizardry, an educational website teaching children web development. Drawing inspiration from 1960s pop art and magical metaphors, the project employs an Agile development approach with continuous integration and deployment. The essay examines key design elements including colour palettes meeting WCAG 2.2 accessibility standards, typography choices balancing aesthetics with readability, strategic iconography reinforcing the magical theme, purposeful animation enhancing user experience, and comprehensive accessibility features. Digital images created specifically for the project are discussed, along with pedagogical considerations for involving expert educators through working prototypes. Future development will incorporate feedback from students and teachers to create an effective learning platform.
 \end{abstract}
 
 \section{Introduction}
+This essay provides a critical reflection on the design of the Web Witchcraft and Wizardry project, which is an educational website aimed at teaching children how to code. The essay discusses the overarching concept behind the project, the design process, and the various elements of the user interface design, including colour, typography, iconography, layout, animation, accessibility, and pedagogical considerations. The essay concludes with an indication of how the project will continue to evolve in the future.
 
 \section{Submission Deliverables}
 High fidelity user interface designs of the following pages:
@@ -47,21 +50,27 @@ High fidelity user interface designs of the following pages:
 Additional deliverables:
 \begin{itemize}
     \item Colour palette and typography specifications for the above pages
-    \item Animated GIFs demonstrating the animated elements Home page
+    \item Animated GIFs demonstrating the animated elements of the Home page
     \item (For reference) The six digital images submitted in the last assignment
 \end{itemize}
 These can all be viewed in the Design System section of
 
 \url{https://web.witchcraft-and-wizardry.school/diagnostics}.
 
-A prototype of the website can be accessed at \url{https://web.witchcraft-and-wizardry.school}, although this is still under construction and may be subject to change while this assignment is being assessed.
+A prototype of the website can be accessed at 
+
+\url{https://web.witchcraft-and-wizardry.school}, 
+
+although this is still under construction and may be subject to minor changes while this assignment is being assessed.
 
 \section{Overarching Concept}
 
 \subsection{History and Inspiration}
-The Web Witchcraft and Wizardry project, originally  used by Kingston University Code Dojo, was a pdf file with a single html file and some inline CSS and JavaScript to get students started. This was then developed into a web site in github with eight lessons \citep{mulligan2024witchcraftandwizardry}, although no consideration was given to aesthetics or usability. The current project aims to redesign the website with a focus on accessibility and visual design, while maintaining the original Code Dojo concept of teaching kids to code by coding \citep{coderdojo2026}.
+The Web Witchcraft and Wizardry project, originally used by Kingston University Code Dojo, was a PDF file with a single HTML file and some inline CSS and JavaScript to get students started. They were then expected to use W3 Schools \citep{w3schools2026} and similar sites to self-study. This was then developed into a web site in GitHub with eight lessons \citep{mulligan2024witchcraftandwizardry}, although minimal consideration was given to appearance or usability (except by accident). The current project aims to redesign the website with a focus on accessibility and visual aesthetics, while maintaining the original Code Dojo concept of teaching kids to code by coding \citep{coderdojo2026}.
 
-Inspiration for the colours of the new website were taken from the Embodied Mind logo, see figure \ref{fig:embodiedmind}. The vibrant style was drawn from 1960's art such as the work of Roy Lichtenstein (e.g. \cite{lichtenstein1963whaam}) and the television series Batman \citep{batman1966}. See figures \ref{fig:wham} and \ref{fig:batman} for examples of this style using bold colours and dramatic contrasts. The subdued style, for users who do not want the strident colours of the other two styles, uses a desaturated theme, arguably evoking a pre-colour black and white television look, although this is admittedly a tenuous link.
+The website draws on the metaphor of computer programming being magical and the programmer being a witch or wizard, which is a common trope both in popular culture (e.g. \cite{rowling1997series}) and in educational contexts (e.g. \cite{kelleher2005lowering, papert1980mindstorms}). Magic as a metaphor for science and education in general is particularly developed in The Science of the Discworld books \citep{pratchett1999science}.
+
+Inspiration for the colours of the new website were taken from the Embodied Mind logo (the author's personal brand), see figure \ref{fig:embodiedmind}. The vibrant style was drawn from 1960's art such as the work of Roy Lichtenstein (e.g. \cite{lichtenstein1963whaam}), Andy Warhol (e.g. \cite{warhol1964marilyn}), and the television series Batman \citep{batman1966}. See figures \ref{fig:wham}, \ref{fig:marilyn}, and \ref{fig:batman} for examples of this style using bold colours and dramatic contrasts. The subdued style, for users who do not want the strident colours of the other two styles, uses a desaturated theme, arguably evoking a pre-colour black and white television look, although this is admittedly a tenuous link, see figure \ref{fig:bbctestcardd}.
 
 \begin{figure}[H]
     \centering
@@ -79,33 +88,120 @@ Inspiration for the colours of the new website were taken from the Embodied Mind
 
 \begin{figure}[H]
     \centering
+    \includegraphics[width=0.4\textwidth]{ShotMarilyn.png}
+    \caption{Andy Warhol's Shot Marilyn \citep{warhol1964marilyn}}
+    \label{fig:marilyn}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
     \includegraphics[width=0.3\textwidth]{batman.jpg}
     \caption{Adam West as Batman \citep{batman1966}}
     \label{fig:batman}
 \end{figure}
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.3\textwidth]{Testcard_D.png}
+    \caption{BBC Test Card D \citep{bbctestcardd}}
+    \label{fig:bbctestcardd}
+\end{figure}
+
 \subsection{Design Process}
+Since the project has a single resource acting as designer, developer and client, an iterative and fluid process was used where design and development were done in parallel. This aligns with the Agile Manifesto \citep{beck2001agile} particularly the second pillar of valuing working software over comprehensive documentation and the seventh principle that working software is the primary measure of progress. The development also followed a DevOps approach \citep{allman2018devops} with continuous integration and deployment using GitHub Actions and test automation, which allowed for rapid iteration and testing and refinement of the design. Outstanding work (both development and design) was tracked using GitHub Issues to ensure work was not missed.
+
+The design was also informed by feedback from the first phase of the project and 'crit.' from fellow students and tutors. The design and implementation have now reached a stage where the website is functional and visually appealing. It is not yet at the level of a minimum viable product \citep{lenarduzzi2016mvp} as it will require a few more lessons to be written to reach that stage, but it can be considered a working prototype and used to gather feedback from potential users (students and mentors) and experts (teachers). This is an essential part of a robust process to produce usable software \citep{norman2013design} which has been neglected so far. This feedback will be used to further refine the design and implementation of the website, with the aim of creating a final product in the third phase of development, after the Visual Design and Web Project module is completed.
 
 \section{Digital Images}
+The digital images can be placed into 4 categories: those created by me for the website, those created by me but not used in the web site, those created by others for the website and those created by others but not specifically for the web site. The first category covers the Embodied Mind logo, the background image of the home page and the sparkling wand used as both the favicon and as an animation at the end of each lesson. It also includes the silhouette icons of a witch and wizard used in page headers which were edited by me from publicly licensed clip art. 
+
+The second category covers images used to demonstrate my competence in image editing and creation and are not directly related to the web site. Images from both categories were discussed in the previous assignment and will not be discussed further here, other than to say they can now be seen in their proper context in the high fidelity designs of the web site.
+
+The third category covers the eight portraits of witches and wizards created for the site \citep{mulligan2025witchesandwizards}. See figure \ref{fig:witchesandwizards} for the images and Appendix \ref{appendix:portraits} for the design brief. They were supplied as JPEG scanned files which were converted to PNG to give them a transparent background.
+
+\begin{figure}[htb]
+    \centering
+    \begin{subfigure}[b]{0.18\textwidth}
+        \includegraphics[width=\textwidth]{../images/portraits/rachel-mulligan-witch-young-female.png}
+    \end{subfigure}\hfill
+    \begin{subfigure}[b]{0.18\textwidth}
+        \includegraphics[width=\textwidth]{../images/portraits/rachel-mulligan-witch-young-male.png}
+    \end{subfigure}\hfill
+    \begin{subfigure}[b]{0.18\textwidth}
+        \includegraphics[width=\textwidth]{../images/portraits/rachel-mulligan-witch-old-female.png}
+    \end{subfigure}\hfill
+    \begin{subfigure}[b]{0.18\textwidth}
+        \includegraphics[width=\textwidth]{../images/portraits/rachel-mulligan-witch-old-male.png}
+    \end{subfigure}
+    
+    \begin{subfigure}[b]{0.18\textwidth}
+        \includegraphics[width=\textwidth]{../images/portraits/rachel-mulligan-wizard-young-female.png}
+    \end{subfigure}\hfill
+    \begin{subfigure}[b]{0.18\textwidth}
+        \includegraphics[width=\textwidth]{../images/portraits/rachel-mulligan-wizard-young-male.png}
+    \end{subfigure}\hfill
+    \begin{subfigure}[b]{0.18\textwidth}
+        \includegraphics[width=\textwidth]{../images/portraits/rachel-mulligan-wizard-old-female.png}
+    \end{subfigure}\hfill
+    \begin{subfigure}[b]{0.18\textwidth}
+        \includegraphics[width=\textwidth]{../images/portraits/rachel-mulligan-wizard-old-male.png}
+    \end{subfigure}
+    \caption{The eight portraits of witches and wizards created by Rachel Mulligan \citep{mulligan2025witchesandwizards}}
+    \label{fig:witchesandwizards}
+\end{figure}
+
+The final category covers icons from Font Awesome used under a Font Awesome Pro license and which will be discussed under Iconography below.
 
 \section{User Interface Designs}
 
+The high fidelity user interface designs are presented on an interactive page since each page design requires at least 48 images to cover the combination of styles, themes and sample viewport sizes. Of course, it can also be viewed as a working prototype at \url{https://web.witchcraft-and-wizardry.school} which will give a more dynamic experience of the design. Individual elements of the design are discussed below.
+
 \subsection{Colour}
+Generally, the first thing that people notice about a design is the colour scheme \citep{lindgaard2006attention}, so arguably this is the most important aspect of the design, although see, for example, \cite{tschichold1991new} for a dissenting view. Having selected colour schemes based on the criteria outlined in the History and Inspiration section, the next challenge is to choose specific colours that meet the WCAG 2.2 guidelines for contrast and accessibility \citep{caldwell2024}. With so many colours in the different themes and styles, this was a non-trivial task and required the development of a custom tool to quickly check the contrast of possible combinations of colours. See \url{https://web.witchcraft-and-wizardry.school/diagnostics/colourPalette.html}. It uses colour variables from the CSS of the website so the impact of any colour changes can be immediately assessed. The final selection is documented at \url{https://web.witchcraft-and-wizardry.school/diagnostics/colourSwatches.html}. and all contrasts meet at least AA standards, with most meeting AAA.
+
+The phase 1 website submitted last term used named CSS colours, but that was too inflexible for the current design. RGB hex codes were tried but again that was too restrictive and eventually relative colours and a HSL colour scheme were used to allow for easier maintenance. This has the limitation of being a new CSS feature but has been supported by all major browsers since 2024 \citep{caniuse2026}. Kevin Powell's YouTube tutorials \citep{powell_youtube} recommends using fallback colours for unsupported browsers, and this will be incorporated in the next phase of development to make the site more robust.
 
 \subsection{Typography}
 
-\subsection{Layout}
+Compared to colour, typography is relatively straightforward for this website, The first requirement was for a legible font for the body text and after that a suitable 'magic-y' font for the headings. A search of Google Fonts \citep{googlefonts2026} led to the selection of Open Sans and Cinzel/Cinzel Decorative for these purposes, respectively. A monospace font was also needed for code snippets and this was fulfilled by Fira Code. All fonts are freely usable under the Open SIL license \citep{silofl2007}.
+
+The size of fonts was effectively delegated to the browser using the CSS clamp() function to allow for responsive scaling. This facilitates a responsive design that can meet WCAG 2.2 guidelines for text size and readability \citep{caldwell2024} without needing to specify multiple font sizes for different viewport sizes.
+
+The only remaining issue, which was pointed out in the 'crit' session is that Cinzel is a capital only font. This looks fine for headlines but does present accessibility issues for people with dyslexia and other reading difficulties \citep{rello2013dyslexia}. For this reason, additional fonts of Marcellus and Cormorant Garamond were selected to use in menu items and button labels respectively instead of Cinzel. This is a good example of incorporating user feedback to achieve accessibility, with pragmatism trumping pure design, in line with good web design practice \citep{norman2013design}.
+
+\subsection{Iconography}
+Although this project is called Web Witchcraft and Wizardry, apart from the Gallery of portraits and the Facts about Witches and Wizards page, there is not much witchy or wizardly on the site. To some extent this will be addresses when the lessons are written as these will make the metaphor of programming as casting spells very explicit. However the magical theme can be greatly enhanced through the use of appropriate iconography \citep{horton1994icon}. This is most obviously done with the witch and wizard in the header of each page, but also with the use of the wand icon in navigation. This is used in three places: in the inter-page navigation at the top of each page and within lessons for intra-page navigation and to show progress within a lesson. The wand is also used in the Frequently Asked Questions page to indicate whether an answer section is expanded or collapsed. The wand icons are from Font Awesome Pro \citep{fontawesome2026} and are used under the Font Awesome Pro license.
+
+Font Awesome also provides many other magic-adjacent icons which will be used in lessons as soon as images are introduced to the students. The magical imagery will really start to fly, so to speak, after CSS animation and JavaScript have been covered and students can start creating interactive and animated web pages.
 
 \subsection{Animation}
+There is very little animation used on this site and that is deliberate. The principle of 'less is more' applies to animation as much as it does to other design elements \citep{norman2013design}, and a conscious choice has been made to only use animation when it is in service to the user experience. Thus the animations used are mostly very subtle, such as buttons increasing in size slightly when hovered over, navigation wands sparkling when hovered and scrolling through images in the gallery page. 
+
+There are two exceptions to this principle. The first is using an animated sparkling wand at the end of each lesson as a 'reward' for completing the lesson. The second exception is on the home page where two very obvious animations are used. One is when transitioning between themes and styles and the other is in the display of random portraits which fade in and out. The reason for this is that the home page is the 'shop window' of the website and needs to be visually engaging to encourage users to explore the site further. The animations are designed to be fun and engaging without being overwhelming or distracting. Nevertheless, there is a button to disable the animations for users who prefer a more static experience. The page also respects the prefers-reduced-motion media query to disable animations for users who have set that preference in their operating system settings. The animations on the home page have been recorded as animated GIF files in the high fidelity designs, both because that was a requirement of this assignment, but also to allow documentation of the animations in a static format.
+
+Animation will be covered in the Web Project Code and Report submission, but the principle I have followed is one of separation of concerns: animation is part of the visual appearance of the web site so should be (and has been) implemented in CSS without using JavaScript where possible. Since some CSS animation features are not yet supported by all browsers, JavaScript fallback animations are still necessary in some cases, such as the image scrollers in the gallery page.
 
 \subsection{Accessibility}
+Accessibility has been mentioned already in several sections, and it is a primary goal of this website redesign to provide an accessible experience to all users of the site. This not only makes the site useable by people who have disabilities or other restrictions, but also makes the experience better for all users who want to use their computer or device in the way they want to \citep{story1998universal}. 
+
+\subsection{Pedagogical Considerations}
+Web Witchcraft and Wizardry is an educational website and as such it should have significant input to its design and content from expert educators (i.e. teachers). Since most teachers are not primarily web developers, the best way to allow them to contribute their expertise is to give them a working application to comment on \citep{schuler1993participatory}. Thus the next phase of development will explicitly include collaboration with teachers who have expressed an interest in the project.
+
+There are two main types of users of the web site. The first is the students who want to learn how to create web pages. These may either be working on their own remotely or taking part in a Coder Dojo or other computer programming club. These latter students are supported by mentors, who are generally volunteers and may not have specific expertise in web development. So the mentors are the second class of users and for each lesson there will be the main student page and a secondary page for the mentors with learning outcomes for that lesson and, as best as can be anticipated, common pitfalls that students may encounter. The content of these mentor pages will be developed in phase three, after the lessons have been piloted with real students at Kingston University Code Dojo and the issues they encounter have been observed.
 
 \section{Conclusion}
+This essay has provided a critical reflection on the design of the Web Witchcraft and Wizardry project, which is an educational website aimed at teaching children how to create web sites. While the design is complete as far as it goes, sufficient at least to build a working prototype, there is still work required to solicit and incorporate feedback from students and educators and to write the lessons and mentor guides. The next phase of development will focus on these aspects of the project, with the aim of creating a final product that is exciting to use and rigorously effective at teaching good coding practice to the next generation of web developers.
 
 % Include word count N.B. Run wordcount.sh to generate wordcount.txt before compiling
 \section*{Word count}
 Word count: \input{essay-2-wordcount.txt} words (excluding references)
 \\
 \bibliography{EdmundLibrary}
+
+% include appendices
+\newpage
+\appendix
+\section*{Appendices}
+\input{essay-2-appendix.tex}
 
 \end{document}

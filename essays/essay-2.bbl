@@ -1,9 +1,39 @@
-\begin{thebibliography}{4}
+\begin{thebibliography}{28}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Allman(2018)]{allman2018devops}
+Eric Allman.
+\newblock Devops: Software architects' perspectives.
+\newblock \emph{Communications of the ACM}, 61\penalty0 (4):\penalty0 40--44, 2018.
+\newblock \doi{10.1145/3186331}.
+
+\bibitem[{BBC}(1967)]{bbctestcardd}
+{BBC}.
+\newblock Test card d, 1967.
+\newblock Television test pattern with geometric designs.
+
+\bibitem[Beck et~al.(2001)Beck, Beedle, van Bennekum, Cockburn, Cunningham, Fowler, Grenning, Highsmith, Hunt, Jeffries, Kern, Marick, Martin, Mellor, Schwaber, Sutherland, and Thomas]{beck2001agile}
+Kent Beck, Mike Beedle, Arie van Bennekum, Alistair Cockburn, Ward Cunningham, Martin Fowler, James Grenning, Jim Highsmith, Andrew Hunt, Ron Jeffries, Jon Kern, Brian Marick, Robert~C. Martin, Steve Mellor, Ken Schwaber, Jeff Sutherland, and Dave Thomas.
+\newblock Manifesto for agile software development, 2001.
+\newblock URL \url{https://agilemanifesto.org/}.
+\newblock Accessed: April 2026.
+
+\bibitem[Caldwell et~al.(2024)Caldwell, Cooper, Reid, and Vanderheiden]{caldwell2024}
+Ben Caldwell, Michael Cooper, Loretta~Guarino Reid, and Gregg Vanderheiden.
+\newblock Web content accessibility guidelines (wcag) 2.2.
+\newblock W3c recommendation, World Wide Web Consortium (W3C), 2024.
+\newblock URL \url{https://www.w3.org/TR/WCAG22/}.
+\newblock Accessed: November 2025.
+
+\bibitem[{Can I Use}(2026)]{caniuse2026}
+{Can I Use}.
+\newblock Can i use... support tables for html5, css3, etc, 2026.
+\newblock URL \url{https://caniuse.com/}.
+\newblock Accessed: April 2026.
 
 \bibitem[{CoderDojo Foundation}(2026)]{coderdojo2026}
 {CoderDojo Foundation}.
@@ -11,13 +41,47 @@
 \newblock URL \url{https://www.coderdojoku.org/about}.
 \newblock Accessed: April 2026.
 
+\bibitem[{Fonticons, Inc.}(2026)]{fontawesome2026}
+{Fonticons, Inc.}
+\newblock Font awesome: The internet's icon library and toolkit, 2026.
+\newblock URL \url{https://fontawesome.com/}.
+\newblock Accessed: April 2026.
+
+\bibitem[{Google}(2026)]{googlefonts2026}
+{Google}.
+\newblock Google fonts: Making the web more beautiful, fast, and open through great typography.
+\newblock \url{https://fonts.google.com/}, 2026.
+\newblock Free and open-source font library. Accessed: April 2026.
+
+\bibitem[Horton(1994)]{horton1994icon}
+William Horton.
+\newblock The icon book: Visual symbols for computer systems and documentation.
+\newblock 1994.
+\newblock Discusses how icons reinforce themes and improve user understanding.
+
+\bibitem[Kelleher and Pausch(2005)]{kelleher2005lowering}
+Caitlin Kelleher and Randy Pausch.
+\newblock Lowering the barriers to programming: A taxonomy of programming environments and languages for novice programmers.
+\newblock volume~37, pages 83--137. ACM, 2005.
+\newblock Discusses metaphors including magic as a way to make programming accessible.
+
+\bibitem[Lenarduzzi and Taibi(2016)]{lenarduzzi2016mvp}
+Valentina Lenarduzzi and Davide Taibi.
+\newblock Does the minimum viable product deliver value to early adopters?
+\newblock In \emph{Proceedings of the Scientific Workshop Proceedings of XP2016}, pages 1--5. ACM, 2016.
+\newblock \doi{10.1145/2962695.2962729}.
+
 \bibitem[Lichtenstein(1963)]{lichtenstein1963whaam}
 Roy Lichtenstein.
 \newblock Whaam!, 1963.
-\newblock URL
-  \url{https://www.tate.org.uk/art/artworks/lichtenstein-whaam-t00897}.
-\newblock Acrylic paint and oil paint on canvas, 172.7 × 406.4 cm, Tate
-  Gallery, London.
+\newblock URL \url{https://www.tate.org.uk/art/artworks/lichtenstein-whaam-t00897}.
+\newblock Acrylic paint and oil paint on canvas, 172.7 × 406.4 cm, Tate Gallery, London.
+
+\bibitem[Lindgaard et~al.(2006)Lindgaard, Fernandes, Dudek, and Brown]{lindgaard2006attention}
+Gitte Lindgaard, Gary Fernandes, Cathy Dudek, and Judith Brown.
+\newblock Attention web designers: You have 50 milliseconds to make a good first impression!
+\newblock \emph{Behaviour \& Information Technology}, 25\penalty0 (2):\penalty0 115--126, 2006.
+\newblock Found that visual appeal is assessed within 50ms, with colour being a primary factor.
 
 \bibitem[Mulligan(2024)]{mulligan2024witchcraftandwizardry}
 Edmund Mulligan.
@@ -25,11 +89,86 @@ Edmund Mulligan.
 \newblock \url{https://github.com/edmundmulligan/Witches-And-Wizards}, 2024.
 \newblock Accessed: April 2026.
 
+\bibitem[Mulligan(2025)]{mulligan2025witchesandwizards}
+Rachel Mulligan.
+\newblock Eight portraits of witches and wizards, 2025.
+\newblock Watercolour paintings created for the Web Witchcraft and Wizardry project.
+
+\bibitem[Norman(2013)]{norman2013design}
+Don Norman.
+\newblock \emph{The Design of Everyday Things: Revised and Expanded Edition}.
+\newblock Basic Books, New York, 2013.
+\newblock Foundational text on user-centered design and the importance of user feedback.
+
+\bibitem[Papert(1980)]{papert1980mindstorms}
+Seymour Papert.
+\newblock \emph{Mindstorms: Children, Computers, and Powerful Ideas}.
+\newblock Basic Books, New York, 1980.
+\newblock Foundational text on using metaphor and imagination in programming education.
+
+\bibitem[Powell(2025)]{powell_youtube}
+Kevin Powell.
+\newblock Kevin powell --- css evangelist, 2025.
+\newblock URL \url{https://www.youtube.com/@KevinPowell}.
+\newblock Accessed December 2025.
+
+\bibitem[Pratchett et~al.(1999)Pratchett, Stewart, and Cohen]{pratchett1999science}
+Terry Pratchett, Ian Stewart, and Jack Cohen.
+\newblock \emph{The Science of Discworld}.
+\newblock Ebury Press, London, 1999.
+
+\bibitem[Rello(2014)]{rello2013dyslexia}
+Luz Rello.
+\newblock \emph{DysWebxia: A Text Accessibility Model for People with Dyslexia}.
+\newblock Universitat Pompeu Fabra, Barcelona, 2014.
+\newblock PhD thesis recommending against all-caps text for dyslexic readers.
+
+\bibitem[Rowling(1997--2007)]{rowling1997series}
+J.~K. Rowling.
+\newblock \emph{Harry Potter Series}.
+\newblock Bloomsbury, London, 1997--2007.
+\newblock 7 volumes.
+
+\bibitem[Schuler and Namioka(1993)]{schuler1993participatory}
+Douglas Schuler and Aki Namioka.
+\newblock \emph{Participatory Design: Principles and Practices}.
+\newblock Lawrence Erlbaum Associates, Hillsdale, NJ, 1993.
+\newblock Discusses methods for involving non-technical stakeholders in design processes through concrete artifacts.
+
+\bibitem[{SIL International}(2007)]{silofl2007}
+{SIL International}.
+\newblock The sil open font license, version 1.1.
+\newblock Font license, SIL International, 2007.
+\newblock URL \url{https://openfontlicense.org/}.
+\newblock Free and open-source license for fonts and related software. Accessed: April 2026.
+
+\bibitem[Story et~al.(1998)Story, Mueller, and Mace]{story1998universal}
+Molly~Follette Story, James~L Mueller, and Ronald~L Mace.
+\newblock \emph{The Universal Design File: Designing for People of All Ages and Abilities}.
+\newblock North Carolina State University, The Center for Universal Design, Raleigh, NC, 1998.
+\newblock Foundational text on universal design principles.
+
+\bibitem[Tschichold(1991)]{tschichold1991new}
+Jan Tschichold.
+\newblock \emph{The New Typography: A Handbook for Modern Designers}.
+\newblock University of California Press, Berkeley, CA, 1991.
+\newblock Originally published 1928. Argues typography and structure are fundamental to design, prioritizing them over color.
+
+\bibitem[{W3Schools}(2026)]{w3schools2026}
+{W3Schools}.
+\newblock W3schools online web tutorials, 2026.
+\newblock URL \url{https://www.w3schools.com/}.
+\newblock Accessed: April 2026.
+
+\bibitem[Warhol(1964)]{warhol1964marilyn}
+Andy Warhol.
+\newblock Shot marilyn, 1964.
+\newblock Silkscreen print on canvas, part of the Shot Marilyns series.
+
 \bibitem[{Warner Bros. Television}(1966--1968)]{batman1966}
 {Warner Bros. Television}.
 \newblock Batman.
 \newblock American Broadcasting Company (ABC), 1966--1968.
-\newblock Television series, created by William Dozier, starring Adam West and
-  Burt Ward, ABC.
+\newblock Television series, created by William Dozier, starring Adam West and Burt Ward, ABC.
 
 \end{thebibliography}

@@ -3,44 +3,48 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: essay-2.aux
 The style file: plainnat.bst
 Database file #1: EdmundLibrary.bib
-You've used 4 entries,
+Warning--empty journal in horton1994icon
+Warning--empty booktitle in kelleher2005lowering
+Warning--can't use both volume and number fields in kelleher2005lowering
+You've used 28 entries,
             2773 wiz_defined-function locations,
-            617 strings with 5495 characters,
-and the built_in function-call counts, 1251 in all, are:
-= -- 112
-> -- 40
-< -- 4
-+ -- 16
-- -- 12
-* -- 58
-:= -- 198
-add.period$ -- 16
-call.type$ -- 4
-change.case$ -- 16
-chr.to.int$ -- 4
-cite$ -- 8
-duplicate$ -- 60
-empty$ -- 129
-format.name$ -- 16
-if$ -- 265
+            765 strings with 9915 characters,
+and the built_in function-call counts, 10620 in all, are:
+= -- 930
+> -- 557
+< -- 26
++ -- 199
+- -- 171
+* -- 691
+:= -- 1693
+add.period$ -- 112
+call.type$ -- 28
+change.case$ -- 135
+chr.to.int$ -- 28
+cite$ -- 59
+duplicate$ -- 506
+empty$ -- 928
+format.name$ -- 205
+if$ -- 2228
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 0
-newline$ -- 32
-num.names$ -- 16
-pop$ -- 48
+missing$ -- 21
+newline$ -- 174
+num.names$ -- 112
+pop$ -- 340
 preamble$ -- 1
-purify$ -- 12
+purify$ -- 113
 quote$ -- 0
-skip$ -- 51
+skip$ -- 400
 stack$ -- 0
-substring$ -- 8
-swap$ -- 4
-text.length$ -- 0
+substring$ -- 143
+swap$ -- 40
+text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 44
-warning$ -- 0
-while$ -- 12
+type$ -- 268
+warning$ -- 3
+while$ -- 94
 width$ -- 0
-write$ -- 63
+write$ -- 410
+(There were 3 warnings)
