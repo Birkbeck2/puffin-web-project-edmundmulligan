@@ -5,7 +5,7 @@
  * Copyright  : (c) 6 The Embodied Mind
  * License    : MIT License (see license.html page)
  * Description:
- *   Displays the current site version by reading package.json
+ *   Displays the current site version by reading the VERSION file
  **********************************************************************
  */
 
@@ -20,14 +20,14 @@
         }
 
         try {
-            const response = await fetch('../package.json', { cache: 'no-store' });
+            const response = await fetch('../VERSION', { cache: 'no-store' });
 
             if (!response.ok) {
-                throw new Error('Failed to load package.json');
+                throw new Error('Failed to load VERSION file');
             }
 
-            const packageData = await response.json();
-            const version = typeof packageData.version === 'string' ? packageData.version.trim() : '';
+            const versionText = await response.text();
+            const version = versionText.trim();
 
             versionElement.textContent = version || 'unknown';
         } catch (error) {
