@@ -77,7 +77,8 @@ jobs:
           fi
 
       - name: Create GitHub Release
-        uses: softprops/action-gh-release@v1
+        if: github.ref_name == 'main'
+        uses: softprops/action-gh-release@v2
         with:
           tag_name: v${{ steps.version.outputs.new_version }}
           name: Release v${{ steps.version.outputs.new_version }}
@@ -94,13 +95,13 @@ jobs:
           cp -a index.html bin data diagnostics images mentors pages scripts students styles _site/
 
       - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: _site
 
   deploy:
     needs: build-and-release
-    if: needs.build-and-release.result == 'success'
+    if: needs.build-and-release.result == 'success' && github.ref_name == 'main'
     runs-on: ubuntu-latest
     env:
       FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
