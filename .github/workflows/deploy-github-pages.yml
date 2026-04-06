@@ -60,24 +60,39 @@ jobs:
       - name: Create release tarball
         run: bin/create-release-tar.sh "${{ steps.version.outputs.new_version }}" releases
 
-      - name: Commit version update (excluding release tarball)
+      - name: Commit version update to development branch
         env:
           RELEASE_VERSION: ${{ steps.version.outputs.new_version }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
+          # Stash local changes (VERSION file) before switching branches
+          git stash push -m "Stash VERSION for development branch commit"
+
+          # Fetch and checkout development branch
+          git fetch origin development
+          git checkout development
+          git pull origin development
+
+          # Write the new version to VERSION file
+          echo "${RELEASE_VERSION}" > VERSION
           git add VERSION
 
           if git diff --cached --quiet; then
             echo "No version change."
           else
             git commit -m "chore(release): v${RELEASE_VERSION} [skip ci]"
-            git push
+            git push origin development
           fi
 
+          # Return to the original branch and restore stashed changes
+          git checkout -
+          git stash pop
+
       - name: Create GitHub Release
-        uses: softprops/action-gh-release@v1
+        if: github.ref_name == 'main'
+        uses: softprops/action-gh-release@v2
         with:
           tag_name: v${{ steps.version.outputs.new_version }}
           name: Release v${{ steps.version.outputs.new_version }}
@@ -91,16 +106,16 @@ jobs:
         run: |
           rm -rf _site
           mkdir -p _site
-          cp -a index.html bin data diagnostics images mentors pages scripts students styles _site/
+          cp -a index.html VERSION bin data diagnostics images mentors pages scripts students styles _site/
 
       - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: _site
 
   deploy:
     needs: build-and-release
-    if: needs.build-and-release.result == 'success'
+    if: needs.build-and-release.result == 'success' && github.ref_name == 'main'
     runs-on: ubuntu-latest
     env:
       FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true

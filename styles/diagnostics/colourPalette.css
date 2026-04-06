@@ -310,6 +310,8 @@
     text-decoration: none;
     display: block;
     padding: 0.5rem 0;
+    font-family: var(--font-family-menu);
+    font-size: var(--fontsize-nav);
 }
 
 .demo-nav a:hover {
