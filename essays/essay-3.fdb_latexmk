@@ -1,7 +1,15 @@
 # Fdb version 4
-["pdflatex"] 1774977297.69441 "/home/edmund/Projects/Study/puffin-web-project-edmundmulligan/essays/essay-3.tex" "essay-3.pdf" "essay-3" 1774977298.06936 2
+["bibtex essay-3"] 1775431245.70466 "essay-3.aux" "essay-3.bbl" "essay-3" 1775431245.81001 0
+  "./EdmundLibrary.bib" 1775426381.55891 27796 ac20c4a7473390b802c2a6b7a1f0caf4 ""
+  "/usr/share/texlive/texmf-dist/bibtex/bst/natbib/plainnat.bst" 1233624470 26816 ffe5423d2019860bad9f54bc402fac15 ""
+  "essay-3.aux" 1775431245.46987 1265 d2d9bb1ad6c788ebdb7ad08d3fa475bd "pdflatex"
+  (generated)
+  "essay-3.bbl"
+  "essay-3.blg"
+  (rewritten before read)
+["pdflatex"] 1775431245.02929 "/home/edmund/Projects/Study/puffin-web-project-edmundmulligan/essays/essay-3.tex" "essay-3.pdf" "essay-3" 1775431245.81007 0
   "/etc/texmf/web2c/texmf.cnf" 1766593040.25317 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/edmund/Projects/Study/puffin-web-project-edmundmulligan/essays/essay-3.tex" 1774977297.0724 1786 853587eef199e7545fdeb09761eb0584 ""
+  "/home/edmund/Projects/Study/puffin-web-project-edmundmulligan/essays/essay-3.tex" 1774977773.59398 1795 2d8da882ddffe04944f16fd8ef3c1425 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1136768653 1328 c834bbb027764024c09d3d2bf908b5f0 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1136768653 1324 c910af8c371558dc20f2d7822f66fe64 ""
@@ -11,6 +19,11 @@
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr17.tfm" 1136768653 1292 296a67155bdbfc32aa9c636f21e91433 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm" 1136768653 1124 6c73e740cf17375f03eec0ee63599741 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmti10.tfm" 1136768653 1480 aa8e34af0eb6a2941b776984cf1dfdc4 ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb" 1248133631 34811 78b52f49e893bcba91bd7581cdc144c0 ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1248133631 32080 340ef9bf63678554ee606688e7b5339d ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1248133631 32722 d7379af29a190c3f453aba36302ff5a9 ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb" 1248133631 32362 179c33bbf43f19adbb3825bb4e36e57a ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb" 1248133631 37944 359e864bd06cde3b1cf57bb20757fb06 ""
   "/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1461363279 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty" 1644112042 7237 bdd120a32c8fdb4b433cf9ca2e7cd98a ""
   "/usr/share/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty" 1572645307 1057 525c2192b5febbd8c1f662c9468335bb ""
@@ -100,10 +113,12 @@
   "/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty" 1700082560 55487 80a65caedd3722f4c20a14a69e785d8f ""
   "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/usr/share/texmf/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
+  "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1766593054.69992 5472669 54eaf61a88b6b7896ebd0dac973cb29c ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1766593097 8212669 80b26e5cb49b2f6f6efd09c6c663c8dc ""
-  "essay-3-wordcount.txt" 0 -1 0 ""
-  "essay-3.aux" 1774977298.0279 28 83779d3fd8cde03ffd8f73ef8f38e2c3 "pdflatex"
-  "essay-3.tex" 1774977297.0724 1786 853587eef199e7545fdeb09761eb0584 ""
+  "essay-3-wordcount.txt" 1774977933.4821 3 ddf0a6f1d99158cb93a46fdd2f5b7a48 ""
+  "essay-3.aux" 1775431245.46987 1265 d2d9bb1ad6c788ebdb7ad08d3fa475bd "pdflatex"
+  "essay-3.bbl" 1775431245.80487 275 de5ffaf5b665b622658d80bed97ba2a5 "bibtex essay-3"
+  "essay-3.tex" 1774977773.59398 1795 2d8da882ddffe04944f16fd8ef3c1425 ""
   (generated)
   "essay-3.aux"
   "essay-3.log"
