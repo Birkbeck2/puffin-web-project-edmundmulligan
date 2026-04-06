@@ -60,21 +60,34 @@ jobs:
       - name: Create release tarball
         run: bin/create-release-tar.sh "${{ steps.version.outputs.new_version }}" releases
 
-      - name: Commit version update (excluding release tarball)
+      - name: Commit version update to development branch
         env:
           RELEASE_VERSION: ${{ steps.version.outputs.new_version }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
+          # Save the new VERSION file content
+          cp VERSION VERSION.new
+
+          # Fetch and checkout development branch
+          git fetch origin development
+          git checkout development
+          git pull origin development
+
+          # Apply the new version
+          mv VERSION.new VERSION
           git add VERSION
 
           if git diff --cached --quiet; then
             echo "No version change."
           else
             git commit -m "chore(release): v${RELEASE_VERSION} [skip ci]"
-            git push
+            git push origin development
           fi
+
+          # Return to the original branch for remaining workflow steps
+          git checkout -
 
       - name: Create GitHub Release
         if: github.ref_name == 'main'
