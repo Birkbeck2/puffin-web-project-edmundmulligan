@@ -67,5 +67,7 @@
     "files.associations": {
         "*.mustache": "html",
         "**/*.mustache": "html"
-    }
+    },
+
+  "latex-workshop.latex.autoBuild.run": "never"
 }

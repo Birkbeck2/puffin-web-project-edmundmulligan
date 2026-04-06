@@ -7,6 +7,9 @@ on:
         - '**'
         - '!.github/**'
         - '.github/workflows/pre-deploy.yml'
+        - '!essays/**'
+        - '!documentation/**'
+        - '!artwork/**'
 
 env:
   testurl: 'http://localhost:8080'

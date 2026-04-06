@@ -5,6 +5,10 @@ on:
     branches:
       - staging
       - main
+    paths-ignore:
+      - 'essays/**'
+      - 'documentation/**'
+      - 'artwork/**'
 
 permissions:
   contents: write
@@ -56,21 +60,32 @@ jobs:
       - name: Create release tarball
         run: bin/create-release-tar.sh "${{ steps.version.outputs.new_version }}" releases
 
-      - name: Commit generated release files (excluding test results)
+      - name: Commit version update (excluding release tarball)
         env:
           RELEASE_VERSION: ${{ steps.version.outputs.new_version }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add VERSION releases
+          git add VERSION
 
           if git diff --cached --quiet; then
-            echo "No generated files changed."
+            echo "No version change."
           else
             git commit -m "chore(release): v${RELEASE_VERSION} [skip ci]"
             git push
           fi
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: v${{ steps.version.outputs.new_version }}
+          name: Release v${{ steps.version.outputs.new_version }}
+          draft: false
+          prerelease: false
+          files: releases/puffin-web-project-edmundmulligan-v${{ steps.version.outputs.new_version }}.tar.gz
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Prepare Pages artifact directory
         run: |

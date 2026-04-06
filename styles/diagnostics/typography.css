@@ -54,16 +54,6 @@ nav a:hover {
     margin-bottom: 3rem;
 }
 
-/*
-.section h2 {
-    background: var(--colour-headings-background);
-    color: var(--colour-headings-text);
-    padding: 0.75rem 1rem;
-    border-radius: var(--border-radius);
-    margin-bottom: 1.5rem;
-}
-*/
-
 .font-demo-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(60ch, 1fr));
