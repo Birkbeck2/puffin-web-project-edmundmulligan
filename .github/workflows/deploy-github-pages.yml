@@ -5,6 +5,10 @@ on:
     branches:
       - staging
       - main
+    paths-ignore:
+      - 'essays/**'
+      - 'documentation/**'
+      - 'artwork/**'
 
 permissions:
   contents: write
