@@ -18,6 +18,9 @@ yarn-error.log*
 # Generated images
 artwork/generated/
 
+# Release tarballs (uploaded to GitHub Releases instead)
+releases/
+
 # OS files
 .DS_Store
 .DS_Store?
