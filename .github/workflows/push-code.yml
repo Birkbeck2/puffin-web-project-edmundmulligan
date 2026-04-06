@@ -3,6 +3,10 @@ name: Push Code to Prod Server
 on:
   push:
     branches: [ main ]
+    paths-ignore:
+      - 'essays/**'
+      - 'documentation/**'
+      - 'artwork/**'
 
 jobs:
   deploy-to-server:
