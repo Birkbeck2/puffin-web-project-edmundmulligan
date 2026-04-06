@@ -1,4 +1,4 @@
-\begin{thebibliography}{31}
+\begin{thebibliography}{32}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -104,6 +104,13 @@ Gitte Lindgaard, Gary Fernandes, Cathy Dudek, and Judith Brown.
   115--126, 2006.
 \newblock Found that visual appeal is assessed within 50ms, with colour being a
   primary factor.
+
+\bibitem[Lynch(1960)]{lynch1960image}
+Kevin Lynch.
+\newblock \emph{The Image of the City}.
+\newblock MIT Press, Cambridge, MA, 1960.
+\newblock Classic work on urban design and how people navigate cities,
+  including the concept of desire lines.
 
 \bibitem[Mulligan(2024)]{mulligan2024witchcraftandwizardry}
 Edmund Mulligan.
