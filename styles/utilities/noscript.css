@@ -11,15 +11,17 @@
  *************************************************************
  */
 
-.js-required {
-    display: none;
-}
+ @layer utilities {
+    .js-required {
+        display: none;
+    }
 
-body::before {
-    display: block;
-    color: var(--colour-warning-text);
-    background-color: var(--colour-warning-background);
-    content: "This page uses JavaScript for enhanced functionality. Please enable JavaScript for the best experience.";
-    text-align: center;
-    padding: 1.25rem;
+    body::before {
+        display: block;
+        color: var(--colour-warning-text);
+        background-color: var(--colour-warning-background);
+        content: "This page uses JavaScript for enhanced functionality. Please enable JavaScript for the best experience.";
+        text-align: center;
+        padding: 1.25rem;
+    }
 }

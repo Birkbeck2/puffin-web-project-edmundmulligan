@@ -10,33 +10,35 @@
  **********************************************************************
  */
  
-::-webkit-scrollbar {
-    width: var(--scrollbar-width);
-    height: var(--scrollbar-width);
-}
+@layer components {
+    ::-webkit-scrollbar {
+        width: var(--scrollbar-width);
+        height: var(--scrollbar-width);
+    }
 
-::-webkit-scrollbar-track {
-    background: var(--colour-effective-button-background);
-    border-radius: var(--border-radius);
-    margin-block: var(--margin-vertical);
-    margin-inline: var(--margin-horizontal);
-}
+    ::-webkit-scrollbar-track {
+        background: var(--colour-effective-button-background);
+        border-radius: var(--border-radius);
+        margin-block: var(--margin-vertical);
+        margin-inline: var(--margin-horizontal);
+    }
 
-::-webkit-scrollbar-thumb {
-    background-color: var(--colour-effective-button-text);
-    border-radius: var(--border-radius);
-    border: var(--border-weight) solid var(--colour-effective-button-text);
-}
+    ::-webkit-scrollbar-thumb {
+        background-color: var(--colour-effective-button-text);
+        border-radius: var(--border-radius);
+        border: var(--border-weight) solid var(--colour-effective-button-text);
+    }
 
-::-webkit-scrollbar-thumb:hover {
-    background-color: var(--colour-effective-button-text-hover);
-    border: var(--border-weight) solid var(--colour-effective-button-text-hover);
-}
+    ::-webkit-scrollbar-thumb:hover {
+        background-color: var(--colour-effective-button-text-hover);
+        border: var(--border-weight) solid var(--colour-effective-button-text-hover);
+    }
 
-/* For Firefox */
-@supports selector(* scrollbar-color) {
-    * {
-        scrollbar-width: auto;
-        scrollbar-color: var(--colour-effective-button-text) var(--colour-effective-button-background);
+    /* For Firefox */
+    @supports selector(* scrollbar-color) {
+        * {
+            scrollbar-width: auto;
+            scrollbar-color: var(--colour-effective-button-text) var(--colour-effective-button-background);
+        }
     }
 }

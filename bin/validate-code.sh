@@ -190,24 +190,40 @@ for file in $FILES; do
   TEMP_ERROR="$RESULTS_DIR/validation-error-$TESTED.txt"
 
   if [ "$extension" = "html" ]; then
-    if ! timeout 30 npx html-validate --formatter json "${file}" > "$TEMP_RESULT" 2>"$TEMP_ERROR"; then
-      if [ $? -eq 124 ]; then  # timeout exit code
-        echo "  ⚠️  html-validate timed out after 30 seconds"
-      else
-        echo "  ⚠️  html-validate failed, check error log:"
-        cat "$TEMP_ERROR" 2>/dev/null || echo "  No error details available"
-      fi
-      echo "[]" > "$TEMP_RESULT"  # Create empty result to prevent JSON errors
+    timeout 30 npx html-validate --formatter json "${file}" > "$TEMP_RESULT" 2>"$TEMP_ERROR"
+    HTML_VALIDATE_EXIT=$?
+    
+    if [ $HTML_VALIDATE_EXIT -eq 124 ]; then
+      # Timeout exit code
+      echo "  ⚠️  html-validate timed out after 30 seconds"
+      echo "[]" > "$TEMP_RESULT"
+    elif [ $HTML_VALIDATE_EXIT -eq 1 ]; then
+      # html-validate exit code 1 = validation errors found, but JSON output is valid
+      # Keep the JSON output in $TEMP_RESULT - it contains the error details
+      :  # no-op, we keep the JSON output
+    elif [ $HTML_VALIDATE_EXIT -ne 0 ]; then
+      # Other non-zero exit = actual failure (e.g., invalid config, crash)
+      echo "  ⚠️  html-validate failed with exit code $HTML_VALIDATE_EXIT, check error log:"
+      cat "$TEMP_ERROR" 2>/dev/null || echo "  No error details available"
+      echo "[]" > "$TEMP_RESULT"
     fi
   elif [ "$extension" = "css" ]; then
-    if ! timeout 30 npx stylelint --formatter json "${file}" > "$TEMP_RESULT" 2>"$TEMP_ERROR"; then
-      if [ $? -eq 124 ]; then  # timeout exit code
-        echo "  ⚠️  stylelint timed out after 30 seconds"
-      else
-        echo "  ⚠️  stylelint failed, check error log:"
-        cat "$TEMP_ERROR" 2>/dev/null || echo "  No error details available"
-      fi
-      echo "[]" > "$TEMP_RESULT"  # Create empty result to prevent JSON errors
+    timeout 30 npx stylelint --formatter json "${file}" > "$TEMP_RESULT" 2>"$TEMP_ERROR"
+    STYLELINT_EXIT=$?
+    
+    if [ $STYLELINT_EXIT -eq 124 ]; then
+      # Timeout exit code
+      echo "  ⚠️  stylelint timed out after 30 seconds"
+      echo "[]" > "$TEMP_RESULT"
+    elif [ $STYLELINT_EXIT -eq 2 ]; then
+      # Stylelint exit code 2 = linting errors found, but JSON output is valid
+      # Keep the JSON output in $TEMP_RESULT - it contains the error details
+      :  # no-op, we keep the JSON output
+    elif [ $STYLELINT_EXIT -ne 0 ]; then
+      # Other non-zero exit = actual failure (e.g., invalid config, crash)
+      echo "  ⚠️  stylelint failed with exit code $STYLELINT_EXIT, check error log:"
+      cat "$TEMP_ERROR" 2>/dev/null || echo "  No error details available"
+      echo "[]" > "$TEMP_RESULT"
     fi
   elif [ "$extension" = "js" ]; then
     # First, check for JS syntax errors using node --check (with timeout)

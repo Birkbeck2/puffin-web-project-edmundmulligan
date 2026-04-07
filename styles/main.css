@@ -11,17 +11,31 @@
  **********************************************************************
  */
 
-@import url("./components/page-layout.css");
+ @layer reset, base, layouts, pages, components, utilities;
+
+@import url("./layouts/page-layout.css");
+@import url("./layouts/text.css");
 @import url("./components/buttons.css");
 @import url("./components/code.css");
-@import url("./components/header-and-footer.css");
 @import url("./components/favicon.css");
+@import url("./components/header-and-footer.css");
 @import url("./components/images.css");
 @import url("./components/lesson-navigation.css");
+@import url("./components/lessons-sidebar.css");
 @import url("./components/navigation.css");
 @import url("./components/popover.css");
 @import url("./components/scrollbar.css");
-@import url("./components/text.css");
+@import url("./components/theme-switcher.css");
 @import url("./components/titles.css");
-@import url("./components/toggle.css");
-@import url("./components/utilities.css");
+@import url("./utilities/utilities.css");
+@import url("./utilities/toggle.css");
+
+/* Ensure that form elements inherit the same font as their parent elements for visual consistency */
+@layer reset {
+    input, 
+    button,
+    textarea, 
+    select {
+        font: inherit;
+    }
+}
