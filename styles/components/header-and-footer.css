@@ -16,7 +16,6 @@
     But this is good enough for now.
  */
 
-/* TODO sort out the position and padding on main so the footer is at the bottom of screen and the main scrolls if it doesn't fit */
 @layer components {
     .header {
         display: block;
@@ -238,14 +237,6 @@
         max-width: 100%;
         text-align: center;
         box-sizing: border-box;
-    }
-
-    /*
-     * TODO: Review - text-align: center already set on .header-text above, redundant here
-     */
-
-    .header-full .header-text {
-        /* text-align: center; */
     }
 
     .header-full .header-text nav.site-navigation {

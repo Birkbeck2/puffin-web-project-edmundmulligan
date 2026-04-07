@@ -20,10 +20,6 @@
     }
 
     .facts-item {
-        /* TODO: Review - if applied to div or other block-level element, display: block may be redundant */
-
-        /* display: block; */
-
         background-color: var(--colour-effective-headings-background);
         color: var(--colour-effective-headings-text);
         border: var(--border-weight) var(--border-style) var(--colour-effective-headings-text);

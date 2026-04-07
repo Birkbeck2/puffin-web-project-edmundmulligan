@@ -85,11 +85,6 @@
                 width: 100%;
                 padding: 0;
                 margin-bottom: 0.5rem;
-
-                /* TODO: Review - font-size already set on legend above (line 73), redundant here */
-
-                /* font-size: var(--fontsize-small); */
-
                 overflow-wrap: anywhere;
                 text-align: center;
             }

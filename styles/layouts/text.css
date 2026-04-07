@@ -55,24 +55,12 @@
     a:visited {
         color: var(--colour-effective-link-text-visited);
         background-color: var(--colour-effective-link-background-visited);
-
-        /* TODO: Review - text-decoration and font-weight inherit from a:link, no need to repeat */
-
-        /* text-decoration: underline; */
-
-        /* font-weight: var(--font-weight-bold); */
     }
 
     a:hover,
     a:focus-visible {
         color: var(--colour-effective-link-text-focus);
         background-color: var(--colour-effective-link-background-focus);
-
-        /* TODO: Review - text-decoration and font-weight inherit from a:link, no need to repeat */
-
-        /* text-decoration: underline; */
-
-        /* font-weight: var(--font-weight-bold); */
     }
 
     /* this may be a bit subtle but it meets WCAG 2.2 guidelines */

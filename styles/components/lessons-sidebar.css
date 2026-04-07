@@ -78,13 +78,6 @@
             width: 100%;
             background: var(--colour-effective-menu-background);
             border: none;
-
-            /* TODO: Review - font: inherit already set in reset layer, so individual font properties are redundant */
-
-            /* font-family: inherit; */
-
-            /* font-size: inherit; */
-
             cursor: pointer;
             box-sizing: border-box;
         }

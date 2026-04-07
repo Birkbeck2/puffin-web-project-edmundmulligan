@@ -40,11 +40,6 @@
         cursor: pointer;
         font-family: var(--font-family-icons);
         font-weight: 900;
-
-        /* TODO: Review - color: inherit is redundant as color inherits by default */
-
-        /* color: inherit; */
-
         &.h3-level,
         &.h4-level {
             font-size: var(--fontsize-header-medium);
@@ -54,16 +49,5 @@
             content: "\e2ca\f077";  /* Font Awesome Magic Wand with sparkles + Chevron Up */
             margin-right: 0.5em;
         }
-    }
-
-    /*
-     * TODO: Review - cursor: pointer already set on .magic-block-close above (line 38)
-     * and pseudo-elements inherit cursor from parent, so this may be redundant
-     */
-
-    .magic-invisible,
-    .magic-visible,
-    .magic-block-close {
-        /* cursor: pointer; */
     }
 }

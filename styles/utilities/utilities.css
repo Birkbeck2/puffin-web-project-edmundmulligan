@@ -12,14 +12,7 @@
 
  @layer utilities {
     /* Utility class to visually hide elements */
-    .hidden.hidden {
-        /* Using .hidden twice to increase specificity and avoid needing !important */
-
-        /*
-         * TODO not sure if this is still needed with the new CSS cascade layers,
-         * but it doesn't hurt to be specific
-         */
-
+    .hidden {
         display: none;
     }
 

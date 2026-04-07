@@ -14,14 +14,6 @@
      * Introduction section with student image
      */
 
-    /*
-     * TODO: Review - if this is a div, display: block is default and redundant
-     */
-
-    .intro-container {
-        /* display: block; */
-    }
-
     .student-image {
         float: left;
         width: 15rem;
@@ -31,14 +23,6 @@
         border-radius: var(--border-radius);
         padding: 1rem;
         box-sizing: border-box;
-    }
-
-    /*
-     * TODO: Review - if this is a div or other block-level element, display: block is default
-     */
-
-    .intro-content {
-        /* display: block; */
     }
 
     .avatar-image {
@@ -89,12 +73,7 @@
         margin-top: 2rem;
     }
 
-    /*
-     * TODO: Review - if applied to h1-h6 or div, display: block is default and redundant
-     */
-
     .lesson-title {
-        /* display: block; */
         font-family: var(--font-family-subtitle);
         font-weight: 600;
         font-size: var(--fontsize-header-medium);

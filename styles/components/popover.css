@@ -60,11 +60,6 @@
         margin: 0 0.2rem;
         cursor: pointer;
         color: var(--colour-effective-page-text);
-
-        /* TODO: Review - font-size inherits by default, may be redundant */
-
-        /* font-size: inherit; */
-
         vertical-align: baseline;
     }
 

@@ -54,18 +54,6 @@
             border-radius: var(--border-radius);
             background: var(--colour-effective-menu-background);
             border: none;
-
-            /*
-             * TODO: Review - font: inherit already set in reset layer (main.css line 39)
-             * so font-family, font-size, font-weight inherit are redundant
-             */
-
-            /* font-family: inherit; */
-
-            /* font-size: inherit; */
-
-            /* font-weight: inherit; */
-
             cursor: pointer;
             text-align: left;
             white-space: nowrap;
@@ -79,19 +67,6 @@
             padding: var(--padding-nav);
             border-radius: var(--border-radius);
             background: var(--colour-effective-menu-background);
-
-            /* TODO: Review - border: none may be redundant as anchors have no border by default */
-
-            /* border: none; */
-
-            /* TODO: Review - font properties inherit by default from parent li element */
-
-            /* font-family: inherit; */
-
-            /* font-size: inherit; */
-
-            /* font-weight: inherit; */
-
             text-align: left;
             white-space: nowrap;
             box-sizing: border-box;
@@ -103,11 +78,7 @@
             font-family: var(--font-family-icons);
             font-weight: 900; /* needed for solid style icons */
             margin-right: clamp(0.15rem, 1vw, 0.35rem);
-
-            /* TODO: Review - em units already relative to parent font-size, may not need explicit sizing */
-
-            font-size: clamp(0.6em, 1.5vw, 1em);
-        }
+       }
 
         & a:visited {
             background-color: var(--colour-effective-menu-background-visited);
@@ -131,14 +102,6 @@
         & button:hover::before,
         & button:focus-visible::before {
             content: "\e2ca";  /* Font Awesome Magic Wand with sparkles */
-
-            /* TODO: Review - font-family and font-weight already set on ::before above, inherited here */
-
-            /* font-family: var(--font-family-icons); */
-
-            /* font-weight: 900; */
-
- /* needed for solid style icons */
         }
     }
 

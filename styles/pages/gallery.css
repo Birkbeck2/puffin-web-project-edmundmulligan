@@ -56,16 +56,6 @@
         pointer-events: none;
     }
 
-    /*
-     * TODO: Review - cursor and pointer-events inherit from parent :disabled state above
-     */
-
-    .carousel-nav-button:disabled i {
-        /* cursor: not-allowed; */
-
-        /* pointer-events: none; */
-    }
-
     .carousel {
         display: flex;
         flex-direction: row;

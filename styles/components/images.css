@@ -28,11 +28,7 @@
     }
 
     figcaption {
-        /* TODO: Review - figcaption is block-level by default in HTML5, display: block may be redundant */
-
-        /* display: block; */
-
-        text-align: left;
+        text-align: center;
         width: 100%;
         font-style: italic;
         margin-top: 0.5rem;
