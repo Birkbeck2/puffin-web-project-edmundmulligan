@@ -138,7 +138,7 @@
 
         /**
          * Set random vertical position for a specific portrait block
-         * Ensures portrait fits within viewport
+         * Ensures portrait stays within visible viewport, avoiding header/footer overlap
          * @param {HTMLElement} container - The portrait block container
          */
         setRandomPortraitPosition(container) {
@@ -150,32 +150,52 @@
                 return;
             }
             
-            // Get actual portrait size from computed style (matches --buttonsize-circle)
-            const portraitSize = container.offsetHeight || 0;
+            // Get actual portrait size and position
+            const portraitRect = container.getBoundingClientRect();
+            const portraitSize = portraitRect.height;
+            
             if (portraitSize === 0) {
                 container.style.setProperty('--portrait-offset', '0px');
                 return;
             }
             
+            // Current center position in viewport
+            const portraitCenterY = portraitRect.top + portraitSize / 2;
+            
+            // Get viewport dimensions and element positions
             const viewportHeight = window.innerHeight;
-            const padding = 60; // Safety padding from viewport edges
+            const header = document.querySelector('header.header');
+            const footer = document.querySelector('footer.footer');
             
-            // Portrait is centered in grid (at viewportHeight / 2)
-            // Calculate max offset to keep portrait fully in viewport:
-            // - Top edge must be >= padding: center - portraitSize/2 + offset >= padding
-            // - Bottom edge must be <= viewportHeight - padding: center + portraitSize/2 + offset <= viewportHeight - padding
-            // This gives us: maxOffset = (viewportHeight - portraitSize) / 2 - padding
-            const maxOffset = Math.floor((viewportHeight - portraitSize) / 2 - padding);
+            // Calculate boundaries
+            const headerHeight = header ? header.getBoundingClientRect().height : 0;
+            const footerHeight = footer ? footer.getBoundingClientRect().height : 60;
+            const padding = 40; // Safety padding from edges
             
-            // Only apply offset if portrait can fit with padding
-            if (maxOffset <= 0) {
+            // Calculate safe range for offset
+            // Portrait top edge = portraitCenterY - portraitSize/2 + offset
+            // Portrait bottom edge = portraitCenterY + portraitSize/2 + offset
+            
+            // Constraints:
+            // Top edge >= headerHeight + padding:
+            //   portraitCenterY - portraitSize/2 + offset >= headerHeight + padding
+            //   offset >= headerHeight + padding - portraitCenterY + portraitSize/2
+            const minOffset = Math.ceil(headerHeight + padding - portraitCenterY + portraitSize / 2);
+            
+            // Bottom edge <= viewportHeight - footerHeight - padding:
+            //   portraitCenterY + portraitSize/2 + offset <= viewportHeight - footerHeight - padding
+            //   offset <= viewportHeight - footerHeight - padding - portraitCenterY - portraitSize/2
+            const maxOffset = Math.floor(viewportHeight - footerHeight - padding - portraitCenterY - portraitSize / 2);
+            
+            // Check if there's room to move
+            if (maxOffset <= minOffset + 20) {
+                // Not enough room for meaningful randomization, stay centered
                 container.style.setProperty('--portrait-offset', '0px');
                 return;
             }
             
             // Generate random vertical offset within safe range
-            // Range: -maxOffset to +maxOffset
-            const offset = Math.floor(Math.random() * (maxOffset * 2 + 1)) - maxOffset;
+            const offset = Math.floor(Math.random() * (maxOffset - minOffset + 1)) + minOffset;
             
             // Set CSS custom property
             container.style.setProperty('--portrait-offset', `${offset}px`);
