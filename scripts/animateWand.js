@@ -57,7 +57,7 @@
                 }
             });
 
-            svg.classList.add('animated', 'wand-icon');
+            svg.classList.add('animated', 'wand-conclusion');
 
             container.appendChild(svg);
         } catch (error) {
