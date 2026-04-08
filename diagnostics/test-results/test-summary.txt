@@ -9,14 +9,14 @@
   Total warnings: 0
 
 📝 File Comments Results:
-  Files checked: 91
+  Files checked: 92
   Files with issues: 0
   Missing header blocks: 0
   Missing required fields: 0
 
 [Links] Broken Links Results:
   Pages checked: 13
-  Total links: 274
+  Total links: 271
   Broken links: 0
 
 ======================
