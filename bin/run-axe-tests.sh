@@ -220,11 +220,13 @@ for VIEWPORT in "${VIEWPORTS[@]}"; do
             axe "$FULL_URL" --disable page-has-heading-one --save "$TEMP_RESULT" \
               --chromedriver-path "$CHROMEDRIVER_PATH" \
               --chrome-options '{"args":["--force-prefers-color-scheme='$THEME'","--window-size='$VIEWPORT',768","--disable-dev-shm-usage","--disable-gpu","--no-sandbox"]}' \
+              --load-delay 2000 \
               2>&1
             AXE_EXIT_CODE=$?
           else
             axe "$FULL_URL" --disable page-has-heading-one --save "$TEMP_RESULT" \
               --chrome-options '{"args":["--force-prefers-color-scheme='$THEME'","--window-size='$VIEWPORT',768","--disable-dev-shm-usage","--disable-gpu","--no-sandbox"]}' \
+              --load-delay 2000 \
               2>&1
             AXE_EXIT_CODE=$?
           fi
