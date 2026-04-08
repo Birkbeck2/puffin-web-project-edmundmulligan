@@ -61,10 +61,10 @@
         cursor: pointer;
         color: var(--colour-effective-page-text);
         vertical-align: baseline;
-    }
 
-    .glossary-icon-button:hover {
-        color: var(--colour-effective-headings-text);
+        &:hover {
+            color: var(--colour-effective-headings-text);
+        }
     }
 
     /* Glossary popover styling */

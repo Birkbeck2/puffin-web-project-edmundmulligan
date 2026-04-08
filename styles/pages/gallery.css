@@ -36,24 +36,24 @@
         font-size: 1.5rem;
         transition: all 0.3s ease;
         z-index: 10;
-    }
 
-    .carousel-nav-button:hover:not(:disabled) {
-        background-color: var(--colour-effective-button-background-hover);
-        color: var(--colour-effective-button-text-hover);
-        transform: scale(1.1);
-    }
+        &:hover:not(:disabled) {
+            background-color: var(--colour-effective-button-background-hover);
+            color: var(--colour-effective-button-text-hover);
+            transform: scale(1.1);
+        }
 
-    .carousel-nav-button:active:not(:disabled) {
-        transform: scale(0.95);
-    }
+        &:active:not(:disabled) {
+            transform: scale(0.95);
+        }
 
-    .carousel-nav-button:disabled {
-        opacity: 0.3;
-        cursor: not-allowed;
-        background-color: var(--colour-effective-button-background-disabled);
-        color: var(--colour-effective-button-text-disabled);
-        pointer-events: none;
+        &:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+            background-color: var(--colour-effective-button-background-disabled);
+            color: var(--colour-effective-button-text-disabled);
+            pointer-events: none;
+        }
     }
 
     .carousel {
@@ -109,7 +109,7 @@
         max-width: 100%;
     }
 
-    @media (width < 600px) {
+    @media (width < 800px) {
         .portrait-item,
         .accessory-item {
             flex: 0 0 100%;
@@ -169,7 +169,7 @@
     }
 
     /* Responsive adjustments for small screens */
-    @media (width < 600px) {
+    @media (width < 800px) {
         .carousel-wrapper {
             gap: 0.5rem;
         }

@@ -94,29 +94,29 @@
         align-items: center;
         justify-content: center;
         line-height: 1;
-    }
 
-    .nav-button i {
-        display: flex;
-        line-height: 1;
-        vertical-align: middle;
-    }
+        & i {
+            display: flex;
+            line-height: 1;
+            vertical-align: middle;
+        }
 
-    .nav-button:hover:not(:disabled) {
-        color: var(--colour-effective-button-text-hover);
-        background-color: var(--colour-effective-button-background-hover);
-        transform: scale(1.05);
-    }
+        &:hover:not(:disabled) {
+            color: var(--colour-effective-button-text-hover);
+            background-color: var(--colour-effective-button-background-hover);
+            transform: scale(1.05);
+        }
 
-    .nav-button:active:not(:disabled) {
-        transform: scale(0.95);
-    }
+        &:active:not(:disabled) {
+            transform: scale(0.95);
+        }
 
-    .nav-button:disabled {
-        opacity: 0.5;
-        cursor: not-allowed;
-        background-color: var(--colour-effective-button-background-disabled);
-        color: var(--colour-effective-button-text-disabled);
+        &:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            background-color: var(--colour-effective-button-background-disabled);
+            color: var(--colour-effective-button-text-disabled);
+        }
     }
 
     /* Lesson navigation buttons (fast forward/backward) */
@@ -187,7 +187,7 @@
     }
 
     /* Hide progress line when container is narrow and wands will wrap */
-    @container (max-width: 400px) {
+    @container (max-width: var(--breakpoint-small)) {
         .progress-bar::before {
             display: none;
         }

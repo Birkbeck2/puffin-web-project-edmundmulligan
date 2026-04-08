@@ -159,13 +159,13 @@
         right: 2.2rem;
         color: var(--colour-white);
         cursor: pointer;
-    }
 
-    .image-modal-close:hover,
-    .image-modal-close:focus {
-        color: var(--colour-effective-page-text);
-        text-decoration: none;
-        cursor: pointer;
+        &:hover,
+        &:focus {
+            color: var(--colour-effective-page-text);
+            text-decoration: none;
+            cursor: pointer;
+        }
     }
 
     /* Wand uses inline SVG so favicon sparkle classes can animate. */

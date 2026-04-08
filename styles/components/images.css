@@ -19,21 +19,6 @@
         display: block;
     }
 
-    picture {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        max-width: 60%;
-        margin: auto;
-    }
-
-    figcaption {
-        text-align: center;
-        width: 100%;
-        font-style: italic;
-        margin-top: 0.5rem;
-    }
-
     .image-button {
         background: none;
         border: none;

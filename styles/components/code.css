@@ -10,6 +10,7 @@
  */
 
 @layer components {
+    /* hide the code source so it can be displayed with line numbers in the code table */
     .code-snippet-source {
         display: none;
     }
@@ -26,30 +27,29 @@
         line-height: 1.5;
         border-collapse: collapse;
         background-color: var(--colour-effective-code-background);
-    }
-
-    .code-snippet-table .code-line {
-        display: table-row;
-    }
-
-    .code-snippet-table .line-number {
-        display: table-cell;
-        text-align: right;
         color: var(--colour-effective-code-text);
-        opacity: 0.5;
-        user-select: none;
-        border-right: var(--border-weight) var(--border-style) var(--colour-effective-page-text);
-        padding: 0.25rem 1rem;
-        white-space: nowrap;
-        vertical-align: top;
-    }
 
-    .code-snippet-table .code-content {
-        display: table-cell;
-        padding: 0.25rem 1rem;
-        white-space: pre-wrap;
-        overflow-wrap: break-word;
-        width: 100%;
-        color: var(--colour-effective-code-text);
+        & .code-line {
+            display: table-row;
+        }
+
+        & .line-number {
+            display: table-cell;
+            text-align: right;
+            opacity: 0.5;
+            user-select: none;
+            border-right: var(--border-weight) var(--border-style) var(--colour-effective-page-text);
+            padding: 0.25rem 1rem;
+            white-space: nowrap;
+            vertical-align: top;
+        }
+
+        & .code-content {
+            display: table-cell;
+            padding: 0.25rem 1rem;
+            white-space: pre-wrap;
+            overflow-wrap: break-word;
+            width: 100%;
+        }
     }
 }

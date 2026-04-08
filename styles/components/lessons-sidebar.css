@@ -61,6 +61,7 @@
         margin: 0;
 
         & li {
+            font-family: var(--font-family-menu);
             margin: 0;
             padding: 0;
         }

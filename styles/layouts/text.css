@@ -1,6 +1,6 @@
 /*
  **********************************************************************
- * File       : components/text.css
+ * File       : layouts/text.css
  * Author     : Edmund Mulligan <edmund@edmundmulligan.name>
  * Copyright  : (c) 2026 The Embodied Mind
  * License    : MIT License (see license-and-credits.html page)
@@ -44,29 +44,30 @@
      **************************************************
     */
 
-    /* do not distinguish between a visited and non-visited link */
-    a:link {
-        color: var(--colour-effective-link-text);
-        background-color: var(--colour-effective-link-background);
-        text-decoration: underline;
-        font-weight: var(--font-weight-bold);
-    }
+    a {
+        &:link {
+            color: var(--colour-effective-link-text);
+            background-color: var(--colour-effective-link-background);
+            text-decoration: underline;
+            font-weight: var(--font-weight-bold);
+        }
 
-    a:visited {
-        color: var(--colour-effective-link-text-visited);
-        background-color: var(--colour-effective-link-background-visited);
-    }
+        &:visited {
+            color: var(--colour-effective-link-text-visited);
+            background-color: var(--colour-effective-link-background-visited);
+        }
 
-    a:hover,
-    a:focus-visible {
-        color: var(--colour-effective-link-text-focus);
-        background-color: var(--colour-effective-link-background-focus);
-    }
+        &:hover,
+        &:focus-visible {
+            color: var(--colour-effective-link-text-focus);
+            background-color: var(--colour-effective-link-background-focus);
+        }
 
-    /* this may be a bit subtle but it meets WCAG 2.2 guidelines */
-    a:focus-visible {
-        outline: var(--border-weight-thin) dashed var(--colour-effective-link-text-focus);
-        outline-offset: 0.2rem;
+        /* this may be a bit subtle but it meets WCAG 2.2 guidelines */
+        &:focus-visible {
+            outline: var(--border-weight-thin) dashed var(--colour-effective-link-text-focus);
+            outline-offset: 0.2rem;
+        }
     }
 
     /*

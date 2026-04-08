@@ -40,6 +40,7 @@
         cursor: pointer;
         font-family: var(--font-family-icons);
         font-weight: 900;
+
         &.h3-level,
         &.h4-level {
             font-size: var(--fontsize-header-medium);

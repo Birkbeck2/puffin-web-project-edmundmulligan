@@ -75,7 +75,7 @@
 
     /* Portrait blocks - animated character portraits */
     .portrait-block {
-        display: none; /* Hidden by default (mobile < 400px) */
+        display: none; /* Hidden by default */
         justify-content: center;
         align-items: center;
         width: calc(var(--buttonsize-circle) * 1.25);
@@ -129,7 +129,7 @@
     }
 
     /* Responsive: Show single portrait between blocks at 400-800px */
-    @media (400px <= width < 800px) {
+    @media (400px <= width <= 800px) {
         .portrait-block#portrait-block-1 {
             display: flex;
             margin: 2rem auto;
