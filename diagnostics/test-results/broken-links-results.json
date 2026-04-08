@@ -40,13 +40,13 @@
       "url": "pages/mentors.html",
       "links": [],
       "brokenCount": 0,
-      "totalCount": 17
+      "totalCount": 15
     },
     {
       "url": "pages/students.html",
       "links": [],
       "brokenCount": 0,
-      "totalCount": 17
+      "totalCount": 16
     },
     {
       "url": "pages/gallery.html",
@@ -80,7 +80,7 @@
     }
   ],
   "summary": {
-    "totalLinks": 274,
+    "totalLinks": 271,
     "brokenLinks": 0,
     "excludedLinks": 0
   }

@@ -1,14 +1,15 @@
 /*
  **********************************************************************
- * File       : components/student-info-form.css
+ * File       : pages/students.css
  * Author     : Edmund Mulligan <edmund@edmundmulligan.name>
  * Copyright  : (c) 2026 The Embodied Mind
  * License    : MIT License (see license-and-credits.html page)
  * Description:
- *   Styles for the student/mentor information form component.
+ *   Styles for the student information form component.
  **********************************************************************
  */
 
+ @layer pages {
 .student-info {
     & form {
         display: flex;
@@ -84,7 +85,6 @@
                 width: 100%;
                 padding: 0;
                 margin-bottom: 0.5rem;
-                font-size: var(--fontsize-small);
                 overflow-wrap: anywhere;
                 text-align: center;
             }
@@ -155,4 +155,5 @@
     align-items: center;
     gap: 0.5rem;
     padding: 0.5rem;
+}
 }
