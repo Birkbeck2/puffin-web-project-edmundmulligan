@@ -1,15 +1,21 @@
 \section{Javascript Assessment Criteria}\label{appendix:portraits}
 
-Here is an index of where different Javascript concepts are used in the codebase to allow assessors to easily find examples of the required concepts. This is not an exhaustive list of all Javascript concepts used in the codebase, but rather a guide to where the key features can be found.
+Here are examples of Javascript concepts used in the codebase to allow assessors to easily identify where key features are implemented. This is not an exhaustive list of all Javascript concepts used in the codebase, but rather a quick guide to where an instance of each key feature can be found. Assessors are, of course, free to review the codebase in its entirety to gain a deeper understanding of the implementation and design choices made throughout the project.
 
-\subsection{Variables and Functions}
+\subsection{Variables and Functions --- animatePortrait.js}
+setRandomPortraitPosition~(container) is a method (function) that uses variables to store the position of the portrait and the dimensions of the container. It also calls JavaScript's built-in Math.random~() function to generate random positions for the portrait.
 
-\subsection{Objects and Arrays}
+\subsection{Objects and Arrays --- animatePortrait.js}
+PortraitAnimator class is instantiated as an object and uses an array to store the portrait images that are animated.
 
-\subsection{Conditional Logic and Loops}
+\subsection{Conditional Logic and Loops --- animateWand.js}
+Uses a foreach loop to iterate over path elements in svg base element and a conditional to deal with the possibility that the svg file does not contain a base svg element and to determine if a path element should be animated with a sparkle.
 
-\subsection{DOM Manipulation}
+\subsection{DOM Manipulation --- animatePortrait.js}
+The DOM is manipulated in method setPortraitImage~(container, image) to change the source of the portrait image and update the alt text.
 
-\subsection{Interactivity}
+\subsection{Interactivity --- toggleSection.js}
+toggleSectionCollapse~(sectionId, event) is a method that toggles the collapse state of a section in response to user triggered events (e.g. clicking a button). It uses event listeners to detect user interactions and updates the DOM accordingly to show or hide the content of the section.
 
-\subsection{Data Retrieval and Storage}
+\subsection{Data Retrieval and Storage --- localStorage.js}
+The LocalStorage class provides methods for storing and retrieving encrypted data from the browser's local storage. This allows the application to persist user preferences or other data across sessions.
