@@ -61,7 +61,7 @@
 
             container.appendChild(svg);
         } catch (error) {
-            console.error('Error loading wand SVG:', error);
+            Debug.error('Error loading wand SVG:', error);
 
             // Fallback for robustness if inline loading fails.
             const fallback = document.createElement('img');

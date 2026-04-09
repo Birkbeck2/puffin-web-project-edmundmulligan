@@ -87,7 +87,7 @@ function escapeHtml(text) {
                 // Convert to base64
                 return btoa(String.fromCharCode(...combined));
             } catch (error) {
-                console.error('Encryption error:', error);
+                Debug.error('Encryption error:', error);
                 throw error;
             }
         }
@@ -115,7 +115,7 @@ function escapeHtml(text) {
                 const decoder = new TextDecoder();
                 return decoder.decode(decrypted);
             } catch (error) {
-                console.error('Decryption error:', error);
+                Debug.error('Decryption error:', error);
                 throw error;
             }
         }
@@ -137,7 +137,7 @@ function escapeHtml(text) {
                 localStorage.setItem(storageKey, encryptedData);
                 return true;
             } catch (error) {
-                console.error('Error saving form data:', error);
+                Debug.error('Error saving form data:', error);
                 return false;
             }
         }
@@ -157,7 +157,7 @@ function escapeHtml(text) {
                 const decryptedData = await this.decryptData(savedData);
                 return JSON.parse(decryptedData);
             } catch (error) {
-                console.error('Error loading form data:', error);
+                Debug.error('Error loading form data:', error);
                 return null;
             }
         }
@@ -170,7 +170,7 @@ function escapeHtml(text) {
             try {
                 localStorage.removeItem(storageKey);
             } catch (error) {
-                console.error('Error clearing form data:', error);
+                Debug.error('Error clearing form data:', error);
             }
         }
 
@@ -312,7 +312,7 @@ function escapeHtml(text) {
                 // Update the avatar preview
                 this.updateAvatarPreview(data);
             } catch (error) {
-                console.error('Error loading form data:', error);
+                Debug.error('Error loading form data:', error);
             }
         }
 
@@ -391,7 +391,7 @@ function escapeHtml(text) {
                     }, 2000);
                 }
             } catch (error) {
-                console.error('Error saving form data:', error);
+                Debug.error('Error saving form data:', error);
                 alert('There was an error saving your information. Please try again.');
             }
         }
@@ -527,7 +527,7 @@ function escapeHtml(text) {
                     });
                 }
             } catch (error) {
-                console.error('Error loading student image:', error);
+                Debug.error('Error loading student image:', error);
             }
         }
 
@@ -548,7 +548,7 @@ function escapeHtml(text) {
             
                 return await this.storage.load(storageKey);
             } catch (error) {
-                console.error('Error retrieving form data:', error);
+                Debug.error('Error retrieving form data:', error);
                 return null;
             }
         }

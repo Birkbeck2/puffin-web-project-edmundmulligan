@@ -180,7 +180,7 @@
             const padding = 40; // Safety padding from edges
             
             // Log dimensions for debugging
-            console.log('Portrait Position Calculation:', {
+            Debug.log('Portrait Position Calculation:', {
                 viewportHeight,
                 header: { height: headerHeight },
                 footer: { height: footerHeight, top: footerTop },
@@ -196,15 +196,13 @@
             // Constraints:
             // Top edge >= max(headerHeight, mainTop) + padding:
             const topBoundary = Math.max(headerHeight, mainTop) + padding;
-            /* const minOffset = Math.ceil(topBoundary - portraitCenterY + portraitSize / 2); */
-            const minOffset = Math.ceil(topBoundary);
+            const minOffset = Math.ceil(topBoundary - portraitCenterY + portraitSize / 2);
             
             // Bottom edge <= min(viewportHeight - footerHeight, footerTop, mainBottom) - padding:
             const bottomBoundary = Math.min(viewportHeight - footerHeight, footerTop, mainBottom) - padding;
-            /* const maxOffset = Math.floor(bottomBoundary - portraitCenterY - portraitSize / 2); */
-            const maxOffset = Math.floor(bottomBoundary - portraitSize);
+            const maxOffset = Math.floor(bottomBoundary - portraitCenterY - portraitSize / 2);
             
-            console.log('Boundary Calculations:', {
+            Debug.log('Boundary Calculations:', {
                 topBoundary,
                 bottomBoundary,
                 minOffset,
@@ -220,8 +218,7 @@
             }
             
             // Generate random vertical offset within safe range
-            /* const offset = Math.floor(Math.random() * (maxOffset - minOffset + 1)) + minOffset; */
-            const offset = Math.floor(maxOffset);
+            const offset = Math.floor(Math.random() * (maxOffset - minOffset + 1)) + minOffset;
             
             // Set CSS custom property
             container.style.setProperty('--portrait-offset', `${offset}px`);
@@ -247,7 +244,7 @@
             const portrait2 = document.getElementById('portrait-block-2');
             
             if (!portrait1 || !portrait2) {
-                console.log('Portrait blocks not found on this page');
+                Debug.log('Portrait blocks not found on this page');
                 return;
             }
 
