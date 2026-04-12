@@ -1,3 +1,5 @@
+/* global Utils, Debug */
+
 /*
  **********************************************************************
  * File       : scripts/themeSwitcher.js
@@ -12,6 +14,7 @@
  *   for theme/style to be set via URL parameter for testing purposes.
  *   All colour combination meet WCAG 2.2 AAA standards.
  *   Requires: queryParams.js (for window.QueryParams)
+ *   Requires: utils.js (for Utils.capitalise)
  **********************************************************************
 */
 
@@ -151,7 +154,7 @@
             if (!logo) return;
 
             // Build the data attribute name: e.g., 'normalLightLogo', 'subduedDarkLogo'
-            const dataAttrName = `${style}${effectiveTheme.charAt(0).toUpperCase() + effectiveTheme.slice(1)}Logo`;
+            const dataAttrName = `${style}${Utils.capitalise(effectiveTheme)}Logo`;
             const logoSrc = logo.dataset[dataAttrName];
 
             if (logoSrc) {

@@ -17,8 +17,8 @@
         background-color: var(--colour-effective-headings-background);
         border: var(--colour-effective-headings-text) var(--border-weight) var(--border-style);
         border-radius: var(--border-radius);
-        margin: 0;
-        padding: 0;
+        margin: var(--page-margin);
+        padding: var(--page-padding);
         box-sizing: border-box;
         position: relative;
 
@@ -62,7 +62,7 @@
 
     .main {
         flex: 1 0 auto; /* Allow main to grow and shrink, but start with auto basis */
-        margin: 0;
+        margin: var(--page-margin);
         padding-top: 5rem;
         padding-bottom: min(5rem, 10vh);
         position: relative;
@@ -75,7 +75,7 @@
         background-color: var(--colour-effective-headings-background);
         color: var(--colour-effective-headings-text);
         border-radius: var(--border-radius);
-        margin: 0;
+        margin: var(--page-margin);
         padding: 1rem;
         box-sizing: border-box;
         position: relative;

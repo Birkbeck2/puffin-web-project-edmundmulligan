@@ -1,3 +1,5 @@
+/* global Utils, Debug */
+
 /*
  **********************************************************************
  * File       : scripts/useLessonNavigation.js
@@ -10,6 +12,7 @@
  *   - Lesson navigation (fast forward/backward)
  *   - Progress bar updates with wand icons
  *   - Keyboard navigation support
+ *   Requires: utils.js (for Utils.loadJSON and Utils.fileExists)
  **********************************************************************
  */
 
@@ -75,19 +78,18 @@
         async loadLessonsData() {
             try {
                 this.context = this.getContext();
-                const response = await fetch('../data/lessons.json');
-                if (!response.ok) {
+                const data = await Utils.loadJSON('../data/lessons.json');
+                if (!data) {
                     throw new Error('Failed to load lessons.json');
                 }
-                const data = await response.json();
                 this.lessonsData = data.lessons;
                 
                 // Check which lesson files actually exist by trying to fetch them
                 await this.checkAvailableLessons();
                 
-                console.log(`Loaded ${this.lessonsData.length} lessons, ${this.availableLessons.size} available in ${this.context}`);
+                Debug.log(`Loaded ${this.lessonsData.length} lessons, ${this.availableLessons.size} available in ${this.context}`);
             } catch (error) {
-                console.error('Error loading lessons data:', error);
+                Debug.error('Error loading lessons data:', error);
                 this.lessonsData = [];
             }
         }
@@ -106,9 +108,8 @@
                 const lessonNum = parseInt(match[1], 10);
                 
                 try {
-                    // Try to fetch the lesson file (HEAD request would be better but may not work everywhere)
-                    const response = await fetch(lesson.file, { method: 'HEAD' });
-                    if (response.ok) {
+                    // Check if the lesson file exists
+                    if (await Utils.fileExists(lesson.file)) {
                         this.availableLessons.add(lessonNum);
                         return true;
                     }
@@ -131,8 +132,7 @@
             try {
                 // Construct the path to the target context
                 const targetPath = `../${targetContext}/${lessonFile}`;
-                const response = await fetch(targetPath, { method: 'HEAD' });
-                return response.ok;
+                return await Utils.fileExists(targetPath);
             } catch (error) {
                 return false;
             }
@@ -188,7 +188,7 @@
             this.setupProgressBarListeners();
 
             if (this.totalSections === 0) {
-                console.warn('No visible lesson sections found - user may need to select an option first');
+                Debug.warn('No visible lesson sections found - user may need to select an option first');
                 // Disable section navigation but keep lesson navigation enabled
                 this.disableSectionNavigation();
                 // Still update lesson-level navigation buttons

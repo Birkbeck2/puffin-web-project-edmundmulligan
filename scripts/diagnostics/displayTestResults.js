@@ -1,3 +1,5 @@
+/* global Utils */
+
 /*
 **********************************************************************
  * File       : scripts/diagnostics/displayTestResults.js
@@ -7,20 +9,9 @@
  * Description:
  *    JavaScript for Test Results Dashboard - loads and displays
  *    automated test results with modal details view
+ *    Requires: utils.js (for Utils.escapeHtml, Utils.loadJSON, Utils.isEmpty)
 **********************************************************************
 */
-
-/**
- * Utility function to escape HTML characters
- * @param {string} text - Text to escape
- * @returns {string} Escaped text
- */
-function escapeHtml(text) {
-    if (typeof text !== 'string') return '';
-    const div = document.createElement('div');
-    div.textContent = text;
-    return div.innerHTML;
-}
 
 /**
  * Cached raw test payloads keyed by card title for reuse in the modal detail view.
@@ -28,29 +19,6 @@ function escapeHtml(text) {
  * @type {Record<string, unknown>}
  */
 let testData = {};
-
-/**
- * Fetch and parse a JSON result file for the dashboard.
- *
- * @remarks Preconditions:
- * - `path` must resolve from the current page to a JSON asset served by the site.
- * - Network and parsing failures are tolerated and reported by returning `null`.
- *
- * @param {string} path - Relative URL of the JSON file to load.
- * @returns {Promise<(object|null)>} Parsed JSON object or `null` when loading fails.
- */
-async function loadJSON(path) {
-    try {
-        const response = await fetch(path);
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        return await response.json();
-    } catch (error) {
-        console.error(`Error loading ${path}:`, error);
-        return null;
-    }
-}
 
 /**
  * Build the HTML markup for one dashboard summary card.
@@ -142,7 +110,7 @@ function showTestDetails(testType) {
         console.error(`Error displaying details for ${testType}:`, error);
         modalBody.innerHTML = `
             <div class="error-message">
-                Could not render details for ${escapeHtml(testType)}. Check the console for the underlying error.
+                Could not render details for ${Utils.escapeHtml(testType)}. Check the console for the underlying error.
             </div>
         `;
     }
@@ -263,7 +231,7 @@ function formatValidationDetails(data) {
         const files = groupedFiles[type] || [];
         const filesWithIssues = files.filter(file => (file.errors && file.errors.length > 0) || (file.warnings && file.warnings.length > 0));
 
-        if (filesWithIssues.length === 0) {
+        if (Utils.isEmpty(filesWithIssues)) {
             return;
         }
 
@@ -321,7 +289,7 @@ function formatBrokenLinksDetails(data) {
         });
     }
     
-    if (brokenLinks.length === 0) {
+    if (Utils.isEmpty(brokenLinks)) {
         return '<p>No broken links found. All links are working correctly!</p>';
     }
     
@@ -347,7 +315,7 @@ function formatBrokenLinksDetails(data) {
  * @returns {string} HTML fragment for the modal.
  */
 function formatAxeDetails(data) {
-    if (!data.violations || data.violations.length === 0) {
+    if (!data.violations || Utils.isEmpty(data.violations)) {
         return '<p>No accessibility violations found.</p>';
     }
     
@@ -408,7 +376,7 @@ function formatPa11yDetails(data) {
     });
     
     let html = '';
-    if (errors.length > 0) {
+    if (!Utils.isEmpty(errors)) {
         html += '<h3>Errors</h3>';
         errors.forEach(err => {
             html += `<div class="error-item">
@@ -419,7 +387,7 @@ function formatPa11yDetails(data) {
         });
     }
     
-    if (warnings.length > 0) {
+    if (!Utils.isEmpty(warnings)) {
         html += '<h3>Warnings</h3>';
         warnings.forEach(warn => {
             html += `<div class="warning-item">
@@ -445,7 +413,7 @@ function formatPa11yDetails(data) {
 function formatWaveDetails(data) {
     const pagesWithIssues = data.pages.filter(p => p.errors > 0 || p.alerts > 0 || p.contrast > 0);
     
-    if (pagesWithIssues.length === 0) {
+    if (Utils.isEmpty(pagesWithIssues)) {
         return '<p>No WAVE accessibility issues found.</p>';
     }
     
@@ -568,7 +536,7 @@ function formatBrowserDetails(data) {
     const browserList = data.browsers || data.results || [];
     const failed = browserList.filter(b => b.status === 'failed' || b.passed === false);
     
-    if (failed.length === 0) {
+    if (Utils.isEmpty(failed)) {
         return '<p>All browser tests passed.</p>';
     }
     
@@ -593,13 +561,13 @@ function formatBrowserDetails(data) {
  * @returns {string} HTML fragment for the modal.
  */
 function formatReadabilityDetails(data) {
-    if (!data.pages || data.pages.length === 0) {
+    if (!data.pages || Utils.isEmpty(data.pages)) {
         return '<p>No readability data available.</p>';
     }
     
     const highGradePages = data.pages.filter(p => p.averageGradeLevel > 12);
     
-    if (highGradePages.length === 0) {
+    if (Utils.isEmpty(highGradePages)) {
         return '<p>All pages have appropriate reading levels.</p>';
     }
     
@@ -630,7 +598,7 @@ function formatReadabilityDetails(data) {
 function formatFileCommentsDetails(data) {
     const filesWithIssues = data.files || [];
     
-    if (filesWithIssues.length === 0) {
+    if (Utils.isEmpty(filesWithIssues)) {
         return '<p>All files have proper header comments with required fields.</p>';
     }
     
@@ -727,7 +695,7 @@ async function loadAllResults() {
     const cards = [];
 
     // Load Validation Results
-    const validation = await loadJSON('../diagnostics/test-results/validation-results.json');
+    const validation = await Utils.loadJSON('../diagnostics/test-results/validation-results.json');
     if (validation) {
         const hasErrors = validation.summary.htmlErrors > 0 || 
                         validation.summary.cssErrors > 0 || 
@@ -758,7 +726,7 @@ async function loadAllResults() {
     }
 
     // Load Broken Links Results
-    const links = await loadJSON('../diagnostics/test-results/broken-links-results.json');
+    const links = await Utils.loadJSON('../diagnostics/test-results/broken-links-results.json');
     if (links) {
         const totalBroken = links.pages.reduce((sum, page) => sum + page.brokenCount, 0);
         const totalLinks = links.pages.reduce((sum, page) => sum + page.totalCount, 0);
@@ -784,7 +752,7 @@ async function loadAllResults() {
     }
 
     // Load Axe Results
-    const axe = await loadJSON('../diagnostics/test-results/axe-results.json');
+    const axe = await Utils.loadJSON('../diagnostics/test-results/axe-results.json');
     if (axe) {
         // Count violations across all pages if structure has pages array
         let totalViolations = 0;
@@ -850,7 +818,7 @@ async function loadAllResults() {
     }
 
     // Load Pa11y Results
-    const pa11y = await loadJSON('../diagnostics/test-results/pa11y-results.json');
+    const pa11y = await Utils.loadJSON('../diagnostics/test-results/pa11y-results.json');
     if (pa11y) {
         const totalErrors = pa11y.pages.reduce((sum, page) => 
             sum + page.issues.filter(i => i.type === 'error').length, 0);
@@ -879,7 +847,7 @@ async function loadAllResults() {
     }
 
     // Load WAVE Results
-    const wave = await loadJSON('../diagnostics/test-results/wave-results.json');
+    const wave = await Utils.loadJSON('../diagnostics/test-results/wave-results.json');
     if (wave) {
         const totalErrorsW = wave.pages.reduce((sum, page) => sum + (page.errors || 0), 0);
         const totalAlertsW = wave.pages.reduce((sum, page) => sum + (page.alerts || 0), 0);
@@ -916,7 +884,7 @@ async function loadAllResults() {
     }
 
     // Load Lighthouse Results
-    const lighthouse = await loadJSON('../diagnostics/test-results/lighthouse-results.json');
+    const lighthouse = await Utils.loadJSON('../diagnostics/test-results/lighthouse-results.json');
     if (lighthouse) {
         const avgScore = lighthouse.pages.length > 0 ?
             Math.round((lighthouse.pages.reduce((sum, page) => sum + page.score, 0) / lighthouse.pages.length) * 100) :
@@ -947,7 +915,7 @@ async function loadAllResults() {
     }
 
     // Load Browser Results
-    const browser = await loadJSON('../diagnostics/test-results/browser-results.json');
+    const browser = await Utils.loadJSON('../diagnostics/test-results/browser-results.json');
     if (browser) {
         // Handle both 'browsers' and 'results' array structures
         const browserList = browser.browsers || browser.results || [];
@@ -975,7 +943,7 @@ async function loadAllResults() {
     }
 
     // Load Readability Results
-    const readability = await loadJSON('../diagnostics/test-results/readability-results.json');
+    const readability = await Utils.loadJSON('../diagnostics/test-results/readability-results.json');
     if (readability) {
         let avgGrade = 0;
         let totalWords = 0;
@@ -1013,7 +981,7 @@ async function loadAllResults() {
     }
 
     // Load Colour Audit Results
-    const colourAudit = await loadJSON('../diagnostics/test-results/colour-audit-report.json');
+    const colourAudit = await Utils.loadJSON('../diagnostics/test-results/colour-audit-report.json');
     if (colourAudit) {
         const totalIssues = (colourAudit.hardcodedColours ? colourAudit.hardcodedColours.length : 0) +
                           (colourAudit.themeSpecificVars ? colourAudit.themeSpecificVars.length : 0) +
@@ -1041,7 +1009,7 @@ async function loadAllResults() {
     }
 
     // Load File Comments Check Results
-    const fileComments = await loadJSON('../diagnostics/test-results/file-comments-check-results.json');
+    const fileComments = await Utils.loadJSON('../diagnostics/test-results/file-comments-check-results.json');
     if (fileComments && fileComments.summary) {
         const status = fileComments.summary.filesWithIssues === 0 ? 'pass' : 'fail';
         

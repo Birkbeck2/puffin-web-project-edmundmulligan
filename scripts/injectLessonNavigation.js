@@ -226,7 +226,7 @@
                 if (mainContent) {
                     mainContent.insertBefore(headerFixed, mainContent.firstChild);
                 } else {
-                    console.error('Could not find .main-content element');
+                    Debug.error('Could not find .main-content element');
                     return;
                 }
             }

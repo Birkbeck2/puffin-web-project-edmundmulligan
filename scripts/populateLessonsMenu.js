@@ -1,3 +1,5 @@
+/* global Utils, Debug */
+
 /*
  **********************************************************************
  * File       : scripts/populateLessonsMenu.js
@@ -8,66 +10,9 @@
  *   Dynamically generates the lessons navigation menu from data/lessons.json
  *   Creates popover windows for each lesson with title and description
  *   Handles missing files with warning popovers
+ *   Requires: utils.js (for Utils.fileExists and Utils.getPageContext)
  **********************************************************************
  */
-
-/**
- * Check if a file exists by attempting a HEAD fetch
- * @param {string} url - The URL to check
- * @returns {Promise<boolean>} - True if file exists, false otherwise
- */
-async function fileExists(url) {
-    try {
-        const response = await fetch(url, { method: 'HEAD' });
-        return response.ok;
-    } catch (error) {
-        return false;
-    }
-}
-
-/**
- * Determine the context and base paths based on current page location
- * @returns {Object} - Contains context ('students' or 'mentors'), pathPrefix, and lessonFolder
- */
-function getPageContext() {
-    const path = window.location.pathname;
-    
-    // Check if we're in a lesson page (students/lesson-*.html or mentors/lesson-*.html)
-    if (path.includes('/students/lesson-')) {
-        return {
-            context: 'students',
-            pathPrefix: '../',
-            lessonFolder: 'students'
-        };
-    } else if (path.includes('/mentors/lesson-')) {
-        return {
-            context: 'mentors',
-            pathPrefix: '../',
-            lessonFolder: 'mentors'
-        };
-    }
-    // Check if we're in pages folder (pages/students or pages/mentors)
-    else if (path.includes('/pages/students')) {
-        return {
-            context: 'students',
-            pathPrefix: '../',
-            lessonFolder: 'students'
-        };
-    } else if (path.includes('/pages/mentors')) {
-        return {
-            context: 'mentors',
-            pathPrefix: '../',
-            lessonFolder: 'mentors'
-        };
-    }
-    
-    // Default to students context
-    return {
-        context: 'students',
-        pathPrefix: '',
-        lessonFolder: 'students'
-    };
-}
 
 /**
  * Create a popover element for a lesson
@@ -236,20 +181,19 @@ function hidePopoverById(popoverId) {
 async function populateLessonsNav() {
     const navContainer = document.getElementById('lessons-nav-container');
     if (!navContainer) {
-        console.warn('lessons-nav-container not found on this page');
+        Debug.warn('lessons-nav-container not found on this page');
         return;
     }
     
     try {
-        const { pathPrefix, lessonFolder } = getPageContext();
+        const { pathPrefix, lessonFolder } = Utils.getPageContext();
         
         // Fetch lessons data
-        const response = await fetch(`${pathPrefix}data/lessons.json`);
-        if (!response.ok) {
+        const data = await Utils.loadJSON(`${pathPrefix}data/lessons.json`);
+        if (!data) {
             throw new Error('Failed to load lessons.json');
         }
         
-        const data = await response.json();
         const lessons = data.lessons;
         
         // Create hamburger button for lessons menu
@@ -284,7 +228,7 @@ async function populateLessonsNav() {
             // Check if file exists in the appropriate folder
             if (lesson.file) {
                 const fileUrl = `${pathPrefix}${lessonFolder}/${lesson.file}`;
-                fileExistsInFolder = await fileExists(fileUrl);
+                fileExistsInFolder = await Utils.fileExists(fileUrl);
             }
             
             // Create menu item
@@ -341,7 +285,7 @@ async function populateLessonsNav() {
         document.body.appendChild(popoverContainer);
         
     } catch (error) {
-        console.error('Error populating lessons navigation:', error);
+        Debug.error('Error populating lessons navigation:', error);
         navContainer.innerHTML = '<p>Error loading lessons navigation</p>';
     }
 }

@@ -20,11 +20,10 @@
         width: calc(100% - 3rem);
         border: var(--border-weight) var(--border-style) var(--colour-effective-page-text);
         overflow: hidden;
-        margin-bottom: 1rem;
-        margin-right: 1rem;
+        margin-bottom: var(--margin-vertical);
+        margin-right: var(--margin-horizontal);
         font-family: var(--font-family-mono);
         font-size: var(--fontsize-normal);
-        line-height: 1.5;
         border-collapse: collapse;
         background-color: var(--colour-effective-code-background);
         color: var(--colour-effective-code-text);
@@ -39,14 +38,14 @@
             opacity: 0.5;
             user-select: none;
             border-right: var(--border-weight) var(--border-style) var(--colour-effective-page-text);
-            padding: 0.25rem 1rem;
+            padding: 0.25rem var(--padding-horizontal);
             white-space: nowrap;
             vertical-align: top;
         }
 
         & .code-content {
             display: table-cell;
-            padding: 0.25rem 1rem;
+            padding: 0.25rem var(--padding-horizontal);
             white-space: pre-wrap;
             overflow-wrap: break-word;
             width: 100%;

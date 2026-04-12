@@ -360,7 +360,7 @@ svg.animated .sparkle-3 {
     66% { fill: #76FF03; }
 }
 
-@media (width <= 768px) {
+@media (width <= 800px) {
     body {
         padding: 1rem;
     }
