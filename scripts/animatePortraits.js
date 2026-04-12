@@ -155,7 +155,7 @@
             const portraitSize = portraitRect.height;
             
             if (portraitSize === 0) {
-                container.style.setProperty('--portrait-offset', '0px');
+                container.style.removeProperty('--portrait-offset');
                 return;
             }
             
@@ -164,33 +164,56 @@
             
             // Get viewport dimensions and element positions
             const viewportHeight = window.innerHeight;
-            const header = document.querySelector('header.header');
-            const footer = document.querySelector('footer.footer');
+            const header = document.querySelector('header');
+            const footer = document.querySelector('footer');
+            const main = document.querySelector('main');
             
             // Calculate boundaries
-            const headerHeight = header ? header.getBoundingClientRect().height : 0;
-            const footerHeight = footer ? footer.getBoundingClientRect().height : 60;
+            const headerRect = header ? header.getBoundingClientRect() : null;
+            const headerHeight = headerRect ? headerRect.height : 0;
+            const footerRect = footer ? footer.getBoundingClientRect() : null;
+            const footerHeight = footerRect ? footerRect.height : 60;
+            const footerTop = footerRect ? footerRect.top : viewportHeight;
+            const mainRect = main ? main.getBoundingClientRect() : null;
+            const mainTop = mainRect ? mainRect.top : headerHeight;
+            const mainBottom = mainRect ? mainRect.bottom : (viewportHeight - footerHeight);
             const padding = 40; // Safety padding from edges
+            
+            // Log dimensions for debugging
+            Debug.log('Portrait Position Calculation:', {
+                viewportHeight,
+                header: { height: headerHeight },
+                footer: { height: footerHeight, top: footerTop },
+                main: { top: mainTop, bottom: mainBottom, height: mainBottom - mainTop },
+                portrait: { centerY: portraitCenterY, size: portraitSize },
+                padding
+            });
             
             // Calculate safe range for offset
             // Portrait top edge = portraitCenterY - portraitSize/2 + offset
             // Portrait bottom edge = portraitCenterY + portraitSize/2 + offset
             
             // Constraints:
-            // Top edge >= headerHeight + padding:
-            //   portraitCenterY - portraitSize/2 + offset >= headerHeight + padding
-            //   offset >= headerHeight + padding - portraitCenterY + portraitSize/2
-            const minOffset = Math.ceil(headerHeight + padding - portraitCenterY + portraitSize / 2);
+            // Top edge >= max(headerHeight, mainTop) + padding:
+            const topBoundary = Math.max(headerHeight, mainTop) + padding;
+            const minOffset = Math.ceil(topBoundary - portraitCenterY + portraitSize / 2);
             
-            // Bottom edge <= viewportHeight - footerHeight - padding:
-            //   portraitCenterY + portraitSize/2 + offset <= viewportHeight - footerHeight - padding
-            //   offset <= viewportHeight - footerHeight - padding - portraitCenterY - portraitSize/2
-            const maxOffset = Math.floor(viewportHeight - footerHeight - padding - portraitCenterY - portraitSize / 2);
+            // Bottom edge <= min(viewportHeight - footerHeight, footerTop, mainBottom) - padding:
+            const bottomBoundary = Math.min(viewportHeight - footerHeight, footerTop, mainBottom) - padding;
+            const maxOffset = Math.floor(bottomBoundary - portraitCenterY - portraitSize / 2);
+            
+            Debug.log('Boundary Calculations:', {
+                topBoundary,
+                bottomBoundary,
+                minOffset,
+                maxOffset,
+                hasRoom: maxOffset > minOffset + 20
+            });
             
             // Check if there's room to move
             if (maxOffset <= minOffset + 20) {
-                // Not enough room for meaningful randomization, stay centered
-                container.style.setProperty('--portrait-offset', '0px');
+                // Not enough room for meaningful randomisation, stay centred
+                container.style.removeProperty('--portrait-offset');
                 return;
             }
             
@@ -221,7 +244,7 @@
             const portrait2 = document.getElementById('portrait-block-2');
             
             if (!portrait1 || !portrait2) {
-                console.log('Portrait blocks not found on this page');
+                Debug.log('Portrait blocks not found on this page');
                 return;
             }
 

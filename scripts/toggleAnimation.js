@@ -46,7 +46,7 @@
             this.button = document.getElementById('animations-button');
             
             if (!this.button) {
-                console.log('Animation toggle button not found on this page');
+                Debug.log('Animation toggle button not found on this page');
                 return;
             }
 
@@ -73,7 +73,7 @@
                 if (stored === 'disabled') return false;
                 if (stored === 'enabled') return true;
             } catch (error) {
-                console.error('Error reading animation preference:', error);
+                Debug.error('Error reading animation preference:', error);
             }
 
             // Default: check prefers-reduced-motion
@@ -116,13 +116,13 @@
                 if (window.PortraitAnimator && typeof window.PortraitAnimator.restart === 'function') {
                     window.PortraitAnimator.restart();
                 } else {
-                    console.warn('PortraitAnimator not available or restart method not found');
+                    Debug.warn('PortraitAnimator not available or restart method not found');
                 }
 
                 // Log state change for debugging
-                console.log(`Animations ${newState ? 'enabled' : 'disabled'}`);
+                Debug.log(`Animations ${newState ? 'enabled' : 'disabled'}`);
             } catch (error) {
-                console.error('Error toggling animation:', error);
+                Debug.error('Error toggling animation:', error);
             }
         }
 
@@ -136,7 +136,7 @@
                 if (stored === 'disabled') return 'disabled';
                 if (stored === 'enabled') return 'enabled';
             } catch (error) {
-                console.error('Error reading animation preference:', error);
+                Debug.error('Error reading animation preference:', error);
             }
             return 'auto';
         }
@@ -153,9 +153,9 @@
                     window.PortraitAnimator.restart();
                 }
                 
-                console.log('Animation preference reset to auto');
+                Debug.log('Animation preference reset to auto');
             } catch (error) {
-                console.error('Error resetting animation preference:', error);
+                Debug.error('Error resetting animation preference:', error);
             }
         }
     }

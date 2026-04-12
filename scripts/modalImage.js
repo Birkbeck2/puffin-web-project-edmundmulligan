@@ -130,13 +130,13 @@
             }
 
             if (!this.modal || !this.modalImg || !this.captionText) {
-                console.error('Image modal elements are missing from the page.');
+                Debug.error('Image modal elements are missing from the page.');
                 return;
             }
 
             const safeImageSrc = this.getSafeImageSource(imageSrc);
             if (!safeImageSrc) {
-                console.warn('Blocked unsafe image source for modal preview.');
+                Debug.warn('Blocked unsafe image source for modal preview.');
                 return;
             }
 

@@ -174,7 +174,7 @@
         justify-content: center;
         margin-top: 1rem;
 
-        & .wand-icon,
+        & .wand-conclusion,
         & .wand-fallback {
             display: block;
             width: 9.375rem;
@@ -187,7 +187,7 @@
             cursor: default;
         }
 
-        & .wand-icon:hover {
+        & .wand-conclusion:hover {
             transform: none;
         }
 

@@ -175,7 +175,7 @@
             // Find the term and definition in the glossary
             const dt = this.glossaryDoc.getElementById(glossaryId);
             if (!dt) {
-                console.warn(`Glossary term not found: ${glossaryId}`);
+                Debug.warn(`Glossary term not found: ${glossaryId}`);
                 return null;
             }
 
@@ -184,7 +184,7 @@
             // Get the next sibling dd element (definition)
             const dd = dt.nextElementSibling;
             if (!dd || dd.tagName !== 'DD') {
-                console.warn(`Definition not found for term: ${glossaryId}`);
+                Debug.warn(`Definition not found for term: ${glossaryId}`);
                 return null;
             }
 
@@ -266,7 +266,7 @@
                     }
                 });
             } catch (error) {
-                console.error('Error loading glossary:', error);
+                Debug.error('Error loading glossary:', error);
             }
         }
     }

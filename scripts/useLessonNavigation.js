@@ -85,9 +85,9 @@
                 // Check which lesson files actually exist by trying to fetch them
                 await this.checkAvailableLessons();
                 
-                console.log(`Loaded ${this.lessonsData.length} lessons, ${this.availableLessons.size} available in ${this.context}`);
+                Debug.log(`Loaded ${this.lessonsData.length} lessons, ${this.availableLessons.size} available in ${this.context}`);
             } catch (error) {
-                console.error('Error loading lessons data:', error);
+                Debug.error('Error loading lessons data:', error);
                 this.lessonsData = [];
             }
         }
@@ -188,7 +188,7 @@
             this.setupProgressBarListeners();
 
             if (this.totalSections === 0) {
-                console.warn('No visible lesson sections found - user may need to select an option first');
+                Debug.warn('No visible lesson sections found - user may need to select an option first');
                 // Disable section navigation but keep lesson navigation enabled
                 this.disableSectionNavigation();
                 // Still update lesson-level navigation buttons

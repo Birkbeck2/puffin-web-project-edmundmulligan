@@ -36,24 +36,27 @@
 \end{abstract}
 
 \section{Introduction}
+This essay reviews the codebase of the Web Witchcraft and Wizardry project, a web-based interactive learning platform designed to teach users about web development concepts through a magical theme. The review covers the architecture and design of the project, as well as an analysis of the HTML, CSS, and JavaScript code, with an emphasis on the latter. Reflections on the development process and potential areas for improvement are also discussed.
 
 \section{Architecture and Design}
+The design of the appearance and layout of the website was documented in the previous essay \citep{mulligan2026a}, so will not be covered here, but the code has also been designed so as to be maintainable and extensible, with a modular structure that separates concerns \citep{dijkstra1982role}. This is a front-end focused project, so the codebase is primarily composed of HTML, CSS, and JavaScript files, with a clear separation between structure, presentation, and behaviour. The project also utilises a build process to allow automated testing, as well as a version control system to manage changes and collaborate with other developers (should there be any in the future).
+
+Several constraints have been imposed on the project, partly to comply with the academic requirements of this course, but also to keep the project focused and manageable.
+\begin{itemize}
+    \item Use only vanilla JavaScript, HTML, and CSS, without any external libraries or frameworks.
+    \item No use of generative AI or Large Language Models (LLMs) in the development process, to ensure that the code is entirely original and not influenced by AI-generated content.
+    \item No server side code or databases, as the project is focused on front-end development and client-side interactivity.
+    \item Phases 1 and 2 of the project had fixed deadlines, although phase 3 (after submission of this assignment) is more flexible.
+    \item Ensure that the website is fully accessible and responsive, adhering to best practices in web development.
+    \item The project is developed by a single individual (myself).
+\end{itemize}
 
 \section{HTML and CSS}
+Since the focus of this assignment is Javascript, the HTML and CSS code will not be analysed in depth, but some general observations can be made. The HTML code is well-structured and semantic, with appropriate use of headings, lists, and other elements to create a clear and logical document structure. The CSS code is organised into separate files for layout and components, with consistent naming conventions and a clear separation of concerns. The use of CSS variables allows for easy theming and customization of the website's appearance. The CSS has been completely refactored since the last assignment, to make it more maintainable and efficient. This includes using layers to control the cascade and specificity of styles, as well as removing redundant and unused styles. Nested selectors have been used where possible to improve readability and reduce repetition. At most three CSS files need to be loaded on any page (globals.css, main.css and  a page specific CSS file if necessary), which makes it less likely a specific CSS file will be accidentally missed when developing new pages. The CSS code has been heavily influenced by tutorials from Kevin Powell \citep{powell_youtube} and his paid course \citep{powell2026css}, which have provided valuable insights into modern CSS techniques and best practices.
 
 \section{Javascript}
 
-\subsection{Variables and Functions}
 
-\subsection{Objects and Arrays}
-
-\subsection{Conditional Logic and Loops}
-
-\subsection{DOM Manipulation}
-
-\subsection{Interactivity}
-
-\subsection{Data Retrieval and Storage}
 
 \section{Reflections}
 
@@ -64,5 +67,11 @@
 Word count: \input{essay-3-wordcount.txt} words (excluding references)
 \\
 \bibliography{EdmundLibrary}
+
+% include appendices
+\newpage
+\appendix
+\section*{Appendices}
+\input{essay-3-appendix.tex}
 
 \end{document}

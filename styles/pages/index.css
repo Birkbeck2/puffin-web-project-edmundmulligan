@@ -68,9 +68,7 @@
 
     /* For path buttons: make Start button take full row when wrapping while keeping it circular */
     .path-buttons #start-button {
-        flex: 0 0 100%;
-        min-width: var(--buttonsize-circle);
-        max-width: var(--buttonsize-circle);
+        flex: 0 0 auto;
     }
 
     /* Portrait blocks - animated character portraits */

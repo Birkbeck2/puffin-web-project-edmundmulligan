@@ -236,7 +236,7 @@ function hidePopoverById(popoverId) {
 async function populateLessonsNav() {
     const navContainer = document.getElementById('lessons-nav-container');
     if (!navContainer) {
-        console.warn('lessons-nav-container not found on this page');
+        Debug.warn('lessons-nav-container not found on this page');
         return;
     }
     
@@ -341,7 +341,7 @@ async function populateLessonsNav() {
         document.body.appendChild(popoverContainer);
         
     } catch (error) {
-        console.error('Error populating lessons navigation:', error);
+        Debug.error('Error populating lessons navigation:', error);
         navContainer.innerHTML = '<p>Error loading lessons navigation</p>';
     }
 }
