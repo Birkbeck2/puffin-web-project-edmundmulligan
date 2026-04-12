@@ -28,12 +28,12 @@
     }
 
     svg.animated .sparkle-2 {
-        animation: sparkle-2 1.5s infinite;
+        animation: sparkle-2 1.6s infinite;
         animation-delay: 0.5s;
     }
 
     svg.animated .sparkle-3 {
-        animation: sparkle-3 1.5s infinite;
+        animation: sparkle-3 1.7s infinite;
         animation-delay: 1s;
     }
 }

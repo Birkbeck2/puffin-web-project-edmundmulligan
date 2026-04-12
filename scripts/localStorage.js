@@ -8,20 +8,11 @@
  *   Generic form data storage utility with encryption support.
  *   Allows storing and retrieving form data with custom storage keys.
  *   Can be used with multiple independent forms on the same site.
+ *   Requires: utils.js (for Utils.escapeHtml)
  **********************************************************************
 */
 
-/**
- * Utility function to escape HTML characters
- * @param {string} text - Text to escape
- * @returns {string} Escaped text
- */
-function escapeHtml(text) {
-    if (typeof text !== 'string') return '';
-    const div = document.createElement('div');
-    div.textContent = text;
-    return div.innerHTML;
-}
+/* global Utils, Debug */
 
 (function() {
     'use strict';
@@ -155,7 +146,7 @@ function escapeHtml(text) {
                 }
 
                 const decryptedData = await this.decryptData(savedData);
-                return JSON.parse(decryptedData);
+                return Utils.parseJSON(decryptedData, null);
             } catch (error) {
                 Debug.error('Error loading form data:', error);
                 return null;
@@ -220,8 +211,8 @@ function escapeHtml(text) {
                 const imagePath = `../images/portraits/${imageName}`;
             
                 // Create and set the image with escaped data
-                const altText = escapeHtml(`Your avatar: ${data.avatarChoice}, ${data.ageChoice}, ${data.genderChoice}`);
-                output.innerHTML = `<img src="${escapeHtml(imagePath)}" alt="${altText}" style="width: 100%; height: auto; border-radius: var(--border-radius, 0.5rem);">`;
+                const altText = Utils.escapeHtml(`Your avatar: ${data.avatarChoice}, ${data.ageChoice}, ${data.genderChoice}`);
+                output.innerHTML = `<img src="${Utils.escapeHtml(imagePath)}" alt="${altText}" style="width: 100%; height: auto; border-radius: var(--border-radius, 0.5rem);">`;
             } else {
                 // Clear output if not all selections are made
                 output.innerHTML = '';
@@ -384,11 +375,11 @@ function escapeHtml(text) {
                     submitButton.style.backgroundColour = 'var(--colour-effective-button-background-selected)';
                     submitButton.style.colour = 'var(--colour-effective-button-text-selected)';
                 
-                    setTimeout(() => {
+                    Utils.delay(2000).then(() => {
                         submitButton.textContent = originalText;
                         submitButton.style.backgroundColour = '';
                         submitButton.style.colour = '';
-                    }, 2000);
+                    });
                 }
             } catch (error) {
                 Debug.error('Error saving form data:', error);
@@ -475,11 +466,11 @@ function escapeHtml(text) {
                     clearButton.style.backgroundColor = 'var(--colour-effective-button-background-selected)';
                     clearButton.style.color = 'var(--colour-effective-button-text-selected)';
                 
-                    setTimeout(() => {
+                    Utils.delay(2000).then(() => {
                         clearButton.textContent = 'Clear Information';
                         clearButton.style.backgroundColor = '';
                         clearButton.style.color = '';
-                    }, 2000);
+                    });
                 }
             });
         }
@@ -511,12 +502,12 @@ function escapeHtml(text) {
                     const studentName = data.name || 'Student';
                 
                     // Create figure with image and caption (with escaped data)
-                    const altText = escapeHtml(`Your avatar: ${data.avatarChoice}, ${data.ageChoice}, ${data.genderChoice}`);
+                    const altText = Utils.escapeHtml(`Your avatar: ${data.avatarChoice}, ${data.ageChoice}, ${data.genderChoice}`);
                     const imageHTML = `
                     <figure style="margin: 0; text-align: center;">
-                        <img src="${escapeHtml(imagePath)}" alt="${altText}" class="avatar-image">
+                        <img src="${Utils.escapeHtml(imagePath)}" alt="${altText}" class="avatar-image">
                         <figcaption class="avatar-caption">
-                            Welcome, ${escapeHtml(studentName)}
+                            Welcome, ${Utils.escapeHtml(studentName)}
                         </figcaption>
                     </figure>
                 `;

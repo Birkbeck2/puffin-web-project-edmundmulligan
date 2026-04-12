@@ -38,6 +38,7 @@
     --page-gap:                 2rem;
     --page-margin:              0;
     --page-padding:             0;
+    --button-padding:           1rem;
     --menu-padding:             0.5rem 1rem;
     --image-padding:            0.5rem;
     --box-shadow:               0 2px 8px var(--colour-shadow);
@@ -46,10 +47,4 @@
     --carousel-accessory-width: clamp(20rem, 15vw + 10rem, 30rem);
     --carousel-accessory-height: clamp(20rem, 15vw + 10rem, 30rem);
     --faq-column-width:         clamp(80ch, 44vw, 120ch);
-
-    /* media query breakpoints */
-    --breakpoint-tiny: 200px;
-    --breakpoint-small: 400px;
-    --breakpoint-medium: 800px;
-    --breakpoint-large: 1200px;
 }
