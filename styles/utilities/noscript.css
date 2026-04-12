@@ -22,6 +22,6 @@
         background-color: var(--colour-warning-background);
         content: "This page uses JavaScript for enhanced functionality. Please enable JavaScript for the best experience.";
         text-align: center;
-        padding: 1.25rem;
+        padding: var(--padding-text);
     }
 }

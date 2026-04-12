@@ -13,26 +13,26 @@
 @layer components {
     .site-title {
         font-family: var(--font-family-title);
-        font-weight: 700;
+        font-weight: var(--font-weight-bold);
         text-align: center;
-        margin: 0 auto;
+        margin: var(--page-margin) auto;
         overflow-wrap: break-word;
         hyphens: auto;
     }
 
     .site-subtitle {
         font-family: var(--font-family-subtitle);
-        font-weight: 400;
+        font-weight: var(--font-weight-bold);
         text-align: center;
-        margin: 0 auto;
+        margin: var(--page-margin) auto;
         overflow-wrap: break-word;
         hyphens: auto;
     }
 
     .page-title {
         font-family: var(--font-family-title);
-        font-weight: 700;
-        margin: 0.5rem auto;
+        font-weight: var(--font-weight-bold);
+        margin: var(--margin-vertical) auto;
         padding: var(--padding-title);
         width: fit-content;
         max-width: 100%;

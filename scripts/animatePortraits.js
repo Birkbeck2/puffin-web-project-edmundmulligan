@@ -1,3 +1,5 @@
+/* global Utils, Debug */
+
 /*
  **********************************************************************
  * File       : scripts/animatePortraits.js
@@ -10,6 +12,7 @@
  *   - Uses CSS animations for fade transitions (2s in, 5s display, 2s out)
  *   - Responsive: hidden <400px, single between blocks 400-800px, sides >800px
  *   - Cross-fading alternation at >800px
+ *   Requires: utils.js (for Utils.randomInt)
  *   
  *   Animation preference priority (first match wins):
  *   1. ?animation=on|off|auto query parameter (for testing)
@@ -69,7 +72,7 @@
             const available = this.portraits.filter(p => !this.usedPortraits.has(p));
             
             // Pick random from available
-            const portrait = available[Math.floor(Math.random() * available.length)];
+            const portrait = available[Utils.randomInt(0, available.length - 1)];
             this.usedPortraits.add(portrait);
             
             return portrait;
@@ -218,7 +221,7 @@
             }
             
             // Generate random vertical offset within safe range
-            const offset = Math.floor(Math.random() * (maxOffset - minOffset + 1)) + minOffset;
+            const offset = Utils.randomInt(minOffset, maxOffset);
             
             // Set CSS custom property
             container.style.setProperty('--portrait-offset', `${offset}px`);
@@ -318,9 +321,9 @@
             this.startPortraitCycle(portrait1);
             
             // Start portrait cycle for block 2, offset by half cycle for alternating effect
-            setTimeout(() => {
+            Utils.delay(this.cycleDuration / 2).then(() => {
                 this.startPortraitCycle(portrait2);
-            }, this.cycleDuration / 2);
+            });
         }
 
         /**

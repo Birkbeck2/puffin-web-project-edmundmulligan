@@ -15,7 +15,7 @@
     .button-circle,
     .button-rectangle,
     .button-circle-small {
-        padding: 1rem;
+        padding: var(--button-padding);
         color: var(--colour-effective-button-text);
         background-color: var(--colour-effective-button-background);
         border: var(--border-style) var(--border-weight) var(--colour-effective-button-text);
@@ -25,7 +25,7 @@
         box-sizing: border-box;
         font-family: var(--font-family-button);
         font-size: var(--fontsize-button);
-        font-weight: bold;
+        font-weight: var(--font-weight-bold);
 
         /* Hover and focus states - all buttons behave the same */
         &:hover,
@@ -58,7 +58,7 @@
     .button-rectangle {
         display: block;
         border-radius: var(--border-radius);
-        margin: 1rem auto;
+        margin: var(--margin-vertical) auto;
     }
 
     /* Shape modifier: circular buttons */

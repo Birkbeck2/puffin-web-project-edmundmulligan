@@ -1,3 +1,5 @@
+/* global Utils */
+
 /*
  **********************************************************************
  * File       : scripts/carouselNavigation.js
@@ -6,6 +8,7 @@
  * License    : MIT License (see license.html page)
  * Description:
  *   Handles carousel navigation button functionality for gallery.html
+ *   Requires: utils.js (for Utils.delay)
  **********************************************************************
  */
 
@@ -79,13 +82,11 @@ document.addEventListener('DOMContentLoaded', () => {
         carousel.addEventListener('scroll', updateButtonStates);
         
         // Initial button state - with slight delay to ensure carousel is rendered
-        setTimeout(() => {
-            updateButtonStates();
-        }, 100);
+        Utils.delay(100).then(updateButtonStates);
         
         // Update on resize
         window.addEventListener('resize', () => {
-            setTimeout(updateButtonStates, 100);
+            Utils.delay(100).then(updateButtonStates);
         });
     });
 });
