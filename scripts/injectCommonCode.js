@@ -67,7 +67,7 @@
         <div class="header-image header-image-wizard inline-header" role="img" aria-label="Wizard icon"></div>
         <div class="inline-header">
             <h1 class="site-title">Web Witchcraft and Wizardry</h1>
-            <nav class="site-navigation" aria-label="Site navigation">
+            <nav class="site-navigation" aria-label="Main navigation (compact)">
                 <ul>
                     <li><a href="${this.pathPrefix}index.html">Home</a></li>
                     <li><a href="${this.pathPrefix}pages/start.html">Start</a></li>
@@ -110,7 +110,7 @@
         <div class="header-text">
             <h1 class="site-title">Web Witchcraft and Wizardry</h1>
             <h2 class="site-subtitle">Learn to create magical websites</h2>
-            <nav class="site-navigation" aria-label="Site navigation">
+            <nav class="site-navigation" aria-label="Main navigation">
                 <ul>
                     <li><a href="${this.pathPrefix}index.html">Home</a></li>
                     <li><a href="${this.pathPrefix}pages/start.html">Start</a></li>
