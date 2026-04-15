@@ -1,6 +1,14 @@
 {
   "pages": [
     {
+      "url": "mentors/lesson-01",
+      "theme": "light",
+      "style": "normal",
+      "viewport": "900",
+      "score": 1,
+      "failedAudits": []
+    },
+    {
       "url": "mentors/lesson-00",
       "theme": "light",
       "style": "normal",
@@ -112,6 +120,14 @@
       "failedAudits": []
     },
     {
+      "url": "mentors/lesson-01",
+      "theme": "dark",
+      "style": "normal",
+      "viewport": "900",
+      "score": 1,
+      "failedAudits": []
+    },
+    {
       "url": "mentors/lesson-00",
       "theme": "dark",
       "style": "normal",
@@ -223,6 +239,14 @@
       "failedAudits": []
     },
     {
+      "url": "mentors/lesson-01",
+      "theme": "light",
+      "style": "subdued",
+      "viewport": "900",
+      "score": 1,
+      "failedAudits": []
+    },
+    {
       "url": "mentors/lesson-00",
       "theme": "light",
       "style": "subdued",
@@ -334,6 +358,14 @@
       "failedAudits": []
     },
     {
+      "url": "mentors/lesson-01",
+      "theme": "dark",
+      "style": "subdued",
+      "viewport": "900",
+      "score": 1,
+      "failedAudits": []
+    },
+    {
       "url": "mentors/lesson-00",
       "theme": "dark",
       "style": "subdued",
@@ -445,6 +477,14 @@
       "failedAudits": []
     },
     {
+      "url": "mentors/lesson-01",
+      "theme": "light",
+      "style": "vibrant",
+      "viewport": "900",
+      "score": 1,
+      "failedAudits": []
+    },
+    {
       "url": "mentors/lesson-00",
       "theme": "light",
       "style": "vibrant",
@@ -550,6 +590,14 @@
     {
       "url": "pages/start",
       "theme": "light",
+      "style": "vibrant",
+      "viewport": "900",
+      "score": 1,
+      "failedAudits": []
+    },
+    {
+      "url": "mentors/lesson-01",
+      "theme": "dark",
       "style": "vibrant",
       "viewport": "900",
       "score": 1,

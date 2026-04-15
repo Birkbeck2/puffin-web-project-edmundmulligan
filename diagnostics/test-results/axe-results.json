@@ -2,6 +2,13 @@
   "violations": [],
   "passes": [
     {
+      "pageUrl": "mentors/lesson-01.html",
+      "theme": "light",
+      "style": "normal",
+      "viewport": "900",
+      "count": 41
+    },
+    {
       "pageUrl": "mentors/lesson-00.html",
       "theme": "light",
       "style": "normal",
@@ -93,6 +100,13 @@
       "count": 38
     },
     {
+      "pageUrl": "mentors/lesson-01.html",
+      "theme": "dark",
+      "style": "normal",
+      "viewport": "900",
+      "count": 41
+    },
+    {
       "pageUrl": "mentors/lesson-00.html",
       "theme": "dark",
       "style": "normal",
@@ -184,6 +198,13 @@
       "count": 38
     },
     {
+      "pageUrl": "mentors/lesson-01.html",
+      "theme": "light",
+      "style": "subdued",
+      "viewport": "900",
+      "count": 41
+    },
+    {
       "pageUrl": "mentors/lesson-00.html",
       "theme": "light",
       "style": "subdued",
@@ -275,6 +296,13 @@
       "count": 38
     },
     {
+      "pageUrl": "mentors/lesson-01.html",
+      "theme": "dark",
+      "style": "subdued",
+      "viewport": "900",
+      "count": 41
+    },
+    {
       "pageUrl": "mentors/lesson-00.html",
       "theme": "dark",
       "style": "subdued",
@@ -366,6 +394,13 @@
       "count": 38
     },
     {
+      "pageUrl": "mentors/lesson-01.html",
+      "theme": "light",
+      "style": "vibrant",
+      "viewport": "900",
+      "count": 41
+    },
+    {
       "pageUrl": "mentors/lesson-00.html",
       "theme": "light",
       "style": "vibrant",
@@ -455,6 +490,13 @@
       "style": "vibrant",
       "viewport": "900",
       "count": 38
+    },
+    {
+      "pageUrl": "mentors/lesson-01.html",
+      "theme": "dark",
+      "style": "vibrant",
+      "viewport": "900",
+      "count": 41
     },
     {
       "pageUrl": "mentors/lesson-00.html",
@@ -13421,8 +13463,8 @@
     }
   ],
   "metadata": {
-    "pagesTestedCount": 13,
-    "totalTestRuns": 78,
+    "pagesTestedCount": 14,
+    "totalTestRuns": 84,
     "viewports": [
       "900"
     ],
