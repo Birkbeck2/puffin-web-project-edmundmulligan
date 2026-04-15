@@ -27,7 +27,7 @@
     <!-- End of meta tags -->
 
     <!-- Set the document title-->
-    <title>Lesson{{lesson.number}}|Web Witchcraft and Wizardry</title>
+    <title>Lesson {{lesson.number}} | Web Witchcraft and Wizardry</title>
 
     <!-- Link to Favicon -->
     <link rel="icon" type="image/svg+xml" href="../images/icons/favicon.svg">
@@ -45,14 +45,9 @@
     <!-- End Font Awesome Icons -->
 
     <!-- Start of CSS stylesheets section -->
-    <!-- globals.css and main.css must be the first stylesheets loaded -->
+
     <link rel="stylesheet" href="../styles/globals.css">
     <link rel="stylesheet" href="../styles/main.css">
-
-    <!-- component-specific stylesheets for lesson pages -->
-    <link rel="stylesheet" href="../styles/components/lessons-sidebar.css">
-
-    <!-- page specific stylesheet -->
     <link rel="stylesheet" href="../styles/pages/lesson.css">
     <!-- End of CSS stylesheets section -->
 
@@ -128,7 +123,7 @@
                 <!-- Non-suitable platforms -->
                 {{#platforms}}
                 {{#non_developer}}
-                <section id="{{id}}" class="lesson-section hidden lesson-install-{{id}}">
+                <section id="{{id}}" class="lesson-section hidden lesson-install-{{id}}" aria-label="{{cap_name}}">
                     <div class="student-image">
                         <!--Image is injected based on choices made in student.html and saved into local storage. -->
                     </div>
@@ -143,7 +138,7 @@
                 <!-- Introduction and warning sections (shown for all developer platforms) -->
                 {{#common_sections}}
                 {{#section}}
-                <section id="{{section_id}}" class="lesson-section hidden {{class_list}}">
+                <section id="{{section_id}}" class="lesson-section hidden {{class_list}}" aria-label="{{aria_label}}">
                     <div class="{{container_class}}">
                         <div class="student-image">
                             <!--Image is injected based on choices made in student.html and saved into local storage. -->
@@ -157,41 +152,28 @@
                 {{/section}}
                 {{/common_sections}}
 
-                <!-- OS-specific sections for developer platforms -->
+                <!-- OS-specific intro and tool sections for developer platforms -->
                 {{#developer_platforms}}
-                <section id="instructions-{{os_id}}" class="lesson-section hidden lesson-install-{{os_id}}">
+                <section id="instructions-{{os_id}}" class="lesson-section hidden lesson-install-{{os_id}}" aria-label="{{os_name}} Installation Instructions">
                     <div class="student-image">
                         <!--Image is injected based on choices made in student.html and saved into local storage. -->
                     </div>
                     <h3 class="lesson-title">{{os_name}} Installation Instructions</h3>
-                    <div id="instructions-{{os_id}}-content">
-                        {{#tools}}
-                        <section id="instructions-{{os_id}}-{{tool_id}}" class="lesson-section hidden lesson-install-{{os_id}}">
-                            <div class="student-image">
-                                <!--Image is injected based on choices made in student.html and saved into local storage. -->
-                            </div>
-                            <h3 class="faq-title">{{tool_name}}</h3>
-                            <div class="tool-content">
-                                {{{tool_content}}}
-                            </div>
-                        </section>
-                        {{/tools}}
-                    </div>
+                    {{{os_intro}}}
                 </section>
-                {{/developer_platforms}}
 
-                <!-- Common sections for all developer platforms -->
-                {{#common_dev_sections}}
-                <section id="instructions-{{section_id}}" class="lesson-section hidden lesson-install-all">
+                {{#tools}}
+                <section id="instructions-{{os_id}}-{{tool_id}}" class="lesson-section hidden lesson-install-{{os_id}}" aria-label="{{#aria_label}}{{aria_label}}{{/aria_label}}{{^aria_label}}{{tool_name}} for {{os_name}}{{/aria_label}}">
                     <div class="student-image">
                         <!--Image is injected based on choices made in student.html and saved into local storage. -->
                     </div>
-                    <h3 class="faq-title">{{section_title}}</h3>
-                    <div id="{{section_id}}-content">
-                        {{{section_content}}}
+                    <h3 class="lesson-title">{{tool_name}}</h3>
+                    <div class="tool-content">
+                        {{{tool_content}}}
                     </div>
                 </section>
-                {{/common_dev_sections}}
+                {{/tools}}
+                {{/developer_platforms}}
 
             </div> <!-- End lesson-content -->
         </main>
