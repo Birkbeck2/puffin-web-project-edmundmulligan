@@ -53,18 +53,21 @@
 
     <!-- Load JavaScript files -->
     <script src="../scripts/utils.js" defer></script>
-    <script src="../scripts/queryParams.js" defer></script>
-    <script src="../scripts/debug.js" defer></script>
-    <script src="../scripts/themeSwitcher.js" defer></script>
+    <script src="../scripts/queryParams.js"></script>
+    <script src="../scripts/debug.js"></script>
+    <script src="../scripts/themeSwitcher.js"></script>
     <script src="../scripts/localStorage.js" defer></script>
     <script src="../scripts/toggleHeaderAndFooter.js" defer></script>
     <script src="../scripts/injectCommonCode.js" defer></script>
+    <script src="../scripts/injectGlossaryPopovers.js" defer></script>
     <script src="../scripts/toggleSection.js" defer></script>
     <script src="../scripts/showOsInstructions.js" defer></script>
     <script src="../scripts/populateLineNumbers.js" defer></script>
+    <script src="../scripts/modalImage.js" defer></script>
     <script src="../scripts/populateLessonsMenu.js" defer></script>
     <script src="../scripts/injectLessonNavigation.js" defer></script>
     <script src="../scripts/useLessonNavigation.js" defer></script>
+    <script src="../scripts/animateWand.js" defer></script>
 
     <!-- End JavaScript file link -->
 
@@ -3197,6 +3200,24 @@ SELECT * FROM users;
                         <li>To restart the server later, just run <code>npm start</code> again from your Projects folder</li>
                     </ul>
                 </div>
+                    </div>
+                </section>
+
+                <!-- Conclusion section (shown for all developer platforms) -->
+                <section id="conclusion" class="lesson-section hidden lesson-install-windows lesson-install-macos lesson-install-linux conclusion" aria-label="Conclusion">
+                    <div class="">
+                        <div class="student-image">
+                            <!--Image is injected based on choices made in student.html and saved into local storage. -->
+                        </div>
+                        <div class="">
+                            <h3 class="lesson-title">Conclusion</h3>
+                            <div id="conclusion-block">
+                <p>
+                    Congratulations! You have installed all the necessary tools to start your web development journey. In the next lesson, you will create your first web page using HTML and CSS.
+                </p>
+                <div id="wand-container" class="wand-container"></div>
+            </div>
+                        </div>
                     </div>
                 </section>
 

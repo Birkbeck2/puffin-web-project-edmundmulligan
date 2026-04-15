@@ -2992,5 +2992,21 @@ SELECT * FROM users;
                 }
             ]
         }
-    ]
+    ],
+    conclusion_section: {
+        section: true,
+        section_id: 'conclusion',
+        title: 'Conclusion',
+        aria_label: 'Conclusion',
+        container_class: '',
+        content_class: '',
+        title_class: 'lesson-title',
+        class_list: 'lesson-install-windows lesson-install-macos lesson-install-linux conclusion',
+        content: `<div id="conclusion-block">
+                <p>
+                    Congratulations! You have installed all the necessary tools to start your web development journey. In the next lesson, you will create your first web page using HTML and CSS.
+                </p>
+                <div id="wand-container" class="wand-container"></div>
+            </div>`
+    }
 };
