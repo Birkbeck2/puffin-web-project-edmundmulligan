@@ -62,81 +62,118 @@
     },
     {
       "id": "lesson 10",
-      "title": "Responsive Design",
-      "description": "Learn about media queries and how they can be used to create responsive web pages that work on both desktop and mobile devices.",
+      "title": "Colours and CSS",
+      "description": "Make your web pages more visually appealing using colours and CSS.",
       "file": "lesson-10.html"
     },
     {
       "id": "lesson 11",
-      "title": "Javascript",
-      "description": "Use JavaScript to add interactivity to your web pages.",
+      "title": "Fonts and CSS",
+      "description": "Make your web pages more visually appealing using fonts and CSS.",
       "file": "lesson-11.html"
     },
     {
       "id": "lesson 12",
-      "title": "External Javascript files",
-      "description": "Just as CSS can be put in external files, so can JavaScript. In this lesson you will learn how to use external JavaScript files.",
+      "title": "Grids and CSS",
+      "description": "Learn about the grid model and how to use it to control the layout of your web pages.",
       "file": "lesson-12.html"
     },
     {
       "id": "lesson 13",
-      "title": "Errors and Exceptions",
-      "description": "In this lesson you will learn about errors and exceptions in JavaScript and how to handle them.",
+      "title": "Flexbox and CSS",
+      "description": "Learn about the flexbox model and how to use it to control the layout of your web pages.",
       "file": "lesson-13.html"
     },
     {
       "id": "lesson 14",
-      "title": "  Testing and Debugging",
-      "description": "Learn how to test and debug your JavaScript code using the browser's developer tools.",
+      "title": "Responsive Design",
+      "description": "Learn about media queries and how they can be used to create responsive web pages that work on both desktop and mobile devices.",
       "file": "lesson-14.html"
     },
     {
       "id": "lesson 15",
-      "title": "Forms",
-      "description": "Learn how to create forms to collect information from users.",
+      "title": "Javascript",
+      "description": "Use JavaScript to add interactivity to your web pages.",
       "file": "lesson-15.html"
     },
     {
       "id": "lesson 16",
-      "title": "Cookies",
-      "description": "In this lesson you will learn about cookies and how they can be used to store information on the user's computer.",
+      "title": "External Javascript files",
+      "description": "Just as CSS can be put in external files, so can JavaScript. In this lesson you will learn how to use external JavaScript files.",
       "file": "lesson-16.html"
     },
     {
       "id": "lesson 17",
-      "title": "Clients and Servers",
-      "description": "In this lesson you will learn about the client- server model of the web.",
+      "title": "Buttons",
+      "description": "Add buttons to your web pages.",
       "file": "lesson-17.html"
     },
-    {
+        {
       "id": "lesson 18",
-      "title": "A server page",
-      "description": "In this lesson you will learn how to create a simple server page using a server-side language.",
+      "title": "Events",
+      "description": "Learn how to handle events in JavaScript.",
       "file": "lesson-18.html"
     },
+
     {
       "id": "lesson 19",
-      "title": "Processing Forms on the server",
-      "description": "Learn how to process the data you collect from forms on the server.",
+      "title": "Errors and Exceptions",
+      "description": "In this lesson you will learn about errors and exceptions in JavaScript and how to handle them.",
       "file": "lesson-19.html"
     },
     {
       "id": "lesson 20",
-      "title": "Databases",
-      "description": "In this lesson you will learn about databases and how to use them to store data for your web applications.",
+      "title": "  Testing and Debugging",
+      "description": "Learn how to test and debug your JavaScript code using the browser's developer tools.",
       "file": "lesson-20.html"
     },
     {
       "id": "lesson 21",
-      "title": "Security",
-      "description": "In this lesson you will learn about basic web security concepts,",
+      "title": "Forms",
+      "description": "Learn how to create forms to collect information from users.",
       "file": "lesson-21.html"
     },
     {
       "id": "lesson 22",
+      "title": "Cookies",
+      "description": "In this lesson you will learn about cookies and how they can be used to store information on the user's computer.",
+      "file": "lesson-22.html"
+    },
+    {
+      "id": "lesson 23",
+      "title": "Clients and Servers",
+      "description": "In this lesson you will learn about the client- server model of the web.",
+      "file": "lesson-23.html"
+    },
+    {
+      "id": "lesson 24",
+      "title": "A server page",
+      "description": "In this lesson you will learn how to create a simple server page using a server-side language.",
+      "file": "lesson-24.html"
+    },
+    {
+      "id": "lesson 25",
+      "title": "Processing Forms on the server",
+      "description": "Learn how to process the data you collect from forms on the server.",
+      "file": "lesson-25.html"
+    },
+    {
+      "id": "lesson 26",
+      "title": "Databases",
+      "description": "In this lesson you will learn about databases and how to use them to store data for your web applications.",
+      "file": "lesson-26.html"
+    },
+    {
+      "id": "lesson 27",
+      "title": "Security",
+      "description": "In this lesson you will learn about basic web security concepts,",
+      "file": "lesson-27.html"
+    },
+    {
+      "id": "lesson 28",
       "title": "Passwords",
       "description": "Passwords require special handling to keep them secure. In this lesson you will learn how to handle passwords safely.",
-      "file": "lesson-22.html"
+      "file": "lesson-28.html"
     }
   ]
 }
