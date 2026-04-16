@@ -55,6 +55,7 @@ module.exports = {
             section: true,
             section_id: 'introduction',
             title: 'Introduction',
+            aria_label: 'Introduction',
             container_class: 'intro-container',
             content_class: 'intro-content',
             title_class: 'lesson-title',
@@ -73,6 +74,7 @@ module.exports = {
             section: true,
             section_id: 'warning',
             title: 'Warning',
+            aria_label: 'Warning',
             container_class: 'warning-container',
             content_class: 'warning-content',
             title_class: 'lesson-title',
@@ -89,6 +91,7 @@ module.exports = {
             section: true,
             section_id: 'installing-required-software',
             title: 'Installing Required Software',
+            aria_label: 'Installing Required Software',
             container_class: '',
             content_class: '',
             title_class: 'lesson-title',
@@ -112,21 +115,24 @@ module.exports = {
         {
             os_id: 'windows',
             os_name: 'Windows',
+            os_intro: `<p>
+                    The latest version of Windows is <strong>Windows 11</strong>, but you should be able to use <strong>Windows 10</strong> as well. The lessons have not been tested on earlier versions of Windows, but they may work ok. It's possible that the browser on older versions of windows won't run all the features used in the lessons. In particular, beware of using Internet Explorer - it is not supported any more and Microsoft Edge is recommended instead. On the next screens are the instructions for installing the recommended software on your Windows computer.
+                </p>`,
             tools: [
                 {
                     tool_id: 'vsc',
                     tool_name: 'Visual Studio Code',
                     tool_content: `<div id="vsc-windows">
-                    <h4 class="faq-title">Check whether Visual Studio Code is already installed</h4>
+                    <h4 class="lesson-title">Check whether Visual Studio Code is already installed</h4>
                     <ul>
                         <li>Press <code>Windows key + R</code></li>
                         <li>Type <code>code</code> and press Enter</li>
                         <li>If VS Code opens, you have it installed. If you get an error message, you need to install it.</li>
                     </ul>
-                    <h4 onclick="toggleSection('vsc-windows-list-1', event);" onkeydown="toggleSection('vsc-windows-list-1', event);" class="faq-title magic-invisible">If you need to install Visual Studio Code, follow these steps</h4>
+                    <h4 onclick="toggleSection('vsc-windows-list-1', event);" onkeydown="toggleSection('vsc-windows-list-1', event);" class="lesson-title magic-invisible">If you need to install Visual Studio Code, follow these steps</h4>
                     <ol id="vsc-windows-list-1" class="hidden">
                         <li>
-                            <span onclick="toggleSection('vsc-windows-list-1-1', event);" onkeydown="toggleSection('vsc-windows-list-1-1', event);" class="faq-title magic-invisible">Download VS Code from the Official Website</span>
+                            <span onclick="toggleSection('vsc-windows-list-1-1', event);" onkeydown="toggleSection('vsc-windows-list-1-1', event);" class="lesson-title magic-invisible">Download VS Code from the Official Website</span>
                             <ul id="vsc-windows-list-1-1" class="hidden">
                                 <li>Open your web browser</li>
                                 <li>Go to <a href="https://code.visualstudio.com" target="_blank" rel="noopener noreferrer">https://code.visualstudio.com</a></li>
@@ -135,7 +141,7 @@ module.exports = {
                             </ul>
                         </li>
                         <li>
-                            <span onclick="toggleSection('vsc-windows-list-1-2', event);" onkeydown="toggleSection('vsc-windows-list-1-2', event);" class="faq-title magic-invisible">Run the Installer</span>
+                            <span onclick="toggleSection('vsc-windows-list-1-2', event);" onkeydown="toggleSection('vsc-windows-list-1-2', event);" class="lesson-title magic-invisible">Run the Installer</span>
                             <ul id="vsc-windows-list-1-2" class="hidden">
                                 <li>Open your Downloads folder (press <code>Windows key + E</code>, then click Downloads)</li>
                                 <li>Double-click the VSCodeUserSetup file you just downloaded</li>
@@ -143,7 +149,7 @@ module.exports = {
                             </ul>
                         </li>
                         <li>
-                            <span onclick="toggleSection('vsc-windows-list-1-3', event);" onkeydown="toggleSection('vsc-windows-list-1-3', event);" class="faq-title magic-invisible">Setup Wizard</span>
+                            <span onclick="toggleSection('vsc-windows-list-1-3', event);" onkeydown="toggleSection('vsc-windows-list-1-3', event);" class="lesson-title magic-invisible">Setup Wizard</span>
                             <ul id="vsc-windows-list-1-3" class="hidden">
                                 <li>Accept the license agreement, then click Next</li>
                                 <li>Choose installation location (default is fine), click Next</li>
@@ -151,7 +157,7 @@ module.exports = {
                             </ul>
                         </li>
                         <li>
-                            <span onclick="toggleSection('vsc-windows-list-1-4', event);" onkeydown="toggleSection('vsc-windows-list-1-4', event);" class="faq-title magic-invisible">Select Additional Tasks</span>
+                            <span onclick="toggleSection('vsc-windows-list-1-4', event);" onkeydown="toggleSection('vsc-windows-list-1-4', event);" class="lesson-title magic-invisible">Select Additional Tasks</span>
                             <ul id="vsc-windows-list-1-4" class="hidden">
                                 <li>Check these recommended options
                                     <ul>
@@ -166,7 +172,7 @@ module.exports = {
                             </ul>
                         </li>
                         <li>
-                            <span onclick="toggleSection('vsc-windows-list-1-5', event);" onkeydown="toggleSection('vsc-windows-list-1-5', event);" class="faq-title magic-invisible">Install</span>
+                            <span onclick="toggleSection('vsc-windows-list-1-5', event);" onkeydown="toggleSection('vsc-windows-list-1-5', event);" class="lesson-title magic-invisible">Install</span>
                             <ul id="vsc-windows-list-1-5" class="hidden">
                                 <li>Review your choices, then click Install</li>
                                 <li>Wait for installation to complete (takes about 1-2 minutes)</li>
@@ -174,7 +180,7 @@ module.exports = {
                             </ul>
                         </li>
                         <li>
-                            <span onclick="toggleSection('vsc-windows-list-1-6', event);" onkeydown="toggleSection('vsc-windows-list-1-6', event);" class="faq-title magic-invisible">First Launch</span>
+                            <span onclick="toggleSection('vsc-windows-list-1-6', event);" onkeydown="toggleSection('vsc-windows-list-1-6', event);" class="lesson-title magic-invisible">First Launch</span>
                             <ul id="vsc-windows-list-1-6" class="hidden"    >
                                 <li>VS Code opens with a Welcome screen</li>
                                 <li>You can choose your colour theme (light or dark)</li>
@@ -188,16 +194,16 @@ module.exports = {
                     tool_id: 'firefox',
                     tool_name: 'Mozilla Firefox',
                     tool_content: `<div id="firefox-windows">
-                    <h4 class="faq-title">Check whether Firefox is already installed</h4>
+                    <h4 class="lesson-title">Check whether Firefox is already installed</h4>
                     <ul>
                         <li>Press <code>Windows key</code></li>
                         <li>Type <code>Firefox</code></li>
                         <li>If Firefox appears in the search results, you have it installed. If not, you need to install it.</li>
                     </ul>
-                    <h4 onclick="toggleSection('firefox-windows-list-1', event);" onkeydown="toggleSection('firefox-windows-list-1', event);" class="faq-title magic-invisible">If you need to install Firefox, follow these steps</h4>
+                    <h4 onclick="toggleSection('firefox-windows-list-1', event);" onkeydown="toggleSection('firefox-windows-list-1', event);" class="lesson-title magic-invisible">If you need to install Firefox, follow these steps</h4>
                     <ol id="firefox-windows-list-1" class="hidden">
                         <li>
-                            <span onclick="toggleSection('firefox-windows-list-1-1', event);" onkeydown="toggleSection('firefox-windows-list-1-1', event);" class="faq-title magic-invisible">Download Firefox from the Official Website</span>
+                            <span onclick="toggleSection('firefox-windows-list-1-1', event);" onkeydown="toggleSection('firefox-windows-list-1-1', event);" class="lesson-title magic-invisible">Download Firefox from the Official Website</span>
                             <ul id="firefox-windows-list-1-1" class="hidden">
                                 <li>Open your web browser (Microsoft Edge or another browser)</li>
                                 <li>Go to <a href="https://www.mozilla.org/firefox/" target="_blank" rel="noopener noreferrer">https://www.mozilla.org/firefox/</a></li>
@@ -206,7 +212,7 @@ module.exports = {
                             </ul>
                         </li>
                         <li>
-                            <span onclick="toggleSection('firefox-windows-list-1-2', event);" onkeydown="toggleSection('firefox-windows-list-1-2', event);" class="faq-title magic-invisible">Run the Installer</span>
+                            <span onclick="toggleSection('firefox-windows-list-1-2', event);" onkeydown="toggleSection('firefox-windows-list-1-2', event);" class="lesson-title magic-invisible">Run the Installer</span>
                             <ul id="firefox-windows-list-1-2" class="hidden">
                                 <li>Open your Downloads folder (press <code>Windows key + E</code>, then click Downloads)</li>
                                 <li>Double-click the <code>Firefox Installer.exe</code> file you just downloaded</li>
@@ -214,7 +220,7 @@ module.exports = {
                             </ul>
                         </li>
                         <li>
-                            <span onclick="toggleSection('firefox-windows-list-1-3', event);" onkeydown="toggleSection('firefox-windows-list-1-3', event);" class="faq-title magic-invisible">Installation Process</span>
+                            <span onclick="toggleSection('firefox-windows-list-1-3', event);" onkeydown="toggleSection('firefox-windows-list-1-3', event);" class="lesson-title magic-invisible">Installation Process</span>
                             <ul id="firefox-windows-list-1-3" class="hidden">
                                 <li>The installer will start automatically</li>
                                 <li>Firefox will install to the default location (usually <code>C:\Program Files\Mozilla Firefox</code>)</li>
@@ -223,7 +229,7 @@ module.exports = {
                             </ul>
                         </li>
                         <li>
-                            <span onclick="toggleSection('firefox-windows-list-1-4', event);" onkeydown="toggleSection('firefox-windows-list-1-4', event);" class="faq-title magic-invisible">First Launch</span>
+                            <span onclick="toggleSection('firefox-windows-list-1-4', event);" onkeydown="toggleSection('firefox-windows-list-1-4', event);" class="lesson-title magic-invisible">First Launch</span>
                             <ul id="firefox-windows-list-1-4" class="hidden">
                                 <li>Firefox opens with a Welcome screen</li>
                                 <li>You can choose to set Firefox as your default browser (optional)</li>
@@ -232,7 +238,7 @@ module.exports = {
                             </ul>
                         </li>
                         <li>
-                            <span onclick="toggleSection('firefox-windows-list-1-5', event);" onkeydown="toggleSection('firefox-windows-list-1-5', event);" class="faq-title magic-invisible">Pin to Taskbar (Optional)</span>
+                            <span onclick="toggleSection('firefox-windows-list-1-5', event);" onkeydown="toggleSection('firefox-windows-list-1-5', event);" class="lesson-title magic-invisible">Pin to Taskbar (Optional)</span>
                             <ul id="firefox-windows-list-1-5" class="hidden">
                                 <li>With Firefox running, right-click the Firefox icon in the taskbar</li>
                                 <li>Select "Pin to taskbar"</li>
@@ -240,7 +246,7 @@ module.exports = {
                             </ul>
                         </li>
                         <li>
-                            <span onclick="toggleSection('firefox-windows-list-1-6', event);" onkeydown="toggleSection('firefox-windows-list-1-6', event);" class="faq-title magic-invisible">Verify Installation</span>
+                            <span onclick="toggleSection('firefox-windows-list-1-6', event);" onkeydown="toggleSection('firefox-windows-list-1-6', event);" class="lesson-title magic-invisible">Verify Installation</span>
                             <ul id="firefox-windows-list-1-6" class="hidden">
                                 <li>In Firefox, click the menu button (three horizontal lines) in the top-right corner</li>
                                 <li>Click "Help" → "About Firefox"</li>
@@ -254,17 +260,17 @@ module.exports = {
                     tool_id: 'nodejs',
                     tool_name: 'Node.js',
                     tool_content: `<div id="nodejs-windows">
-                    <h4 class="faq-title">Check whether Node.js is already installed</h4>
+                    <h4 class="lesson-title">Check whether Node.js is already installed</h4>
                     <ul>
                         <li>Press <code>Windows key + R</code></li>
                         <li>Type <code>cmd</code> and press Enter to open Command Prompt</li>
                         <li>Type <code>node --version</code> and press Enter</li>
                         <li>If you see a version number, you have it installed. If you get an error message, you need to install it.</li>
                     </ul>
-                    <h4 onclick="toggleSection('nodejs-windows-list-1', event);" onkeydown="toggleSection('nodejs-windows-list-1', event);" class="faq-title magic-invisible">If you need to install Node.js, follow these steps</h4>
+                    <h4 onclick="toggleSection('nodejs-windows-list-1', event);" onkeydown="toggleSection('nodejs-windows-list-1', event);" class="lesson-title magic-invisible">If you need to install Node.js, follow these steps</h4>
                     <ol id="nodejs-windows-list-1" class="hidden">
                         <li>
-                            <span onclick="toggleSection('nodejs-windows-list-1-1', event);" onkeydown="toggleSection('nodejs-windows-list-1-1', event);" class="faq-title magic-invisible">Download Node.js from the Official Website</span>
+                            <span onclick="toggleSection('nodejs-windows-list-1-1', event);" onkeydown="toggleSection('nodejs-windows-list-1-1', event);" class="lesson-title magic-invisible">Download Node.js from the Official Website</span>
                             <ul id="nodejs-windows-list-1-1" class="hidden">
                                 <li>Open your web browser</li>
                                 <li>Go to <a href="https://nodejs.org/" target="_blank" rel="noopener noreferrer">https://nodejs.org/</a></li>
@@ -279,7 +285,7 @@ module.exports = {
                             </ul>
                         </li>
                         <li>
-                            <span onclick="toggleSection('nodejs-windows-list-1-2', event);" onkeydown="toggleSection('nodejs-windows-list-1-2', event);" class="faq-title magic-invisible">Run the Installer</span>
+                            <span onclick="toggleSection('nodejs-windows-list-1-2', event);" onkeydown="toggleSection('nodejs-windows-list-1-2', event);" class="lesson-title magic-invisible">Run the Installer</span>
                             <ul id="nodejs-windows-list-1-2" class="hidden">
                                 <li>Open your Downloads folder (press <code>Windows key + E</code>, then click Downloads)</li>
                                 <li>Double-click the Node.js installer file you just downloaded</li>
@@ -287,27 +293,27 @@ module.exports = {
                             </ul>
                         </li>
                         <li>
-                            <span onclick="toggleSection('nodejs-windows-list-1-3', event);" onkeydown="toggleSection('nodejs-windows-list-1-3', event);" class="faq-title magic-invisible">Setup Wizard - Welcome</span>
+                            <span onclick="toggleSection('nodejs-windows-list-1-3', event);" onkeydown="toggleSection('nodejs-windows-list-1-3', event);" class="lesson-title magic-invisible">Setup Wizard - Welcome</span>
                             <ul id="nodejs-windows-list-1-3" class="hidden">
                                 <li>Click "Next" on the welcome screen</li>
                             </ul>
                         </li>
                         <li>
-                            <span onclick="toggleSection('nodejs-windows-list-1-4', event);" onkeydown="toggleSection('nodejs-windows-list-1-4', event);" class="faq-title magic-invisible">Setup Wizard - License Agreement</span>
+                            <span onclick="toggleSection('nodejs-windows-list-1-4', event);" onkeydown="toggleSection('nodejs-windows-list-1-4', event);" class="lesson-title magic-invisible">Setup Wizard - License Agreement</span>
                             <ul id="nodejs-windows-list-1-4" class="hidden">
                                 <li>Check "I accept the terms in the License Agreement"</li>
                                 <li>Click "Next"</li>
                             </ul>
                         </li>
                         <li>
-                            <span onclick="toggleSection('nodejs-windows-list-1-5', event);" onkeydown="toggleSection('nodejs-windows-list-1-5', event);" class="faq-title magic-invisible">Setup Wizard - Destination Folder</span>
+                            <span onclick="toggleSection('nodejs-windows-list-1-5', event);" onkeydown="toggleSection('nodejs-windows-list-1-5', event);" class="lesson-title magic-invisible">Setup Wizard - Destination Folder</span>
                             <ul id="nodejs-windows-list-1-5" class="hidden">
                                 <li>Default location is fine (usually <code>C:\Program Files\nodejs\</code>)</li>
                                 <li>Click "Next"</li>
                             </ul>
                         </li>
                         <li>
-                            <span onclick="toggleSection('nodejs-windows-list-1-6', event);" onkeydown="toggleSection('nodejs-windows-list-1-6', event);" class="faq-title magic-invisible">Setup Wizard - Custom Setup</span>
+                            <span onclick="toggleSection('nodejs-windows-list-1-6', event);" onkeydown="toggleSection('nodejs-windows-list-1-6', event);" class="lesson-title magic-invisible">Setup Wizard - Custom Setup</span>
                             <ul id="nodejs-windows-list-1-6" class="hidden">
                                 <li>Keep all default features selected
                                     <ul>
@@ -321,7 +327,7 @@ module.exports = {
                             </ul>
                         </li>
                         <li>
-                            <span onclick="toggleSection('nodejs-windows-list-1-7', event);" onkeydown="toggleSection('nodejs-windows-list-1-7', event);" class="faq-title magic-invisible">Setup Wizard - Tools for Native Modules</span>
+                            <span onclick="toggleSection('nodejs-windows-list-1-7', event);" onkeydown="toggleSection('nodejs-windows-list-1-7', event);" class="lesson-title magic-invisible">Setup Wizard - Tools for Native Modules</span>
                             <ul id="nodejs-windows-list-1-7" class="hidden">
                                 <li>You can optionally check "Automatically install the necessary tools" (this installs Python and Visual Studio Build Tools)</li>
                                 <li>For basic web development, you can skip this</li>
@@ -329,7 +335,7 @@ module.exports = {
                             </ul>
                         </li>
                         <li>
-                            <span onclick="toggleSection('nodejs-windows-list-1-8', event);" onkeydown="toggleSection('nodejs-windows-list-1-8', event);" class="faq-title magic-invisible">Install</span>
+                            <span onclick="toggleSection('nodejs-windows-list-1-8', event);" onkeydown="toggleSection('nodejs-windows-list-1-8', event);" class="lesson-title magic-invisible">Install</span>
                             <ul id="nodejs-windows-list-1-8" class="hidden">
                                 <li>Click "Install"</li>
                                 <li>Wait for installation to complete (takes about 1-2 minutes)</li>
@@ -337,7 +343,7 @@ module.exports = {
                             </ul>
                         </li>
                         <li>
-                            <span onclick="toggleSection('nodejs-windows-list-1-9', event);" onkeydown="toggleSection('nodejs-windows-list-1-9', event);" class="faq-title magic-invisible">Verify Installation</span>
+                            <span onclick="toggleSection('nodejs-windows-list-1-9', event);" onkeydown="toggleSection('nodejs-windows-list-1-9', event);" class="lesson-title magic-invisible">Verify Installation</span>
                             <ul id="nodejs-windows-list-1-9" class="hidden">
                                 <li>Close any open Command Prompt windows</li>
                                 <li>Press <code>Windows key + R</code>, type <code>cmd</code>, press Enter</li>
@@ -352,7 +358,7 @@ module.exports = {
                             </ul>
                         </li>
                         <li>
-                            <span onclick="toggleSection('nodejs-windows-list-1-10', event);" onkeydown="toggleSection('nodejs-windows-list-1-10', event);" class="faq-title magic-invisible">Test Node.js (Optional)</span>
+                            <span onclick="toggleSection('nodejs-windows-list-1-10', event);" onkeydown="toggleSection('nodejs-windows-list-1-10', event);" class="lesson-title magic-invisible">Test Node.js (Optional)</span>
                             <ul id="nodejs-windows-list-1-10" class="hidden">
                                 <li>In Command Prompt, type
                                     <pre><code>node -e "console.log('Node.js is working!')"</code></pre>
@@ -361,7 +367,7 @@ module.exports = {
                             </ul>
                         </li>
                         <li>
-                            <span onclick="toggleSection('nodejs-windows-list-1-11', event);" onkeydown="toggleSection('nodejs-windows-list-1-11', event);" class="faq-title magic-invisible">Create a Simple Test Server (Optional)</span>
+                            <span onclick="toggleSection('nodejs-windows-list-1-11', event);" onkeydown="toggleSection('nodejs-windows-list-1-11', event);" class="lesson-title magic-invisible">Create a Simple Test Server (Optional)</span>
                             <ul id="nodejs-windows-list-1-11" class="hidden">
                                 <li>Create a test folder: <code>mkdir C:\test-nodejs</code></li>
                                 <li>Navigate to it: <code>cd C:\test-nodejs</code></li>
@@ -385,17 +391,17 @@ echo const http = require('http'); http.createServer((req, res) =&gt; {res.write
                     tool_id: 'git',
                     tool_name: 'Git',
                     tool_content: `<div id="git-windows">
-                    <h4 class="faq-title">Check whether Git is already installed</h4>
+                    <h4 class="lesson-title">Check whether Git is already installed</h4>
                     <ul>
                         <li>Press <code>Windows key + R</code></li>
                         <li>Type <code>cmd</code> and press Enter to open Command Prompt</li>
                         <li>Type <code>git --version</code> and press Enter</li>
                         <li>If you see a version number, you have it installed. If you get an error message, you need to install it.</li>
                     </ul>
-                    <h4 onclick="toggleSection('git-windows-list-1', event);" onkeydown="toggleSection('git-windows-list-1', event);" class="faq-title magic-invisible">If you need to install Git, follow these steps:</h4>
+                    <h4 onclick="toggleSection('git-windows-list-1', event);" onkeydown="toggleSection('git-windows-list-1', event);" class="lesson-title magic-invisible">If you need to install Git, follow these steps:</h4>
                     <ol id="git-windows-list-1" class="hidden">
                         <li>
-                            <span onclick="toggleSection('git-windows-list-1-1', event);" onkeydown="toggleSection('git-windows-list-1-1', event);" class="faq-title magic-invisible">Download Git from the Official Website</span>
+                            <span onclick="toggleSection('git-windows-list-1-1', event);" onkeydown="toggleSection('git-windows-list-1-1', event);" class="lesson-title magic-invisible">Download Git from the Official Website</span>
                             <ul id="git-windows-list-1-1" class="hidden">
                                 <li>Open your web browser</li>
                                 <li>Go to <a href="https://git-scm.com/" target="_blank" rel="noopener noreferrer">https://git-scm.com/</a></li>
@@ -404,7 +410,7 @@ echo const http = require('http'); http.createServer((req, res) =&gt; {res.write
                             </ul>
                         </li>
                         <li>
-                            <span onclick="toggleSection('git-windows-list-1-2', event);" onkeydown="toggleSection('git-windows-list-1-2', event);" class="faq-title magic-invisible">Run the Installer</span>
+                            <span onclick="toggleSection('git-windows-list-1-2', event);" onkeydown="toggleSection('git-windows-list-1-2', event);" class="lesson-title magic-invisible">Run the Installer</span>
                             <ul id="git-windows-list-1-2" class="hidden">
                                 <li>Open your Downloads folder (press <code>Windows key + E</code>, then click Downloads)</li>
                                 <li>Double-click the Git installer file you just downloaded</li>
@@ -412,21 +418,21 @@ echo const http = require('http'); http.createServer((req, res) =&gt; {res.write
                             </ul>
                         </li>
                         <li>
-                            <span onclick="toggleSection('git-windows-list-1-3', event);" onkeydown="toggleSection('git-windows-list-1-3', event);" class="faq-title magic-invisible">Setup Wizard - License</span>
+                            <span onclick="toggleSection('git-windows-list-1-3', event);" onkeydown="toggleSection('git-windows-list-1-3', event);" class="lesson-title magic-invisible">Setup Wizard - License</span>
                             <ul id="git-windows-list-1-3" class="hidden">
                                 <li>Read the GNU General Public License</li>
                                 <li>Click Next</li>
                             </ul>
                         </li>
                         <li>
-                            <span onclick="toggleSection('git-windows-list-1-4', event);" onkeydown="toggleSection('git-windows-list-1-4', event);" class="faq-title magic-invisible">Setup Wizard - Installation Location</span>
+                            <span onclick="toggleSection('git-windows-list-1-4', event);" onkeydown="toggleSection('git-windows-list-1-4', event);" class="lesson-title magic-invisible">Setup Wizard - Installation Location</span>
                             <ul id="git-windows-list-1-4" class="hidden">
                                 <li>Default location is fine (<code>C:\Program Files\Git</code>)</li>
                                 <li>Click Next</li>
                             </ul>
                         </li>
                         <li>
-                            <span onclick="toggleSection('git-windows-list-1-5', event);" onkeydown="toggleSection('git-windows-list-1-5', event);" class="faq-title magic-invisible">Setup Wizard - Select Components</span>
+                            <span onclick="toggleSection('git-windows-list-1-5', event);" onkeydown="toggleSection('git-windows-list-1-5', event);" class="lesson-title magic-invisible">Setup Wizard - Select Components</span>
                             <ul id="git-windows-list-1-5" class="hidden">
                                 <li>Keep the default selections (recommended)
                                     <ul>
@@ -441,28 +447,28 @@ echo const http = require('http'); http.createServer((req, res) =&gt; {res.write
                             </ul>
                         </li>
                         <li>
-                            <span onclick="toggleSection('git-windows-list-1-6', event);" onkeydown="toggleSection('git-windows-list-1-6', event);" class="faq-title magic-invisible">Setup Wizard - Start Menu Folder</span>
+                            <span onclick="toggleSection('git-windows-list-1-6', event);" onkeydown="toggleSection('git-windows-list-1-6', event);" class="lesson-title magic-invisible">Setup Wizard - Start Menu Folder</span>
                             <ul id="git-windows-list-1-6" class="hidden">
                                 <li>Default is fine ("Git")</li>
                                 <li>Click Next</li>
                             </ul>
                         </li>
                         <li>
-                            <span onclick="toggleSection('git-windows-list-1-7', event);" onkeydown="toggleSection('git-windows-list-1-7', event);" class="faq-title magic-invisible">Setup Wizard - Default Editor</span>
+                            <span onclick="toggleSection('git-windows-list-1-7', event);" onkeydown="toggleSection('git-windows-list-1-7', event);" class="lesson-title magic-invisible">Setup Wizard - Default Editor</span>
                             <ul id="git-windows-list-1-7" class="hidden">
                                 <li>Select "Use Visual Studio Code as Git's default editor" from the dropdown</li>
                                 <li>Click Next</li>
                             </ul>
                         </li>
                         <li>
-                            <span onclick="toggleSection('git-windows-list-1-8', event);" onkeydown="toggleSection('git-windows-list-1-8', event);" class="faq-title magic-invisible">Setup Wizard - Path Environment</span>
+                            <span onclick="toggleSection('git-windows-list-1-8', event);" onkeydown="toggleSection('git-windows-list-1-8', event);" class="lesson-title magic-invisible">Setup Wizard - Path Environment</span>
                             <ul id="git-windows-list-1-8" class="hidden">
                                 <li>Select "Git from the command line and also from 3rd-party software" (recommended)</li>
                                 <li>Click Next</li>
                             </ul>
                         </li>
                         <li>
-                            <span onclick="toggleSection('git-windows-list-1-9', event);" onkeydown="toggleSection('git-windows-list-1-9', event);" class="faq-title magic-invisible">Setup Wizard - Remaining Options</span>
+                            <span onclick="toggleSection('git-windows-list-1-9', event);" onkeydown="toggleSection('git-windows-list-1-9', event);" class="lesson-title magic-invisible">Setup Wizard - Remaining Options</span>
                             <ul id="git-windows-list-1-9" class="hidden">
                                 <li>For all remaining screens, keep the default settings</li>
                                 <li>Click Next through each screen</li>
@@ -472,7 +478,7 @@ echo const http = require('http'); http.createServer((req, res) =&gt; {res.write
                             </ul>
                         </li>
                         <li>
-                            <span onclick="toggleSection('git-windows-list-1-10', event);" onkeydown="toggleSection('git-windows-list-1-10', event);" class="faq-title magic-invisible">Configure Git</span>
+                            <span onclick="toggleSection('git-windows-list-1-10', event);" onkeydown="toggleSection('git-windows-list-1-10', event);" class="lesson-title magic-invisible">Configure Git</span>
                             <ul id="git-windows-list-1-10" class="hidden">
                                 <li>Press <code>Windows key + R</code></li>
                                 <li>Type <code>cmd</code> and press Enter</li>
@@ -486,7 +492,7 @@ echo const http = require('http'); http.createServer((req, res) =&gt; {res.write
                             </ul>
                         </li>
                         <li>
-                            <span onclick="toggleSection('git-windows-list-1-11', event);" onkeydown="toggleSection('git-windows-list-1-11', event);" class="faq-title magic-invisible">Verify Installation</span>
+                            <span onclick="toggleSection('git-windows-list-1-11', event);" onkeydown="toggleSection('git-windows-list-1-11', event);" class="lesson-title magic-invisible">Verify Installation</span>
                             <ul id="git-windows-list-1-11" class="hidden">
                                 <li>In the same Command Prompt, type:
                                     <pre><code>
@@ -509,17 +515,17 @@ git config --global --list
                     tool_id: 'sqlite',
                     tool_name: 'SQLite',
                     tool_content: `<div id="sqlite-windows">
-                    <h4 class="faq-title">Check whether SQLite is already installed</h4>
+                    <h4 class="lesson-title">Check whether SQLite is already installed</h4>
                     <ul>
                         <li>Press <code>Windows key + R</code></li>
                         <li>Type <code>cmd</code> and press Enter to open Command Prompt</li>
                         <li>Type <code>sqlite3 --version</code> and press Enter</li>
                         <li>If you see a version number, you have it installed. If you get an error message, you need to install it.</li>
                     </ul>
-                    <h4 onclick="toggleSection('sqlite-windows-list', event);" onkeydown="toggleSection('sqlite-windows-list', event);" class="faq-title magic-invisible">If you need to install SQLite, follow these steps</h4>
+                    <h4 onclick="toggleSection('sqlite-windows-list', event);" onkeydown="toggleSection('sqlite-windows-list', event);" class="lesson-title magic-invisible">If you need to install SQLite, follow these steps</h4>
                     <ol id="sqlite-windows-list" class="hidden">
                         <li>
-                            <span onclick="toggleSection('sqlite-windows-list-1', event);" onkeydown="toggleSection('sqlite-windows-list-1', event);" class="faq-title magic-invisible">Download SQLite from the Official Website</span>
+                            <span onclick="toggleSection('sqlite-windows-list-1', event);" onkeydown="toggleSection('sqlite-windows-list-1', event);" class="lesson-title magic-invisible">Download SQLite from the Official Website</span>
                             <ul id="sqlite-windows-list-1" class="hidden">
                                 <li>Open your web browser</li>
                                 <li>Go to <a href="https://www.sqlite.org/download.html" target="_blank" rel="noopener noreferrer">https://www.sqlite.org/download.html</a></li>
@@ -534,7 +540,7 @@ git config --global --list
                             </ul>
                         </li>
                         <li>
-                            <span onclick="toggleSection('sqlite-windows-list-2', event);" onkeydown="toggleSection('sqlite-windows-list-2', event);" class="faq-title magic-invisible">Create SQLite Directory</span>
+                            <span onclick="toggleSection('sqlite-windows-list-2', event);" onkeydown="toggleSection('sqlite-windows-list-2', event);" class="lesson-title magic-invisible">Create SQLite Directory</span>
                             <ul id="sqlite-windows-list-2" class="hidden">
                                 <li>Press <code>Windows key + E</code> to open File Explorer</li>
                                 <li>Navigate to your C: drive</li>
@@ -542,7 +548,7 @@ git config --global --list
                             </ul>
                         </li>
                         <li>
-                            <span onclick="toggleSection('sqlite-windows-list-3', event);" onkeydown="toggleSection('sqlite-windows-list-3', event);" class="faq-title magic-invisible">Extract SQLite Files</span>
+                            <span onclick="toggleSection('sqlite-windows-list-3', event);" onkeydown="toggleSection('sqlite-windows-list-3', event);" class="lesson-title magic-invisible">Extract SQLite Files</span>
                             <ul id="sqlite-windows-list-3" class="hidden">
                                 <li>Go to your Downloads folder</li>
                                 <li>Right-click <code>sqlite-tools-win32-x86-*.zip</code></li>
@@ -555,7 +561,7 @@ git config --global --list
                             </ul>
                         </li>
                         <li>
-                            <span onclick="toggleSection('sqlite-windows-list-4', event);" onkeydown="toggleSection('sqlite-windows-list-4', event);" class="faq-title magic-invisible">Add SQLite to System PATH</span>
+                            <span onclick="toggleSection('sqlite-windows-list-4', event);" onkeydown="toggleSection('sqlite-windows-list-4', event);" class="lesson-title magic-invisible">Add SQLite to System PATH</span>
                             <ul id="sqlite-windows-list-4" class="hidden">
                                 <li>Press <code>Windows key</code> and type "environment variables"</li>
                                 <li>Click "Edit the system environment variables"</li>
@@ -568,7 +574,7 @@ git config --global --list
                             </ul>
                         </li>
                         <li>
-                            <span onclick="toggleSection('sqlite-windows-list-5', event);" onkeydown="toggleSection('sqlite-windows-list-5', event);" class="faq-title magic-invisible">Verify Installation</span>
+                            <span onclick="toggleSection('sqlite-windows-list-5', event);" onkeydown="toggleSection('sqlite-windows-list-5', event);" class="lesson-title magic-invisible">Verify Installation</span>
                             <ul id="sqlite-windows-list-5" class="hidden">
                                 <li>Close any open Command Prompt windows</li>
                                 <li>Press <code>Windows key + R</code>, type <code>cmd</code>, press Enter</li>
@@ -579,7 +585,7 @@ git config --global --list
                             </ul>
                         </li>
                         <li>
-                            <span onclick="toggleSection('sqlite-windows-list-6', event);" onkeydown="toggleSection('sqlite-windows-list-6', event);" class="faq-title magic-invisible">Test SQLite (Optional)</span>
+                            <span onclick="toggleSection('sqlite-windows-list-6', event);" onkeydown="toggleSection('sqlite-windows-list-6', event);" class="lesson-title magic-invisible">Test SQLite (Optional)</span>
                             <ul id="sqlite-windows-list-6" class="hidden">
                                 <li>In Command Prompt, type:
                                     <pre><code>sqlite3</code></pre>
@@ -593,7 +599,7 @@ git config --global --list
                             </ul>
                         </li>
                         <li>
-                            <span onclick="toggleSection('sqlite-windows-list-7', event);" onkeydown="toggleSection('sqlite-windows-list-7', event);" class="faq-title magic-invisible">Create a Test Database (Optional)</span>
+                            <span onclick="toggleSection('sqlite-windows-list-7', event);" onkeydown="toggleSection('sqlite-windows-list-7', event);" class="lesson-title magic-invisible">Create a Test Database (Optional)</span>
                             <ul id="sqlite-windows-list-7" class="hidden">
                                 <li>In Command Prompt, navigate to a test folder:
                                     <pre><code>
@@ -619,27 +625,270 @@ SELECT * FROM users;
                         </li>
                     </ol>
                 </div>`
+                },
+                {
+                    tool_id: 'vsc-extensions',
+                    tool_name: 'Visual Studio Code Extensions',
+                    aria_label: 'Visual Studio Code Extensions for Windows',
+                    tool_content: `<div id="extensions-windows">
+                    <p>VS Code extensions add extra features and functionality to your editor. Here are the recommended extensions for web development:</p>
+
+                    <h4 onclick="toggleSection('vsc-extensions-windows-list-1', event);" onkeydown="toggleSection('vsc-extensions-windows-list-1', event);" class="lesson-title magic-invisible">How to Install Extensions</h4>
+                    <ol id="vsc-extensions-windows-list-1" class="hidden">
+                        <li>
+                            <span onclick="toggleSection('vsc-extensions-windows-list-1-1', event);" onkeydown="toggleSection('vsc-extensions-windows-list-1-1', event);" class="lesson-title magic-invisible">Open Extensions Panel</span>
+                            <ul id="vsc-extensions-windows-list-1-1" class="hidden">
+                                <li>Open VS Code</li>
+                                <li>Press <code>Ctrl + Shift + X</code> to open the Extensions panel, or</li>
+                                <li>Click the Extensions icon in the left sidebar (looks like four squares)</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span onclick="toggleSection('vsc-extensions-windows-list-1-2', event);" onkeydown="toggleSection('vsc-extensions-windows-list-1-2', event);" class="lesson-title magic-invisible">Search and Install</span>
+                            <ul id="vsc-extensions-windows-list-1-2" class="hidden">
+                                <li>Type the extension name in the search box</li>
+                                <li>Be careful! Some extensions may have similar names. Check the extension publisher to ensure you are installing the correct one</li>
+                                <li>Click the "Install" button for the extension you want</li>
+                                <li>Wait for installation to complete</li>
+                                <li>Some extensions may require VS Code to reload</li>
+                            </ul>
+                        </li>
+                    </ol>
+
+                    <h4 onclick="toggleSection('vsc-extensions-windows-list-2', event);" onkeydown="toggleSection('vsc-extensions-windows-list-2', event);" class="lesson-title magic-invisible">Recommended Extensions (Install Now)</h4>
+                    <ol id="vsc-extensions-windows-list-2" class="hidden">
+                        <li>
+                            <span onclick="toggleSection('vsc-extensions-windows-list-2-1', event);" onkeydown="toggleSection('vsc-extensions-windows-list-2-1', event);" class="lesson-title magic-invisible">Live Server</span> (ritwickdey.LiveServer)
+                            <ul id="vsc-extensions-windows-list-2-1" class="hidden">
+                                <li>Launches a local development server with live reload</li>
+                                <li>Your browser automatically refreshes when you save changes</li>
+                                <li>Essential for testing HTML/CSS/JavaScript</li>
+                                <li>To use: Right-click an HTML file and select "Open with Live Server"</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span onclick="toggleSection('vsc-extensions-windows-list-2-2', event);" onkeydown="toggleSection('vsc-extensions-windows-list-2-2', event);" class="lesson-title magic-invisible">Prettier - Code formatter</span> (esbenp.prettier-vscode)
+                            <ul id="vsc-extensions-windows-list-2-2" class="hidden">
+                                <li>Automatically formats your code consistently</li>
+                                <li>Makes your code easier to read</li>
+                                <li>After installing, you can format by pressing <code>Shift + Alt + F</code></li>
+                                <li>Enable "Format On Save" in settings for automatic formatting</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span onclick="toggleSection('vsc-extensions-windows-list-2-3', event);" onkeydown="toggleSection('vsc-extensions-windows-list-2-3', event);" class="lesson-title magic-invisible">Auto Rename Tag</span> (formulahendry.auto-rename-tag)
+                            <ul id="vsc-extensions-windows-list-2-3" class="hidden">
+                                <li>Automatically renames paired HTML/XML tags</li>
+                                <li>When you rename an opening tag, the closing tag updates too</li>
+                                <li>Saves time and prevents errors</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span onclick="toggleSection('vsc-extensions-windows-list-2-4', event);" onkeydown="toggleSection('vsc-extensions-windows-list-2-4', event);" class="lesson-title magic-invisible">HTML CSS Support</span> (ecmel.vscode-html-css)
+                            <ul id="vsc-extensions-windows-list-2-4" class="hidden">
+                                <li>Provides better autocomplete for HTML class and ID attributes</li>
+                                <li>Suggests CSS classes from your stylesheets</li>
+                                <li>Makes writing HTML faster and more accurate</li>
+                            </ul>
+                        </li>
+                    </ol>
+
+                    <h4 onclick="toggleSection('vsc-extensions-windows-list-3', event);" onkeydown="toggleSection('vsc-extensions-windows-list-3', event);" class="lesson-title magic-invisible">Helpful Extensions</h4>
+                    <ol id="vsc-extensions-windows-list-3" class="hidden">
+                        <li>
+                            <span onclick="toggleSection('vsc-extensions-windows-list-3-1', event);" onkeydown="toggleSection('vsc-extensions-windows-list-3-1', event);" class="lesson-title magic-invisible">Path Intellisense</span> (christian-kohler.path-intellisense)
+                            <ul id="vsc-extensions-windows-list-3-1" class="hidden">
+                                <li>Autocompletes file paths in your code</li>
+                                <li>Helpful when linking CSS files, images, or other resources</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span onclick="toggleSection('vsc-extensions-windows-list-3-2', event);" onkeydown="toggleSection('vsc-extensions-windows-list-3-2', event);" class="lesson-title magic-invisible">Indent-Rainbow</span> (oderwat.indent-rainbow)
+                            <ul id="vsc-extensions-windows-list-3-2" class="hidden">
+                                <li>Colours indentation levels with subtle colours</li>
+                                <li>Makes code structure more visible</li>
+                                <li>Helps you spot indentation errors quickly</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span onclick="toggleSection('vsc-extensions-windows-list-3-3', event);" onkeydown="toggleSection('vsc-extensions-windows-list-3-3', event);" class="lesson-title magic-invisible">Error Lens</span> (usernamehw.errorlens)
+                            <ul id="vsc-extensions-windows-list-3-3" class="hidden">
+                                <li>Shows errors and warnings inline in your code</li>
+                                <li>Makes debugging easier by highlighting problems immediately</li>
+                            </ul>
+                        </li>
+                    </ol>
+
+                    <h4 onclick="toggleSection('vsc-extensions-windows-list-4', event);" onkeydown="toggleSection('vsc-extensions-windows-list-4', event);" class="lesson-title magic-invisible">For Later Lessons</h4>
+                    <div id="vsc-extensions-windows-list-4" class="hidden">
+                        <p>Install these when you reach the relevant lessons:</p>
+                        <ol>
+                            <li>
+                                <span onclick="toggleSection('vsc-extensions-windows-list-4-1', event);" onkeydown="toggleSection('vsc-extensions-windows-list-4-1', event);" class="lesson-title magic-invisible">ESLint</span> (dbaeumer.vscode-eslint)
+                                <ul id="vsc-extensions-windows-list-4-1" class="hidden">
+                                    <li>JavaScript and Node.js code quality and style checking</li>
+                                    <li>Install when you start learning JavaScript</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <span onclick="toggleSection('vsc-extensions-windows-list-4-2', event);" onkeydown="toggleSection('vsc-extensions-windows-list-4-2', event);" class="lesson-title magic-invisible">SQLite Viewer</span> (qwtel.sqlite-viewer)
+                                <ul id="vsc-extensions-windows-list-4-2" class="hidden">
+                                    <li>View and query SQLite databases directly in VS Code</li>
+                                    <li>Install when you start working with databases</li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </div>
+
+                    <h4 onclick="toggleSection('vsc-extensions-windows-list-5', event);" onkeydown="toggleSection('vsc-extensions-windows-list-5', event);" class="lesson-title magic-invisible">Optional Extensions</h4>
+                    <ol id="vsc-extensions-windows-list-5" class="hidden">
+                        <li>
+                            <span onclick="toggleSection('vsc-extensions-windows-list-5-1', event);" onkeydown="toggleSection('vsc-extensions-windows-list-5-1', event);" class="lesson-title magic-invisible">Better Comments</span> (aaron-bond.better-comments)
+                            <ul id="vsc-extensions-windows-list-5-1" class="hidden">
+                                <li>Colour-codes different types of comments (TODO, FIXME, etc.)</li>
+                                <li>Makes comments more organised and noticeable</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span onclick="toggleSection('vsc-extensions-windows-list-5-2', event);" onkeydown="toggleSection('vsc-extensions-windows-list-5-2', event);" class="lesson-title magic-invisible">axe Accessibility Linter</span> (deque-systems.vscode-axe-linter)
+                            <ul id="vsc-extensions-windows-list-5-2" class="hidden">
+                                <li>Checks HTML for accessibility issues</li>
+                                <li>Helps you build websites that everyone can use</li>
+                            </ul>
+                        </li>
+                    </ol>
+
+                    <h4 onclick="toggleSection('vsc-extensions-windows-list-6', event);" onkeydown="toggleSection('vsc-extensions-windows-list-6', event);" class="lesson-title magic-invisible">Configure Prettier (Recommended)</h4>
+                    <div id="vsc-extensions-windows-list-6" class="hidden">
+                        <p>To make Prettier format your code automatically when you save:</p>
+                        <ol>
+                            <li>Press <code>Ctrl + ,</code> to open Settings</li>
+                            <li>Search for "format on save"</li>
+                            <li>Check the box for "Editor: Format On Save"</li>
+                            <li>Search for "default formatter"</li>
+                            <li>Select "Prettier - Code formatter" from the dropdown</li>
+                        </ol>
+                    </div>
+                </div>`
+                },
+                {
+                    tool_id: 'projects-folder',
+                    tool_name: 'Create a Projects Folder',
+                    aria_label: 'Create a Projects Folder on Windows',
+                    tool_content: `<div id="projects-folder-windows">
+                    <p>It's helpful to keep all your coding projects organised in one place. Let's create a dedicated Projects folder:</p>
+                    <ol>
+                        <li>
+                            <span onclick="toggleSection('create-folder-windows-list-1', event);" onkeydown="toggleSection('create-folder-windows-list-1', event);" class="lesson-title magic-invisible">Open File Explorer</span>
+                            <ul id="create-folder-windows-list-1" class="hidden">
+                                <li>Press <code>Windows key + E</code> to open File Explorer</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span onclick="toggleSection('create-folder-windows-list-2', event);" onkeydown="toggleSection('create-folder-windows-list-2', event);" class="lesson-title magic-invisible">Navigate to Your User Folder</span>
+                            <ul id="create-folder-windows-list-2" class="hidden">
+                                <li>Click on "This PC" or "Computer" in the left sidebar</li>
+                                <li>Open the <code>C:</code> drive</li>
+                                <li>Open the <code>Users</code> folder</li>
+                                <li>Open the folder with your username</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span onclick="toggleSection('create-folder-windows-list-3', event);" onkeydown="toggleSection('create-folder-windows-list-3', event);" class="lesson-title magic-invisible">Create the Projects Folder</span>
+                            <ul id="create-folder-windows-list-3" class="hidden">
+                                <li>Right-click in an empty space</li>
+                                <li>Select "New" → "Folder"</li>
+                                <li>Name it <code>Projects</code></li>
+                                <li>Press Enter</li>
+                            </ul>
+                        </li>
+                    </ol>
+                    <p>Your Projects folder is now at: <code>C:\Users\YourUsername\Projects</code></p>
+                    <p>In future lessons, you'll save your coding projects in this folder.</p>
+                </div>`
+                },
+                {
+                    tool_id: 'dev-server',
+                    tool_name: 'Setting Up the Development Server',
+                    aria_label: 'Setting Up the Development Server on Windows',
+                    tool_content: `<div id="dev-server-windows">
+                    <p>To view your web pages as you develop them, you'll need to run a local development server. This is important because some web features don't work when opening HTML files directly in a browser. If you installed the Live Server extension in Visual Studio Code, you can skip this step as that will do the same thing. Using this method lets you run and test your web pages even if you are not using Visual Studio Code.</p>
+
+                    <h4 onclick="toggleSection('dev-server-windows-list-1', event);" onkeydown="toggleSection('dev-server-windows-list-1', event);" class="lesson-title magic-invisible">Create a package.json File</h4>
+                    <ol id="dev-server-windows-list-1" class="hidden">
+                        <li>Open Visual Studio Code</li>
+                        <li>Select <code>File → Open Folder</code></li>
+                        <li>Navigate to and select your <code>Projects</code> folder (<code>C:\Users\YourUsername\Projects</code>)</li>
+                        <li>Create a new file called <code>package.json</code> in the Projects folder</li>
+                        <li>Add the following content to the file:
+                            <div class="code-snippet-container">
+                                <script type="text/plain" class="code-snippet-source">{
+    "name": "my-web-projects",
+    "version": "1.0.0",
+    "description": "Web development projects",
+    "scripts": {
+        "start": "http-server -p 8000"
+    },
+    "devDependencies": {
+        "http-server": "^14.1.1"
+    }
+}
+                                </script>
+                                <div class="code-snippet-table"></div>
+                            </div>
+                        </li>
+                        <li>Save the file (<code>Ctrl + S</code>)</li>
+                    </ol>
+
+                    <h4 onclick="toggleSection('dev-server-windows-list-2', event);" onkeydown="toggleSection('dev-server-windows-list-2', event);" class="lesson-title magic-invisible">Install http-server</h4>
+                    <ol id="dev-server-windows-list-2" class="hidden">
+                        <li>Open the integrated terminal in VS Code by pressing <code>Ctrl + \`</code> (backtick key, usually above Tab)</li>
+                        <li>Make sure you're in your Projects folder (the terminal should show the path)</li>
+                        <li>Type <code>npm install</code> and press Enter</li>
+                        <li>Wait for the installation to complete (this installs http-server locally in your Projects folder)</li>
+                    </ol>
+
+                    <h4 onclick="toggleSection('dev-server-windows-list-3', event);" onkeydown="toggleSection('dev-server-windows-list-3', event);" class="lesson-title magic-invisible">Start the Development Server</h4>
+                    <ol id="dev-server-windows-list-3" class="hidden"   >
+                        <li>In the same terminal, type <code>npm start</code> and press Enter</li>
+                        <li>You should see a message saying the server is running on <code>http://localhost:8000</code></li>
+                        <li>Open your web browser and go to <code>http://localhost:8000</code></li>
+                        <li>You should see a directory listing of your Projects folder</li>
+                    </ol>
+
+                    <h4 onclick="toggleSection('dev-server-windows-list-4', event);" onkeydown="toggleSection('dev-server-windows-list-4', event);" class="lesson-title magic-invisible">Using the Development Server</h4>
+                    <ul id="dev-server-windows-list-4" class="hidden">
+                        <li>Keep the terminal open while you're working - the server needs to run continuously</li>
+                        <li>When you create HTML files in your Projects folder, you can access them through the browser at <code>http://localhost:8000/filename.html</code></li>
+                        <li>When you make changes to your files and save them, refresh your browser to see the changes</li>
+                        <li>To stop the server, press <code>Ctrl + C</code> in the terminal</li>
+                        <li>To restart the server later, just run <code>npm start</code> again from your Projects folder</li>
+                    </ul>
+                </div>`
                 }
             ]
         },
         {
             os_id: 'macos',
             os_name: 'macOS',
+            os_intro: `<p>
+                    The latest version of Apple's macOS is <strong>macOS Ventura</strong>, but you should be able to use recent versions as well. The lessons have not been tested on earlier versions of macOS, but they may work ok. On the next screens are the instructions for installing the recommended software on your macOS computer.
+                </p>`,
             tools: [
                 {
                     tool_id: 'vsc',
                     tool_name: 'Visual Studio Code',
                     tool_content: `<div id="vsc-macos">
-                    <h4 class="faq-title">Check whether Visual Studio Code is already installed:</h4>
+                    <h4 class="lesson-title">Check whether Visual Studio Code is already installed:</h4>
                     <ul>
                         <li>Open Finder</li>
                         <li>Go to the Applications folder</li>
                         <li>If you see Visual Studio Code.app, you have it installed. If not, you need to install it.</li>
                     </ul>
-                    <h4 onclick="toggleSection('vsc-macos-list-1', event);" onkeydown="toggleSection('vsc-macos-list-1', event);" class="faq-title magic-invisible">If you need to install Visual Studio Code, follow these steps:</h4>
+                    <h4 onclick="toggleSection('vsc-macos-list-1', event);" onkeydown="toggleSection('vsc-macos-list-1', event);" class="lesson-title magic-invisible">If you need to install Visual Studio Code, follow these steps:</h4>
                     <ol id="vsc-macos-list-1" class="hidden">
                         <li>
-                            <span onclick="toggleSection('vsc-macos-list-1-1', event);" onkeydown="toggleSection('vsc-macos-list-1-1', event);" class="faq-title magic-invisible">Download VS Code from the Official Website</span>
+                            <span onclick="toggleSection('vsc-macos-list-1-1', event);" onkeydown="toggleSection('vsc-macos-list-1-1', event);" class="lesson-title magic-invisible">Download VS Code from the Official Website</span>
                             <ul id="vsc-macos-list-1-1" class="hidden">
                                 <li>Open your web browser</li>
                                 <li>Go to <a href="https://code.visualstudio.com" target="_blank" rel="noopener noreferrer">https://code.visualstudio.com</a></li>
@@ -648,7 +897,7 @@ SELECT * FROM users;
                             </ul>
                         </li>
                         <li>
-                            <span onclick="toggleSection('vsc-macos-list-1-2', event);" onkeydown="toggleSection('vsc-macos-list-1-2', event);" class="faq-title magic-invisible">Extract the Application</span>
+                            <span onclick="toggleSection('vsc-macos-list-1-2', event);" onkeydown="toggleSection('vsc-macos-list-1-2', event);" class="lesson-title magic-invisible">Extract the Application</span>
                             <ul id="vsc-macos-list-1-2" class="hidden">
                                 <li>Open Finder and go to your Downloads folder</li>
                                 <li>Double-click the <code>VSCode-darwin-universal.zip</code> file to extract it</li>
@@ -656,7 +905,7 @@ SELECT * FROM users;
                             </ul>
                         </li>
                         <li>
-                            <span onclick="toggleSection('vsc-macos-list-1-3', event);" onkeydown="toggleSection('vsc-macos-list-1-3', event);" class="faq-title magic-invisible">Move to Applications Folder</span>
+                            <span onclick="toggleSection('vsc-macos-list-1-3', event);" onkeydown="toggleSection('vsc-macos-list-1-3', event);" class="lesson-title magic-invisible">Move to Applications Folder</span>
                             <ul id="vsc-macos-list-1-3" class="hidden">
                                 <li>Drag <code>Visual Studio Code.app</code> from Downloads to your Applications folder</li>
                                 <li>You can open Applications by pressing <code>Command + Shift + A</code> in Finder</li>
@@ -665,7 +914,7 @@ SELECT * FROM users;
                             </ul>
                         </li>
                         <li>
-                            <span onclick="toggleSection('vsc-macos-list-1-4', event);" onkeydown="toggleSection('vsc-macos-list-1-4', event);" class="faq-title magic-invisible">First Launch</span>
+                            <span onclick="toggleSection('vsc-macos-list-1-4', event);" onkeydown="toggleSection('vsc-macos-list-1-4', event);" class="lesson-title magic-invisible">First Launch</span>
                             <ul id="vsc-macos-list-1-4" class="hidden">
                                 <li>Open your Applications folder</li>
                                 <li>Double-click <code>Visual Studio Code</code></li>
@@ -674,7 +923,7 @@ SELECT * FROM users;
                             </ul>
                         </li>
                         <li>
-                            <span onclick="toggleSection('vsc-macos-list-1-5', event);" onkeydown="toggleSection('vsc-macos-list-1-5', event);" class="faq-title magic-invisible">Add to Dock (Optional)</span>
+                            <span onclick="toggleSection('vsc-macos-list-1-5', event);" onkeydown="toggleSection('vsc-macos-list-1-5', event);" class="lesson-title magic-invisible">Add to Dock (Optional)</span>
                             <ul id="vsc-macos-list-1-5" class="hidden">
                                 <li>While VS Code is running, right-click its icon in the Dock</li>
                                 <li>Select Options → Keep in Dock</li>
@@ -682,7 +931,7 @@ SELECT * FROM users;
                             </ul>
                         </li>
                         <li>
-                            <span onclick="toggleSection('vsc-macos-list-1-6', event);" onkeydown="toggleSection('vsc-macos-list-1-6', event);" class="faq-title magic-invisible">Install Command Line Tools (Recommended)</span>
+                            <span onclick="toggleSection('vsc-macos-list-1-6', event);" onkeydown="toggleSection('vsc-macos-list-1-6', event);" class="lesson-title magic-invisible">Install Command Line Tools (Recommended)</span>
                             <ul id="vsc-macos-list-1-6" class="hidden">
                                 <li>In VS Code, press <code>Command + Shift + P</code> to open the Command Palette</li>
                                 <li>Type <code>shell command</code></li>
@@ -692,7 +941,7 @@ SELECT * FROM users;
                             </ul>
                         </li>
                         <li>
-                            <span onclick="toggleSection('vsc-macos-list-1-7', event);" onkeydown="toggleSection('vsc-macos-list-1-7', event);" class="faq-title magic-invisible">Verify Installation</span>
+                            <span onclick="toggleSection('vsc-macos-list-1-7', event);" onkeydown="toggleSection('vsc-macos-list-1-7', event);" class="lesson-title magic-invisible">Verify Installation</span>
                             <ul id="vsc-macos-list-1-7" class="hidden">
                                 <li>Open Terminal (<code>Command + Space</code>, type "Terminal")</li>
                                 <li>Type <code>code --version</code> and press Enter</li>
@@ -706,16 +955,16 @@ SELECT * FROM users;
                     tool_id: 'firefox',
                     tool_name: 'Mozilla Firefox',
                     tool_content: `<div id="firefox-macos">
-                    <h4 class="faq-title">Check whether Firefox is already installed:</h4>
+                    <h4 class="lesson-title">Check whether Firefox is already installed:</h4>
                     <ul>
                         <li>Open Finder</li>
                         <li>Go to the Applications folder</li>
                         <li>If you see Firefox.app, you have it installed. If not, you need to install it.</li>
                     </ul>
-                    <h4 onclick="toggleSection('firefox-macos-list-1', event);" onkeydown="toggleSection('firefox-macos-list-1', event);" class="faq-title magic-invisible">If you need to install Firefox, follow these steps:</h4>
+                    <h4 onclick="toggleSection('firefox-macos-list-1', event);" onkeydown="toggleSection('firefox-macos-list-1', event);" class="lesson-title magic-invisible">If you need to install Firefox, follow these steps:</h4>
                     <ol id="firefox-macos-list-1" class="hidden">
                         <li>
-                            <span onclick="toggleSection('firefox-macos-list-1-1', event);" onkeydown="toggleSection('firefox-macos-list-1-1', event);" class="faq-title magic-invisible">Download Firefox from the Official Website</span>
+                            <span onclick="toggleSection('firefox-macos-list-1-1', event);" onkeydown="toggleSection('firefox-macos-list-1-1', event);" class="lesson-title magic-invisible">Download Firefox from the Official Website</span>
                             <ul id="firefox-macos-list-1-1" class="hidden">
                                 <li>Open Safari or another browser</li>
                                 <li>Go to <a href="https://www.mozilla.org/firefox/" target="_blank" rel="noopener noreferrer">https://www.mozilla.org/firefox/</a></li>
@@ -724,7 +973,7 @@ SELECT * FROM users;
                             </ul>
                         </li>
                         <li>
-                            <span onclick="toggleSection('firefox-macos-list-1-2', event);" onkeydown="toggleSection('firefox-macos-list-1-2', event);" class="faq-title magic-invisible">Open the Disk Image</span>
+                            <span onclick="toggleSection('firefox-macos-list-1-2', event);" onkeydown="toggleSection('firefox-macos-list-1-2', event);" class="lesson-title magic-invisible">Open the Disk Image</span>
                             <ul id="firefox-macos-list-1-2" class="hidden">
                                 <li>Open Finder and go to your Downloads folder</li>
                                 <li>Double-click the <code>Firefox [version].dmg</code> file</li>
@@ -732,7 +981,7 @@ SELECT * FROM users;
                             </ul>
                         </li>
                         <li>
-                            <span onclick="toggleSection('firefox-macos-list-1-3', event);" onkeydown="toggleSection('firefox-macos-list-1-3', event);" class="faq-title magic-invisible">Install Firefox</span>
+                            <span onclick="toggleSection('firefox-macos-list-1-3', event);" onkeydown="toggleSection('firefox-macos-list-1-3', event);" class="lesson-title magic-invisible">Install Firefox</span>
                             <ul id="firefox-macos-list-1-3" class="hidden">
                                 <li>Drag the Firefox icon to the Applications folder icon</li>
                                 <li>Wait for the copy to complete (takes a few seconds)</li>
@@ -740,7 +989,7 @@ SELECT * FROM users;
                             </ul>
                         </li>
                         <li>
-                            <span onclick="toggleSection('firefox-macos-list-1-4', event);" onkeydown="toggleSection('firefox-macos-list-1-4', event);" class="faq-title magic-invisible">Eject the Disk Image</span>
+                            <span onclick="toggleSection('firefox-macos-list-1-4', event);" onkeydown="toggleSection('firefox-macos-list-1-4', event);" class="lesson-title magic-invisible">Eject the Disk Image</span>
                             <ul id="firefox-macos-list-1-4" class="hidden">
                                 <li>In Finder's sidebar, find the Firefox disk image</li>
                                 <li>Click the eject button next to it</li>
@@ -748,7 +997,7 @@ SELECT * FROM users;
                             </ul>
                         </li>
                         <li>
-                            <span onclick="toggleSection('firefox-macos-list-1-5', event);" onkeydown="toggleSection('firefox-macos-list-1-5', event);" class="faq-title magic-invisible">First Launch</span>
+                            <span onclick="toggleSection('firefox-macos-list-1-5', event);" onkeydown="toggleSection('firefox-macos-list-1-5', event);" class="lesson-title magic-invisible">First Launch</span>
                             <ul id="firefox-macos-list-1-5" class="hidden">
                                 <li>Open your Applications folder</li>
                                 <li>Double-click <code>Firefox</code></li>
@@ -759,7 +1008,7 @@ SELECT * FROM users;
                             </ul>
                         </li>
                         <li>
-                            <span onclick="toggleSection('firefox-macos-list-1-6', event);" onkeydown="toggleSection('firefox-macos-list-1-6', event);" class="faq-title magic-invisible">Add to Dock (Optional)</span>
+                            <span onclick="toggleSection('firefox-macos-list-1-6', event);" onkeydown="toggleSection('firefox-macos-list-1-6', event);" class="lesson-title magic-invisible">Add to Dock (Optional)</span>
                             <ul id="firefox-macos-list-1-6" class="hidden">
                                 <li>While Firefox is running, right-click its icon in the Dock</li>
                                 <li>Select Options → Keep in Dock</li>
@@ -767,7 +1016,7 @@ SELECT * FROM users;
                             </ul>
                         </li>
                         <li>
-                            <span onclick="toggleSection('firefox-macos-list-1-7', event);" onkeydown="toggleSection('firefox-macos-list-1-7', event);" class="faq-title magic-invisible">Verify Installation</span>
+                            <span onclick="toggleSection('firefox-macos-list-1-7', event);" onkeydown="toggleSection('firefox-macos-list-1-7', event);" class="lesson-title magic-invisible">Verify Installation</span>
                             <ul id="firefox-macos-list-1-7" class="hidden">
                                 <li>In Firefox, click the menu button (three horizontal lines) in the top-right corner</li>
                                 <li>Click "Firefox" → "About Firefox"</li>
@@ -781,18 +1030,18 @@ SELECT * FROM users;
                     tool_id: 'nodejs',
                     tool_name: 'Node.js',
                     tool_content: `<div id="nodejs-macos">
-                    <h4 class="faq-title">Check whether Node.js is already installed:</h4>
+                    <h4 class="lesson-title">Check whether Node.js is already installed:</h4>
                     <ul>
                         <li>Open Terminal (<code>Command + Space</code>, type "Terminal")</li>
                         <li>Type <code>node --version</code> and press Enter</li>
                         <li>If you see a version number, you have Node.js installed.</li>
                     </ul>
-                    <h4 onclick="toggleSection('nodejs-macos-list-1', event);" onkeydown="toggleSection('nodejs-macos-list-1', event);" class="faq-title magic-invisible">If you need to install Node.js, you have two options:</h4>
+                    <h4 onclick="toggleSection('nodejs-macos-list-1', event);" onkeydown="toggleSection('nodejs-macos-list-1', event);" class="lesson-title magic-invisible">If you need to install Node.js, you have two options:</h4>
                     <div id="nodejs-macos-list-1" class="hidden">
-                        <h5 onclick="toggleSection('nodejs-macos-list-1-1', event);" onkeydown="toggleSection('nodejs-macos-list-1-1', event);" class="faq-title magic-invisible">Option 1: Download from Official Website (Recommended for Beginners)</h5>
+                        <h5 onclick="toggleSection('nodejs-macos-list-1-1', event);" onkeydown="toggleSection('nodejs-macos-list-1-1', event);" class="lesson-title magic-invisible">Option 1: Download from Official Website (Recommended for Beginners)</h5>
                         <ol id="nodejs-macos-list-1-1" class="hidden">
                             <li>
-                                <span onclick="toggleSection('nodejs-macos-list-1-1-1', event);" onkeydown="toggleSection('nodejs-macos-list-1-1-1', event);" class="faq-title magic-invisible">Download Node.js</span>
+                                <span onclick="toggleSection('nodejs-macos-list-1-1-1', event);" onkeydown="toggleSection('nodejs-macos-list-1-1-1', event);" class="lesson-title magic-invisible">Download Node.js</span>
                                 <ul id="nodejs-macos-list-1-1-1" class="hidden">
                                     <li>Open your browser</li>
                                     <li>Go to <a href="https://nodejs.org/" target="_blank" rel="noopener noreferrer">https://nodejs.org/</a></li>
@@ -807,7 +1056,7 @@ SELECT * FROM users;
                                 </ul>
                             </li>
                             <li>
-                                <span onclick="toggleSection('nodejs-macos-list-1-1-2', event);" onkeydown="toggleSection('nodejs-macos-list-1-1-2', event);" class="faq-title magic-invisible">Install Node.js</span>
+                                <span onclick="toggleSection('nodejs-macos-list-1-1-2', event);" onkeydown="toggleSection('nodejs-macos-list-1-1-2', event);" class="lesson-title magic-invisible">Install Node.js</span>
                                 <ul id="nodejs-macos-list-1-1-2" class="hidden">
                                     <li>Open the downloaded <code>.pkg</code> file</li>
                                     <li>Click "Continue" through the installation wizard</li>
@@ -820,10 +1069,10 @@ SELECT * FROM users;
                                 </ul>
                             </li>
                             <li>
-                                <span onclick="toggleSection('nodejs-macos-list-1-1-3', event);" onkeydown="toggleSection('nodejs-macos-list-1-1-3', event);" class="faq-title magic-invisible">Verify Installation</span>
+                                <span onclick="toggleSection('nodejs-macos-list-1-1-3', event);" onkeydown="toggleSection('nodejs-macos-list-1-1-3', event);" class="lesson-title magic-invisible">Verify Installation</span>
                                 <ol id="nodejs-macos-list-1-1-3" class="hidden">
                                     <li>
-                                        <span onclick="toggleSection('nodejs-macos-list-1-1-3-1', event);" onkeydown="toggleSection('nodejs-macos-list-1-1-3-1', event);" class="faq-title magic-invisible">Check Node.js and npm</span>
+                                        <span onclick="toggleSection('nodejs-macos-list-1-1-3-1', event);" onkeydown="toggleSection('nodejs-macos-list-1-1-3-1', event);" class="lesson-title magic-invisible">Check Node.js and npm</span>
                                         <ul id="nodejs-macos-list-1-1-3-1" class="hidden">
                                             <li>Close and reopen Terminal</li>
                                             <li>Check Node.js version:
@@ -846,7 +1095,7 @@ which node
                                         </ul>
                                     </li>
                                     <li>
-                                        <span onclick="toggleSection('nodejs-macos-list-1-1-3-2', event);" onkeydown="toggleSection('nodejs-macos-list-1-1-3-2', event);" class="faq-title magic-invisible">Test Node.js</span>
+                                        <span onclick="toggleSection('nodejs-macos-list-1-1-3-2', event);" onkeydown="toggleSection('nodejs-macos-list-1-1-3-2', event);" class="lesson-title magic-invisible">Test Node.js</span>
                                         <ul id="nodejs-macos-list-1-1-3-2" class="hidden">
                                             <li>Run a simple Node.js command:
                                                 <pre><code>
@@ -857,7 +1106,7 @@ node -e "console.log('Node.js is working!')"
                                         </ul>
                                     </li>
                                     <li>
-                                        <span onclick="toggleSection('nodejs-macos-list-1-1-3-3', event);" onkeydown="toggleSection('nodejs-macos-list-1-1-3-3', event);" class="faq-title magic-invisible">Create a Simple Test Server (Optional)</span>
+                                        <span onclick="toggleSection('nodejs-macos-list-1-1-3-3', event);" onkeydown="toggleSection('nodejs-macos-list-1-1-3-3', event);" class="lesson-title magic-invisible">Create a Simple Test Server (Optional)</span>
                                         <ul id="nodejs-macos-list-1-1-3-3" class="hidden">
                                             <li>Create a test directory:
                                                 <pre><code>
@@ -883,10 +1132,10 @@ node server.js
                             </li>
                         </ol>
 
-                        <h5 onclick="toggleSection('nodejs-macos-list-1-2', event);" onkeydown="toggleSection('nodejs-macos-list-1-2', event);" class="faq-title magic-invisible">Option 2: Install via Homebrew</h5>
+                        <h5 onclick="toggleSection('nodejs-macos-list-1-2', event);" onkeydown="toggleSection('nodejs-macos-list-1-2', event);" class="lesson-title magic-invisible">Option 2: Install via Homebrew</h5>
                         <ol id="nodejs-macos-list-1-2" class="hidden">
                             <li>
-                                <span onclick="toggleSection('nodejs-macos-list-1-2-1', event);" onkeydown="toggleSection('nodejs-macos-list-1-2-1', event);" class="faq-title magic-invisible">Install Homebrew (if not already installed)</span>
+                                <span onclick="toggleSection('nodejs-macos-list-1-2-1', event);" onkeydown="toggleSection('nodejs-macos-list-1-2-1', event);" class="lesson-title magic-invisible">Install Homebrew (if not already installed)</span>
                                 <ul id="nodejs-macos-list-1-2-1" class="hidden">
                                     <li>Open Terminal</li>
                                     <li>Check if Homebrew is installed:
@@ -903,7 +1152,7 @@ brew --version
                                 </ul>
                             </li>
                             <li>
-                                <span onclick="toggleSection('nodejs-macos-list-1-2-2', event);" onkeydown="toggleSection('nodejs-macos-list-1-2-2', event);" class="faq-title magic-invisible">Install Node.js with Homebrew</span>
+                                <span onclick="toggleSection('nodejs-macos-list-1-2-2', event);" onkeydown="toggleSection('nodejs-macos-list-1-2-2', event);" class="lesson-title magic-invisible">Install Node.js with Homebrew</span>
                                 <ul id="nodejs-macos-list-1-2-2" class="hidden">
                                     <li>Run this command:
                                         <pre><code>
@@ -914,10 +1163,10 @@ brew install node
                                 </ul>
                             </li>
                             <li>
-                                <span onclick="toggleSection('nodejs-macos-list-1-2-3', event);" onkeydown="toggleSection('nodejs-macos-list-1-2-3', event);" class="faq-title magic-invisible">Verify Installation</span>
+                                <span onclick="toggleSection('nodejs-macos-list-1-2-3', event);" onkeydown="toggleSection('nodejs-macos-list-1-2-3', event);" class="lesson-title magic-invisible">Verify Installation</span>
                                 <ol id="nodejs-macos-list-1-2-3" class="hidden">
                                     <li>
-                                        <span onclick="toggleSection('nodejs-macos-list-1-2-3-1', event);" onkeydown="toggleSection('nodejs-macos-list-1-2-3-1', event);" class="faq-title magic-invisible">Check Node.js and npm</span>
+                                        <span onclick="toggleSection('nodejs-macos-list-1-2-3-1', event);" onkeydown="toggleSection('nodejs-macos-list-1-2-3-1', event);" class="lesson-title magic-invisible">Check Node.js and npm</span>
                                         <ul id="nodejs-macos-list-1-2-3-1" class="hidden">
                                             <li>Close and reopen Terminal</li>
                                             <li>Check Node.js version:
@@ -940,7 +1189,7 @@ which node
                                         </ul>
                                     </li>
                                     <li>
-                                        <span onclick="toggleSection('nodejs-macos-list-1-2-3-2', event);" onkeydown="toggleSection('nodejs-macos-list-1-2-3-2', event);" class="faq-title magic-invisible">Test Node.js</span>
+                                        <span onclick="toggleSection('nodejs-macos-list-1-2-3-2', event);" onkeydown="toggleSection('nodejs-macos-list-1-2-3-2', event);" class="lesson-title magic-invisible">Test Node.js</span>
                                         <ul id="nodejs-macos-list-1-2-3-2" class="hidden">
                                             <li>Run a simple Node.js command:
                                                 <pre><code>
@@ -951,7 +1200,7 @@ node -e "console.log('Node.js is working!')"
                                         </ul>
                                     </li>
                                     <li>
-                                        <span onclick="toggleSection('nodejs-macos-list-1-2-3-3', event);" onkeydown="toggleSection('nodejs-macos-list-1-2-3-3', event);" class="faq-title magic-invisible">Create a Simple Test Server (Optional)</span>
+                                        <span onclick="toggleSection('nodejs-macos-list-1-2-3-3', event);" onkeydown="toggleSection('nodejs-macos-list-1-2-3-3', event);" class="lesson-title magic-invisible">Create a Simple Test Server (Optional)</span>
                                         <ul id="nodejs-macos-list-1-2-3-3" class="hidden">
                                             <li>Create a test directory:
                                                 <pre><code>
@@ -983,18 +1232,18 @@ node server.js
                     tool_id: 'git',
                     tool_name: 'Git',
                     tool_content: `<div id="git-macos">
-                    <h4 class="faq-title">Check whether Git is already installed:</h4>
+                    <h4 class="lesson-title">Check whether Git is already installed:</h4>
                     <ul>
                         <li>Open Terminal (<code>Command + Space</code>, type "Terminal")</li>
                         <li>Type <code>git --version</code> and press Enter</li>
                         <li>If you see a version number, you have it installed. If you get a popup asking to install Command Line Developer Tools, you need to install Git.</li>
                     </ul>
-                    <h4 onclick="toggleSection('git-macos-list-1', event);" onkeydown="toggleSection('git-macos-list-1', event);" class="faq-title magic-invisible">If you need to install Git, you have three options</h4>
+                    <h4 onclick="toggleSection('git-macos-list-1', event);" onkeydown="toggleSection('git-macos-list-1', event);" class="lesson-title magic-invisible">If you need to install Git, you have three options</h4>
                     <div id="git-macos-list-1" class="hidden">
-                        <h5 onclick="toggleSection('git-macos-list-1-1', event);" onkeydown="toggleSection('git-macos-list-1-1', event);" class="faq-title magic-invisible">Option 1: Install via Xcode Command Line Tools (Recommended)</h5>
+                        <h5 onclick="toggleSection('git-macos-list-1-1', event);" onkeydown="toggleSection('git-macos-list-1-1', event);" class="lesson-title magic-invisible">Option 1: Install via Xcode Command Line Tools (Recommended)</h5>
                         <ol id="git-macos-list-1-1" class="hidden">
                             <li>
-                                <span onclick="toggleSection('git-macos-list-1-1-1', event);" onkeydown="toggleSection('git-macos-list-1-1-1', event);" class="faq-title magic-invisible">Trigger Installation Prompt</span>
+                                <span onclick="toggleSection('git-macos-list-1-1-1', event);" onkeydown="toggleSection('git-macos-list-1-1-1', event);" class="lesson-title magic-invisible">Trigger Installation Prompt</span>
                                 <ul id="git-macos-list-1-1-1" class="hidden">
                                     <li>Open Terminal</li>
                                     <li>Type
@@ -1008,7 +1257,7 @@ git --version
                                 </ul>
                             </li>
                             <li>
-                                <span onclick="toggleSection('git-macos-list-1-1-2', event);" onkeydown="toggleSection('git-macos-list-1-1-2', event);" class="faq-title magic-invisible">Installation Process</span>
+                                <span onclick="toggleSection('git-macos-list-1-1-2', event);" onkeydown="toggleSection('git-macos-list-1-1-2', event);" class="lesson-title magic-invisible">Installation Process</span>
                                 <ul id="git-macos-list-1-1-2" class="hidden">
                                     <li>Click "Agree" to the license agreement</li>
                                     <li>Wait for the download and installation to complete (this can take 5-15 minutes depending on your internet speed)</li>
@@ -1016,7 +1265,7 @@ git --version
                                 </ul>
                             </li>
                             <li>
-                                <span onclick="toggleSection('git-macos-list-1-1-3', event);" onkeydown="toggleSection('git-macos-list-1-1-3', event);" class="faq-title magic-invisible">Configure Git</span>
+                                <span onclick="toggleSection('git-macos-list-1-1-3', event);" onkeydown="toggleSection('git-macos-list-1-1-3', event);" class="lesson-title magic-invisible">Configure Git</span>
                                 <ul id="git-macos-list-1-1-3" class="hidden">
                                     <li>
                                         <strong>Set Your Name and Email</strong>
@@ -1034,7 +1283,7 @@ git --version
                                 </ul>
                             </li>
                             <li>
-                                <span onclick="toggleSection('git-macos-list-1-1-4', event);" onkeydown="toggleSection('git-macos-list-1-1-4', event);" class="faq-title magic-invisible">Verify Installation</span>
+                                <span onclick="toggleSection('git-macos-list-1-1-4', event);" onkeydown="toggleSection('git-macos-list-1-1-4', event);" class="lesson-title magic-invisible">Verify Installation</span>
                                 <ul id="git-macos-list-1-1-4" class="hidden">
                                     <li>Type:
                                         <pre><code>
@@ -1052,10 +1301,10 @@ git config --global --list
                             </li>
                         </ol>
 
-                        <h5 onclick="toggleSection('git-macos-list-2', event);" onkeydown="toggleSection('git-macos-list-2', event);" class="faq-title magic-invisible">Option 2: Install via Homebrew</h5>
+                        <h5 onclick="toggleSection('git-macos-list-2', event);" onkeydown="toggleSection('git-macos-list-2', event);" class="lesson-title magic-invisible">Option 2: Install via Homebrew</h5>
                         <ol id="git-macos-list-2" class="hidden">
                             <li>
-                                <span onclick="toggleSection('git-macos-list-2-1', event);" onkeydown="toggleSection('git-macos-list-2-1', event);" class="faq-title magic-invisible">Install Git with Homebrew</span>
+                                <span onclick="toggleSection('git-macos-list-2-1', event);" onkeydown="toggleSection('git-macos-list-2-1', event);" class="lesson-title magic-invisible">Install Git with Homebrew</span>
                                 <ul id="git-macos-list-2-1" class="hidden">
                                     <li>Open Terminal</li>
                                     <li>Run this command:
@@ -1067,10 +1316,10 @@ brew install git
                                 </ul>
                             </li>
                             <li>
-                                <span onclick="toggleSection('git-macos-list-2-1-1', event);" onkeydown="toggleSection('git-macos-list-2-1-1', event);" class="faq-title magic-invisible">Configure Git</span>
+                                <span onclick="toggleSection('git-macos-list-2-1-1', event);" onkeydown="toggleSection('git-macos-list-2-1-1', event);" class="lesson-title magic-invisible">Configure Git</span>
                                 <ul id="git-macos-list-2-1-1" class="hidden">
                                     <li>
-                                        <span class="faq-title">Set Your Name and Email</span>
+                                        <span class="lesson-title">Set Your Name and Email</span>
                                         <ul>
                                             <li>Open Terminal</li>
                                             <li>
@@ -1091,7 +1340,7 @@ git config --global user.email "your.email@example.com"
                                 </ul>
                             </li>
                             <li>
-                                <span onclick="toggleSection('git-macos-list-2-1-2', event);" onkeydown="toggleSection('git-macos-list-2-1-2', event);" class="faq-title magic-invisible">Verify Installation</span>
+                                <span onclick="toggleSection('git-macos-list-2-1-2', event);" onkeydown="toggleSection('git-macos-list-2-1-2', event);" class="lesson-title magic-invisible">Verify Installation</span>
                                 <ul id="git-macos-list-2-1-2" class="hidden">
                                     <li>Type:
                                         <pre><code>
@@ -1109,10 +1358,10 @@ git config --global --list
                             </li>
                         </ol>
 
-                        <h5 onclick="toggleSection('git-macos-list-3', event);" onkeydown="toggleSection('git-macos-list-3', event);" class="faq-title magic-invisible">Option 3: Download from Git Website</h5>
+                        <h5 onclick="toggleSection('git-macos-list-3', event);" onkeydown="toggleSection('git-macos-list-3', event);" class="lesson-title magic-invisible">Option 3: Download from Git Website</h5>
                         <ol id="git-macos-list-3" class="hidden">
                             <li>
-                                <span onclick="toggleSection('git-macos-list-3-1', event);" onkeydown="toggleSection('git-macos-list-3-1', event);" class="faq-title magic-invisible">Download Git</span>
+                                <span onclick="toggleSection('git-macos-list-3-1', event);" onkeydown="toggleSection('git-macos-list-3-1', event);" class="lesson-title magic-invisible">Download Git</span>
                                 <ul id="git-macos-list-3-1" class="hidden">
                                     <li>Open your browser</li>
                                     <li>Go to <a href="https://git-scm.com/" target="_blank" rel="noopener noreferrer">https://git-scm.com/</a></li>
@@ -1121,7 +1370,7 @@ git config --global --list
                                 </ul>
                             </li>
                             <li>
-                                <span onclick="toggleSection('git-macos-list-3-2', event);" onkeydown="toggleSection('git-macos-list-3-2', event);" class="faq-title magic-invisible">Install Git</span>
+                                <span onclick="toggleSection('git-macos-list-3-2', event);" onkeydown="toggleSection('git-macos-list-3-2', event);" class="lesson-title magic-invisible">Install Git</span>
                                 <ul id="git-macos-list-3-2" class="hidden">
                                     <li>Open the downloaded <code>.dmg</code> file</li>
                                     <li>Double-click the <code>.pkg</code> file inside</li>
@@ -1132,7 +1381,7 @@ git config --global --list
                                 </ul>
                             </li>
                             <li>
-                                <span onclick="toggleSection('git-macos-list-3-3', event);" onkeydown="toggleSection('git-macos-list-3-3', event);" class="faq-title magic-invisible">Configure Git</span>
+                                <span onclick="toggleSection('git-macos-list-3-3', event);" onkeydown="toggleSection('git-macos-list-3-3', event);" class="lesson-title magic-invisible">Configure Git</span>
                                 <ul id="git-macos-list-3-3" class="hidden">
                                     <li>
                                         <strong>Set Your Name and Email</strong>
@@ -1154,7 +1403,7 @@ git config --global user.email "your.email@example.com"
                                 </ul>
                             </li>
                             <li>
-                                <span onclick="toggleSection('git-macos-list-3-4', event);" onkeydown="toggleSection('git-macos-list-3-4', event);" class="faq-title magic-invisible">Verify Installation</span>
+                                <span onclick="toggleSection('git-macos-list-3-4', event);" onkeydown="toggleSection('git-macos-list-3-4', event);" class="lesson-title magic-invisible">Verify Installation</span>
                                 <ul id="git-macos-list-3-4" class="hidden">
                                     <li>Type:
                                         <pre><code>
@@ -1180,10 +1429,10 @@ git config --global --list
                     tool_content: `<div id="sqlite-macos">
                     <p><strong>Good News:</strong> macOS comes with SQLite pre-installed! You usually don't need to install it separately.</p>
 
-                    <h4 onclick="toggleSection('sqlite-macos-list-1', event);" onkeydown="toggleSection('sqlite-macos-list-1', event);" class="faq-title magic-invisible">Verify Existing Installation</h4>
+                    <h4 onclick="toggleSection('sqlite-macos-list-1', event);" onkeydown="toggleSection('sqlite-macos-list-1', event);" class="lesson-title magic-invisible">Verify Existing Installation</h4>
                     <ol id="sqlite-macos-list-1" class="hidden">
                         <li>
-                            <span onclick="toggleSection('sqlite-macos-list-1-1', event);" onkeydown="toggleSection('sqlite-macos-list-1-1', event);" class="faq-title magic-invisible">Check SQLite Version</span>
+                            <span onclick="toggleSection('sqlite-macos-list-1-1', event);" onkeydown="toggleSection('sqlite-macos-list-1-1', event);" class="lesson-title magic-invisible">Check SQLite Version</span>
                             <ul id="sqlite-macos-list-1-1" class="hidden">
                                 <li>Open Terminal</li>
                                 <li>Type:
@@ -1193,7 +1442,7 @@ git config --global --list
                             </ul>
                         </li>
                         <li>
-                            <span onclick="toggleSection('sqlite-macos-list-1-2', event);" onkeydown="toggleSection('sqlite-macos-list-1-2', event);" class="faq-title magic-invisible">Test SQLite</span>
+                            <span onclick="toggleSection('sqlite-macos-list-1-2', event);" onkeydown="toggleSection('sqlite-macos-list-1-2', event);" class="lesson-title magic-invisible">Test SQLite</span>
                             <ul id="sqlite-macos-list-1-2" class="hidden">
                                 <li>Type:
                                     <pre><code>
@@ -1212,12 +1461,12 @@ SELECT 'SQLite is working!';
                         </li>
                     </ol>
 
-                    <h4 onclick="toggleSection('sqlite-macos-list-2', event);" onkeydown="toggleSection('sqlite-macos-list-2', event);" class="faq-title magic-invisible">Update SQLite via Homebrew (Optional)</h4>
+                    <h4 onclick="toggleSection('sqlite-macos-list-2', event);" onkeydown="toggleSection('sqlite-macos-list-2', event);" class="lesson-title magic-invisible">Update SQLite via Homebrew (Optional)</h4>
                     <div id="sqlite-macos-list-2" class="hidden">
                         <p>If you want a newer version than what comes with macOS:</p>
                         <ol>
                             <li>
-                                <span onclick="toggleSection('sqlite-macos-list-2-1', event);" onkeydown="toggleSection('sqlite-macos-list-2-1', event);" class="faq-title magic-invisible">Install/Update via Homebrew</span>
+                                <span onclick="toggleSection('sqlite-macos-list-2-1', event);" onkeydown="toggleSection('sqlite-macos-list-2-1', event);" class="lesson-title magic-invisible">Install/Update via Homebrew</span>
                                 <ul id="sqlite-macos-list-2-1" class="hidden">
                                     <li>Open Terminal</li>
                                     <li>If you have Homebrew installed:
@@ -1233,7 +1482,7 @@ brew upgrade sqlite3
                                 </ul>
                             </li>
                             <li>
-                                <span onclick="toggleSection('sqlite-macos-list-2-2', event);" onkeydown="toggleSection('sqlite-macos-list-2-2', event);" class="faq-title magic-invisible">Use the Homebrew Version</span>
+                                <span onclick="toggleSection('sqlite-macos-list-2-2', event);" onkeydown="toggleSection('sqlite-macos-list-2-2', event);" class="lesson-title magic-invisible">Use the Homebrew Version</span>
                                 <ul id="sqlite-macos-list-2-2" class="hidden">
                                     <li>The Homebrew version will be installed to <code>/opt/homebrew/bin/sqlite3</code> or <code>/usr/local/bin/sqlite3</code></li>
                                     <li>Check which version is being used:
@@ -1247,10 +1496,10 @@ which sqlite3
                         </ol>
                     </div>
 
-                    <h4 onclick="toggleSection('sqlite-macos-list-3', event);" onkeydown="toggleSection('sqlite-macos-list-3', event);" class="faq-title magic-invisible">Create a Test Database (Optional)</h4>
+                    <h4 onclick="toggleSection('sqlite-macos-list-3', event);" onkeydown="toggleSection('sqlite-macos-list-3', event);" class="lesson-title magic-invisible">Create a Test Database (Optional)</h4>
                     <ol id="sqlite-macos-list-3" class="hidden">
                         <li>
-                            <span onclick="toggleSection('sqlite-macos-list-3-1', event);" onkeydown="toggleSection('sqlite-macos-list-3-1', event);" class="faq-title magic-invisible">Create a Test Directory</span>
+                            <span onclick="toggleSection('sqlite-macos-list-3-1', event);" onkeydown="toggleSection('sqlite-macos-list-3-1', event);" class="lesson-title magic-invisible">Create a Test Directory</span>
                             <ul id="sqlite-macos-list-3-1" class="hidden">
                                 <li>
                                     In Terminal, run:
@@ -1261,7 +1510,7 @@ mkdir ~/test-sqlite &amp;&amp; cd ~/test-sqlite
                             </ul>
                         </li>
                         <li>
-                            <span onclick="toggleSection('sqlite-macos-list-3-2', event);" onkeydown="toggleSection('sqlite-macos-list-3-2', event);" class="faq-title magic-invisible">Create a Database</span>
+                            <span onclick="toggleSection('sqlite-macos-list-3-2', event);" onkeydown="toggleSection('sqlite-macos-list-3-2', event);" class="lesson-title magic-invisible">Create a Database</span>
                             <ul id="sqlite-macos-list-3-2" class="hidden">
                                 <li>Run:
                                     <pre><code>
@@ -1280,7 +1529,7 @@ SELECT * FROM users;
                             </ul>
                         </li>
                         <li>
-                            <span onclick="toggleSection('sqlite-macos-list-3-3', event);" onkeydown="toggleSection('sqlite-macos-list-3-3', event);" class="faq-title magic-invisible">View the Database File</span>
+                            <span onclick="toggleSection('sqlite-macos-list-3-3', event);" onkeydown="toggleSection('sqlite-macos-list-3-3', event);" class="lesson-title magic-invisible">View the Database File</span>
                             <ul id="sqlite-macos-list-3-3" class="hidden">
                                 <li>List files in the directory:
                                     <pre><code>
@@ -1292,12 +1541,250 @@ ls -lh
                         </li>
                     </ol>
                 </div>`
+                },
+                {
+                    tool_id: 'vsc-extensions',
+                    tool_name: 'Visual Studio Code Extensions',
+                    aria_label: 'Visual Studio Code Extensions for macOS',
+                    tool_content: `<div id="extensions-macos">
+                    <p>VS Code extensions add extra features and functionality to your editor. Here are the recommended extensions for web development:</p>
+
+                    <h4 onclick="toggleSection('vsc-extensions-macos-list-1', event);" onkeydown="toggleSection('vsc-extensions-macos-list-1', event);" class="lesson-title magic-invisible">How to Install Extensions</h4>
+                    <ol id="vsc-extensions-macos-list-1" class="hidden">
+                        <li>
+                            <span class="lesson-title">Open Extensions Panel</span>
+                            <ul>
+                                <li>Open VS Code</li>
+                                <li>Press <code>Command + Shift + X</code> to open the Extensions panel, or</li>
+                                <li>Click the Extensions icon in the left sidebar (looks like four squares)</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span class="lesson-title">Search and Install</span>
+                            <ul>
+                                <li>Type the extension name in the search box</li>
+                                <li>Be careful! Some extensions may have similar names. Check the extension publisher to ensure you are installing the correct one</li>
+                                <li>Click the "Install" button for the extension you want</li>
+                                <li>Wait for installation to complete</li>
+                                <li>Some extensions may require VS Code to reload</li>
+                            </ul>
+                        </li>
+                    </ol>
+
+                    <h4 onclick="toggleSection('vsc-extensions-macos-list-2', event);" onkeydown="toggleSection('vsc-extensions-macos-list-2', event);" class="lesson-title magic-invisible">Recommended Extensions (Install Now)</h4>
+                    <ol id="vsc-extensions-macos-list-2" class="hidden">
+                        <li>
+                            <span onclick="toggleSection('vsc-extensions-macos-list-2-1', event);" onkeydown="toggleSection('vsc-extensions-macos-list-2-1', event);" class="lesson-title magic-invisible">Live Server</span> (ritwickdey.LiveServer)
+                            <ul id="vsc-extensions-macos-list-2-1" class="hidden">
+                                <li>Launches a local development server with live reload</li>
+                                <li>Your browser automatically refreshes when you save changes</li>
+                                <li>Essential for testing HTML/CSS/JavaScript</li>
+                                <li>To use: Right-click an HTML file and select "Open with Live Server"</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span onclick="toggleSection('vsc-extensions-macos-list-2-2', event);" onkeydown="toggleSection('vsc-extensions-macos-list-2-2', event);" class="lesson-title magic-invisible">Prettier - Code formatter</span> (esbenp.prettier-vscode)
+                            <ul id="vsc-extensions-macos-list-2-2" class="hidden">
+                                <li>Automatically formats your code consistently</li>
+                                <li>Makes your code easier to read</li>
+                                <li>After installing, you can format by pressing <code>Shift + Option + F</code></li>
+                                <li>Enable "Format On Save" in settings for automatic formatting</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span onclick="toggleSection('vsc-extensions-macos-list-2-3', event);" onkeydown="toggleSection('vsc-extensions-macos-list-2-3', event);" class="lesson-title magic-invisible">Auto Rename Tag</span> (formulahendry.auto-rename-tag)
+                            <ul id="vsc-extensions-macos-list-2-3" class="hidden">
+                                <li>Automatically renames paired HTML/XML tags</li>
+                                <li>When you rename an opening tag, the closing tag updates too</li>
+                                <li>Saves time and prevents errors</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span onclick="toggleSection('vsc-extensions-macos-list-2-4', event);" onkeydown="toggleSection('vsc-extensions-macos-list-2-4', event);" class="lesson-title magic-invisible">HTML CSS Support</span> (ecmel.vscode-html-css)
+                            <ul id="vsc-extensions-macos-list-2-4" class="hidden">
+                                <li>Provides better autocomplete for HTML class and ID attributes</li>
+                                <li>Suggests CSS classes from your stylesheets</li>
+                                <li>Makes writing HTML faster and more accurate</li>
+                            </ul>
+                        </li>
+                    </ol>
+
+                    <h4 onclick="toggleSection('vsc-extensions-macos-list-3', event);" onkeydown="toggleSection('vsc-extensions-macos-list-3', event);" class="lesson-title magic-invisible">Helpful Extensions</h4>
+                    <ol id="vsc-extensions-macos-list-3" class="hidden">
+                        <li>
+                            <span onclick="toggleSection('vsc-extensions-macos-list-3-1', event);" onkeydown="toggleSection('vsc-extensions-macos-list-3-1', event);" class="lesson-title magic-invisible">Path Intellisense</span> (christian-kohler.path-intellisense)
+                            <ul id="vsc-extensions-macos-list-3-1" class="hidden">
+                                <li>Autocompletes file paths in your code</li>
+                                <li>Helpful when linking CSS files, images, or other resources</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span onclick="toggleSection('vsc-extensions-macos-list-3-2', event);" onkeydown="toggleSection('vsc-extensions-macos-list-3-2', event);" class="lesson-title magic-invisible">Indent-Rainbow</span> (oderwat.indent-rainbow)
+                            <ul id="vsc-extensions-macos-list-3-2" class="hidden">
+                                <li>Colours indentation levels with subtle colours</li>
+                                <li>Makes code structure more visible</li>
+                                <li>Helps you spot indentation errors quickly</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span onclick="toggleSection('vsc-extensions-macos-list-3-3', event);" onkeydown="toggleSection('vsc-extensions-macos-list-3-3', event);" class="lesson-title magic-invisible">Error Lens</span> (usernamehw.errorlens)
+                            <ul id="vsc-extensions-macos-list-3-3" class="hidden">
+                                <li>Shows errors and warnings inline in your code</li>
+                                <li>Makes debugging easier by highlighting problems immediately</li>
+                            </ul>
+                        </li>
+                    </ol>
+
+                    <h4 onclick="toggleSection('vsc-extensions-macos-list-4', event);" onkeydown="toggleSection('vsc-extensions-macos-list-4', event);" class="lesson-title magic-invisible">For Later Lessons</h4>
+                    <div id="vsc-extensions-macos-list-4" class="hidden">
+                        <p>Install these when you reach the relevant lessons:</p>
+                        <ol>
+                            <li>
+                                <span onclick="toggleSection('vsc-extensions-macos-list-4-1', event);" onkeydown="toggleSection('vsc-extensions-macos-list-4-1', event);" class="lesson-title magic-invisible">ESLint</span> (dbaeumer.vscode-eslint)
+                                <ul id="vsc-extensions-macos-list-4-1" class="hidden">
+                                    <li>JavaScript and Node.js code quality and style checking</li>
+                                    <li>Install when you start learning JavaScript</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <span onclick="toggleSection('vsc-extensions-macos-list-4-2', event);" onkeydown="toggleSection('vsc-extensions-macos-list-4-2', event);" class="lesson-title magic-invisible">SQLite Viewer</span> (qwtel.sqlite-viewer)
+                                <ul id="vsc-extensions-macos-list-4-2" class="hidden">
+                                    <li>View and query SQLite databases directly in VS Code</li>
+                                    <li>Install when you start working with databases</li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </div>
+
+                    <h4 onclick="toggleSection('vsc-extensions-macos-list-5', event);" onkeydown="toggleSection('vsc-extensions-macos-list-5', event);" class="lesson-title magic-invisible">Optional Extensions</h4>
+                    <ol id="vsc-extensions-macos-list-5" class="hidden">
+                        <li>
+                            <span onclick="toggleSection('vsc-extensions-macos-list-5-1', event);" onkeydown="toggleSection('vsc-extensions-macos-list-5-1', event);" class="lesson-title magic-invisible">Better Comments</span> (aaron-bond.better-comments)
+                            <ul id="vsc-extensions-macos-list-5-1" class="hidden">
+                                <li>Colour-codes different types of comments (TODO, FIXME, etc.)</li>
+                                <li>Makes comments more organised and noticeable</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span onclick="toggleSection('vsc-extensions-macos-list-5-2', event);" onkeydown="toggleSection('vsc-extensions-macos-list-5-2', event);" class="lesson-title magic-invisible">axe Accessibility Linter</span> (deque-systems.vscode-axe-linter)
+                            <ul id="vsc-extensions-macos-list-5-2" class="hidden">
+                                <li>Checks HTML for accessibility issues</li>
+                                <li>Helps you build websites that everyone can use</li>
+                            </ul>
+                        </li>
+                    </ol>
+
+                    <h4 onclick="toggleSection('vsc-extensions-macos-list-6', event);" onkeydown="toggleSection('vsc-extensions-macos-list-6', event);" class="lesson-title magic-invisible">Configure Prettier (Recommended)</h4>
+                    <div id="vsc-extensions-macos-list-6" class="hidden">
+                        <p>To make Prettier format your code automatically when you save:</p>
+                        <ol>
+                            <li>Press <code>Command + ,</code> to open Settings</li>
+                            <li>Search for "format on save"</li>
+                            <li>Check the box for "Editor: Format On Save"</li>
+                            <li>Search for "default formatter"</li>
+                            <li>Select "Prettier - Code formatter" from the dropdown</li>
+                        </ol>
+                    </div>
+                </div>`
+                },
+                {
+                    tool_id: 'projects-folder',
+                    tool_name: 'Create a Projects Folder',
+                    aria_label: 'Create a Projects Folder on macOS',
+                    tool_content: `<div id="projects-folder-macos">
+                    <p>It's helpful to keep all your coding projects organised in one place. Let's create a dedicated Projects folder:</p>
+                    <ol>
+                        <li onclick="toggleSection('create-folder-macos-list-1', event);" onkeydown="toggleSection('create-folder-macos-list-1', event);" class="magic-invisible">Open Finder
+                            <ul id="create-folder-macos-list-1" class="hidden">
+                                <li>Click on the Finder icon in the Dock</li>
+                            </ul>
+                        </li>
+                        <li onclick="toggleSection('create-folder-macos-list-2', event);" onkeydown="toggleSection('create-folder-macos-list-2', event);" class="lesson-title magic-invisible">Navigate to Your Home Folder
+                            <ul id="create-folder-macos-list-2" class="hidden">
+                                <li>In the menu bar, click "Go" → "Home"</li>
+                                <li>Or press <code>Shift + Cmd + H</code></li>
+                            </ul>
+                        </li>
+                        <li onclick="toggleSection('create-folder-macos-list-3', event);" onkeydown="toggleSection('create-folder-macos-list-3', event);" class="lesson-title magic-invisible">Create the Projects Folder
+                            <ul id="create-folder-macos-list-3" class="hidden">
+                                <li>Right-click (or Control-click) in an empty space</li>
+                                <li>Select "New Folder"</li>
+                                <li>Name it <code>Projects</code></li>
+                                <li>Press Enter</li>
+                            </ul>
+                        </li>
+                    </ol>
+                    <p>Your Projects folder is now at: <code>~/Projects</code> (or <code>/Users/YourUsername/Projects</code>)</p>
+                    <p>In future lessons, you'll save your coding projects in this folder.</p>
+                </div>`
+                },
+                {
+                    tool_id: 'dev-server',
+                    tool_name: 'Setting Up the Development Server',
+                    aria_label: 'Setting Up the Development Server on macOS',
+                    tool_content: `<div id="dev-server-macos">
+                    <p>To view your web pages as you develop them, you'll need to run a local development server. This is important because some web features don't work when opening HTML files directly in a browser. If you installed the Live Server extension in Visual Studio Code, you can skip this step as that will do the same thing. Using this method lets you run and test your web pages even if you are not using Visual Studio Code.</p>
+
+                    <h4 onclick="toggleSection('dev-server-macos-list-1', event);" onkeydown="toggleSection('dev-server-macos-list-1', event);" class="lesson-title magic-invisible">Create a package.json File</h4>
+                    <ol id="dev-server-macos-list-1" class="hidden">
+                        <li>Open Visual Studio Code</li>
+                        <li>Select <code>File → Open Folder</code></li>
+                        <li>Navigate to and select your <code>Projects</code> folder (<code>~/Projects</code>)</li>
+                        <li>Create a new file called <code>package.json</code> in the Projects folder</li>
+                        <li>Add the following content to the file:
+                            <div class="code-snippet-container">
+                                <script type="text/plain" class="code-snippet-source">{
+    "name": "my-web-projects",
+    "version": "1.0.0",
+    "description": "Web development projects",
+    "scripts": {
+        "start": "http-server -p 8000"
+    },
+    "devDependencies": {
+        "http-server": "^14.1.1"
+    }
+}
+                                </script>
+                                <div class="code-snippet-table"></div>
+                            </div>
+                        </li>
+                        <li>Save the file (<code>Cmd + S</code>)</li>
+                    </ol>
+
+                    <h4 onclick="toggleSection('dev-server-macos-list-2', event);" onkeydown="toggleSection('dev-server-macos-list-2', event);" class="lesson-title magic-invisible">Install http-server</h4>
+                    <ol id="dev-server-macos-list-2" class="hidden">
+                        <li>Open the integrated terminal in VS Code by pressing <code>Ctrl + \`</code> (backtick key, usually above Tab)</li>
+                        <li>Make sure you're in your Projects folder (the terminal should show the path)</li>
+                        <li>Type <code>npm install</code> and press Enter</li>
+                        <li>Wait for the installation to complete (this installs http-server locally in your Projects folder)</li>
+                    </ol>
+
+                    <h4 onclick="toggleSection('dev-server-macos-list-3', event);" onkeydown="toggleSection('dev-server-macos-list-3', event);" class="lesson-title magic-invisible">Start the Development Server</h4>
+                    <ol id="dev-server-macos-list-3" class="hidden">
+                        <li>In the same terminal, type <code>npm start</code> and press Enter</li>
+                        <li>You should see a message saying the server is running on <code>http://localhost:8000</code></li>
+                        <li>Open your web browser and go to <code>http://localhost:8000</code></li>
+                        <li>You should see a directory listing of your Projects folder</li>
+                    </ol>
+
+                    <h4 onclick="toggleSection('dev-server-macos-list-4', event);" onkeydown="toggleSection('dev-server-macos-list-4', event);" class="lesson-title magic-invisible">Using the Development Server</h4>
+                    <ul id="dev-server-macos-list-4" class="hidden">
+                        <li>Keep the terminal open while you're working - the server needs to run continuously</li>
+                        <li>When you create HTML files in your Projects folder, you can access them through the browser at <code>http://localhost:8000/filename.html</code></li>
+                        <li>When you make changes to your files and save them, refresh your browser to see the changes</li>
+                        <li>To stop the server, press <code>Ctrl + C</code> in the terminal</li>
+                        <li>To restart the server later, just run <code>npm start</code> again from your Projects folder</li>
+                    </ul>
+                </div>`
                 }
             ]
         },
         {
             os_id: 'linux',
             os_name: 'Linux',
+            os_intro: `<p>
+                    There are many different versions of Linux available, so these instructions will cover the most common distributions: <strong>Ubuntu</strong>, <strong>Fedora</strong> and <strong>ArchLinux</strong>. If you are using a different distribution, the steps may vary slightly. The lessons have been tested on Linux Mint 22.2 (which is based on Ubuntu 22.04) but should work fine with other flavours and versions. On the next screens are the instructions for installing the recommended software on your Linux computer.
+                </p>`,
             tools: [
                 {
                     tool_id: 'vsc',
@@ -1310,12 +1797,12 @@ ls -lh
                         <li>If you see a version number, you have it installed. If you get a "command not found" error, you need to install it.</li>
                     </ul>
 
-                    <h4 onclick="toggleSection('vsc-linux-ubuntu-list', event);" onkeydown="toggleSection('vsc-linux-ubuntu-list', event);" class="faq-title magic-invisible">Ubuntu / Debian-based Linux</h4>
+                    <h4 onclick="toggleSection('vsc-linux-ubuntu-list', event);" onkeydown="toggleSection('vsc-linux-ubuntu-list', event);" class="lesson-title magic-invisible">Ubuntu / Debian-based Linux</h4>
                     <div id="vsc-linux-ubuntu-list" class="hidden">
                         <p>If you need to install Visual Studio Code on Ubuntu, follow these steps:</p>
                         <ol>
                             <li>
-                                <span onclick="toggleSection('vsc-linux-ubuntu-list-1', event);" onkeydown="toggleSection('vsc-linux-ubuntu-list-1', event);" class="faq-title magic-invisible">Download and Import Microsoft GPG Key</span>
+                                <span onclick="toggleSection('vsc-linux-ubuntu-list-1', event);" onkeydown="toggleSection('vsc-linux-ubuntu-list-1', event);" class="lesson-title magic-invisible">Download and Import Microsoft GPG Key</span>
                                 <ul id="vsc-linux-ubuntu-list-1" class="hidden">
                                     <li>Open Terminal</li>
                                     <li>Run this command to download and install the Microsoft GPG key:
@@ -1325,7 +1812,7 @@ sudo install -D -o root -g root -m 644 packages.microsoft.gpg /etc/apt/keyrings/
                                 </ul>
                             </li>
                             <li>
-                                <span onclick="toggleSection('vsc-linux-ubuntu-list-2', event);" onkeydown="toggleSection('vsc-linux-ubuntu-list-2', event);" class="faq-title magic-invisible">Add VS Code Repository</span>
+                                <span onclick="toggleSection('vsc-linux-ubuntu-list-2', event);" onkeydown="toggleSection('vsc-linux-ubuntu-list-2', event);" class="lesson-title magic-invisible">Add VS Code Repository</span>
                                 <ul id="vsc-linux-ubuntu-list-2" class="hidden">
                                     <li>Run this command to add the VS Code repository:
                                         <pre><code>sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" &gt; /etc/apt/sources.list.d/vscode.list'</code></pre>
@@ -1333,7 +1820,7 @@ sudo install -D -o root -g root -m 644 packages.microsoft.gpg /etc/apt/keyrings/
                                 </ul>
                             </li>
                             <li>
-                                <span onclick="toggleSection('vsc-linux-ubuntu-list-3', event);" onkeydown="toggleSection('vsc-linux-ubuntu-list-3', event);" class="faq-title magic-invisible">Update Package List and Install</span>
+                                <span onclick="toggleSection('vsc-linux-ubuntu-list-3', event);" onkeydown="toggleSection('vsc-linux-ubuntu-list-3', event);" class="lesson-title magic-invisible">Update Package List and Install</span>
                                 <ul id="vsc-linux-ubuntu-list-3" class="hidden">
                                     <li>Update your package list:
                                         <pre><code>sudo apt update</code></pre>
@@ -1345,7 +1832,7 @@ sudo install -D -o root -g root -m 644 packages.microsoft.gpg /etc/apt/keyrings/
                                 </ul>
                             </li>
                             <li>
-                                <span onclick="toggleSection('vsc-linux-ubuntu-list-4', event);" onkeydown="toggleSection('vsc-linux-ubuntu-list-4', event);" class="faq-title magic-invisible">Launch VS Code</span>
+                                <span onclick="toggleSection('vsc-linux-ubuntu-list-4', event);" onkeydown="toggleSection('vsc-linux-ubuntu-list-4', event);" class="lesson-title magic-invisible">Launch VS Code</span>
                                 <ul id="vsc-linux-ubuntu-list-4" class="hidden">
                                     <li>Type <code>code</code> in Terminal and press Enter, or</li>
                                     <li>Find "Visual Studio Code" in your application menu</li>
@@ -1355,12 +1842,12 @@ sudo install -D -o root -g root -m 644 packages.microsoft.gpg /etc/apt/keyrings/
                         </ol>
                     </div>
 
-                    <h4 onclick="toggleSection('vsc-linux-fedora-list', event);" onkeydown="toggleSection('vsc-linux-fedora-list', event);" class="faq-title magic-invisible">Fedora / Red Hat-based Linux</h4>
+                    <h4 onclick="toggleSection('vsc-linux-fedora-list', event);" onkeydown="toggleSection('vsc-linux-fedora-list', event);" class="lesson-title magic-invisible">Fedora / Red Hat-based Linux</h4>
                     <div id="vsc-linux-fedora-list" class="hidden">
                         <p >If you need to install Visual Studio Code on Fedora, follow these steps:</p>
                         <ol>
                             <li>
-                                <span onclick="toggleSection('vsc-linux-fedora-list-1', event);" onkeydown="toggleSection('vsc-linux-fedora-list-1', event);" class="faq-title magic-invisible">Import Microsoft GPG Key</span>
+                                <span onclick="toggleSection('vsc-linux-fedora-list-1', event);" onkeydown="toggleSection('vsc-linux-fedora-list-1', event);" class="lesson-title magic-invisible">Import Microsoft GPG Key</span>
                                 <ul id="vsc-linux-fedora-list-1" class="hidden">
                                     <li>Open Terminal</li>
                                     <li>Run this command:
@@ -1369,7 +1856,7 @@ sudo install -D -o root -g root -m 644 packages.microsoft.gpg /etc/apt/keyrings/
                                 </ul>
                             </li>
                             <li>
-                                <span onclick="toggleSection('vsc-linux-fedora-list-2', event);" onkeydown="toggleSection('vsc-linux-fedora-list-2', event);" class="faq-title magic-invisible">Add VS Code Repository</span>
+                                <span onclick="toggleSection('vsc-linux-fedora-list-2', event);" onkeydown="toggleSection('vsc-linux-fedora-list-2', event);" class="lesson-title magic-invisible">Add VS Code Repository</span>
                                 <ul id="vsc-linux-fedora-list-2" class="hidden">
                                     <li>Run this command to create the repository file:
                                         <pre><code>sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packag es.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" &gt; /etc/yum.repos.d/vscode.repo'</code></pre>
@@ -1377,7 +1864,7 @@ sudo install -D -o root -g root -m 644 packages.microsoft.gpg /etc/apt/keyrings/
                                 </ul>
                             </li>
                             <li>
-                                <span onclick="toggleSection('vsc-linux-fedora-list-3', event);" onkeydown="toggleSection('vsc-linux-fedora-list-3', event);" class="faq-title magic-invisible">Update Package Cache and Install</span>
+                                <span onclick="toggleSection('vsc-linux-fedora-list-3', event);" onkeydown="toggleSection('vsc-linux-fedora-list-3', event);" class="lesson-title magic-invisible">Update Package Cache and Install</span>
                                 <ul id="vsc-linux-fedora-list-3" class="hidden">
                                     <li>For Fedora 22 and later:
                                         <pre><code>sudo dnf check-update
@@ -1391,7 +1878,7 @@ sudo yum install code</code></pre>
                                 </ul>
                             </li>
                             <li>
-                                <span onclick="toggleSection('vsc-linux-fedora-list-4', event);" onkeydown="toggleSection('vsc-linux-fedora-list-4', event);" class="faq-title magic-invisible">Launch VS Code</span>
+                                <span onclick="toggleSection('vsc-linux-fedora-list-4', event);" onkeydown="toggleSection('vsc-linux-fedora-list-4', event);" class="lesson-title magic-invisible">Launch VS Code</span>
                                 <ul id="vsc-linux-fedora-list-4" class="hidden">
                                     <li>Type <code>code</code> in Terminal and press Enter, or</li>
                                     <li>Find "Visual Studio Code" in your application menu</li>
@@ -1400,12 +1887,12 @@ sudo yum install code</code></pre>
                             </li>
                         </ol>
                     </div>
-                    <h4 onclick="toggleSection('vsc-linux-alt-list', event);" onkeydown="toggleSection('vsc-linux-alt-list', event);" class="faq-title magic-invisible">Alternative: Download .deb or .rpm Package</h4>
+                    <h4 onclick="toggleSection('vsc-linux-alt-list', event);" onkeydown="toggleSection('vsc-linux-alt-list', event);" class="lesson-title magic-invisible">Alternative: Download .deb or .rpm Package</h4>
                     <div id="vsc-linux-alt-list" class="hidden">
                         <p>You can also download VS Code directly from the website:</p>
                         <ol>
                             <li>
-                                <span onclick="toggleSection('vsc-linux-alt-list-1', event);" onkeydown="toggleSection('vsc-linux-alt-list-1', event);" class="faq-title magic-invisible">Download from Official Website</span>
+                                <span onclick="toggleSection('vsc-linux-alt-list-1', event);" onkeydown="toggleSection('vsc-linux-alt-list-1', event);" class="lesson-title magic-invisible">Download from Official Website</span>
                                 <ul id="vsc-linux-alt-list-1" class="hidden">
                                     <li>Open your web browser</li>
                                     <li>Go to <a href="https://code.visualstudio.com" target="_blank" rel="noopener noreferrer">https://code.visualstudio.com</a></li>
@@ -1418,7 +1905,7 @@ sudo yum install code</code></pre>
                                 </ul>
                             </li>
                             <li>
-                                <span onclick="toggleSection('vsc-linux-alt-list-2', event);" onkeydown="toggleSection('vsc-linux-alt-list-2', event);" class="faq-title magic-invisible">Install the Package</span>
+                                <span onclick="toggleSection('vsc-linux-alt-list-2', event);" onkeydown="toggleSection('vsc-linux-alt-list-2', event);" class="lesson-title magic-invisible">Install the Package</span>
                                 <ul id="vsc-linux-alt-list-2" class="hidden">
                                     <li>Navigate to your Downloads folder</li>
                                     <li>For Ubuntu/Debian: Double-click the <code>.deb</code> file and click "Install", or run:
@@ -1449,12 +1936,12 @@ sudo apt-get install -f</code></pre>
                         <li>If you see a version number, you have it installed. If you get a "command not found" error, you need to install it.</li>
                     </ul>
 
-                    <h4 onclick="toggleSection('firefox-linux-ubuntu-list', event);" onkeydown="toggleSection('firefox-linux-ubuntu-list', event);" class="faq-title magic-invisible">Ubuntu / Debian-based Linux</h4>
+                    <h4 onclick="toggleSection('firefox-linux-ubuntu-list', event);" onkeydown="toggleSection('firefox-linux-ubuntu-list', event);" class="lesson-title magic-invisible">Ubuntu / Debian-based Linux</h4>
                     <div id="firefox-linux-ubuntu-list" class="hidden">
                         <p>If you need to install Firefox on Ubuntu, follow these steps:</p>
                         <ol>
                             <li>
-                                <span onclick="toggleSection('firefox-linux-ubuntu-list-1', event);" onkeydown="toggleSection('firefox-linux-ubuntu-list-1', event);" class="faq-title magic-invisible">Update Package List</span>
+                                <span onclick="toggleSection('firefox-linux-ubuntu-list-1', event);" onkeydown="toggleSection('firefox-linux-ubuntu-list-1', event);" class="lesson-title magic-invisible">Update Package List</span>
                                 <ul id="firefox-linux-ubuntu-list-1" class="hidden">
                                     <li>Open Terminal</li>
                                     <li>Run this command to update your package list:
@@ -1464,7 +1951,7 @@ sudo apt-get install -f</code></pre>
                                 </ul>
                             </li>
                             <li>
-                                <span  onclick="toggleSection('firefox-linux-ubuntu-list-2', event);" onkeydown="toggleSection('firefox-linux-ubuntu-list-2', event);" class="faq-title magic-invisible">Install Firefox</span>
+                                <span  onclick="toggleSection('firefox-linux-ubuntu-list-2', event);" onkeydown="toggleSection('firefox-linux-ubuntu-list-2', event);" class="lesson-title magic-invisible">Install Firefox</span>
                                 <ul id="firefox-linux-ubuntu-list-2" class="hidden">
                                     <li>Run this command:
                                         <pre><code>sudo apt install firefox</code></pre>
@@ -1474,7 +1961,7 @@ sudo apt-get install -f</code></pre>
                                 </ul>
                             </li>
                             <li>
-                                <span  onclick="toggleSection('firefox-linux-ubuntu-list-3', event);" onkeydown="toggleSection('firefox-linux-ubuntu-list-3', event);" class="faq-title magic-invisible">Launch Firefox</span>
+                                <span  onclick="toggleSection('firefox-linux-ubuntu-list-3', event);" onkeydown="toggleSection('firefox-linux-ubuntu-list-3', event);" class="lesson-title magic-invisible">Launch Firefox</span>
                                 <ul id="firefox-linux-ubuntu-list-3" class="hidden">
                                     <li>Type <code>firefox</code> in Terminal and press Enter, or</li>
                                     <li>Find "Firefox" in your application menu</li>
@@ -1482,7 +1969,7 @@ sudo apt-get install -f</code></pre>
                                 </ul>
                             </li>
                             <li>
-                                <span onclick="toggleSection('firefox-linux-ubuntu-list-4', event);" onkeydown="toggleSection('firefox-linux-ubuntu-list-4', event);" class="faq-title magic-invisible">Verify Installation</span>
+                                <span onclick="toggleSection('firefox-linux-ubuntu-list-4', event);" onkeydown="toggleSection('firefox-linux-ubuntu-list-4', event);" class="lesson-title magic-invisible">Verify Installation</span>
                                 <ul id="firefox-linux-ubuntu-list-4" class="hidden">
                                     <li>In Firefox, click the menu button (three horizontal lines) in the top-right corner</li>
                                     <li>Click "Help" → "About Firefox"</li>
@@ -1492,12 +1979,12 @@ sudo apt-get install -f</code></pre>
                         </ol>
                     </div>
 
-                    <h4 onclick="toggleSection('firefox-linux-fedora-list', event);" onkeydown="toggleSection('firefox-linux-fedora-list', event);" class="faq-title magic-invisible">Fedora / Red Hat-based Linux</h4>
+                    <h4 onclick="toggleSection('firefox-linux-fedora-list', event);" onkeydown="toggleSection('firefox-linux-fedora-list', event);" class="lesson-title magic-invisible">Fedora / Red Hat-based Linux</h4>
                     <div id="firefox-linux-fedora-list" class="hidden">
                         <p>If you need to install Firefox on Fedora, follow these steps:</p>
                         <ol>
                             <li>
-                                <span onclick="toggleSection('firefox-linux-fedora-list-1', event);" onkeydown="toggleSection('firefox-linux-fedora-list-1', event);" class="faq-title magic-invisible">Install Firefox</span>
+                                <span onclick="toggleSection('firefox-linux-fedora-list-1', event);" onkeydown="toggleSection('firefox-linux-fedora-list-1', event);" class="lesson-title magic-invisible">Install Firefox</span>
                                 <ul id="firefox-linux-fedora-list-1" class="hidden">
                                     <li>Open Terminal</li>
                                     <li>For Fedora 22 and later:
@@ -1511,7 +1998,7 @@ sudo apt-get install -f</code></pre>
                                 </ul>
                             </li>
                             <li>
-                                <span onclick="toggleSection('firefox-linux-fedora-list-2', event);" onkeydown="toggleSection('firefox-linux-fedora-list-2', event);" class="faq-title magic-invisible">Launch Firefox</span>
+                                <span onclick="toggleSection('firefox-linux-fedora-list-2', event);" onkeydown="toggleSection('firefox-linux-fedora-list-2', event);" class="lesson-title magic-invisible">Launch Firefox</span>
                                 <ul id="firefox-linux-fedora-list-2" class="hidden">
                                     <li>Type <code>firefox</code> in Terminal and press Enter, or</li>
                                     <li>Find "Firefox" in your application menu</li>
@@ -1519,7 +2006,7 @@ sudo apt-get install -f</code></pre>
                                 </ul>
                             </li>
                             <li>
-                                <span onclick="toggleSection('firefox-linux-fedora-list-3', event);" onkeydown="toggleSection('firefox-linux-fedora-list-3', event);" class="faq-title magic-invisible">Verify Installation</span>
+                                <span onclick="toggleSection('firefox-linux-fedora-list-3', event);" onkeydown="toggleSection('firefox-linux-fedora-list-3', event);" class="lesson-title magic-invisible">Verify Installation</span>
                                 <ul id="firefox-linux-fedora-list-3" class="hidden">
                                     <li>In Firefox, click the menu button (three horizontal lines) in the top-right corner</li>
                                     <li>Click "Help" → "About Firefox"</li>
@@ -1530,12 +2017,12 @@ sudo apt-get install -f</code></pre>
                         </ol>
                     </div>
 
-                    <h4 onclick="toggleSection('firefox-linux-arch-list', event);" onkeydown="toggleSection('firefox-linux-arch-list', event);" class="faq-title magic-invisible">Arch Linux</h4>
+                    <h4 onclick="toggleSection('firefox-linux-arch-list', event);" onkeydown="toggleSection('firefox-linux-arch-list', event);" class="lesson-title magic-invisible">Arch Linux</h4>
                     <div id="firefox-linux-arch-list" class="hidden">
                         <p>If you need to install Firefox on Arch Linux, follow these steps:</p>
                         <ol>
                             <li>
-                                <span onclick="toggleSection('firefox-linux-arch-list-1', event);" onkeydown="toggleSection('firefox-linux-arch-list-1', event);" class="faq-title magic-invisible">Install Firefox</span>
+                                <span onclick="toggleSection('firefox-linux-arch-list-1', event);" onkeydown="toggleSection('firefox-linux-arch-list-1', event);" class="lesson-title magic-invisible">Install Firefox</span>
                                 <ul id="firefox-linux-arch-list-1" class="hidden">
                                     <li>Open Terminal</li>
                                     <li>Run this command:
@@ -1546,7 +2033,7 @@ sudo apt-get install -f</code></pre>
                                 </ul>
                             </li>
                             <li>
-                                <span onclick="toggleSection('firefox-linux-arch-list-2', event);" onkeydown="toggleSection('firefox-linux-arch-list-2', event);" class="faq-title magic-invisible">Launch Firefox</span>
+                                <span onclick="toggleSection('firefox-linux-arch-list-2', event);" onkeydown="toggleSection('firefox-linux-arch-list-2', event);" class="lesson-title magic-invisible">Launch Firefox</span>
                                 <ul id="firefox-linux-arch-list-2" class="hidden">
                                     <li>Type <code>firefox</code> in Terminal and press Enter, or</li>
                                     <li>Find "Firefox" in your application menu</li>
@@ -1556,12 +2043,12 @@ sudo apt-get install -f</code></pre>
                         </ol>
                     </div>
 
-                    <h4 onclick="toggleSection('firefox-linux-alt-list', event);" onkeydown="toggleSection('firefox-linux-alt-list', event);" class="faq-title magic-invisible">Alternative: Download from Mozilla Website</h4>
+                    <h4 onclick="toggleSection('firefox-linux-alt-list', event);" onkeydown="toggleSection('firefox-linux-alt-list', event);" class="lesson-title magic-invisible">Alternative: Download from Mozilla Website</h4>
                     <div id="firefox-linux-alt-list" class="hidden">
                         <p>You can also download Firefox directly from the website:</p>
                         <ol>
                             <li>
-                                <span onclick="toggleSection('firefox-linux-alt-list-1', event);" onkeydown="toggleSection('firefox-linux-alt-list-1', event);" class="faq-title magic-invisible">Download from Official Website</span>
+                                <span onclick="toggleSection('firefox-linux-alt-list-1', event);" onkeydown="toggleSection('firefox-linux-alt-list-1', event);" class="lesson-title magic-invisible">Download from Official Website</span>
                                 <ul id="firefox-linux-alt-list-1" class="hidden">
                                     <li>Open your web browser</li>
                                     <li>Go to <a href="https://www.mozilla.org/firefox/" target="_blank" rel="noopener noreferrer">https://www.mozilla.org/firefox/</a></li>
@@ -1570,7 +2057,7 @@ sudo apt-get install -f</code></pre>
                                 </ul>
                             </li>
                             <li>
-                                <span onclick="toggleSection('firefox-linux-alt-list-2', event);" onkeydown="toggleSection('firefox-linux-alt-list-2', event);" class="faq-title magic-invisible">Extract and Install</span>
+                                <span onclick="toggleSection('firefox-linux-alt-list-2', event);" onkeydown="toggleSection('firefox-linux-alt-list-2', event);" class="lesson-title magic-invisible">Extract and Install</span>
                                 <ul id="firefox-linux-alt-list-2" class="hidden">
                                     <li>Navigate to your Downloads folder</li>
                                     <li>Extract the archive:
@@ -1585,7 +2072,7 @@ sudo apt-get install -f</code></pre>
                                 </ul>
                             </li>
                             <li>
-                                <span onclick="toggleSection('firefox-linux-alt-list-3', event);" onkeydown="toggleSection('firefox-linux-alt-list-3', event);" class="faq-title magic-invisible">Launch Firefox</span>
+                                <span onclick="toggleSection('firefox-linux-alt-list-3', event);" onkeydown="toggleSection('firefox-linux-alt-list-3', event);" class="lesson-title magic-invisible">Launch Firefox</span>
                                 <ul id="firefox-linux-alt-list-3" class="hidden">
                                     <li>Type <code>firefox</code> in Terminal and press Enter</li>
                                 </ul>
@@ -1605,12 +2092,12 @@ sudo apt-get install -f</code></pre>
                         <li>If you see a version number, you have it installed. If you get a "command not found" error, you need to install it.</li>
                     </ul>
 
-                    <h4 onclick="toggleSection('nodejs-linux-ubuntu-list', event);" onkeydown="toggleSection('nodejs-linux-ubuntu-list', event);" class="faq-title magic-invisible">Ubuntu / Debian-based Linux</h4>
+                    <h4 onclick="toggleSection('nodejs-linux-ubuntu-list', event);" onkeydown="toggleSection('nodejs-linux-ubuntu-list', event);" class="lesson-title magic-invisible">Ubuntu / Debian-based Linux</h4>
                     <div id="nodejs-linux-ubuntu-list" class="hidden">
                         <p>If you need to install Node.js on Ubuntu, follow these steps:</p>
                         <ol>
                             <li>
-                                <span onclick="toggleSection('nodejs-linux-ubuntu-list-1', event);" onkeydown="toggleSection('nodejs-linux-ubuntu-list-1', event);" class="faq-title magic-invisible">Install Node.js via NodeSource Repository (Recommended)</span>
+                                <span onclick="toggleSection('nodejs-linux-ubuntu-list-1', event);" onkeydown="toggleSection('nodejs-linux-ubuntu-list-1', event);" class="lesson-title magic-invisible">Install Node.js via NodeSource Repository (Recommended)</span>
                                 <ul id="nodejs-linux-ubuntu-list-1" class="hidden">
                                     <li>Open Terminal</li>
                                     <li>Update your package list:
@@ -1629,7 +2116,7 @@ sudo apt-get install -f</code></pre>
                                 </ul>
                             </li>
                             <li>
-                                <span onclick="toggleSection('nodejs-linux-ubuntu-list-2', event);" onkeydown="toggleSection('nodejs-linux-ubuntu-list-2', event);" class="faq-title magic-invisible">Alternative: Install from Ubuntu Repositories</span>
+                                <span onclick="toggleSection('nodejs-linux-ubuntu-list-2', event);" onkeydown="toggleSection('nodejs-linux-ubuntu-list-2', event);" class="lesson-title magic-invisible">Alternative: Install from Ubuntu Repositories</span>
                                 <ul id="nodejs-linux-ubuntu-list-2" class="hidden">
                                     <li>Note: This may install an older version</li>
                                     <li>Open Terminal</li>
@@ -1687,12 +2174,12 @@ sudo apt install nodejs npm</code></pre>
                         </ol>
                     </div>
 
-                    <h4 onclick="toggleSection('nodejs-linux-fedora-list', event);" onkeydown="toggleSection('nodejs-linux-fedora-list', event);" class="faq-title magic-invisible">Fedora / Red Hat-based Linux</h4>
+                    <h4 onclick="toggleSection('nodejs-linux-fedora-list', event);" onkeydown="toggleSection('nodejs-linux-fedora-list', event);" class="lesson-title magic-invisible">Fedora / Red Hat-based Linux</h4>
                     <div id="nodejs-linux-fedora-list" class="hidden">
                         <p>If you need to install Node.js on Fedora:</p>
                         <ol>
                             <li>
-                                <span onclick="toggleSection('nodejs-linux-fedora-list-1', event);" onkeydown="toggleSection('nodejs-linux-fedora-list-1', event);" class="faq-title magic-invisible">Install Node.js</span>
+                                <span onclick="toggleSection('nodejs-linux-fedora-list-1', event);" onkeydown="toggleSection('nodejs-linux-fedora-list-1', event);" class="lesson-title magic-invisible">Install Node.js</span>
                                 <ul id="nodejs-linux-fedora-list-1" class="hidden">
                                     <li>Open Terminal</li>
                                     <li>For Fedora 22 and later:
@@ -1705,10 +2192,10 @@ sudo apt install nodejs npm</code></pre>
                                 </ul>
                             </li>
                             <li>
-                                <span onclick="toggleSection('nodejs-linux-fedora-list-2', event);" onkeydown="toggleSection('nodejs-linux-fedora-list-2', event);" class="faq-title magic-invisible">Verify Installation</span>
+                                <span onclick="toggleSection('nodejs-linux-fedora-list-2', event);" onkeydown="toggleSection('nodejs-linux-fedora-list-2', event);" class="lesson-title magic-invisible">Verify Installation</span>
                                 <ol id="nodejs-linux-fedora-list-2" class="hidden">
                                     <li>
-                                        <span onclick="toggleSection('nodejs-linux-fedora-list-2-1', event);" onkeydown="toggleSection('nodejs-linux-fedora-list-2-1', event);" class="faq-title magic-invisible">Check Node.js and npm</span>
+                                        <span onclick="toggleSection('nodejs-linux-fedora-list-2-1', event);" onkeydown="toggleSection('nodejs-linux-fedora-list-2-1', event);" class="lesson-title magic-invisible">Check Node.js and npm</span>
                                         <ul id="nodejs-linux-fedora-list-2-1" class="hidden">
                                             <li>Open a new Terminal window</li>
                                             <li>Check Node.js version:
@@ -1752,7 +2239,7 @@ sudo apt install nodejs npm</code></pre>
                         </ol>
                     </div>
 
-                    <h4 onclick="toggleSection('nodejs-linux-arch-list', event);" onkeydown="toggleSection('nodejs-linux-arch-list', event);" class="faq-title magic-invisible">Arch Linux</h4>
+                    <h4 onclick="toggleSection('nodejs-linux-arch-list', event);" onkeydown="toggleSection('nodejs-linux-arch-list', event);" class="lesson-title magic-invisible">Arch Linux</h4>
                     <div id="nodejs-linux-arch-list" class="hidden">
                         <p>If you're using Arch Linux:</p>
                         <ol>
@@ -1770,7 +2257,7 @@ sudo apt install nodejs npm</code></pre>
                                 <span onclick="toggleSection('nodejs-linux-arch-list-2', event);" onkeydown="toggleSection('nodejs-linux-arch-list-2', event);" class="magic-invisible">Verify Installation</span>
                                 <ol id="nodejs-linux-arch-list-2" class="hidden">
                                     <li>
-                                        <span onclick="toggleSection('nodejs-linux-arch-list-2-1', event);" onkeydown="toggleSection('nodejs-linux-arch-list-2-1', event);" class="faq-title magic-invisible">Check Node.js and npm</span>
+                                        <span onclick="toggleSection('nodejs-linux-arch-list-2-1', event);" onkeydown="toggleSection('nodejs-linux-arch-list-2-1', event);" class="lesson-title magic-invisible">Check Node.js and npm</span>
                                         <ul id="nodejs-linux-arch-list-2-1" class="hidden">
                                             <li>Open a new Terminal window</li>
                                             <li>Check Node.js version:
@@ -1814,7 +2301,7 @@ sudo apt install nodejs npm</code></pre>
                         </ol>
                     </div>
 
-                    <h4  onclick="toggleSection('nodejs-linux-nvm-list', event);" onkeydown="toggleSection('nodejs-linux-nvm-list', event);" class="faq-title magic-invisible">Using Node Version Manager (nvm) - Advanced Option</h4>
+                    <h4  onclick="toggleSection('nodejs-linux-nvm-list', event);" onkeydown="toggleSection('nodejs-linux-nvm-list', event);" class="lesson-title magic-invisible">Using Node Version Manager (nvm) - Advanced Option</h4>
                     <div id="nodejs-linux-nvm-list" class="hidden">
                         <p>For more control over Node.js versions:</p>
                         <ol>
@@ -1898,7 +2385,7 @@ sudo apt install nodejs npm</code></pre>
                         <li>If you see a version number, you have it installed. If you get a "command not found" error, you need to install it.</li>
                     </ul>
 
-                    <h4 onclick="toggleSection('git-linux-ubuntu-list', event);" onkeydown="toggleSection('git-linux-ubuntu-list', event);" class="faq-title magic-invisible">Ubuntu / Debian-based Linux</h4>
+                    <h4 onclick="toggleSection('git-linux-ubuntu-list', event);" onkeydown="toggleSection('git-linux-ubuntu-list', event);" class="lesson-title magic-invisible">Ubuntu / Debian-based Linux</h4>
                     <div  id="git-linux-ubuntu-list" class="hidden">
                         <p>If you need to install Git on Ubuntu, follow these steps:</p>
                         <ol>
@@ -1964,7 +2451,7 @@ sudo apt install nodejs npm</code></pre>
                         </ol>
                     </div>
 
-                    <h4  onclick="toggleSection('git-linux-fedora-list', event);" onkeydown="toggleSection('git-linux-fedora-list', event);" class="faq-title magic-invisible">Fedora / Red Hat-based Linux</h4>
+                    <h4  onclick="toggleSection('git-linux-fedora-list', event);" onkeydown="toggleSection('git-linux-fedora-list', event);" class="lesson-title magic-invisible">Fedora / Red Hat-based Linux</h4>
                     <div id="git-linux-fedora-list" class="hidden">
                         <p>If you need to install Git on Fedora, follow these steps:</p>
                         <ol>
@@ -2023,7 +2510,7 @@ sudo apt install nodejs npm</code></pre>
                         </ol>
                     </div>
 
-                    <h4 onclick="toggleSection('git-linux-arch-list', event);" onkeydown="toggleSection('git-linux-arch-list', event);" class="faq-title magic-invisible">Arch Linux</h4>
+                    <h4 onclick="toggleSection('git-linux-arch-list', event);" onkeydown="toggleSection('git-linux-arch-list', event);" class="lesson-title magic-invisible">Arch Linux</h4>
                     <div id="git-linux-arch-list" class="hidden">
                         <p>If you're using Arch Linux:</p>
                         <ol>
@@ -2098,12 +2585,12 @@ git config --global user.email "your.email@example.com"
                     </ul>
                     <p><strong>Note:</strong> Many Linux distributions come with SQLite pre-installed, but if not, it's easy to install.</p>
 
-                    <h4 onclick="toggleSection('sqlite-linux-ubuntu-list', event);" onkeydown="toggleSection('sqlite-linux-ubuntu-list', event);" class="faq-title magic-invisible">Ubuntu / Debian-based Linux</h4>
+                    <h4 onclick="toggleSection('sqlite-linux-ubuntu-list', event);" onkeydown="toggleSection('sqlite-linux-ubuntu-list', event);" class="lesson-title magic-invisible">Ubuntu / Debian-based Linux</h4>
                     <div id="sqlite-linux-ubuntu-list" class="hidden">
                         <p>If you need to install SQLite on Ubuntu, follow these steps:</p>
                         <ol>
                             <li>
-                                <span onclick="toggleSection('sqlite-linux-ubuntu-list-1', event);" onkeydown="toggleSection('sqlite-linux-ubuntu-list-1', event);" class="faq-title magic-invisible">Install SQLite</span>
+                                <span onclick="toggleSection('sqlite-linux-ubuntu-list-1', event);" onkeydown="toggleSection('sqlite-linux-ubuntu-list-1', event);" class="lesson-title magic-invisible">Install SQLite</span>
                                 <ul id="sqlite-linux-ubuntu-list-1" class="hidden">
                                     <li>Run this command:
                                         <pre><code>
@@ -2117,7 +2604,7 @@ sudo apt install sqlite3
                                 </ul>
                             </li>
                             <li>
-                                <span onclick="toggleSection('sqlite-linux-ubuntu-list-2', event);" onkeydown="toggleSection('sqlite-linux-ubuntu-list-2', event);" class="faq-title magic-invisible">Install SQLite Development Files (Optional)</span>
+                                <span onclick="toggleSection('sqlite-linux-ubuntu-list-2', event);" onkeydown="toggleSection('sqlite-linux-ubuntu-list-2', event);" class="lesson-title magic-invisible">Install SQLite Development Files (Optional)</span>
                                 <ul id="sqlite-linux-ubuntu-list-2" class="hidden">
                                     <li>If you plan to develop with SQLite or use it with programming languages:
                                         <pre><code>sudo apt install libsqlite3-dev</code></pre>
@@ -2125,10 +2612,10 @@ sudo apt install sqlite3
                                 </ul>
                             </li>
                             <li>
-                                <span onclick="toggleSection('sqlite-linux-ubuntu-list-3', event);" onkeydown="toggleSection('sqlite-linux-ubuntu-list-3', event);" class="faq-title magic-invisible">Verify Installation (All Distributions):</span>
+                                <span onclick="toggleSection('sqlite-linux-ubuntu-list-3', event);" onkeydown="toggleSection('sqlite-linux-ubuntu-list-3', event);" class="lesson-title magic-invisible">Verify Installation (All Distributions):</span>
                                 <ol id="sqlite-linux-ubuntu-list-3" class="hidden">
                                     <li>
-                                        <span onclick="toggleSection('sqlite-linux-ubuntu-list-3-1', event);" onkeydown="toggleSection('sqlite-linux-ubuntu-list-3-1', event);" class="faq-title magic-invisible">Check Version</span>
+                                        <span onclick="toggleSection('sqlite-linux-ubuntu-list-3-1', event);" onkeydown="toggleSection('sqlite-linux-ubuntu-list-3-1', event);" class="lesson-title magic-invisible">Check Version</span>
                                         <ul id="sqlite-linux-ubuntu-list-3-1" class="hidden">
                                             <li>In Terminal, type:
                                                 <pre><code>
@@ -2204,7 +2691,7 @@ SELECT * FROM users;
                         </ol>
                     </div>
 
-                    <h4 onclick="toggleSection('sqlite-linux-fedora-list', event);" onkeydown="toggleSection('sqlite-linux-fedora-list', event);" class="faq-title magic-invisible">Fedora / Red Hat-based Linux</h4>
+                    <h4 onclick="toggleSection('sqlite-linux-fedora-list', event);" onkeydown="toggleSection('sqlite-linux-fedora-list', event);" class="lesson-title magic-invisible">Fedora / Red Hat-based Linux</h4>
                     <p>If you need to install SQLite on Fedora, follow these steps:</p>
                     <ol id="sqlite-linux-fedora-list" class="hidden">
                         <li>
@@ -2262,30 +2749,27 @@ SELECT * FROM users;
                         <li><code>.headers on</code> - Show column headers</li>
                     </ul>
                 </div>`
-                }
-            ]
-        }
-    ],
-    common_dev_sections: [
-        {
-            section_id: 'vsc-extensions',
-            section_title: 'Visual Studio Code Extensions',
-            section_content: `<div id="extensions-windows">
+                },
+                {
+                    tool_id: 'vsc-extensions',
+                    tool_name: 'Visual Studio Code Extensions',
+                    aria_label: 'Visual Studio Code Extensions for Linux',
+                    tool_content: `<div id="extensions-linux">
                     <p>VS Code extensions add extra features and functionality to your editor. Here are the recommended extensions for web development:</p>
 
-                    <h4 onclick="toggleSection('vsc-extensions-windows-list-1', event);" onkeydown="toggleSection('vsc-extensions-windows-list-1', event);" class="faq-title magic-invisible">How to Install Extensions</h4>
-                    <ol id="vsc-extensions-windows-list-1" class="hidden">
+                    <h4 onclick="toggleSection('vsc-extensions-linux-list-1', event);" onkeydown="toggleSection('vsc-extensions-linux-list-1', event);" class="lesson-title magic-invisible">How to Install Extensions</h4>
+                    <ol id="vsc-extensions-linux-list-1" class="hidden">
                         <li>
-                            <span onclick="toggleSection('vsc-extensions-windows-list-1-1', event);" onkeydown="toggleSection('vsc-extensions-windows-list-1-1', event);" class="faq-title magic-invisible">Open Extensions Panel</span>
-                            <ul id="vsc-extensions-windows-list-1-1" class="hidden">
+                            <span onclick="toggleSection('vsc-extensions-linux-list-1-1', event);" onkeydown="toggleSection('vsc-extensions-linux-list-1-1', event);" class="lesson-title magic-invisible">Open Extensions Panel</span>
+                            <ul id="vsc-extensions-linux-list-1-1" class="hidden">
                                 <li>Open VS Code</li>
                                 <li>Press <code>Ctrl + Shift + X</code> to open the Extensions panel, or</li>
                                 <li>Click the Extensions icon in the left sidebar (looks like four squares)</li>
                             </ul>
                         </li>
                         <li>
-                            <span onclick="toggleSection('vsc-extensions-windows-list-1-2', event);" onkeydown="toggleSection('vsc-extensions-windows-list-1-2', event);" class="faq-title magic-invisible">Search and Install</span>
-                            <ul id="vsc-extensions-windows-list-1-2" class="hidden">
+                            <span onclick="toggleSection('vsc-extensions-linux-list-1-2', event);" onkeydown="toggleSection('vsc-extensions-linux-list-1-2', event);" class="lesson-title magic-invisible">Search and Install</span>
+                            <ul id="vsc-extensions-linux-list-1-2" class="hidden">
                                 <li>Type the extension name in the search box</li>
                                 <li>Be careful! Some extensions may have similar names. Check the extension publisher to ensure you are installing the correct one</li>
                                 <li>Click the "Install" button for the extension you want</li>
@@ -2295,11 +2779,11 @@ SELECT * FROM users;
                         </li>
                     </ol>
 
-                    <h4 onclick="toggleSection('vsc-extensions-windows-list-2', event);" onkeydown="toggleSection('vsc-extensions-windows-list-2', event);" class="faq-title magic-invisible">Recommended Extensions (Install Now)</h4>
-                    <ol id="vsc-extensions-windows-list-2" class="hidden">
+                    <h4 onclick="toggleSection('vsc-extensions-linux-list-2', event);" onkeydown="toggleSection('vsc-extensions-linux-list-2', event);" class="lesson-title magic-invisible">Recommended Extensions (Install Now)</h4>
+                    <ol id="vsc-extensions-linux-list-2" class="hidden">
                         <li>
-                            <span onclick="toggleSection('vsc-extensions-windows-list-2-1', event);" onkeydown="toggleSection('vsc-extensions-windows-list-2-1', event);" class="faq-title magic-invisible">Live Server</span> (ritwickdey.LiveServer)
-                            <ul id="vsc-extensions-windows-list-2-1" class="hidden">
+                            <span onclick="toggleSection('vsc-extensions-linux-list-2-1', event);" onkeydown="toggleSection('vsc-extensions-linux-list-2-1', event);" class="lesson-title magic-invisible">Live Server</span> (ritwickdey.LiveServer)
+                            <ul id="vsc-extensions-linux-list-2-1" class="hidden">
                                 <li>Launches a local development server with live reload</li>
                                 <li>Your browser automatically refreshes when you save changes</li>
                                 <li>Essential for testing HTML/CSS/JavaScript</li>
@@ -2307,8 +2791,8 @@ SELECT * FROM users;
                             </ul>
                         </li>
                         <li>
-                            <span onclick="toggleSection('vsc-extensions-windows-list-2-2', event);" onkeydown="toggleSection('vsc-extensions-windows-list-2-2', event);" class="faq-title magic-invisible">Prettier - Code formatter</span> (esbenp.prettier-vscode)
-                            <ul id="vsc-extensions-windows-list-2-2" class="hidden">
+                            <span onclick="toggleSection('vsc-extensions-linux-list-2-2', event);" onkeydown="toggleSection('vsc-extensions-linux-list-2-2', event);" class="lesson-title magic-invisible">Prettier - Code formatter</span> (esbenp.prettier-vscode)
+                            <ul id="vsc-extensions-linux-list-2-2" class="hidden">
                                 <li>Automatically formats your code consistently</li>
                                 <li>Makes your code easier to read</li>
                                 <li>After installing, you can format by pressing <code>Shift + Alt + F</code></li>
@@ -2316,16 +2800,16 @@ SELECT * FROM users;
                             </ul>
                         </li>
                         <li>
-                            <span onclick="toggleSection('vsc-extensions-windows-list-2-3', event);" onkeydown="toggleSection('vsc-extensions-windows-list-2-3', event);" class="faq-title magic-invisible">Auto Rename Tag</span> (formulahendry.auto-rename-tag)
-                            <ul id="vsc-extensions-windows-list-2-3" class="hidden">
+                            <span onclick="toggleSection('vsc-extensions-linux-list-2-3', event);" onkeydown="toggleSection('vsc-extensions-linux-list-2-3', event);" class="lesson-title magic-invisible">Auto Rename Tag</span> (formulahendry.auto-rename-tag)
+                            <ul id="vsc-extensions-linux-list-2-3" class="hidden">
                                 <li>Automatically renames paired HTML/XML tags</li>
                                 <li>When you rename an opening tag, the closing tag updates too</li>
                                 <li>Saves time and prevents errors</li>
                             </ul>
                         </li>
                         <li>
-                            <span onclick="toggleSection('vsc-extensions-windows-list-2-4', event);" onkeydown="toggleSection('vsc-extensions-windows-list-2-4', event);" class="faq-title magic-invisible">HTML CSS Support</span> (ecmel.vscode-html-css)
-                            <ul id="vsc-extensions-windows-list-2-4" class="hidden">
+                            <span onclick="toggleSection('vsc-extensions-linux-list-2-4', event);" onkeydown="toggleSection('vsc-extensions-linux-list-2-4', event);" class="lesson-title magic-invisible">HTML CSS Support</span> (ecmel.vscode-html-css)
+                            <ul id="vsc-extensions-linux-list-2-4" class="hidden">
                                 <li>Provides better autocomplete for HTML class and ID attributes</li>
                                 <li>Suggests CSS classes from your stylesheets</li>
                                 <li>Makes writing HTML faster and more accurate</li>
@@ -2333,46 +2817,46 @@ SELECT * FROM users;
                         </li>
                     </ol>
 
-                    <h4 onclick="toggleSection('vsc-extensions-windows-list-3', event);" onkeydown="toggleSection('vsc-extensions-windows-list-3', event);" class="faq-title magic-invisible">Helpful Extensions</h4>
-                    <ol id="vsc-extensions-windows-list-3" class="hidden">
+                    <h4 onclick="toggleSection('vsc-extensions-linux-list-3', event);" onkeydown="toggleSection('vsc-extensions-linux-list-3', event);" class="lesson-title magic-invisible">Helpful Extensions</h4>
+                    <ol id="vsc-extensions-linux-list-3" class="hidden">
                         <li>
-                            <span onclick="toggleSection('vsc-extensions-windows-list-3-1', event);" onkeydown="toggleSection('vsc-extensions-windows-list-3-1', event);" class="faq-title magic-invisible">Path Intellisense</span> (christian-kohler.path-intellisense)
-                            <ul id="vsc-extensions-windows-list-3-1" class="hidden">
+                            <span onclick="toggleSection('vsc-extensions-linux-list-3-1', event);" onkeydown="toggleSection('vsc-extensions-linux-list-3-1', event);" class="lesson-title magic-invisible">Path Intellisense</span> (christian-kohler.path-intellisense)
+                            <ul id="vsc-extensions-linux-list-3-1" class="hidden">
                                 <li>Autocompletes file paths in your code</li>
                                 <li>Helpful when linking CSS files, images, or other resources</li>
                             </ul>
                         </li>
                         <li>
-                            <span onclick="toggleSection('vsc-extensions-windows-list-3-2', event);" onkeydown="toggleSection('vsc-extensions-windows-list-3-2', event);" class="faq-title magic-invisible">Indent-Rainbow</span> (oderwat.indent-rainbow)
-                            <ul id="vsc-extensions-windows-list-3-2" class="hidden">
+                            <span onclick="toggleSection('vsc-extensions-linux-list-3-2', event);" onkeydown="toggleSection('vsc-extensions-linux-list-3-2', event);" class="lesson-title magic-invisible">Indent-Rainbow</span> (oderwat.indent-rainbow)
+                            <ul id="vsc-extensions-linux-list-3-2" class="hidden">
                                 <li>Colours indentation levels with subtle colours</li>
                                 <li>Makes code structure more visible</li>
                                 <li>Helps you spot indentation errors quickly</li>
                             </ul>
                         </li>
                         <li>
-                            <span onclick="toggleSection('vsc-extensions-windows-list-3-3', event);" onkeydown="toggleSection('vsc-extensions-windows-list-3-3', event);" class="faq-title magic-invisible">Error Lens</span> (usernamehw.errorlens)
-                            <ul id="vsc-extensions-windows-list-3-3" class="hidden">
+                            <span onclick="toggleSection('vsc-extensions-linux-list-3-3', event);" onkeydown="toggleSection('vsc-extensions-linux-list-3-3', event);" class="lesson-title magic-invisible">Error Lens</span> (usernamehw.errorlens)
+                            <ul id="vsc-extensions-linux-list-3-3" class="hidden">
                                 <li>Shows errors and warnings inline in your code</li>
                                 <li>Makes debugging easier by highlighting problems immediately</li>
                             </ul>
                         </li>
                     </ol>
 
-                    <h4 onclick="toggleSection('vsc-extensions-windows-list-4', event);" onkeydown="toggleSection('vsc-extensions-windows-list-4', event);" class="faq-title magic-invisible">For Later Lessons</h4>
-                    <div id="vsc-extensions-windows-list-4" class="hidden">
+                    <h4 onclick="toggleSection('vsc-extensions-linux-list-4', event);" onkeydown="toggleSection('vsc-extensions-linux-list-4', event);" class="lesson-title magic-invisible">For Later Lessons</h4>
+                    <div id="vsc-extensions-linux-list-4" class="hidden">
                         <p>Install these when you reach the relevant lessons:</p>
                         <ol>
                             <li>
-                                <span onclick="toggleSection('vsc-extensions-windows-list-4-1', event);" onkeydown="toggleSection('vsc-extensions-windows-list-4-1', event);" class="faq-title magic-invisible">ESLint</span> (dbaeumer.vscode-eslint)
-                                <ul id="vsc-extensions-windows-list-4-1" class="hidden">
+                                <span onclick="toggleSection('vsc-extensions-linux-list-4-1', event);" onkeydown="toggleSection('vsc-extensions-linux-list-4-1', event);" class="lesson-title magic-invisible">ESLint</span> (dbaeumer.vscode-eslint)
+                                <ul id="vsc-extensions-linux-list-4-1" class="hidden">
                                     <li>JavaScript and Node.js code quality and style checking</li>
                                     <li>Install when you start learning JavaScript</li>
                                 </ul>
                             </li>
                             <li>
-                                <span onclick="toggleSection('vsc-extensions-windows-list-4-2', event);" onkeydown="toggleSection('vsc-extensions-windows-list-4-2', event);" class="faq-title magic-invisible">SQLite Viewer</span> (qwtel.sqlite-viewer)
-                                <ul id="vsc-extensions-windows-list-4-2" class="hidden">
+                                <span onclick="toggleSection('vsc-extensions-linux-list-4-2', event);" onkeydown="toggleSection('vsc-extensions-linux-list-4-2', event);" class="lesson-title magic-invisible">SQLite Viewer</span> (qwtel.sqlite-viewer)
+                                <ul id="vsc-extensions-linux-list-4-2" class="hidden">
                                     <li>View and query SQLite databases directly in VS Code</li>
                                     <li>Install when you start working with databases</li>
                                 </ul>
@@ -2380,26 +2864,26 @@ SELECT * FROM users;
                         </ol>
                     </div>
 
-                    <h4 onclick="toggleSection('vsc-extensions-windows-list-5', event);" onkeydown="toggleSection('vsc-extensions-windows-list-5', event);" class="faq-title magic-invisible">Optional Extensions</h4>
-                    <ol id="vsc-extensions-windows-list-5" class="hidden">
+                    <h4 onclick="toggleSection('vsc-extensions-linux-list-5', event);" onkeydown="toggleSection('vsc-extensions-linux-list-5', event);" class="lesson-title magic-invisible">Optional Extensions</h4>
+                    <ol id="vsc-extensions-linux-list-5" class="hidden">
                         <li>
-                            <span onclick="toggleSection('vsc-extensions-windows-list-5-1', event);" onkeydown="toggleSection('vsc-extensions-windows-list-5-1', event);" class="faq-title magic-invisible">Better Comments</span> (aaron-bond.better-comments)
-                            <ul id="vsc-extensions-windows-list-5-1">
+                            <span onclick="toggleSection('vsc-extensions-linux-list-5-1', event);" onkeydown="toggleSection('vsc-extensions-linux-list-5-1', event);" class="lesson-title magic-invisible">Better Comments</span> (aaron-bond.better-comments)
+                            <ul id="vsc-extensions-linux-list-5-1" class="hidden">
                                 <li>Colour-codes different types of comments (TODO, FIXME, etc.)</li>
                                 <li>Makes comments more organised and noticeable</li>
                             </ul>
                         </li>
                         <li>
-                            <span onclick="toggleSection('vsc-extensions-windows-list-5-2', event);" onkeydown="toggleSection('vsc-extensions-windows-list-5-2', event);" class="faq-title magic-invisible">axe Accessibility Linter</span> (deque-systems.vscode-axe-linter)
-                            <ul id="vsc-extensions-windows-list-5-2" class="hidden">
+                            <span onclick="toggleSection('vsc-extensions-linux-list-5-2', event);" onkeydown="toggleSection('vsc-extensions-linux-list-5-2', event);" class="lesson-title magic-invisible">axe Accessibility Linter</span> (deque-systems.vscode-axe-linter)
+                            <ul id="vsc-extensions-linux-list-5-2" class="hidden">
                                 <li>Checks HTML for accessibility issues</li>
                                 <li>Helps you build websites that everyone can use</li>
                             </ul>
                         </li>
                     </ol>
 
-                    <h4 onclick="toggleSection('vsc-extensions-windows-list-6', event);" onkeydown="toggleSection('vsc-extensions-windows-list-6', event);" class="faq-title magic-invisible">Configure Prettier (Recommended)</h4>
-                    <div id="vsc-extensions-windows-list-6" class="hidden">
+                    <h4 onclick="toggleSection('vsc-extensions-linux-list-6', event);" onkeydown="toggleSection('vsc-extensions-linux-list-6', event);" class="lesson-title magic-invisible">Configure Prettier (Recommended)</h4>
+                    <div id="vsc-extensions-linux-list-6" class="hidden">
                         <p>To make Prettier format your code automatically when you save:</p>
                         <ol>
                             <li>Press <code>Ctrl + ,</code> to open Settings</li>
@@ -2410,53 +2894,54 @@ SELECT * FROM users;
                         </ol>
                     </div>
                 </div>`
-        },
-        {
-            section_id: 'projects-folder',
-            section_title: 'Create a Projects Folder',
-            section_content: `<div id="projects-folder-windows">
+                },
+                {
+                    tool_id: 'projects-folder',
+                    tool_name: 'Create a Projects Folder',
+                    aria_label: 'Create a Projects Folder on Linux',
+                    tool_content: `<div id="projects-folder-linux">
                     <p>It's helpful to keep all your coding projects organised in one place. Let's create a dedicated Projects folder:</p>
                     <ol>
-                        <li>
-                            <span onclick="toggleSection('create-folder-windows-list-1', event);" onkeydown="toggleSection('create-folder-windows-list-1', event);" class="faq-title magic-invisible">Open File Explorer</span>
-                            <ul id="create-folder-windows-list-1" class="hidden">
-                                <li>Press <code>Windows key + E</code> to open File Explorer</li>
+                        <li onclick="toggleSection('create-folder-linux-list-1', event);" onkeydown="toggleSection('create-folder-linux-list-1', event);" class="magic-invisible">Open Terminal
+                            <ul id="create-folder-linux-list-1" class="hidden">
+                                <li>Press <code>Ctrl + Alt + T</code></li>
                             </ul>
                         </li>
-                        <li>
-                            <span onclick="toggleSection('create-folder-windows-list-2', event);" onkeydown="toggleSection('create-folder-windows-list-2', event);" class="faq-title magic-invisible">Navigate to Your User Folder</span>
-                            <ul id="create-folder-windows-list-2" class="hidden">
-                                <li>Click on "This PC" or "Computer" in the left sidebar</li>
-                                <li>Open the <code>C:</code> drive</li>
-                                <li>Open the <code>Users</code> folder</li>
-                                <li>Open the folder with your username</li>
+                        <li onclick="toggleSection('create-folder-linux-list-2', event);" onkeydown="toggleSection('create-folder-linux-list-2', event);" class="lesson-title magic-invisible">Navigate to Your Home Directory
+                            <ul id="create-folder-linux-list-2" class="hidden">
+                                <li>The terminal usually starts in your home directory</li>
+                                <li>To confirm, type <code>pwd</code> and press Enter</li>
+                                <li>You should see something like <code>/home/yourusername</code></li>
                             </ul>
                         </li>
-                        <li>
-                            <span onclick="toggleSection('create-folder-windows-list-3', event);" onkeydown="toggleSection('create-folder-windows-list-3', event);" class="faq-title magic-invisible">Create the Projects Folder</span>
-                            <ul id="create-folder-windows-list-3" class="hidden">
-                                <li>Right-click in an empty space</li>
-                                <li>Select "New" → "Folder"</li>
-                                <li>Name it <code>Projects</code></li>
-                                <li>Press Enter</li>
+                        <li onclick="toggleSection('create-folder-linux-list-3', event);" onkeydown="toggleSection('create-folder-linux-list-3', event);" class="lesson-title magic-invisible">Create the Projects Folder
+                            <ul id="create-folder-linux-list-3" class="hidden">
+                                <li>Type this command and press Enter:
+                                    <pre><code>mkdir Projects</code></pre>
+                                </li>
+                                <li>Verify it was created:
+                                    <pre><code>ls</code></pre>
+                                </li>
+                                <li>You should see <code>Projects</code> in the list</li>
                             </ul>
                         </li>
                     </ol>
-                    <p>Your Projects folder is now at: <code>C:\Users\YourUsername\Projects</code></p>
+                    <p>Your Projects folder is now at: <code>~/Projects</code> (or <code>/home/yourusername/Projects</code>)</p>
                     <p>In future lessons, you'll save your coding projects in this folder.</p>
                 </div>`
-        },
-        {
-            section_id: 'dev-server',
-            section_title: 'Setting Up the Development Server',
-            section_content: `<div id="dev-server-windows">
+                },
+                {
+                    tool_id: 'dev-server',
+                    tool_name: 'Setting Up the Development Server',
+                    aria_label: 'Setting Up the Development Server on Linux',
+                    tool_content: `<div id="dev-server-linux">
                     <p>To view your web pages as you develop them, you'll need to run a local development server. This is important because some web features don't work when opening HTML files directly in a browser. If you installed the Live Server extension in Visual Studio Code, you can skip this step as that will do the same thing. Using this method lets you run and test your web pages even if you are not using Visual Studio Code.</p>
 
-                    <h4 onclick="toggleSection('dev-server-windows-list-1', event);" onkeydown="toggleSection('dev-server-windows-list-1', event);" class="faq-title magic-invisible">Create a package.json File</h4>
-                    <ol id="dev-server-windows-list-1" class="hidden">
+                    <h4 onclick="toggleSection('dev-server-linux-list-1', event);" onkeydown="toggleSection('dev-server-linux-list-1', event);" class="lesson-title magic-invisible">Create a package.json File</h4>
+                    <ol id="dev-server-linux-list-1" class="hidden">
                         <li>Open Visual Studio Code</li>
                         <li>Select <code>File → Open Folder</code></li>
-                        <li>Navigate to and select your <code>Projects</code> folder (<code>C:\Users\YourUsername\Projects</code>)</li>
+                        <li>Navigate to and select your <code>Projects</code> folder (<code>~/Projects</code>)</li>
                         <li>Create a new file called <code>package.json</code> in the Projects folder</li>
                         <li>Add the following content to the file:
                             <div class="code-snippet-container">
@@ -2479,24 +2964,24 @@ SELECT * FROM users;
                         <li>Save the file (<code>Ctrl + S</code>)</li>
                     </ol>
 
-                    <h4 onclick="toggleSection('dev-server-windows-list-2', event);" onkeydown="toggleSection('dev-server-windows-list-2', event);" class="faq-title magic-invisible">Install http-server</h4>
-                    <ol id="dev-server-windows-list-2" class="hidden">
+                    <h4 onclick="toggleSection('dev-server-linux-list-2', event);" onkeydown="toggleSection('dev-server-linux-list-2', event);" class="lesson-title magic-invisible">Install http-server</h4>
+                    <ol id="dev-server-linux-list-2" class="hidden">
                         <li>Open the integrated terminal in VS Code by pressing <code>Ctrl + \`</code> (backtick key, usually above Tab)</li>
                         <li>Make sure you're in your Projects folder (the terminal should show the path)</li>
                         <li>Type <code>npm install</code> and press Enter</li>
                         <li>Wait for the installation to complete (this installs http-server locally in your Projects folder)</li>
                     </ol>
 
-                    <h4 onclick="toggleSection('dev-server-windows-list-3', event);" onkeydown="toggleSection('dev-server-windows-list-3', event);" class="faq-title magic-invisible">Start the Development Server</h4>
-                    <ol id="dev-server-windows-list-3" class="hidden"   >
+                    <h4 onclick="toggleSection('dev-server-linux-list-3', event);" onkeydown="toggleSection('dev-server-linux-list-3', event);" class="lesson-title magic-invisible">Start the Development Server</h4>
+                    <ol id="dev-server-linux-list-3" class="hidden">
                         <li>In the same terminal, type <code>npm start</code> and press Enter</li>
                         <li>You should see a message saying the server is running on <code>http://localhost:8000</code></li>
                         <li>Open your web browser and go to <code>http://localhost:8000</code></li>
                         <li>You should see a directory listing of your Projects folder</li>
                     </ol>
 
-                    <h4 onclick="toggleSection('dev-server-windows-list-4', event);" onkeydown="toggleSection('dev-server-windows-list-4', event);" class="faq-title magic-invisible">Using the Development Server</h4>
-                    <ul id="dev-server-windows-list-4" class="hidden">
+                    <h4 onclick="toggleSection('dev-server-linux-list-4', event);" onkeydown="toggleSection('dev-server-linux-list-4', event);" class="lesson-title magic-invisible">Using the Development Server</h4>
+                    <ul id="dev-server-linux-list-4" class="hidden">
                         <li>Keep the terminal open while you're working - the server needs to run continuously</li>
                         <li>When you create HTML files in your Projects folder, you can access them through the browser at <code>http://localhost:8000/filename.html</code></li>
                         <li>When you make changes to your files and save them, refresh your browser to see the changes</li>
@@ -2504,6 +2989,24 @@ SELECT * FROM users;
                         <li>To restart the server later, just run <code>npm start</code> again from your Projects folder</li>
                     </ul>
                 </div>`
+                }
+            ]
         }
-    ]
+    ],
+    conclusion_section: {
+        section: true,
+        section_id: 'conclusion',
+        title: 'Conclusion',
+        aria_label: 'Conclusion',
+        container_class: '',
+        content_class: '',
+        title_class: 'lesson-title',
+        class_list: 'lesson-install-windows lesson-install-macos lesson-install-linux conclusion',
+        content: `<div id="conclusion-block">
+                <p>
+                    Congratulations! You have installed all the necessary tools to start your web development journey. In the next lesson, you will create your first web page using HTML and CSS.
+                </p>
+                <div id="wand-container" class="wand-container"></div>
+            </div>`
+    }
 };
