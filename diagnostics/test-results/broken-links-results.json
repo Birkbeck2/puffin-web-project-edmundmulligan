@@ -1,16 +1,34 @@
 {
   "pages": [
     {
+      "url": "mentors/lesson-02.html",
+      "links": [],
+      "brokenCount": 0,
+      "totalCount": 27
+    },
+    {
+      "url": "mentors/lesson-01.html",
+      "links": [],
+      "brokenCount": 0,
+      "totalCount": 26
+    },
+    {
       "url": "mentors/lesson-00.html",
       "links": [],
       "brokenCount": 0,
-      "totalCount": 21
+      "totalCount": 25
     },
     {
       "url": "index.html",
       "links": [],
       "brokenCount": 0,
       "totalCount": 20
+    },
+    {
+      "url": "students/lesson-02.html",
+      "links": [],
+      "brokenCount": 0,
+      "totalCount": 26
     },
     {
       "url": "students/lesson-01.html",
@@ -22,7 +40,7 @@
       "url": "students/lesson-00.html",
       "links": [],
       "brokenCount": 0,
-      "totalCount": 33
+      "totalCount": 36
     },
     {
       "url": "pages/glossary.html",
@@ -80,7 +98,7 @@
     }
   ],
   "summary": {
-    "totalLinks": 284,
+    "totalLinks": 370,
     "brokenLinks": 0,
     "excludedLinks": 0
   }
