@@ -9,8 +9,6 @@ License: MIT
 import re
 import sys
 import os
-from pathlib import Path
-
 
 def hsl_to_rgb(h, s, l):
     """
