@@ -1,6 +1,6 @@
 # Capturing CSS Animations as GIFs
 
-Complete guide for recording CSS animations from your website and converting them to GIF format.
+Complete guide for recording CSS animations from the website and converting them to GIF format.
 
 ---
 
