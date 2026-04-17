@@ -15,34 +15,6 @@
 const fs = require('fs');
 const path = require('path');
 
-// Approved generic variables that should be used (set by themeSwitcher.js)
-const APPROVED_GENERIC_VARS = [
-    '--colour-page-background',
-    '--colour-page-text',
-    '--colour-headings-background',
-    '--colour-headings-text',
-    '--colour-code-background',
-    '--colour-code-text',
-    '--colour-link-text',
-    '--colour-link-text-hover',
-    '--colour-link-text-visited',
-    '--colour-link-text-focus',
-    '--colour-button-background',
-    '--colour-button-text',
-    '--colour-button-background-hover',
-    '--colour-button-text-hover',
-    '--colour-button-background-active',
-    '--colour-button-text-active',
-    '--colour-button-background-disabled',
-    '--colour-button-text-disabled',
-    '--colour-error-background',
-    '--colour-error-text',
-    '--colour-warning-background',
-    '--colour-warning-text',
-    '--bg-landscape',
-    '--bg-portrait'
-];
-
 // Direct use of theme-specific variables is allowed in:
 const THEME_SPECIFIC_ALLOWED_FILES = [
     'styles/definitions/colours.css', // Defines them
