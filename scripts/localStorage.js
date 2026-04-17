@@ -372,13 +372,13 @@
                 if (submitButton) {
                     const originalText = submitButton.textContent;
                     submitButton.textContent = 'Information Saved!';
-                    submitButton.style.backgroundColour = 'var(--colour-effective-button-background-selected)';
-                    submitButton.style.colour = 'var(--colour-effective-button-text-selected)';
+                    submitButton.style.backgroundColor = 'var(--colour-effective-button-background-selected)';
+                    submitButton.style.color = 'var(--colour-effective-button-text-selected)';
                 
                     Utils.delay(2000).then(() => {
                         submitButton.textContent = originalText;
-                        submitButton.style.backgroundColour = '';
-                        submitButton.style.colour = '';
+                        submitButton.style.backgroundColor = '';
+                        submitButton.style.color = '';
                     });
                 }
             } catch (error) {

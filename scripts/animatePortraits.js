@@ -256,7 +256,7 @@
             // 2. localStorage (user's button toggle preference)
             // 3. prefers-reduced-motion (system accessibility setting)
             const animationParam = window.QueryParams ? window.QueryParams.getAnimation() : null;
-            let shouldAnimate = true;
+            let shouldAnimate;
             
             if (animationParam === 'off') {
                 // Explicitly disabled via query parameter

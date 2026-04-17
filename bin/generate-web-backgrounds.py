@@ -4,8 +4,6 @@ Generate all background-web-*.tex files from template
 This script implements DRY principle by generating files from parameters
 """
 
-import os
-
 # Define portrait parameters (common for all portrait variants)
 PORTRAIT_PARAMS = {
     'bgwidth': '5.5',
