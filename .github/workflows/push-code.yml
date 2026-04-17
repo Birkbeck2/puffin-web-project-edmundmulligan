@@ -45,7 +45,7 @@ jobs:
       run: bin/create-release-tar.sh "${{ steps.version.outputs.new_version }}" releases
 
     - name: Copy files to server
-      uses: appleboy/scp-action@v0.1.7
+      uses: appleboy/scp-action@v1.0.0
       with:
         host: prod.edmundmulligan.name
         username: ${{ secrets.SERVER_USERNAME }}
