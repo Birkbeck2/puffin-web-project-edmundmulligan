@@ -91,10 +91,8 @@
             
             if (isEnabled) {
                 this.button.textContent = 'Disable Animation';
-                this.button.setAttribute('aria-label', 'Disable portrait animations');
             } else {
                 this.button.textContent = 'Enable Animation';
-                this.button.setAttribute('aria-label', 'Enable portrait animations');
             }
         }
 
