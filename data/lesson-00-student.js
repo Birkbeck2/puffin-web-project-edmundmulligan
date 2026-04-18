@@ -849,7 +849,7 @@ SELECT * FROM users;
                     </ol>
 
                     <h4 onclick="toggleSection('dev-server-windows-list-3', event);" onkeydown="toggleSection('dev-server-windows-list-3', event);" class="lesson-title magic-invisible">Start the Development Server</h4>
-                    <ol id="dev-server-windows-list-3" class="hidden"   >
+                    <ol id="dev-server-windows-list-3" class="hidden">
                         <li>In the same terminal, type <code>npm start</code> and press Enter</li>
                         <li>You should see a message saying the server is running on <code>http://localhost:8000</code></li>
                         <li>Open your web browser and go to <code>http://localhost:8000</code></li>
@@ -1844,7 +1844,7 @@ sudo install -D -o root -g root -m 644 packages.microsoft.gpg /etc/apt/keyrings/
 
                     <h4 onclick="toggleSection('vsc-linux-fedora-list', event);" onkeydown="toggleSection('vsc-linux-fedora-list', event);" class="lesson-title magic-invisible">Fedora / Red Hat-based Linux</h4>
                     <div id="vsc-linux-fedora-list" class="hidden">
-                        <p >If you need to install Visual Studio Code on Fedora, follow these steps:</p>
+                        <p>If you need to install Visual Studio Code on Fedora, follow these steps:</p>
                         <ol>
                             <li>
                                 <span onclick="toggleSection('vsc-linux-fedora-list-1', event);" onkeydown="toggleSection('vsc-linux-fedora-list-1', event);" class="lesson-title magic-invisible">Import Microsoft GPG Key</span>
@@ -1859,7 +1859,7 @@ sudo install -D -o root -g root -m 644 packages.microsoft.gpg /etc/apt/keyrings/
                                 <span onclick="toggleSection('vsc-linux-fedora-list-2', event);" onkeydown="toggleSection('vsc-linux-fedora-list-2', event);" class="lesson-title magic-invisible">Add VS Code Repository</span>
                                 <ul id="vsc-linux-fedora-list-2" class="hidden">
                                     <li>Run this command to create the repository file:
-                                        <pre><code>sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packag es.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" &gt; /etc/yum.repos.d/vscode.repo'</code></pre>
+                                        <pre><code>sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" &gt; /etc/yum.repos.d/vscode.repo'</code></pre>
                                     </li>
                                 </ul>
                             </li>
@@ -2127,7 +2127,7 @@ sudo apt install nodejs npm</code></pre>
                                 </ul>
                             </li>
                             <li>
-                                <strong  onclick="toggleSection('nodejs-linux-ubuntu-list-3', event);" onkeydown="toggleSection('nodejs-linux-ubuntu-list-3', event);" class="magic-invisible">Verify Installation</strong>
+                                <strong onclick="toggleSection('nodejs-linux-ubuntu-list-3', event);" onkeydown="toggleSection('nodejs-linux-ubuntu-list-3', event);" class="magic-invisible">Verify Installation</strong>
                                 <ol id="nodejs-linux-ubuntu-list-3" class="hidden">
                                     <li>
                                         <span onclick="toggleSection('nodejs-linux-ubuntu-list-3-1', event);" onkeydown="toggleSection('nodejs-linux-ubuntu-list-3-1', event);" class="magic-invisible">Check Node.js and npm</span>
@@ -2626,7 +2626,7 @@ sqlite3 --version
                                         </ul>
                                     </li>
                                     <li>
-                                        <strong onclick="toggleSection('sqlite-linux-ubuntu-list-3-2', event);" onkeydown="toggleSection('sqlite-linux-ubuntu-list-3-2', event);" class="magic-invisible">Test SQLite</strong>
+                                        <span onclick="toggleSection('sqlite-linux-ubuntu-list-3-2', event);" onkeydown="toggleSection('sqlite-linux-ubuntu-list-3-2', event);" class="magic-invisible">Test SQLite</span>
                                         <ul id="sqlite-linux-ubuntu-list-3-2" class="hidden">
                                             <li>Type:
                                                 <pre><code>
