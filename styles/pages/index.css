@@ -126,8 +126,8 @@
         }
     }
 
-    /* Responsive: Show single portrait between blocks at 400-800px */
-    @media (400px <= width <= 800px) {
+    /* Responsive: Show single portrait between blocks at up to 800px */
+    @media (200px < width < 800px) {
         .portrait-block#portrait-block-1 {
             display: flex;
             margin: 2rem auto;
@@ -151,7 +151,7 @@
         }
     }
 
-    /* Responsive: Show portraits on left and right at >800px */
+    /* Responsive: Show portraits on left and right at at least 800px */
     @media (width >= 800px) {
         main {
             display: grid;

@@ -31,6 +31,7 @@
     --colour-success-background: hsl(from var(--colour-green) h s 35%);
     --colour-success-text:       hsl(from var(--colour-grey) h s 100%);
     --colour-shadow:             hsl(from var(--colour-grey) h s 0% / 30%);
+    --colour-overlay:            hsl(from var(--colour-grey) h s 0% / 50%);
 
     /* normal light theme colours */
     --colour-normal-light-page-background:     hsl(from var(--colour-cyan) h s 85%);
