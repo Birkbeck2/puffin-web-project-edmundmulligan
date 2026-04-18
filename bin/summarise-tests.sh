@@ -40,7 +40,9 @@ if [ -f "$RESULTS_DIR/validation-results.json" ]; then
 
     const totalErrors = data.summary.htmlErrors + data.summary.cssErrors;
     const totalWarnings = data.summary.htmlWarnings + data.summary.cssWarnings;
+    const filesChecked = data.summary.filesChecked || 0;
 
+    console.log('  Files checked: ' + filesChecked);
     console.log('  Files with issues: ' + data.files.length);
     console.log('  HTML errors: ' + data.summary.htmlErrors);
     console.log('  CSS errors: ' + data.summary.cssErrors);

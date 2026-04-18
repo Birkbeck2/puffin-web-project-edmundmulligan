@@ -14,7 +14,7 @@
     .popover {
         background-color: var(--colour-error-background);
         color: var(--colour-error-text);
-        border: var(--border-weight) var(--border-style) var(--colour-effective-headings-text);
+        border: var(--border-weight) var(--border-style) var(--colour-error-text);
         border-radius: var(--border-radius);
         padding: 2rem;
         max-width: min(30rem, 90vw);
@@ -23,68 +23,53 @@
         box-sizing: border-box;
         inset: 0;
         margin: auto;
-    }
 
-    .popover h2 {
-        margin-top: 0;
-        font-family: var(--font-family-subtitle);
-        font-size: var(--fontsize-header-medium);
-        font-weight: bold;
-    }
+        & h2 {
+            margin-top: 0;
+            font-family: var(--font-family-subtitle);
+            font-size: var(--fontsize-header-medium);
+            font-weight: bold;
+        }
 
-    .popover p {
-        font-size: var(--fontsize-small);
-        font-weight: bold;
-        text-align: center;
-    }
+        & p {
+            font-size: var(--fontsize-small);
+            font-weight: bold;
+            text-align: center;
+        }
 
-    .popover button {
-        background-color: var(--colour-error-text);
-        color: var(--colour-error-background);
-        border: var(--border-weight) var(--border-style) var(--colour-effective-headings-text);
-        border-radius: var(--border-radius);
-        margin-top: 1rem;
-        font-family: var(--font-family-subtitle);
-        font-size: var(--fontsize-button);
-        font-weight: bold;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    /* Glossary icon button styling */
-    .glossary-icon-button {
-        background: none;
-        border: none;
-        padding: 0;
-        margin: 0 0.2rem;
-        cursor: pointer;
-        color: var(--colour-effective-page-text);
-        vertical-align: baseline;
-
-        &:hover {
-            color: var(--colour-effective-headings-text);
+        & button {
+            background-color: var(--colour-error-text);
+            color: var(--colour-error-background);
+            border: var(--border-weight) var(--border-style) var(--colour-error-text);
+            border-radius: var(--border-radius);
+            margin-top: 1rem;
+            font-family: var(--font-family-subtitle);
+            font-size: var(--fontsize-button);
+            font-weight: bold;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
         }
     }
 
     /* Glossary popover styling */
     .glossary-popover {
-        background-color: var(--colour-effective-headings-background);
-        color: var(--colour-effective-headings-text);
-    }
+        background-color: var(--colour-success-background);
+        color: var(--colour-success-text);
 
-    .glossary-popover h2 {
-        color: var(--colour-effective-headings-text);
-    }
+        & h2 {
+            color: var(--colour-success-text);
+        }
 
-    .glossary-popover p {
-        text-align: left;
-        font-weight: normal;
-    }
+        & p {
+            text-align: left;
+            font-weight: normal;
+        }
 
-    .glossary-popover button {
-        background-color: var(--colour-effective-headings-text);
-        color: var(--colour-effective-headings-background);
+        & button {
+            background-color: var(--colour-success-text);
+            color: var(--colour-success-background);
+        }
     }
 
     /* Lesson popover styling - for lesson navigation info */
@@ -95,43 +80,41 @@
         margin: 0;
         z-index: 1000;
         inset: unset;
-    }
 
-    /* Responsive adjustments for small screens */
-    @media (width < 800px) {
-        .lesson-popover {
+        /* Responsive adjustments for small screens */
+        @media (width < 800px) {
             max-width: min(20rem, 85vw);
             padding: 1rem;
             left: 50% !important;
             transform: translateX(-50%);
             right: auto !important;
         }
-    }
 
-    .lesson-popover h3 {
-        margin-top: 0;
-        margin-bottom: 1rem;
-        font-family: var(--font-family-subtitle);
-        font-size: var(--fontsize-header-medium);
-        font-weight: bold;
-    }
+        & h3 {
+            margin-top: 0;
+            margin-bottom: 1rem;
+            font-family: var(--font-family-subtitle);
+            font-size: var(--fontsize-header-medium);
+            font-weight: bold;
+        }
 
-    .lesson-popover p {
-        font-size: var(--fontsize-normal);
-        font-weight: normal;
-        text-align: left;
-        margin: 0;
+        & p {
+            font-size: var(--fontsize-normal);
+            font-weight: normal;
+            text-align: left;
+            margin: 0;
+        }
     }
 
     /* Info popover - uses theme heading colours */
     .info-popover {
-        background-color: var(--colour-effective-headings-background);
-        color: var(--colour-effective-headings-text);
-        border-color: var(--colour-effective-headings-text);
-    }
+        background-color: var(--colour-success-background);
+        color: var(--colour-success-text);
+        border-color: var(--colour-success-text);
 
-    .info-popover h3 {
-        color: var(--colour-effective-headings-text);
+        & h3 {
+            color: var(--colour-success-text);
+        }
     }
 
     /* Warning popover - uses warning colours */
@@ -139,14 +122,105 @@
         background-color: var(--colour-warning-background);
         color: var(--colour-warning-text);
         border-color: var(--colour-warning-text);
+
+        & h3 {
+            color: var(--colour-warning-text);
+        }
+
+        & p {
+            text-align: center;
+            font-weight: bold;
+        }
     }
 
-    .warning-popover h3 {
-        color: var(--colour-warning-text);
+    /* Embodied Mind popover - for logo click information */
+    .embodied-mind-popover {
+        max-width: min(40rem, 90vw);
+        background-color: var(--colour-success-background);
+        color: var(--colour-success-text);
+        border-color: var(--colour-success-text);
+
+        /* Ensure popover is visible when shown (for non-Popover API browsers) */
+        &[style*="display: block"] {
+            display: block !important;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1000;
+        }
+
+        & h3 {
+            margin-top: 0;
+            margin-bottom: 1rem;
+            font-family: var(--font-family-subtitle);
+            font-size: var(--fontsize-header-medium);
+            font-weight: bold;
+            color: var(--colour-success-text);
+            text-align: center;
+        }
+
+        & p {
+            font-size: var(--fontsize-normal);
+            font-weight: normal;
+            text-align: left;
+            margin-bottom: 0.8rem;
+            line-height: 1.6;
+        }
+
+        & a {
+            color: var(--colour-success-text);
+            text-decoration: underline;
+            font-weight: bold;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+
+        & button {
+            background-color: var(--colour-success-text);
+            color: var(--colour-success-background);
+            padding: 0.5rem 1.5rem;
+            cursor: pointer;
+
+            &:hover {
+                opacity: 0.9;
+            }
+        }
     }
 
-    .warning-popover p {
-        text-align: center;
-        font-weight: bold;
+    /* Backdrop for non-Popover API browsers */
+    .embodied-mind-popover-backdrop {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: var(--colour-overlay);
+        z-index: 999;
+        display: none;
+
+        &.active {
+            display: block;
+        }
+    }
+
+    #embodied-mind-logo {
+        transition: opacity 0.2s ease, transform 0.2s ease;
+
+        &:hover {
+            opacity: 0.8;
+            transform: scale(1.05);
+        }
+
+        &:focus {
+            outline: 2px solid var(--colour-effective-headings-text);
+            outline-offset: 4px;
+        }
+
+        &:active {
+            transform: scale(0.98);
+        }
     }
 }

@@ -82,4 +82,19 @@
         max-width: 10rem;
         max-height: 10rem;
     }
+
+    /* Glossary icon button styling */
+    .glossary-icon-button {
+        background: none;
+        border: none;
+        padding: 0;
+        margin: 0 0.2rem;
+        cursor: pointer;
+        color: var(--colour-effective-page-text);
+        vertical-align: baseline;
+
+        &:hover {
+            color: var(--colour-effective-headings-text);
+        }
+    }
 }

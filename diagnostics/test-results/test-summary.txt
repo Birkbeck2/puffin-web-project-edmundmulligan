@@ -2,6 +2,7 @@
 ======================
 
 [Code] Code Validation Results:
+  Files checked: 87
   Files with issues: 0
   HTML errors: 0
   CSS errors: 0
@@ -9,14 +10,14 @@
   Total warnings: 0
 
 📝 File Comments Results:
-  Files checked: 96
+  Files checked: 97
   Files with issues: 0
   Missing header blocks: 0
   Missing required fields: 0
 
 [Links] Broken Links Results:
   Pages checked: 16
-  Total links: 370
+  Total links: 392
   Broken links: 0
 
 ======================
@@ -36,8 +37,8 @@
 [Lighthouse] Lighthouse Accessibility Results:
   Pages tested: 96
   Average score: 100%
-  Pages with issues: 6
-  Total failed audits: 6
+  Pages with issues: 0
+  Total failed audits: 0
 
 [Pa11y] Pa11y Accessibility Results:
   Pages tested: 96

@@ -715,6 +715,7 @@ async function loadAllResults() {
             'fas fa-check-circle',
             status,
             [
+                { label: 'Files Checked', value: validation.summary.filesChecked || 0 },
                 { label: 'HTML Errors', value: validation.summary.htmlErrors },
                 { label: 'CSS Errors', value: validation.summary.cssErrors },
                 { label: 'JS Errors', value: validation.summary.jsErrors },

@@ -62,6 +62,7 @@
     <script src="../scripts/localStorage.js" defer></script>
     <script src="../scripts/toggleHeaderAndFooter.js" defer></script>
     <script src="../scripts/injectCommonCode.js" defer></script>
+    <script src="../scripts/embodiedMindPopover.js" defer></script>
     <script src="../scripts/injectGlossaryPopovers.js" defer></script>
     <script src="../scripts/toggleSection.js" defer></script>
     <script src="../scripts/showOsInstructions.js" defer></script>
@@ -164,6 +165,16 @@
                     <li>Open <code>http://localhost:8000/lesson-2.html</code> in your web browser to see your next web page!</li>
                 </ol>
 
+                <p>You should see something like this:</p>
+                <figure class="clickable-image-figure">
+                    <button type="button" class="image-button" data-image-src="../images/screenshots/lesson-2.png" data-image-caption="Lesson 2 Screenshot" tabindex="0" aria-label="Click to view larger image">
+                        <picture>
+                            <img src="../images/screenshots/lesson-2.png" alt="Lesson 2 Screenshot" class="screenshot">
+                        </picture>
+                    </button>
+                    <figcaption>Figure 1.2: Lesson 2 Screenshot (Click to enlarge)</figcaption>
+                </figure>
+
                 <p>
                     Try to understand how each landmark element is used in the code and how they help structure the content of the page. You can also experiment by adding your own content within these elements to see how it affects the layout and accessibility of the page.
                 </p>
@@ -222,7 +233,7 @@
                     <li>Lines 13-17: <code>&lt;section&gt;</code>: This section defines a thematic grouping of content within the main content area. It typically contains a heading and related content.</li>
                     <li>Lines 18-22: <code>&lt;section&gt;</code>: This is another section within the main content area, similar to the previous one but with different content.</li>
                     <li>Lines 24-26: <code>&lt;footer&gt;</code> section: This section defines the footer of the page, which typically contains information about the author, copyright, or other relevant details.</li>
-                    <li>Line 25: <code>&amp;copy;</code> is used to display the copyright symbol, &copy;. This is an example of an HTML entity <button type="button" popovertarget="glossary-popover" class="glossary-icon-button" data-glossary-term="html-entity" aria-label="Show HTML Entity definition"><i class="fa-duotone fa-circle-question" aria-hidden="true"></i></button>. All HTML entities start with an ampersand (&amp;) and end with a semicolon (;). You can see a full list of HTML entities at <a href="https://www.w3schools.com/html/html_entities.asp" target="_blank">W3Schools HTML Entities</a>.</li>
+                    <li>Line 25: <code>&amp;copy;</code> is used to display the copyright symbol, &copy;. This is an example of an HTML entity <button type="button" popovertarget="glossary-popover" class="glossary-icon-button" data-glossary-term="html-entity" aria-label="Show HTML Entity definition"><i class="fa-duotone fa-circle-question" aria-hidden="true"></i></button>. All HTML entities start with an ampersand (&amp;) and end with a semicolon (;).</li>
                 </ul>
             </div>
         </section>
