@@ -149,4 +149,95 @@
         text-align: center;
         font-weight: bold;
     }
+
+    /* Embodied Mind popover - for logo click information */
+    .embodied-mind-popover {
+        max-width: min(40rem, 90vw);
+        background-color: var(--colour-effective-headings-background);
+        color: var(--colour-effective-headings-text);
+        border-color: var(--colour-effective-headings-text);
+    }
+
+    /* Ensure popover is visible when shown (for non-Popover API browsers) */
+    .embodied-mind-popover[style*="display: block"] {
+        display: block !important;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1000;
+    }
+
+    .embodied-mind-popover h3 {
+        margin-top: 0;
+        margin-bottom: 1rem;
+        font-family: var(--font-family-subtitle);
+        font-size: var(--fontsize-header-medium);
+        font-weight: bold;
+        color: var(--colour-effective-headings-text);
+        text-align: center;
+    }
+
+    .embodied-mind-popover p {
+        font-size: var(--fontsize-normal);
+        font-weight: normal;
+        text-align: left;
+        margin-bottom: 0.8rem;
+        line-height: 1.6;
+    }
+
+    .embodied-mind-popover a {
+        color: var(--colour-effective-headings-text);
+        text-decoration: underline;
+        font-weight: bold;
+    }
+
+    .embodied-mind-popover a:hover {
+        text-decoration: none;
+    }
+
+    .embodied-mind-popover button {
+        background-color: var(--colour-effective-headings-text);
+        color: var(--colour-effective-headings-background);
+        padding: 0.5rem 1.5rem;
+        cursor: pointer;
+    }
+
+    .embodied-mind-popover button:hover {
+        opacity: 0.9;
+    }
+
+    /* Backdrop for non-Popover API browsers */
+    .embodied-mind-popover-backdrop {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+        display: none;
+    }
+
+    .embodied-mind-popover-backdrop.active {
+        display: block;
+    }
+
+    #embodied-mind-logo {
+        transition: opacity 0.2s ease, transform 0.2s ease;
+    }
+
+    #embodied-mind-logo:hover {
+        opacity: 0.8;
+        transform: scale(1.05);
+    }
+
+    #embodied-mind-logo:focus {
+        outline: 2px solid var(--colour-effective-headings-text);
+        outline-offset: 4px;
+    }
+
+    #embodied-mind-logo:active {
+        transform: scale(0.98);
+    }
 }
