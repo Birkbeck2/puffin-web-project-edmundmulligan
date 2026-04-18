@@ -16,7 +16,7 @@
 
 [Links] Broken Links Results:
   Pages checked: 16
-  Total links: 370
+  Total links: 369
   Broken links: 0
 
 ======================
@@ -36,8 +36,8 @@
 [Lighthouse] Lighthouse Accessibility Results:
   Pages tested: 96
   Average score: 100%
-  Pages with issues: 6
-  Total failed audits: 6
+  Pages with issues: 0
+  Total failed audits: 0
 
 [Pa11y] Pa11y Accessibility Results:
   Pages tested: 96

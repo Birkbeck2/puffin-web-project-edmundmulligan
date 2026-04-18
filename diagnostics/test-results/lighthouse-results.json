@@ -30,14 +30,7 @@
       "style": "normal",
       "viewport": "900",
       "score": 1,
-      "failedAudits": [
-        {
-          "id": "label-content-name-mismatch",
-          "title": "Elements with visible text labels do not have matching accessible names.",
-          "description": "Visible text labels that do not match the accessible name can result in a confusing experience for screen reader users. [Learn more about accessible names](https://dequeuniversity.com/rules/axe/4.10/label-content-name-mismatch).",
-          "score": 0
-        }
-      ]
+      "failedAudits": []
     },
     {
       "url": "students/lesson-02",
@@ -165,14 +158,7 @@
       "style": "normal",
       "viewport": "900",
       "score": 1,
-      "failedAudits": [
-        {
-          "id": "label-content-name-mismatch",
-          "title": "Elements with visible text labels do not have matching accessible names.",
-          "description": "Visible text labels that do not match the accessible name can result in a confusing experience for screen reader users. [Learn more about accessible names](https://dequeuniversity.com/rules/axe/4.10/label-content-name-mismatch).",
-          "score": 0
-        }
-      ]
+      "failedAudits": []
     },
     {
       "url": "students/lesson-02",
@@ -300,14 +286,7 @@
       "style": "subdued",
       "viewport": "900",
       "score": 1,
-      "failedAudits": [
-        {
-          "id": "label-content-name-mismatch",
-          "title": "Elements with visible text labels do not have matching accessible names.",
-          "description": "Visible text labels that do not match the accessible name can result in a confusing experience for screen reader users. [Learn more about accessible names](https://dequeuniversity.com/rules/axe/4.10/label-content-name-mismatch).",
-          "score": 0
-        }
-      ]
+      "failedAudits": []
     },
     {
       "url": "students/lesson-02",
@@ -435,14 +414,7 @@
       "style": "subdued",
       "viewport": "900",
       "score": 1,
-      "failedAudits": [
-        {
-          "id": "label-content-name-mismatch",
-          "title": "Elements with visible text labels do not have matching accessible names.",
-          "description": "Visible text labels that do not match the accessible name can result in a confusing experience for screen reader users. [Learn more about accessible names](https://dequeuniversity.com/rules/axe/4.10/label-content-name-mismatch).",
-          "score": 0
-        }
-      ]
+      "failedAudits": []
     },
     {
       "url": "students/lesson-02",
@@ -570,14 +542,7 @@
       "style": "vibrant",
       "viewport": "900",
       "score": 1,
-      "failedAudits": [
-        {
-          "id": "label-content-name-mismatch",
-          "title": "Elements with visible text labels do not have matching accessible names.",
-          "description": "Visible text labels that do not match the accessible name can result in a confusing experience for screen reader users. [Learn more about accessible names](https://dequeuniversity.com/rules/axe/4.10/label-content-name-mismatch).",
-          "score": 0
-        }
-      ]
+      "failedAudits": []
     },
     {
       "url": "students/lesson-02",
@@ -705,14 +670,7 @@
       "style": "vibrant",
       "viewport": "900",
       "score": 1,
-      "failedAudits": [
-        {
-          "id": "label-content-name-mismatch",
-          "title": "Elements with visible text labels do not have matching accessible names.",
-          "description": "Visible text labels that do not match the accessible name can result in a confusing experience for screen reader users. [Learn more about accessible names](https://dequeuniversity.com/rules/axe/4.10/label-content-name-mismatch).",
-          "score": 0
-        }
-      ]
+      "failedAudits": []
     },
     {
       "url": "students/lesson-02",
