@@ -29,7 +29,7 @@
     "eslint": "^10.2.1",
     "flatted": ">=3.4.2",
     "follow-redirects": ">=1.16.0",
-    "html-validate": "^10.13.0",
+    "html-validate": "^10.13.1",
     "minimatch": ">=10.2.3",
     "pa11y": "^9.1.1",
     "picomatch": ">=2.3.2",

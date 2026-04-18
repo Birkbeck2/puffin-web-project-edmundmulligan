@@ -13,7 +13,8 @@ print_usage() {
 RUN_WAVE=false
 QUICK_MODE=false
 FOLDER=""
-EXCLUDE_LIST=""
+# Default exclusions: lessons folder contains example/template files
+EXCLUDE_LIST="lessons"
 
 while [[ $# -gt 0 ]]; do
   case $1 in
