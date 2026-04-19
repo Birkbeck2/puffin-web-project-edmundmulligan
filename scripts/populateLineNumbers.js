@@ -7,9 +7,10 @@
  * Description:
  *   This script populates code snippets with line numbers.
  *   Uses a table layout so line numbers stay aligned even when code wraps.
- *   Usage: Add a .code-snippet-container with a script[type="text/plain"]
- *   .code-snippet-source containing the code, and an empty 
- *   .code-snippet-table div that will be populated.
+ *   Usage: Add a .code-snippet-container with either:
+ *   1. A script[type="text/plain"].code-snippet-source containing the code
+ *   2. A data-src attribute pointing to an external file
+ *   Both require an empty .code-snippet-table div that will be populated.
  **********************************************************************
  */
 
@@ -20,7 +21,9 @@
         * Populate plain-text code snippets with aligned line numbers.
         *
         * @remarks Preconditions:
-        * - Each snippet container must include a `script[type="text/plain"].code-snippet-source` element.
+        * - Each snippet container must include either:
+        *   - A `script[type="text/plain"].code-snippet-source` element, OR
+        *   - A `data-src` attribute pointing to an external file
         * - Each snippet container must also include an empty `.code-snippet-table` target element.
      */
     class CodeSnippetPopulator {
@@ -45,6 +48,26 @@
             container.appendChild(tableElement);
 
             return container;
+        }
+
+        /**
+         * Fetch code from an external file
+         * @param {string} filePath - Path to the file containing code
+         * @returns {Promise<string>} The file contents
+         */
+        async fetchCodeFromFile(filePath) {
+            try {
+                const response = await fetch(filePath);
+                
+                if (!response.ok) {
+                    throw new Error(`Failed to fetch ${filePath}: ${response.status} ${response.statusText}`);
+                }
+                
+                return await response.text();
+            } catch (error) {
+                console.error(`Error loading code snippet from ${filePath}:`, error);
+                return `// Error loading code from ${filePath}\n// ${error.message}`;
+            }
         }
 
         /**
@@ -160,24 +183,50 @@
         }
 
         /**
+         * Process a single code snippet container
+         * @param {HTMLElement} container - The code snippet container element
+         * @returns {Promise<void>}
+         */
+        async processContainer(container) {
+            const tableElement = container.querySelector('.code-snippet-table');
+            
+            if (!tableElement) {
+                return;
+            }
+
+            // Check if container has a data-src attribute pointing to an external file
+            const fileSrc = container.dataset.src;
+            
+            if (fileSrc) {
+                // Load code from external file
+                const codeText = await this.fetchCodeFromFile(fileSrc);
+                this.populate(tableElement, codeText);
+            } else {
+                // Fall back to existing behavior: read from script element
+                const sourceElement = container.querySelector('script[type="text/plain"].code-snippet-source');
+                
+                if (sourceElement) {
+                    const codeText = this.decodeHtmlEntities(sourceElement.textContent);
+                    this.populate(tableElement, codeText);
+                }
+            }
+        }
+
+        /**
          * Initialize all code snippets on the page
          */
-        init() {
+        async init() {
             this.upgradePreCodeBlocks();
 
             // Find all code snippet containers
             const containers = document.querySelectorAll('.code-snippet-container');
 
-            containers.forEach(container => {
-                // Find the source code
-                const sourceElement = container.querySelector('script[type="text/plain"].code-snippet-source');
-                const tableElement = container.querySelector('.code-snippet-table');
+            // Process all containers (handling both inline and external sources)
+            const promises = Array.from(containers).map(container => 
+                this.processContainer(container)
+            );
 
-                if (sourceElement && tableElement) {
-                    const codeText = this.decodeHtmlEntities(sourceElement.textContent);
-                    this.populate(tableElement, codeText);
-                }
-            });
+            await Promise.all(promises);
         }
     }
 
