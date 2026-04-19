@@ -28,6 +28,7 @@ paths=(
   data
   diagnostics
   images
+  lessons
   mentors
   pages
   scripts
