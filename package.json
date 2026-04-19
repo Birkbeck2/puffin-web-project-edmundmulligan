@@ -1,7 +1,7 @@
 {
-  "name": "puffin-web-project-edmundmulligan",
+  "name": "web-witchcraft-and-wizardry.school",
   "version": "1.0.0",
-  "description": "Puffin Web Development Project",
+  "description": "Web Witchcraft and Wizardry is a free, open-source, self-paced online course for learning web development. It covers HTML, CSS, and JavaScript, and is designed to be accessible to learners of all backgrounds and skill levels.",
   "scripts": {
     "build": "node bin/build-lessons.js",
     "start": "http-server . -p 8000 -c-1",
@@ -11,7 +11,10 @@
     "html",
     "css",
     "javascript",
-    "learning"
+    "learning",
+    "web development",
+    "online course",
+    "open source"
   ],
   "author": "Edmund Mulligan",
   "license": "MIT",
