@@ -93,6 +93,36 @@
         list-style-position: inside;
     }
 
+    /* Description list styling - terms and descriptions on same line */
+    .lesson-section dl {
+        margin: var(--margin-vertical) var(--margin-horizontal);
+        font-family: var(--font-family-text);
+        font-size: var(--fontsize-normal);
+    }
+
+    .lesson-section dt {
+        display: inline;
+        font-family: var(--font-family-text);
+        font-weight: bold;
+        margin: 0;
+
+        &::after {
+            content: ": ";
+        }
+    }
+
+    .lesson-section dd {
+        display: inline;
+        font-family: var(--font-family-text);
+        margin: 0;
+
+        &::after {
+            content: "";
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+    }
+
     /* Clickable image with modal */
     .clickable-image-figure {
         text-align: center;
