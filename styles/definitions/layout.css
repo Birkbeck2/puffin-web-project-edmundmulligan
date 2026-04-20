@@ -29,22 +29,24 @@
     --bg-portrait:  var(--bg-portrait-normal-light);
 
     /* other global variables to ensure site-wide consistency */
-    --border-radius:            2rem;
-    --border-weight:            0.2rem;
-    --border-weight-thin:       0.1rem;
-    --border-style:             solid;
-    --grid-gap:                 1rem;
-    --grid-padding:             1rem;
-    --page-gap:                 2rem;
-    --page-margin:              0;
-    --page-padding:             0;
-    --button-padding:           1rem;
-    --menu-padding:             0.5rem 1rem;
-    --image-padding:            0.5rem;
-    --box-shadow:               0 2px 8px var(--colour-shadow);
-    --carousel-portrait-width:  clamp(20rem, 15vw + 10rem, 30rem);
-    --carousel-portrait-height: clamp(20rem, 15vw + 10rem, 30rem);
-    --carousel-accessory-width: clamp(20rem, 15vw + 10rem, 30rem);
+    --border-radius:             2rem;
+    --border-weight:             0.2rem;
+    --border-weight-thin:        0.1rem;
+    --border-style:              solid;
+    --grid-gap:                  1rem;
+    --grid-padding:              1rem;
+    --page-gap:                  2rem;
+    --page-margin:               0;
+    --page-padding:              0;
+    --button-padding:            1rem;
+    --menu-padding:              0.5rem 1rem;
+    --image-padding:             0.5rem;
+    --box-shadow:                0 2px 8px var(--colour-shadow);
+    --carousel-portrait-width:   clamp(20rem, 15vw + 10rem, 30rem);
+    --carousel-portrait-height:  clamp(20rem, 15vw + 10rem, 30rem);
+    --carousel-accessory-width:  clamp(20rem, 15vw + 10rem, 30rem);
     --carousel-accessory-height: clamp(20rem, 15vw + 10rem, 30rem);
-    --faq-column-width:         clamp(80ch, 44vw, 120ch);
+    --carousel-familiar-width:   clamp(20rem, 15vw + 10rem, 30rem);
+    --carousel-familiar-height:  clamp(20rem, 15vw + 10rem, 30rem);
+    --faq-column-width:          clamp(80ch, 44vw, 120ch);
 }
