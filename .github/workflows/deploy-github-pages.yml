@@ -92,7 +92,7 @@ jobs:
 
       - name: Create GitHub Release
         if: github.ref_name == 'main'
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
         with:
           tag_name: v${{ steps.version.outputs.new_version }}
           name: Release v${{ steps.version.outputs.new_version }}
@@ -109,7 +109,7 @@ jobs:
           cp -a index.html VERSION bin data diagnostics images mentors pages scripts students styles _site/
 
       - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-pages-artifact@v5
         with:
           path: _site
 
