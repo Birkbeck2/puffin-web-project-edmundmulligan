@@ -109,7 +109,7 @@ jobs:
           cp -a index.html VERSION bin data diagnostics images mentors pages scripts students styles _site/
 
       - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-pages-artifact@v5
         with:
           path: _site
 
