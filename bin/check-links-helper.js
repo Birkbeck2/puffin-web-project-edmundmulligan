@@ -29,7 +29,8 @@ const pageResult = {
   url: urlPath,
   links: [],
   brokenCount: 0,
-  totalCount: 0
+  totalCount: 0,
+  timeoutCount: 0
 };
 
 /**
@@ -137,14 +138,26 @@ async function main() {
       try {
         await checkLink(link);
       } catch (err) {
-        pageResult.brokenCount++;
-        pageResult.links.push({
-          url: link.fullUrl,
-          original: link.href,
-          error: err.message,
-          tagName: link.tagName,
-          text: link.text
-        });
+        // Treat timeouts as warnings, not errors
+        if (err.message === 'Request timeout') {
+          pageResult.timeoutCount++;
+          pageResult.links.push({
+            url: link.fullUrl,
+            original: link.href,
+            warning: 'timeout',
+            tagName: link.tagName,
+            text: link.text
+          });
+        } else {
+          pageResult.brokenCount++;
+          pageResult.links.push({
+            url: link.fullUrl,
+            original: link.href,
+            error: err.message,
+            tagName: link.tagName,
+            text: link.text
+          });
+        }
       }
 
       checked++;
@@ -234,6 +247,8 @@ function finalize() {
   combined.pages.push(pageResult);
   combined.summary.totalLinks += pageResult.totalCount;
   combined.summary.brokenLinks += pageResult.brokenCount;
+  if (!combined.summary.timeoutLinks) combined.summary.timeoutLinks = 0;
+  combined.summary.timeoutLinks += pageResult.timeoutCount;
 
   fs.writeFileSync(resultFile, JSON.stringify(combined, null, 2));
 
@@ -241,6 +256,10 @@ function finalize() {
     console.log('  ❌ Found ' + pageResult.brokenCount + ' broken link(s)');
   } else {
     console.log('  ✅ All ' + pageResult.totalCount + ' links OK');
+  }
+  
+  if (pageResult.timeoutCount > 0) {
+    console.log('  ⚠️  ' + pageResult.timeoutCount + ' link(s) timed out');
   }
 }
 

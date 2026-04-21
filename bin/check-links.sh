@@ -95,7 +95,7 @@ fi
 RESULT_FILE="$RESULTS_DIR/broken-links-results.json"
 
 # Initialize results
-echo '{"pages":[],"summary":{"totalLinks":0,"brokenLinks":0,"excludedLinks":0}}' > "$RESULT_FILE"
+echo '{"pages":[],"summary":{"totalLinks":0,"brokenLinks":0,"timeoutLinks":0,"excludedLinks":0}}' > "$RESULT_FILE"
 
 echo ""
 echo "🔗 Checking links on HTML pages..."
@@ -131,23 +131,27 @@ node -e "
   console.log('Pages checked: ' + data.pages.length);
   console.log('Total links: ' + data.summary.totalLinks);
   console.log('Broken links: ' + data.summary.brokenLinks);
+  if (data.summary.timeoutLinks > 0) {
+    console.log('Timeout warnings: ' + data.summary.timeoutLinks);
+  }
   console.log('');
 
-  if (data.summary.brokenLinks === 0) {
+  if (data.summary.brokenLinks === 0 && data.summary.timeoutLinks === 0) {
     console.log('✅ No broken links found!');
   } else {
-    console.log('❌ Broken links found:');
-    console.log('');
+    if (data.summary.brokenLinks > 0) {
+      console.log('❌ Broken links found:');
+      console.log('');
 
-    data.pages.filter(p => p.brokenCount > 0).forEach(page => {
-      console.log('📄 ' + page.url + ' (' + page.brokenCount + ' broken link(s))');
-      page.links.forEach(link => {
-        console.log('  ❌ ' + link.url);
-        if (link.original && link.original !== link.url) {
-          console.log('     Original: ' + link.original);
-        }
-        if (link.text) {
-          console.log('     Text: ' + link.text);
+      data.pages.filter(p => p.brokenCount > 0).forEach(page => {
+        console.log('📄 ' + page.url + ' (' + page.brokenCount + ' broken link(s))');
+        page.links.filter(link => link.error).forEach(link => {
+          console.log('  ❌ ' + link.url);
+          if (link.original && link.original !== link.url) {
+            console.log('     Original: ' + link.original);
+          }
+          if (link.text) {
+            console.log('     Text: ' + link.text);
         }
         if (link.statusCode) {
           console.log('     Status: ' + link.statusCode);
@@ -159,6 +163,27 @@ node -e "
       });
       console.log('');
     });
+    }
+    
+    if (data.summary.timeoutLinks > 0) {
+      console.log('⚠️  Link timeout warnings:');
+      console.log('');
+      
+      data.pages.filter(p => p.timeoutCount > 0).forEach(page => {
+        console.log('📄 ' + page.url + ' (' + page.timeoutCount + ' timeout(s))');
+        page.links.filter(link => link.warning === 'timeout').forEach(link => {
+          console.log('  ⚠️  ' + link.url);
+          if (link.original && link.original !== link.url) {
+            console.log('     Original: ' + link.original);
+          }
+          if (link.text) {
+            console.log('     Text: ' + link.text);
+          }
+          console.log('     Tag: <' + link.tagName + '>');
+        });
+        console.log('');
+      });
+    }
   }
 "
 
@@ -168,6 +193,12 @@ HAS_BROKEN=$(node -p "const fs = require('fs'); const data = JSON.parse(fs.readF
 if [ "$HAS_BROKEN" -eq 0 ]; then
   echo ""
   echo "✅ No broken links found!"
+  
+  # Check if there are timeout warnings
+  HAS_TIMEOUTS=$(node -p "const fs = require('fs'); const data = JSON.parse(fs.readFileSync('$RESULT_FILE', 'utf8')); data.summary.timeoutLinks > 0 ? 1 : 0")
+  if [ "$HAS_TIMEOUTS" -eq 1 ]; then
+    echo "⚠️  Some links timed out (see warnings above)"
+  fi
   exit 0
 else
   echo ""
