@@ -42,7 +42,7 @@ jobs:
     - name: Validate HTML, CSS and JavaScript
       continue-on-error: true
       run: |
-        bin/validate-code.sh . -x lessons
+        bin/validate-code.sh .
 
     - name: Audit colour usage
       continue-on-error: true

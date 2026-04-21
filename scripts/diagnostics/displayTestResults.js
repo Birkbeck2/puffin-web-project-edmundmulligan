@@ -731,6 +731,7 @@ async function loadAllResults() {
     if (links) {
         const totalBroken = links.pages.reduce((sum, page) => sum + page.brokenCount, 0);
         const totalLinks = links.pages.reduce((sum, page) => sum + page.totalCount, 0);
+        const timeoutWarnings = links.summary?.timeoutLinks || 0;
         const status = totalBroken === 0 ? 'pass' : 'fail';
         
         totalTests++;
@@ -745,7 +746,8 @@ async function loadAllResults() {
             [
                 { label: 'Pages Checked', value: links.pages.length },
                 { label: 'Total Links', value: totalLinks },
-                { label: 'Broken Links', value: totalBroken }
+                { label: 'Broken Links', value: totalBroken },
+                { label: 'Timeout Warnings', value: timeoutWarnings }
             ],
             'Broken Links',
             totalBroken > 0
