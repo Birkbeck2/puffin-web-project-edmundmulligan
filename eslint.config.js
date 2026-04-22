@@ -97,6 +97,8 @@ module.exports = [
         TextDecoder: "readonly",
         URLSearchParams: "readonly",
         Event: "readonly",
+        HTMLElement: "readonly",
+        Utils: "readonly",
         setTimeout: "readonly",
         setInterval: "readonly",
         clearTimeout: "readonly",

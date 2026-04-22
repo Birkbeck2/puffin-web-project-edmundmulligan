@@ -6,7 +6,7 @@
  * License    : MIT License (see license-and-credits.html page)
  * Description:
  *   Loads the wand SVG inline so sparkle paths can animate
- *   via styles/components/favicon.css (same mechanism as image 3).
+ *   via styles/components/favicon.css.
  **********************************************************************
  */
 

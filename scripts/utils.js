@@ -353,6 +353,17 @@
                 .replace(/[-_\s](.)/g, (_, char) => char.toUpperCase())
                 .replace(/^(.)/, (char) => char.toLowerCase());
         }
+
+        /**
+         * Safe logging helper that checks if Debug is available
+         */
+        static log(message, ...args) {
+            if (typeof Debug !== 'undefined' && Debug.log) {
+                Debug.log(message, ...args);
+            } else {
+                console.log(message, ...args);
+            }
+        }
     }
 
     // Export the Utils class to global scope

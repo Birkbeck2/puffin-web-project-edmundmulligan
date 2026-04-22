@@ -14,17 +14,6 @@
     'use strict';
 
     /**
-     * Safe logging helper that checks if Debug is available
-     */
-    function log(message, ...args) {
-        if (typeof Debug !== 'undefined' && Debug.log) {
-            Debug.log(message, ...args);
-        } else {
-            console.log(message, ...args);
-        }
-    }
-
-    /**
      * Class for managing the Embodied Mind logo popover
      */
     class EmbodiedMindPopover {
@@ -35,6 +24,7 @@
             this.popover = null;
             this.logo = null;
             this.backdrop = null;
+            this.data = null;
             this.supportsPopoverAPI = this.checkPopoverAPISupport();
         }
 
@@ -47,10 +37,33 @@
         }
 
         /**
+         * Load the popover content data from JSON file
+         * @returns {Promise<Object>} The loaded data
+         */
+        async loadData() {
+            try {
+                const response = await fetch('data/embodied-mind.json');
+                if (!response.ok) {
+                    throw new Error(`Failed to load data: ${response.status}`);
+                }
+                this.data = await response.json();
+                Utils.log('EmbodiedMindPopover: Data loaded successfully');
+                return this.data;
+            } catch (error) {
+                Utils.log('EmbodiedMindPopover: Error loading data', error);
+                throw error;
+            }
+        }
+
+        /**
          * Create the popover element with content about The Embodied Mind
          * @returns {HTMLElement} The popover element
          */
         createPopover() {
+            if (!this.data) {
+                Utils.log('EmbodiedMindPopover: Data not loaded, cannot create popover');
+                return null;
+            }
             const popover = document.createElement('div');
             popover.id = 'embodied-mind-popover';
             popover.className = 'popover info-popover embodied-mind-popover';
@@ -70,34 +83,20 @@
                 document.body.appendChild(this.backdrop);
             }
 
+            // Build paragraphs from data
+            const paragraphsHTML = this.data.paragraphs
+                .map(p => `<p>${p.content}</p>`)
+                .join('\n                ');
+
             popover.innerHTML = `
-                <h3>About The Embodied Mind</h3>
+                <h3>${this.data.title}</h3>
+                ${paragraphsHTML}
                 <p>
-                    <strong>The Embodied Mind</strong> is <strong>Edmund Mulligan</strong> — 
-                    Therapist, Educator, and Mentor.
-                </p>
-                <p>
-                    Edmund works as a technologist in the transport sector, specifically in 
-                    software development for Transport for London. He is a Mental Health First Aider 
-                    and has been an advanced student of Cognitive Behavioural Hypnotherapy and Movement Shiatsu.
-                </p>
-                <p>
-                    He holds a BSc (First Class Honours) in Psychology from the Open University, 
-                    a Postgraduate Diploma in Applied Statistics from Birkbeck College, and is 
-                    currently pursuing a Postgraduate Diploma in Web Design at Birkbeck College.
-                </p>
-                <p>
-                    Edmund is a Graduate Statistician Fellow of the Royal Statistical Society 
-                    (GradStat FRSS) and a Chartered IT Professional Member of the British Computer 
-                    Society (MBCS CITP). He is also a STEM Ambassador (Science, Technology, 
-                    Engineering and Mathematics).
-                </p>
-                <p>
-                    <a href="https://www.embodied-mind.org/" target="_blank" rel="noopener noreferrer">
-                        Visit The Embodied Mind website
+                    <a href="${this.data.link.url}" target="_blank" rel="noopener noreferrer">
+                        ${this.data.link.text}
                     </a>
                 </p>
-                <button id="embodied-mind-popover-close">Close</button>
+                <button id="embodied-mind-popover-close">${this.data.closeButtonText}</button>
             `;
 
             document.body.appendChild(popover);
@@ -106,7 +105,7 @@
             const closeBtn = popover.querySelector('#embodied-mind-popover-close');
             closeBtn.addEventListener('click', () => this.hidePopover());
             
-            log('EmbodiedMindPopover: Popover created', { supportsAPI: this.supportsPopoverAPI });
+            Utils.log('EmbodiedMindPopover: Popover created', { supportsAPI: this.supportsPopoverAPI });
             return popover;
         }
 
@@ -120,7 +119,7 @@
                 try {
                     this.popover.showPopover();
                 } catch (error) {
-                    log('EmbodiedMindPopover: Error showing popover', error);
+                    Utils.log('EmbodiedMindPopover: Error showing popover', error);
                     // Fallback to display toggle
                     this.popover.style.display = 'block';
                 }
@@ -130,7 +129,7 @@
                     this.backdrop.classList.add('active');
                 }
             }
-            log('EmbodiedMindPopover: Popover shown');
+            Utils.log('EmbodiedMindPopover: Popover shown');
         }
 
         /**
@@ -143,7 +142,7 @@
                 try {
                     this.popover.hidePopover();
                 } catch (error) {
-                    log('EmbodiedMindPopover: Error hiding popover', error);
+                    Utils.log('EmbodiedMindPopover: Error hiding popover', error);
                     this.popover.style.display = 'none';
                 }
             } else {
@@ -152,7 +151,7 @@
                     this.backdrop.classList.remove('active');
                 }
             }
-            log('EmbodiedMindPopover: Popover hidden');
+            Utils.log('EmbodiedMindPopover: Popover hidden');
         }
 
         /**
@@ -162,7 +161,7 @@
             this.logo = document.getElementById('embodied-mind-logo');
             
             if (!this.logo) {
-                log('EmbodiedMindPopover: Logo not found');
+                Utils.log('EmbodiedMindPopover: Logo not found');
                 return;
             }
 
@@ -174,7 +173,7 @@
             
             // Add click handler
             this.logo.addEventListener('click', () => {
-                log('EmbodiedMindPopover: Logo clicked');
+                Utils.log('EmbodiedMindPopover: Logo clicked');
                 this.showPopover();
             });
 
@@ -182,36 +181,46 @@
             this.logo.addEventListener('keydown', (event) => {
                 if (event.key === 'Enter' || event.key === ' ') {
                     event.preventDefault();
-                    log('EmbodiedMindPopover: Logo activated via keyboard');
+                    Utils.log('EmbodiedMindPopover: Logo activated via keyboard');
                     this.showPopover();
                 }
             });
 
-            log('EmbodiedMindPopover: Logo click handler set up');
+            Utils.log('EmbodiedMindPopover: Logo click handler set up');
         }
 
         /**
          * Initialize the popover system
          */
-        init() {
-            log('EmbodiedMindPopover: Initializing...');
+        async init() {
+            Utils.log('EmbodiedMindPopover: Initializing...');
+            
+            // Load data first
+            try {
+                await this.loadData();
+            } catch (error) {
+                Utils.log('EmbodiedMindPopover: Failed to load data, cannot initialize');
+                return;
+            }
             
             // Wait for footer to be injected before setting up
             const setupPopover = () => {
                 this.popover = this.createPopover();
-                this.setupLogoTrigger();
-                log('EmbodiedMindPopover: Setup complete');
+                if (this.popover) {
+                    this.setupLogoTrigger();
+                    Utils.log('EmbodiedMindPopover: Setup complete');
+                }
             };
 
             // If footer already exists, set up immediately
             if (document.getElementById('embodied-mind-logo')) {
-                log('EmbodiedMindPopover: Logo found immediately');
+                Utils.log('EmbodiedMindPopover: Logo found immediately');
                 setupPopover();
             } else {
-                log('EmbodiedMindPopover: Waiting for footer injection');
+                Utils.log('EmbodiedMindPopover: Waiting for footer injection');
                 // Wait for footer injection event
                 document.addEventListener('footerInjected', () => {
-                    log('EmbodiedMindPopover: Footer injected event received');
+                    Utils.log('EmbodiedMindPopover: Footer injected event received');
                     setupPopover();
                 });
             }
@@ -219,9 +228,9 @@
     }
 
     // Initialize on DOM ready
-    document.addEventListener('DOMContentLoaded', function() {
-        log('EmbodiedMindPopover: DOM ready, creating instance');
+    document.addEventListener('DOMContentLoaded', async function() {
+        Utils.log('EmbodiedMindPopover: DOM ready, creating instance');
         const popoverManager = new EmbodiedMindPopover();
-        popoverManager.init();
+        await popoverManager.init();
     });
 })();
