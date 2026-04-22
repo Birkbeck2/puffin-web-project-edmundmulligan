@@ -87,36 +87,167 @@
     },
     {
       "url": "pages/glossary.html",
-      "links": [],
-      "brokenCount": 0,
+      "links": [
+        {
+          "url": "https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap",
+          "original": "https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap",
+          "error": "",
+          "tagName": "link",
+          "text": ""
+        },
+        {
+          "url": "https://kit.fontawesome.com/3895b3f1a4.css",
+          "original": "https://kit.fontawesome.com/3895b3f1a4.css",
+          "error": "",
+          "tagName": "link",
+          "text": ""
+        }
+      ],
+      "brokenCount": 2,
       "totalCount": 15,
       "timeoutCount": 0
     },
     {
       "url": "pages/facts.html",
-      "links": [],
-      "brokenCount": 0,
+      "links": [
+        {
+          "url": "https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;600;700&family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;600;700&family=Marcellus&family=Cormorant+Garamond:wght@400;500;600;700&display=swap",
+          "original": "https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;600;700&family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;600;700&family=Marcellus&family=Cormorant+Garamond:wght@400;500;600;700&display=swap",
+          "error": "",
+          "tagName": "link",
+          "text": ""
+        },
+        {
+          "url": "https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap",
+          "original": "https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap",
+          "error": "",
+          "tagName": "link",
+          "text": ""
+        },
+        {
+          "url": "https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap",
+          "original": "https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap",
+          "error": "",
+          "tagName": "link",
+          "text": ""
+        },
+        {
+          "url": "https://kit.fontawesome.com/3895b3f1a4.css",
+          "original": "https://kit.fontawesome.com/3895b3f1a4.css",
+          "error": "",
+          "tagName": "link",
+          "text": ""
+        }
+      ],
+      "brokenCount": 4,
       "totalCount": 15,
       "timeoutCount": 0
     },
     {
       "url": "pages/mentors.html",
-      "links": [],
-      "brokenCount": 0,
+      "links": [
+        {
+          "url": "https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;600;700&family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;600;700&family=Marcellus&family=Cormorant+Garamond:wght@400;500;600;700&display=swap",
+          "original": "https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;600;700&family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;600;700&family=Marcellus&family=Cormorant+Garamond:wght@400;500;600;700&display=swap",
+          "error": "",
+          "tagName": "link",
+          "text": ""
+        },
+        {
+          "url": "https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap",
+          "original": "https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap",
+          "error": "",
+          "tagName": "link",
+          "text": ""
+        },
+        {
+          "url": "https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap",
+          "original": "https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap",
+          "error": "",
+          "tagName": "link",
+          "text": ""
+        },
+        {
+          "url": "https://kit.fontawesome.com/3895b3f1a4.css",
+          "original": "https://kit.fontawesome.com/3895b3f1a4.css",
+          "error": "",
+          "tagName": "link",
+          "text": ""
+        }
+      ],
+      "brokenCount": 4,
       "totalCount": 17,
       "timeoutCount": 0
     },
     {
       "url": "pages/students.html",
-      "links": [],
-      "brokenCount": 0,
+      "links": [
+        {
+          "url": "https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;600;700&family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;600;700&family=Marcellus&family=Cormorant+Garamond:wght@400;500;600;700&display=swap",
+          "original": "https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;600;700&family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;600;700&family=Marcellus&family=Cormorant+Garamond:wght@400;500;600;700&display=swap",
+          "error": "",
+          "tagName": "link",
+          "text": ""
+        },
+        {
+          "url": "https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap",
+          "original": "https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap",
+          "error": "",
+          "tagName": "link",
+          "text": ""
+        },
+        {
+          "url": "https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap",
+          "original": "https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap",
+          "error": "",
+          "tagName": "link",
+          "text": ""
+        },
+        {
+          "url": "https://kit.fontawesome.com/3895b3f1a4.css",
+          "original": "https://kit.fontawesome.com/3895b3f1a4.css",
+          "error": "",
+          "tagName": "link",
+          "text": ""
+        }
+      ],
+      "brokenCount": 4,
       "totalCount": 18,
       "timeoutCount": 0
     },
     {
       "url": "pages/gallery.html",
-      "links": [],
-      "brokenCount": 0,
+      "links": [
+        {
+          "url": "https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;600;700&family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;600;700&family=Marcellus&family=Cormorant+Garamond:wght@400;500;600;700&display=swap",
+          "original": "https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;600;700&family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;600;700&family=Marcellus&family=Cormorant+Garamond:wght@400;500;600;700&display=swap",
+          "error": "",
+          "tagName": "link",
+          "text": ""
+        },
+        {
+          "url": "https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap",
+          "original": "https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap",
+          "error": "",
+          "tagName": "link",
+          "text": ""
+        },
+        {
+          "url": "https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap",
+          "original": "https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap",
+          "error": "",
+          "tagName": "link",
+          "text": ""
+        },
+        {
+          "url": "https://kit.fontawesome.com/3895b3f1a4.css",
+          "original": "https://kit.fontawesome.com/3895b3f1a4.css",
+          "error": "",
+          "tagName": "link",
+          "text": ""
+        }
+      ],
+      "brokenCount": 4,
       "totalCount": 53,
       "timeoutCount": 0
     },
@@ -136,18 +267,10 @@
     },
     {
       "url": "pages/credits.html",
-      "links": [
-        {
-          "url": "https://www.rachelmulligan.co.uk/",
-          "original": "https://www.rachelmulligan.co.uk/",
-          "warning": "timeout",
-          "tagName": "a",
-          "text": "Stained Glass by Rachel Mulligan"
-        }
-      ],
+      "links": [],
       "brokenCount": 0,
       "totalCount": 47,
-      "timeoutCount": 1
+      "timeoutCount": 0
     },
     {
       "url": "pages/start.html",
@@ -155,40 +278,12 @@
       "brokenCount": 0,
       "totalCount": 19,
       "timeoutCount": 0
-    },
-    {
-      "url": "lessons/lesson-4.html",
-      "links": [],
-      "brokenCount": 0,
-      "totalCount": 6,
-      "timeoutCount": 0
-    },
-    {
-      "url": "lessons/lesson-1.html",
-      "links": [],
-      "brokenCount": 0,
-      "totalCount": 0,
-      "timeoutCount": 0
-    },
-    {
-      "url": "lessons/lesson-3.html",
-      "links": [],
-      "brokenCount": 0,
-      "totalCount": 0,
-      "timeoutCount": 0
-    },
-    {
-      "url": "lessons/lesson-2.html",
-      "links": [],
-      "brokenCount": 0,
-      "totalCount": 0,
-      "timeoutCount": 0
     }
   ],
   "summary": {
-    "totalLinks": 542,
-    "brokenLinks": 0,
-    "timeoutLinks": 2,
+    "totalLinks": 536,
+    "brokenLinks": 18,
+    "timeoutLinks": 1,
     "excludedLinks": 0
   }
 }

@@ -9,7 +9,7 @@
  **********************************************************************
  */
 
-'use strict';
+/* jshint esversion: 11, module: true */
 
 // Helper to access Debug from global scope
 const log = (...args) => {

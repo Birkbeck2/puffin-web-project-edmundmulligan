@@ -15,10 +15,10 @@ Uses a foreach loop to iterate over path elements in svg base element and a cond
 The DOM is manipulated in method setPortraitImage~(container, image) to change the source of the portrait image and update the alt text.
 
 \subsection*{Interactivity --- toggleSection.js}
-toggleSectionCollapse~(sectionId, event) is a method that toggles the collapse state of a section in response to user triggered events (e.g. clicking a button). It uses event listeners to detect user interactions and updates the DOM accordingly to show or hide the content of the section.
+toggleSectionCollapse~(sectionId, event) is a method that toggles the collapse state of a section in response to events (e.g. clicking a button). It uses event listeners to detect user interactions and updates the DOM to show or hide the content of the section.
 
 \subsection*{Data Storage --- localStorage.js}
-The LocalStorage class provides methods for storing and retrieving encrypted data from the browser's local storage. This allows the application to persist user preferences or other data across sessions.
+The LocalStorage class provides methods for storing encrypted data in the browser's local storage. This allows the application to persist user preferences across pages and sessions.
 
 \subsection*{Data Retrieval --- injectGlossaryPopovers.js}
 The injectGlossaryPopovers~() method retrieves glossary terms and their definitions using fetch~() to make an HTTP request to the glossary page of the website. It then processes the response to extract the relevant data and injects it into the DOM as popovers. This technique decouples the glossary data from the lessons which render the popovers, allowing for easier maintenance and updates to the glossary without needing to modify the lesson code, while ensuring the lessons always display the most up-to-date glossary definitions.
