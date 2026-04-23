@@ -204,6 +204,13 @@
   }
 
   /* Wand uses inline SVG so favicon sparkle classes can animate. */
+  .wand-container-row {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
   .wand-container {
     display: flex;
     justify-content: center;

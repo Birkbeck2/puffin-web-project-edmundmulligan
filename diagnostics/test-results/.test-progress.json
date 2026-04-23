@@ -1,0 +1,13 @@
+{
+  "completed": [
+    "clear",
+    "validate-code",
+    "audit-colour",
+    "check-comments"
+  ],
+  "failed": [
+    "validate-code"
+  ],
+  "quickMode": false,
+  "runWave": false
+}
