@@ -11,216 +11,218 @@
  */
 
 @layer components {
-    .popover {
-        background-color: var(--colour-error-background);
-        color: var(--colour-error-text);
-        border: var(--border-weight) var(--border-style) var(--colour-error-text);
-        border-radius: var(--border-radius);
-        padding: 2rem;
-        max-width: min(30rem, 90vw);
-        max-height: 80vh;
-        overflow-y: auto;
-        box-sizing: border-box;
-        inset: 0;
-        margin: auto;
+  .popover {
+    background-color: var(--colour-error-background);
+    color: var(--colour-error-text);
+    border: var(--border-weight) var(--border-style) var(--colour-error-text);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    max-width: min(30rem, 90vw);
+    max-height: 80vh;
+    overflow-y: auto;
+    box-sizing: border-box;
+    inset: 0;
+    margin: auto;
 
-        & h2 {
-            margin-top: 0;
-            font-family: var(--font-family-subtitle);
-            font-size: var(--fontsize-header-medium);
-            font-weight: bold;
-        }
-
-        & p {
-            font-size: var(--fontsize-small);
-            font-weight: bold;
-            text-align: center;
-        }
-
-        & button {
-            background-color: var(--colour-error-text);
-            color: var(--colour-error-background);
-            border: var(--border-weight) var(--border-style) var(--colour-error-text);
-            border-radius: var(--border-radius);
-            margin-top: 1rem;
-            font-family: var(--font-family-subtitle);
-            font-size: var(--fontsize-button);
-            font-weight: bold;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
+    & h2 {
+      margin-top: 0;
+      font-family: var(--font-family-subtitle);
+      font-size: var(--fontsize-header-medium);
+      font-weight: bold;
     }
 
-    /* Glossary popover styling */
-    .glossary-popover {
-        background-color: var(--colour-success-background);
-        color: var(--colour-success-text);
-
-        & h2 {
-            color: var(--colour-success-text);
-        }
-
-        & p {
-            text-align: left;
-            font-weight: normal;
-        }
-
-        & button {
-            background-color: var(--colour-success-text);
-            color: var(--colour-success-background);
-        }
+    & p {
+      font-size: var(--fontsize-small);
+      font-weight: bold;
+      text-align: center;
     }
 
-    /* Lesson popover styling - for lesson navigation info */
-    .lesson-popover {
-        max-width: min(25rem, 90vw);
-        padding: 1.5rem;
-        position: fixed;
-        margin: 0;
-        z-index: 1000;
-        inset: unset;
+    & button {
+      background-color: var(--colour-error-text);
+      color: var(--colour-error-background);
+      border: var(--border-weight) var(--border-style) var(--colour-error-text);
+      border-radius: var(--border-radius);
+      margin-top: 1rem;
+      font-family: var(--font-family-subtitle);
+      font-size: var(--fontsize-button);
+      font-weight: bold;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
 
-        /* Responsive adjustments for small screens */
-        @media (width < 800px) {
-            max-width: min(20rem, 85vw);
-            padding: 1rem;
-            left: 50% !important;
-            transform: translateX(-50%);
-            right: auto !important;
-        }
+  /* Glossary popover styling */
+  .glossary-popover {
+    background-color: var(--colour-success-background);
+    color: var(--colour-success-text);
 
-        & h3 {
-            margin-top: 0;
-            margin-bottom: 1rem;
-            font-family: var(--font-family-subtitle);
-            font-size: var(--fontsize-header-medium);
-            font-weight: bold;
-        }
-
-        & p {
-            font-size: var(--fontsize-normal);
-            font-weight: normal;
-            text-align: left;
-            margin: 0;
-        }
+    & h2 {
+      color: var(--colour-success-text);
     }
 
-    /* Info popover - uses theme heading colours */
-    .info-popover {
-        background-color: var(--colour-success-background);
-        color: var(--colour-success-text);
-        border-color: var(--colour-success-text);
-
-        & h3 {
-            color: var(--colour-success-text);
-        }
+    & p {
+      text-align: left;
+      font-weight: normal;
     }
 
-    /* Warning popover - uses warning colours */
-    .warning-popover {
-        background-color: var(--colour-warning-background);
-        color: var(--colour-warning-text);
-        border-color: var(--colour-warning-text);
+    & button {
+      background-color: var(--colour-success-text);
+      color: var(--colour-success-background);
+    }
+  }
 
-        & h3 {
-            color: var(--colour-warning-text);
-        }
+  /* Lesson popover styling - for lesson navigation info */
+  .lesson-popover {
+    max-width: min(25rem, 90vw);
+    padding: 1.5rem;
+    position: fixed;
+    margin: 0;
+    z-index: 1000;
+    inset: unset;
 
-        & p {
-            text-align: center;
-            font-weight: bold;
-        }
+    /* Responsive adjustments for small screens */
+    @media (width < 800px) {
+      max-width: min(20rem, 85vw);
+      padding: 1rem;
+      left: 50% !important;
+      transform: translateX(-50%);
+      right: auto !important;
     }
 
-    /* Embodied Mind popover - for logo click information */
-    .embodied-mind-popover {
-        max-width: min(40rem, 90vw);
-        background-color: var(--colour-success-background);
-        color: var(--colour-success-text);
-        border-color: var(--colour-success-text);
-
-        /* Ensure popover is visible when shown (for non-Popover API browsers) */
-        &[style*="display: block"] {
-            display: block !important;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 1000;
-        }
-
-        & h3 {
-            margin-top: 0;
-            margin-bottom: 1rem;
-            font-family: var(--font-family-subtitle);
-            font-size: var(--fontsize-header-medium);
-            font-weight: bold;
-            color: var(--colour-success-text);
-            text-align: center;
-        }
-
-        & p {
-            font-size: var(--fontsize-normal);
-            font-weight: normal;
-            text-align: left;
-            margin-bottom: 0.8rem;
-            line-height: 1.6;
-        }
-
-        & a {
-            color: var(--colour-success-text);
-            text-decoration: underline;
-            font-weight: bold;
-
-            &:hover {
-                text-decoration: none;
-            }
-        }
-
-        & button {
-            background-color: var(--colour-success-text);
-            color: var(--colour-success-background);
-            padding: 0.5rem 1.5rem;
-            cursor: pointer;
-
-            &:hover {
-                opacity: 0.9;
-            }
-        }
+    & h3 {
+      margin-top: 0;
+      margin-bottom: 1rem;
+      font-family: var(--font-family-subtitle);
+      font-size: var(--fontsize-header-medium);
+      font-weight: bold;
     }
 
-    /* Backdrop for non-Popover API browsers */
-    .embodied-mind-popover-backdrop {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: var(--colour-overlay);
-        z-index: 999;
-        display: none;
+    & p {
+      font-size: var(--fontsize-normal);
+      font-weight: normal;
+      text-align: left;
+      margin: 0;
+    }
+  }
 
-        &.active {
-            display: block;
-        }
+  /* Info popover - uses theme heading colours */
+  .info-popover {
+    background-color: var(--colour-success-background);
+    color: var(--colour-success-text);
+    border-color: var(--colour-success-text);
+
+    & h3 {
+      color: var(--colour-success-text);
+    }
+  }
+
+  /* Warning popover - uses warning colours */
+  .warning-popover {
+    background-color: var(--colour-warning-background);
+    color: var(--colour-warning-text);
+    border-color: var(--colour-warning-text);
+
+    & h3 {
+      color: var(--colour-warning-text);
     }
 
-    #embodied-mind-logo {
-        transition: opacity 0.2s ease, transform 0.2s ease;
-
-        &:hover {
-            opacity: 0.8;
-            transform: scale(1.05);
-        }
-
-        &:focus {
-            outline: 2px solid var(--colour-effective-headings-text);
-            outline-offset: 4px;
-        }
-
-        &:active {
-            transform: scale(0.98);
-        }
+    & p {
+      text-align: center;
+      font-weight: bold;
     }
+  }
+
+  /* Embodied Mind popover - for logo click information */
+  .embodied-mind-popover {
+    max-width: min(40rem, 90vw);
+    background-color: var(--colour-success-background);
+    color: var(--colour-success-text);
+    border-color: var(--colour-success-text);
+
+    /* Ensure popover is visible when shown (for non-Popover API browsers) */
+    &[style*="display: block"] {
+      display: block !important;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1000;
+    }
+
+    & h3 {
+      margin-top: 0;
+      margin-bottom: 1rem;
+      font-family: var(--font-family-subtitle);
+      font-size: var(--fontsize-header-medium);
+      font-weight: bold;
+      color: var(--colour-success-text);
+      text-align: center;
+    }
+
+    & p {
+      font-size: var(--fontsize-normal);
+      font-weight: normal;
+      text-align: left;
+      margin-bottom: 0.8rem;
+      line-height: 1.6;
+    }
+
+    & a {
+      color: var(--colour-success-text);
+      text-decoration: underline;
+      font-weight: bold;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    & button {
+      background-color: var(--colour-success-text);
+      color: var(--colour-success-background);
+      padding: 0.5rem 1.5rem;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+  }
+
+  /* Backdrop for non-Popover API browsers */
+  .embodied-mind-popover-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--colour-overlay);
+    z-index: 999;
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  #embodied-mind-logo {
+    transition:
+      opacity 0.2s ease,
+      transform 0.2s ease;
+
+    &:hover {
+      opacity: 0.8;
+      transform: scale(1.05);
+    }
+
+    &:focus {
+      outline: 2px solid var(--colour-effective-headings-text);
+      outline-offset: 4px;
+    }
+
+    &:active {
+      transform: scale(0.98);
+    }
+  }
 }

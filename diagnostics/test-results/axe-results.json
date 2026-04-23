@@ -65,6 +65,13 @@
       "count": 41
     },
     {
+      "pageUrl": "students/lesson-05.html",
+      "theme": "light",
+      "style": "normal",
+      "viewport": "900",
+      "count": 41
+    },
+    {
       "pageUrl": "students/lesson-01.html",
       "theme": "light",
       "style": "normal",
@@ -205,6 +212,13 @@
       "count": 41
     },
     {
+      "pageUrl": "students/lesson-05.html",
+      "theme": "dark",
+      "style": "normal",
+      "viewport": "900",
+      "count": 41
+    },
+    {
       "pageUrl": "students/lesson-01.html",
       "theme": "dark",
       "style": "normal",
@@ -345,6 +359,13 @@
       "count": 41
     },
     {
+      "pageUrl": "students/lesson-05.html",
+      "theme": "light",
+      "style": "subdued",
+      "viewport": "900",
+      "count": 41
+    },
+    {
       "pageUrl": "students/lesson-01.html",
       "theme": "light",
       "style": "subdued",
@@ -485,6 +506,13 @@
       "count": 41
     },
     {
+      "pageUrl": "students/lesson-05.html",
+      "theme": "dark",
+      "style": "subdued",
+      "viewport": "900",
+      "count": 41
+    },
+    {
       "pageUrl": "students/lesson-01.html",
       "theme": "dark",
       "style": "subdued",
@@ -625,6 +653,13 @@
       "count": 41
     },
     {
+      "pageUrl": "students/lesson-05.html",
+      "theme": "light",
+      "style": "vibrant",
+      "viewport": "900",
+      "count": 41
+    },
+    {
       "pageUrl": "students/lesson-01.html",
       "theme": "light",
       "style": "vibrant",
@@ -759,6 +794,13 @@
     },
     {
       "pageUrl": "students/lesson-04.html",
+      "theme": "dark",
+      "style": "vibrant",
+      "viewport": "900",
+      "count": 41
+    },
+    {
+      "pageUrl": "students/lesson-05.html",
       "theme": "dark",
       "style": "vibrant",
       "viewport": "900",
@@ -14057,8 +14099,8 @@
     }
   ],
   "metadata": {
-    "pagesTestedCount": 20,
-    "totalTestRuns": 120,
+    "pagesTestedCount": 21,
+    "totalTestRuns": 126,
     "viewports": [
       "900"
     ],

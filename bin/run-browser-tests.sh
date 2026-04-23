@@ -13,7 +13,7 @@ print_usage() {
 
 TEST_URL="http://localhost:8080"
 FOLDER=""
-EXCLUDE_LIST=""
+EXCLUDE_LIST="diagnostics lessons"
 
 # Parse command-line arguments
 while [[ $# -gt 0 ]]; do
@@ -76,9 +76,15 @@ echo "Checking WebKit system dependencies..."
 if npx playwright install-deps webkit --dry-run 2>&1 | grep -q "All browsers are already installed"; then
     echo "✓ WebKit dependencies already installed"
 elif command -v sudo &> /dev/null; then
-    # Running locally with sudo available - check if deps actually need installing
-    echo "Installing WebKit system dependencies..."
-    sudo npx playwright install-deps webkit > /dev/null 2>&1 && echo "✓ WebKit dependencies installed" || echo "⚠️  WebKit dependencies installation skipped (requires sudo)"
+    # Running locally with sudo available - try non-interactive installation
+    # Use -n flag to prevent sudo from prompting for password
+    echo "Installing WebKit system dependencies (non-interactive)..."
+    if sudo -n npx playwright install-deps webkit > /dev/null 2>&1; then
+        echo "✓ WebKit dependencies installed"
+    else
+        echo "⚠️  WebKit dependencies installation skipped (requires sudo password or permissions)"
+        echo "   To enable WebKit tests, run: sudo npx playwright install-deps webkit"
+    fi
 else
     # Running in CI/GitHub Actions (already has permissions)
     echo "Installing WebKit system dependencies..."
