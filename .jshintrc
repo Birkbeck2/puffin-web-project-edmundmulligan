@@ -5,9 +5,11 @@
   "undef": true,
   "unused": true,
   "strict": false,
+  "laxbreak": true,
   "globals": {
     "Debug": true,
     "LocalStorage": true,
+    "Utils": true,
     "console": true,
     "alert": true
   }

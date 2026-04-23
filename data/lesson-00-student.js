@@ -10,57 +10,57 @@
  */
 
 module.exports = {
-    lesson: {
-        number: 0,
-        title: 'Getting Started',
-        page_title: 'Lesson 0 - Getting Started'
-    },
-    platforms: [
-        {
-            id: 'chromebook',
-            name: 'Chromebook',
-            cap_name: 'Chromebook',
-            non_developer: true,
-            description: `<div id="instructions-chromebook">
+  lesson: {
+    number: 0,
+    title: 'Getting Started',
+    page_title: 'Lesson 0 - Getting Started',
+  },
+  platforms: [
+    {
+      id: 'chromebook',
+      name: 'Chromebook',
+      cap_name: 'Chromebook',
+      non_developer: true,
+      description: `<div id="instructions-chromebook">
                     <p>
                         Chromebooks are inexpensive laptops that run Chrome OS, but they are not great for web development. It is possible to install Linux on some Chromebooks, but Google makes it difficult to do this without opening the computer up and making changes to the hardware. <strong>This will, at the very least, void your warranty and I honestly do not recommend doing this.</strong> I destroyed one Chromebook when I tried. If you want a cheap laptop for web  development, consider a Windows or Linux machine instead.
                     </p>
-                </div>`
-        },
-        {
-            id: 'android',
-            name: 'Android',
-            cap_name: 'Android',
-            non_developer: true,
-            description: `<div id="instructions-android">
+                </div>`,
+    },
+    {
+      id: 'android',
+      name: 'Android',
+      cap_name: 'Android',
+      non_developer: true,
+      description: `<div id="instructions-android">
                     <p>
                         Android phones and tablets are not ideal for web development. While there are some code editors available for Android, the experience is limited compared to using a laptop or desktop computer. If possible, use a Windows, or Linux machine for the best experience.
                     </p>
-                </div>`
-        },
-        {
-            id: 'ios',
-            name: 'Ios',
-            cap_name: 'iOS (iPhone/iPad)',
-            non_developer: true,
-            description: `<div id="instructions-ios">
+                </div>`,
+    },
+    {
+      id: 'ios',
+      name: 'Ios',
+      cap_name: 'iOS (iPhone/iPad)',
+      non_developer: true,
+      description: `<div id="instructions-ios">
                     <p>
                         Apple iPhones and iPads are not ideal for web development. While there are some code editors available for iOS, the experience is limited compared to using a laptop or desktop computer. If possible, use a macOS machine such as an iMac or MacBook for the best experience.
                     </p>
-                </div>`
-        }
-    ],
-    common_sections: [
-        {
-            section: true,
-            section_id: 'introduction',
-            title: 'Introduction',
-            aria_label: 'Introduction',
-            container_class: 'intro-container',
-            content_class: 'intro-content',
-            title_class: 'lesson-title',
-            class_list: 'lesson-install-windows lesson-install-macos lesson-install-linux',
-            content: `<div class="intro-container">
+                </div>`,
+    },
+  ],
+  common_sections: [
+    {
+      section: true,
+      section_id: 'introduction',
+      title: 'Introduction',
+      aria_label: 'Introduction',
+      container_class: 'intro-container',
+      content_class: 'intro-content',
+      title_class: 'lesson-title',
+      class_list: 'lesson-install-windows lesson-install-macos lesson-install-linux',
+      content: `<div class="intro-container">
                     <div class="intro-content">
                         <div id="introduction-block">
                             <p>
@@ -68,35 +68,35 @@ module.exports = {
                             </p>
                         </div>
                     </div>
-                </div>`
-        },
-        {
-            section: true,
-            section_id: 'warning',
-            title: 'Warning',
-            aria_label: 'Warning',
-            container_class: 'warning-container',
-            content_class: 'warning-content',
-            title_class: 'lesson-title',
-            class_list: 'lesson-install-windows lesson-install-macos lesson-install-linux',
-            content: `<div class="warning-container">
+                </div>`,
+    },
+    {
+      section: true,
+      section_id: 'warning',
+      title: 'Warning',
+      aria_label: 'Warning',
+      container_class: 'warning-container',
+      content_class: 'warning-content',
+      title_class: 'lesson-title',
+      class_list: 'lesson-install-windows lesson-install-macos lesson-install-linux',
+      content: `<div class="warning-container">
                     <div class="warning-content">
                         <p>
                             This lesson involves installing software on your computer. If you are using a shared or school computer, please check with a parent, guardian, or teacher before proceeding with the installations. Also, you will need administrative privileges to install the software. This means you will need an administrator password at various stages. If you are not using your own computer, you may need to get the owner to do those steps for you. Finally be aware that the instructions are long and detailed to ensure you get everything set up correctly. Take your time and follow each step carefully. Ask for help from a mentor, if one is available. The rest of the lessons are much shorter and easier once you have the tools installed!
                         </p>
                     </div>
-                </div>`
-        },
-        {
-            section: true,
-            section_id: 'installing-required-software',
-            title: 'Installing Required Software',
-            aria_label: 'Installing Required Software',
-            container_class: '',
-            content_class: '',
-            title_class: 'lesson-title',
-            class_list: 'lesson-install-windows lesson-install-macos lesson-install-linux',
-            content: `<div id="installing-required-software-block">
+                </div>`,
+    },
+    {
+      section: true,
+      section_id: 'installing-required-software',
+      title: 'Installing Required Software',
+      aria_label: 'Installing Required Software',
+      container_class: '',
+      content_class: '',
+      title_class: 'lesson-title',
+      class_list: 'lesson-install-windows lesson-install-macos lesson-install-linux',
+      content: `<div id="installing-required-software-block">
                     <p>These are the tools you need to install. Some may already be installed on your computer, in which case you can skip those sections. You may use other tools if you prefer, but these are the ones the lessons will assume you have.</p>
                     <ul>
                         <li>Microsoft Visual Studio Code (or another code editor).</li>
@@ -108,21 +108,21 @@ module.exports = {
                     <p>
                         Node.js is required from the start to run the development server. If you don't want to install Git or SQLite right now, that's okay; you can install them later when you get to the lessons that need them.
                     </p>
-                </div>`
-        }
-    ],
-    developer_platforms: [
-        {
-            os_id: 'windows',
-            os_name: 'Windows',
-            os_intro: `<p>
+                </div>`,
+    },
+  ],
+  developer_platforms: [
+    {
+      os_id: 'windows',
+      os_name: 'Windows',
+      os_intro: `<p>
                     The latest version of Windows is <strong>Windows 11</strong>, but you should be able to use <strong>Windows 10</strong> as well. The lessons have not been tested on earlier versions of Windows, but they may work ok. It's possible that the browser on older versions of windows won't run all the features used in the lessons. In particular, beware of using Internet Explorer - it is not supported any more and Microsoft Edge is recommended instead. On the next screens are the instructions for installing the recommended software on your Windows computer.
                 </p>`,
-            tools: [
-                {
-                    tool_id: 'vsc',
-                    tool_name: 'Visual Studio Code',
-                    tool_content: `<div id="vsc-windows">
+      tools: [
+        {
+          tool_id: 'vsc',
+          tool_name: 'Visual Studio Code',
+          tool_content: `<div id="vsc-windows">
                     <h4 class="lesson-title">Check whether Visual Studio Code is already installed</h4>
                     <ul>
                         <li>Press <code>Windows key + R</code></li>
@@ -188,12 +188,12 @@ module.exports = {
                             </ul>
                         </li>
                     </ol>
-                </div>`
-                },
-                {
-                    tool_id: 'firefox',
-                    tool_name: 'Mozilla Firefox',
-                    tool_content: `<div id="firefox-windows">
+                </div>`,
+        },
+        {
+          tool_id: 'firefox',
+          tool_name: 'Mozilla Firefox',
+          tool_content: `<div id="firefox-windows">
                     <h4 class="lesson-title">Check whether Firefox is already installed</h4>
                     <ul>
                         <li>Press <code>Windows key</code></li>
@@ -254,12 +254,12 @@ module.exports = {
                             </ul>
                         </li>
                     </ol>
-                </div>`
-                },
-                {
-                    tool_id: 'nodejs',
-                    tool_name: 'Node.js',
-                    tool_content: `<div id="nodejs-windows">
+                </div>`,
+        },
+        {
+          tool_id: 'nodejs',
+          tool_name: 'Node.js',
+          tool_content: `<div id="nodejs-windows">
                     <h4 class="lesson-title">Check whether Node.js is already installed</h4>
                     <ul>
                         <li>Press <code>Windows key + R</code></li>
@@ -385,12 +385,12 @@ echo const http = require('http'); http.createServer((req, res) =&gt; {res.write
                             </ul>
                         </li>
                     </ol>
-                </div>`
-                },
-                {
-                    tool_id: 'git',
-                    tool_name: 'Git',
-                    tool_content: `<div id="git-windows">
+                </div>`,
+        },
+        {
+          tool_id: 'git',
+          tool_name: 'Git',
+          tool_content: `<div id="git-windows">
                     <h4 class="lesson-title">Check whether Git is already installed</h4>
                     <ul>
                         <li>Press <code>Windows key + R</code></li>
@@ -509,12 +509,12 @@ git config --global --list
                             </ul>
                         </li>
                     </ol>
-                </div>`
-                },
-                {
-                    tool_id: 'sqlite',
-                    tool_name: 'SQLite',
-                    tool_content: `<div id="sqlite-windows">
+                </div>`,
+        },
+        {
+          tool_id: 'sqlite',
+          tool_name: 'SQLite',
+          tool_content: `<div id="sqlite-windows">
                     <h4 class="lesson-title">Check whether SQLite is already installed</h4>
                     <ul>
                         <li>Press <code>Windows key + R</code></li>
@@ -624,13 +624,13 @@ SELECT * FROM users;
                             </ul>
                         </li>
                     </ol>
-                </div>`
-                },
-                {
-                    tool_id: 'vsc-extensions',
-                    tool_name: 'Visual Studio Code Extensions',
-                    aria_label: 'Visual Studio Code Extensions for Windows',
-                    tool_content: `<div id="extensions-windows">
+                </div>`,
+        },
+        {
+          tool_id: 'vsc-extensions',
+          tool_name: 'Visual Studio Code Extensions',
+          aria_label: 'Visual Studio Code Extensions for Windows',
+          tool_content: `<div id="extensions-windows">
                     <p>VS Code extensions add extra features and functionality to your editor. Here are the recommended extensions for web development:</p>
 
                     <h4 onclick="toggleSection('vsc-extensions-windows-list-1', event);" onkeydown="toggleSection('vsc-extensions-windows-list-1', event);" class="lesson-title magic-invisible">How to Install Extensions</h4>
@@ -769,13 +769,13 @@ SELECT * FROM users;
                             <li>Select "Prettier - Code formatter" from the dropdown</li>
                         </ol>
                     </div>
-                </div>`
-                },
-                {
-                    tool_id: 'projects-folder',
-                    tool_name: 'Create a Projects Folder',
-                    aria_label: 'Create a Projects Folder on Windows',
-                    tool_content: `<div id="projects-folder-windows">
+                </div>`,
+        },
+        {
+          tool_id: 'projects-folder',
+          tool_name: 'Create a Projects Folder',
+          aria_label: 'Create a Projects Folder on Windows',
+          tool_content: `<div id="projects-folder-windows">
                     <p>It's helpful to keep all your coding projects organised in one place. Let's create a dedicated Projects folder:</p>
                     <ol>
                         <li>
@@ -805,13 +805,13 @@ SELECT * FROM users;
                     </ol>
                     <p>Your Projects folder is now at: <code>C:\Users\YourUsername\Projects</code></p>
                     <p>In future lessons, you'll save your coding projects in this folder.</p>
-                </div>`
-                },
-                {
-                    tool_id: 'dev-server',
-                    tool_name: 'Setting Up the Development Server',
-                    aria_label: 'Setting Up the Development Server on Windows',
-                    tool_content: `<div id="dev-server-windows">
+                </div>`,
+        },
+        {
+          tool_id: 'dev-server',
+          tool_name: 'Setting Up the Development Server',
+          aria_label: 'Setting Up the Development Server on Windows',
+          tool_content: `<div id="dev-server-windows">
                     <p>To view your web pages as you develop them, you'll need to run a local development server. This is important because some web features don't work when opening HTML files directly in a browser. If you installed the Live Server extension in Visual Studio Code, you can skip this step as that will do the same thing. Using this method lets you run and test your web pages even if you are not using Visual Studio Code.</p>
 
                     <h4 onclick="toggleSection('dev-server-windows-list-1', event);" onkeydown="toggleSection('dev-server-windows-list-1', event);" class="lesson-title magic-invisible">Create a package.json File</h4>
@@ -864,21 +864,21 @@ SELECT * FROM users;
                         <li>To stop the server, press <code>Ctrl + C</code> in the terminal</li>
                         <li>To restart the server later, just run <code>npm start</code> again from your Projects folder</li>
                     </ul>
-                </div>`
-                }
-            ]
+                </div>`,
         },
-        {
-            os_id: 'macos',
-            os_name: 'macOS',
-            os_intro: `<p>
+      ],
+    },
+    {
+      os_id: 'macos',
+      os_name: 'macOS',
+      os_intro: `<p>
                     The latest version of Apple's macOS is <strong>macOS Ventura</strong>, but you should be able to use recent versions as well. The lessons have not been tested on earlier versions of macOS, but they may work ok. On the next screens are the instructions for installing the recommended software on your macOS computer.
                 </p>`,
-            tools: [
-                {
-                    tool_id: 'vsc',
-                    tool_name: 'Visual Studio Code',
-                    tool_content: `<div id="vsc-macos">
+      tools: [
+        {
+          tool_id: 'vsc',
+          tool_name: 'Visual Studio Code',
+          tool_content: `<div id="vsc-macos">
                     <h4 class="lesson-title">Check whether Visual Studio Code is already installed:</h4>
                     <ul>
                         <li>Open Finder</li>
@@ -949,12 +949,12 @@ SELECT * FROM users;
                             </ul>
                         </li>
                     </ol>
-                </div>`
-                },
-                {
-                    tool_id: 'firefox',
-                    tool_name: 'Mozilla Firefox',
-                    tool_content: `<div id="firefox-macos">
+                </div>`,
+        },
+        {
+          tool_id: 'firefox',
+          tool_name: 'Mozilla Firefox',
+          tool_content: `<div id="firefox-macos">
                     <h4 class="lesson-title">Check whether Firefox is already installed:</h4>
                     <ul>
                         <li>Open Finder</li>
@@ -1024,12 +1024,12 @@ SELECT * FROM users;
                             </ul>
                         </li>
                     </ol>
-                </div>`
-                },
-                {
-                    tool_id: 'nodejs',
-                    tool_name: 'Node.js',
-                    tool_content: `<div id="nodejs-macos">
+                </div>`,
+        },
+        {
+          tool_id: 'nodejs',
+          tool_name: 'Node.js',
+          tool_content: `<div id="nodejs-macos">
                     <h4 class="lesson-title">Check whether Node.js is already installed:</h4>
                     <ul>
                         <li>Open Terminal (<code>Command + Space</code>, type "Terminal")</li>
@@ -1226,12 +1226,12 @@ node server.js
                             </li>
                         </ol>
                     </div>
-                </div>`
-                },
-                {
-                    tool_id: 'git',
-                    tool_name: 'Git',
-                    tool_content: `<div id="git-macos">
+                </div>`,
+        },
+        {
+          tool_id: 'git',
+          tool_name: 'Git',
+          tool_content: `<div id="git-macos">
                     <h4 class="lesson-title">Check whether Git is already installed:</h4>
                     <ul>
                         <li>Open Terminal (<code>Command + Space</code>, type "Terminal")</li>
@@ -1421,12 +1421,12 @@ git config --global --list
                             </li>
                         </ol>
                     </div>
-                </div>`
-                },
-                {
-                    tool_id: 'sqlite',
-                    tool_name: 'SQLite',
-                    tool_content: `<div id="sqlite-macos">
+                </div>`,
+        },
+        {
+          tool_id: 'sqlite',
+          tool_name: 'SQLite',
+          tool_content: `<div id="sqlite-macos">
                     <p><strong>Good News:</strong> macOS comes with SQLite pre-installed! You usually don't need to install it separately.</p>
 
                     <h4 onclick="toggleSection('sqlite-macos-list-1', event);" onkeydown="toggleSection('sqlite-macos-list-1', event);" class="lesson-title magic-invisible">Verify Existing Installation</h4>
@@ -1540,13 +1540,13 @@ ls -lh
                             </ul>
                         </li>
                     </ol>
-                </div>`
-                },
-                {
-                    tool_id: 'vsc-extensions',
-                    tool_name: 'Visual Studio Code Extensions',
-                    aria_label: 'Visual Studio Code Extensions for macOS',
-                    tool_content: `<div id="extensions-macos">
+                </div>`,
+        },
+        {
+          tool_id: 'vsc-extensions',
+          tool_name: 'Visual Studio Code Extensions',
+          aria_label: 'Visual Studio Code Extensions for macOS',
+          tool_content: `<div id="extensions-macos">
                     <p>VS Code extensions add extra features and functionality to your editor. Here are the recommended extensions for web development:</p>
 
                     <h4 onclick="toggleSection('vsc-extensions-macos-list-1', event);" onkeydown="toggleSection('vsc-extensions-macos-list-1', event);" class="lesson-title magic-invisible">How to Install Extensions</h4>
@@ -1685,13 +1685,13 @@ ls -lh
                             <li>Select "Prettier - Code formatter" from the dropdown</li>
                         </ol>
                     </div>
-                </div>`
-                },
-                {
-                    tool_id: 'projects-folder',
-                    tool_name: 'Create a Projects Folder',
-                    aria_label: 'Create a Projects Folder on macOS',
-                    tool_content: `<div id="projects-folder-macos">
+                </div>`,
+        },
+        {
+          tool_id: 'projects-folder',
+          tool_name: 'Create a Projects Folder',
+          aria_label: 'Create a Projects Folder on macOS',
+          tool_content: `<div id="projects-folder-macos">
                     <p>It's helpful to keep all your coding projects organised in one place. Let's create a dedicated Projects folder:</p>
                     <ol>
                         <li onclick="toggleSection('create-folder-macos-list-1', event);" onkeydown="toggleSection('create-folder-macos-list-1', event);" class="magic-invisible">Open Finder
@@ -1716,13 +1716,13 @@ ls -lh
                     </ol>
                     <p>Your Projects folder is now at: <code>~/Projects</code> (or <code>/Users/YourUsername/Projects</code>)</p>
                     <p>In future lessons, you'll save your coding projects in this folder.</p>
-                </div>`
-                },
-                {
-                    tool_id: 'dev-server',
-                    tool_name: 'Setting Up the Development Server',
-                    aria_label: 'Setting Up the Development Server on macOS',
-                    tool_content: `<div id="dev-server-macos">
+                </div>`,
+        },
+        {
+          tool_id: 'dev-server',
+          tool_name: 'Setting Up the Development Server',
+          aria_label: 'Setting Up the Development Server on macOS',
+          tool_content: `<div id="dev-server-macos">
                     <p>To view your web pages as you develop them, you'll need to run a local development server. This is important because some web features don't work when opening HTML files directly in a browser. If you installed the Live Server extension in Visual Studio Code, you can skip this step as that will do the same thing. Using this method lets you run and test your web pages even if you are not using Visual Studio Code.</p>
 
                     <h4 onclick="toggleSection('dev-server-macos-list-1', event);" onkeydown="toggleSection('dev-server-macos-list-1', event);" class="lesson-title magic-invisible">Create a package.json File</h4>
@@ -1775,21 +1775,21 @@ ls -lh
                         <li>To stop the server, press <code>Ctrl + C</code> in the terminal</li>
                         <li>To restart the server later, just run <code>npm start</code> again from your Projects folder</li>
                     </ul>
-                </div>`
-                }
-            ]
+                </div>`,
         },
-        {
-            os_id: 'linux',
-            os_name: 'Linux',
-            os_intro: `<p>
+      ],
+    },
+    {
+      os_id: 'linux',
+      os_name: 'Linux',
+      os_intro: `<p>
                     There are many different versions of Linux available, so these instructions will cover the most common distributions: <strong>Ubuntu</strong>, <strong>Fedora</strong> and <strong>ArchLinux</strong>. If you are using a different distribution, the steps may vary slightly. The lessons have been tested on Linux Mint 22.2 (which is based on Ubuntu 22.04) but should work fine with other flavours and versions. On the next screens are the instructions for installing the recommended software on your Linux computer.
                 </p>`,
-            tools: [
-                {
-                    tool_id: 'vsc',
-                    tool_name: 'Visual Studio Code',
-                    tool_content: `<div id="vsc-linux">
+      tools: [
+        {
+          tool_id: 'vsc',
+          tool_name: 'Visual Studio Code',
+          tool_content: `<div id="vsc-linux">
                     <p>Check whether Visual Studio Code is already installed:</p>
                     <ul>
                         <li>Open Terminal (usually <code>Ctrl + Alt + T</code>)</li>
@@ -1923,12 +1923,12 @@ sudo apt-get install -f</code></pre>
                             </li>
                         </ol>
                     </div>
-                </div>`
-                },
-                {
-                    tool_id: 'firefox',
-                    tool_name: 'Mozilla Firefox',
-                    tool_content: `<div id="firefox-linux">
+                </div>`,
+        },
+        {
+          tool_id: 'firefox',
+          tool_name: 'Mozilla Firefox',
+          tool_content: `<div id="firefox-linux">
                     <p>Check whether Firefox is already installed:</p>
                     <ul>
                         <li>Open Terminal (usually <code>Ctrl + Alt + T</code>)</li>
@@ -2079,12 +2079,12 @@ sudo apt-get install -f</code></pre>
                             </li>
                         </ol>
                     </div>
-                </div>`
-                },
-                {
-                    tool_id: 'nodejs',
-                    tool_name: 'Node.js',
-                    tool_content: `<div id="nodejs-linux">
+                </div>`,
+        },
+        {
+          tool_id: 'nodejs',
+          tool_name: 'Node.js',
+          tool_content: `<div id="nodejs-linux">
                     <p>Check whether Node.js is already installed:</p>
                     <ul>
                         <li>Open Terminal (usually <code>Ctrl + Alt + T</code>)</li>
@@ -2372,12 +2372,12 @@ sudo apt install nodejs npm</code></pre>
                             </li>
                         </ol>
                     </div>
-                </div>`
-                },
-                {
-                    tool_id: 'git',
-                    tool_name: 'Git',
-                    tool_content: `<div id="git-linux">
+                </div>`,
+        },
+        {
+          tool_id: 'git',
+          tool_name: 'Git',
+          tool_content: `<div id="git-linux">
                     <p>Check whether Git is already installed:</p>
                     <ul>
                         <li>Open Terminal (usually <code>Ctrl + Alt + T</code>)</li>
@@ -2571,12 +2571,12 @@ git config --global user.email "your.email@example.com"
                             </li>
                         </ol>
                     </div>
-                </div>`
-                },
-                {
-                    tool_id: 'sqlite',
-                    tool_name: 'SQLite',
-                    tool_content: `<div id="sqlite-linux">
+                </div>`,
+        },
+        {
+          tool_id: 'sqlite',
+          tool_name: 'SQLite',
+          tool_content: `<div id="sqlite-linux">
                     <p>Check whether SQLite is already installed:</p>
                     <ul>
                         <li>Open Terminal (usually <code>Ctrl + Alt + T</code>)</li>
@@ -2748,13 +2748,13 @@ SELECT * FROM users;
                         <li><code>.mode column</code> - Display results in column format</li>
                         <li><code>.headers on</code> - Show column headers</li>
                     </ul>
-                </div>`
-                },
-                {
-                    tool_id: 'vsc-extensions',
-                    tool_name: 'Visual Studio Code Extensions',
-                    aria_label: 'Visual Studio Code Extensions for Linux',
-                    tool_content: `<div id="extensions-linux">
+                </div>`,
+        },
+        {
+          tool_id: 'vsc-extensions',
+          tool_name: 'Visual Studio Code Extensions',
+          aria_label: 'Visual Studio Code Extensions for Linux',
+          tool_content: `<div id="extensions-linux">
                     <p>VS Code extensions add extra features and functionality to your editor. Here are the recommended extensions for web development:</p>
 
                     <h4 onclick="toggleSection('vsc-extensions-linux-list-1', event);" onkeydown="toggleSection('vsc-extensions-linux-list-1', event);" class="lesson-title magic-invisible">How to Install Extensions</h4>
@@ -2893,13 +2893,13 @@ SELECT * FROM users;
                             <li>Select "Prettier - Code formatter" from the dropdown</li>
                         </ol>
                     </div>
-                </div>`
-                },
-                {
-                    tool_id: 'projects-folder',
-                    tool_name: 'Create a Projects Folder',
-                    aria_label: 'Create a Projects Folder on Linux',
-                    tool_content: `<div id="projects-folder-linux">
+                </div>`,
+        },
+        {
+          tool_id: 'projects-folder',
+          tool_name: 'Create a Projects Folder',
+          aria_label: 'Create a Projects Folder on Linux',
+          tool_content: `<div id="projects-folder-linux">
                     <p>It's helpful to keep all your coding projects organised in one place. Let's create a dedicated Projects folder:</p>
                     <ol>
                         <li onclick="toggleSection('create-folder-linux-list-1', event);" onkeydown="toggleSection('create-folder-linux-list-1', event);" class="magic-invisible">Open Terminal
@@ -2928,13 +2928,13 @@ SELECT * FROM users;
                     </ol>
                     <p>Your Projects folder is now at: <code>~/Projects</code> (or <code>/home/yourusername/Projects</code>)</p>
                     <p>In future lessons, you'll save your coding projects in this folder.</p>
-                </div>`
-                },
-                {
-                    tool_id: 'dev-server',
-                    tool_name: 'Setting Up the Development Server',
-                    aria_label: 'Setting Up the Development Server on Linux',
-                    tool_content: `<div id="dev-server-linux">
+                </div>`,
+        },
+        {
+          tool_id: 'dev-server',
+          tool_name: 'Setting Up the Development Server',
+          aria_label: 'Setting Up the Development Server on Linux',
+          tool_content: `<div id="dev-server-linux">
                     <p>To view your web pages as you develop them, you'll need to run a local development server. This is important because some web features don't work when opening HTML files directly in a browser. If you installed the Live Server extension in Visual Studio Code, you can skip this step as that will do the same thing. Using this method lets you run and test your web pages even if you are not using Visual Studio Code.</p>
 
                     <h4 onclick="toggleSection('dev-server-linux-list-1', event);" onkeydown="toggleSection('dev-server-linux-list-1', event);" class="lesson-title magic-invisible">Create a package.json File</h4>
@@ -2988,25 +2988,25 @@ SELECT * FROM users;
                         <li>To stop the server, press <code>Ctrl + C</code> in the terminal</li>
                         <li>To restart the server later, just run <code>npm start</code> again from your Projects folder</li>
                     </ul>
-                </div>`
-                }
-            ]
-        }
-    ],
-    conclusion_section: {
-        section: true,
-        section_id: 'conclusion',
-        title: 'Conclusion',
-        aria_label: 'Conclusion',
-        container_class: '',
-        content_class: '',
-        title_class: 'lesson-title',
-        class_list: 'lesson-install-windows lesson-install-macos lesson-install-linux conclusion',
-        content: `<div id="conclusion-block">
+                </div>`,
+        },
+      ],
+    },
+  ],
+  conclusion_section: {
+    section: true,
+    section_id: 'conclusion',
+    title: 'Conclusion',
+    aria_label: 'Conclusion',
+    container_class: '',
+    content_class: '',
+    title_class: 'lesson-title',
+    class_list: 'lesson-install-windows lesson-install-macos lesson-install-linux conclusion',
+    content: `<div id="conclusion-block">
                 <p>
                     Congratulations! You have installed all the necessary tools to start your web development journey. In the next lesson, you will create your first web page using HTML and CSS.
                 </p>
                 <div id="wand-container" class="wand-container"></div>
-            </div>`
-    }
+            </div>`,
+  },
 };

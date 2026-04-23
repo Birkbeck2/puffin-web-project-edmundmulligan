@@ -15,12 +15,12 @@
 /**
  * Usage:
  *   node capture-css-animation.js <url> <output-name> <duration> [options]
- * 
+ *
  * Options:
  *   --click <selector>    Click element before capturing (to trigger animation)
  *   --capture <selector>  Capture only this element
  *   --delay <ms>          Delay before starting capture after click (default: 100ms)
- * 
+ *
  * Examples:
  *   node bin/capture-css-animation.js http://localhost:8080/page.html animation 3000
  *   node bin/capture-css-animation.js http://localhost:8080 theme 3000 --click ".light-button"
@@ -39,7 +39,7 @@ const colors = {
   green: '\x1b[32m',
   yellow: '\x1b[33m',
   blue: '\x1b[34m',
-  cyan: '\x1b[36m'
+  cyan: '\x1b[36m',
 };
 
 function log(message, color = 'reset') {
@@ -60,14 +60,14 @@ function info(message) {
 
 function checkDependencies() {
   const deps = [];
-  
+
   // Check if puppeteer is installed
   try {
     require.resolve('puppeteer');
   } catch (e) {
     deps.push('puppeteer');
   }
-  
+
   // Check if ffmpeg is available
   try {
     execSync('ffmpeg -version', { stdio: 'ignore' });
@@ -80,57 +80,57 @@ function checkDependencies() {
     log('  macOS: brew install ffmpeg');
     process.exit(1);
   }
-  
+
   if (deps.length > 0) {
     error(`Missing dependencies: ${deps.join(', ')}`);
     log('\nPlease install missing packages:', 'yellow');
     log(`  npm install --save-dev ${deps.join(' ')}`);
     process.exit(1);
   }
-  
+
   success('All dependencies found');
 }
 
 async function captureAnimation(url, outputName, duration, options = {}) {
   const { captureSelector = null, clickSelector = null, delay = 100 } = options;
-  
+
   log('\n' + '='.repeat(60), 'blue');
   log('  CSS Animation Capture', 'blue');
   log('='.repeat(60) + '\n', 'blue');
-  
+
   info(`URL: ${url}`);
   info(`Output: ${outputName}`);
   info(`Duration: ${duration}ms`);
   if (captureSelector) info(`Capture selector: ${captureSelector}`);
   if (clickSelector) info(`Click trigger: ${clickSelector}`);
   if (delay && clickSelector) info(`Delay after click: ${delay}ms`);
-  
+
   const puppeteer = require('puppeteer');
-  
+
   log('\nLaunching browser...', 'yellow');
   const browser = await puppeteer.launch({
     headless: 'new',
-    args: ['--no-sandbox', '--disable-setuid-sandbox']
+    args: ['--no-sandbox', '--disable-setuid-sandbox'],
   });
-  
+
   try {
     const page = await browser.newPage();
-    
+
     // Set viewport for consistent capture
     await page.setViewport({
       width: 1920,
       height: 1080,
-      deviceScaleFactor: 2 // Retina display
+      deviceScaleFactor: 2, // Retina display
     });
-    
+
     log('Navigating to page...', 'yellow');
     await page.goto(url, {
-      waitUntil: 'networkidle0'
+      waitUntil: 'networkidle0',
     });
-    
+
     // Wait a moment for any initial animations
-    await new Promise(resolve => setTimeout(resolve, 500));
-    
+    await new Promise((resolve) => setTimeout(resolve, 500));
+
     // Click element to trigger animation if specified
     if (clickSelector) {
       log(`Finding click element: ${clickSelector}`, 'yellow');
@@ -142,13 +142,13 @@ async function captureAnimation(url, outputName, duration, options = {}) {
       }
       log('Clicking element to trigger animation...', 'yellow');
       await clickElement.click();
-      
+
       // Wait for animation to start
       if (delay > 0) {
-        await new Promise(resolve => setTimeout(resolve, delay));
+        await new Promise((resolve) => setTimeout(resolve, delay));
       }
     }
-    
+
     // Determine what to screenshot
     let element = null;
     if (captureSelector) {
@@ -160,132 +160,129 @@ async function captureAnimation(url, outputName, duration, options = {}) {
         process.exit(1);
       }
     }
-    
+
     // Create output directory
     const outputDir = path.join(process.cwd(), 'diagnostics/screenshots');
     if (!fs.existsSync(outputDir)) {
       fs.mkdirSync(outputDir, { recursive: true });
     }
-    
+
     const videoPath = path.join(outputDir, `${outputName}-temp.webm`);
     const gifPath = path.join(outputDir, `${outputName}.gif`);
     const webpPath = path.join(outputDir, `${outputName}.webp`);
-    
+
     // Record video using Puppeteer's built-in screen recording
     log('Starting video capture...', 'yellow');
-    
+
     // Take screenshots at intervals
     const fps = 30;
     const interval = 1000 / fps;
     const frames = Math.ceil(duration / interval);
     const framesDir = path.join(outputDir, `${outputName}-frames`);
-    
+
     if (!fs.existsSync(framesDir)) {
       fs.mkdirSync(framesDir, { recursive: true });
     }
-    
+
     log(`Capturing ${frames} frames at ${fps} FPS...`, 'yellow');
-    
+
     for (let i = 0; i < frames; i++) {
       const framePath = path.join(framesDir, `frame-${String(i).padStart(5, '0')}.png`);
-      
+
       if (element) {
         await element.screenshot({ path: framePath });
       } else {
         await page.screenshot({ path: framePath, fullPage: false });
       }
-      
+
       if (i % 30 === 0) {
         process.stdout.write(`\rProgress: ${Math.round((i / frames) * 100)}%`);
       }
-      
-      await new Promise(resolve => setTimeout(resolve, interval));
+
+      await new Promise((resolve) => setTimeout(resolve, interval));
     }
-    
+
     process.stdout.write('\rProgress: 100%\n');
     success('Video capture complete');
-    
+
     await browser.close();
-    
+
     // Convert frames to video using FFmpeg
     log('\nConverting frames to video...', 'yellow');
     execSync(
       `ffmpeg -framerate ${fps} -pattern_type glob -i "${framesDir}/frame-*.png" ` +
-      `-c:v libvpx-vp9 -pix_fmt yuva420p "${videoPath}" -y`,
+        `-c:v libvpx-vp9 -pix_fmt yuva420p "${videoPath}" -y`,
       { stdio: 'ignore' }
     );
     success('Video created');
-    
+
     // Convert video to optimized GIF
     log('Creating optimized GIF...', 'yellow');
     const palettePath = path.join(outputDir, `${outputName}-palette.png`);
-    
+
     // Generate palette
     execSync(
       `ffmpeg -i "${videoPath}" ` +
-      `-vf "fps=15,scale=800:-1:flags=lanczos,palettegen=stats_mode=diff" ` +
-      `-y "${palettePath}"`,
+        `-vf "fps=15,scale=800:-1:flags=lanczos,palettegen=stats_mode=diff" ` +
+        `-y "${palettePath}"`,
       { stdio: 'ignore' }
     );
-    
+
     // Create GIF with palette
     execSync(
       `ffmpeg -i "${videoPath}" -i "${palettePath}" ` +
-      `-lavfi "fps=15,scale=800:-1:flags=lanczos[x];[x][1:v]paletteuse=dither=bayer:bayer_scale=5:diff_mode=rectangle" ` +
-      `-loop 0 "${gifPath}" -y`,
+        `-lavfi "fps=15,scale=800:-1:flags=lanczos[x];[x][1:v]paletteuse=dither=bayer:bayer_scale=5:diff_mode=rectangle" ` +
+        `-loop 0 "${gifPath}" -y`,
       { stdio: 'ignore' }
     );
     success('GIF created');
-    
+
     // Create WebP version
     log('Creating WebP version...', 'yellow');
     execSync(
       `ffmpeg -i "${videoPath}" ` +
-      `-vcodec libwebp -lossless 0 -compression_level 6 -q:v 80 -loop 0 ` +
-      `"${webpPath}" -y`,
+        `-vcodec libwebp -lossless 0 -compression_level 6 -q:v 80 -loop 0 ` +
+        `"${webpPath}" -y`,
       { stdio: 'ignore' }
     );
     success('WebP created');
-    
+
     // Optimize GIF with gifsicle if available
     try {
       execSync('gifsicle --version', { stdio: 'ignore' });
       log('Optimizing GIF with gifsicle...', 'yellow');
       const optimizedPath = path.join(outputDir, `${outputName}-optimized.gif`);
-      execSync(
-        `gifsicle -O3 --lossy=80 -o "${optimizedPath}" "${gifPath}"`,
-        { stdio: 'ignore' }
-      );
+      execSync(`gifsicle -O3 --lossy=80 -o "${optimizedPath}" "${gifPath}"`, { stdio: 'ignore' });
       success('GIF optimized');
     } catch (e) {
       info('gifsicle not found, skipping optimization');
     }
-    
+
     // Clean up temporary files
     log('\nCleaning up...', 'yellow');
     fs.rmSync(framesDir, { recursive: true, force: true });
     fs.unlinkSync(videoPath);
     fs.unlinkSync(palettePath);
-    
+
     // Show file sizes
     log('\n' + '='.repeat(60), 'blue');
     log('  Capture Complete!', 'green');
     log('='.repeat(60), 'blue');
     log('\nOutput files:', 'cyan');
-    
-    const files = fs.readdirSync(outputDir)
-      .filter(f => f.startsWith(outputName))
-      .map(f => {
+
+    const files = fs
+      .readdirSync(outputDir)
+      .filter((f) => f.startsWith(outputName))
+      .map((f) => {
         const fullPath = path.join(outputDir, f);
         const stats = fs.statSync(fullPath);
         const sizeMB = (stats.size / (1024 * 1024)).toFixed(2);
         return `  ${f.padEnd(40)} ${sizeMB} MB`;
       });
-    
-    files.forEach(f => log(f));
-    
+
+    files.forEach((f) => log(f));
+
     log('\n' + '='.repeat(60) + '\n', 'blue');
-    
   } catch (err) {
     error(`Error during capture: ${err.message}`);
     await browser.close();
@@ -296,7 +293,7 @@ async function captureAnimation(url, outputName, duration, options = {}) {
 // Parse command-line arguments
 function main() {
   const args = process.argv.slice(2);
-  
+
   if (args.length < 3) {
     log('Usage: node capture-css-animation.js <url> <output-name> <duration> [options]', 'yellow');
     log('\nOptions:');
@@ -308,24 +305,30 @@ function main() {
     log('  node bin/capture-css-animation.js http://localhost:8080 animation 3000');
     log('');
     log('  # Click button to trigger theme transition');
-    log('  node bin/capture-css-animation.js http://localhost:8080 theme 3000 --click ".light-button"');
+    log(
+      '  node bin/capture-css-animation.js http://localhost:8080 theme 3000 --click ".light-button"'
+    );
     log('');
     log('  # Capture specific element only');
-    log('  node bin/capture-css-animation.js http://localhost:8080 wand 5000 --capture ".wand-icon"');
+    log(
+      '  node bin/capture-css-animation.js http://localhost:8080 wand 5000 --capture ".wand-icon"'
+    );
     log('');
     log('  # Click with custom delay');
-    log('  node bin/capture-css-animation.js http://localhost:8080 menu 2000 --click "#menu-toggle" --delay 200');
+    log(
+      '  node bin/capture-css-animation.js http://localhost:8080 menu 2000 --click "#menu-toggle" --delay 200'
+    );
     log('\nArguments:');
     log('  url          - URL of the page to capture');
     log('  output-name  - Name for output files (without extension)');
     log('  duration     - Duration to capture in milliseconds');
     process.exit(1);
   }
-  
+
   const url = args[0];
   const outputName = args[1];
   const duration = parseInt(args[2], 10);
-  
+
   // Parse options
   const options = {};
   for (let i = 3; i < args.length; i++) {
@@ -340,20 +343,20 @@ function main() {
       i++;
     }
   }
-  
+
   if (isNaN(duration) || duration <= 0) {
     error('Duration must be a positive number');
     process.exit(1);
   }
-  
+
   checkDependencies();
-  
+
   captureAnimation(url, outputName, duration, options)
     .then(() => {
       success('All done! 🎬');
       process.exit(0);
     })
-    .catch(err => {
+    .catch((err) => {
       error(`Fatal error: ${err.message}`);
       console.error(err);
       process.exit(1);
