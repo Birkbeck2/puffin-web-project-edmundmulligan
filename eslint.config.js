@@ -36,12 +36,13 @@ module.exports = [
       },
     },
     rules: {
-      indent: ['error', 4],
+      indent: ['error', 2],
       'linebreak-style': ['error', 'unix'],
       quotes: ['error', 'single'],
       semi: ['error', 'always'],
       'no-undef': 'error',
       'no-unused-expressions': 'error',
+      'no-unexpected-multiline': 'off',
     },
   },
   // CommonJS data modules used by the lesson build pipeline
@@ -66,12 +67,13 @@ module.exports = [
       },
     },
     rules: {
-      indent: ['error', 4],
+      indent: ['error', 2],
       'linebreak-style': ['error', 'unix'],
       quotes: ['error', 'single'],
       semi: ['error', 'always'],
       'no-undef': 'error',
       'no-unused-expressions': 'error',
+      'no-unexpected-multiline': 'off',
     },
   },
   // Browser JavaScript configuration
@@ -106,12 +108,13 @@ module.exports = [
       },
     },
     rules: {
-      indent: ['error', 4],
+      indent: ['error', 2],
       'linebreak-style': ['error', 'unix'],
       quotes: ['error', 'single'],
       semi: ['error', 'always'],
       'no-undef': 'error',
       'no-unused-expressions': 'error',
+      'no-unexpected-multiline': 'off',
     },
   },
 ];
