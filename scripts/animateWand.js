@@ -37,6 +37,9 @@
           throw new Error('Wand SVG markup is missing <svg> root');
         }
 
+        // Remove the id attribute to prevent duplicate IDs when multiple wands are on the page
+        svg.removeAttribute('id');
+
         svg.setAttribute('width', '150');
         svg.setAttribute('height', '150');
         svg.setAttribute('role', 'img');
