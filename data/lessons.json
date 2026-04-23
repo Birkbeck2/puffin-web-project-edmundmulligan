@@ -8,128 +8,128 @@
     },
     {
       "id": "lesson 1",
-      "title": "Your first web page",
+      "title": "HTML Basics",
       "description": "Build a simple web page using  HTML.",
       "file": "lesson-01.html"
     },
     {
       "id": "lesson 2",
-      "title": "Landmarks",
+      "title": "HTML Landmarks",
       "description": "Add landmarks and other structural elements to your web page.",
-      "file": "lesson-02.html"
+        "file": "lesson-02.html"
     },
     {
       "id": "lesson 3",
-      "title": "Lists",
+      "title": "HTML Lists",
       "description": "Add lists to your web page, both ordered and unordered.",
       "file": "lesson-03.html"
     },
     {
       "id": "lesson 4",
-      "title": "Images",
+      "title": "HTML Images",
       "description": "Add some images to your web page.",
       "file": "lesson-04.html"
     },
     {
       "id": "lesson 5",
-      "title": "Hyperlinks",
+      "title": "HTML Hyperlinks",
       "description": "Add hyperlinks to your web page.",
       "file": "lesson-05.html"
     },
     {
       "id": "lesson 6",
-      "title": "Tables",
+      "title": "HTML Tables",
       "description": "Add tables to your web page.",
       "file": "lesson-06.html"
     },
     {
       "id": "lesson 7",
-      "title": "Introducing CSS",
+      "title": "CSS Basics",
       "description": "Learn about Cascading Style Sheets (CSS) and how they can change the look of your web pages.",
       "file": "lesson-07.html"
     },
     {
       "id": "lesson 8",
-      "title": "External CSS",
+      "title": "CSS External Stylesheets",
       "description": "Learn how to use an external CSS stylesheet to change the look of your web pages and separate content from presentation.",
       "file": "lesson-08.html"
     },
     {
       "id": "lesson 9",
-      "title": "CSS and lists",
+      "title": "CSS Lists",
       "description": "Make your lists more visually appealing using CSS.",
       "file": "lesson-09.html"
     },
     {
       "id": "lesson 10",
-      "title": "Links and CSS",
+      "title": "CSS Hyperlinks",
       "description": "Make your hyperlinks more visually appealing using CSS.",
       "file": "lesson-10.html"
     },
     {
       "id": "lesson 11",
-      "title": "Colours and CSS",
+      "title": "CSS Colours",
       "description": "Make your web pages more visually appealing using colours and CSS.",
       "file": "lesson-11.html"
     },
     {
       "id": "lesson 12",
-      "title": "Fonts and CSS",
+      "title": "CSS Fonts",
       "description": "Make your web pages more visually appealing using fonts and CSS.",
       "file": "lesson-12.html"
     },
     {
       "id": "lesson 13",
-      "title": "Grids and CSS",
+      "title": "CSS Grids",
       "description": "Learn about the grid model and how to use it to control the layout of your web pages.",
       "file": "lesson-13.html"
     },
     {
       "id": "lesson 14",
-      "title": "Flexbox and CSS",
+      "title": "CSS Flexbox",
       "description": "Learn about the flexbox model and how to use it to control the layout of your web pages.",
       "file": "lesson-14.html"
     },
     {
       "id": "lesson 15",
-      "title": "Responsive Design",
+      "title": "CSS Responsive Design",
       "description": "Learn about media queries and how they can be used to create responsive web pages that work on both desktop and mobile devices.",
       "file": "lesson-15.html"
     },
     {
       "id": "lesson 16",
-      "title": "Javascript",
+      "title": "JavaScript Basics",
       "description": "Use JavaScript to add interactivity to your web pages.",
       "file": "lesson-16.html"
     },
     {
       "id": "lesson 17",
-      "title": "External Javascript files",
+      "title": "JavaScript External Files",
       "description": "Just as CSS can be put in external files, so can JavaScript. In this lesson you will learn how to use external JavaScript files.",
       "file": "lesson-17.html"
     },
     {
       "id": "lesson 18",
-      "title": "Buttons",
+      "title": "JavaScript Buttons",
       "description": "Add buttons to your web pages.",
       "file": "lesson-18.html"
     },
         {
       "id": "lesson 19",
-      "title": "Events",
+      "title": "JavaScript Events",
       "description": "Learn how to handle events in JavaScript.",
       "file": "lesson-19.html"
     },
 
     {
       "id": "lesson 20",
-      "title": "Errors and Exceptions",
+      "title": "JavaScript Errors and Exceptions",
       "description": "In this lesson you will learn about errors and exceptions in JavaScript and how to handle them.",
       "file": "lesson-20.html"
     },
     {
       "id": "lesson 21",
-      "title": "  Testing and Debugging",
+      "title": "JavaScript Testing and Debugging",
       "description": "Learn how to test and debug your JavaScript code using the browser's developer tools.",
       "file": "lesson-21.html"
     },
