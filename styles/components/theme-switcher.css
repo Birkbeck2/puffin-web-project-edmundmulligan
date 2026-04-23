@@ -11,12 +11,12 @@
  */
 
 @layer components {
-    /* Theme switcher animation classes */
-    .theme-switch-fade-out {
-        animation: themeSwitchFadeOut var(--theme-switch-duration) var(--theme-switch-timing-function);
-    }
+  /* Theme switcher animation classes */
+  .theme-switch-fade-out {
+    animation: themeSwitchFadeOut var(--theme-switch-duration) var(--theme-switch-timing-function);
+  }
 
-    .theme-switch-fade-in {
-        animation: themeSwitchFadeIn var(--theme-switch-duration) var(--theme-switch-timing-function);
-    }
+  .theme-switch-fade-in {
+    animation: themeSwitchFadeIn var(--theme-switch-duration) var(--theme-switch-timing-function);
+  }
 }

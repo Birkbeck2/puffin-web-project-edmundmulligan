@@ -10,7 +10,7 @@
  */
 
 export default {
-    html: `<!-- Image Modal -->
+  html: `<!-- Image Modal -->
 <div
   id="imageModal"
   class="image-modal"
@@ -39,5 +39,5 @@ export default {
     alt=""
   >
   <div class="image-modal-caption" id="modalCaption"></div>
-</div>`
+</div>`,
 };

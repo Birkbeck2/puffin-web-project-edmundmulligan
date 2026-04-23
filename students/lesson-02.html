@@ -35,19 +35,12 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;600;700&family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;600;700&family=Marcellus&family=Cormorant+Garamond:wght@400;500;600;700&display=swap"
       rel="stylesheet">
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
-      rel="stylesheet">
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap"
-      rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
     <!-- End Google Fonts links -->
 
     <!-- Link to Font Awesome Icons (using CSS rather than JS)-->
-    <link
-      rel="stylesheet"
-      href="https://kit.fontawesome.com/3895b3f1a4.css"
-      crossorigin="anonymous">
+    <link rel="stylesheet" href="https://kit.fontawesome.com/3895b3f1a4.css" crossorigin="anonymous">
     <!-- End Font Awesome Icons -->
 
     <!-- Start of CSS stylesheets section -->
@@ -98,10 +91,7 @@
         <!-- Lesson navigation panel will be injected here by injectLessonNavigation.js -->
 
         <div class="lesson-content">
-          <section
-            id="introduction"
-            class="introduction lesson-section"
-            aria-label="Introduction">
+          <section id="introduction" class="introduction lesson-section" aria-label="Introduction">
             <div class="student-image">
               <!--Image is injected based on choices made in student.html and saved into local storage. -->
             </div>
@@ -116,12 +106,10 @@
                     class="glossary-icon-button"
                     data-glossary-term="landmark-element"
                     aria-label="Show Landmark Element definition">
-                    <i
-                      class="fa-duotone fa-circle-question"
-                      aria-hidden="true"></i>
+                    <i class="fa-duotone fa-circle-question" aria-hidden="true"></i>
                   </button>
-                  in HTML. By the end of this lesson, you will understand how to
-                  structure your web pages using these important elements.
+                  in HTML. By the end of this lesson, you will understand how to structure your web pages using these
+                  important elements.
                 </p>
               </div>
             </div>
@@ -144,33 +132,24 @@
                   class="glossary-icon-button"
                   data-glossary-term="accessibility"
                   aria-label="Show Accessibility definition">
-                  <i
-                    class="fa-duotone fa-circle-question"
-                    aria-hidden="true"></i>
+                  <i class="fa-duotone fa-circle-question" aria-hidden="true"></i>
                 </button>
-                to as many people as possible. Landmark elements help achieve
-                this by providing a clear structure to the content, making it
-                easier to read and navigate. This helps you when you are writing
-                your web page because it gives you a clear way to organise your
-                content. To most people browsing your web site the landmark
-                elements are invisible - the web page would look exactly the
-                same if you left them out. But for people who need to use
-                assistive technologies
+                to as many people as possible. Landmark elements help achieve this by providing a clear structure to the
+                content, making it easier to read and navigate. This helps you when you are writing your web page
+                because it gives you a clear way to organise your content. To most people browsing your web site the
+                landmark elements are invisible - the web page would look exactly the same if you left them out. But for
+                people who need to use assistive technologies
                 <button
                   type="button"
                   popovertarget="glossary-popover"
                   class="glossary-icon-button"
                   data-glossary-term="assistive-technology"
                   aria-label="Show Assistive Technology definition">
-                  <i
-                    class="fa-duotone fa-circle-question"
-                    aria-hidden="true"></i>
+                  <i class="fa-duotone fa-circle-question" aria-hidden="true"></i>
                 </button>
-                the landmark elements provide important information about the
-                structure of the page and allow them to navigate it more easily.
-                For example, a screen reader can use the landmark elements to
-                quickly jump to the main content of the page, or to the
-                navigation menu, without having to read through all the content
+                the landmark elements provide important information about the structure of the page and allow them to
+                navigate it more easily. For example, a screen reader can use the landmark elements to quickly jump to
+                the main content of the page, or to the navigation menu, without having to read through all the content
                 in between.
               </p>
             </div>
@@ -186,103 +165,79 @@
             <h3 class="lesson-title">Types of Landmark Elements</h3>
             <div id="landmark-elements-types-block">
               <p>
-                There are several types of landmark elements in HTML, each
-                serving a specific purpose. The most common ones include:
+                There are several types of landmark elements in HTML, each serving a specific purpose. The most common
+                ones include:
               </p>
               <ul>
                 <li>
-                  <code>&lt;header&gt;</code>: This element represents the
-                  introductory content or a set of navigational links for a
-                  section of the page. It typically contains the site logo,
-                  title, and main navigation menu.
+                  <code>&lt;header&gt;</code>: This element represents the introductory content or a set of navigational
+                  links for a section of the page. It typically contains the site logo, title, and main navigation menu.
                 </li>
                 <li>
-                  <code>&lt;nav&gt;</code>: This element is used to define a
-                  block of navigation links. It helps users understand that the
-                  links within this element are for navigating the site.
+                  <code>&lt;nav&gt;</code>: This element is used to define a block of navigation links. It helps users
+                  understand that the links within this element are for navigating the site.
                 </li>
                 <li>
-                  <code>&lt;main&gt;</code>: This element represents the main
-                  content of the document. It should be unique to the document
-                  and not contain any content that is repeated across pages
-                  (like sidebars or footers).
+                  <code>&lt;main&gt;</code>: This element represents the main content of the document. It should be
+                  unique to the document and not contain any content that is repeated across pages (like sidebars or
+                  footers).
                 </li>
                 <li>
-                  <code>&lt;footer&gt;</code>: This element represents the
-                  footer for its nearest sectioning content or sectioning root
-                  element. It typically contains information about the author,
-                  copyright information, or links to related documents.
+                  <code>&lt;footer&gt;</code>: This element represents the footer for its nearest sectioning content or
+                  sectioning root element. It typically contains information about the author, copyright information, or
+                  links to related documents.
                 </li>
               </ul>
               <p>Other landmark elements include:</p>
               <ul>
                 <li>
-                  <code>&lt;article&gt;</code> for self-contained content that
-                  could be distributed independently, such as a blog post or
-                  news article,
+                  <code>&lt;article&gt;</code> for self-contained content that could be distributed independently, such
+                  as a blog post or news article,
                 </li>
                 <li>
-                  <code>&lt;aside&gt;</code> for tangential content that is
-                  related to the main content but not essential to its
-                  understanding, such as a sidebar with related links or
-                  advertisements, and
+                  <code>&lt;aside&gt;</code> for tangential content that is related to the main content but not
+                  essential to its understanding, such as a sidebar with related links or advertisements, and
                 </li>
                 <li>
-                  <code>&lt;section&gt;</code> for thematic grouping of content,
-                  which can be used to divide the main content into different
-                  sections with their own headings.
+                  <code>&lt;section&gt;</code> for thematic grouping of content, which can be used to divide the main
+                  content into different sections with their own headings.
                 </li>
                 <li>
-                  <code>&lt;figure&gt;</code> and
-                  <code>&lt;figcaption&gt;</code> for marking up images and
-                  their captions as a single unit.
+                  <code>&lt;figure&gt;</code> and <code>&lt;figcaption&gt;</code> for marking up images and their
+                  captions as a single unit.
                 </li>
               </ul>
             </div>
           </section>
 
-          <section
-            id="second-web-page"
-            class="second-web-page lesson-section hidden"
-            aria-label="Second Web Page">
+          <section id="second-web-page" class="second-web-page lesson-section hidden" aria-label="Second Web Page">
             <div class="student-image">
               <!--Image is injected based on choices made in student.html and saved into local storage. -->
             </div>
-            <h3 class="lesson-title">
-              Creating a Web Page with Landmark Elements
-            </h3>
+            <h3 class="lesson-title">Creating a Web Page with Landmark Elements</h3>
             <div id="second-web-page-block">
               <p>
-                Now that you know about landmark elements, let's create a simple
-                web page that uses them. You can use the code snippet provided
-                in the next section as a starting point. This code includes the
-                basic structure of an HTML document with the main landmark
-                elements: <code>&lt;header&gt;</code>,
-                <code>&lt;main&gt;</code>, <code>&lt;footer&gt;</code> and
-                <code>&lt;section&gt;</code>.
+                Now that you know about landmark elements, let's create a simple web page that uses them. You can use
+                the code snippet provided in the next section as a starting point. This code includes the basic
+                structure of an HTML document with the main landmark elements: <code>&lt;header&gt;</code>,
+                <code>&lt;main&gt;</code>, <code>&lt;footer&gt;</code> and <code>&lt;section&gt;</code>.
               </p>
               <p>Here are the steps to create your web page:</p>
               <ol>
                 <li>Open Visual Studio Code.</li>
                 <li>
-                  Select <code>File-&gt;Open Folder</code> and choose the
-                  Projects folder you created earlier for your web development
-                  work.
+                  Select <code>File-&gt;Open Folder</code> and choose the Projects folder you created earlier for your
+                  web development work.
                 </li>
-                <li>
-                  Create a new file named <code>lesson-2.html</code> in the
-                  Projects folder.
-                </li>
+                <li>Create a new file named <code>lesson-2.html</code> in the Projects folder.</li>
                 <li>Type the code in the next screen into the file.</li>
                 <li>Save the file.</li>
                 <li>
-                  Make sure the node.js server is running. You can do this by
-                  opening a terminal, navigating to your Projects folder, and
-                  running <code>npm start</code>.
+                  Make sure the node.js server is running. You can do this by opening a terminal, navigating to your
+                  Projects folder, and running <code>npm start</code>.
                 </li>
                 <li>
-                  Open <code>http://localhost:8000/lesson-2.html</code> in your
-                  web browser to see your next web page!
+                  Open <code>http://localhost:8000/lesson-2.html</code> in your web browser to see your next web page!
                 </li>
               </ol>
 
@@ -296,22 +251,16 @@
                   tabindex="0"
                   aria-label="Click to view larger image">
                   <picture>
-                    <img
-                      src="../images/screenshots/lesson-2.png"
-                      alt="Lesson 2 Screenshot"
-                      class="screenshot">
+                    <img src="../images/screenshots/lesson-2.png" alt="Lesson 2 Screenshot" class="screenshot">
                   </picture>
                 </button>
-                <figcaption>
-                  Figure 1.2: Lesson 2 Screenshot (Click to enlarge)
-                </figcaption>
+                <figcaption>Figure 1.2: Lesson 2 Screenshot (Click to enlarge)</figcaption>
               </figure>
 
               <p>
-                Try to understand how each landmark element is used in the code
-                and how they help structure the content of the page. You can
-                also experiment by adding your own content within these elements
-                to see how it affects the layout and accessibility of the page.
+                Try to understand how each landmark element is used in the code and how they help structure the content
+                of the page. You can also experiment by adding your own content within these elements to see how it
+                affects the layout and accessibility of the page.
               </p>
             </div>
           </section>
@@ -321,9 +270,7 @@
             class="landmark-elements-code lesson-section hidden"
             aria-label="Code for Your Landmark Page">
             <h3 class="lesson-title">Code for Your Landmark Page</h3>
-            <div
-              class="code-snippet-container"
-              data-src="../lessons/lesson-2.html">
+            <div class="code-snippet-container" data-src="../lessons/lesson-2.html">
               <div class="code-snippet-table"></div>
             </div>
           </section>
@@ -338,127 +285,97 @@
             <h3 class="lesson-title">What does it mean</h3>
 
             <div id="what-does-it-mean-block">
-              <p>
-                In this section, we will explain what the different parts of the
-                HTML code you wrote mean.
-              </p>
+              <p>In this section, we will explain what the different parts of the HTML code you wrote mean.</p>
               <ul>
                 <li>
-                  Lines 1-7: <code>&lt;!DOCTYPE html&gt;</code> and
-                  <code>&lt;head&gt;</code> section: This section includes the
-                  document type declaration and the head element, which contains
-                  meta information about the document. It is the same as in the
-                  last lesson (except the page title).
+                  Lines 1-7: <code>&lt;!DOCTYPE html&gt;</code> and <code>&lt;head&gt;</code> section: This section
+                  includes the document type declaration and the head element, which contains meta information about the
+                  document. It is the same as in the last lesson (except the page title).
                 </li>
                 <li>
-                  Lines 9-11: <code>&lt;header&gt;</code> section: This section
-                  defines the header of the page, which typically contains
-                  introductory content or navigational links. In this case, it
-                  contains a heading with the text "Witches and Wizards".
+                  Lines 9-11: <code>&lt;header&gt;</code> section: This section defines the header of the page, which
+                  typically contains introductory content or navigational links. In this case, it contains a heading
+                  with the text "Witches and Wizards".
                 </li>
                 <li>
-                  Lines 12-23: <code>&lt;main&gt;</code> section: This section
-                  contains the main content of the page. It includes headings,
-                  paragraphs, and other elements that make up the primary
-                  content of the web page.
+                  Lines 12-23: <code>&lt;main&gt;</code> section: This section contains the main content of the page. It
+                  includes headings, paragraphs, and other elements that make up the primary content of the web page.
                 </li>
                 <li>
-                  Lines 13-17: <code>&lt;section&gt;</code>: This section
-                  defines a thematic grouping of content within the main content
-                  area. It typically contains a heading and related content.
+                  Lines 13-17: <code>&lt;section&gt;</code>: This section defines a thematic grouping of content within
+                  the main content area. It typically contains a heading and related content.
                 </li>
                 <li>
-                  Lines 18-22: <code>&lt;section&gt;</code>: This is another
-                  section within the main content area, similar to the previous
-                  one but with different content.
+                  Lines 18-22: <code>&lt;section&gt;</code>: This is another section within the main content area,
+                  similar to the previous one but with different content.
                 </li>
                 <li>
-                  Lines 24-26: <code>&lt;footer&gt;</code> section: This section
-                  defines the footer of the page, which typically contains
-                  information about the author, copyright, or other relevant
-                  details.
+                  Lines 24-26: <code>&lt;footer&gt;</code> section: This section defines the footer of the page, which
+                  typically contains information about the author, copyright, or other relevant details.
                 </li>
                 <li>
-                  Line 25: <code>&amp;copy;</code> is used to display the
-                  copyright symbol, &copy;. This is an example of an HTML entity
+                  Line 25: <code>&amp;copy;</code> is used to display the copyright symbol, &copy;. This is an example
+                  of an HTML entity
                   <button
                     type="button"
                     popovertarget="glossary-popover"
                     class="glossary-icon-button"
                     data-glossary-term="html-entity"
                     aria-label="Show HTML Entity definition">
-                    <i
-                      class="fa-duotone fa-circle-question"
-                      aria-hidden="true"></i></button
-                  >. All HTML entities start with an ampersand (&amp;) and end
-                  with a semicolon (;).
+                    <i class="fa-duotone fa-circle-question" aria-hidden="true"></i></button
+                  >. All HTML entities start with an ampersand (&amp;) and end with a semicolon (;).
                 </li>
               </ul>
             </div>
           </section>
 
-          <section
-            id="be-curious"
-            class="be-curious lesson-section hidden"
-            aria-label="Be curious">
+          <section id="be-curious" class="be-curious lesson-section hidden" aria-label="Be curious">
             <div class="student-image">
               <!--Image is injected based on choices made in student.html and saved into local storage. -->
             </div>
             <div id="be-curious-block">
               <h3 class="lesson-title">Be curious</h3>
               <p>
-                Once again, this is a chance to experiment and see what happens
-                when you change things in your HTML code. Try modifying the code
-                you wrote earlier in different ways, such as:
+                Once again, this is a chance to experiment and see what happens when you change things in your HTML
+                code. Try modifying the code you wrote earlier in different ways, such as:
               </p>
               <ul>
                 <li>
                   Adding more sections within the
-                  <code>&lt;main&gt;</code> element to further divide your
-                  content.
+                  <code>&lt;main&gt;</code> element to further divide your content.
                 </li>
-                <li>
-                  Changing the text within the headings and paragraphs to make
-                  it your own.
-                </li>
+                <li>Changing the text within the headings and paragraphs to make it your own.</li>
                 <li>
                   Adding more landmark elements, such as
                   <code>&lt;aside&gt;</code> for related content.
                 </li>
                 <li>
-                  Try adding some other HTML entities to your page such as the
-                  &pound; sign, or &euro; if your witches and wizards are
-                  travelling to different countries.
+                  Try adding some other HTML entities to your page such as the &pound; sign, or &euro; if your witches
+                  and wizards are travelling to different countries.
                 </li>
               </ul>
               <p>
-                Often you will want different landmark sections to look distinct
-                from each other to help users understand the structure of your
-                page. You will learn how to do this when we cover CSS styling in
-                later lessons.
+                Often you will want different landmark sections to look distinct from each other to help users
+                understand the structure of your page. You will learn how to do this when we cover CSS styling in later
+                lessons.
               </p>
               <p>
                 One important landmark element is the
-                <code>&lt;nav&gt;</code> element, which is used to define a
-                block of navigation links. We will cover this in more detail
-                when you have learned about links.
+                <code>&lt;nav&gt;</code> element, which is used to define a block of navigation links. We will cover
+                this in more detail when you have learned about links.
               </p>
             </div>
           </section>
 
-          <section
-            id="conclusion"
-            class="conclusion lesson-section hidden"
-            aria-label="Conclusion">
+          <section id="conclusion" class="conclusion lesson-section hidden" aria-label="Conclusion">
             <div class="student-image">
               <!--Image is injected based on choices made in student.html and saved into local storage. -->
             </div>
             <div id="conclusion-block">
               <h3 class="lesson-title">Conclusion</h3>
               <p>
-                Congratulations! You have created another web page using HTML.
-                In the next lesson you will learn about lists. These are used in
-                all sorts of ways, not just to list things.
+                Congratulations! You have created another web page using HTML. In the next lesson you will learn about
+                lists. These are used in all sorts of ways, not just to list things.
               </p>
               <div id="wand-container" class="wand-container"></div>
             </div>

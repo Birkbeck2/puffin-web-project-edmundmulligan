@@ -10,7 +10,7 @@
  */
 
 export default {
-    html: `<div class="footer-minimal">
+  html: `<div class="footer-minimal">
     <div class="footer-text"><p>&copy;&nbsp;The Embodied Mind, 2025-2026</p></div>
     <div class="footer-button"><button aria-label="Expand footer"><i class="fa-solid fa-chevron-up" aria-hidden="true"></i></button></div>
 </div>
@@ -37,5 +37,5 @@ export default {
             data-vibrant-dark-logo="{{pathPrefix}}images/logos/logo-embodied-mind-vibrant-dark.svg"
         >
     </div>
-</div>`
+</div>`,
 };

@@ -11,7 +11,13 @@ node_modules/
 generated/
 artwork/generated/
 
-# Exclude build artifacts
+# Exclude build artifacts and minified files
 *.min.html
 *.min.css
 *.min.js
+
+# Exclude vendor/library files
+**/vendor/**
+**/vendors/**
+**/lib/**
+**/libs/**

@@ -30,7 +30,7 @@ const pageResult = {
   links: [],
   brokenCount: 0,
   totalCount: 0,
-  timeoutCount: 0
+  timeoutCount: 0,
 };
 
 /**
@@ -55,20 +55,24 @@ function fetchWithRedirects(url, maxRedirects = 5, depth = 0) {
 
     const client = url.startsWith('https') ? https : http;
 
-    client.get(url, (res) => {
-      // Handle redirects
-      if (res.statusCode >= 300 && res.statusCode < 400 && res.headers.location) {
-        const redirectUrl = new URL(res.headers.location, url).href;
-        fetchWithRedirects(redirectUrl, maxRedirects, depth + 1)
-          .then(resolve)
-          .catch(reject);
-        return;
-      }
+    client
+      .get(url, (res) => {
+        // Handle redirects
+        if (res.statusCode >= 300 && res.statusCode < 400 && res.headers.location) {
+          const redirectUrl = new URL(res.headers.location, url).href;
+          fetchWithRedirects(redirectUrl, maxRedirects, depth + 1)
+            .then(resolve)
+            .catch(reject);
+          return;
+        }
 
-      let html = '';
-      res.on('data', (chunk) => { html += chunk; });
-      res.on('end', () => resolve(html));
-    }).on('error', reject);
+        let html = '';
+        res.on('data', (chunk) => {
+          html += chunk;
+        });
+        res.on('end', () => resolve(html));
+      })
+      .on('error', reject);
   });
 }
 
@@ -91,19 +95,28 @@ async function main() {
     // Extract all links from various tags
     $('a[href], link[href], img[src], script[src]').each((i, elem) => {
       const tagName = elem.name;
-      const attrName = tagName === 'img' || (tagName === 'script') ? 'src' : 'href';
+      const attrName = tagName === 'img' || tagName === 'script' ? 'src' : 'href';
       let href = $(elem).attr(attrName);
 
       if (!href) return;
 
       // Skip certain link types
       const rel = $(elem).attr('rel');
-      if (rel && (rel.includes('preconnect') || rel.includes('dns-prefetch') || rel.includes('prefetch'))) {
+      if (
+        rel &&
+        (rel.includes('preconnect') || rel.includes('dns-prefetch') || rel.includes('prefetch'))
+      ) {
         return;
       }
 
       // Skip mailto, javascript, data URIs, and hash-only links
-      if (href.startsWith('mailto:') || href.startsWith('javascript:') || href.startsWith('vbscript:') || href.startsWith('data:') || href === '#') {
+      if (
+        href.startsWith('mailto:') ||
+        href.startsWith('javascript:') ||
+        href.startsWith('vbscript:') ||
+        href.startsWith('data:') ||
+        href === '#'
+      ) {
         return;
       }
 
@@ -120,7 +133,7 @@ async function main() {
         fullUrl: fullUrl,
         tagName: tagName,
         attrName: attrName,
-        text: $(elem).text().trim().substring(0, 50)
+        text: $(elem).text().trim().substring(0, 50),
       });
     });
 
@@ -146,7 +159,7 @@ async function main() {
             original: link.href,
             warning: 'timeout',
             tagName: link.tagName,
-            text: link.text
+            text: link.text,
           });
         } else {
           pageResult.brokenCount++;
@@ -155,7 +168,7 @@ async function main() {
             original: link.href,
             error: err.message,
             tagName: link.tagName,
-            text: link.text
+            text: link.text,
           });
         }
       }
@@ -165,7 +178,6 @@ async function main() {
         finalize();
       }
     }
-
   } catch (err) {
     console.error('Error:', err.message);
     process.exit(1);
@@ -201,7 +213,7 @@ function checkLink(link) {
       hostname: urlObj.hostname,
       port: urlObj.port,
       path: urlObj.pathname + urlObj.search,
-      timeout: 5000
+      timeout: 5000,
     };
 
     const req = client.request(options, (res) => {
@@ -214,7 +226,7 @@ function checkLink(link) {
           original: link.href,
           statusCode: res.statusCode,
           tagName: link.tagName,
-          text: link.text
+          text: link.text,
         });
       }
       resolve();
@@ -257,7 +269,7 @@ function finalize() {
   } else {
     console.log('  ✅ All ' + pageResult.totalCount + ' links OK');
   }
-  
+
   if (pageResult.timeoutCount > 0) {
     console.log('  ⚠️  ' + pageResult.timeoutCount + ' link(s) timed out');
   }

@@ -4,8 +4,11 @@
   "description": "Web Witchcraft and Wizardry is a free, open-source, self-paced online course for learning web development. It covers HTML, CSS, and JavaScript, and is designed to be accessible to learners of all backgrounds and skill levels.",
   "scripts": {
     "build": "bin/generate-colours-from-css.py styles/definitions/colours.css artwork/common/colours.tex && bin/generate-web-backgrounds.py && bin/generate-all-images.sh && mv artwork/generated/background*.svg images/backgrounds && mv artwork/generated/logo*.svg images/logos && node bin/build-lessons.js && npm run format",
-    "format": "prettier --write --ignore-path .prettierignore \"**/*.html\" && node bin/fix-html-format.js",
-    "format:check": "prettier --check --ignore-path .prettierignore \"**/*.html\"",
+    "format": "prettier --write --ignore-path .prettierignore \"**/*.{html,css,js}\" && node bin/fix-html-format.js",
+    "format:html": "prettier --write --ignore-path .prettierignore \"**/*.html\" && node bin/fix-html-format.js",
+    "format:css": "prettier --write --ignore-path .prettierignore \"**/*.css\"",
+    "format:js": "prettier --write --ignore-path .prettierignore \"**/*.js\"",
+    "format:check": "prettier --check --ignore-path .prettierignore \"**/*.{html,css,js}\"",
     "start": "http-server . -p 8000 -c-1",
     "dev": "http-server . -p 8000 -c-1",
     "test": "node bin/run-all-tests.js . -x lessons diagnostics",

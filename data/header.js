@@ -10,7 +10,7 @@
  */
 
 export default {
-    html: `<div class="header-minimal">
+  html: `<div class="header-minimal">
     <div class="header-warning">
         <h2>Warning</h2>
         <p>
@@ -92,5 +92,5 @@ export default {
     <div class="header-right">
         <div class="header-image header-image-witch" role="img" aria-label="Witch icon"></div>
     </div>
-</div>`
+</div>`,
 };

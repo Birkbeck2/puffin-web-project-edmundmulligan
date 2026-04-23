@@ -24,51 +24,51 @@ const path = require('path');
  * @returns {Array} Array of page objects
  */
 function discoverPages(dir, label) {
-    const pages = [];
-    const fullPath = path.join(__dirname, '..', dir);
-    
-    if (!fs.existsSync(fullPath)) {
-        return pages;
+  const pages = [];
+  const fullPath = path.join(__dirname, '..', dir);
+
+  if (!fs.existsSync(fullPath)) {
+    return pages;
+  }
+
+  const files = fs.readdirSync(fullPath);
+
+  files.forEach((file) => {
+    if (file.endsWith('.html')) {
+      const url = `/${dir}/${file}`;
+      const baseName = path.basename(file, '.html');
+      const name = `${label} ${baseName.replace(/-/g, ' ').replace(/\b\w/g, (l) => l.toUpperCase())}`;
+      pages.push({ url, name });
     }
-    
-    const files = fs.readdirSync(fullPath);
-    
-    files.forEach(file => {
-        if (file.endsWith('.html')) {
-            const url = `/${dir}/${file}`;
-            const baseName = path.basename(file, '.html');
-            const name = `${label} ${baseName.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}`;
-            pages.push({ url, name });
-        }
-    });
-    
-    return pages.sort((a, b) => a.url.localeCompare(b.url));
+  });
+
+  return pages.sort((a, b) => a.url.localeCompare(b.url));
 }
 
 /**
  * Define static pages to test
  */
 const staticPages = [
-    { url: '/index.html', name: 'Home' },
-    { url: '/pages/start.html', name: 'Start' },
-    { url: '/pages/gallery.html', name: 'Gallery' },
-    { url: '/pages/facts.html', name: 'Facts' },
-    { url: '/pages/students.html', name: 'Students' },
-    { url: '/pages/mentors.html', name: 'Mentors' },
-    { url: '/pages/glossary.html', name: 'Glossary' },
-    { url: '/pages/faq.html', name: 'FAQ' },
-    { url: '/pages/license.html', name: 'License' },
-    { url: '/pages/credits.html', name: 'Credits' }
+  { url: '/index.html', name: 'Home' },
+  { url: '/pages/start.html', name: 'Start' },
+  { url: '/pages/gallery.html', name: 'Gallery' },
+  { url: '/pages/facts.html', name: 'Facts' },
+  { url: '/pages/students.html', name: 'Students' },
+  { url: '/pages/mentors.html', name: 'Mentors' },
+  { url: '/pages/glossary.html', name: 'Glossary' },
+  { url: '/pages/faq.html', name: 'FAQ' },
+  { url: '/pages/license.html', name: 'License' },
+  { url: '/pages/credits.html', name: 'Credits' },
 ];
 
 /**
  * Dynamically discover and combine all pages to test (excluding diagnostics folder)
  */
 const pages = [
-    ...staticPages,
-    ...discoverPages('students', 'Student'),
-    ...discoverPages('mentors', 'Mentor'),
-    ...discoverPages('lessons', 'Lesson')
+  ...staticPages,
+  ...discoverPages('students', 'Student'),
+  ...discoverPages('mentors', 'Mentor'),
+  ...discoverPages('lessons', 'Lesson'),
 ];
 
 /**
@@ -106,8 +106,16 @@ async function runPageTests(page, pageInfo) {
   }
 
   // Test 4: Check CSS Grid support - header child div should use grid layout (or flex on mobile, or block for minimal header)
-  const headerChildDisplay = await page.$eval('header > div', el => window.getComputedStyle(el).display);
-  if (headerChildDisplay === 'grid' || headerChildDisplay === 'flex' || headerChildDisplay === 'none' || headerChildDisplay === 'block') {
+  const headerChildDisplay = await page.$eval(
+    'header > div',
+    (el) => window.getComputedStyle(el).display
+  );
+  if (
+    headerChildDisplay === 'grid' ||
+    headerChildDisplay === 'flex' ||
+    headerChildDisplay === 'none' ||
+    headerChildDisplay === 'block'
+  ) {
     console.log(`✅ ${pageInfo.name} CSS Grid/Flexbox layout working (${headerChildDisplay})`);
     tests.push({ name: `${pageInfo.name} CSS Grid`, status: 'passed' });
   } else {
@@ -115,7 +123,10 @@ async function runPageTests(page, pageInfo) {
   }
 
   // Test 5: Check CSS Flexbox support - navigation should use flex
-  const navDisplay = await page.$eval('nav.site-navigation ul', el => window.getComputedStyle(el).display);
+  const navDisplay = await page.$eval(
+    'nav.site-navigation ul',
+    (el) => window.getComputedStyle(el).display
+  );
   if (navDisplay === 'flex') {
     console.log(`✅ ${pageInfo.name} CSS Flexbox supported`);
     tests.push({ name: `${pageInfo.name} CSS Flexbox`, status: 'passed' });
@@ -124,7 +135,7 @@ async function runPageTests(page, pageInfo) {
   }
 
   // Test 6: Check CSS Variables support - check if custom property is applied
-  const bgColor = await page.$eval('body', el => window.getComputedStyle(el).backgroundColor);
+  const bgColor = await page.$eval('body', (el) => window.getComputedStyle(el).backgroundColor);
   if (bgColor && bgColor !== 'rgba(0, 0, 0, 0)' && bgColor !== 'transparent') {
     console.log(`✅ ${pageInfo.name} CSS Variables supported`);
     tests.push({ name: `${pageInfo.name} CSS Variables`, status: 'passed' });
@@ -138,7 +149,9 @@ async function runPageTests(page, pageInfo) {
     console.log(`✅ ${pageInfo.name} SVG images loaded`);
     tests.push({ name: `${pageInfo.name} SVG support`, status: 'passed' });
   } else {
-    throw new Error(`${pageInfo.name} SVG images not found: expected at least 1, found ${svgImages.length}`);
+    throw new Error(
+      `${pageInfo.name} SVG images not found: expected at least 1, found ${svgImages.length}`
+    );
   }
 
   // Test 8: Check responsive design - verify viewport meta tag
@@ -153,7 +166,10 @@ async function runPageTests(page, pageInfo) {
   // Test 9: Check CSS calc() support - page title uses calc() for max-width
   const pageTitles = await page.$$('.page-title');
   if (pageTitles.length > 0) {
-    const titleMaxWidth = await page.$eval('.page-title', el => window.getComputedStyle(el).maxWidth);
+    const titleMaxWidth = await page.$eval(
+      '.page-title',
+      (el) => window.getComputedStyle(el).maxWidth
+    );
     if (titleMaxWidth && titleMaxWidth !== 'none') {
       console.log(`✅ ${pageInfo.name} CSS calc() supported`);
       tests.push({ name: `${pageInfo.name} CSS calc()`, status: 'passed' });
@@ -163,7 +179,10 @@ async function runPageTests(page, pageInfo) {
   // Test 10: Check font loading - verify fonts are rendered
   const siteTitles = await page.$$('.site-title');
   if (siteTitles.length > 0) {
-    const fontFamily = await page.$eval('.site-title', el => window.getComputedStyle(el).fontFamily);
+    const fontFamily = await page.$eval(
+      '.site-title',
+      (el) => window.getComputedStyle(el).fontFamily
+    );
     if (fontFamily && fontFamily !== '') {
       console.log(`✅ ${pageInfo.name} fonts loaded`);
       tests.push({ name: `${pageInfo.name} font rendering`, status: 'passed' });
@@ -175,5 +194,5 @@ async function runPageTests(page, pageInfo) {
 
 module.exports = {
   pages,
-  runPageTests
+  runPageTests,
 };

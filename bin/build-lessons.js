@@ -7,9 +7,9 @@
  * License    : MIT License (see license-and-credits.html page)
  * Description:
  *     Build script for generating lesson HTML files from Mustache templates
- * 
+ *
  *     Usage: npm run build
- * 
+ *
  *     This script:
  *       1. Reads template files from templates/
  *       2. Reads data files from data/
@@ -42,8 +42,8 @@ const buildTasks = [
     lesson: 0,
     studentTemplate: 'templates/lesson-00-student.mustache',
     studentData: 'data/lesson-00-student.js',
-    studentOutput: 'students/lesson-00.html'
-  }
+    studentOutput: 'students/lesson-00.html',
+  },
   // Add more lessons as needed
 ];
 
@@ -69,7 +69,6 @@ function buildLesson(task) {
     } else {
       console.log(`⚠ Skipping student version (template or data not found)`);
     }
-
   } catch (error) {
     console.error(`✗ Error building Lesson ${task.lesson}: ${error.message}`);
     process.exit(1);
@@ -82,7 +81,7 @@ function buildLesson(task) {
 function build() {
   console.log('🔨 Building lessons from templates...\n');
 
-  buildTasks.forEach(task => {
+  buildTasks.forEach((task) => {
     buildLesson(task);
   });
 

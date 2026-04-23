@@ -67,7 +67,7 @@ let testState = {
   completed: [],
   failed: [],
   quickMode: quickMode,
-  runWave: runWave
+  runWave: runWave,
 };
 
 if (continueMode && fs.existsSync(stateFile)) {
@@ -125,7 +125,9 @@ function markTestCompleted(testName, passed) {
 // Helper to run a command and handle errors
 function runTest(testName, description, command, options = {}) {
   if (!shouldRunTest(testName)) {
-    console.log(`\n⏭️  Skipping ${description.replace(/^.*?(?:Running|Checking)\s+/i, '')} (already completed)`);
+    console.log(
+      `\n⏭️  Skipping ${description.replace(/^.*?(?:Running|Checking)\s+/i, '')} (already completed)`
+    );
     return !testState.failed.includes(testName);
   }
 
@@ -134,7 +136,7 @@ function runTest(testName, description, command, options = {}) {
     execSync(command, {
       stdio: 'inherit',
       cwd: process.cwd(),
-      ...options
+      ...options,
     });
     markTestCompleted(testName, true);
     return true;
@@ -162,55 +164,122 @@ console.log('');
 const excludeArgs = excludeList ? `-x ${excludeList}` : '';
 
 // Run all tests in sequence
-if (!runTest('clear', '📄 Clearing previous test results...', `bin/clear-tests.sh ${folder}`, { ignoreError: true })) {
+if (
+  !runTest('clear', '📄 Clearing previous test results...', `bin/clear-tests.sh ${folder}`, {
+    ignoreError: true,
+  })
+) {
   // Don't count clear as a failure
 }
 
-if (!runTest('validate-code', '📄 Running code validation...', `bin/validate-code.sh ${folder} ${excludeArgs}`)) {
+if (
+  !runTest(
+    'validate-code',
+    '📄 Running code validation...',
+    `bin/validate-code.sh ${folder} ${excludeArgs}`
+  )
+) {
   failedTests++;
 }
 
-if (!runTest('audit-colour', '🎨 Running colour usage audit...', `node bin/audit-colour-usage.js ${excludeArgs}`)) {
+if (
+  !runTest(
+    'audit-colour',
+    '🎨 Running colour usage audit...',
+    `node bin/audit-colour-usage.js ${excludeArgs}`
+  )
+) {
   failedTests++;
 }
 
-if (!runTest('check-comments', '📝 Running comments check...', `bin/check-file-comments.sh ${folder} ${excludeArgs}`)) {
+if (
+  !runTest(
+    'check-comments',
+    '📝 Running comments check...',
+    `bin/check-file-comments.sh ${folder} ${excludeArgs}`
+  )
+) {
   failedTests++;
 }
 
-if (!runTest('check-links', '🔗 Running link checks...', `bin/check-links.sh ${folder} ${excludeArgs}`)) {
+if (
+  !runTest(
+    'check-links',
+    '🔗 Running link checks...',
+    `bin/check-links.sh ${folder} ${excludeArgs}`
+  )
+) {
   failedTests++;
 }
 
-if (!runTest('axe-tests', '🪓 Running axe accessibility tests...', `bin/run-axe-tests.sh -q ${folder} ${excludeArgs}`)) {
+if (
+  !runTest(
+    'axe-tests',
+    '🪓 Running axe accessibility tests...',
+    `bin/run-axe-tests.sh -q ${folder} ${excludeArgs}`
+  )
+) {
   failedTests++;
 }
 
 if (!quickMode) {
-  if (!runTest('lighthouse-tests', '🏮 Running lighthouse accessibility tests...', `bin/run-lighthouse-tests.sh -q ${folder} ${excludeArgs}`)) {
+  if (
+    !runTest(
+      'lighthouse-tests',
+      '🏮 Running lighthouse accessibility tests...',
+      `bin/run-lighthouse-tests.sh -q ${folder} ${excludeArgs}`
+    )
+  ) {
     failedTests++;
   }
 } else {
   console.log('\n⏭️  Skipping Lighthouse tests (quick mode enabled)');
 }
 
-if (!runTest('pa11y-tests', '🦜 Running pa11y accessibility tests...', `bin/run-pa11y-tests.sh -q ${folder} ${excludeArgs}`)) {
+if (
+  !runTest(
+    'pa11y-tests',
+    '🦜 Running pa11y accessibility tests...',
+    `bin/run-pa11y-tests.sh -q ${folder} ${excludeArgs}`
+  )
+) {
   failedTests++;
 }
 
 if (runWave && !quickMode) {
-  if (!runTest('wave-tests', '🌊 Running Wave accessibility tests...', `bin/run-wave-tests.sh -q ${folder} ${excludeArgs}`)) {
+  if (
+    !runTest(
+      'wave-tests',
+      '🌊 Running Wave accessibility tests...',
+      `bin/run-wave-tests.sh -q ${folder} ${excludeArgs}`
+    )
+  ) {
     failedTests++;
   }
 } else {
-  console.log('\n⏭️  Skipping Wave accessibility tests' + (quickMode ? ' (quick mode enabled)' : ' (use -w or --run-wave to enable)'));
+  console.log(
+    '\n⏭️  Skipping Wave accessibility tests' +
+      (quickMode ? ' (quick mode enabled)' : ' (use -w or --run-wave to enable)')
+  );
 }
 
-if (!runTest('reading-age', '📖 Running reading age checks...', `bin/check-reading-age.sh ${folder} ${excludeArgs}`)) {
+if (
+  !runTest(
+    'reading-age',
+    '📖 Running reading age checks...',
+    `bin/check-reading-age.sh ${folder} ${excludeArgs}`
+  )
+) {
   failedTests++;
 }
 
-if (!runTest('browser-tests', '🌐 Running cross-browser tests...', `bin/run-browser-tests.sh ${folder}`)) {
+if (
+  !runTest(
+    'browser-tests',
+    '🌐 Running cross-browser tests...',
+    `bin/run-browser-tests.sh ${folder}`
+  )
+) {
   failedTests++;
 }
 
