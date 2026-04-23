@@ -1,5 +1,15 @@
 {
   "htmlWhitespaceSensitivity": "css",
   "bracketSameLine": true,
-  "singleAttributePerLine": false
+  "singleAttributePerLine": false,
+  "overrides": [
+    {
+      "files": "*.html",
+      "options": {
+        "parser": "html",
+        "printWidth": 120,
+        "htmlWhitespaceSensitivity": "css"
+      }
+    }
+  ]
 }

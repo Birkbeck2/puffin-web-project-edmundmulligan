@@ -4,7 +4,7 @@
   "description": "Web Witchcraft and Wizardry is a free, open-source, self-paced online course for learning web development. It covers HTML, CSS, and JavaScript, and is designed to be accessible to learners of all backgrounds and skill levels.",
   "scripts": {
     "build": "bin/generate-colours-from-css.py styles/definitions/colours.css artwork/common/colours.tex && bin/generate-web-backgrounds.py && bin/generate-all-images.sh && mv artwork/generated/background*.svg images/backgrounds && mv artwork/generated/logo*.svg images/logos && node bin/build-lessons.js && npm run format",
-    "format": "prettier --write --ignore-path .prettierignore \"**/*.html\"",
+    "format": "prettier --write --ignore-path .prettierignore \"**/*.html\" && node bin/fix-html-format.js",
     "format:check": "prettier --check --ignore-path .prettierignore \"**/*.html\"",
     "start": "http-server . -p 8000 -c-1",
     "dev": "http-server . -p 8000 -c-1",
@@ -26,6 +26,7 @@
   "author": "Edmund Mulligan",
   "license": "MIT",
   "devDependencies": {
+    "glob": "^11.0.0",
     "http-server": "^14.1.1",
     "mustache": "^4.2.0",
     "prettier": "^3.2.5"
