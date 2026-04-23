@@ -17,7 +17,7 @@
  *********************************************************************************************************************
  */
 
- @layer reset, layouts, pages, components, utilities;
+@layer reset, layouts, pages, components, utilities;
 
 @import url("./layouts/page-layout.css");
 @import url("./layouts/text.css");
@@ -39,10 +39,10 @@
 
 /* Ensure that form elements inherit the same font as their parent elements for visual consistency */
 @layer reset {
-    input, 
-    button,
-    textarea, 
-    select {
-        font: inherit;
-    }
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+  }
 }
