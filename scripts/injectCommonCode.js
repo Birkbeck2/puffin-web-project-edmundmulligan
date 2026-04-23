@@ -36,6 +36,7 @@ class CommonCodeInjector {
         this.pathPrefix = this.determinePathPrefix();
         this.headerTemplate = null;
         this.footerTemplate = null;
+        this.imageModalTemplate = null;
         log('Path prefix determined:', this.pathPrefix);
     }
 
@@ -57,13 +58,15 @@ class CommonCodeInjector {
             log('CommonCodeInjector: Loading templates...');
             // Use relative paths from the script's location (scripts/ folder)
             // This works regardless of where the site is deployed
-            const [headerModule, footerModule] = await Promise.all([
+            const [headerModule, footerModule, imageModalModule] = await Promise.all([
                 import('../data/header.js'),
-                import('../data/footer.js')
+                import('../data/footer.js'),
+                import('../data/imageModal.js')
             ]);
 
             this.headerTemplate = headerModule.default.html;
             this.footerTemplate = footerModule.default.html;
+            this.imageModalTemplate = imageModalModule.default.html;
 
             log('CommonCodeInjector: Templates loaded successfully');
         } catch (error) {
@@ -125,6 +128,31 @@ class CommonCodeInjector {
     }
 
     /**
+     * Inject image modal HTML into the page (before closing body tag)
+     */
+    injectImageModal() {
+        log('injectImageModal: Starting image modal injection');
+        
+        // Check if modal already exists
+        if (document.getElementById('imageModal')) {
+            log('injectImageModal: Modal already exists');
+            return;
+        }
+
+        if (!this.imageModalTemplate) {
+            log('injectImageModal: Modal template not loaded');
+            return;
+        }
+
+        log('injectImageModal: Injecting modal HTML');
+        // Insert before closing body tag
+        document.body.insertAdjacentHTML('beforeend', this.processTemplate(this.imageModalTemplate));
+        
+        // Dispatch custom event to signal modal is ready
+        document.dispatchEvent(new Event('imageModalInjected'));
+    }
+
+    /**
      * Initialize and inject all common code elements
      */
     async init() {
@@ -132,6 +160,7 @@ class CommonCodeInjector {
             await this.loadTemplates();
             this.injectHeader();
             this.injectFooter();
+            this.injectImageModal();
         } catch (error) {
             log('CommonCodeInjector: Failed to initialize', error);
         }

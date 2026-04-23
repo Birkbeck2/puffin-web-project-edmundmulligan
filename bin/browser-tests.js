@@ -14,23 +14,61 @@
 
 'use strict';
 
+const fs = require('fs');
+const path = require('path');
+
 /**
- * Define all pages to test (excluding diagnostics folder)
+ * Discover all HTML files in a directory
+ * @param {string} dir - Directory to search
+ * @param {string} label - Label prefix for test names (e.g., 'Student', 'Mentor')
+ * @returns {Array} Array of page objects
+ */
+function discoverPages(dir, label) {
+    const pages = [];
+    const fullPath = path.join(__dirname, '..', dir);
+    
+    if (!fs.existsSync(fullPath)) {
+        return pages;
+    }
+    
+    const files = fs.readdirSync(fullPath);
+    
+    files.forEach(file => {
+        if (file.endsWith('.html')) {
+            const url = `/${dir}/${file}`;
+            const baseName = path.basename(file, '.html');
+            const name = `${label} ${baseName.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}`;
+            pages.push({ url, name });
+        }
+    });
+    
+    return pages.sort((a, b) => a.url.localeCompare(b.url));
+}
+
+/**
+ * Define static pages to test
+ */
+const staticPages = [
+    { url: '/index.html', name: 'Home' },
+    { url: '/pages/start.html', name: 'Start' },
+    { url: '/pages/gallery.html', name: 'Gallery' },
+    { url: '/pages/facts.html', name: 'Facts' },
+    { url: '/pages/students.html', name: 'Students' },
+    { url: '/pages/mentors.html', name: 'Mentors' },
+    { url: '/pages/glossary.html', name: 'Glossary' },
+    { url: '/pages/faq.html', name: 'FAQ' },
+    { url: '/pages/license.html', name: 'License' },
+    { url: '/pages/credits.html', name: 'Credits' }
+];
+
+/**
+ * Dynamically discover and combine all pages to test (excluding diagnostics folder)
  */
 const pages = [
-  { url: '/index.html', name: 'Home' },
-  { url: '/pages/start.html', name: 'Start' },
-  { url: '/pages/gallery.html', name: 'Gallery' },
-  { url: '/pages/facts.html', name: 'Facts' },
-  { url: '/pages/students.html', name: 'Students' },
-  { url: '/pages/mentors.html', name: 'Mentors' },
-  { url: '/pages/glossary.html', name: 'Glossary' },
-  { url: '/pages/faq.html', name: 'FAQ' },
-  { url: '/pages/license.html', name: 'License' },
-  { url: '/pages/credits.html', name: 'Credits' },
-  { url: '/students/lesson-00.html', name: 'Student Lesson 0' },
-  { url: '/students/lesson-01.html', name: 'Student Lesson 1' },
-  { url: '/mentors/lesson-00.html', name: 'Mentor Lesson 0' }
+    ...staticPages,
+    ...discoverPages('students', 'Student'),
+    ...discoverPages('mentors', 'Mentor'),
+    ...discoverPages('lessons', 'Lesson')
 ];
 
 /**

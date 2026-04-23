@@ -3,9 +3,14 @@
   "version": "1.0.0",
   "description": "Web Witchcraft and Wizardry is a free, open-source, self-paced online course for learning web development. It covers HTML, CSS, and JavaScript, and is designed to be accessible to learners of all backgrounds and skill levels.",
   "scripts": {
-    "build": "node bin/build-lessons.js",
+    "build": "bin/generate-colours-from-css.py styles/definitions/colours.css artwork/common/colours.tex && bin/generate-web-backgrounds.py && bin/generate-all-images.sh && mv artwork/generated/background*.svg images/backgrounds && mv artwork/generated/logo*.svg images/logos && node bin/build-lessons.js",
     "start": "http-server . -p 8000 -c-1",
-    "dev": "http-server . -p 8000 -c-1"
+    "dev": "http-server . -p 8000 -c-1",
+    "test": "node bin/run-all-tests.js . -x lessons diagnostics",
+    "test:continue": "node bin/run-all-tests.js . -c -x lessons diagnostics",
+    "test:full": "node bin/run-all-tests.js . -x lessons diagnostics",
+    "test:quick": "node bin/run-all-tests.js . -q -x lessons diagnostics",
+    "test:wave": "node bin/run-all-tests.js . -w -x lessons diagnostics"
   },
   "keywords": [
     "html",
@@ -39,7 +44,7 @@
     "playwright": "^1.59.1",
     "qs": ">=6.14.2",
     "robots-txt-guard": ">=1.0.2",
-    "stylelint": "^17.8.0",
+    "stylelint": "^17.9.0",
     "stylelint-config-standard": "^40.0.0",
     "text-readability": "^1.1.1",
     "tmp": ">=0.2.4",

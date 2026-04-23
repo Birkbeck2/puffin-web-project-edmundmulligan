@@ -1,12 +1,12 @@
 <!--
  **********************************************************************
- * File       : students/lesson-02.html
+ * File       : students/lesson-05.html
  * Author     : Edmund Mulligan <edmund@edmundmulligan.name>
  * Copyright  : (c) 2026 The Embodied Mind
  * License    : MIT License (see license-and-credits.html page)
  * Description:
- *   Lesson 2 page for students on the Web Witchcraft and Wizardry website.
- *   This lesson introduces landmark elements in HTML.
+ *   Lesson 5 page for students on the Web Witchcraft and Wizardry website.
+ *   This lesson introduces hyperlinks and how to use them to link to other web pages and resources.
  **********************************************************************
 -->
 
@@ -24,7 +24,7 @@
     <!-- End of meta tags -->
 
     <!-- Set the document title-->
-    <title>Lesson 2 | Web Witchcraft and Wizardry</title>
+    <title>Lesson 5 | Web Witchcraft and Wizardry</title>
 
     <!-- Link to Favicon -->
     <link rel="icon" type="image/svg+xml" href="../images/icons/favicon.svg">
@@ -78,7 +78,6 @@
     <script src="../scripts/injectLessonNavigation.js" defer></script>
     <script src="../scripts/useLessonNavigation.js" defer></script>
     <script src="../scripts/animateWand.js" defer></script>
-
     <!-- End JavaScript file link -->
 
     <!-- Handle no JavaScript scenario -->
@@ -98,7 +97,7 @@
       </div>
 
       <main class="main-content">
-        <h2 class="page-title">Lesson 2 - Landmark Elements</h2>
+        <h2 class="page-title">Lesson 5 - Hyperlinks</h2>
         <!-- Lesson navigation panel will be injected here by injectLessonNavigation.js -->
 
         <div class="lesson-content">
@@ -114,13 +113,13 @@
               <h3 class="lesson-title">Introduction</h3>
               <div id="introduction-block">
                 <p>
-                  In this lesson, you will learn about landmark elements
+                  In this lesson, you will learn about hyperlinks
                   <button
                     type="button"
                     popovertarget="glossary-popover"
                     class="glossary-icon-button"
-                    data-glossary-term="landmark-element"
-                    aria-label="Show Landmark Element definition"
+                    data-glossary-term="hyperlink"
+                    aria-label="Show Hyperlink definition"
                   >
                     <i
                       class="fa-duotone fa-circle-question"
@@ -128,132 +127,99 @@
                     ></i>
                   </button>
                   in HTML. By the end of this lesson, you will understand how to
-                  structure your web pages using these important elements.
+                  create and use hyperlinks to navigate between web pages and
+                  other resources.
                 </p>
               </div>
             </div>
           </section>
 
           <section
-            id="landmark-elements"
-            class="landmark-elements lesson-section hidden"
-            aria-label="Landmark Elements"
+            id="hyperlinks"
+            class="hyperlinks lesson-section hidden"
+            aria-label="Hyperlinks in HTML"
           >
             <div class="student-image">
               <!--Image is injected based on choices made in student.html and saved into local storage. -->
             </div>
-            <h3 class="lesson-title">What are landmark elements?</h3>
-            <div id="landmark-elements-block">
+            <h3 class="lesson-title">What are hyperlinks?</h3>
+            <div id="hyperlinks-block">
               <p>
-                When you create a web page, you want it to be accessible
+                Hyperlinks, or simply links, are what makes the World Wide Web a
+                web. They allow you to connect one web page to another, or to
+                other resources such as images, videos, or documents. In HTML,
+                hyperlinks are created using the <code>&lt;a&gt;</code> (anchor)
+                element
                 <button
                   type="button"
                   popovertarget="glossary-popover"
                   class="glossary-icon-button"
-                  data-glossary-term="accessibility"
-                  aria-label="Show Accessibility definition"
+                  data-glossary-term="anchor-element"
+                  aria-label="Show Anchor Element definition"
                 >
                   <i
                     class="fa-duotone fa-circle-question"
                     aria-hidden="true"
-                  ></i>
-                </button>
-                to as many people as possible. Landmark elements help achieve
-                this by providing a clear structure to the content, making it
-                easier to read and navigate. This helps you when you are writing
-                your web page because it gives you a clear way to organise your
-                content. To most people browsing your web site the landmark
-                elements are invisible - the web page would look exactly the
-                same if you left them out. But for people who need to use
-                assistive technologies
-                <button
-                  type="button"
-                  popovertarget="glossary-popover"
-                  class="glossary-icon-button"
-                  data-glossary-term="assistive-technology"
-                  aria-label="Show Assistive Technology definition"
-                >
-                  <i
-                    class="fa-duotone fa-circle-question"
-                    aria-hidden="true"
-                  ></i>
-                </button>
-                the landmark elements provide important information about the
-                structure of the page and allow them to navigate it more easily.
-                For example, a screen reader can use the landmark elements to
-                quickly jump to the main content of the page, or to the
-                navigation menu, without having to read through all the content
-                in between.
+                  ></i></button
+                >. The <code>&lt;a&gt;</code> element has an attribute called
+                <code>href</code> (hypertext reference) that specifies the URL
+                of the page or resource you want to link to.
+              </p>
+              <p>
+                You can also use other attributes like <code>target</code> to
+                specify where the linked document will open, and
+                <code>rel</code> to define the relationship between the current
+                document and the linked document. The most common values for
+                these attributes are <code>_blank</code> for
+                <code>target</code> which opens the link in a new window and
+                <code>noopener noreferrer</code> for <code>rel</code> which
+                improves security and performance.
               </p>
             </div>
           </section>
-
           <section
-            id="landmark-elements-types"
-            class="landmark-elements-types lesson-section hidden"
-            aria-label="Types of Landmark Elements"
+            id="types-of-hyperlinks"
+            class="types-of-hyperlinks lesson-section hidden"
+            aria-label="Types of Hyperlinks"
           >
             <div class="student-image">
               <!--Image is injected based on choices made in student.html and saved into local storage. -->
             </div>
-            <h3 class="lesson-title">Types of Landmark Elements</h3>
-            <div id="landmark-elements-types-block">
+            <h3 class="lesson-title">Types of Hyperlinks</h3>
+            <div id="types-of-hyperlinks-block">
               <p>
-                There are several types of landmark elements in HTML, each
-                serving a specific purpose. The most common ones include:
+                There are several types of hyperlinks in HTML, each serving a
+                specific purpose. The most common ones are:
               </p>
               <ul>
                 <li>
-                  <code>&lt;header&gt;</code>: This element represents the
-                  introductory content or a set of navigational links for a
-                  section of the page. It typically contains the site logo,
-                  title, and main navigation menu.
+                  <code>&lt;a&gt;</code> for creating hyperlinks to other web pages or resources,
                 </li>
                 <li>
-                  <code>&lt;nav&gt;</code>: This element is used to define a
-                  block of navigation links. It helps users understand that the
-                  links within this element are for navigating the site.
+                  <code>&lt;link&gt;</code> for linking external resources like stylesheets, We'll cover this in more detail when we get to the CSS lessons,
                 </li>
                 <li>
-                  <code>&lt;main&gt;</code>: This element represents the main
-                  content of the document. It should be unique to the document
-                  and not contain any content that is repeated across pages
-                  (like sidebars or footers).
-                </li>
-                <li>
-                  <code>&lt;footer&gt;</code>: This element represents the
-                  footer for its nearest sectioning content or sectioning root
-                  element. It typically contains information about the author,
-                  copyright information, or links to related documents.
+                  <code>&lt;area&gt;</code> for defining clickable areas within an image map, We'll cover this after you learn how to use JavaScript to handle clicks,
                 </li>
               </ul>
-              <p>Other landmark elements include:</p>
+              <p> The <code>url</code> attribute in the <code>&lt;a&gt;</code> element can point to different types of resources, such as:</p>
               <ul>
                 <li>
-                  <code>&lt;article&gt;</code> for self-contained content that
-                  could be distributed independently, such as a blog post or
-                  news article,
+                  Another web page (e.g., <code>https://www.example.com</code>)
                 </li>
                 <li>
-                  <code>&lt;aside&gt;</code> for tangential content that is
-                  related to the main content but not essential to its
-                  understanding, such as a sidebar with related links or
-                  advertisements, and
+                  An email address (e.g., <code>mailto:info@example.com</code>)
                 </li>
                 <li>
-                  <code>&lt;section&gt;</code> for thematic grouping of content,
-                  which can be used to divide the main content into different
-                  sections with their own headings.
+                  A file on the same server (e.g., <code>lesson-1.html</code>)
                 </li>
                 <li>
-                  <code>&lt;figure&gt;</code> and
-                  <code>&lt;figcaption&gt;</code> for marking up images and
-                  their captions as a single unit.
+                  A specific section within the same page (e.g., <code>#section1</code>)
                 </li>
               </ul>
+              <p>The code that goes between the opening and closing <code>&lt;a&gt;</code> tags is the clickable text or content that users will see and interact with. It can be simple text or other HTML elements like images.</p>
             </div>
           </section>
-
           <section
             id="second-web-page"
             class="second-web-page lesson-section hidden"
@@ -263,17 +229,13 @@
               <!--Image is injected based on choices made in student.html and saved into local storage. -->
             </div>
             <h3 class="lesson-title">
-              Creating a Web Page with Landmark Elements
+              Creating a Web Page with Hyperlinks
             </h3>
             <div id="second-web-page-block">
               <p>
-                Now that you know about landmark elements, let's create a simple
+                Now that you know about hyperlinks, let's create a simple
                 web page that uses them. You can use the code snippet provided
-                in the next section as a starting point. This code includes the
-                basic structure of an HTML document with the main landmark
-                elements: <code>&lt;header&gt;</code>,
-                <code>&lt;main&gt;</code>, <code>&lt;footer&gt;</code> and
-                <code>&lt;section&gt;</code>.
+                in the next section as a starting point. This code includes several hyperlinks to different types of resources, as well as some basic HTML structure using landmark elements.
               </p>
               <p>Here are the steps to create your web page:</p>
               <ol>
@@ -284,7 +246,7 @@
                   work.
                 </li>
                 <li>
-                  Create a new file named <code>lesson-2.html</code> in the
+                  Create a new file named <code>lesson-5.html</code> in the
                   Projects folder.
                 </li>
                 <li>Type the code in the next screen into the file.</li>
@@ -295,7 +257,7 @@
                   running <code>npm start</code>.
                 </li>
                 <li>
-                  Open <code>http://localhost:8000/lesson-2.html</code> in your
+                  Open <code>http://localhost:8000/lesson-5.html</code> in your
                   web browser to see your next web page!
                 </li>
               </ol>
@@ -305,42 +267,34 @@
                 <button
                   type="button"
                   class="image-button"
-                  data-image-src="../images/screenshots/lesson-2.png"
-                  data-image-caption="Lesson 2 Screenshot"
+                  data-image-src="../images/screenshots/lesson-5.png"
+                  data-image-caption="Lesson 5 Screenshot"
                   tabindex="0"
                   aria-label="Click to view larger image"
                 >
                   <picture>
                     <img
-                      src="../images/screenshots/lesson-2.png"
-                      alt="Lesson 2 Screenshot"
+                      src="../images/screenshots/lesson-5.png"
+                      alt="Lesson 5 Screenshot"
                       class="screenshot"
                    >
                   </picture>
                 </button>
                 <figcaption>
-                  Figure 1.2: Lesson 2 Screenshot (Click to enlarge)
+                  Figure 5.1: Lesson 5 Screenshot (Click to enlarge)
                 </figcaption>
               </figure>
-
-              <p>
-                Try to understand how each landmark element is used in the code
-                and how they help structure the content of the page. You can
-                also experiment by adding your own content within these elements
-                to see how it affects the layout and accessibility of the page.
-              </p>
             </div>
           </section>
-
           <section
-            id="landmark-elements-code"
-            class="landmark-elements-code lesson-section hidden"
-            aria-label="Code for Your Landmark Page"
+            id="hyperlink-code"
+            class="hyperlink-code lesson-section hidden"
+            aria-label="Code for Your Hyperlink Page"
           >
-            <h3 class="lesson-title">Code for Your Landmark Page</h3>
+            <h3 class="lesson-title">Code for Your Hyperlink Page</h3>
             <div
               class="code-snippet-container"
-              data-src="../lessons/lesson-2.html"
+              data-src="../lessons/lesson-5.html"
             >
               <div class="code-snippet-table"></div>
             </div>
@@ -363,61 +317,27 @@
               </p>
               <ul>
                 <li>
-                  Lines 1-7: <code>&lt;!DOCTYPE html&gt;</code> and
-                  <code>&lt;head&gt;</code> section: This section includes the
-                  document type declaration and the head element, which contains
-                  meta information about the document. It is the same as in the
-                  last lesson (except the page title).
+                  Line 12: This is the <code>&lt;main&gt;</code> element we have used
+                  before, but this time it has an <code>id</code> attribute with the value "top". This allows us to create a hyperlink that points to this specific section of the page, which we will see later in the code.
                 </li>
                 <li>
-                  Lines 9-11: <code>&lt;header&gt;</code> section: This section
-                  defines the header of the page, which typically contains
-                  introductory content or navigational links. In this case, it
-                  contains a heading with the text "Witches and Wizards".
+                  Line 15: This is the first hyperlink in the code. It uses the <code>&lt;a&gt;</code> element to create a link to an external web page (encyclopedia.com) that provides more information about witches and wizards. The <code>href</code> attribute specifies the URL of the page to link to, while the <code>target="_blank"</code> attribute ensures that the link opens in a new tab or window. The <code>rel="noopener noreferrer"</code> attribute is used for security reasons when opening links in a new tab.
                 </li>
                 <li>
-                  Lines 12-23: <code>&lt;main&gt;</code> section: This section
-                  contains the main content of the page. It includes headings,
-                  paragraphs, and other elements that make up the primary
-                  content of the web page.
+                  Line 20: This is another hyperlink that wraps around an image. When the user clicks on the image, it will take them to the Britannica page about Merlin. This demonstrates how you can use hyperlinks not just with text, but also with images or other HTML elements.
                 </li>
                 <li>
-                  Lines 13-17: <code>&lt;section&gt;</code>: This section
-                  defines a thematic grouping of content within the main content
-                  area. It typically contains a heading and related content.
+                  Line 22: This is an <code>&lt;img&gt;</code> element that displays an image of Merlin. This is just like images you have used in previous lessons, but by giving it a <code>url</code> attribute, you didn't need to download the image and save it in your project folder. The image is loaded directly from the web when the page is viewed. This is a common way to use images on the web, but be aware that if the image is removed from the web or the URL changes, it will no longer display on your page.
                 </li>
                 <li>
-                  Lines 18-22: <code>&lt;section&gt;</code>: This is another
-                  section within the main content area, similar to the previous
-                  one but with different content.
+                  Line 29: This is a hyperlink that uses the <code>mailto:</code> protocol in the <code>href</code> attribute. When a user clicks on this link, it will open their default email client with a new email draft addressed to the specified email address (<code>info@witchcraft-and-wizardry.school</code>) and with a predefined subject line ("Question about Witches and Wizards"). This is a convenient way to allow users to contact you directly from your web page.
                 </li>
                 <li>
-                  Lines 24-26: <code>&lt;footer&gt;</code> section: This section
-                  defines the footer of the page, which typically contains
-                  information about the author, copyright, or other relevant
-                  details.
-                </li>
-                <li>
-                  Line 25: <code>&amp;copy;</code> is used to display the
-                  copyright symbol, &copy;. This is an example of an HTML entity
-                  <button
-                    type="button"
-                    popovertarget="glossary-popover"
-                    class="glossary-icon-button"
-                    data-glossary-term="html-entity"
-                    aria-label="Show HTML Entity definition"
-                  >
-                    <i
-                      class="fa-duotone fa-circle-question"
-                      aria-hidden="true"
-                    ></i></button
-                  >. All HTML entities start with an ampersand (&amp;) and end
-                  with a semicolon (;).
+                  Line 30: Note the warning here about sending a real email. This is just a reminder that the email address you put in the <code>href</code> attribute of a <code>&lt;a&gt;</code> element will be visible to users and can be used to send real emails. In this case, the email address is mine and I will most likely ignore any emails sent to it. If you want to check that this really works, you can change the email address to your own and try clicking the link to see if it opens your email client with a new draft email.
                 </li>
               </ul>
             </div>
           </section>
-
           <section
             id="be-curious"
             class="be-curious lesson-section hidden"
@@ -435,39 +355,18 @@
               </p>
               <ul>
                 <li>
-                  Adding more sections within the
-                  <code>&lt;main&gt;</code> element to further divide your
-                  content.
+                  Adding hyper links to other web pages or resources that you find interesting.
+                </li>
+
+                <li>
+                  Add links to the previous lessons you have created (lesson-01.html to lesson-04.html), so that you can easily navigate between them.
                 </li>
                 <li>
-                  Changing the text within the headings and paragraphs to make
-                  it your own.
-                </li>
-                <li>
-                  Adding more landmark elements, such as
-                  <code>&lt;aside&gt;</code> for related content.
-                </li>
-                <li>
-                  Try adding some other HTML entities to your page such as the
-                  &pound; sign, or &euro; if your witches and wizards are
-                  travelling to different countries.
+                  Try creating a list of hyperlinks using the <code>&lt;ul&gt;</code> element to different witches and wizards you like, and link each one to a page with more information about them.
                 </li>
               </ul>
-              <p>
-                Often you will want different landmark sections to look distinct
-                from each other to help users understand the structure of your
-                page. You will learn how to do this when we cover CSS styling in
-                later lessons.
-              </p>
-              <p>
-                One important landmark element is the
-                <code>&lt;nav&gt;</code> element, which is used to define a
-                block of navigation links. We will cover this in more detail
-                when you have learned about links.
-              </p>
             </div>
           </section>
-
           <section
             id="conclusion"
             class="conclusion lesson-section hidden"
@@ -480,8 +379,7 @@
               <h3 class="lesson-title">Conclusion</h3>
               <p>
                 Congratulations! You have created another web page using HTML.
-                In the next lesson you will learn about lists. These are used in
-                all sorts of ways, not just to list things.
+                In the next lesson you will learn about tables. These are used to display data in a structured way, and can be very useful for organising information on your web pages.
               </p>
               <div id="wand-container" class="wand-container"></div>
             </div>
