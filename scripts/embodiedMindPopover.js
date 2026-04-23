@@ -42,7 +42,11 @@
          */
         async loadData() {
             try {
-                const response = await fetch('data/embodied-mind.json');
+                // Get the correct path prefix based on current page location
+                const { pathPrefix } = Utils.getPageContext();
+                const dataPath = `${pathPrefix}data/embodied-mind.json`;
+                
+                const response = await fetch(dataPath);
                 if (!response.ok) {
                     throw new Error(`Failed to load data: ${response.status}`);
                 }

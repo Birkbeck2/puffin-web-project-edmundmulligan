@@ -153,14 +153,37 @@
                     lessonFolder: 'mentors'
                 };
             }
-            // Check if we're in pages folder
-            else if (path.includes('/pages/students')) {
+            // Check if we're in any pages subfolder
+            else if (path.includes('/pages/')) {
+                // Determine context based on specific page name if available
+                if (path.includes('/pages/students')) {
+                    return {
+                        context: 'students',
+                        pathPrefix: '../',
+                        lessonFolder: 'students'
+                    };
+                } else if (path.includes('/pages/mentors')) {
+                    return {
+                        context: 'mentors',
+                        pathPrefix: '../',
+                        lessonFolder: 'mentors'
+                    };
+                }
+                // Default for other pages folder files
                 return {
                     context: 'students',
                     pathPrefix: '../',
                     lessonFolder: 'students'
                 };
-            } else if (path.includes('/pages/mentors')) {
+            }
+            // Check if we're in students or mentors folder (non-lesson pages)
+            else if (path.includes('/students/')) {
+                return {
+                    context: 'students',
+                    pathPrefix: '../',
+                    lessonFolder: 'students'
+                };
+            } else if (path.includes('/mentors/')) {
                 return {
                     context: 'mentors',
                     pathPrefix: '../',
@@ -168,7 +191,7 @@
                 };
             }
             
-            // Default to students context
+            // Default to root level (no path prefix needed)
             return {
                 context: 'students',
                 pathPrefix: '',
