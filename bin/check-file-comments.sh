@@ -28,7 +28,7 @@ while [[ $# -gt 0 ]]; do
                 exit 1
             fi
             while [[ $# -gt 0 ]] && [[ "$1" != -* ]]; do
-                EXCLUDE_LIST="$(normalize_exclude_list "$EXCLUDE_LIST" "$1")"
+                EXCLUDE_LIST="$(normalise_exclude_list "$EXCLUDE_LIST" "$1")"
                 shift
             done
             ;;
@@ -46,7 +46,7 @@ done
 
 [ -z "$FOLDER" ] && FOLDER="."
 
-# Initialize counters
+# Initialise counters
 TOTAL_FILES=0
 FILES_WITH_ISSUES=0
 MISSING_HEADER=0
@@ -83,7 +83,7 @@ if [ -n "$EXCLUDE_LIST" ]; then
     echo "🚫 Excluded $FILTERED_PATHS_EXCLUDED_COUNT files using: $EXCLUDE_LIST"
 fi
 
-# Initialize results file
+# Initialise results file
 echo '{"files":[],"summary":{"totalFiles":0,"filesWithIssues":0,"missingHeaderBlocks":0,"missingRequiredFields":0}}' > "$RESULT_FILE"
 
 for file in $FILES; do

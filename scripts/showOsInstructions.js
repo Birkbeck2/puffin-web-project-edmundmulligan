@@ -58,10 +58,10 @@
         section.style.display = '';
       });
 
-      // Reinitialize lesson navigation to update the progress bar
+      // Reinitialise lesson navigation to update the progress bar
       // for the new set of visible sections
       if (window.lessonNavigationInjector) {
-        window.lessonNavigationInjector.reinitialize();
+        window.lessonNavigationInjector.reinitialise();
       }
     }
 
@@ -84,7 +84,7 @@
     }
 
     /**
-     * Initialize the OS instruction switcher
+     * Initialise the OS instruction switcher
      */
     init() {
       this.setupListeners();
@@ -97,7 +97,7 @@
     }
   }
 
-  // Initialize on DOM ready
+  // Initialise on DOM ready
   document.addEventListener('DOMContentLoaded', function () {
     const switcher = new OSInstructionSwitcher();
     switcher.init();

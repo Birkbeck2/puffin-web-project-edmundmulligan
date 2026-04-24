@@ -44,7 +44,7 @@ while [[ $# -gt 0 ]]; do
         exit 1
       fi
       while [[ $# -gt 0 ]] && [[ "$1" != -* ]]; do
-        EXCLUDE_LIST="$(normalize_exclude_list "$EXCLUDE_LIST" "$1")"
+        EXCLUDE_LIST="$(normalise_exclude_list "$EXCLUDE_LIST" "$1")"
         shift
       done
       ;;
@@ -84,7 +84,7 @@ cd "$FOLDER" || exit 1
 start_server_if_needed "$TEST_URL"
 discover_html_pages "." "$EXCLUDE_LIST"
 
-# Initialize combined results
+# Initialise combined results
 echo '{"pages":[]}' > "$RESULTS_DIR/pa11y-results.json"
 
 # Define viewport widths to test

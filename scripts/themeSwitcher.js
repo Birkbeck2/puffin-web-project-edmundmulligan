@@ -553,7 +553,7 @@
     }
 
     /**
-     * Initialize theme on page load
+     * Initialise theme on page load
      */
     init() {
       Debug.log('=== ThemeSwitcher Initializing ===');

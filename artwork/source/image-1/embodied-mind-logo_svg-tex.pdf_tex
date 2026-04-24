@@ -27,7 +27,7 @@
 \begingroup%
   \makeatletter%
   \providecommand\color[2][]{%
-    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \errmessage{(Inkscape) Colour is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
     \renewcommand\color[2][]{}%
   }%
   \providecommand\transparent[1]{%
