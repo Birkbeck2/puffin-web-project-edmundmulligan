@@ -156,37 +156,6 @@
       "waveUrl": "http://wave.webaim.org/report?url=https://crinkly-majorie-dramatic.ngrok-free.dev/mentors/lesson-01.html?theme=light"
     },
     {
-      "url": "mentors/lesson-00.html",
-      "theme": "light",
-      "style": "normal",
-      "viewport": "900",
-      "errors": 0,
-      "alerts": 3,
-      "features": 6,
-      "structural": 20,
-      "contrast": 0,
-      "errorItems": [],
-      "alertItems": [
-        {
-          "id": "heading_possible",
-          "description": "Possible heading",
-          "count": 1
-        },
-        {
-          "id": "noscript",
-          "description": "Noscript element",
-          "count": 1
-        },
-        {
-          "id": "event_handler",
-          "description": "Device dependent event handler",
-          "count": 1
-        }
-      ],
-      "contrastItems": [],
-      "waveUrl": "http://wave.webaim.org/report?url=https://crinkly-majorie-dramatic.ngrok-free.dev/mentors/lesson-00.html?theme=light"
-    },
-    {
       "url": "mentors/lesson-06.html",
       "theme": "light",
       "style": "normal",
@@ -402,37 +371,6 @@
       ],
       "contrastItems": [],
       "waveUrl": "http://wave.webaim.org/report?url=https://crinkly-majorie-dramatic.ngrok-free.dev/students/lesson-01.html?theme=light"
-    },
-    {
-      "url": "students/lesson-00.html",
-      "theme": "light",
-      "style": "normal",
-      "viewport": "900",
-      "errors": 0,
-      "alerts": 271,
-      "features": 10,
-      "structural": 417,
-      "contrast": 0,
-      "errorItems": [],
-      "alertItems": [
-        {
-          "id": "heading_possible",
-          "description": "Possible heading",
-          "count": 9
-        },
-        {
-          "id": "noscript",
-          "description": "Noscript element",
-          "count": 1
-        },
-        {
-          "id": "event_handler",
-          "description": "Device dependent event handler",
-          "count": 261
-        }
-      ],
-      "contrastItems": [],
-      "waveUrl": "http://wave.webaim.org/report?url=https://crinkly-majorie-dramatic.ngrok-free.dev/students/lesson-00.html?theme=light"
     },
     {
       "url": "students/lesson-06.html",
@@ -745,120 +683,6 @@
       "waveUrl": "http://wave.webaim.org/report?url=https://crinkly-majorie-dramatic.ngrok-free.dev/pages/start.html?theme=light"
     },
     {
-      "url": "lessons/lesson-4.html",
-      "theme": "light",
-      "style": "normal",
-      "viewport": "900",
-      "errors": 0,
-      "alerts": 2,
-      "features": 7,
-      "structural": 7,
-      "contrast": 0,
-      "errorItems": [],
-      "alertItems": [
-        {
-          "id": "alt_redundant",
-          "description": "Redundant alternative text",
-          "count": 2
-        }
-      ],
-      "contrastItems": [],
-      "waveUrl": "http://wave.webaim.org/report?url=https://crinkly-majorie-dramatic.ngrok-free.dev/lessons/lesson-4.html?theme=light"
-    },
-    {
-      "url": "lessons/lesson-5.html",
-      "theme": "light",
-      "style": "normal",
-      "viewport": "900",
-      "errors": 0,
-      "alerts": 1,
-      "features": 3,
-      "structural": 8,
-      "contrast": 0,
-      "errorItems": [],
-      "alertItems": [
-        {
-          "id": "link_suspicious",
-          "description": "Suspicious link text",
-          "count": 1
-        }
-      ],
-      "contrastItems": [],
-      "waveUrl": "http://wave.webaim.org/report?url=https://crinkly-majorie-dramatic.ngrok-free.dev/lessons/lesson-5.html?theme=light"
-    },
-    {
-      "url": "lessons/lesson-1.html",
-      "theme": "light",
-      "style": "normal",
-      "viewport": "900",
-      "errors": 0,
-      "alerts": 1,
-      "features": 1,
-      "structural": 1,
-      "contrast": 0,
-      "errorItems": [],
-      "alertItems": [
-        {
-          "id": "region_missing",
-          "description": "No page regions",
-          "count": 1
-        }
-      ],
-      "contrastItems": [],
-      "waveUrl": "http://wave.webaim.org/report?url=https://crinkly-majorie-dramatic.ngrok-free.dev/lessons/lesson-1.html?theme=light"
-    },
-    {
-      "url": "lessons/lesson-3.html",
-      "theme": "light",
-      "style": "normal",
-      "viewport": "900",
-      "errors": 0,
-      "alerts": 0,
-      "features": 1,
-      "structural": 14,
-      "contrast": 0,
-      "errorItems": [],
-      "alertItems": [],
-      "contrastItems": [],
-      "waveUrl": "http://wave.webaim.org/report?url=https://crinkly-majorie-dramatic.ngrok-free.dev/lessons/lesson-3.html?theme=light"
-    },
-    {
-      "url": "lessons/lesson-6.html",
-      "theme": "light",
-      "style": "normal",
-      "viewport": "900",
-      "errors": 0,
-      "alerts": 1,
-      "features": 3,
-      "structural": 15,
-      "contrast": 0,
-      "errorItems": [],
-      "alertItems": [
-        {
-          "id": "link_suspicious",
-          "description": "Suspicious link text",
-          "count": 1
-        }
-      ],
-      "contrastItems": [],
-      "waveUrl": "http://wave.webaim.org/report?url=https://crinkly-majorie-dramatic.ngrok-free.dev/lessons/lesson-6.html?theme=light"
-    },
-    {
-      "url": "lessons/lesson-2.html",
-      "theme": "light",
-      "style": "normal",
-      "viewport": "900",
-      "errors": 0,
-      "alerts": 0,
-      "features": 1,
-      "structural": 6,
-      "contrast": 0,
-      "errorItems": [],
-      "alertItems": [],
-      "contrastItems": [],
-      "waveUrl": "http://wave.webaim.org/report?url=https://crinkly-majorie-dramatic.ngrok-free.dev/lessons/lesson-2.html?theme=light"
-    },
-    {
       "url": "mentors/lesson-03.html",
       "theme": "dark",
       "style": "normal",
@@ -1012,37 +836,6 @@
       ],
       "contrastItems": [],
       "waveUrl": "http://wave.webaim.org/report?url=https://crinkly-majorie-dramatic.ngrok-free.dev/mentors/lesson-01.html?theme=dark"
-    },
-    {
-      "url": "mentors/lesson-00.html",
-      "theme": "dark",
-      "style": "normal",
-      "viewport": "900",
-      "errors": 0,
-      "alerts": 3,
-      "features": 6,
-      "structural": 20,
-      "contrast": 0,
-      "errorItems": [],
-      "alertItems": [
-        {
-          "id": "heading_possible",
-          "description": "Possible heading",
-          "count": 1
-        },
-        {
-          "id": "noscript",
-          "description": "Noscript element",
-          "count": 1
-        },
-        {
-          "id": "event_handler",
-          "description": "Device dependent event handler",
-          "count": 1
-        }
-      ],
-      "contrastItems": [],
-      "waveUrl": "http://wave.webaim.org/report?url=https://crinkly-majorie-dramatic.ngrok-free.dev/mentors/lesson-00.html?theme=dark"
     },
     {
       "url": "mentors/lesson-06.html",
@@ -1260,37 +1053,6 @@
       ],
       "contrastItems": [],
       "waveUrl": "http://wave.webaim.org/report?url=https://crinkly-majorie-dramatic.ngrok-free.dev/students/lesson-01.html?theme=dark"
-    },
-    {
-      "url": "students/lesson-00.html",
-      "theme": "dark",
-      "style": "normal",
-      "viewport": "900",
-      "errors": 0,
-      "alerts": 271,
-      "features": 10,
-      "structural": 417,
-      "contrast": 0,
-      "errorItems": [],
-      "alertItems": [
-        {
-          "id": "heading_possible",
-          "description": "Possible heading",
-          "count": 9
-        },
-        {
-          "id": "noscript",
-          "description": "Noscript element",
-          "count": 1
-        },
-        {
-          "id": "event_handler",
-          "description": "Device dependent event handler",
-          "count": 261
-        }
-      ],
-      "contrastItems": [],
-      "waveUrl": "http://wave.webaim.org/report?url=https://crinkly-majorie-dramatic.ngrok-free.dev/students/lesson-00.html?theme=dark"
     },
     {
       "url": "students/lesson-06.html",
@@ -1601,120 +1363,6 @@
       ],
       "contrastItems": [],
       "waveUrl": "http://wave.webaim.org/report?url=https://crinkly-majorie-dramatic.ngrok-free.dev/pages/start.html?theme=dark"
-    },
-    {
-      "url": "lessons/lesson-4.html",
-      "theme": "dark",
-      "style": "normal",
-      "viewport": "900",
-      "errors": 0,
-      "alerts": 2,
-      "features": 7,
-      "structural": 7,
-      "contrast": 0,
-      "errorItems": [],
-      "alertItems": [
-        {
-          "id": "alt_redundant",
-          "description": "Redundant alternative text",
-          "count": 2
-        }
-      ],
-      "contrastItems": [],
-      "waveUrl": "http://wave.webaim.org/report?url=https://crinkly-majorie-dramatic.ngrok-free.dev/lessons/lesson-4.html?theme=dark"
-    },
-    {
-      "url": "lessons/lesson-5.html",
-      "theme": "dark",
-      "style": "normal",
-      "viewport": "900",
-      "errors": 0,
-      "alerts": 1,
-      "features": 3,
-      "structural": 8,
-      "contrast": 0,
-      "errorItems": [],
-      "alertItems": [
-        {
-          "id": "link_suspicious",
-          "description": "Suspicious link text",
-          "count": 1
-        }
-      ],
-      "contrastItems": [],
-      "waveUrl": "http://wave.webaim.org/report?url=https://crinkly-majorie-dramatic.ngrok-free.dev/lessons/lesson-5.html?theme=dark"
-    },
-    {
-      "url": "lessons/lesson-1.html",
-      "theme": "dark",
-      "style": "normal",
-      "viewport": "900",
-      "errors": 0,
-      "alerts": 1,
-      "features": 1,
-      "structural": 1,
-      "contrast": 0,
-      "errorItems": [],
-      "alertItems": [
-        {
-          "id": "region_missing",
-          "description": "No page regions",
-          "count": 1
-        }
-      ],
-      "contrastItems": [],
-      "waveUrl": "http://wave.webaim.org/report?url=https://crinkly-majorie-dramatic.ngrok-free.dev/lessons/lesson-1.html?theme=dark"
-    },
-    {
-      "url": "lessons/lesson-3.html",
-      "theme": "dark",
-      "style": "normal",
-      "viewport": "900",
-      "errors": 0,
-      "alerts": 0,
-      "features": 1,
-      "structural": 14,
-      "contrast": 0,
-      "errorItems": [],
-      "alertItems": [],
-      "contrastItems": [],
-      "waveUrl": "http://wave.webaim.org/report?url=https://crinkly-majorie-dramatic.ngrok-free.dev/lessons/lesson-3.html?theme=dark"
-    },
-    {
-      "url": "lessons/lesson-6.html",
-      "theme": "dark",
-      "style": "normal",
-      "viewport": "900",
-      "errors": 0,
-      "alerts": 1,
-      "features": 3,
-      "structural": 15,
-      "contrast": 0,
-      "errorItems": [],
-      "alertItems": [
-        {
-          "id": "link_suspicious",
-          "description": "Suspicious link text",
-          "count": 1
-        }
-      ],
-      "contrastItems": [],
-      "waveUrl": "http://wave.webaim.org/report?url=https://crinkly-majorie-dramatic.ngrok-free.dev/lessons/lesson-6.html?theme=dark"
-    },
-    {
-      "url": "lessons/lesson-2.html",
-      "theme": "dark",
-      "style": "normal",
-      "viewport": "900",
-      "errors": 0,
-      "alerts": 0,
-      "features": 1,
-      "structural": 6,
-      "contrast": 0,
-      "errorItems": [],
-      "alertItems": [],
-      "contrastItems": [],
-      "waveUrl": "http://wave.webaim.org/report?url=https://crinkly-majorie-dramatic.ngrok-free.dev/lessons/lesson-2.html?theme=dark"
     },
     {
       "url": "mentors/lesson-03.html",
@@ -1872,37 +1520,6 @@
       "waveUrl": "http://wave.webaim.org/report?url=https://crinkly-majorie-dramatic.ngrok-free.dev/mentors/lesson-01.html?theme=light"
     },
     {
-      "url": "mentors/lesson-00.html",
-      "theme": "light",
-      "style": "subdued",
-      "viewport": "900",
-      "errors": 0,
-      "alerts": 3,
-      "features": 6,
-      "structural": 20,
-      "contrast": 0,
-      "errorItems": [],
-      "alertItems": [
-        {
-          "id": "heading_possible",
-          "description": "Possible heading",
-          "count": 1
-        },
-        {
-          "id": "noscript",
-          "description": "Noscript element",
-          "count": 1
-        },
-        {
-          "id": "event_handler",
-          "description": "Device dependent event handler",
-          "count": 1
-        }
-      ],
-      "contrastItems": [],
-      "waveUrl": "http://wave.webaim.org/report?url=https://crinkly-majorie-dramatic.ngrok-free.dev/mentors/lesson-00.html?theme=light"
-    },
-    {
       "url": "mentors/lesson-06.html",
       "theme": "light",
       "style": "subdued",
@@ -2118,37 +1735,6 @@
       ],
       "contrastItems": [],
       "waveUrl": "http://wave.webaim.org/report?url=https://crinkly-majorie-dramatic.ngrok-free.dev/students/lesson-01.html?theme=light"
-    },
-    {
-      "url": "students/lesson-00.html",
-      "theme": "light",
-      "style": "subdued",
-      "viewport": "900",
-      "errors": 0,
-      "alerts": 271,
-      "features": 10,
-      "structural": 417,
-      "contrast": 0,
-      "errorItems": [],
-      "alertItems": [
-        {
-          "id": "heading_possible",
-          "description": "Possible heading",
-          "count": 9
-        },
-        {
-          "id": "noscript",
-          "description": "Noscript element",
-          "count": 1
-        },
-        {
-          "id": "event_handler",
-          "description": "Device dependent event handler",
-          "count": 261
-        }
-      ],
-      "contrastItems": [],
-      "waveUrl": "http://wave.webaim.org/report?url=https://crinkly-majorie-dramatic.ngrok-free.dev/students/lesson-00.html?theme=light"
     },
     {
       "url": "students/lesson-06.html",
@@ -2461,120 +2047,6 @@
       "waveUrl": "http://wave.webaim.org/report?url=https://crinkly-majorie-dramatic.ngrok-free.dev/pages/start.html?theme=light"
     },
     {
-      "url": "lessons/lesson-4.html",
-      "theme": "light",
-      "style": "subdued",
-      "viewport": "900",
-      "errors": 0,
-      "alerts": 2,
-      "features": 7,
-      "structural": 7,
-      "contrast": 0,
-      "errorItems": [],
-      "alertItems": [
-        {
-          "id": "alt_redundant",
-          "description": "Redundant alternative text",
-          "count": 2
-        }
-      ],
-      "contrastItems": [],
-      "waveUrl": "http://wave.webaim.org/report?url=https://crinkly-majorie-dramatic.ngrok-free.dev/lessons/lesson-4.html?theme=light"
-    },
-    {
-      "url": "lessons/lesson-5.html",
-      "theme": "light",
-      "style": "subdued",
-      "viewport": "900",
-      "errors": 0,
-      "alerts": 1,
-      "features": 3,
-      "structural": 8,
-      "contrast": 0,
-      "errorItems": [],
-      "alertItems": [
-        {
-          "id": "link_suspicious",
-          "description": "Suspicious link text",
-          "count": 1
-        }
-      ],
-      "contrastItems": [],
-      "waveUrl": "http://wave.webaim.org/report?url=https://crinkly-majorie-dramatic.ngrok-free.dev/lessons/lesson-5.html?theme=light"
-    },
-    {
-      "url": "lessons/lesson-1.html",
-      "theme": "light",
-      "style": "subdued",
-      "viewport": "900",
-      "errors": 0,
-      "alerts": 1,
-      "features": 1,
-      "structural": 1,
-      "contrast": 0,
-      "errorItems": [],
-      "alertItems": [
-        {
-          "id": "region_missing",
-          "description": "No page regions",
-          "count": 1
-        }
-      ],
-      "contrastItems": [],
-      "waveUrl": "http://wave.webaim.org/report?url=https://crinkly-majorie-dramatic.ngrok-free.dev/lessons/lesson-1.html?theme=light"
-    },
-    {
-      "url": "lessons/lesson-3.html",
-      "theme": "light",
-      "style": "subdued",
-      "viewport": "900",
-      "errors": 0,
-      "alerts": 0,
-      "features": 1,
-      "structural": 14,
-      "contrast": 0,
-      "errorItems": [],
-      "alertItems": [],
-      "contrastItems": [],
-      "waveUrl": "http://wave.webaim.org/report?url=https://crinkly-majorie-dramatic.ngrok-free.dev/lessons/lesson-3.html?theme=light"
-    },
-    {
-      "url": "lessons/lesson-6.html",
-      "theme": "light",
-      "style": "subdued",
-      "viewport": "900",
-      "errors": 0,
-      "alerts": 1,
-      "features": 3,
-      "structural": 15,
-      "contrast": 0,
-      "errorItems": [],
-      "alertItems": [
-        {
-          "id": "link_suspicious",
-          "description": "Suspicious link text",
-          "count": 1
-        }
-      ],
-      "contrastItems": [],
-      "waveUrl": "http://wave.webaim.org/report?url=https://crinkly-majorie-dramatic.ngrok-free.dev/lessons/lesson-6.html?theme=light"
-    },
-    {
-      "url": "lessons/lesson-2.html",
-      "theme": "light",
-      "style": "subdued",
-      "viewport": "900",
-      "errors": 0,
-      "alerts": 0,
-      "features": 1,
-      "structural": 6,
-      "contrast": 0,
-      "errorItems": [],
-      "alertItems": [],
-      "contrastItems": [],
-      "waveUrl": "http://wave.webaim.org/report?url=https://crinkly-majorie-dramatic.ngrok-free.dev/lessons/lesson-2.html?theme=light"
-    },
-    {
       "url": "mentors/lesson-03.html",
       "theme": "dark",
       "style": "subdued",
@@ -2728,37 +2200,6 @@
       ],
       "contrastItems": [],
       "waveUrl": "http://wave.webaim.org/report?url=https://crinkly-majorie-dramatic.ngrok-free.dev/mentors/lesson-01.html?theme=dark"
-    },
-    {
-      "url": "mentors/lesson-00.html",
-      "theme": "dark",
-      "style": "subdued",
-      "viewport": "900",
-      "errors": 0,
-      "alerts": 3,
-      "features": 6,
-      "structural": 20,
-      "contrast": 0,
-      "errorItems": [],
-      "alertItems": [
-        {
-          "id": "heading_possible",
-          "description": "Possible heading",
-          "count": 1
-        },
-        {
-          "id": "noscript",
-          "description": "Noscript element",
-          "count": 1
-        },
-        {
-          "id": "event_handler",
-          "description": "Device dependent event handler",
-          "count": 1
-        }
-      ],
-      "contrastItems": [],
-      "waveUrl": "http://wave.webaim.org/report?url=https://crinkly-majorie-dramatic.ngrok-free.dev/mentors/lesson-00.html?theme=dark"
     },
     {
       "url": "mentors/lesson-06.html",
@@ -2976,37 +2417,6 @@
       ],
       "contrastItems": [],
       "waveUrl": "http://wave.webaim.org/report?url=https://crinkly-majorie-dramatic.ngrok-free.dev/students/lesson-01.html?theme=dark"
-    },
-    {
-      "url": "students/lesson-00.html",
-      "theme": "dark",
-      "style": "subdued",
-      "viewport": "900",
-      "errors": 0,
-      "alerts": 271,
-      "features": 10,
-      "structural": 417,
-      "contrast": 0,
-      "errorItems": [],
-      "alertItems": [
-        {
-          "id": "heading_possible",
-          "description": "Possible heading",
-          "count": 9
-        },
-        {
-          "id": "noscript",
-          "description": "Noscript element",
-          "count": 1
-        },
-        {
-          "id": "event_handler",
-          "description": "Device dependent event handler",
-          "count": 261
-        }
-      ],
-      "contrastItems": [],
-      "waveUrl": "http://wave.webaim.org/report?url=https://crinkly-majorie-dramatic.ngrok-free.dev/students/lesson-00.html?theme=dark"
     },
     {
       "url": "students/lesson-06.html",
@@ -3317,120 +2727,6 @@
       ],
       "contrastItems": [],
       "waveUrl": "http://wave.webaim.org/report?url=https://crinkly-majorie-dramatic.ngrok-free.dev/pages/start.html?theme=dark"
-    },
-    {
-      "url": "lessons/lesson-4.html",
-      "theme": "dark",
-      "style": "subdued",
-      "viewport": "900",
-      "errors": 0,
-      "alerts": 2,
-      "features": 7,
-      "structural": 7,
-      "contrast": 0,
-      "errorItems": [],
-      "alertItems": [
-        {
-          "id": "alt_redundant",
-          "description": "Redundant alternative text",
-          "count": 2
-        }
-      ],
-      "contrastItems": [],
-      "waveUrl": "http://wave.webaim.org/report?url=https://crinkly-majorie-dramatic.ngrok-free.dev/lessons/lesson-4.html?theme=dark"
-    },
-    {
-      "url": "lessons/lesson-5.html",
-      "theme": "dark",
-      "style": "subdued",
-      "viewport": "900",
-      "errors": 0,
-      "alerts": 1,
-      "features": 3,
-      "structural": 8,
-      "contrast": 0,
-      "errorItems": [],
-      "alertItems": [
-        {
-          "id": "link_suspicious",
-          "description": "Suspicious link text",
-          "count": 1
-        }
-      ],
-      "contrastItems": [],
-      "waveUrl": "http://wave.webaim.org/report?url=https://crinkly-majorie-dramatic.ngrok-free.dev/lessons/lesson-5.html?theme=dark"
-    },
-    {
-      "url": "lessons/lesson-1.html",
-      "theme": "dark",
-      "style": "subdued",
-      "viewport": "900",
-      "errors": 0,
-      "alerts": 1,
-      "features": 1,
-      "structural": 1,
-      "contrast": 0,
-      "errorItems": [],
-      "alertItems": [
-        {
-          "id": "region_missing",
-          "description": "No page regions",
-          "count": 1
-        }
-      ],
-      "contrastItems": [],
-      "waveUrl": "http://wave.webaim.org/report?url=https://crinkly-majorie-dramatic.ngrok-free.dev/lessons/lesson-1.html?theme=dark"
-    },
-    {
-      "url": "lessons/lesson-3.html",
-      "theme": "dark",
-      "style": "subdued",
-      "viewport": "900",
-      "errors": 0,
-      "alerts": 0,
-      "features": 1,
-      "structural": 14,
-      "contrast": 0,
-      "errorItems": [],
-      "alertItems": [],
-      "contrastItems": [],
-      "waveUrl": "http://wave.webaim.org/report?url=https://crinkly-majorie-dramatic.ngrok-free.dev/lessons/lesson-3.html?theme=dark"
-    },
-    {
-      "url": "lessons/lesson-6.html",
-      "theme": "dark",
-      "style": "subdued",
-      "viewport": "900",
-      "errors": 0,
-      "alerts": 1,
-      "features": 3,
-      "structural": 15,
-      "contrast": 0,
-      "errorItems": [],
-      "alertItems": [
-        {
-          "id": "link_suspicious",
-          "description": "Suspicious link text",
-          "count": 1
-        }
-      ],
-      "contrastItems": [],
-      "waveUrl": "http://wave.webaim.org/report?url=https://crinkly-majorie-dramatic.ngrok-free.dev/lessons/lesson-6.html?theme=dark"
-    },
-    {
-      "url": "lessons/lesson-2.html",
-      "theme": "dark",
-      "style": "subdued",
-      "viewport": "900",
-      "errors": 0,
-      "alerts": 0,
-      "features": 1,
-      "structural": 6,
-      "contrast": 0,
-      "errorItems": [],
-      "alertItems": [],
-      "contrastItems": [],
-      "waveUrl": "http://wave.webaim.org/report?url=https://crinkly-majorie-dramatic.ngrok-free.dev/lessons/lesson-2.html?theme=dark"
     },
     {
       "url": "mentors/lesson-03.html",
@@ -3588,37 +2884,6 @@
       "waveUrl": "http://wave.webaim.org/report?url=https://crinkly-majorie-dramatic.ngrok-free.dev/mentors/lesson-01.html?theme=light"
     },
     {
-      "url": "mentors/lesson-00.html",
-      "theme": "light",
-      "style": "vibrant",
-      "viewport": "900",
-      "errors": 0,
-      "alerts": 3,
-      "features": 6,
-      "structural": 20,
-      "contrast": 0,
-      "errorItems": [],
-      "alertItems": [
-        {
-          "id": "heading_possible",
-          "description": "Possible heading",
-          "count": 1
-        },
-        {
-          "id": "noscript",
-          "description": "Noscript element",
-          "count": 1
-        },
-        {
-          "id": "event_handler",
-          "description": "Device dependent event handler",
-          "count": 1
-        }
-      ],
-      "contrastItems": [],
-      "waveUrl": "http://wave.webaim.org/report?url=https://crinkly-majorie-dramatic.ngrok-free.dev/mentors/lesson-00.html?theme=light"
-    },
-    {
       "url": "mentors/lesson-06.html",
       "theme": "light",
       "style": "vibrant",
@@ -3834,37 +3099,6 @@
       ],
       "contrastItems": [],
       "waveUrl": "http://wave.webaim.org/report?url=https://crinkly-majorie-dramatic.ngrok-free.dev/students/lesson-01.html?theme=light"
-    },
-    {
-      "url": "students/lesson-00.html",
-      "theme": "light",
-      "style": "vibrant",
-      "viewport": "900",
-      "errors": 0,
-      "alerts": 271,
-      "features": 10,
-      "structural": 417,
-      "contrast": 0,
-      "errorItems": [],
-      "alertItems": [
-        {
-          "id": "heading_possible",
-          "description": "Possible heading",
-          "count": 9
-        },
-        {
-          "id": "noscript",
-          "description": "Noscript element",
-          "count": 1
-        },
-        {
-          "id": "event_handler",
-          "description": "Device dependent event handler",
-          "count": 261
-        }
-      ],
-      "contrastItems": [],
-      "waveUrl": "http://wave.webaim.org/report?url=https://crinkly-majorie-dramatic.ngrok-free.dev/students/lesson-00.html?theme=light"
     },
     {
       "url": "students/lesson-06.html",
@@ -4177,120 +3411,6 @@
       "waveUrl": "http://wave.webaim.org/report?url=https://crinkly-majorie-dramatic.ngrok-free.dev/pages/start.html?theme=light"
     },
     {
-      "url": "lessons/lesson-4.html",
-      "theme": "light",
-      "style": "vibrant",
-      "viewport": "900",
-      "errors": 0,
-      "alerts": 2,
-      "features": 7,
-      "structural": 7,
-      "contrast": 0,
-      "errorItems": [],
-      "alertItems": [
-        {
-          "id": "alt_redundant",
-          "description": "Redundant alternative text",
-          "count": 2
-        }
-      ],
-      "contrastItems": [],
-      "waveUrl": "http://wave.webaim.org/report?url=https://crinkly-majorie-dramatic.ngrok-free.dev/lessons/lesson-4.html?theme=light"
-    },
-    {
-      "url": "lessons/lesson-5.html",
-      "theme": "light",
-      "style": "vibrant",
-      "viewport": "900",
-      "errors": 0,
-      "alerts": 1,
-      "features": 3,
-      "structural": 8,
-      "contrast": 0,
-      "errorItems": [],
-      "alertItems": [
-        {
-          "id": "link_suspicious",
-          "description": "Suspicious link text",
-          "count": 1
-        }
-      ],
-      "contrastItems": [],
-      "waveUrl": "http://wave.webaim.org/report?url=https://crinkly-majorie-dramatic.ngrok-free.dev/lessons/lesson-5.html?theme=light"
-    },
-    {
-      "url": "lessons/lesson-1.html",
-      "theme": "light",
-      "style": "vibrant",
-      "viewport": "900",
-      "errors": 0,
-      "alerts": 1,
-      "features": 1,
-      "structural": 1,
-      "contrast": 0,
-      "errorItems": [],
-      "alertItems": [
-        {
-          "id": "region_missing",
-          "description": "No page regions",
-          "count": 1
-        }
-      ],
-      "contrastItems": [],
-      "waveUrl": "http://wave.webaim.org/report?url=https://crinkly-majorie-dramatic.ngrok-free.dev/lessons/lesson-1.html?theme=light"
-    },
-    {
-      "url": "lessons/lesson-3.html",
-      "theme": "light",
-      "style": "vibrant",
-      "viewport": "900",
-      "errors": 0,
-      "alerts": 0,
-      "features": 1,
-      "structural": 14,
-      "contrast": 0,
-      "errorItems": [],
-      "alertItems": [],
-      "contrastItems": [],
-      "waveUrl": "http://wave.webaim.org/report?url=https://crinkly-majorie-dramatic.ngrok-free.dev/lessons/lesson-3.html?theme=light"
-    },
-    {
-      "url": "lessons/lesson-6.html",
-      "theme": "light",
-      "style": "vibrant",
-      "viewport": "900",
-      "errors": 0,
-      "alerts": 1,
-      "features": 3,
-      "structural": 15,
-      "contrast": 0,
-      "errorItems": [],
-      "alertItems": [
-        {
-          "id": "link_suspicious",
-          "description": "Suspicious link text",
-          "count": 1
-        }
-      ],
-      "contrastItems": [],
-      "waveUrl": "http://wave.webaim.org/report?url=https://crinkly-majorie-dramatic.ngrok-free.dev/lessons/lesson-6.html?theme=light"
-    },
-    {
-      "url": "lessons/lesson-2.html",
-      "theme": "light",
-      "style": "vibrant",
-      "viewport": "900",
-      "errors": 0,
-      "alerts": 0,
-      "features": 1,
-      "structural": 6,
-      "contrast": 0,
-      "errorItems": [],
-      "alertItems": [],
-      "contrastItems": [],
-      "waveUrl": "http://wave.webaim.org/report?url=https://crinkly-majorie-dramatic.ngrok-free.dev/lessons/lesson-2.html?theme=light"
-    },
-    {
       "url": "mentors/lesson-03.html",
       "theme": "dark",
       "style": "vibrant",
@@ -4444,37 +3564,6 @@
       ],
       "contrastItems": [],
       "waveUrl": "http://wave.webaim.org/report?url=https://crinkly-majorie-dramatic.ngrok-free.dev/mentors/lesson-01.html?theme=dark"
-    },
-    {
-      "url": "mentors/lesson-00.html",
-      "theme": "dark",
-      "style": "vibrant",
-      "viewport": "900",
-      "errors": 0,
-      "alerts": 3,
-      "features": 6,
-      "structural": 20,
-      "contrast": 0,
-      "errorItems": [],
-      "alertItems": [
-        {
-          "id": "heading_possible",
-          "description": "Possible heading",
-          "count": 1
-        },
-        {
-          "id": "noscript",
-          "description": "Noscript element",
-          "count": 1
-        },
-        {
-          "id": "event_handler",
-          "description": "Device dependent event handler",
-          "count": 1
-        }
-      ],
-      "contrastItems": [],
-      "waveUrl": "http://wave.webaim.org/report?url=https://crinkly-majorie-dramatic.ngrok-free.dev/mentors/lesson-00.html?theme=dark"
     },
     {
       "url": "mentors/lesson-06.html",
@@ -4692,37 +3781,6 @@
       ],
       "contrastItems": [],
       "waveUrl": "http://wave.webaim.org/report?url=https://crinkly-majorie-dramatic.ngrok-free.dev/students/lesson-01.html?theme=dark"
-    },
-    {
-      "url": "students/lesson-00.html",
-      "theme": "dark",
-      "style": "vibrant",
-      "viewport": "900",
-      "errors": 0,
-      "alerts": 271,
-      "features": 10,
-      "structural": 417,
-      "contrast": 0,
-      "errorItems": [],
-      "alertItems": [
-        {
-          "id": "heading_possible",
-          "description": "Possible heading",
-          "count": 9
-        },
-        {
-          "id": "noscript",
-          "description": "Noscript element",
-          "count": 1
-        },
-        {
-          "id": "event_handler",
-          "description": "Device dependent event handler",
-          "count": 261
-        }
-      ],
-      "contrastItems": [],
-      "waveUrl": "http://wave.webaim.org/report?url=https://crinkly-majorie-dramatic.ngrok-free.dev/students/lesson-00.html?theme=dark"
     },
     {
       "url": "students/lesson-06.html",
@@ -5033,120 +4091,6 @@
       ],
       "contrastItems": [],
       "waveUrl": "http://wave.webaim.org/report?url=https://crinkly-majorie-dramatic.ngrok-free.dev/pages/start.html?theme=dark"
-    },
-    {
-      "url": "lessons/lesson-4.html",
-      "theme": "dark",
-      "style": "vibrant",
-      "viewport": "900",
-      "errors": 0,
-      "alerts": 2,
-      "features": 7,
-      "structural": 7,
-      "contrast": 0,
-      "errorItems": [],
-      "alertItems": [
-        {
-          "id": "alt_redundant",
-          "description": "Redundant alternative text",
-          "count": 2
-        }
-      ],
-      "contrastItems": [],
-      "waveUrl": "http://wave.webaim.org/report?url=https://crinkly-majorie-dramatic.ngrok-free.dev/lessons/lesson-4.html?theme=dark"
-    },
-    {
-      "url": "lessons/lesson-5.html",
-      "theme": "dark",
-      "style": "vibrant",
-      "viewport": "900",
-      "errors": 0,
-      "alerts": 1,
-      "features": 3,
-      "structural": 8,
-      "contrast": 0,
-      "errorItems": [],
-      "alertItems": [
-        {
-          "id": "link_suspicious",
-          "description": "Suspicious link text",
-          "count": 1
-        }
-      ],
-      "contrastItems": [],
-      "waveUrl": "http://wave.webaim.org/report?url=https://crinkly-majorie-dramatic.ngrok-free.dev/lessons/lesson-5.html?theme=dark"
-    },
-    {
-      "url": "lessons/lesson-1.html",
-      "theme": "dark",
-      "style": "vibrant",
-      "viewport": "900",
-      "errors": 0,
-      "alerts": 1,
-      "features": 1,
-      "structural": 1,
-      "contrast": 0,
-      "errorItems": [],
-      "alertItems": [
-        {
-          "id": "region_missing",
-          "description": "No page regions",
-          "count": 1
-        }
-      ],
-      "contrastItems": [],
-      "waveUrl": "http://wave.webaim.org/report?url=https://crinkly-majorie-dramatic.ngrok-free.dev/lessons/lesson-1.html?theme=dark"
-    },
-    {
-      "url": "lessons/lesson-3.html",
-      "theme": "dark",
-      "style": "vibrant",
-      "viewport": "900",
-      "errors": 0,
-      "alerts": 0,
-      "features": 1,
-      "structural": 14,
-      "contrast": 0,
-      "errorItems": [],
-      "alertItems": [],
-      "contrastItems": [],
-      "waveUrl": "http://wave.webaim.org/report?url=https://crinkly-majorie-dramatic.ngrok-free.dev/lessons/lesson-3.html?theme=dark"
-    },
-    {
-      "url": "lessons/lesson-6.html",
-      "theme": "dark",
-      "style": "vibrant",
-      "viewport": "900",
-      "errors": 0,
-      "alerts": 1,
-      "features": 3,
-      "structural": 15,
-      "contrast": 0,
-      "errorItems": [],
-      "alertItems": [
-        {
-          "id": "link_suspicious",
-          "description": "Suspicious link text",
-          "count": 1
-        }
-      ],
-      "contrastItems": [],
-      "waveUrl": "http://wave.webaim.org/report?url=https://crinkly-majorie-dramatic.ngrok-free.dev/lessons/lesson-6.html?theme=dark"
-    },
-    {
-      "url": "lessons/lesson-2.html",
-      "theme": "dark",
-      "style": "vibrant",
-      "viewport": "900",
-      "errors": 0,
-      "alerts": 0,
-      "features": 1,
-      "structural": 6,
-      "contrast": 0,
-      "errorItems": [],
-      "alertItems": [],
-      "contrastItems": [],
-      "waveUrl": "http://wave.webaim.org/report?url=https://crinkly-majorie-dramatic.ngrok-free.dev/lessons/lesson-2.html?theme=dark"
     }
   ]
 }
