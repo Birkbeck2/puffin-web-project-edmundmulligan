@@ -29,7 +29,7 @@
   "author": "Edmund Mulligan",
   "license": "MIT",
   "devDependencies": {
-    "glob": "^11.0.0",
+    "glob": "^13.0.6",
     "http-server": "^14.1.1",
     "mustache": "^4.2.0",
     "prettier": "^3.2.5"
