@@ -1,0 +1,111 @@
+\documentclass[a4paper, 12pt]{article}
+
+% include required packages
+\usepackage[a4paper, margin=2cm]{geometry} % Set page margins
+\usepackage[round,authoryear]{natbib}      % For citations
+\usepackage{url}                           % For formatting URLs
+\usepackage{indentfirst}                   % Indent first paragraph of sections
+\usepackage{booktabs}                      % For better table formatting
+\usepackage{float}                         % For [H] table placement
+\usepackage{enumitem}                      % For customising lists
+\usepackage{tikz}                          % For drawing diagrams
+\usetikzlibrary{positioning}               % For relative positioning
+
+% set paragraph and list formatting
+\setlength{\parindent}{1.5em}
+\setlength{\parskip}{0pt}
+\setlist[itemize]{noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt,after=\vspace{0.5em}}
+
+
+% set title information
+\title{A Critical Code Review of the Web Witchcraft and Wizardry Project}
+\author{Edmund Mulligan}
+\date{\today}
+
+% document start
+\begin{document}
+
+% set bibliography style and page numbering
+\bibliographystyle{plainnat}
+\pagenumbering{arabic}
+
+\maketitle
+
+\begin{abstract}
+This essay presents a critical code review of the Web Witchcraft and Wizardry project, an interactive web-based learning platform. The review examines the project's modular architecture, focusing on JavaScript implementation including encrypted local storage, DOM manipulation, and defensive programming practices. The analysis demonstrates adherence to web development best practices while reflecting on the iterative development process and testing methodologies employed.
+\end{abstract}
+
+\tableofcontents
+\newpage
+
+\section{Introduction}
+This essay reviews the codebase of the Web Witchcraft and Wizardry project, a web-based interactive learning platform designed to teach users about web development concepts through a magical theme. The review covers the architecture and design of the project, as well as an analysis of the HTML, CSS, and JavaScript code, with an emphasis on the latter. Reflections on the development process and potential areas for improvement are also discussed. The code is available for review on GitHub at 
+
+\url{https://github.com/Birkbeck2/puffin-web-project-edmundmulligan}. Please review the code on the assessment-candidate branch. This will allow releases to the production web site to continue while the assessment is being conducted without changing the code being assessed. The deployed code can be viewed in GitHub Pages at 
+
+\url{https://birkbeck2.github.io/puffin-web-project-edmundmulligan}. Results of automated tests (along with design documentation) can be viewed at 
+
+\url{https://birkbeck2.github.io/puffin-web-project-edmundmulligan/diagnostics}.
+
+\section{Architecture and Design}
+The code has been designed so as to be maintainable and extensible, with a modular structure that separates concerns \citep{dijkstra1982role}. This is a front-end focused project, so the codebase consists of HTML, CSS, and JavaScript files, with a clear separation between structure, presentation, and behaviour \citep{keith2010domscripting}. Following DevOps principles \citep{allman2018devops}, the project utilises a build pipeline to allow automated testing, as well as a version control system with multiple branches (development, staging, main and assessment-candidate) to manage changes.
+
+Several constraints have been imposed on the project:
+\begin{itemize}
+    \item Use only vanilla JavaScript, HTML, and CSS, without any external libraries or frameworks.
+    \item No use of generative AI or Large Language Models (LLMs) in the development process.
+    \item No server side code or databases.
+    \item The website must be fully accessible and responsive, adhering to best practices in web development.
+    \item Text intended for students must be below college-level reading ability, to ensure that the content is accessible to a wide audience.
+\end{itemize}
+
+\section{HTML and CSS}
+The HTML code is well-structured and semantic, with appropriate use of elements to create a clear and logical document structure. The CSS code is organised into separate files for layout and components, with consistent naming conventions and a clear separation of concerns. The use of CSS variables allows for easy theming and customization of the website's appearance. The CSS has been completely refactored since the last assignment, to make it more maintainable and efficient. This includes keeping all global variables in definition files, using layers to control the cascade and specificity of styles, as well as removing redundant styles. Nested selectors have been used where possible to improve readability. At most three CSS files need to be loaded on any page (globals.css, main.css and a page specific CSS file if necessary), which makes it less likely a specific CSS file will be accidentally missed when developing new pages. The CSS code has been heavily influenced by tutorials from Kevin Powell \citep{powell_youtube} and his new paid course \citep{powell2026css}, which have provided valuable insights into modern CSS techniques and best practices.
+
+While most html files are reasonably well structured, students/lesson-00.html is an exception, as it is so large. As an HTML file it is unmaintainable and so has been generated from a mustache \citep{mustache2009} template and Javascript data file. There is no functionality in this web page that is not better illustrated in other more reasonably sized pages, so it is requested to be excluded from the assessment of this project.
+
+To improve readability and maintainability all code has been formatted using Prettier \citep{prettier2024}.
+
+\section{Images}
+There is not much to say about the images used in the project, except that they are all optimised for web use and appropriately licensed. The gallery includes PNG, JPG and SVG images which allows the lesson on html images (lesson 4) to discuss the differences between these formats. The images are stored in separate folders which makes it easy to manage and reference them in the code (both on this website and in the code students will write using the images).
+
+\section{Javascript}
+The JavaScript code is organised into separate files for different components and features. The code follows best practices for readability and maintainability \citep{McConnell2004}, with consistent naming conventions, clear comments, and a focus on simplicity and self-documentation. 
+
+There is insufficient space here to discuss all the code in detail so this section highlights some of the more interesting and complex aspects. See Appendix \ref{appendix:js} for a sample of examples of JavaScript code that demonstrate the use of various concepts and techniques required by this assessment.
+
+\subsection{localStorage.js}
+This is the most complex file in the codebase. It was written after a code review using CodeQL \citep{codeql2024} identified that using unencrypted local storage was a security risk. Arguably, no sensitive data is being stored so this is a false positive, but best practice is to eliminate security flaws before they become a problem \citep{owasp2010secure}. It uses AES-GCM 256-bit encryption \citep{nist2001aes} to encrypt data before storing it in localStorage, and decrypts it when retrieving. The encryption key is derived from a passphrase using PBKDF2 with a random salt and the encrypted data is stored as a JSON string containing the ciphertext and salt. This is not ideal as the passphrase is hard coded and in future could be improve by using a KeyVault \citep{microsoft2024keyvault} or similar service.
+
+\subsection{populateLineNumbers.js}
+This code is used to display code snippets on the website with line numbers. It works by selecting elements with the class 'code-snippet' or reading from a source file, splitting the text content into lines, and then creating a new HTML structure that includes both the line numbers and the code lines. The line numbers are generated dynamically based on the number of lines in the code snippet, and the original code is preserved in a separate element for styling purposes. This allows for separation of the structure of the code from its presentation, as well as making it easier to maintain and update the code snippets in the future. It also allows for the snippets to be easily copied by students without including the line numbers.
+
+\subsection{injectGlossaryPopover.js}
+This fetches glossary data from glossary.html and injects it into the page as popovers that appear when clicking on an icon next to glossary terms. It works by selecting all elements with the class 'glossary-term', retrieving the corresponding definition from the glossary data, and then creating a popover element that is displayed on hover. To prevent injection attacks, the code sanitises the glossary definitions by escaping any HTML tags before inserting them into the popover. This ensures that any potentially malicious code in the glossary definitions cannot be executed when the popover is displayed. Rendering of the popover is handled by CSS, which, as usual, allows for separation of structure and presentation.
+
+\subsection{utils.js, queryParameters.js and debug.js}
+These scripts are not directly related to any specific features of the website, but provide utility functions and debugging tools that are used throughout the codebase. The utils.js file contains a variety of helper functions for tasks such as event handling and data formatting. The queryParameters.js file provides a simple interface for working with URL query parameters, allowing for automated testing of different scenarios. The debug.js file contains functions for logging and displaying debug information, which was essential during development and testing.
+
+\section{Reflections}
+
+The development process was highly iterative, with continuous refinement driven by automated testing and manual code review. Given the scope of the project, and the fact that it was developed by a single person, this was the only feasible approach and drew on my considerable experience of developing in a DevOps environment. The website is at the limit of what can be achieved without server side processing. In particular, using local storage to persist data is inferior to using a database - if users switch computers their saved data will be lost and gamification \citep{dicheva2015gamification}, such as progress tracking and leader boards, is not possible.
+
+Although not the focus of this assignment, I am particularly pleased with how the CSS refactoring turned out. The CSS submitted last term was functional but messy, reflecting the fact that I was learning it while developing the project. The refactored version is much cleaner, particularly with the use of CSS variables in the definitions folder and layers. The Javascript code is reasonably well organised but could be improved. For example localStorage.js could and should, with more time, be refactored into classes to handle encryption and storage separately.
+
+\section{Conclusion}
+
+This code review demonstrates that the Web Witchcraft and Wizardry project achieves its academic objectives through well-structured, maintainable code adhering to web development best practices. It is at a level of maturity where it can be given to students, mentors and teachers as a working prototype to solicit feedback before being released as a final product. The deliberate architectural choices (modular JavaScript organization, semantic HTML, modern CSS and separation of concerns) create a robust foundation for future enhancement. The comprehensive testing regime validates accessibility and standards compliance. The codebase exhibits professional-grade practices including encryption for data storage and defensive programming against injection attacks. Further work is required to write the lessons and this will be the focus of the next phase of development, along with user and expert testing.
+
+% Include word count N.B. Run wordcount.sh to generate wordcount.txt before compiling
+\section*{Word count}
+Word count: \input{essay-3-wordcount.txt} words (excluding references)
+\\
+\bibliography{EdmundLibrary}
+
+% include appendices
+\newpage
+\appendix
+\section*{Appendices}
+\input{essay-3-appendix.tex}
+
+\end{document}
