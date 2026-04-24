@@ -18,7 +18,7 @@
    */
   class EmbodiedMindPopover {
     /**
-     * Initialize the popover manager
+     * Initialise the popover manager
      */
     constructor() {
       this.popover = null;
@@ -194,16 +194,16 @@
     }
 
     /**
-     * Initialize the popover system
+     * Initialise the popover system
      */
     async init() {
-      Utils.log('EmbodiedMindPopover: Initializing...');
+      Utils.log('EmbodiedMindPopover: Initialising...');
 
       // Load data first
       try {
         await this.loadData();
       } catch (error) {
-        Utils.log('EmbodiedMindPopover: Failed to load data, cannot initialize');
+        Utils.log('EmbodiedMindPopover: Failed to load data, cannot initialise');
         return;
       }
 
@@ -231,7 +231,7 @@
     }
   }
 
-  // Initialize on DOM ready
+  // Initialise on DOM ready
   document.addEventListener('DOMContentLoaded', async function () {
     Utils.log('EmbodiedMindPopover: DOM ready, creating instance');
     const popoverManager = new EmbodiedMindPopover();

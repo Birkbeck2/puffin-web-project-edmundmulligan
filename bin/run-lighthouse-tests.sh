@@ -11,7 +11,7 @@ print_usage() {
   print_standard_usage "$0 [folder] [options]" help quick url exclude-discovery
 }
 
-# Initialize variables
+# Initialise variables
 TEST_URL="http://localhost:8080"
 QUICK_MODE=false
 EXCLUDE_LIST=""
@@ -43,7 +43,7 @@ while [[ $# -gt 0 ]]; do
         exit 1
       fi
       while [[ $# -gt 0 ]] && [[ "$1" != -* ]]; do
-        EXCLUDE_LIST="$(normalize_exclude_list "$EXCLUDE_LIST" "$1")"
+        EXCLUDE_LIST="$(normalise_exclude_list "$EXCLUDE_LIST" "$1")"
         shift
       done
       ;;
@@ -76,7 +76,7 @@ ORIGINAL_DIR=$(pwd)
 RESULTS_DIR="$ORIGINAL_DIR/$FOLDER/diagnostics/test-results"
 mkdir -p "$RESULTS_DIR"
 
-# Normalize folder path for URL construction
+# Normalise folder path for URL construction
 if [ "$FOLDER" = "." ]; then
   URL_PREFIX=""
 else
@@ -89,7 +89,7 @@ cd "$FOLDER" || exit 1
 start_server_if_needed "$TEST_URL"
 discover_html_pages "." "$EXCLUDE_LIST"
 
-# Initialize combined results
+# Initialise combined results
 echo '{"pages":[]}' > "$RESULTS_DIR/lighthouse-results.json"
 
 # Define viewport widths to test
@@ -218,7 +218,7 @@ node -e "
   console.log('  Total failed audits: ' + totalFailures);
   console.log('');
 
-  // Categorize pages by score
+  // Categorise pages by score
   const failures = data.pages.filter(p => p.score < 0.9);
   const warnings = data.pages.filter(p => p.score >= 0.9 && p.score < 1.0);
   const perfect = data.pages.filter(p => p.score === 1.0);

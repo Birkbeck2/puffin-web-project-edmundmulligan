@@ -286,7 +286,7 @@
     }
   }
 
-  // Initialize on DOM ready
+  // Initialise on DOM ready
   document.addEventListener('DOMContentLoaded', async function () {
     const injector = new GlossaryPopoverInjector();
     await injector.init();

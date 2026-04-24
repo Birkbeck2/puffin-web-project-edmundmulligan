@@ -88,7 +88,7 @@
     }
 
     /**
-     * Initialize accessibility attributes on page load
+     * Initialise accessibility attributes on page load
      */
     initAccessibility() {
       // Find all toggleable headings and add proper attributes
@@ -112,7 +112,7 @@
     }
 
     /**
-     * Initialize the section toggler
+     * Initialise the section toggler
      */
     init() {
       this.initAccessibility();
@@ -127,6 +127,6 @@
   window.toggleSectionCollapse = (sectionId, event) =>
     toggler.toggleSectionCollapse(sectionId, event);
 
-  // Initialize on DOM ready
+  // Initialise on DOM ready
   document.addEventListener('DOMContentLoaded', () => toggler.init());
 })();

@@ -29,7 +29,7 @@
     }
 
     /**
-     * Initialize the animation toggle
+     * Initialise the animation toggle
      */
     init() {
       if (document.readyState === 'loading') {

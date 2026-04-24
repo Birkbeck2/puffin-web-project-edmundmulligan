@@ -6,12 +6,12 @@
 
 set -e
 
-# Color codes for output
+# Colour codes for output
 RED='\033[0;31m'
 GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
 BLUE='\033[0;34m'
-NC='\033[0m' # No Color
+NC='\033[0m' # No Colour
 
 # Functions
 print_header() {
@@ -43,7 +43,7 @@ usage() {
     echo "This script will create:"
     echo "  - High-quality WebP animation"
     echo "  - High-quality GIF animation"
-    echo "  - Web-optimized GIF animation (smaller size)"
+    echo "  - Web-optimised GIF animation (smaller size)"
     exit 1
 }
 
@@ -109,7 +109,7 @@ convert_to_gif_hq() {
     print_info "Converting to GIF (high quality, 2-pass)..."
     
     # Pass 1: Generate palette
-    print_info "Pass 1: Generating optimized palette..."
+    print_info "Pass 1: Generating optimised palette..."
     ffmpeg -i "$input" \
         -vf "fps=24,scale=800:-1:flags=lanczos,palettegen=stats_mode=diff" \
         -y "$palette" 2>&1 | grep -E "frame=|size=" || true
@@ -139,7 +139,7 @@ convert_to_gif_web() {
     local palette="${output%.gif}_palette.png"
     
     echo
-    print_info "Converting to GIF (web-optimized, smaller size)..."
+    print_info "Converting to GIF (web-optimised, smaller size)..."
     
     # Pass 1: Generate palette
     ffmpeg -i "$input" \
@@ -159,7 +159,7 @@ convert_to_gif_web() {
         size=$(du -h "$output" | cut -f1)
         print_success "Created: $output ($size)"
     else
-        print_error "Failed to create web-optimized GIF"
+        print_error "Failed to create web-optimised GIF"
         return 1
     fi
 }
@@ -219,7 +219,7 @@ echo
 echo "Output files:"
 echo "  WebP (high quality):     $WEBP_OUTPUT"
 echo "  GIF (high quality):      $GIF_HQ_OUTPUT"
-echo "  GIF (web-optimized):     $GIF_WEB_OUTPUT"
+echo "  GIF (web-optimised):     $GIF_WEB_OUTPUT"
 echo
 
 # Show file sizes

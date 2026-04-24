@@ -77,9 +77,9 @@ def hsl_to_hsb(h, s, l):
         s_hsb = 2 * (1 - l / b)
     
     # Convert hue to 0-1 range for LaTeX
-    h_normalized = h / 360.0
+    h_normalised = h / 360.0
     
-    return (h_normalized, s_hsb, b)
+    return (h_normalised, s_hsb, b)
 
 
 def parse_css_colours(css_file_path):

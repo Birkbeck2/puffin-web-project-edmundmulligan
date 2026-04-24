@@ -36,7 +36,7 @@ while [[ $# -gt 0 ]]; do
         exit 1
       fi
       while [[ $# -gt 0 ]] && [[ "$1" != -* ]]; do
-        EXCLUDE_LIST="$(normalize_exclude_list "$EXCLUDE_LIST" "$1")"
+        EXCLUDE_LIST="$(normalise_exclude_list "$EXCLUDE_LIST" "$1")"
         shift
       done
       ;;
@@ -94,7 +94,7 @@ fi
 
 RESULT_FILE="$RESULTS_DIR/broken-links-results.json"
 
-# Initialize results
+# Initialise results
 echo '{"pages":[],"summary":{"totalLinks":0,"brokenLinks":0,"timeoutLinks":0,"excludedLinks":0}}' > "$RESULT_FILE"
 
 echo ""
