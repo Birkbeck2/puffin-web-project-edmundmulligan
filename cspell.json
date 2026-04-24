@@ -79,6 +79,7 @@
         "latexmk",
         "lavfi",
         "libsqlite",
+        "libvpx",
         "libwebp",
         "lindgaard",
         "Longmans",
@@ -90,6 +91,7 @@
         "Morgana",
         "Morpork",
         "Natanael",
+        "networkidle",
         "ngpgcheck",
         "ngpgkey",
         "NGROK",
@@ -154,6 +156,7 @@
         "xcolor",
         "Yaga",
         "yourusername",
-        "yumrepos"
+        "yumrepos",
+        "yuva"
     ]
 }
