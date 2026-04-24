@@ -169,7 +169,7 @@
     }
 
     /**
-     * Initialize the toggler
+     * Initialise the toggler
      */
     init() {
       // Listen for custom events from inject scripts
@@ -178,7 +178,7 @@
     }
   }
 
-  // Create instance and initialize
+  // Create instance and initialise
   const toggler = new HeaderFooterToggler();
   toggler.init();
 })();

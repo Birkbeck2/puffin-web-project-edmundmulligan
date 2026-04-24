@@ -62,7 +62,7 @@ for (let i = 0; i < args.length; i++) {
 // State file for tracking test progress
 const stateFile = path.join(folder, 'diagnostics', 'test-results', '.test-progress.json');
 
-// Load or initialize test state
+// Load or initialise test state
 let testState = {
   completed: [],
   failed: [],

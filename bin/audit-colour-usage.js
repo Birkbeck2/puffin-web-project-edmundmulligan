@@ -85,7 +85,7 @@ function parseArgs() {
  * Check whether a file should be excluded by CLI exclude rules.
  *
  * @param {string} relativePath - Path relative to repository root.
- * @param {string[]} excludeList - Normalized exclude entries.
+ * @param {string[]} excludeList - Normalised exclude entries.
  * @returns {boolean}
  */
 function matchesExcludeList(relativePath, excludeList) {
@@ -93,16 +93,16 @@ function matchesExcludeList(relativePath, excludeList) {
     return false;
   }
 
-  const normalizedPath = relativePath.replace(/\\/g, '/').replace(/^\.\//, '').replace(/\/+$/, '');
-  const baseName = path.basename(normalizedPath);
+  const normalisedPath = relativePath.replace(/\\/g, '/').replace(/^\.\//, '').replace(/\/+$/, '');
+  const baseName = path.basename(normalisedPath);
 
   return excludeList.some((exclude) => {
-    const normalizedExclude = exclude.replace(/\\/g, '/').replace(/^\.\//, '').replace(/\/+$/, '');
-    const excludeBase = path.basename(normalizedExclude);
+    const normalisedExclude = exclude.replace(/\\/g, '/').replace(/^\.\//, '').replace(/\/+$/, '');
+    const excludeBase = path.basename(normalisedExclude);
     return (
-      normalizedPath === normalizedExclude ||
-      normalizedPath.startsWith(`${normalizedExclude}/`) ||
-      baseName === excludeBase
+      normalisedPath === normalisedExclude ||
+      normalisedPath.startsWith(`${normalisedExclude}/`) ||
+      baseName === path.basename(normalisedExclude)
     );
   });
 }

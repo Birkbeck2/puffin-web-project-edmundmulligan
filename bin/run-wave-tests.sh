@@ -64,7 +64,7 @@ while [[ $# -gt 0 ]]; do
         exit 1
       fi
       while [[ $# -gt 0 ]] && [[ "$1" != -* ]]; do
-        EXCLUDE_LIST="$(normalize_exclude_list "$EXCLUDE_LIST" "$1")"
+        EXCLUDE_LIST="$(normalise_exclude_list "$EXCLUDE_LIST" "$1")"
         shift
       done
       ;;
@@ -181,7 +181,7 @@ trap cleanup_ngrok EXIT
 # Results directory already set up above with correct path
 RESULT_FILE="$RESULTS_DIR/wave-results.json"
 
-# Initialize combined results
+# Initialise combined results
 echo '{"pages":[]}' > "$RESULT_FILE"
 
 # Find all HTML pages

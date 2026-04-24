@@ -217,7 +217,7 @@
     }
 
     /**
-     * Initialize all code snippets on the page
+     * Initialise all code snippets on the page
      */
     async init() {
       this.upgradePreCodeBlocks();

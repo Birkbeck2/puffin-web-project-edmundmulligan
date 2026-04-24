@@ -86,9 +86,9 @@ test('RGBA to HSL', 'rgba(255, 255, 255, 1)', () => {
 });
 
 // Test HSL normalization
-test('Normalize HSL with deg', 'hsl(180deg 100% 18%)', () => {
+test('Normalise HSL with deg', 'hsl(180deg 100% 18%)', () => {
     const input = 'hsl(180deg 100% 18%)';
-    const result = palette.normalizeHSL(input);
+    const result = palette.normaliseHSL(input);
     const expected = 'hsl(180, 100%, 18%)';
     return {
         pass: result === expected,
@@ -96,9 +96,9 @@ test('Normalize HSL with deg', 'hsl(180deg 100% 18%)', () => {
     };
 });
 
-test('Normalize HSL with commas', 'hsl(180, 100%, 18%)', () => {
+test('Normalise HSL with commas', 'hsl(180, 100%, 18%)', () => {
     const input = 'hsl(180, 100%, 18%)';
-    const result = palette.normalizeHSL(input);
+    const result = palette.normaliseHSL(input);
     const expected = 'hsl(180, 100%, 18%)';
     return {
         pass: result === expected,
@@ -106,9 +106,9 @@ test('Normalize HSL with commas', 'hsl(180, 100%, 18%)', () => {
     };
 });
 
-test('Normalize RGB string', 'rgb(0, 92, 92)', () => {
+test('Normalise RGB string', 'rgb(0, 92, 92)', () => {
     const input = 'rgb(0, 92, 92)';
-    const result = palette.normalizeHSL(input);
+    const result = palette.normaliseHSL(input);
     const expected = 'hsl(180, 100%, 18%)';
     return {
         pass: result === expected,
