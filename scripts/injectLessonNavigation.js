@@ -13,7 +13,7 @@
  *   - Automatically injects navigation on page load
  *   - Counts all .lesson-section elements (excluding hidden OS-specific sections)
  *   - Generates appropriate number of wand icons for progress bar
- *   - To update when sections change: window.lessonNavigationInjector.reinitialize()
+ *   - To update when sections change: window.lessonNavigationInjector.reinitialise()
  *   - Dispatches 'lessonNavigationInjected' event when complete
  **********************************************************************
  */
@@ -41,7 +41,7 @@
     }
 
     /**
-     * Initialize the injector
+     * Initialise the injector
      */
     init() {
       // Wait for DOM to be fully loaded
@@ -298,9 +298,9 @@
     }
 
     /**
-     * Reinitialize navigation (call this when sections change)
+     * Reinitialise navigation (call this when sections change)
      */
-    reinitialize() {
+    reinitialise() {
       this.injectNavigation();
 
       // Note: No need to call setupNavigation() directly here

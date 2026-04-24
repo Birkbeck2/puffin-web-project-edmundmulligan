@@ -157,7 +157,7 @@ class CommonCodeInjector {
   }
 
   /**
-   * Initialize and inject all common code elements
+   * Initialise and inject all common code elements
    */
   async init() {
     try {
@@ -166,12 +166,12 @@ class CommonCodeInjector {
       this.injectFooter();
       this.injectImageModal();
     } catch (error) {
-      log('CommonCodeInjector: Failed to initialize', error);
+      log('CommonCodeInjector: Failed to initialise', error);
     }
   }
 }
 
-// Initialize on DOM ready
+// Initialise on DOM ready
 document.addEventListener('DOMContentLoaded', async function () {
   const injector = new CommonCodeInjector();
   await injector.init();

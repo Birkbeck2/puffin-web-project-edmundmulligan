@@ -81,10 +81,10 @@ function fetchWithRedirects(url, maxRedirects = 5, depth = 0) {
  *
  * @remarks Preconditions:
  * - CLI arguments must provide `pageUrl`, `urlPath`, and `resultFile`.
- * - `resultFile` must point to a JSON document compatible with `finalize`.
+ * - `resultFile` must point to a JSON document compatible with `finalise`.
  * - The target page must be reachable from the current environment.
  *
- * @returns {Promise<void>} Resolves after the page result has been finalized.
+ * @returns {Promise<void>} Resolves after the page result has been finalised.
  */
 async function main() {
   try {
@@ -141,7 +141,7 @@ async function main() {
 
     // Check each link
     if (links.length === 0) {
-      finalize();
+      finalise();
       return;
     }
 
@@ -175,7 +175,7 @@ async function main() {
 
       checked++;
       if (checked === links.length) {
-        finalize();
+        finalise();
       }
     }
   } catch (err) {
@@ -254,7 +254,7 @@ function checkLink(link) {
  *
  * @returns {void}
  */
-function finalize() {
+function finalise() {
   const combined = JSON.parse(fs.readFileSync(resultFile, 'utf8'));
   combined.pages.push(pageResult);
   combined.summary.totalLinks += pageResult.totalCount;

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# This script summarizes all test results and exits with error code if critical/serious issues found
+# This script summarises all test results and exits with error code if critical/serious issues found
 
 # Accept application folder parameter
 APP_FOLDER="${1:-.}"
@@ -15,7 +15,7 @@ EXIT_CODE=0
 OUTPUT_FILE="$RESULTS_DIR/test-summary.txt"
 TEMP_EXIT_FILE="$RESULTS_DIR/.exit_code"
 
-# Initialize exit code file
+# Initialise exit code file
 echo "0" > "$TEMP_EXIT_FILE"
 
 # Run the main script logic in a subshell and capture output

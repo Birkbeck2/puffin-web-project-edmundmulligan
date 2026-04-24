@@ -343,7 +343,7 @@
           profileIdentifier = 'mentor';
         } else {
           // Use student name if provided, otherwise use 'Student'
-          // Normalize to lowercase for case-insensitive storage
+          // Normalise to lowercase for case-insensitive storage
           profileIdentifier = (studentName.trim() || 'Student').toLowerCase();
         }
 
@@ -585,7 +585,7 @@
     }
 
     /**
-     * Initialize the form manager
+     * Initialise the form manager
      */
     init() {
       const form = document.getElementById(this.formId);
@@ -601,11 +601,11 @@
     }
   }
 
-  // Initialize student form manager for the default student/mentor forms
+  // Initialise student form manager for the default student/mentor forms
   const studentFormManager = new StudentFormManager('student-info-form');
   const mentorFormManager = new StudentFormManager('mentor-info-form');
 
-  // Initialize when DOM is ready
+  // Initialise when DOM is ready
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => {
       studentFormManager.init();

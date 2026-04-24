@@ -38,7 +38,7 @@
     }
 
     /**
-     * Initialize the lesson navigator
+     * Initialise the lesson navigator
      */
     init() {
       // Set up event listener immediately to avoid race condition
@@ -209,7 +209,7 @@
         }
       }
 
-      // Initialize display
+      // Initialise display
       this.showSection(newIndex);
       this.updateProgress();
       this.updateNavigationButtons();
@@ -596,6 +596,6 @@
     }
   }
 
-  // Initialize the lesson navigator and make it globally accessible
+  // Initialise the lesson navigator and make it globally accessible
   window.lessonNavigator = new LessonNavigator();
 })();

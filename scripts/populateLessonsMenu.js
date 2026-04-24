@@ -289,7 +289,7 @@ async function populateLessonsNav() {
   }
 }
 
-// Initialize when DOM is ready
+// Initialise when DOM is ready
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', populateLessonsNav);
 } else {

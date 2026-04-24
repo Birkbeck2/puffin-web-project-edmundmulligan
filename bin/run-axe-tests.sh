@@ -44,7 +44,7 @@ while [[ $# -gt 0 ]]; do
         exit 1
       fi
       while [[ $# -gt 0 ]] && [[ "$1" != -* ]]; do
-        EXCLUDE_LIST="$(normalize_exclude_list "$EXCLUDE_LIST" "$1")"
+        EXCLUDE_LIST="$(normalise_exclude_list "$EXCLUDE_LIST" "$1")"
         shift
       done
       ;;
@@ -143,7 +143,7 @@ discover_html_pages "." "$EXCLUDE_LIST"
 pkill -f chromedriver 2>/dev/null || true
 sleep 1
 
-# Initialize combined results
+# Initialise combined results
 echo '{
   "violations":[],
   "passes":[],

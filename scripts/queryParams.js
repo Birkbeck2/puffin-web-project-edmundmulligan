@@ -34,7 +34,7 @@
    */
   class QueryParamsHandler {
     /**
-     * Initialize the query parameter handler
+     * Initialise the query parameter handler
      */
     constructor() {
       this.urlParams = new URLSearchParams(window.location.search);
