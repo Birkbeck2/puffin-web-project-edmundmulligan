@@ -8,7 +8,7 @@
  * License    : MIT License
  * Description:
  *   Automates the process of capturing a CSS animation from a webpage
- *   and converting it to an optimized GIF using Puppeteer.
+ *   and converting it to an optimised GIF using Puppeteer.
  **********************************************************************
  */
 
@@ -32,8 +32,8 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-// ANSI color codes
-const colors = {
+// ANSI colour codes
+const colours = {
   reset: '\x1b[0m',
   red: '\x1b[31m',
   green: '\x1b[32m',
@@ -42,8 +42,8 @@ const colors = {
   cyan: '\x1b[36m',
 };
 
-function log(message, color = 'reset') {
-  console.log(`${colors[color]}${message}${colors.reset}`);
+function log(message, colour = 'reset') {
+  console.log(`${colours[colour]}${message}${colours.reset}`);
 }
 
 function error(message) {
@@ -56,6 +56,16 @@ function success(message) {
 
 function info(message) {
   log(`ℹ ${message}`, 'cyan');
+}
+
+/**
+ * Escape a string for safe use in shell commands
+ * @param {string} arg - The argument to escape
+ * @returns {string} - The escaped argument
+ */
+function escapeShellArg(arg) {
+  // Replace single quotes with '\'' and wrap in single quotes
+  return `'${arg.replace(/'/g, "'\\''")}'`;
 }
 
 function checkDependencies() {
@@ -210,29 +220,29 @@ async function captureAnimation(url, outputName, duration, options = {}) {
     // Convert frames to video using FFmpeg
     log('\nConverting frames to video...', 'yellow');
     execSync(
-      `ffmpeg -framerate ${fps} -pattern_type glob -i "${framesDir}/frame-*.png" ` +
-        `-c:v libvpx-vp9 -pix_fmt yuva420p "${videoPath}" -y`,
+      `ffmpeg -framerate ${fps} -pattern_type glob -i ${escapeShellArg(`${framesDir}/frame-*.png`)} ` +
+        `-c:v libvpx-vp9 -pix_fmt yuva420p ${escapeShellArg(videoPath)} -y`,
       { stdio: 'ignore' }
     );
     success('Video created');
 
-    // Convert video to optimized GIF
-    log('Creating optimized GIF...', 'yellow');
+    // Convert video to optimised GIF
+    log('Creating optimised GIF...', 'yellow');
     const palettePath = path.join(outputDir, `${outputName}-palette.png`);
 
     // Generate palette
     execSync(
-      `ffmpeg -i "${videoPath}" ` +
-        `-vf "fps=15,scale=800:-1:flags=lanczos,palettegen=stats_mode=diff" ` +
-        `-y "${palettePath}"`,
+      `ffmpeg -i ${escapeShellArg(videoPath)} ` +
+        '-vf "fps=15,scale=800:-1:flags=lanczos,palettegen=stats_mode=diff" ' +
+        `-y ${escapeShellArg(palettePath)}`,
       { stdio: 'ignore' }
     );
 
     // Create GIF with palette
     execSync(
-      `ffmpeg -i "${videoPath}" -i "${palettePath}" ` +
-        `-lavfi "fps=15,scale=800:-1:flags=lanczos[x];[x][1:v]paletteuse=dither=bayer:bayer_scale=5:diff_mode=rectangle" ` +
-        `-loop 0 "${gifPath}" -y`,
+      `ffmpeg -i ${escapeShellArg(videoPath)} -i ${escapeShellArg(palettePath)} ` +
+        '-lavfi "fps=15,scale=800:-1:flags=lanczos[x];[x][1:v]paletteuse=dither=bayer:bayer_scale=5:diff_mode=rectangle" ' +
+        `-loop 0 ${escapeShellArg(gifPath)} -y`,
       { stdio: 'ignore' }
     );
     success('GIF created');
@@ -240,22 +250,25 @@ async function captureAnimation(url, outputName, duration, options = {}) {
     // Create WebP version
     log('Creating WebP version...', 'yellow');
     execSync(
-      `ffmpeg -i "${videoPath}" ` +
-        `-vcodec libwebp -lossless 0 -compression_level 6 -q:v 80 -loop 0 ` +
-        `"${webpPath}" -y`,
+      `ffmpeg -i ${escapeShellArg(videoPath)} ` +
+        '-vcodec libwebp -lossless 0 -compression_level 6 -q:v 80 -loop 0 ' +
+        `${escapeShellArg(webpPath)} -y`,
       { stdio: 'ignore' }
     );
     success('WebP created');
 
-    // Optimize GIF with gifsicle if available
+    // Optimise GIF with gifsicle if available
     try {
       execSync('gifsicle --version', { stdio: 'ignore' });
-      log('Optimizing GIF with gifsicle...', 'yellow');
-      const optimizedPath = path.join(outputDir, `${outputName}-optimized.gif`);
-      execSync(`gifsicle -O3 --lossy=80 -o "${optimizedPath}" "${gifPath}"`, { stdio: 'ignore' });
-      success('GIF optimized');
+      log('Optimising GIF with gifsicle...', 'yellow');
+      const optimisedPath = path.join(outputDir, `${outputName}-optimised.gif`);
+      execSync(
+        `gifsicle -O3 --lossy=80 -o ${escapeShellArg(optimisedPath)} ${escapeShellArg(gifPath)}`,
+        { stdio: 'ignore' }
+      );
+      success('GIF optimised');
     } catch (e) {
-      info('gifsicle not found, skipping optimization');
+      info('gifsicle not found, skipping optimisation');
     }
 
     // Clean up temporary files
@@ -328,6 +341,12 @@ function main() {
   const url = args[0];
   const outputName = args[1];
   const duration = parseInt(args[2], 10);
+
+  // Validate outputName to prevent command injection
+  if (!/^[a-zA-Z0-9_-]+$/.test(outputName)) {
+    error('Output name can only contain letters, numbers, hyphens, and underscores');
+    process.exit(1);
+  }
 
   // Parse options
   const options = {};

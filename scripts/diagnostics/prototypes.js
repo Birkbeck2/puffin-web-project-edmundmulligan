@@ -297,12 +297,12 @@
      * Digital Images tab - Logo switcher
      */
     function switchLogo() {
-        const selectedColor = document.querySelector('input[name="logo-color"]:checked')?.value;
+        const selectedColour = document.querySelector('input[name="logo-colour"]:checked')?.value;
         const logoImage = document.getElementById('logo-image');
-        // Validate color value against whitelist to prevent XSS
-        const allowedColors = ['black', 'purple', 'cyan'];
-        if (logoImage && selectedColor && allowedColors.includes(selectedColor)) {
-            logoImage.src = `../diagnostics/images/logo-embodied-mind-with-name-${selectedColor}.svg`;
+        // Validate colour value against whitelist to prevent XSS
+        const allowedColours = ['black', 'purple', 'cyan'];
+        if (logoImage && selectedColour && allowedColours.includes(selectedColour)) {
+            logoImage.src = `../diagnostics/images/logo-embodied-mind-with-name-${selectedColour}.svg`;
         }
     }
 
@@ -474,7 +474,7 @@
     }
 
     /**
-     * Initialize the screenshot viewer
+     * Initialise the screenshot viewer
      */
     function init() {
         setupTabs();
@@ -488,12 +488,12 @@
         updateScreenshots('lesson');
         updateScreenshots('animations');
         
-        // Initialize digital images tab
+        // Initialise digital images tab
         loadFavicon();
         switchPromoFormat();
     }
 
-    // Initialize when DOM is ready
+    // Initialise when DOM is ready
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', init);
     } else {

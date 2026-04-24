@@ -76,14 +76,14 @@ node bin/capture-css-animation.js \
 
 # Outputs:
 # - wand-animation.webm (video)
-# - wand-animation.gif (optimized GIF)
+# - wand-animation.gif (optimised GIF)
 ```
 
 **Script features:**
 - Captures specific element or full page
 - Configurable duration
 - Automatic GIF conversion
-- Optimized for web use
+- Optimised for web use
 
 ---
 
@@ -190,7 +190,7 @@ ffmpeg -i input-video.mp4 -i palette.png \
 rm palette.png
 ```
 
-**Optimize for web (smaller file):**
+**Optimise for web (smaller file):**
 ```bash
 # Lower FPS and resolution
 ffmpeg -i input-video.mp4 \
@@ -233,9 +233,9 @@ node bin/capture-with-playwright.js \
    - Use `:paused` state if needed
    - Add replay button for consistent timing
 
-3. **Optimize page:**
+3. **Optimise page:**
    - Remove unnecessary elements
-   - Use solid background color
+   - Use solid background colour
    - Disable browser animations (Reduce motion settings)
 
 ### Recording Settings
@@ -257,13 +257,13 @@ node bin/capture-with-playwright.js \
 - Loop animations for continuous effect
 - Trim dead space at start/end
 
-### GIF Optimization
+### GIF Optimisation
 
-**Reduce colors:**
+**Reduce colours:**
 ```bash
-# 256 colors (default)
-# 128 colors (smaller file)
-# 64 colors (much smaller, some quality loss)
+# 256 colours (default)
+# 128 colours (smaller file)
+# 64 colours (much smaller, some quality loss)
 
 ffmpeg -i input.mp4 \
   -vf "fps=15,scale=800:-1,palettegen=max_colors=128" \
@@ -276,13 +276,13 @@ ffmpeg -i input.mp4 \
 sudo apt install gifsicle  # Ubuntu/Debian
 brew install gifsicle      # macOS
 
-# Optimize GIF
-gifsicle -O3 --lossy=80 -o optimized.gif input.gif
+# Optimise GIF
+gifsicle -O3 --lossy=80 -o optimised.gif input.gif
 
 # Options:
-# -O3: Maximum optimization
+# -O3: Maximum optimisation
 # --lossy=80: 80% quality (20% compression)
-# --colors 128: Reduce to 128 colors
+# --colours 128: Reduce to 128 colours
 ```
 
 **Convert to WebP instead:**
@@ -366,8 +366,8 @@ ffmpeg -i recording.mp4 -ss 3 -t 2 -vf "fps=15,scale=800:-1" loop.gif
 | Method | File Size | Quality | Browser Support |
 |--------|-----------|---------|-----------------|
 | GIF (default) | ~2-5 MB | Medium | 100% |
-| GIF (optimized) | ~500 KB - 1 MB | Medium | 100% |
-| GIF (web-optimized) | ~200-500 KB | Low-Medium | 100% |
+| GIF (optimised) | ~500 KB - 1 MB | Medium | 100% |
+| GIF (web-optimised) | ~200-500 KB | Low-Medium | 100% |
 | WebP | ~100-300 KB | High | 97%+ (IE no) |
 | MP4 | ~200-800 KB | High | 98%+ |
 | WebM | ~100-500 KB | High | 96%+ (Safari no) |
@@ -400,10 +400,10 @@ node bin/capture-css-animation.js \
   ".animated-wand"
 ```
 
-**4. Optimize GIF:**
+**4. Optimise GIF:**
 ```bash
-# Further optimize output
-gifsicle -O3 --lossy=80 -o lesson-animation-optimized.gif lesson-animation.gif
+# Further optimise output
+gifsicle -O3 --lossy=80 -o lesson-animation-optimised.gif lesson-animation.gif
 
 # Or convert to WebP
 ffmpeg -i lesson-animation.gif -c:v libwebp -q:v 80 lesson-animation.webp
@@ -413,7 +413,7 @@ ffmpeg -i lesson-animation.gif -c:v libwebp -q:v 80 lesson-animation.webp
 ```markdown
 ## Animation Demo
 
-![Animation demo](images/lesson-animation-optimized.gif)
+![Animation demo](images/lesson-animation-optimised.gif)
 
 <!-- Or with picture tag for modern browsers -->
 <picture>
@@ -439,7 +439,7 @@ ffmpeg -i lesson-animation.gif -c:v libwebp -q:v 80 lesson-animation.webp
 **Solutions:**
 1. Reduce resolution: `-scale=400:-1`
 2. Lower FPS: `fps=10`
-3. Reduce colors: `palettegen=max_colors=128`
+3. Reduce colours: `palettegen=max_colors=128`
 4. Use lossy compression: `gifsicle --lossy=80`
 5. Trim unnecessary frames
 6. Use WebP instead of GIF
@@ -452,13 +452,13 @@ ffmpeg -i lesson-animation.gif -c:v libwebp -q:v 80 lesson-animation.webp
 - Use seamless looping CSS animations
 - Add delay at end matching beginning frame
 
-### Issue: Colors look wrong
+### Issue: Colours look wrong
 
 **Solutions:**
 - Use palette generation (2-pass method)
 - Use `stats_mode=diff` for better palette
-- Increase color count: `max_colors=256`
-- Check input video color space
+- Increase colour count: `max_colors=256`
+- Check input video colour space
 
 ---
 
@@ -488,9 +488,9 @@ ffmpeg -i "$INPUT" \
   -c:v libwebp -q:v 80 \
   "${OUTPUT}.webp"
 
-# Optimize GIF
+# Optimise GIF
 if command -v gifsicle &> /dev/null; then
-  gifsicle -O3 --lossy=80 -o "${OUTPUT}-optimized.gif" "${OUTPUT}.gif"
+  gifsicle -O3 --lossy=80 -o "${OUTPUT}-optimised.gif" "${OUTPUT}.gif"
 fi
 
 # Clean up
@@ -523,12 +523,12 @@ ls -lh "${OUTPUT}"*
 | Multiple animations | Playwright batch script |
 | Manual quality control | OBS Studio |
 | Simple animations | Browser DevTools screenshots |
-| Production-ready | Puppeteer + optimization pipeline |
+| Production-ready | Puppeteer + optimisation pipeline |
 
 **Recommended workflow:**
 1. Record with Puppeteer or screen recording
 2. Convert to GIF with 2-pass FFmpeg
-3. Optimize with gifsicle
+3. Optimise with gifsicle
 4. Create WebP version for modern browsers
 5. Serve both formats with `<picture>` tag
 

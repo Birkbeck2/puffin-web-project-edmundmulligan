@@ -135,8 +135,8 @@ async function runPageTests(page, pageInfo) {
   }
 
   // Test 6: Check CSS Variables support - check if custom property is applied
-  const bgColor = await page.$eval('body', (el) => window.getComputedStyle(el).backgroundColor);
-  if (bgColor && bgColor !== 'rgba(0, 0, 0, 0)' && bgColor !== 'transparent') {
+  const bgColour = await page.$eval('body', (el) => window.getComputedStyle(el).backgroundColor);
+  if (bgColour && bgColour !== 'rgba(0, 0, 0, 0)' && bgColour !== 'transparent') {
     console.log(`✅ ${pageInfo.name} CSS Variables supported`);
     tests.push({ name: `${pageInfo.name} CSS Variables`, status: 'passed' });
   } else {

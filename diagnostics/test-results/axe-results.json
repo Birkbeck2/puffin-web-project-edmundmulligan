@@ -23,6 +23,13 @@
       "count": 41
     },
     {
+      "pageUrl": "mentors/lesson-05.html",
+      "theme": "light",
+      "style": "normal",
+      "viewport": "900",
+      "count": 41
+    },
+    {
       "pageUrl": "mentors/lesson-01.html",
       "theme": "light",
       "style": "normal",
@@ -31,6 +38,13 @@
     },
     {
       "pageUrl": "mentors/lesson-00.html",
+      "theme": "light",
+      "style": "normal",
+      "viewport": "900",
+      "count": 41
+    },
+    {
+      "pageUrl": "mentors/lesson-06.html",
       "theme": "light",
       "style": "normal",
       "viewport": "900",
@@ -80,6 +94,13 @@
     },
     {
       "pageUrl": "students/lesson-00.html",
+      "theme": "light",
+      "style": "normal",
+      "viewport": "900",
+      "count": 41
+    },
+    {
+      "pageUrl": "students/lesson-06.html",
       "theme": "light",
       "style": "normal",
       "viewport": "900",
@@ -170,6 +191,13 @@
       "count": 41
     },
     {
+      "pageUrl": "mentors/lesson-05.html",
+      "theme": "dark",
+      "style": "normal",
+      "viewport": "900",
+      "count": 41
+    },
+    {
       "pageUrl": "mentors/lesson-01.html",
       "theme": "dark",
       "style": "normal",
@@ -178,6 +206,13 @@
     },
     {
       "pageUrl": "mentors/lesson-00.html",
+      "theme": "dark",
+      "style": "normal",
+      "viewport": "900",
+      "count": 41
+    },
+    {
+      "pageUrl": "mentors/lesson-06.html",
       "theme": "dark",
       "style": "normal",
       "viewport": "900",
@@ -227,6 +262,13 @@
     },
     {
       "pageUrl": "students/lesson-00.html",
+      "theme": "dark",
+      "style": "normal",
+      "viewport": "900",
+      "count": 41
+    },
+    {
+      "pageUrl": "students/lesson-06.html",
       "theme": "dark",
       "style": "normal",
       "viewport": "900",
@@ -317,6 +359,13 @@
       "count": 41
     },
     {
+      "pageUrl": "mentors/lesson-05.html",
+      "theme": "light",
+      "style": "subdued",
+      "viewport": "900",
+      "count": 41
+    },
+    {
       "pageUrl": "mentors/lesson-01.html",
       "theme": "light",
       "style": "subdued",
@@ -325,6 +374,13 @@
     },
     {
       "pageUrl": "mentors/lesson-00.html",
+      "theme": "light",
+      "style": "subdued",
+      "viewport": "900",
+      "count": 41
+    },
+    {
+      "pageUrl": "mentors/lesson-06.html",
       "theme": "light",
       "style": "subdued",
       "viewport": "900",
@@ -374,6 +430,13 @@
     },
     {
       "pageUrl": "students/lesson-00.html",
+      "theme": "light",
+      "style": "subdued",
+      "viewport": "900",
+      "count": 41
+    },
+    {
+      "pageUrl": "students/lesson-06.html",
       "theme": "light",
       "style": "subdued",
       "viewport": "900",
@@ -464,6 +527,13 @@
       "count": 41
     },
     {
+      "pageUrl": "mentors/lesson-05.html",
+      "theme": "dark",
+      "style": "subdued",
+      "viewport": "900",
+      "count": 41
+    },
+    {
       "pageUrl": "mentors/lesson-01.html",
       "theme": "dark",
       "style": "subdued",
@@ -472,6 +542,13 @@
     },
     {
       "pageUrl": "mentors/lesson-00.html",
+      "theme": "dark",
+      "style": "subdued",
+      "viewport": "900",
+      "count": 41
+    },
+    {
+      "pageUrl": "mentors/lesson-06.html",
       "theme": "dark",
       "style": "subdued",
       "viewport": "900",
@@ -521,6 +598,13 @@
     },
     {
       "pageUrl": "students/lesson-00.html",
+      "theme": "dark",
+      "style": "subdued",
+      "viewport": "900",
+      "count": 41
+    },
+    {
+      "pageUrl": "students/lesson-06.html",
       "theme": "dark",
       "style": "subdued",
       "viewport": "900",
@@ -611,6 +695,13 @@
       "count": 41
     },
     {
+      "pageUrl": "mentors/lesson-05.html",
+      "theme": "light",
+      "style": "vibrant",
+      "viewport": "900",
+      "count": 41
+    },
+    {
       "pageUrl": "mentors/lesson-01.html",
       "theme": "light",
       "style": "vibrant",
@@ -619,6 +710,13 @@
     },
     {
       "pageUrl": "mentors/lesson-00.html",
+      "theme": "light",
+      "style": "vibrant",
+      "viewport": "900",
+      "count": 41
+    },
+    {
+      "pageUrl": "mentors/lesson-06.html",
       "theme": "light",
       "style": "vibrant",
       "viewport": "900",
@@ -668,6 +766,13 @@
     },
     {
       "pageUrl": "students/lesson-00.html",
+      "theme": "light",
+      "style": "vibrant",
+      "viewport": "900",
+      "count": 41
+    },
+    {
+      "pageUrl": "students/lesson-06.html",
       "theme": "light",
       "style": "vibrant",
       "viewport": "900",
@@ -758,6 +863,13 @@
       "count": 41
     },
     {
+      "pageUrl": "mentors/lesson-05.html",
+      "theme": "dark",
+      "style": "vibrant",
+      "viewport": "900",
+      "count": 41
+    },
+    {
       "pageUrl": "mentors/lesson-01.html",
       "theme": "dark",
       "style": "vibrant",
@@ -766,6 +878,13 @@
     },
     {
       "pageUrl": "mentors/lesson-00.html",
+      "theme": "dark",
+      "style": "vibrant",
+      "viewport": "900",
+      "count": 41
+    },
+    {
+      "pageUrl": "mentors/lesson-06.html",
       "theme": "dark",
       "style": "vibrant",
       "viewport": "900",
@@ -815,6 +934,13 @@
     },
     {
       "pageUrl": "students/lesson-00.html",
+      "theme": "dark",
+      "style": "vibrant",
+      "viewport": "900",
+      "count": 41
+    },
+    {
+      "pageUrl": "students/lesson-06.html",
       "theme": "dark",
       "style": "vibrant",
       "viewport": "900",
@@ -962,7 +1088,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            A basic wand to cast your spells with.\n                        </p>",
+          "html": "<p class=\"accessory-description\">A basic wand to cast your spells with.</p>",
           "target": [
             ".accessory-item:nth-child(1) > .accessory-description"
           ],
@@ -994,7 +1120,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"catalogue-number\">\n                            Catalogue number: <strong>wand-magic-duotone-regular-full.svg</strong>\n                        </p>",
+          "html": "<p class=\"catalogue-number\">\n                Catalogue number:\n                <strong>wand-magic-duotone-regular-full.svg</strong>\n              </p>",
           "target": [
             ".accessory-item:nth-child(1) > .catalogue-number"
           ],
@@ -1083,7 +1209,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            Special Offer. This wand constantly leaks magic and may not cast spells exactly as intended.\n                        </p>",
+          "html": "<p class=\"accessory-description\">\n                Special Offer. This wand constantly leaks magic and may not cast spells exactly as intended.\n              </p>",
           "target": [
             ".accessory-item:nth-child(2) > .accessory-description"
           ],
@@ -1115,7 +1241,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"catalogue-number\">\n                            Catalogue number: <strong>wand-magic-sparkles-sharp-duotone-regular-full.svg</strong>\n                        </p>",
+          "html": "<p class=\"catalogue-number\">\n                Catalogue number:\n                <strong>wand-magic-sparkles-sharp-duotone-regular-full.svg</strong>\n              </p>",
           "target": [
             ".accessory-item:nth-child(2) > .catalogue-number"
           ],
@@ -1204,7 +1330,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            A classic black hat for any witch.\n                        </p>",
+          "html": "<p class=\"accessory-description\">A classic black hat for any witch.</p>",
           "target": [
             ".accessory-item:nth-child(3) > .accessory-description"
           ],
@@ -1236,7 +1362,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"catalogue-number\">\n                            Catalogue number: <strong>hat-witch-solid-full.svg</strong>\n                        </p>",
+          "html": "<p class=\"catalogue-number\">Catalogue number: <strong>hat-witch-solid-full.svg</strong></p>",
           "target": [
             ".accessory-item:nth-child(3) > .catalogue-number"
           ],
@@ -1332,7 +1458,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            A pointy hat with stars for any wizard.\n                        </p>",
+          "html": "<p class=\"accessory-description\">A pointy hat with stars for any wizard.</p>",
           "target": [
             ".accessory-item:nth-child(4) > .accessory-description"
           ],
@@ -1364,7 +1490,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"catalogue-number\">\n                            Catalogue number: <strong>hat-wizard-duotone-solid-full.svg</strong>\n                        </p>",
+          "html": "<p class=\"catalogue-number\">\n                Catalogue number:\n                <strong>hat-wizard-duotone-solid-full.svg</strong>\n              </p>",
           "target": [
             ".accessory-item:nth-child(4) > .catalogue-number"
           ],
@@ -1453,7 +1579,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            When the plain black hat just won’t do.\n                        </p>",
+          "html": "<p class=\"accessory-description\">When the plain black hat just won’t do.</p>",
           "target": [
             ".accessory-item:nth-child(5) > .accessory-description"
           ],
@@ -1485,7 +1611,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"catalogue-number\">\n                            Catalogue number: <strong>hat-witch-sharp-duotone-regular-full.svg</strong>\n                        </p>",
+          "html": "<p class=\"catalogue-number\">\n                Catalogue number:\n                <strong>hat-witch-sharp-duotone-regular-full.svg</strong>\n              </p>",
           "target": [
             ".accessory-item:nth-child(5) > .catalogue-number"
           ],
@@ -1574,7 +1700,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            A light broomstick for any witch or wizard who needs to get around quickly. Can also be used for sweeping dusty floors.\n                        </p>",
+          "html": "<p class=\"accessory-description\">\n                A light broomstick for any witch or wizard who needs to get around quickly. Can also be used for\n                sweeping dusty floors.\n              </p>",
           "target": [
             ".accessory-item:nth-child(6) > .accessory-description"
           ],
@@ -1638,7 +1764,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            A sturdy broomstick for those tough cleaning jobs or long-distance flying. Can carry 2 people (or 1 large wizard) and a small animal familiar, not including ravens as they can fly alongside.\n                        </p>",
+          "html": "<p class=\"accessory-description\">\n                A sturdy broomstick for those tough cleaning jobs or long-distance flying. Can carry 2 people (or 1\n                large wizard) and a small animal familiar, not including ravens as they can fly alongside.\n              </p>",
           "target": [
             ".accessory-item:nth-child(7) > .accessory-description"
           ],
@@ -1670,7 +1796,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"catalogue-number\">\n                            Catalogue number: <strong>broom-wide-duotone-regular-full.svg</strong>\n                        </p>",
+          "html": "<p class=\"catalogue-number\">\n                Catalogue number:\n                <strong>broom-wide-duotone-regular-full.svg</strong>\n              </p>",
           "target": [
             ".accessory-item:nth-child(7) > .catalogue-number"
           ],
@@ -1759,7 +1885,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            Perfect for making potions and magical drinks. Can be used as a washing up bowl in an emergency. Please wash well after use.\n                        </p>",
+          "html": "<p class=\"accessory-description\">\n                Perfect for making potions and magical drinks. Can be used as a washing up bowl in an emergency. Please\n                wash well after use.\n              </p>",
           "target": [
             ".accessory-item:nth-child(8) > .accessory-description"
           ],
@@ -1823,7 +1949,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            A handy flask for holding potions and magical drinks. Comes with a secure stopper to stop spills.\n                        </p>",
+          "html": "<p class=\"accessory-description\">\n                A handy flask for holding potions and magical drinks. Comes with a secure stopper to stop spills.\n              </p>",
           "target": [
             ".accessory-item:nth-child(9) > .accessory-description"
           ],
@@ -1855,7 +1981,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"catalogue-number\">\n                            Catalogue number: <strong>flask-round-potion-duotone-light-full.svg</strong>\n                        </p>",
+          "html": "<p class=\"catalogue-number\">\n                Catalogue number:\n                <strong>flask-round-potion-duotone-light-full.svg</strong>\n              </p>",
           "target": [
             ".accessory-item:nth-child(9) > .catalogue-number"
           ],
@@ -2008,7 +2134,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            Does your spell book ever close just when you get to the important part? This magic book stays open for easy reading. Note: Cannot be stored on a book shelf as it will not close properly.\n                        </p>",
+          "html": "<p class=\"accessory-description\">\n                Does your spell book ever close just when you get to the important part? This magic book stays open for\n                easy reading. Note: Cannot be stored on a book shelf as it will not close properly.\n              </p>",
           "target": [
             ".accessory-item:nth-child(11) > .accessory-description"
           ],
@@ -2040,7 +2166,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"catalogue-number\">\n                            Catalogue number: <strong>book-open-lines-duotone-regular-full.svg</strong>\n                        </p>",
+          "html": "<p class=\"catalogue-number\">\n                Catalogue number:\n                <strong>book-open-lines-duotone-regular-full.svg</strong>\n              </p>",
           "target": [
             ".accessory-item:nth-child(11) > .catalogue-number"
           ],
@@ -2129,7 +2255,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            A candle holder for casting spells at night and creating a special mood. Comes with a variety of assorted magical candles. Black dribbly candles for evil rites sold separately.\n                        </p>",
+          "html": "<p class=\"accessory-description\">\n                A candle holder for casting spells at night and creating a special mood. Comes with a variety of\n                assorted magical candles. Black dribbly candles for evil rites sold separately.\n              </p>",
           "target": [
             ".accessory-item:nth-child(12) > .accessory-description"
           ],
@@ -2161,7 +2287,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"catalogue-number\">\n                            Catalogue number: <strong>candle-holder-duotone-light-full.svg</strong>\n                        </p>",
+          "html": "<p class=\"catalogue-number\">\n                Catalogue number:\n                <strong>candle-holder-duotone-light-full.svg</strong>\n              </p>",
           "target": [
             ".accessory-item:nth-child(12) > .catalogue-number"
           ],
@@ -2250,7 +2376,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            Useful for calling thunderstorms on dry days or smiting your enemies. Batteries not included.\n                        </p>",
+          "html": "<p class=\"accessory-description\">\n                Useful for calling thunderstorms on dry days or smiting your enemies. Batteries not included.\n              </p>",
           "target": [
             ".accessory-item:nth-child(13) > .accessory-description"
           ],
@@ -2282,7 +2408,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"catalogue-number\">\n                            Catalogue number: <strong>cloud-bolt-sharp-duotone-light-full.svg</strong>\n                        </p>",
+          "html": "<p class=\"catalogue-number\">\n                Catalogue number:\n                <strong>cloud-bolt-sharp-duotone-light-full.svg</strong>\n              </p>",
           "target": [
             ".accessory-item:nth-child(13) > .catalogue-number"
           ],
@@ -2371,7 +2497,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            <strong>Part of our Fun Familiars range.</strong> A friendly cat for any witch or wizard. Comes in any colour you like as long as it’s black.\n                        </p>",
+          "html": "<p class=\"accessory-description\">\n                <strong>Part of our Fun Familiars range.</strong> A friendly cat for any witch or wizard. Comes in any\n                colour you like as long as it’s black.\n              </p>",
           "target": [
             ".accessory-item:nth-child(14) > .accessory-description"
           ],
@@ -2467,7 +2593,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            <strong>Part of our Fun Familiars range.</strong> A spooky bat for any wizard or witch. The manual says that it drinks blood, but in fact any red liquid will do. Squeaks at night.\n                        </p>",
+          "html": "<p class=\"accessory-description\">\n                <strong>Part of our Fun Familiars range.</strong> A spooky bat for any wizard or witch. The manual says\n                that it drinks blood, but in fact any red liquid will do. Squeaks at night.\n              </p>",
           "target": [
             ".accessory-item:nth-child(15) > .accessory-description"
           ],
@@ -2563,7 +2689,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            <strong>Part of our Fun Familiars range.</strong> A wise old bird for any wizard or witch. Known for being smart and funny. Only one previous owner who taught it to say “Nevermore” and now it won’t stop.\n                        </p>",
+          "html": "<p class=\"accessory-description\">",
           "target": [
             ".accessory-item:nth-child(16) > .accessory-description"
           ],
@@ -2659,7 +2785,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            <strong>Part of our Fun Familiars range.</strong> A small black dragon. Breathes fire when angry or upset. Needs regular feeding with coal. Handle with care as it may explode when scared.\n                        </p>",
+          "html": "<p class=\"accessory-description\">\n                <strong>Part of our Fun Familiars range.</strong> A small black dragon. Breathes fire when angry or\n                upset. Needs regular feeding with coal. Handle with care as it may explode when scared.\n              </p>",
           "target": [
             ".accessory-item:nth-child(17) > .accessory-description"
           ],
@@ -2851,7 +2977,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">",
+          "html": "<p class=\"accessory-description\">\n                <strong>Part of our Fun Familiars range.</strong>\n                A slimy toad. Poisonous skin makes it unsafe to touch. Missing a toe, due to use by witches in creating\n                double, double toil and trouble.\n              </p>",
           "target": [
             ".accessory-item:nth-child(19) > .accessory-description"
           ],
@@ -2947,7 +3073,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            <strong>Part of our Fun Familiars range.</strong> A large spider. Can creep into very small spaces. With its many eyes and legs this familiar is perfect for spying on your enemies and running away afterwards.\n                        </p>",
+          "html": "<p class=\"accessory-description\">\n                <strong>Part of our Fun Familiars range.</strong> A large spider. Can creep into very small spaces. With\n                its many eyes and legs this familiar is perfect for spying on your enemies and running away afterwards.\n              </p>",
           "target": [
             ".accessory-item:nth-child(20) > .accessory-description"
           ],
@@ -3043,7 +3169,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            <strong>Part of our Fun Familiars range.</strong> A very smart octopus. Can solve puzzles and open jam jars with its tentacles. Note: Do not leave alone with jam jars or unfinished sudoku puzzles.\n                        </p>",
+          "html": "<p class=\"accessory-description\">\n                <strong>Part of our Fun Familiars range.</strong> A very smart octopus. Can solve puzzles and open jam\n                jars with its tentacles. Note: Do not leave alone with jam jars or unfinished sudoku puzzles.\n              </p>",
           "target": [
             ".accessory-item:nth-child(21) > .accessory-description"
           ],
@@ -3164,7 +3290,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            A basic wand to cast your spells with.\n                        </p>",
+          "html": "<p class=\"accessory-description\">A basic wand to cast your spells with.</p>",
           "target": [
             ".accessory-item:nth-child(1) > .accessory-description"
           ],
@@ -3196,7 +3322,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"catalogue-number\">\n                            Catalogue number: <strong>wand-magic-duotone-regular-full.svg</strong>\n                        </p>",
+          "html": "<p class=\"catalogue-number\">\n                Catalogue number:\n                <strong>wand-magic-duotone-regular-full.svg</strong>\n              </p>",
           "target": [
             ".accessory-item:nth-child(1) > .catalogue-number"
           ],
@@ -3285,7 +3411,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            Special Offer. This wand constantly leaks magic and may not cast spells exactly as intended.\n                        </p>",
+          "html": "<p class=\"accessory-description\">\n                Special Offer. This wand constantly leaks magic and may not cast spells exactly as intended.\n              </p>",
           "target": [
             ".accessory-item:nth-child(2) > .accessory-description"
           ],
@@ -3317,7 +3443,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"catalogue-number\">\n                            Catalogue number: <strong>wand-magic-sparkles-sharp-duotone-regular-full.svg</strong>\n                        </p>",
+          "html": "<p class=\"catalogue-number\">\n                Catalogue number:\n                <strong>wand-magic-sparkles-sharp-duotone-regular-full.svg</strong>\n              </p>",
           "target": [
             ".accessory-item:nth-child(2) > .catalogue-number"
           ],
@@ -3406,7 +3532,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            A classic black hat for any witch.\n                        </p>",
+          "html": "<p class=\"accessory-description\">A classic black hat for any witch.</p>",
           "target": [
             ".accessory-item:nth-child(3) > .accessory-description"
           ],
@@ -3438,7 +3564,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"catalogue-number\">\n                            Catalogue number: <strong>hat-witch-solid-full.svg</strong>\n                        </p>",
+          "html": "<p class=\"catalogue-number\">Catalogue number: <strong>hat-witch-solid-full.svg</strong></p>",
           "target": [
             ".accessory-item:nth-child(3) > .catalogue-number"
           ],
@@ -3534,7 +3660,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            A pointy hat with stars for any wizard.\n                        </p>",
+          "html": "<p class=\"accessory-description\">A pointy hat with stars for any wizard.</p>",
           "target": [
             ".accessory-item:nth-child(4) > .accessory-description"
           ],
@@ -3566,7 +3692,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"catalogue-number\">\n                            Catalogue number: <strong>hat-wizard-duotone-solid-full.svg</strong>\n                        </p>",
+          "html": "<p class=\"catalogue-number\">\n                Catalogue number:\n                <strong>hat-wizard-duotone-solid-full.svg</strong>\n              </p>",
           "target": [
             ".accessory-item:nth-child(4) > .catalogue-number"
           ],
@@ -3655,7 +3781,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            When the plain black hat just won’t do.\n                        </p>",
+          "html": "<p class=\"accessory-description\">When the plain black hat just won’t do.</p>",
           "target": [
             ".accessory-item:nth-child(5) > .accessory-description"
           ],
@@ -3687,7 +3813,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"catalogue-number\">\n                            Catalogue number: <strong>hat-witch-sharp-duotone-regular-full.svg</strong>\n                        </p>",
+          "html": "<p class=\"catalogue-number\">\n                Catalogue number:\n                <strong>hat-witch-sharp-duotone-regular-full.svg</strong>\n              </p>",
           "target": [
             ".accessory-item:nth-child(5) > .catalogue-number"
           ],
@@ -3776,7 +3902,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            A light broomstick for any witch or wizard who needs to get around quickly. Can also be used for sweeping dusty floors.\n                        </p>",
+          "html": "<p class=\"accessory-description\">\n                A light broomstick for any witch or wizard who needs to get around quickly. Can also be used for\n                sweeping dusty floors.\n              </p>",
           "target": [
             ".accessory-item:nth-child(6) > .accessory-description"
           ],
@@ -3840,7 +3966,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            A sturdy broomstick for those tough cleaning jobs or long-distance flying. Can carry 2 people (or 1 large wizard) and a small animal familiar, not including ravens as they can fly alongside.\n                        </p>",
+          "html": "<p class=\"accessory-description\">\n                A sturdy broomstick for those tough cleaning jobs or long-distance flying. Can carry 2 people (or 1\n                large wizard) and a small animal familiar, not including ravens as they can fly alongside.\n              </p>",
           "target": [
             ".accessory-item:nth-child(7) > .accessory-description"
           ],
@@ -3872,7 +3998,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"catalogue-number\">\n                            Catalogue number: <strong>broom-wide-duotone-regular-full.svg</strong>\n                        </p>",
+          "html": "<p class=\"catalogue-number\">\n                Catalogue number:\n                <strong>broom-wide-duotone-regular-full.svg</strong>\n              </p>",
           "target": [
             ".accessory-item:nth-child(7) > .catalogue-number"
           ],
@@ -3961,7 +4087,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            Perfect for making potions and magical drinks. Can be used as a washing up bowl in an emergency. Please wash well after use.\n                        </p>",
+          "html": "<p class=\"accessory-description\">\n                Perfect for making potions and magical drinks. Can be used as a washing up bowl in an emergency. Please\n                wash well after use.\n              </p>",
           "target": [
             ".accessory-item:nth-child(8) > .accessory-description"
           ],
@@ -4025,7 +4151,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            A handy flask for holding potions and magical drinks. Comes with a secure stopper to stop spills.\n                        </p>",
+          "html": "<p class=\"accessory-description\">\n                A handy flask for holding potions and magical drinks. Comes with a secure stopper to stop spills.\n              </p>",
           "target": [
             ".accessory-item:nth-child(9) > .accessory-description"
           ],
@@ -4057,7 +4183,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"catalogue-number\">\n                            Catalogue number: <strong>flask-round-potion-duotone-light-full.svg</strong>\n                        </p>",
+          "html": "<p class=\"catalogue-number\">\n                Catalogue number:\n                <strong>flask-round-potion-duotone-light-full.svg</strong>\n              </p>",
           "target": [
             ".accessory-item:nth-child(9) > .catalogue-number"
           ],
@@ -4210,7 +4336,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            Does your spell book ever close just when you get to the important part? This magic book stays open for easy reading. Note: Cannot be stored on a book shelf as it will not close properly.\n                        </p>",
+          "html": "<p class=\"accessory-description\">\n                Does your spell book ever close just when you get to the important part? This magic book stays open for\n                easy reading. Note: Cannot be stored on a book shelf as it will not close properly.\n              </p>",
           "target": [
             ".accessory-item:nth-child(11) > .accessory-description"
           ],
@@ -4242,7 +4368,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"catalogue-number\">\n                            Catalogue number: <strong>book-open-lines-duotone-regular-full.svg</strong>\n                        </p>",
+          "html": "<p class=\"catalogue-number\">\n                Catalogue number:\n                <strong>book-open-lines-duotone-regular-full.svg</strong>\n              </p>",
           "target": [
             ".accessory-item:nth-child(11) > .catalogue-number"
           ],
@@ -4331,7 +4457,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            A candle holder for casting spells at night and creating a special mood. Comes with a variety of assorted magical candles. Black dribbly candles for evil rites sold separately.\n                        </p>",
+          "html": "<p class=\"accessory-description\">\n                A candle holder for casting spells at night and creating a special mood. Comes with a variety of\n                assorted magical candles. Black dribbly candles for evil rites sold separately.\n              </p>",
           "target": [
             ".accessory-item:nth-child(12) > .accessory-description"
           ],
@@ -4363,7 +4489,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"catalogue-number\">\n                            Catalogue number: <strong>candle-holder-duotone-light-full.svg</strong>\n                        </p>",
+          "html": "<p class=\"catalogue-number\">\n                Catalogue number:\n                <strong>candle-holder-duotone-light-full.svg</strong>\n              </p>",
           "target": [
             ".accessory-item:nth-child(12) > .catalogue-number"
           ],
@@ -4452,7 +4578,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            Useful for calling thunderstorms on dry days or smiting your enemies. Batteries not included.\n                        </p>",
+          "html": "<p class=\"accessory-description\">\n                Useful for calling thunderstorms on dry days or smiting your enemies. Batteries not included.\n              </p>",
           "target": [
             ".accessory-item:nth-child(13) > .accessory-description"
           ],
@@ -4484,7 +4610,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"catalogue-number\">\n                            Catalogue number: <strong>cloud-bolt-sharp-duotone-light-full.svg</strong>\n                        </p>",
+          "html": "<p class=\"catalogue-number\">\n                Catalogue number:\n                <strong>cloud-bolt-sharp-duotone-light-full.svg</strong>\n              </p>",
           "target": [
             ".accessory-item:nth-child(13) > .catalogue-number"
           ],
@@ -4573,7 +4699,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            <strong>Part of our Fun Familiars range.</strong> A friendly cat for any witch or wizard. Comes in any colour you like as long as it’s black.\n                        </p>",
+          "html": "<p class=\"accessory-description\">\n                <strong>Part of our Fun Familiars range.</strong> A friendly cat for any witch or wizard. Comes in any\n                colour you like as long as it’s black.\n              </p>",
           "target": [
             ".accessory-item:nth-child(14) > .accessory-description"
           ],
@@ -4669,7 +4795,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            <strong>Part of our Fun Familiars range.</strong> A spooky bat for any wizard or witch. The manual says that it drinks blood, but in fact any red liquid will do. Squeaks at night.\n                        </p>",
+          "html": "<p class=\"accessory-description\">\n                <strong>Part of our Fun Familiars range.</strong> A spooky bat for any wizard or witch. The manual says\n                that it drinks blood, but in fact any red liquid will do. Squeaks at night.\n              </p>",
           "target": [
             ".accessory-item:nth-child(15) > .accessory-description"
           ],
@@ -4765,7 +4891,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            <strong>Part of our Fun Familiars range.</strong> A wise old bird for any wizard or witch. Known for being smart and funny. Only one previous owner who taught it to say “Nevermore” and now it won’t stop.\n                        </p>",
+          "html": "<p class=\"accessory-description\">",
           "target": [
             ".accessory-item:nth-child(16) > .accessory-description"
           ],
@@ -4861,7 +4987,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            <strong>Part of our Fun Familiars range.</strong> A small black dragon. Breathes fire when angry or upset. Needs regular feeding with coal. Handle with care as it may explode when scared.\n                        </p>",
+          "html": "<p class=\"accessory-description\">\n                <strong>Part of our Fun Familiars range.</strong> A small black dragon. Breathes fire when angry or\n                upset. Needs regular feeding with coal. Handle with care as it may explode when scared.\n              </p>",
           "target": [
             ".accessory-item:nth-child(17) > .accessory-description"
           ],
@@ -5053,7 +5179,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">",
+          "html": "<p class=\"accessory-description\">\n                <strong>Part of our Fun Familiars range.</strong>\n                A slimy toad. Poisonous skin makes it unsafe to touch. Missing a toe, due to use by witches in creating\n                double, double toil and trouble.\n              </p>",
           "target": [
             ".accessory-item:nth-child(19) > .accessory-description"
           ],
@@ -5149,7 +5275,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            <strong>Part of our Fun Familiars range.</strong> A large spider. Can creep into very small spaces. With its many eyes and legs this familiar is perfect for spying on your enemies and running away afterwards.\n                        </p>",
+          "html": "<p class=\"accessory-description\">\n                <strong>Part of our Fun Familiars range.</strong> A large spider. Can creep into very small spaces. With\n                its many eyes and legs this familiar is perfect for spying on your enemies and running away afterwards.\n              </p>",
           "target": [
             ".accessory-item:nth-child(20) > .accessory-description"
           ],
@@ -5245,7 +5371,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            <strong>Part of our Fun Familiars range.</strong> A very smart octopus. Can solve puzzles and open jam jars with its tentacles. Note: Do not leave alone with jam jars or unfinished sudoku puzzles.\n                        </p>",
+          "html": "<p class=\"accessory-description\">\n                <strong>Part of our Fun Familiars range.</strong> A very smart octopus. Can solve puzzles and open jam\n                jars with its tentacles. Note: Do not leave alone with jam jars or unfinished sudoku puzzles.\n              </p>",
           "target": [
             ".accessory-item:nth-child(21) > .accessory-description"
           ],
@@ -5366,7 +5492,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            A basic wand to cast your spells with.\n                        </p>",
+          "html": "<p class=\"accessory-description\">A basic wand to cast your spells with.</p>",
           "target": [
             ".accessory-item:nth-child(1) > .accessory-description"
           ],
@@ -5398,7 +5524,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"catalogue-number\">\n                            Catalogue number: <strong>wand-magic-duotone-regular-full.svg</strong>\n                        </p>",
+          "html": "<p class=\"catalogue-number\">\n                Catalogue number:\n                <strong>wand-magic-duotone-regular-full.svg</strong>\n              </p>",
           "target": [
             ".accessory-item:nth-child(1) > .catalogue-number"
           ],
@@ -5487,7 +5613,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            Special Offer. This wand constantly leaks magic and may not cast spells exactly as intended.\n                        </p>",
+          "html": "<p class=\"accessory-description\">\n                Special Offer. This wand constantly leaks magic and may not cast spells exactly as intended.\n              </p>",
           "target": [
             ".accessory-item:nth-child(2) > .accessory-description"
           ],
@@ -5519,7 +5645,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"catalogue-number\">\n                            Catalogue number: <strong>wand-magic-sparkles-sharp-duotone-regular-full.svg</strong>\n                        </p>",
+          "html": "<p class=\"catalogue-number\">\n                Catalogue number:\n                <strong>wand-magic-sparkles-sharp-duotone-regular-full.svg</strong>\n              </p>",
           "target": [
             ".accessory-item:nth-child(2) > .catalogue-number"
           ],
@@ -5608,7 +5734,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            A classic black hat for any witch.\n                        </p>",
+          "html": "<p class=\"accessory-description\">A classic black hat for any witch.</p>",
           "target": [
             ".accessory-item:nth-child(3) > .accessory-description"
           ],
@@ -5640,7 +5766,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"catalogue-number\">\n                            Catalogue number: <strong>hat-witch-solid-full.svg</strong>\n                        </p>",
+          "html": "<p class=\"catalogue-number\">Catalogue number: <strong>hat-witch-solid-full.svg</strong></p>",
           "target": [
             ".accessory-item:nth-child(3) > .catalogue-number"
           ],
@@ -5736,7 +5862,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            A pointy hat with stars for any wizard.\n                        </p>",
+          "html": "<p class=\"accessory-description\">A pointy hat with stars for any wizard.</p>",
           "target": [
             ".accessory-item:nth-child(4) > .accessory-description"
           ],
@@ -5768,7 +5894,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"catalogue-number\">\n                            Catalogue number: <strong>hat-wizard-duotone-solid-full.svg</strong>\n                        </p>",
+          "html": "<p class=\"catalogue-number\">\n                Catalogue number:\n                <strong>hat-wizard-duotone-solid-full.svg</strong>\n              </p>",
           "target": [
             ".accessory-item:nth-child(4) > .catalogue-number"
           ],
@@ -5857,7 +5983,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            When the plain black hat just won’t do.\n                        </p>",
+          "html": "<p class=\"accessory-description\">When the plain black hat just won’t do.</p>",
           "target": [
             ".accessory-item:nth-child(5) > .accessory-description"
           ],
@@ -5889,7 +6015,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"catalogue-number\">\n                            Catalogue number: <strong>hat-witch-sharp-duotone-regular-full.svg</strong>\n                        </p>",
+          "html": "<p class=\"catalogue-number\">\n                Catalogue number:\n                <strong>hat-witch-sharp-duotone-regular-full.svg</strong>\n              </p>",
           "target": [
             ".accessory-item:nth-child(5) > .catalogue-number"
           ],
@@ -5978,7 +6104,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            A light broomstick for any witch or wizard who needs to get around quickly. Can also be used for sweeping dusty floors.\n                        </p>",
+          "html": "<p class=\"accessory-description\">\n                A light broomstick for any witch or wizard who needs to get around quickly. Can also be used for\n                sweeping dusty floors.\n              </p>",
           "target": [
             ".accessory-item:nth-child(6) > .accessory-description"
           ],
@@ -6042,7 +6168,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            A sturdy broomstick for those tough cleaning jobs or long-distance flying. Can carry 2 people (or 1 large wizard) and a small animal familiar, not including ravens as they can fly alongside.\n                        </p>",
+          "html": "<p class=\"accessory-description\">\n                A sturdy broomstick for those tough cleaning jobs or long-distance flying. Can carry 2 people (or 1\n                large wizard) and a small animal familiar, not including ravens as they can fly alongside.\n              </p>",
           "target": [
             ".accessory-item:nth-child(7) > .accessory-description"
           ],
@@ -6074,7 +6200,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"catalogue-number\">\n                            Catalogue number: <strong>broom-wide-duotone-regular-full.svg</strong>\n                        </p>",
+          "html": "<p class=\"catalogue-number\">\n                Catalogue number:\n                <strong>broom-wide-duotone-regular-full.svg</strong>\n              </p>",
           "target": [
             ".accessory-item:nth-child(7) > .catalogue-number"
           ],
@@ -6163,7 +6289,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            Perfect for making potions and magical drinks. Can be used as a washing up bowl in an emergency. Please wash well after use.\n                        </p>",
+          "html": "<p class=\"accessory-description\">\n                Perfect for making potions and magical drinks. Can be used as a washing up bowl in an emergency. Please\n                wash well after use.\n              </p>",
           "target": [
             ".accessory-item:nth-child(8) > .accessory-description"
           ],
@@ -6227,7 +6353,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            A handy flask for holding potions and magical drinks. Comes with a secure stopper to stop spills.\n                        </p>",
+          "html": "<p class=\"accessory-description\">\n                A handy flask for holding potions and magical drinks. Comes with a secure stopper to stop spills.\n              </p>",
           "target": [
             ".accessory-item:nth-child(9) > .accessory-description"
           ],
@@ -6259,7 +6385,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"catalogue-number\">\n                            Catalogue number: <strong>flask-round-potion-duotone-light-full.svg</strong>\n                        </p>",
+          "html": "<p class=\"catalogue-number\">\n                Catalogue number:\n                <strong>flask-round-potion-duotone-light-full.svg</strong>\n              </p>",
           "target": [
             ".accessory-item:nth-child(9) > .catalogue-number"
           ],
@@ -6412,7 +6538,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            Does your spell book ever close just when you get to the important part? This magic book stays open for easy reading. Note: Cannot be stored on a book shelf as it will not close properly.\n                        </p>",
+          "html": "<p class=\"accessory-description\">\n                Does your spell book ever close just when you get to the important part? This magic book stays open for\n                easy reading. Note: Cannot be stored on a book shelf as it will not close properly.\n              </p>",
           "target": [
             ".accessory-item:nth-child(11) > .accessory-description"
           ],
@@ -6444,7 +6570,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"catalogue-number\">\n                            Catalogue number: <strong>book-open-lines-duotone-regular-full.svg</strong>\n                        </p>",
+          "html": "<p class=\"catalogue-number\">\n                Catalogue number:\n                <strong>book-open-lines-duotone-regular-full.svg</strong>\n              </p>",
           "target": [
             ".accessory-item:nth-child(11) > .catalogue-number"
           ],
@@ -6533,7 +6659,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            A candle holder for casting spells at night and creating a special mood. Comes with a variety of assorted magical candles. Black dribbly candles for evil rites sold separately.\n                        </p>",
+          "html": "<p class=\"accessory-description\">\n                A candle holder for casting spells at night and creating a special mood. Comes with a variety of\n                assorted magical candles. Black dribbly candles for evil rites sold separately.\n              </p>",
           "target": [
             ".accessory-item:nth-child(12) > .accessory-description"
           ],
@@ -6565,7 +6691,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"catalogue-number\">\n                            Catalogue number: <strong>candle-holder-duotone-light-full.svg</strong>\n                        </p>",
+          "html": "<p class=\"catalogue-number\">\n                Catalogue number:\n                <strong>candle-holder-duotone-light-full.svg</strong>\n              </p>",
           "target": [
             ".accessory-item:nth-child(12) > .catalogue-number"
           ],
@@ -6654,7 +6780,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            Useful for calling thunderstorms on dry days or smiting your enemies. Batteries not included.\n                        </p>",
+          "html": "<p class=\"accessory-description\">\n                Useful for calling thunderstorms on dry days or smiting your enemies. Batteries not included.\n              </p>",
           "target": [
             ".accessory-item:nth-child(13) > .accessory-description"
           ],
@@ -6686,7 +6812,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"catalogue-number\">\n                            Catalogue number: <strong>cloud-bolt-sharp-duotone-light-full.svg</strong>\n                        </p>",
+          "html": "<p class=\"catalogue-number\">\n                Catalogue number:\n                <strong>cloud-bolt-sharp-duotone-light-full.svg</strong>\n              </p>",
           "target": [
             ".accessory-item:nth-child(13) > .catalogue-number"
           ],
@@ -6775,7 +6901,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            <strong>Part of our Fun Familiars range.</strong> A friendly cat for any witch or wizard. Comes in any colour you like as long as it’s black.\n                        </p>",
+          "html": "<p class=\"accessory-description\">\n                <strong>Part of our Fun Familiars range.</strong> A friendly cat for any witch or wizard. Comes in any\n                colour you like as long as it’s black.\n              </p>",
           "target": [
             ".accessory-item:nth-child(14) > .accessory-description"
           ],
@@ -6871,7 +6997,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            <strong>Part of our Fun Familiars range.</strong> A spooky bat for any wizard or witch. The manual says that it drinks blood, but in fact any red liquid will do. Squeaks at night.\n                        </p>",
+          "html": "<p class=\"accessory-description\">\n                <strong>Part of our Fun Familiars range.</strong> A spooky bat for any wizard or witch. The manual says\n                that it drinks blood, but in fact any red liquid will do. Squeaks at night.\n              </p>",
           "target": [
             ".accessory-item:nth-child(15) > .accessory-description"
           ],
@@ -6967,7 +7093,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            <strong>Part of our Fun Familiars range.</strong> A wise old bird for any wizard or witch. Known for being smart and funny. Only one previous owner who taught it to say “Nevermore” and now it won’t stop.\n                        </p>",
+          "html": "<p class=\"accessory-description\">",
           "target": [
             ".accessory-item:nth-child(16) > .accessory-description"
           ],
@@ -7063,7 +7189,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            <strong>Part of our Fun Familiars range.</strong> A small black dragon. Breathes fire when angry or upset. Needs regular feeding with coal. Handle with care as it may explode when scared.\n                        </p>",
+          "html": "<p class=\"accessory-description\">\n                <strong>Part of our Fun Familiars range.</strong> A small black dragon. Breathes fire when angry or\n                upset. Needs regular feeding with coal. Handle with care as it may explode when scared.\n              </p>",
           "target": [
             ".accessory-item:nth-child(17) > .accessory-description"
           ],
@@ -7255,7 +7381,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">",
+          "html": "<p class=\"accessory-description\">\n                <strong>Part of our Fun Familiars range.</strong>\n                A slimy toad. Poisonous skin makes it unsafe to touch. Missing a toe, due to use by witches in creating\n                double, double toil and trouble.\n              </p>",
           "target": [
             ".accessory-item:nth-child(19) > .accessory-description"
           ],
@@ -7351,7 +7477,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            <strong>Part of our Fun Familiars range.</strong> A large spider. Can creep into very small spaces. With its many eyes and legs this familiar is perfect for spying on your enemies and running away afterwards.\n                        </p>",
+          "html": "<p class=\"accessory-description\">\n                <strong>Part of our Fun Familiars range.</strong> A large spider. Can creep into very small spaces. With\n                its many eyes and legs this familiar is perfect for spying on your enemies and running away afterwards.\n              </p>",
           "target": [
             ".accessory-item:nth-child(20) > .accessory-description"
           ],
@@ -7447,7 +7573,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            <strong>Part of our Fun Familiars range.</strong> A very smart octopus. Can solve puzzles and open jam jars with its tentacles. Note: Do not leave alone with jam jars or unfinished sudoku puzzles.\n                        </p>",
+          "html": "<p class=\"accessory-description\">\n                <strong>Part of our Fun Familiars range.</strong> A very smart octopus. Can solve puzzles and open jam\n                jars with its tentacles. Note: Do not leave alone with jam jars or unfinished sudoku puzzles.\n              </p>",
           "target": [
             ".accessory-item:nth-child(21) > .accessory-description"
           ],
@@ -7568,7 +7694,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            A basic wand to cast your spells with.\n                        </p>",
+          "html": "<p class=\"accessory-description\">A basic wand to cast your spells with.</p>",
           "target": [
             ".accessory-item:nth-child(1) > .accessory-description"
           ],
@@ -7600,7 +7726,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"catalogue-number\">\n                            Catalogue number: <strong>wand-magic-duotone-regular-full.svg</strong>\n                        </p>",
+          "html": "<p class=\"catalogue-number\">\n                Catalogue number:\n                <strong>wand-magic-duotone-regular-full.svg</strong>\n              </p>",
           "target": [
             ".accessory-item:nth-child(1) > .catalogue-number"
           ],
@@ -7689,7 +7815,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            Special Offer. This wand constantly leaks magic and may not cast spells exactly as intended.\n                        </p>",
+          "html": "<p class=\"accessory-description\">\n                Special Offer. This wand constantly leaks magic and may not cast spells exactly as intended.\n              </p>",
           "target": [
             ".accessory-item:nth-child(2) > .accessory-description"
           ],
@@ -7721,7 +7847,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"catalogue-number\">\n                            Catalogue number: <strong>wand-magic-sparkles-sharp-duotone-regular-full.svg</strong>\n                        </p>",
+          "html": "<p class=\"catalogue-number\">\n                Catalogue number:\n                <strong>wand-magic-sparkles-sharp-duotone-regular-full.svg</strong>\n              </p>",
           "target": [
             ".accessory-item:nth-child(2) > .catalogue-number"
           ],
@@ -7810,7 +7936,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            A classic black hat for any witch.\n                        </p>",
+          "html": "<p class=\"accessory-description\">A classic black hat for any witch.</p>",
           "target": [
             ".accessory-item:nth-child(3) > .accessory-description"
           ],
@@ -7842,7 +7968,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"catalogue-number\">\n                            Catalogue number: <strong>hat-witch-solid-full.svg</strong>\n                        </p>",
+          "html": "<p class=\"catalogue-number\">Catalogue number: <strong>hat-witch-solid-full.svg</strong></p>",
           "target": [
             ".accessory-item:nth-child(3) > .catalogue-number"
           ],
@@ -7938,7 +8064,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            A pointy hat with stars for any wizard.\n                        </p>",
+          "html": "<p class=\"accessory-description\">A pointy hat with stars for any wizard.</p>",
           "target": [
             ".accessory-item:nth-child(4) > .accessory-description"
           ],
@@ -7970,7 +8096,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"catalogue-number\">\n                            Catalogue number: <strong>hat-wizard-duotone-solid-full.svg</strong>\n                        </p>",
+          "html": "<p class=\"catalogue-number\">\n                Catalogue number:\n                <strong>hat-wizard-duotone-solid-full.svg</strong>\n              </p>",
           "target": [
             ".accessory-item:nth-child(4) > .catalogue-number"
           ],
@@ -8059,7 +8185,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            When the plain black hat just won’t do.\n                        </p>",
+          "html": "<p class=\"accessory-description\">When the plain black hat just won’t do.</p>",
           "target": [
             ".accessory-item:nth-child(5) > .accessory-description"
           ],
@@ -8091,7 +8217,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"catalogue-number\">\n                            Catalogue number: <strong>hat-witch-sharp-duotone-regular-full.svg</strong>\n                        </p>",
+          "html": "<p class=\"catalogue-number\">\n                Catalogue number:\n                <strong>hat-witch-sharp-duotone-regular-full.svg</strong>\n              </p>",
           "target": [
             ".accessory-item:nth-child(5) > .catalogue-number"
           ],
@@ -8180,7 +8306,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            A light broomstick for any witch or wizard who needs to get around quickly. Can also be used for sweeping dusty floors.\n                        </p>",
+          "html": "<p class=\"accessory-description\">\n                A light broomstick for any witch or wizard who needs to get around quickly. Can also be used for\n                sweeping dusty floors.\n              </p>",
           "target": [
             ".accessory-item:nth-child(6) > .accessory-description"
           ],
@@ -8244,7 +8370,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            A sturdy broomstick for those tough cleaning jobs or long-distance flying. Can carry 2 people (or 1 large wizard) and a small animal familiar, not including ravens as they can fly alongside.\n                        </p>",
+          "html": "<p class=\"accessory-description\">\n                A sturdy broomstick for those tough cleaning jobs or long-distance flying. Can carry 2 people (or 1\n                large wizard) and a small animal familiar, not including ravens as they can fly alongside.\n              </p>",
           "target": [
             ".accessory-item:nth-child(7) > .accessory-description"
           ],
@@ -8276,7 +8402,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"catalogue-number\">\n                            Catalogue number: <strong>broom-wide-duotone-regular-full.svg</strong>\n                        </p>",
+          "html": "<p class=\"catalogue-number\">\n                Catalogue number:\n                <strong>broom-wide-duotone-regular-full.svg</strong>\n              </p>",
           "target": [
             ".accessory-item:nth-child(7) > .catalogue-number"
           ],
@@ -8365,7 +8491,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            Perfect for making potions and magical drinks. Can be used as a washing up bowl in an emergency. Please wash well after use.\n                        </p>",
+          "html": "<p class=\"accessory-description\">\n                Perfect for making potions and magical drinks. Can be used as a washing up bowl in an emergency. Please\n                wash well after use.\n              </p>",
           "target": [
             ".accessory-item:nth-child(8) > .accessory-description"
           ],
@@ -8429,7 +8555,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            A handy flask for holding potions and magical drinks. Comes with a secure stopper to stop spills.\n                        </p>",
+          "html": "<p class=\"accessory-description\">\n                A handy flask for holding potions and magical drinks. Comes with a secure stopper to stop spills.\n              </p>",
           "target": [
             ".accessory-item:nth-child(9) > .accessory-description"
           ],
@@ -8461,7 +8587,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"catalogue-number\">\n                            Catalogue number: <strong>flask-round-potion-duotone-light-full.svg</strong>\n                        </p>",
+          "html": "<p class=\"catalogue-number\">\n                Catalogue number:\n                <strong>flask-round-potion-duotone-light-full.svg</strong>\n              </p>",
           "target": [
             ".accessory-item:nth-child(9) > .catalogue-number"
           ],
@@ -8614,7 +8740,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            Does your spell book ever close just when you get to the important part? This magic book stays open for easy reading. Note: Cannot be stored on a book shelf as it will not close properly.\n                        </p>",
+          "html": "<p class=\"accessory-description\">\n                Does your spell book ever close just when you get to the important part? This magic book stays open for\n                easy reading. Note: Cannot be stored on a book shelf as it will not close properly.\n              </p>",
           "target": [
             ".accessory-item:nth-child(11) > .accessory-description"
           ],
@@ -8646,7 +8772,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"catalogue-number\">\n                            Catalogue number: <strong>book-open-lines-duotone-regular-full.svg</strong>\n                        </p>",
+          "html": "<p class=\"catalogue-number\">\n                Catalogue number:\n                <strong>book-open-lines-duotone-regular-full.svg</strong>\n              </p>",
           "target": [
             ".accessory-item:nth-child(11) > .catalogue-number"
           ],
@@ -8735,7 +8861,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            A candle holder for casting spells at night and creating a special mood. Comes with a variety of assorted magical candles. Black dribbly candles for evil rites sold separately.\n                        </p>",
+          "html": "<p class=\"accessory-description\">\n                A candle holder for casting spells at night and creating a special mood. Comes with a variety of\n                assorted magical candles. Black dribbly candles for evil rites sold separately.\n              </p>",
           "target": [
             ".accessory-item:nth-child(12) > .accessory-description"
           ],
@@ -8767,7 +8893,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"catalogue-number\">\n                            Catalogue number: <strong>candle-holder-duotone-light-full.svg</strong>\n                        </p>",
+          "html": "<p class=\"catalogue-number\">\n                Catalogue number:\n                <strong>candle-holder-duotone-light-full.svg</strong>\n              </p>",
           "target": [
             ".accessory-item:nth-child(12) > .catalogue-number"
           ],
@@ -8856,7 +8982,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            Useful for calling thunderstorms on dry days or smiting your enemies. Batteries not included.\n                        </p>",
+          "html": "<p class=\"accessory-description\">\n                Useful for calling thunderstorms on dry days or smiting your enemies. Batteries not included.\n              </p>",
           "target": [
             ".accessory-item:nth-child(13) > .accessory-description"
           ],
@@ -8888,7 +9014,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"catalogue-number\">\n                            Catalogue number: <strong>cloud-bolt-sharp-duotone-light-full.svg</strong>\n                        </p>",
+          "html": "<p class=\"catalogue-number\">\n                Catalogue number:\n                <strong>cloud-bolt-sharp-duotone-light-full.svg</strong>\n              </p>",
           "target": [
             ".accessory-item:nth-child(13) > .catalogue-number"
           ],
@@ -8977,7 +9103,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            <strong>Part of our Fun Familiars range.</strong> A friendly cat for any witch or wizard. Comes in any colour you like as long as it’s black.\n                        </p>",
+          "html": "<p class=\"accessory-description\">\n                <strong>Part of our Fun Familiars range.</strong> A friendly cat for any witch or wizard. Comes in any\n                colour you like as long as it’s black.\n              </p>",
           "target": [
             ".accessory-item:nth-child(14) > .accessory-description"
           ],
@@ -9073,7 +9199,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            <strong>Part of our Fun Familiars range.</strong> A spooky bat for any wizard or witch. The manual says that it drinks blood, but in fact any red liquid will do. Squeaks at night.\n                        </p>",
+          "html": "<p class=\"accessory-description\">\n                <strong>Part of our Fun Familiars range.</strong> A spooky bat for any wizard or witch. The manual says\n                that it drinks blood, but in fact any red liquid will do. Squeaks at night.\n              </p>",
           "target": [
             ".accessory-item:nth-child(15) > .accessory-description"
           ],
@@ -9169,7 +9295,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            <strong>Part of our Fun Familiars range.</strong> A wise old bird for any wizard or witch. Known for being smart and funny. Only one previous owner who taught it to say “Nevermore” and now it won’t stop.\n                        </p>",
+          "html": "<p class=\"accessory-description\">",
           "target": [
             ".accessory-item:nth-child(16) > .accessory-description"
           ],
@@ -9265,7 +9391,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            <strong>Part of our Fun Familiars range.</strong> A small black dragon. Breathes fire when angry or upset. Needs regular feeding with coal. Handle with care as it may explode when scared.\n                        </p>",
+          "html": "<p class=\"accessory-description\">\n                <strong>Part of our Fun Familiars range.</strong> A small black dragon. Breathes fire when angry or\n                upset. Needs regular feeding with coal. Handle with care as it may explode when scared.\n              </p>",
           "target": [
             ".accessory-item:nth-child(17) > .accessory-description"
           ],
@@ -9457,7 +9583,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">",
+          "html": "<p class=\"accessory-description\">\n                <strong>Part of our Fun Familiars range.</strong>\n                A slimy toad. Poisonous skin makes it unsafe to touch. Missing a toe, due to use by witches in creating\n                double, double toil and trouble.\n              </p>",
           "target": [
             ".accessory-item:nth-child(19) > .accessory-description"
           ],
@@ -9553,7 +9679,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            <strong>Part of our Fun Familiars range.</strong> A large spider. Can creep into very small spaces. With its many eyes and legs this familiar is perfect for spying on your enemies and running away afterwards.\n                        </p>",
+          "html": "<p class=\"accessory-description\">\n                <strong>Part of our Fun Familiars range.</strong> A large spider. Can creep into very small spaces. With\n                its many eyes and legs this familiar is perfect for spying on your enemies and running away afterwards.\n              </p>",
           "target": [
             ".accessory-item:nth-child(20) > .accessory-description"
           ],
@@ -9649,7 +9775,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            <strong>Part of our Fun Familiars range.</strong> A very smart octopus. Can solve puzzles and open jam jars with its tentacles. Note: Do not leave alone with jam jars or unfinished sudoku puzzles.\n                        </p>",
+          "html": "<p class=\"accessory-description\">\n                <strong>Part of our Fun Familiars range.</strong> A very smart octopus. Can solve puzzles and open jam\n                jars with its tentacles. Note: Do not leave alone with jam jars or unfinished sudoku puzzles.\n              </p>",
           "target": [
             ".accessory-item:nth-child(21) > .accessory-description"
           ],
@@ -9770,7 +9896,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            A basic wand to cast your spells with.\n                        </p>",
+          "html": "<p class=\"accessory-description\">A basic wand to cast your spells with.</p>",
           "target": [
             ".accessory-item:nth-child(1) > .accessory-description"
           ],
@@ -9802,7 +9928,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"catalogue-number\">\n                            Catalogue number: <strong>wand-magic-duotone-regular-full.svg</strong>\n                        </p>",
+          "html": "<p class=\"catalogue-number\">\n                Catalogue number:\n                <strong>wand-magic-duotone-regular-full.svg</strong>\n              </p>",
           "target": [
             ".accessory-item:nth-child(1) > .catalogue-number"
           ],
@@ -9891,7 +10017,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            Special Offer. This wand constantly leaks magic and may not cast spells exactly as intended.\n                        </p>",
+          "html": "<p class=\"accessory-description\">\n                Special Offer. This wand constantly leaks magic and may not cast spells exactly as intended.\n              </p>",
           "target": [
             ".accessory-item:nth-child(2) > .accessory-description"
           ],
@@ -9923,7 +10049,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"catalogue-number\">\n                            Catalogue number: <strong>wand-magic-sparkles-sharp-duotone-regular-full.svg</strong>\n                        </p>",
+          "html": "<p class=\"catalogue-number\">\n                Catalogue number:\n                <strong>wand-magic-sparkles-sharp-duotone-regular-full.svg</strong>\n              </p>",
           "target": [
             ".accessory-item:nth-child(2) > .catalogue-number"
           ],
@@ -10012,7 +10138,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            A classic black hat for any witch.\n                        </p>",
+          "html": "<p class=\"accessory-description\">A classic black hat for any witch.</p>",
           "target": [
             ".accessory-item:nth-child(3) > .accessory-description"
           ],
@@ -10044,7 +10170,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"catalogue-number\">\n                            Catalogue number: <strong>hat-witch-solid-full.svg</strong>\n                        </p>",
+          "html": "<p class=\"catalogue-number\">Catalogue number: <strong>hat-witch-solid-full.svg</strong></p>",
           "target": [
             ".accessory-item:nth-child(3) > .catalogue-number"
           ],
@@ -10140,7 +10266,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            A pointy hat with stars for any wizard.\n                        </p>",
+          "html": "<p class=\"accessory-description\">A pointy hat with stars for any wizard.</p>",
           "target": [
             ".accessory-item:nth-child(4) > .accessory-description"
           ],
@@ -10172,7 +10298,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"catalogue-number\">\n                            Catalogue number: <strong>hat-wizard-duotone-solid-full.svg</strong>\n                        </p>",
+          "html": "<p class=\"catalogue-number\">\n                Catalogue number:\n                <strong>hat-wizard-duotone-solid-full.svg</strong>\n              </p>",
           "target": [
             ".accessory-item:nth-child(4) > .catalogue-number"
           ],
@@ -10261,7 +10387,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            When the plain black hat just won’t do.\n                        </p>",
+          "html": "<p class=\"accessory-description\">When the plain black hat just won’t do.</p>",
           "target": [
             ".accessory-item:nth-child(5) > .accessory-description"
           ],
@@ -10293,7 +10419,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"catalogue-number\">\n                            Catalogue number: <strong>hat-witch-sharp-duotone-regular-full.svg</strong>\n                        </p>",
+          "html": "<p class=\"catalogue-number\">\n                Catalogue number:\n                <strong>hat-witch-sharp-duotone-regular-full.svg</strong>\n              </p>",
           "target": [
             ".accessory-item:nth-child(5) > .catalogue-number"
           ],
@@ -10382,7 +10508,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            A light broomstick for any witch or wizard who needs to get around quickly. Can also be used for sweeping dusty floors.\n                        </p>",
+          "html": "<p class=\"accessory-description\">\n                A light broomstick for any witch or wizard who needs to get around quickly. Can also be used for\n                sweeping dusty floors.\n              </p>",
           "target": [
             ".accessory-item:nth-child(6) > .accessory-description"
           ],
@@ -10446,7 +10572,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            A sturdy broomstick for those tough cleaning jobs or long-distance flying. Can carry 2 people (or 1 large wizard) and a small animal familiar, not including ravens as they can fly alongside.\n                        </p>",
+          "html": "<p class=\"accessory-description\">\n                A sturdy broomstick for those tough cleaning jobs or long-distance flying. Can carry 2 people (or 1\n                large wizard) and a small animal familiar, not including ravens as they can fly alongside.\n              </p>",
           "target": [
             ".accessory-item:nth-child(7) > .accessory-description"
           ],
@@ -10478,7 +10604,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"catalogue-number\">\n                            Catalogue number: <strong>broom-wide-duotone-regular-full.svg</strong>\n                        </p>",
+          "html": "<p class=\"catalogue-number\">\n                Catalogue number:\n                <strong>broom-wide-duotone-regular-full.svg</strong>\n              </p>",
           "target": [
             ".accessory-item:nth-child(7) > .catalogue-number"
           ],
@@ -10567,7 +10693,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            Perfect for making potions and magical drinks. Can be used as a washing up bowl in an emergency. Please wash well after use.\n                        </p>",
+          "html": "<p class=\"accessory-description\">\n                Perfect for making potions and magical drinks. Can be used as a washing up bowl in an emergency. Please\n                wash well after use.\n              </p>",
           "target": [
             ".accessory-item:nth-child(8) > .accessory-description"
           ],
@@ -10631,7 +10757,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            A handy flask for holding potions and magical drinks. Comes with a secure stopper to stop spills.\n                        </p>",
+          "html": "<p class=\"accessory-description\">\n                A handy flask for holding potions and magical drinks. Comes with a secure stopper to stop spills.\n              </p>",
           "target": [
             ".accessory-item:nth-child(9) > .accessory-description"
           ],
@@ -10663,7 +10789,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"catalogue-number\">\n                            Catalogue number: <strong>flask-round-potion-duotone-light-full.svg</strong>\n                        </p>",
+          "html": "<p class=\"catalogue-number\">\n                Catalogue number:\n                <strong>flask-round-potion-duotone-light-full.svg</strong>\n              </p>",
           "target": [
             ".accessory-item:nth-child(9) > .catalogue-number"
           ],
@@ -10816,7 +10942,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            Does your spell book ever close just when you get to the important part? This magic book stays open for easy reading. Note: Cannot be stored on a book shelf as it will not close properly.\n                        </p>",
+          "html": "<p class=\"accessory-description\">\n                Does your spell book ever close just when you get to the important part? This magic book stays open for\n                easy reading. Note: Cannot be stored on a book shelf as it will not close properly.\n              </p>",
           "target": [
             ".accessory-item:nth-child(11) > .accessory-description"
           ],
@@ -10848,7 +10974,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"catalogue-number\">\n                            Catalogue number: <strong>book-open-lines-duotone-regular-full.svg</strong>\n                        </p>",
+          "html": "<p class=\"catalogue-number\">\n                Catalogue number:\n                <strong>book-open-lines-duotone-regular-full.svg</strong>\n              </p>",
           "target": [
             ".accessory-item:nth-child(11) > .catalogue-number"
           ],
@@ -10937,7 +11063,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            A candle holder for casting spells at night and creating a special mood. Comes with a variety of assorted magical candles. Black dribbly candles for evil rites sold separately.\n                        </p>",
+          "html": "<p class=\"accessory-description\">\n                A candle holder for casting spells at night and creating a special mood. Comes with a variety of\n                assorted magical candles. Black dribbly candles for evil rites sold separately.\n              </p>",
           "target": [
             ".accessory-item:nth-child(12) > .accessory-description"
           ],
@@ -10969,7 +11095,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"catalogue-number\">\n                            Catalogue number: <strong>candle-holder-duotone-light-full.svg</strong>\n                        </p>",
+          "html": "<p class=\"catalogue-number\">\n                Catalogue number:\n                <strong>candle-holder-duotone-light-full.svg</strong>\n              </p>",
           "target": [
             ".accessory-item:nth-child(12) > .catalogue-number"
           ],
@@ -11058,7 +11184,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            Useful for calling thunderstorms on dry days or smiting your enemies. Batteries not included.\n                        </p>",
+          "html": "<p class=\"accessory-description\">\n                Useful for calling thunderstorms on dry days or smiting your enemies. Batteries not included.\n              </p>",
           "target": [
             ".accessory-item:nth-child(13) > .accessory-description"
           ],
@@ -11090,7 +11216,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"catalogue-number\">\n                            Catalogue number: <strong>cloud-bolt-sharp-duotone-light-full.svg</strong>\n                        </p>",
+          "html": "<p class=\"catalogue-number\">\n                Catalogue number:\n                <strong>cloud-bolt-sharp-duotone-light-full.svg</strong>\n              </p>",
           "target": [
             ".accessory-item:nth-child(13) > .catalogue-number"
           ],
@@ -11179,7 +11305,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            <strong>Part of our Fun Familiars range.</strong> A friendly cat for any witch or wizard. Comes in any colour you like as long as it’s black.\n                        </p>",
+          "html": "<p class=\"accessory-description\">\n                <strong>Part of our Fun Familiars range.</strong> A friendly cat for any witch or wizard. Comes in any\n                colour you like as long as it’s black.\n              </p>",
           "target": [
             ".accessory-item:nth-child(14) > .accessory-description"
           ],
@@ -11275,7 +11401,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            <strong>Part of our Fun Familiars range.</strong> A spooky bat for any wizard or witch. The manual says that it drinks blood, but in fact any red liquid will do. Squeaks at night.\n                        </p>",
+          "html": "<p class=\"accessory-description\">\n                <strong>Part of our Fun Familiars range.</strong> A spooky bat for any wizard or witch. The manual says\n                that it drinks blood, but in fact any red liquid will do. Squeaks at night.\n              </p>",
           "target": [
             ".accessory-item:nth-child(15) > .accessory-description"
           ],
@@ -11371,7 +11497,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            <strong>Part of our Fun Familiars range.</strong> A wise old bird for any wizard or witch. Known for being smart and funny. Only one previous owner who taught it to say “Nevermore” and now it won’t stop.\n                        </p>",
+          "html": "<p class=\"accessory-description\">",
           "target": [
             ".accessory-item:nth-child(16) > .accessory-description"
           ],
@@ -11467,7 +11593,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            <strong>Part of our Fun Familiars range.</strong> A small black dragon. Breathes fire when angry or upset. Needs regular feeding with coal. Handle with care as it may explode when scared.\n                        </p>",
+          "html": "<p class=\"accessory-description\">\n                <strong>Part of our Fun Familiars range.</strong> A small black dragon. Breathes fire when angry or\n                upset. Needs regular feeding with coal. Handle with care as it may explode when scared.\n              </p>",
           "target": [
             ".accessory-item:nth-child(17) > .accessory-description"
           ],
@@ -11659,7 +11785,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">",
+          "html": "<p class=\"accessory-description\">\n                <strong>Part of our Fun Familiars range.</strong>\n                A slimy toad. Poisonous skin makes it unsafe to touch. Missing a toe, due to use by witches in creating\n                double, double toil and trouble.\n              </p>",
           "target": [
             ".accessory-item:nth-child(19) > .accessory-description"
           ],
@@ -11755,7 +11881,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            <strong>Part of our Fun Familiars range.</strong> A large spider. Can creep into very small spaces. With its many eyes and legs this familiar is perfect for spying on your enemies and running away afterwards.\n                        </p>",
+          "html": "<p class=\"accessory-description\">\n                <strong>Part of our Fun Familiars range.</strong> A large spider. Can creep into very small spaces. With\n                its many eyes and legs this familiar is perfect for spying on your enemies and running away afterwards.\n              </p>",
           "target": [
             ".accessory-item:nth-child(20) > .accessory-description"
           ],
@@ -11851,7 +11977,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            <strong>Part of our Fun Familiars range.</strong> A very smart octopus. Can solve puzzles and open jam jars with its tentacles. Note: Do not leave alone with jam jars or unfinished sudoku puzzles.\n                        </p>",
+          "html": "<p class=\"accessory-description\">\n                <strong>Part of our Fun Familiars range.</strong> A very smart octopus. Can solve puzzles and open jam\n                jars with its tentacles. Note: Do not leave alone with jam jars or unfinished sudoku puzzles.\n              </p>",
           "target": [
             ".accessory-item:nth-child(21) > .accessory-description"
           ],
@@ -11972,7 +12098,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            A basic wand to cast your spells with.\n                        </p>",
+          "html": "<p class=\"accessory-description\">A basic wand to cast your spells with.</p>",
           "target": [
             ".accessory-item:nth-child(1) > .accessory-description"
           ],
@@ -12004,7 +12130,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"catalogue-number\">\n                            Catalogue number: <strong>wand-magic-duotone-regular-full.svg</strong>\n                        </p>",
+          "html": "<p class=\"catalogue-number\">\n                Catalogue number:\n                <strong>wand-magic-duotone-regular-full.svg</strong>\n              </p>",
           "target": [
             ".accessory-item:nth-child(1) > .catalogue-number"
           ],
@@ -12093,7 +12219,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            Special Offer. This wand constantly leaks magic and may not cast spells exactly as intended.\n                        </p>",
+          "html": "<p class=\"accessory-description\">\n                Special Offer. This wand constantly leaks magic and may not cast spells exactly as intended.\n              </p>",
           "target": [
             ".accessory-item:nth-child(2) > .accessory-description"
           ],
@@ -12125,7 +12251,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"catalogue-number\">\n                            Catalogue number: <strong>wand-magic-sparkles-sharp-duotone-regular-full.svg</strong>\n                        </p>",
+          "html": "<p class=\"catalogue-number\">\n                Catalogue number:\n                <strong>wand-magic-sparkles-sharp-duotone-regular-full.svg</strong>\n              </p>",
           "target": [
             ".accessory-item:nth-child(2) > .catalogue-number"
           ],
@@ -12214,7 +12340,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            A classic black hat for any witch.\n                        </p>",
+          "html": "<p class=\"accessory-description\">A classic black hat for any witch.</p>",
           "target": [
             ".accessory-item:nth-child(3) > .accessory-description"
           ],
@@ -12246,7 +12372,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"catalogue-number\">\n                            Catalogue number: <strong>hat-witch-solid-full.svg</strong>\n                        </p>",
+          "html": "<p class=\"catalogue-number\">Catalogue number: <strong>hat-witch-solid-full.svg</strong></p>",
           "target": [
             ".accessory-item:nth-child(3) > .catalogue-number"
           ],
@@ -12342,7 +12468,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            A pointy hat with stars for any wizard.\n                        </p>",
+          "html": "<p class=\"accessory-description\">A pointy hat with stars for any wizard.</p>",
           "target": [
             ".accessory-item:nth-child(4) > .accessory-description"
           ],
@@ -12374,7 +12500,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"catalogue-number\">\n                            Catalogue number: <strong>hat-wizard-duotone-solid-full.svg</strong>\n                        </p>",
+          "html": "<p class=\"catalogue-number\">\n                Catalogue number:\n                <strong>hat-wizard-duotone-solid-full.svg</strong>\n              </p>",
           "target": [
             ".accessory-item:nth-child(4) > .catalogue-number"
           ],
@@ -12463,7 +12589,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            When the plain black hat just won’t do.\n                        </p>",
+          "html": "<p class=\"accessory-description\">When the plain black hat just won’t do.</p>",
           "target": [
             ".accessory-item:nth-child(5) > .accessory-description"
           ],
@@ -12495,7 +12621,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"catalogue-number\">\n                            Catalogue number: <strong>hat-witch-sharp-duotone-regular-full.svg</strong>\n                        </p>",
+          "html": "<p class=\"catalogue-number\">\n                Catalogue number:\n                <strong>hat-witch-sharp-duotone-regular-full.svg</strong>\n              </p>",
           "target": [
             ".accessory-item:nth-child(5) > .catalogue-number"
           ],
@@ -12584,7 +12710,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            A light broomstick for any witch or wizard who needs to get around quickly. Can also be used for sweeping dusty floors.\n                        </p>",
+          "html": "<p class=\"accessory-description\">\n                A light broomstick for any witch or wizard who needs to get around quickly. Can also be used for\n                sweeping dusty floors.\n              </p>",
           "target": [
             ".accessory-item:nth-child(6) > .accessory-description"
           ],
@@ -12648,7 +12774,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            A sturdy broomstick for those tough cleaning jobs or long-distance flying. Can carry 2 people (or 1 large wizard) and a small animal familiar, not including ravens as they can fly alongside.\n                        </p>",
+          "html": "<p class=\"accessory-description\">\n                A sturdy broomstick for those tough cleaning jobs or long-distance flying. Can carry 2 people (or 1\n                large wizard) and a small animal familiar, not including ravens as they can fly alongside.\n              </p>",
           "target": [
             ".accessory-item:nth-child(7) > .accessory-description"
           ],
@@ -12680,7 +12806,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"catalogue-number\">\n                            Catalogue number: <strong>broom-wide-duotone-regular-full.svg</strong>\n                        </p>",
+          "html": "<p class=\"catalogue-number\">\n                Catalogue number:\n                <strong>broom-wide-duotone-regular-full.svg</strong>\n              </p>",
           "target": [
             ".accessory-item:nth-child(7) > .catalogue-number"
           ],
@@ -12769,7 +12895,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            Perfect for making potions and magical drinks. Can be used as a washing up bowl in an emergency. Please wash well after use.\n                        </p>",
+          "html": "<p class=\"accessory-description\">\n                Perfect for making potions and magical drinks. Can be used as a washing up bowl in an emergency. Please\n                wash well after use.\n              </p>",
           "target": [
             ".accessory-item:nth-child(8) > .accessory-description"
           ],
@@ -12833,7 +12959,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            A handy flask for holding potions and magical drinks. Comes with a secure stopper to stop spills.\n                        </p>",
+          "html": "<p class=\"accessory-description\">\n                A handy flask for holding potions and magical drinks. Comes with a secure stopper to stop spills.\n              </p>",
           "target": [
             ".accessory-item:nth-child(9) > .accessory-description"
           ],
@@ -12865,7 +12991,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"catalogue-number\">\n                            Catalogue number: <strong>flask-round-potion-duotone-light-full.svg</strong>\n                        </p>",
+          "html": "<p class=\"catalogue-number\">\n                Catalogue number:\n                <strong>flask-round-potion-duotone-light-full.svg</strong>\n              </p>",
           "target": [
             ".accessory-item:nth-child(9) > .catalogue-number"
           ],
@@ -13018,7 +13144,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            Does your spell book ever close just when you get to the important part? This magic book stays open for easy reading. Note: Cannot be stored on a book shelf as it will not close properly.\n                        </p>",
+          "html": "<p class=\"accessory-description\">\n                Does your spell book ever close just when you get to the important part? This magic book stays open for\n                easy reading. Note: Cannot be stored on a book shelf as it will not close properly.\n              </p>",
           "target": [
             ".accessory-item:nth-child(11) > .accessory-description"
           ],
@@ -13050,7 +13176,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"catalogue-number\">\n                            Catalogue number: <strong>book-open-lines-duotone-regular-full.svg</strong>\n                        </p>",
+          "html": "<p class=\"catalogue-number\">\n                Catalogue number:\n                <strong>book-open-lines-duotone-regular-full.svg</strong>\n              </p>",
           "target": [
             ".accessory-item:nth-child(11) > .catalogue-number"
           ],
@@ -13139,7 +13265,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            A candle holder for casting spells at night and creating a special mood. Comes with a variety of assorted magical candles. Black dribbly candles for evil rites sold separately.\n                        </p>",
+          "html": "<p class=\"accessory-description\">\n                A candle holder for casting spells at night and creating a special mood. Comes with a variety of\n                assorted magical candles. Black dribbly candles for evil rites sold separately.\n              </p>",
           "target": [
             ".accessory-item:nth-child(12) > .accessory-description"
           ],
@@ -13171,7 +13297,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"catalogue-number\">\n                            Catalogue number: <strong>candle-holder-duotone-light-full.svg</strong>\n                        </p>",
+          "html": "<p class=\"catalogue-number\">\n                Catalogue number:\n                <strong>candle-holder-duotone-light-full.svg</strong>\n              </p>",
           "target": [
             ".accessory-item:nth-child(12) > .catalogue-number"
           ],
@@ -13260,7 +13386,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            Useful for calling thunderstorms on dry days or smiting your enemies. Batteries not included.\n                        </p>",
+          "html": "<p class=\"accessory-description\">\n                Useful for calling thunderstorms on dry days or smiting your enemies. Batteries not included.\n              </p>",
           "target": [
             ".accessory-item:nth-child(13) > .accessory-description"
           ],
@@ -13292,7 +13418,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"catalogue-number\">\n                            Catalogue number: <strong>cloud-bolt-sharp-duotone-light-full.svg</strong>\n                        </p>",
+          "html": "<p class=\"catalogue-number\">\n                Catalogue number:\n                <strong>cloud-bolt-sharp-duotone-light-full.svg</strong>\n              </p>",
           "target": [
             ".accessory-item:nth-child(13) > .catalogue-number"
           ],
@@ -13381,7 +13507,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            <strong>Part of our Fun Familiars range.</strong> A friendly cat for any witch or wizard. Comes in any colour you like as long as it’s black.\n                        </p>",
+          "html": "<p class=\"accessory-description\">\n                <strong>Part of our Fun Familiars range.</strong> A friendly cat for any witch or wizard. Comes in any\n                colour you like as long as it’s black.\n              </p>",
           "target": [
             ".accessory-item:nth-child(14) > .accessory-description"
           ],
@@ -13477,7 +13603,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            <strong>Part of our Fun Familiars range.</strong> A spooky bat for any wizard or witch. The manual says that it drinks blood, but in fact any red liquid will do. Squeaks at night.\n                        </p>",
+          "html": "<p class=\"accessory-description\">\n                <strong>Part of our Fun Familiars range.</strong> A spooky bat for any wizard or witch. The manual says\n                that it drinks blood, but in fact any red liquid will do. Squeaks at night.\n              </p>",
           "target": [
             ".accessory-item:nth-child(15) > .accessory-description"
           ],
@@ -13573,7 +13699,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            <strong>Part of our Fun Familiars range.</strong> A wise old bird for any wizard or witch. Known for being smart and funny. Only one previous owner who taught it to say “Nevermore” and now it won’t stop.\n                        </p>",
+          "html": "<p class=\"accessory-description\">",
           "target": [
             ".accessory-item:nth-child(16) > .accessory-description"
           ],
@@ -13669,7 +13795,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            <strong>Part of our Fun Familiars range.</strong> A small black dragon. Breathes fire when angry or upset. Needs regular feeding with coal. Handle with care as it may explode when scared.\n                        </p>",
+          "html": "<p class=\"accessory-description\">\n                <strong>Part of our Fun Familiars range.</strong> A small black dragon. Breathes fire when angry or\n                upset. Needs regular feeding with coal. Handle with care as it may explode when scared.\n              </p>",
           "target": [
             ".accessory-item:nth-child(17) > .accessory-description"
           ],
@@ -13861,7 +13987,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">",
+          "html": "<p class=\"accessory-description\">\n                <strong>Part of our Fun Familiars range.</strong>\n                A slimy toad. Poisonous skin makes it unsafe to touch. Missing a toe, due to use by witches in creating\n                double, double toil and trouble.\n              </p>",
           "target": [
             ".accessory-item:nth-child(19) > .accessory-description"
           ],
@@ -13957,7 +14083,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            <strong>Part of our Fun Familiars range.</strong> A large spider. Can creep into very small spaces. With its many eyes and legs this familiar is perfect for spying on your enemies and running away afterwards.\n                        </p>",
+          "html": "<p class=\"accessory-description\">\n                <strong>Part of our Fun Familiars range.</strong> A large spider. Can creep into very small spaces. With\n                its many eyes and legs this familiar is perfect for spying on your enemies and running away afterwards.\n              </p>",
           "target": [
             ".accessory-item:nth-child(20) > .accessory-description"
           ],
@@ -14053,7 +14179,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p class=\"accessory-description\">\n                            <strong>Part of our Fun Familiars range.</strong> A very smart octopus. Can solve puzzles and open jam jars with its tentacles. Note: Do not leave alone with jam jars or unfinished sudoku puzzles.\n                        </p>",
+          "html": "<p class=\"accessory-description\">\n                <strong>Part of our Fun Familiars range.</strong> A very smart octopus. Can solve puzzles and open jam\n                jars with its tentacles. Note: Do not leave alone with jam jars or unfinished sudoku puzzles.\n              </p>",
           "target": [
             ".accessory-item:nth-child(21) > .accessory-description"
           ],
@@ -14099,8 +14225,8 @@
     }
   ],
   "metadata": {
-    "pagesTestedCount": 21,
-    "totalTestRuns": 126,
+    "pagesTestedCount": 24,
+    "totalTestRuns": 144,
     "viewports": [
       "900"
     ],

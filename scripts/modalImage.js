@@ -38,7 +38,7 @@
     }
 
     /**
-     * Initialize DOM element references
+     * Initialise DOM element references
      */
     initElements() {
       this.modal = document.getElementById('imageModal');
@@ -115,13 +115,13 @@
     }
 
     /**
-     * Normalize user-provided caption text for safe plain-text rendering.
+     * Normalise user-provided caption text for safe plain-text rendering.
      * @param {string} imageAlt - Candidate caption text
      * @returns {string} Safe caption text
      */
     getSafeCaption(imageAlt) {
-      const normalizedCaption = typeof imageAlt === 'string' ? imageAlt.trim() : '';
-      return normalizedCaption || 'Image preview';
+      const normalisedCaption = typeof imageAlt === 'string' ? imageAlt.trim() : '';
+      return normalisedCaption || 'Image preview';
     }
 
     /**

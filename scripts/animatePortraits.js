@@ -48,7 +48,7 @@
     }
 
     /**
-     * Initialize the portrait animator
+     * Initialise the portrait animator
      */
     init() {
       if (document.readyState === 'loading') {

@@ -83,22 +83,22 @@ class ColourPalette {
             colour2 = this.rgbToHsl(colour2);
         }
     
-        // Normalize both colours to handle different HSL formats
-        const normalized1 = this.normalizeHSL(colour1);
-        const normalized2 = this.normalizeHSL(colour2);
+        // Normalise both colours to handle different HSL formats
+        const normalised1 = this.normaliseHSL(colour1);
+        const normalised2 = this.normaliseHSL(colour2);
     
         // More flexible regex that handles optional decimals and whitespace
         const hslRegex = /hsl\(\s*(\d+(?:\.\d+)?)\s*,?\s*(\d+(?:\.\d+)?)\s*%\s*,?\s*(\d+(?:\.\d+)?)\s*%\s*\)/;
     
-        const match1 = normalized1.match(hslRegex);
-        const match2 = normalized2.match(hslRegex);
+        const match1 = normalised1.match(hslRegex);
+        const match2 = normalised2.match(hslRegex);
     
         if (!match1 || !match2) {
             console.warn('Could not parse colours:', {
                 original1: colour1,
                 original2: colour2,
-                normalized1: normalized1,
-                normalized2: normalized2
+                normalised1: normalised1,
+                normalised2: normalised2
             });
             return 0;
         }
@@ -125,9 +125,9 @@ class ColourPalette {
      * @returns {string} Blended HSL colour string
      */
     blendColours(fgColour, bgColour, opacity) {
-        // Normalize both colours
-        const normFg = this.normalizeHSL(fgColour);
-        const normBg = this.normalizeHSL(bgColour);
+        // Normalise both colours
+        const normFg = this.normaliseHSL(fgColour);
+        const normBg = this.normaliseHSL(bgColour);
         
         // Parse HSL values
         const hslRegex = /hsl\(\s*(\d+(?:\.\d+)?)\s*,?\s*(\d+(?:\.\d+)?)\s*%\s*,?\s*(\d+(?:\.\d+)?)\s*%\s*\)/;
@@ -343,11 +343,11 @@ class ColourPalette {
     }
 
     /**
-     * Normalize HSL colour string to standard format
+     * Normalise HSL colour string to standard format
      * @param {string} hslString - HSL colour string (may have 'deg' suffix) or RGB string
-     * @returns {string} Normalized HSL string
+     * @returns {string} Normalised HSL string
      */
-    normalizeHSL(hslString) {
+    normaliseHSL(hslString) {
         // If it's an RGB string, convert it first
         if (hslString.startsWith('rgb(') || hslString.startsWith('rgb ') || hslString.startsWith('rgba(')) {
             hslString = this.rgbToHsl(hslString);
@@ -378,22 +378,22 @@ class ColourPalette {
             return `hsl(${match[1]}, ${match[2]}%, ${match[3]}%)`;
         }
     
-        console.warn('Could not normalize HSL:', hslString);
+        console.warn('Could not normalise HSL:', hslString);
         return hslString;
     }
 
     /**************************************************************
      * Remaining methods are specific to ColourPalette.html page
-     * - initializeColourValues: Reads CSS variables and updates the display
-     * - initializeContrastInfo: Calculates contrast ratios and updates the display
-     * - initialize: Calls the above two methods to set up the page
+     * - initialiseColourValues: Reads CSS variables and updates the display
+     * - initialiseContrastInfo: Calculates contrast ratios and updates the display
+     * - initialise: Calls the above two methods to set up the page
       *************************************************************
      */
     
     /**
-     * Initialize colour values from CSS variables
+     * Initialise colour values from CSS variables
     */
-    initializeColourValues() {
+    initialiseColourValues() {
         const colourValueDivs = document.querySelectorAll('.colour-value[data-var]');
     
         colourValueDivs.forEach(div => {
@@ -401,25 +401,25 @@ class ColourPalette {
             if (varName) {
                 const rawValue = getComputedStyle(document.documentElement).getPropertyValue(varName).trim();
                 const computedValue = this.getCSSVariableValue(varName);
-                const normalizedValue = this.normalizeHSL(computedValue);
+                const normalisedValue = this.normaliseHSL(computedValue);
             
                 // Debug: log the transformation when RGB is converted
                 if (rawValue.startsWith('rgb')) {
-                    console.log(`${varName}: ${rawValue} -> ${normalizedValue}`);
+                    console.log(`${varName}: ${rawValue} -> ${normalisedValue}`);
                 }
             
-                div.textContent = normalizedValue || computedValue;
+                div.textContent = normalisedValue || computedValue;
             }
         });
     }
 
     /**
-     * Initialize contrast information for all colour swatches
+     * Initialise contrast information for all colour swatches
      */
-    initializeContrastInfo() {
+    initialiseContrastInfo() {
         const contrastDivs = document.querySelectorAll('.contrast-info');
         
-        console.log(`[ColourPalette] Initializing ${contrastDivs.length} contrast checks...`);
+        console.log(`[ColourPalette] Initialising ${contrastDivs.length} contrast checks...`);
     
         contrastDivs.forEach((div, index) => {
         // Check if we have CSS variable references or direct colour value
@@ -445,16 +445,16 @@ class ColourPalette {
             
             // If opacity and page background are specified, blend the colours
             if (opacity && page && opacity < 1) {
-                const normalizedPage = this.normalizeHSL(page);
-                bg = this.blendColours(bg, normalizedPage, opacity);
-                fg = this.blendColours(fg, normalizedPage, opacity);
+                const normalisedPage = this.normaliseHSL(page);
+                bg = this.blendColours(bg, normalisedPage, opacity);
+                fg = this.blendColours(fg, normalisedPage, opacity);
                 console.log(`[${index+1}] Blending with opacity ${opacity} on page background ${pageVar}`);
             }
         
             if (bg && fg) {
-                const normalizedBg = this.normalizeHSL(bg);
-                const normalizedFg = this.normalizeHSL(fg);
-                const ratio = this.calculateContrast(normalizedBg, normalizedFg);
+                const normalisedBg = this.normaliseHSL(bg);
+                const normalisedFg = this.normaliseHSL(fg);
+                const ratio = this.calculateContrast(normalisedBg, normalisedFg);
                 const level = this.getWCAGLevel(ratio);
             
                 // Log problematic cases
@@ -464,8 +464,8 @@ class ColourPalette {
                         fgVar,
                         bgRaw: bg,
                         fgRaw: fg,
-                        bgNormalized: normalizedBg,
-                        fgNormalized: normalizedFg,
+                        bgNormalised: normalisedBg,
+                        fgNormalised: normalisedFg,
                         ratio: ratio,
                         level: level,
                         isNaN: isNaN(ratio),
@@ -501,21 +501,21 @@ class ColourPalette {
     }
 
     /**
-     * Initialize the colour palette display
+     * Initialise the colour palette display
      */
-    initialize() {
-        this.initializeColourValues();
-        this.initializeContrastInfo();
+    initialise() {
+        this.initialiseColourValues();
+        this.initialiseContrastInfo();
     }
 }
 
-// Create singleton instance and initialize when DOM and CSS are loaded
+// Create singleton instance and initialise when DOM and CSS are loaded
 const colourPalette = new ColourPalette();
 
 /**
- * Initialize tab navigation for theme sections.
+ * Initialise tab navigation for theme sections.
  */
-function initializeTabNavigation() {
+function initialiseTabNavigation() {
     const tabButtons = document.querySelectorAll('.tab-button');
     const tabPanels = document.querySelectorAll('.tab-panel');
 
@@ -600,7 +600,7 @@ function appendContentLinkCards() {
     });
 }
 
-function initializeWhenReady() {
+function initialiseWhenReady() {
     const MAX_RETRIES = 30;
 
     // Check multiple known variables from colours.css to confirm styles are ready.
@@ -613,31 +613,31 @@ function initializeWhenReady() {
 
     if (cssReady) {
         appendContentLinkCards();
-        colourPalette.initialize();
+        colourPalette.initialise();
         return;
     }
 
-    initializeWhenReady.retryCount = (initializeWhenReady.retryCount || 0) + 1;
+    initialiseWhenReady.retryCount = (initialiseWhenReady.retryCount || 0) + 1;
 
-    if (initializeWhenReady.retryCount >= MAX_RETRIES) {
-        console.warn('CSS variables not detected after retries; initializing anyway.');
+    if (initialiseWhenReady.retryCount >= MAX_RETRIES) {
+        console.warn('CSS variables not detected after retries; initialising anyway.');
         appendContentLinkCards();
-        colourPalette.initialize();
+        colourPalette.initialise();
         return;
     }
 
-    console.warn(`CSS not loaded yet, retrying... (${initializeWhenReady.retryCount}/${MAX_RETRIES})`);
-    setTimeout(initializeWhenReady, 100);
+    console.warn(`CSS not loaded yet, retrying... (${initialiseWhenReady.retryCount}/${MAX_RETRIES})`);
+    setTimeout(initialiseWhenReady, 100);
 }
 
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => {
-        initializeTabNavigation();
+        initialiseTabNavigation();
         // Give CSS a moment to fully load
-        setTimeout(initializeWhenReady, 50);
+        setTimeout(initialiseWhenReady, 50);
     });
 } else {
     // DOM already loaded
-    initializeTabNavigation();
-    initializeWhenReady();
+    initialiseTabNavigation();
+    initialiseWhenReady();
 }

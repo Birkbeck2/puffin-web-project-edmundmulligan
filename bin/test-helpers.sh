@@ -2,19 +2,19 @@
 
 # Common helper functions for accessibility testing scripts
 
-# Normalize exclude arguments (comma-separated and/or space-separated) into a space list
-normalize_exclude_list() {
-  local normalized=""
+# Normalise exclude arguments (comma-separated and/or space-separated) into a space list
+normalise_exclude_list() {
+  local normalised=""
   local item=""
 
   for item in "$@"; do
     if [ -n "$item" ]; then
-      normalized="$normalized ${item//,/ }"
+      normalised="$normalised ${item//,/ }"
     fi
   done
 
   # Trim leading whitespace
-  echo "$normalized" | sed 's/^ *//'
+  echo "$normalised" | sed 's/^ *//'
 }
 
 path_matches_exclude() {
@@ -34,7 +34,7 @@ path_matches_exclude() {
 
 filter_excluded_paths() {
   local input_paths="${1:-}"
-  local exclude_list="$(normalize_exclude_list "${2:-}")"
+  local exclude_list="$(normalise_exclude_list "${2:-}")"
   local filtered_paths=""
   local excluded_count=0
   local -a exclude_items=()
@@ -142,7 +142,7 @@ parse_test_options() {
         TEST_URL="$OPTARG"
         ;;
       x)
-        EXCLUDE_LIST="$(normalize_exclude_list "$EXCLUDE_LIST" "$OPTARG")"
+        EXCLUDE_LIST="$(normalise_exclude_list "$EXCLUDE_LIST" "$OPTARG")"
         ;;
       \?)
         echo "Invalid option: -$OPTARG" >&2
@@ -181,7 +181,7 @@ stop_server_if_started() {
 # Find all HTML files to test
 discover_html_pages() {
   local folder="${1:-.}"
-  local exclude_list="$(normalize_exclude_list "${2:-}")"
+  local exclude_list="$(normalise_exclude_list "${2:-}")"
 
   echo "Discovering pages to test in $folder..."
   if [ ! -d "$folder" ]; then
