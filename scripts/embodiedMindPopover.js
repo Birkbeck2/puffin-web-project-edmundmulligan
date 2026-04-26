@@ -199,7 +199,17 @@
     async init() {
       Utils.log('EmbodiedMindPopover: Initialising...');
 
-      // Load data first
+      // Set up listener for footer injection BEFORE loading data
+      // to avoid missing the event if it fires while we're loading
+      let footerInjectedPromise = null;
+      if (!document.getElementById('embodied-mind-logo')) {
+        Utils.log('EmbodiedMindPopover: Logo not found yet, setting up listener');
+        footerInjectedPromise = new Promise((resolve) => {
+          document.addEventListener('footerInjected', resolve, { once: true });
+        });
+      }
+
+      // Load data
       try {
         await this.loadData();
       } catch (error) {
@@ -207,26 +217,20 @@
         return;
       }
 
-      // Wait for footer to be injected before setting up
-      const setupPopover = () => {
-        this.popover = this.createPopover();
-        if (this.popover) {
-          this.setupLogoTrigger();
-          Utils.log('EmbodiedMindPopover: Setup complete');
-        }
-      };
-
-      // If footer already exists, set up immediately
-      if (document.getElementById('embodied-mind-logo')) {
-        Utils.log('EmbodiedMindPopover: Logo found immediately');
-        setupPopover();
-      } else {
+      // Wait for footer if it wasn't ready before
+      if (footerInjectedPromise && !document.getElementById('embodied-mind-logo')) {
         Utils.log('EmbodiedMindPopover: Waiting for footer injection');
-        // Wait for footer injection event
-        document.addEventListener('footerInjected', () => {
-          Utils.log('EmbodiedMindPopover: Footer injected event received');
-          setupPopover();
-        });
+        await footerInjectedPromise;
+        Utils.log('EmbodiedMindPopover: Footer injected event received');
+      } else {
+        Utils.log('EmbodiedMindPopover: Logo is ready');
+      }
+
+      // Set up popover
+      this.popover = this.createPopover();
+      if (this.popover) {
+        this.setupLogoTrigger();
+        Utils.log('EmbodiedMindPopover: Setup complete');
       }
     }
   }
