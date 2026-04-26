@@ -43,6 +43,12 @@
       "file": "lesson-06.html"
     },
     {
+      "id": "interlude 1",
+      "title": "Tools",
+      "description": "Learn about tools that can help you with web development.",
+      "file": "interlude-01.html"
+    },
+    {
       "id": "lesson 7",
       "title": "CSS Basics",
       "description": "Learn about Cascading Style Sheets (CSS) and how they can change the look of your web pages.",
