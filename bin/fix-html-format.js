@@ -10,6 +10,7 @@
  *   Post-processes HTML files after Prettier to fix HTML5 compliance issues:
  *   - Converts <!doctype html> to <!DOCTYPE html> (uppercase)
  *   - Removes self-closing slashes from void elements (e.g., <meta />, <link />)
+ *   - Removes trailing whitespace from lines
  *   This ensures HTML files pass W3C validation.
  **********************************************************************
  */
@@ -57,6 +58,12 @@ function fixHtmlFile(filePath) {
       const regex = new RegExp(`<${tag}([^>]*?)\\s*/>`, 'gi');
       content = content.replace(regex, `<${tag}$1>`);
     });
+
+    // Fix 3: Remove trailing whitespace from each line
+    content = content
+      .split('\n')
+      .map((line) => line.replace(/\s+$/, ''))
+      .join('\n');
 
     // Only write if content changed
     if (content !== originalContent) {
