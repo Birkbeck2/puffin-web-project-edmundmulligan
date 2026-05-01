@@ -27,6 +27,28 @@
     font-size: var(--fontsize-button);
     font-weight: var(--font-weight-bold);
 
+    /* Disabled state */
+    &:disabled,
+    &[disabled] {
+      opacity: 0.5;
+      cursor: not-allowed;
+      background-color: var(--colour-effective-button-background);
+      color: var(--colour-effective-button-text);
+      transform: none;
+
+      /* Remove hover and focus effects for disabled buttons */
+      &:hover,
+      &:focus-visible {
+        background-color: var(--colour-effective-button-background);
+        color: var(--colour-effective-button-text);
+        transform: none;
+      }
+
+      &:active {
+        transform: none;
+      }
+    }
+
     /* Hover and focus states - all buttons behave the same */
     &:hover,
     &:focus-visible {

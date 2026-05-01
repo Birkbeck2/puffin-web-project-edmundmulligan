@@ -21,6 +21,7 @@ export default {
         <p>
             &copy;&nbsp;The Embodied Mind, 2025-2026.
             MIT License. <a href="{{pathPrefix}}pages/license.html">See the license page for more details</a>.
+            <a href="{{pathPrefix}}pages/privacy-policy.html">Privacy Policy</a>.
         </p>
     </div>
     <div class="footer-button"><button aria-label="Collapse footer"><i class="fa-solid fa-chevron-down" aria-hidden="true"></i></button></div>
