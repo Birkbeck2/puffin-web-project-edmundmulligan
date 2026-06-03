@@ -32,10 +32,10 @@
     <!-- Link to Favicon -->
     <link rel="icon" type="image/svg+xml" href="../images/icons/favicon.svg">
 
-    <!--Links for Google Fonts -->
+    <!-- Links for Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;600;700&family=Marcellus&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
     <!-- End Google Fonts links -->
@@ -53,12 +53,13 @@
 
     <!-- Load JavaScript files -->
     <script src="../scripts/utils.js" defer></script>
-    <script src="../scripts/queryParams.js"></script>
-    <script src="../scripts/debug.js"></script>
-    <script src="../scripts/themeSwitcher.js"></script>
+    <script src="../scripts/queryParams.js" defer></script>
+    <script src="../scripts/debug.js" defer></script>
+    <script src="../scripts/themeSwitcher.js" defer></script>
     <script src="../scripts/localStorage.js" defer></script>
     <script src="../scripts/toggleHeaderAndFooter.js" defer></script>
-    <script src="../scripts/injectCommonCode.js" defer></script>
+    <script src="../scripts/injectCommonCode.js" type="module"></script>
+    <script src="../scripts/embodiedMindPopover.js" defer></script>
     <script src="../scripts/injectGlossaryPopovers.js" defer></script>
     <script src="../scripts/toggleSection.js" defer></script>
     <script src="../scripts/showOsInstructions.js" defer></script>
@@ -202,8 +203,5 @@
     <footer class="footer">
         <!-- Footer content is injected by JavaScript to ensure it is the same across all pages -->
     </footer>
-    <div id="not-implemented" popover="auto" class="popover">
-        <!-- Popover content is injected by JavaScript to ensure it is the same across all pages -->
-    </div>
 </body>
 </html>

@@ -406,123 +406,563 @@
           "status": "passed"
         },
         {
-          "name": "Student Lesson 0 page title",
+          "name": "Student Lesson 00 page title",
           "status": "passed"
         },
         {
-          "name": "Student Lesson 0 navigation links",
+          "name": "Student Lesson 00 navigation links",
           "status": "passed"
         },
         {
-          "name": "Student Lesson 0 JavaScript execution",
+          "name": "Student Lesson 00 JavaScript execution",
           "status": "passed"
         },
         {
-          "name": "Student Lesson 0 CSS Grid",
+          "name": "Student Lesson 00 CSS Grid",
           "status": "passed"
         },
         {
-          "name": "Student Lesson 0 CSS Flexbox",
+          "name": "Student Lesson 00 CSS Flexbox",
           "status": "passed"
         },
         {
-          "name": "Student Lesson 0 CSS Variables",
+          "name": "Student Lesson 00 CSS Variables",
           "status": "passed"
         },
         {
-          "name": "Student Lesson 0 SVG support",
+          "name": "Student Lesson 00 SVG support",
           "status": "passed"
         },
         {
-          "name": "Student Lesson 0 responsive viewport",
+          "name": "Student Lesson 00 responsive viewport",
           "status": "passed"
         },
         {
-          "name": "Student Lesson 0 CSS calc()",
+          "name": "Student Lesson 00 CSS calc()",
           "status": "passed"
         },
         {
-          "name": "Student Lesson 0 font rendering",
+          "name": "Student Lesson 00 font rendering",
           "status": "passed"
         },
         {
-          "name": "Student Lesson 1 page title",
+          "name": "Student Lesson 01 page title",
           "status": "passed"
         },
         {
-          "name": "Student Lesson 1 navigation links",
+          "name": "Student Lesson 01 navigation links",
           "status": "passed"
         },
         {
-          "name": "Student Lesson 1 JavaScript execution",
+          "name": "Student Lesson 01 JavaScript execution",
           "status": "passed"
         },
         {
-          "name": "Student Lesson 1 CSS Grid",
+          "name": "Student Lesson 01 CSS Grid",
           "status": "passed"
         },
         {
-          "name": "Student Lesson 1 CSS Flexbox",
+          "name": "Student Lesson 01 CSS Flexbox",
           "status": "passed"
         },
         {
-          "name": "Student Lesson 1 CSS Variables",
+          "name": "Student Lesson 01 CSS Variables",
           "status": "passed"
         },
         {
-          "name": "Student Lesson 1 SVG support",
+          "name": "Student Lesson 01 SVG support",
           "status": "passed"
         },
         {
-          "name": "Student Lesson 1 responsive viewport",
+          "name": "Student Lesson 01 responsive viewport",
           "status": "passed"
         },
         {
-          "name": "Student Lesson 1 CSS calc()",
+          "name": "Student Lesson 01 CSS calc()",
           "status": "passed"
         },
         {
-          "name": "Student Lesson 1 font rendering",
+          "name": "Student Lesson 01 font rendering",
           "status": "passed"
         },
         {
-          "name": "Mentor Lesson 0 page title",
+          "name": "Student Lesson 02 page title",
           "status": "passed"
         },
         {
-          "name": "Mentor Lesson 0 navigation links",
+          "name": "Student Lesson 02 navigation links",
           "status": "passed"
         },
         {
-          "name": "Mentor Lesson 0 JavaScript execution",
+          "name": "Student Lesson 02 JavaScript execution",
           "status": "passed"
         },
         {
-          "name": "Mentor Lesson 0 CSS Grid",
+          "name": "Student Lesson 02 CSS Grid",
           "status": "passed"
         },
         {
-          "name": "Mentor Lesson 0 CSS Flexbox",
+          "name": "Student Lesson 02 CSS Flexbox",
           "status": "passed"
         },
         {
-          "name": "Mentor Lesson 0 CSS Variables",
+          "name": "Student Lesson 02 CSS Variables",
           "status": "passed"
         },
         {
-          "name": "Mentor Lesson 0 SVG support",
+          "name": "Student Lesson 02 SVG support",
           "status": "passed"
         },
         {
-          "name": "Mentor Lesson 0 responsive viewport",
+          "name": "Student Lesson 02 responsive viewport",
           "status": "passed"
         },
         {
-          "name": "Mentor Lesson 0 CSS calc()",
+          "name": "Student Lesson 02 CSS calc()",
           "status": "passed"
         },
         {
-          "name": "Mentor Lesson 0 font rendering",
+          "name": "Student Lesson 02 font rendering",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 03 page title",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 03 navigation links",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 03 JavaScript execution",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 03 CSS Grid",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 03 CSS Flexbox",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 03 CSS Variables",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 03 SVG support",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 03 responsive viewport",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 03 CSS calc()",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 03 font rendering",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 04 page title",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 04 navigation links",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 04 JavaScript execution",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 04 CSS Grid",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 04 CSS Flexbox",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 04 CSS Variables",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 04 SVG support",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 04 responsive viewport",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 04 CSS calc()",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 04 font rendering",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 05 page title",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 05 navigation links",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 05 JavaScript execution",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 05 CSS Grid",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 05 CSS Flexbox",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 05 CSS Variables",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 05 SVG support",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 05 responsive viewport",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 05 CSS calc()",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 05 font rendering",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 06 page title",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 06 navigation links",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 06 JavaScript execution",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 06 CSS Grid",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 06 CSS Flexbox",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 06 CSS Variables",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 06 SVG support",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 06 responsive viewport",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 06 CSS calc()",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 06 font rendering",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 00 page title",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 00 navigation links",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 00 JavaScript execution",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 00 CSS Grid",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 00 CSS Flexbox",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 00 CSS Variables",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 00 SVG support",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 00 responsive viewport",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 00 CSS calc()",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 00 font rendering",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 01 page title",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 01 navigation links",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 01 JavaScript execution",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 01 CSS Grid",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 01 CSS Flexbox",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 01 CSS Variables",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 01 SVG support",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 01 responsive viewport",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 01 CSS calc()",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 01 font rendering",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 02 page title",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 02 navigation links",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 02 JavaScript execution",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 02 CSS Grid",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 02 CSS Flexbox",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 02 CSS Variables",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 02 SVG support",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 02 responsive viewport",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 02 CSS calc()",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 02 font rendering",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 03 page title",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 03 navigation links",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 03 JavaScript execution",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 03 CSS Grid",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 03 CSS Flexbox",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 03 CSS Variables",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 03 SVG support",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 03 responsive viewport",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 03 CSS calc()",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 03 font rendering",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 04 page title",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 04 navigation links",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 04 JavaScript execution",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 04 CSS Grid",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 04 CSS Flexbox",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 04 CSS Variables",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 04 SVG support",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 04 responsive viewport",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 04 CSS calc()",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 04 font rendering",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 05 page title",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 05 navigation links",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 05 JavaScript execution",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 05 CSS Grid",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 05 CSS Flexbox",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 05 CSS Variables",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 05 SVG support",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 05 responsive viewport",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 05 CSS calc()",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 05 font rendering",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 06 page title",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 06 navigation links",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 06 JavaScript execution",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 06 CSS Grid",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 06 CSS Flexbox",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 06 CSS Variables",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 06 SVG support",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 06 responsive viewport",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 06 CSS calc()",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 06 font rendering",
           "status": "passed"
         }
       ]
@@ -933,123 +1373,563 @@
           "status": "passed"
         },
         {
-          "name": "Student Lesson 0 page title",
+          "name": "Student Lesson 00 page title",
           "status": "passed"
         },
         {
-          "name": "Student Lesson 0 navigation links",
+          "name": "Student Lesson 00 navigation links",
           "status": "passed"
         },
         {
-          "name": "Student Lesson 0 JavaScript execution",
+          "name": "Student Lesson 00 JavaScript execution",
           "status": "passed"
         },
         {
-          "name": "Student Lesson 0 CSS Grid",
+          "name": "Student Lesson 00 CSS Grid",
           "status": "passed"
         },
         {
-          "name": "Student Lesson 0 CSS Flexbox",
+          "name": "Student Lesson 00 CSS Flexbox",
           "status": "passed"
         },
         {
-          "name": "Student Lesson 0 CSS Variables",
+          "name": "Student Lesson 00 CSS Variables",
           "status": "passed"
         },
         {
-          "name": "Student Lesson 0 SVG support",
+          "name": "Student Lesson 00 SVG support",
           "status": "passed"
         },
         {
-          "name": "Student Lesson 0 responsive viewport",
+          "name": "Student Lesson 00 responsive viewport",
           "status": "passed"
         },
         {
-          "name": "Student Lesson 0 CSS calc()",
+          "name": "Student Lesson 00 CSS calc()",
           "status": "passed"
         },
         {
-          "name": "Student Lesson 0 font rendering",
+          "name": "Student Lesson 00 font rendering",
           "status": "passed"
         },
         {
-          "name": "Student Lesson 1 page title",
+          "name": "Student Lesson 01 page title",
           "status": "passed"
         },
         {
-          "name": "Student Lesson 1 navigation links",
+          "name": "Student Lesson 01 navigation links",
           "status": "passed"
         },
         {
-          "name": "Student Lesson 1 JavaScript execution",
+          "name": "Student Lesson 01 JavaScript execution",
           "status": "passed"
         },
         {
-          "name": "Student Lesson 1 CSS Grid",
+          "name": "Student Lesson 01 CSS Grid",
           "status": "passed"
         },
         {
-          "name": "Student Lesson 1 CSS Flexbox",
+          "name": "Student Lesson 01 CSS Flexbox",
           "status": "passed"
         },
         {
-          "name": "Student Lesson 1 CSS Variables",
+          "name": "Student Lesson 01 CSS Variables",
           "status": "passed"
         },
         {
-          "name": "Student Lesson 1 SVG support",
+          "name": "Student Lesson 01 SVG support",
           "status": "passed"
         },
         {
-          "name": "Student Lesson 1 responsive viewport",
+          "name": "Student Lesson 01 responsive viewport",
           "status": "passed"
         },
         {
-          "name": "Student Lesson 1 CSS calc()",
+          "name": "Student Lesson 01 CSS calc()",
           "status": "passed"
         },
         {
-          "name": "Student Lesson 1 font rendering",
+          "name": "Student Lesson 01 font rendering",
           "status": "passed"
         },
         {
-          "name": "Mentor Lesson 0 page title",
+          "name": "Student Lesson 02 page title",
           "status": "passed"
         },
         {
-          "name": "Mentor Lesson 0 navigation links",
+          "name": "Student Lesson 02 navigation links",
           "status": "passed"
         },
         {
-          "name": "Mentor Lesson 0 JavaScript execution",
+          "name": "Student Lesson 02 JavaScript execution",
           "status": "passed"
         },
         {
-          "name": "Mentor Lesson 0 CSS Grid",
+          "name": "Student Lesson 02 CSS Grid",
           "status": "passed"
         },
         {
-          "name": "Mentor Lesson 0 CSS Flexbox",
+          "name": "Student Lesson 02 CSS Flexbox",
           "status": "passed"
         },
         {
-          "name": "Mentor Lesson 0 CSS Variables",
+          "name": "Student Lesson 02 CSS Variables",
           "status": "passed"
         },
         {
-          "name": "Mentor Lesson 0 SVG support",
+          "name": "Student Lesson 02 SVG support",
           "status": "passed"
         },
         {
-          "name": "Mentor Lesson 0 responsive viewport",
+          "name": "Student Lesson 02 responsive viewport",
           "status": "passed"
         },
         {
-          "name": "Mentor Lesson 0 CSS calc()",
+          "name": "Student Lesson 02 CSS calc()",
           "status": "passed"
         },
         {
-          "name": "Mentor Lesson 0 font rendering",
+          "name": "Student Lesson 02 font rendering",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 03 page title",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 03 navigation links",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 03 JavaScript execution",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 03 CSS Grid",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 03 CSS Flexbox",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 03 CSS Variables",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 03 SVG support",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 03 responsive viewport",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 03 CSS calc()",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 03 font rendering",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 04 page title",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 04 navigation links",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 04 JavaScript execution",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 04 CSS Grid",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 04 CSS Flexbox",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 04 CSS Variables",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 04 SVG support",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 04 responsive viewport",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 04 CSS calc()",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 04 font rendering",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 05 page title",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 05 navigation links",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 05 JavaScript execution",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 05 CSS Grid",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 05 CSS Flexbox",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 05 CSS Variables",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 05 SVG support",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 05 responsive viewport",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 05 CSS calc()",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 05 font rendering",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 06 page title",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 06 navigation links",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 06 JavaScript execution",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 06 CSS Grid",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 06 CSS Flexbox",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 06 CSS Variables",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 06 SVG support",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 06 responsive viewport",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 06 CSS calc()",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 06 font rendering",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 00 page title",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 00 navigation links",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 00 JavaScript execution",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 00 CSS Grid",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 00 CSS Flexbox",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 00 CSS Variables",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 00 SVG support",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 00 responsive viewport",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 00 CSS calc()",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 00 font rendering",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 01 page title",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 01 navigation links",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 01 JavaScript execution",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 01 CSS Grid",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 01 CSS Flexbox",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 01 CSS Variables",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 01 SVG support",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 01 responsive viewport",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 01 CSS calc()",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 01 font rendering",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 02 page title",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 02 navigation links",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 02 JavaScript execution",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 02 CSS Grid",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 02 CSS Flexbox",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 02 CSS Variables",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 02 SVG support",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 02 responsive viewport",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 02 CSS calc()",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 02 font rendering",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 03 page title",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 03 navigation links",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 03 JavaScript execution",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 03 CSS Grid",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 03 CSS Flexbox",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 03 CSS Variables",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 03 SVG support",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 03 responsive viewport",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 03 CSS calc()",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 03 font rendering",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 04 page title",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 04 navigation links",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 04 JavaScript execution",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 04 CSS Grid",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 04 CSS Flexbox",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 04 CSS Variables",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 04 SVG support",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 04 responsive viewport",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 04 CSS calc()",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 04 font rendering",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 05 page title",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 05 navigation links",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 05 JavaScript execution",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 05 CSS Grid",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 05 CSS Flexbox",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 05 CSS Variables",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 05 SVG support",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 05 responsive viewport",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 05 CSS calc()",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 05 font rendering",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 06 page title",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 06 navigation links",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 06 JavaScript execution",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 06 CSS Grid",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 06 CSS Flexbox",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 06 CSS Variables",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 06 SVG support",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 06 responsive viewport",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 06 CSS calc()",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 06 font rendering",
           "status": "passed"
         }
       ]
@@ -1460,123 +2340,563 @@
           "status": "passed"
         },
         {
-          "name": "Student Lesson 0 page title",
+          "name": "Student Lesson 00 page title",
           "status": "passed"
         },
         {
-          "name": "Student Lesson 0 navigation links",
+          "name": "Student Lesson 00 navigation links",
           "status": "passed"
         },
         {
-          "name": "Student Lesson 0 JavaScript execution",
+          "name": "Student Lesson 00 JavaScript execution",
           "status": "passed"
         },
         {
-          "name": "Student Lesson 0 CSS Grid",
+          "name": "Student Lesson 00 CSS Grid",
           "status": "passed"
         },
         {
-          "name": "Student Lesson 0 CSS Flexbox",
+          "name": "Student Lesson 00 CSS Flexbox",
           "status": "passed"
         },
         {
-          "name": "Student Lesson 0 CSS Variables",
+          "name": "Student Lesson 00 CSS Variables",
           "status": "passed"
         },
         {
-          "name": "Student Lesson 0 SVG support",
+          "name": "Student Lesson 00 SVG support",
           "status": "passed"
         },
         {
-          "name": "Student Lesson 0 responsive viewport",
+          "name": "Student Lesson 00 responsive viewport",
           "status": "passed"
         },
         {
-          "name": "Student Lesson 0 CSS calc()",
+          "name": "Student Lesson 00 CSS calc()",
           "status": "passed"
         },
         {
-          "name": "Student Lesson 0 font rendering",
+          "name": "Student Lesson 00 font rendering",
           "status": "passed"
         },
         {
-          "name": "Student Lesson 1 page title",
+          "name": "Student Lesson 01 page title",
           "status": "passed"
         },
         {
-          "name": "Student Lesson 1 navigation links",
+          "name": "Student Lesson 01 navigation links",
           "status": "passed"
         },
         {
-          "name": "Student Lesson 1 JavaScript execution",
+          "name": "Student Lesson 01 JavaScript execution",
           "status": "passed"
         },
         {
-          "name": "Student Lesson 1 CSS Grid",
+          "name": "Student Lesson 01 CSS Grid",
           "status": "passed"
         },
         {
-          "name": "Student Lesson 1 CSS Flexbox",
+          "name": "Student Lesson 01 CSS Flexbox",
           "status": "passed"
         },
         {
-          "name": "Student Lesson 1 CSS Variables",
+          "name": "Student Lesson 01 CSS Variables",
           "status": "passed"
         },
         {
-          "name": "Student Lesson 1 SVG support",
+          "name": "Student Lesson 01 SVG support",
           "status": "passed"
         },
         {
-          "name": "Student Lesson 1 responsive viewport",
+          "name": "Student Lesson 01 responsive viewport",
           "status": "passed"
         },
         {
-          "name": "Student Lesson 1 CSS calc()",
+          "name": "Student Lesson 01 CSS calc()",
           "status": "passed"
         },
         {
-          "name": "Student Lesson 1 font rendering",
+          "name": "Student Lesson 01 font rendering",
           "status": "passed"
         },
         {
-          "name": "Mentor Lesson 0 page title",
+          "name": "Student Lesson 02 page title",
           "status": "passed"
         },
         {
-          "name": "Mentor Lesson 0 navigation links",
+          "name": "Student Lesson 02 navigation links",
           "status": "passed"
         },
         {
-          "name": "Mentor Lesson 0 JavaScript execution",
+          "name": "Student Lesson 02 JavaScript execution",
           "status": "passed"
         },
         {
-          "name": "Mentor Lesson 0 CSS Grid",
+          "name": "Student Lesson 02 CSS Grid",
           "status": "passed"
         },
         {
-          "name": "Mentor Lesson 0 CSS Flexbox",
+          "name": "Student Lesson 02 CSS Flexbox",
           "status": "passed"
         },
         {
-          "name": "Mentor Lesson 0 CSS Variables",
+          "name": "Student Lesson 02 CSS Variables",
           "status": "passed"
         },
         {
-          "name": "Mentor Lesson 0 SVG support",
+          "name": "Student Lesson 02 SVG support",
           "status": "passed"
         },
         {
-          "name": "Mentor Lesson 0 responsive viewport",
+          "name": "Student Lesson 02 responsive viewport",
           "status": "passed"
         },
         {
-          "name": "Mentor Lesson 0 CSS calc()",
+          "name": "Student Lesson 02 CSS calc()",
           "status": "passed"
         },
         {
-          "name": "Mentor Lesson 0 font rendering",
+          "name": "Student Lesson 02 font rendering",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 03 page title",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 03 navigation links",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 03 JavaScript execution",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 03 CSS Grid",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 03 CSS Flexbox",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 03 CSS Variables",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 03 SVG support",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 03 responsive viewport",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 03 CSS calc()",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 03 font rendering",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 04 page title",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 04 navigation links",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 04 JavaScript execution",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 04 CSS Grid",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 04 CSS Flexbox",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 04 CSS Variables",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 04 SVG support",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 04 responsive viewport",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 04 CSS calc()",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 04 font rendering",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 05 page title",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 05 navigation links",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 05 JavaScript execution",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 05 CSS Grid",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 05 CSS Flexbox",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 05 CSS Variables",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 05 SVG support",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 05 responsive viewport",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 05 CSS calc()",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 05 font rendering",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 06 page title",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 06 navigation links",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 06 JavaScript execution",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 06 CSS Grid",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 06 CSS Flexbox",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 06 CSS Variables",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 06 SVG support",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 06 responsive viewport",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 06 CSS calc()",
+          "status": "passed"
+        },
+        {
+          "name": "Student Lesson 06 font rendering",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 00 page title",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 00 navigation links",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 00 JavaScript execution",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 00 CSS Grid",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 00 CSS Flexbox",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 00 CSS Variables",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 00 SVG support",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 00 responsive viewport",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 00 CSS calc()",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 00 font rendering",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 01 page title",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 01 navigation links",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 01 JavaScript execution",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 01 CSS Grid",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 01 CSS Flexbox",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 01 CSS Variables",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 01 SVG support",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 01 responsive viewport",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 01 CSS calc()",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 01 font rendering",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 02 page title",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 02 navigation links",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 02 JavaScript execution",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 02 CSS Grid",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 02 CSS Flexbox",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 02 CSS Variables",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 02 SVG support",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 02 responsive viewport",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 02 CSS calc()",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 02 font rendering",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 03 page title",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 03 navigation links",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 03 JavaScript execution",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 03 CSS Grid",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 03 CSS Flexbox",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 03 CSS Variables",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 03 SVG support",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 03 responsive viewport",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 03 CSS calc()",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 03 font rendering",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 04 page title",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 04 navigation links",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 04 JavaScript execution",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 04 CSS Grid",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 04 CSS Flexbox",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 04 CSS Variables",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 04 SVG support",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 04 responsive viewport",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 04 CSS calc()",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 04 font rendering",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 05 page title",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 05 navigation links",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 05 JavaScript execution",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 05 CSS Grid",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 05 CSS Flexbox",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 05 CSS Variables",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 05 SVG support",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 05 responsive viewport",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 05 CSS calc()",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 05 font rendering",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 06 page title",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 06 navigation links",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 06 JavaScript execution",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 06 CSS Grid",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 06 CSS Flexbox",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 06 CSS Variables",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 06 SVG support",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 06 responsive viewport",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 06 CSS calc()",
+          "status": "passed"
+        },
+        {
+          "name": "Mentor Lesson 06 font rendering",
           "status": "passed"
         }
       ]

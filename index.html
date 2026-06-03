@@ -13,7 +13,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <!-- Start of meta tags -->
     <meta charset="UTF-8">
     <meta name="description" content="Web Witchcraft and Wizardry">
@@ -32,7 +32,9 @@
     <!--Links for Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;600;700&family=Marcellus&family=Cormorant+Garamond:wght@400;500;600;700&display=swap"
+      rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
 
@@ -53,7 +55,8 @@
     <script src="scripts/debug.js" defer></script>
     <script src="scripts/themeSwitcher.js" defer></script>
     <script src="scripts/toggleHeaderAndFooter.js" defer></script>
-    <script src="scripts/injectCommonCode.js" defer></script>
+    <script src="scripts/injectCommonCode.js" type="module"></script>
+    <script src="scripts/embodiedMindPopover.js" defer></script>
     <script src="scripts/toggleSection.js" defer></script>
     <script src="scripts/animatePortraits.js" defer></script>
     <script src="scripts/toggleAnimation.js" defer></script>
@@ -62,53 +65,53 @@
 
     <!-- Handle no JavaScript scenario -->
     <noscript>
-        <link rel="stylesheet" href="styles/utilities/noscript.css">
+      <link rel="stylesheet" href="styles/utilities/noscript.css">
     </noscript>
-</head>
+  </head>
 
-<body>
+  <body>
     <header class="header">
-        <!-- Header content is injected by JavaScript to ensure it is the same across all pages -->
+      <!-- Header content is injected by JavaScript to ensure it is the same across all pages -->
     </header>
 
     <main class="main">
-        <section class="index-block" id="index-block-1">
-            <h2 class="page-title">Choose your theme and style</h2>
-            <div class="circular-button-container">
-                <a href="#" class="button-circle" id="light-button">Light</a>
-                <a href="#" class="button-circle" id="dark-button">Dark</a>
-            </div>
-            <div class="circular-button-container">
-                <a href="#" class="button-circle-small" id="normal-button">Normal</a>
-                <a href="#" class="button-circle-small" id="subdued-button">Subdued</a>
-                <a href="#" class="button-circle-small" id="vibrant-button">Vibrant</a>
-            </div>
-            <button type="button" id="animations-button" class="button-rectangle">
-                <!-- Button Text is injected by Javascript-->
-                .
-            </button>
-        </section>
+      <section class="index-block" id="index-block-1">
+        <h2 class="page-title">Choose your theme and style</h2>
+        <div class="circular-button-container">
+          <a href="#" class="button-circle" id="light-button">Light</a>
+          <a href="#" class="button-circle" id="dark-button">Dark</a>
+        </div>
+        <div class="circular-button-container">
+          <a href="#" class="button-circle-small" id="normal-button">Normal</a>
+          <a href="#" class="button-circle-small" id="subdued-button">Subdued</a>
+          <a href="#" class="button-circle-small" id="vibrant-button">Vibrant</a>
+        </div>
+        <button type="button" id="animations-button" class="button-rectangle">
+          <!-- Button Text is injected by Javascript-->
+          .
+        </button>
+      </section>
 
-        <section class="index-block" id="index-block-2">
-            <h2 class="page-title">Click on your chosen path</h2>
-            <div class="circular-button-container path-buttons">
-                <a href="pages/start.html" class="button-circle" id="start-button">Start</a>
-                <a href="pages/students.html" class="button-circle" id="students-button">I am a Student</a>
-                <a href="pages/mentors.html" class="button-circle" id="mentors-button">I am a Mentor</a>
-            </div>
-        </section>
+      <section class="index-block" id="index-block-2">
+        <h2 class="page-title">Click on your chosen path</h2>
+        <div class="circular-button-container path-buttons">
+          <a href="pages/start.html" class="button-circle" id="start-button">Start</a>
+          <a href="pages/students.html" class="button-circle" id="students-button">I am a Student</a>
+          <a href="pages/mentors.html" class="button-circle" id="mentors-button">I am a Mentor</a>
+        </div>
+      </section>
 
-        <section class="portrait-block" id="portrait-block-1">
-            <!-- Portrait content is injected by JavaScript -->
-        </section>
+      <section class="portrait-block" id="portrait-block-1">
+        <!-- Portrait content is injected by JavaScript -->
+      </section>
 
-        <section class="portrait-block" id="portrait-block-2">
-            <!-- Portrait content is injected by JavaScript -->
-        </section>
+      <section class="portrait-block" id="portrait-block-2">
+        <!-- Portrait content is injected by JavaScript -->
+      </section>
     </main>
 
     <footer class="footer">
-        <!-- Footer content is injected by JavaScript to ensure it is the same across all pages -->
+      <!-- Footer content is injected by JavaScript to ensure it is the same across all pages -->
     </footer>
-</body>
+  </body>
 </html>

@@ -41,7 +41,7 @@ while [[ $# -gt 0 ]]; do
         exit 1
       fi
       while [[ $# -gt 0 ]] && [[ "$1" != -* ]]; do
-        EXCLUDE_LIST="$(normalize_exclude_list "$EXCLUDE_LIST" "$1")"
+        EXCLUDE_LIST="$(normalise_exclude_list "$EXCLUDE_LIST" "$1")"
         shift
       done
       ;;
@@ -106,8 +106,8 @@ RESULTS_DIR="$ORIGINAL_DIR/$FOLDER/diagnostics/test-results"
 mkdir -p "$RESULTS_DIR"
 RESULT_FILE="$RESULTS_DIR/validation-results.json"
 
-# Initialize combined results
-echo '{"files":[],"summary":{"htmlErrors":0,"htmlWarnings":0,"cssErrors":0,"cssWarnings":0,"jsErrors":0,"jsWarnings":0}}' > "$RESULT_FILE"
+# Initialise combined results
+echo '{"files":[],"summary":{"filesChecked":0,"htmlErrors":0,"htmlWarnings":0,"cssErrors":0,"cssWarnings":0,"jsErrors":0,"jsWarnings":0}}' > "$RESULT_FILE"
 
 # Function to check if file should skip validation
 should_skip_validation() {
@@ -446,10 +446,14 @@ node -e "
   const fs = require('fs');
   const data = JSON.parse(fs.readFileSync('$RESULT_FILE', 'utf8'));
 
+  // Update filesChecked in summary
+  data.summary.filesChecked = ($FILE_COUNT);
+  fs.writeFileSync('$RESULT_FILE', JSON.stringify(data, null, 2));
+
   const totalErrors = data.summary.htmlErrors + data.summary.cssErrors + data.summary.jsErrors;
   const totalWarnings = data.summary.htmlWarnings + data.summary.cssWarnings + data.summary.jsWarnings;
 
-  console.log('Files validated: ' + ($FILE_COUNT));
+  console.log('Files validated: ' + data.summary.filesChecked);
   console.log('Files with issues: ' + data.files.length);
   console.log('');
   console.log('HTML errors: ' + data.summary.htmlErrors);

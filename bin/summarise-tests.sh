@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# This script summarizes all test results and exits with error code if critical/serious issues found
+# This script summarises all test results and exits with error code if critical/serious issues found
 
 # Accept application folder parameter
 APP_FOLDER="${1:-.}"
@@ -15,7 +15,7 @@ EXIT_CODE=0
 OUTPUT_FILE="$RESULTS_DIR/test-summary.txt"
 TEMP_EXIT_FILE="$RESULTS_DIR/.exit_code"
 
-# Initialize exit code file
+# Initialise exit code file
 echo "0" > "$TEMP_EXIT_FILE"
 
 # Run the main script logic in a subshell and capture output
@@ -40,7 +40,9 @@ if [ -f "$RESULTS_DIR/validation-results.json" ]; then
 
     const totalErrors = data.summary.htmlErrors + data.summary.cssErrors;
     const totalWarnings = data.summary.htmlWarnings + data.summary.cssWarnings;
+    const filesChecked = data.summary.filesChecked || 0;
 
+    console.log('  Files checked: ' + filesChecked);
     console.log('  Files with issues: ' + data.files.length);
     console.log('  HTML errors: ' + data.summary.htmlErrors);
     console.log('  CSS errors: ' + data.summary.cssErrors);

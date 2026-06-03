@@ -28,7 +28,7 @@ while [[ $# -gt 0 ]]; do
         exit 1
       fi
       while [[ $# -gt 0 ]] && [[ "$1" != -* ]]; do
-        EXCLUDE_LIST="$(normalize_exclude_list "$EXCLUDE_LIST" "$1")"
+        EXCLUDE_LIST="$(normalise_exclude_list "$EXCLUDE_LIST" "$1")"
         shift
       done
       ;;
@@ -68,7 +68,7 @@ RESULT_FILE="$RESULTS_DIR/readability-results.json"
 # Find all HTML pages
 discover_html_pages "$FOLDER" "$EXCLUDE_LIST"
 
-# Initialize results
+# Initialise results
 echo '{"pages":[]}' > "$RESULT_FILE"
 
 echo ""

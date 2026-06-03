@@ -11,75 +11,112 @@
  */
 
 @layer components {
-    /* Base styles for all buttons */
-    .button-circle,
-    .button-rectangle,
-    .button-circle-small {
-        padding: var(--button-padding);
-        color: var(--colour-effective-button-text);
+  /* Base styles for all buttons */
+  .button-circle,
+  .button-rectangle,
+  .button-circle-small {
+    padding: var(--button-padding);
+    color: var(--colour-effective-button-text);
+    background-color: var(--colour-effective-button-background);
+    border: var(--border-style) var(--border-weight) var(--colour-effective-button-text);
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    font-family: var(--font-family-button);
+    font-size: var(--fontsize-button);
+    font-weight: var(--font-weight-bold);
+
+    /* Disabled state */
+    &:disabled,
+    &[disabled] {
+      opacity: 0.5;
+      cursor: not-allowed;
+      background-color: var(--colour-effective-button-background);
+      color: var(--colour-effective-button-text);
+      transform: none;
+
+      /* Remove hover and focus effects for disabled buttons */
+      &:hover,
+      &:focus-visible {
         background-color: var(--colour-effective-button-background);
-        border: var(--border-style) var(--border-weight) var(--colour-effective-button-text);
-        cursor: pointer;
-        text-align: center;
-        transition: all 0.3s ease;
-        box-sizing: border-box;
-        font-family: var(--font-family-button);
-        font-size: var(--fontsize-button);
-        font-weight: var(--font-weight-bold);
+        color: var(--colour-effective-button-text);
+        transform: none;
+      }
 
-        /* Hover and focus states - all buttons behave the same */
-        &:hover,
-        &:focus-visible {
-            color: var(--colour-effective-button-text-hover);
-            background-color: var(--colour-effective-button-background-hover);
-            transform: scale(1.1);
-        }
-
-        /* Active (pressed) state - all buttons behave the same */
-        &:active {
-            transform: scale(0.98);
-        }
-
-        /* Selected/pressed state - all buttons behave the same */
-        &.pressed {
-            background-color: var(--colour-effective-button-background-selected);
-            color: var(--colour-effective-button-text-selected);
-            transform: scale(0.98);
-        }
-
-        /* Links styled as buttons */
-        &:link,
-        &:visited {
-            text-decoration: none;
-        }
+      &:active {
+        transform: none;
+      }
     }
 
-    /* Shape modifier: rectangular buttons */
-    .button-rectangle {
-        display: block;
-        border-radius: var(--border-radius);
-        margin: var(--margin-vertical) auto;
+    /* Hover and focus states - all buttons behave the same */
+    &:hover,
+    &:focus-visible {
+      color: var(--colour-effective-button-text-hover);
+      background-color: var(--colour-effective-button-background-hover);
+      transform: scale(1.1);
     }
 
-    /* Shape modifier: circular buttons */
-    .button-circle,
-    .button-circle-small {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 50%;
-        aspect-ratio: 1 / 1;
-        width: var(--buttonsize-circle);
-        height: var(--buttonsize-circle);
-        max-width: 15rem;
-        max-height: 15rem;
+    /* Active (pressed) state - all buttons behave the same */
+    &:active {
+      transform: scale(0.98);
     }
 
-    /* override for small circular buttons */
-    .button-circle-small {
-        width: calc(var(--buttonsize-circle) * 0.67);
-        height: calc(var(--buttonsize-circle) * 0.67);
-        max-width: 10rem;
-        max-height: 10rem;
+    /* Selected/pressed state - all buttons behave the same */
+    &.pressed {
+      background-color: var(--colour-effective-button-background-selected);
+      color: var(--colour-effective-button-text-selected);
+      transform: scale(0.98);
     }
+
+    /* Links styled as buttons */
+    &:link,
+    &:visited {
+      text-decoration: none;
+    }
+  }
+
+  /* Shape modifier: rectangular buttons */
+  .button-rectangle {
+    display: block;
+    border-radius: var(--border-radius);
+    margin: var(--margin-vertical) auto;
+  }
+
+  /* Shape modifier: circular buttons */
+  .button-circle,
+  .button-circle-small {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    aspect-ratio: 1 / 1;
+    width: var(--buttonsize-circle);
+    height: var(--buttonsize-circle);
+    max-width: 15rem;
+    max-height: 15rem;
+  }
+
+  /* override for small circular buttons */
+  .button-circle-small {
+    width: calc(var(--buttonsize-circle) * 0.67);
+    height: calc(var(--buttonsize-circle) * 0.67);
+    max-width: 10rem;
+    max-height: 10rem;
+  }
+
+  /* Glossary icon button styling */
+  .glossary-icon-button {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0 0.2rem;
+    cursor: pointer;
+    color: var(--colour-effective-page-text);
+    vertical-align: baseline;
+
+    &:hover {
+      color: var(--colour-effective-headings-text);
+    }
+  }
 }

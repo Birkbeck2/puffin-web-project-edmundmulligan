@@ -3,5 +3,6 @@
   "node": true,
   "undef": true,
   "unused": true,
-  "strict": false
+  "strict": false,
+  "laxbreak": true
 }

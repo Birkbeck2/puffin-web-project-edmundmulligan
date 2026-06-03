@@ -85,7 +85,7 @@ nav a:hover {
     box-shadow: 0 2px 4px rgb(0 0 0 / 20%);
 }
 
-.swatch-color {
+.swatch-colour {
     height: 80px;
     display: flex;
     align-items: center;
@@ -94,7 +94,7 @@ nav a:hover {
     font-size: 0.9rem;
 }
 
-.base-colours-grid .swatch-color {
+.base-colours-grid .swatch-colour {
     height: 100px;
 }
 
@@ -124,20 +124,20 @@ nav a:hover {
     margin-bottom: 2rem;
 }
 
-.theme-colors {
+.theme-colours {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1rem;
     margin-top: 1rem;
 }
 
-.color-pair {
+.colour-pair {
     padding: 1rem;
     border-radius: var(--border-radius);
     border: 1px solid currentcolor;
 }
 
-.color-label {
+.colour-label {
     font-family: 'Source Code Pro', monospace;
     font-size: 0.8rem;
     opacity: 0.9;
@@ -156,82 +156,82 @@ code {
    Utility Classes for Base Colour Swatches
    ================================================================= */
 
-.swatch-color-grey {
+.swatch-colour-grey {
     background: var(--colour-grey);
     color: white;
 }
 
-.swatch-color-red {
+.swatch-colour-red {
     background: var(--colour-red);
     color: white;
 }
 
-.swatch-color-orange {
+.swatch-colour-orange {
     background: var(--colour-orange);
     color: black;
 }
 
-.swatch-color-yellow {
+.swatch-colour-yellow {
     background: var(--colour-yellow);
     color: black;
 }
 
-.swatch-color-lime {
+.swatch-colour-lime {
     background: var(--colour-lime);
     color: black;
 }
 
-.swatch-color-green {
+.swatch-colour-green {
     background: var(--colour-green);
     color: black;
 }
 
-.swatch-color-turquoise {
+.swatch-colour-turquoise {
     background: var(--colour-turquoise);
     color: black;
 }
 
-.swatch-color-cyan {
+.swatch-colour-cyan {
     background: var(--colour-cyan);
     color: black;
 }
 
-.swatch-color-blue {
+.swatch-colour-blue {
     background: var(--colour-blue);
     color: white;
 }
 
-.swatch-color-navy {
+.swatch-colour-navy {
     background: var(--colour-navy);
     color: white;
 }
 
-.swatch-color-purple {
+.swatch-colour-purple {
     background: var(--colour-purple);
     color: white;
 }
 
-.swatch-color-magenta {
+.swatch-colour-magenta {
     background: var(--colour-magenta);
     color: white;
 }
 
-.swatch-color-pink {
+.swatch-colour-pink {
     background: var(--colour-pink);
     color: black;
 }
 
-.swatch-color-warning {
+.swatch-colour-warning {
     background: var(--colour-warning-background);
     color: var(--colour-warning-text);
 }
 
-.swatch-color-error {
+.swatch-colour-error {
     background: var(--colour-error-background);
     color: var(--colour-error-text);
 }
 
-.swatch-color-success {
+.swatch-colour-success {
     background: var(--colour-success-background);
     color: var(--colour-success-text);
 }
@@ -316,295 +316,295 @@ code {
 }
 
 /* =================================================================
-   Utility Classes for Color Pairs - Normal Light
+   Utility Classes for Colour Pairs - Normal Light
    ================================================================= */
 
-.color-pair-normal-light-page {
+.colour-pair-normal-light-page {
     background: var(--colour-normal-light-page-background);
     color: var(--colour-normal-light-page-text);
 }
 
-.color-pair-normal-light-headings {
+.colour-pair-normal-light-headings {
     background: var(--colour-normal-light-headings-background);
     color: var(--colour-normal-light-headings-text);
 }
 
-.color-pair-normal-light-code {
+.colour-pair-normal-light-code {
     background: var(--colour-normal-light-code-background);
     color: var(--colour-normal-light-code-text);
 }
 
-.color-pair-normal-light-button {
+.colour-pair-normal-light-button {
     background: var(--colour-normal-light-button-background);
     color: var(--colour-normal-light-button-text);
 }
 
-.color-pair-normal-light-button-hover {
+.colour-pair-normal-light-button-hover {
     background: var(--colour-normal-light-button-background-hover);
     color: var(--colour-normal-light-button-text-hover);
 }
 
-.color-pair-normal-light-button-selected {
+.colour-pair-normal-light-button-selected {
     background: var(--colour-normal-light-button-background-selected);
     color: var(--colour-normal-light-button-text-selected);
 }
 
-.color-pair-normal-light-menu {
+.colour-pair-normal-light-menu {
     background: var(--colour-normal-light-menu-background);
     color: var(--colour-normal-light-menu-text);
 }
 
-.color-pair-normal-light-menu-hover {
+.colour-pair-normal-light-menu-hover {
     background: var(--colour-normal-light-menu-background-hover);
     color: var(--colour-normal-light-menu-text-hover);
 }
 
-.color-pair-normal-light-menu-visited {
+.colour-pair-normal-light-menu-visited {
     background: var(--colour-normal-light-menu-background-visited);
     color: var(--colour-normal-light-menu-text-visited);
 }
 
 /* =================================================================
-   Utility Classes for Color Pairs - Normal Dark
+   Utility Classes for Colour Pairs - Normal Dark
    ================================================================= */
 
-.color-pair-normal-dark-page {
+.colour-pair-normal-dark-page {
     background: var(--colour-normal-dark-page-background);
     color: var(--colour-normal-dark-page-text);
 }
 
-.color-pair-normal-dark-headings {
+.colour-pair-normal-dark-headings {
     background: var(--colour-normal-dark-headings-background);
     color: var(--colour-normal-dark-headings-text);
 }
 
-.color-pair-normal-dark-code {
+.colour-pair-normal-dark-code {
     background: var(--colour-normal-dark-code-background);
     color: var(--colour-normal-dark-code-text);
 }
 
-.color-pair-normal-dark-button {
+.colour-pair-normal-dark-button {
     background: var(--colour-normal-dark-button-background);
     color: var(--colour-normal-dark-button-text);
 }
 
-.color-pair-normal-dark-button-hover {
+.colour-pair-normal-dark-button-hover {
     background: var(--colour-normal-dark-button-background-hover);
     color: var(--colour-normal-dark-button-text-hover);
 }
 
-.color-pair-normal-dark-button-selected {
+.colour-pair-normal-dark-button-selected {
     background: var(--colour-normal-dark-button-background-selected);
     color: var(--colour-normal-dark-button-text-selected);
 }
 
-.color-pair-normal-dark-menu {
+.colour-pair-normal-dark-menu {
     background: var(--colour-normal-dark-menu-background);
     color: var(--colour-normal-dark-menu-text);
 }
 
-.color-pair-normal-dark-menu-hover {
+.colour-pair-normal-dark-menu-hover {
     background: var(--colour-normal-dark-menu-background-hover);
     color: var(--colour-normal-dark-menu-text-hover);
 }
 
-.color-pair-normal-dark-menu-visited {
+.colour-pair-normal-dark-menu-visited {
     background: var(--colour-normal-dark-menu-background-visited);
     color: var(--colour-normal-dark-menu-text-visited);
 }
 
 /* =================================================================
-   Utility Classes for Color Pairs - Subdued Light
+   Utility Classes for Colour Pairs - Subdued Light
    ================================================================= */
 
-.color-pair-subdued-light-page {
+.colour-pair-subdued-light-page {
     background: var(--colour-subdued-light-page-background);
     color: var(--colour-subdued-light-page-text);
 }
 
-.color-pair-subdued-light-headings {
+.colour-pair-subdued-light-headings {
     background: var(--colour-subdued-light-headings-background);
     color: var(--colour-subdued-light-headings-text);
 }
 
-.color-pair-subdued-light-code {
+.colour-pair-subdued-light-code {
     background: var(--colour-subdued-light-code-background);
     color: var(--colour-subdued-light-code-text);
 }
 
-.color-pair-subdued-light-button {
+.colour-pair-subdued-light-button {
     background: var(--colour-subdued-light-button-background);
     color: var(--colour-subdued-light-button-text);
 }
 
-.color-pair-subdued-light-button-hover {
+.colour-pair-subdued-light-button-hover {
     background: var(--colour-subdued-light-button-background-hover);
     color: var(--colour-subdued-light-button-text-hover);
 }
 
-.color-pair-subdued-light-button-selected {
+.colour-pair-subdued-light-button-selected {
     background: var(--colour-subdued-light-button-background-selected);
     color: var(--colour-subdued-light-button-text-selected);
 }
 
-.color-pair-subdued-light-menu {
+.colour-pair-subdued-light-menu {
     background: var(--colour-subdued-light-menu-background);
     color: var(--colour-subdued-light-menu-text);
 }
 
-.color-pair-subdued-light-menu-hover {
+.colour-pair-subdued-light-menu-hover {
     background: var(--colour-subdued-light-menu-background-hover);
     color: var(--colour-subdued-light-menu-text-hover);
 }
 
-.color-pair-subdued-light-menu-visited {
+.colour-pair-subdued-light-menu-visited {
     background: var(--colour-subdued-light-menu-background-visited);
     color: var(--colour-subdued-light-menu-text-visited);
 }
 
 /* =================================================================
-   Utility Classes for Color Pairs - Subdued Dark
+   Utility Classes for Colour Pairs - Subdued Dark
    ================================================================= */
 
-.color-pair-subdued-dark-page {
+.colour-pair-subdued-dark-page {
     background: var(--colour-subdued-dark-page-background);
     color: var(--colour-subdued-dark-page-text);
 }
 
-.color-pair-subdued-dark-headings {
+.colour-pair-subdued-dark-headings {
     background: var(--colour-subdued-dark-headings-background);
     color: var(--colour-subdued-dark-headings-text);
 }
 
-.color-pair-subdued-dark-code {
+.colour-pair-subdued-dark-code {
     background: var(--colour-subdued-dark-code-background);
     color: var(--colour-subdued-dark-code-text);
 }
 
-.color-pair-subdued-dark-button {
+.colour-pair-subdued-dark-button {
     background: var(--colour-subdued-dark-button-background);
     color: var(--colour-subdued-dark-button-text);
 }
 
-.color-pair-subdued-dark-button-hover {
+.colour-pair-subdued-dark-button-hover {
     background: var(--colour-subdued-dark-button-background-hover);
     color: var(--colour-subdued-dark-button-text-hover);
 }
 
-.color-pair-subdued-dark-button-selected {
+.colour-pair-subdued-dark-button-selected {
     background: var(--colour-subdued-dark-button-background-selected);
     color: var(--colour-subdued-dark-button-text-selected);
 }
 
-.color-pair-subdued-dark-menu {
+.colour-pair-subdued-dark-menu {
     background: var(--colour-subdued-dark-menu-background);
     color: var(--colour-subdued-dark-menu-text);
 }
 
-.color-pair-subdued-dark-menu-hover {
+.colour-pair-subdued-dark-menu-hover {
     background: var(--colour-subdued-dark-menu-background-hover);
     color: var(--colour-subdued-dark-menu-text-hover);
 }
 
-.color-pair-subdued-dark-menu-visited {
+.colour-pair-subdued-dark-menu-visited {
     background: var(--colour-subdued-dark-menu-background-visited);
     color: var(--colour-subdued-dark-menu-text-visited);
 }
 
 /* =================================================================
-   Utility Classes for Color Pairs - Vibrant Light
+   Utility Classes for Colour Pairs - Vibrant Light
    ================================================================= */
 
-.color-pair-vibrant-light-page {
+.colour-pair-vibrant-light-page {
     background: var(--colour-vibrant-light-page-background);
     color: var(--colour-vibrant-light-page-text);
 }
 
-.color-pair-vibrant-light-headings {
+.colour-pair-vibrant-light-headings {
     background: var(--colour-vibrant-light-headings-background);
     color: var(--colour-vibrant-light-headings-text);
 }
 
-.color-pair-vibrant-light-code {
+.colour-pair-vibrant-light-code {
     background: var(--colour-vibrant-light-code-background);
     color: var(--colour-vibrant-light-code-text);
 }
 
-.color-pair-vibrant-light-button {
+.colour-pair-vibrant-light-button {
     background: var(--colour-vibrant-light-button-background);
     color: var(--colour-vibrant-light-button-text);
 }
 
-.color-pair-vibrant-light-button-hover {
+.colour-pair-vibrant-light-button-hover {
     background: var(--colour-vibrant-light-button-background-hover);
     color: var(--colour-vibrant-light-button-text-hover);
 }
 
-.color-pair-vibrant-light-button-selected {
+.colour-pair-vibrant-light-button-selected {
     background: var(--colour-vibrant-light-button-background-selected);
     color: var(--colour-vibrant-light-button-text-selected);
 }
 
-.color-pair-vibrant-light-menu {
+.colour-pair-vibrant-light-menu {
     background: var(--colour-vibrant-light-menu-background);
     color: var(--colour-vibrant-light-menu-text);
 }
 
-.color-pair-vibrant-light-menu-hover {
+.colour-pair-vibrant-light-menu-hover {
     background: var(--colour-vibrant-light-menu-background-hover);
     color: var(--colour-vibrant-light-menu-text-hover);
 }
 
-.color-pair-vibrant-light-menu-visited {
+.colour-pair-vibrant-light-menu-visited {
     background: var(--colour-vibrant-light-menu-background-visited);
     color: var(--colour-vibrant-light-menu-text-visited);
 }
 
 /* =================================================================
-   Utility Classes for Color Pairs - Vibrant Dark
+   Utility Classes for Colour Pairs - Vibrant Dark
    ================================================================= */
 
-.color-pair-vibrant-dark-page {
+.colour-pair-vibrant-dark-page {
     background: var(--colour-vibrant-dark-page-background);
     color: var(--colour-vibrant-dark-page-text);
 }
 
-.color-pair-vibrant-dark-headings {
+.colour-pair-vibrant-dark-headings {
     background: var(--colour-vibrant-dark-headings-background);
     color: var(--colour-vibrant-dark-headings-text);
 }
 
-.color-pair-vibrant-dark-code {
+.colour-pair-vibrant-dark-code {
     background: var(--colour-vibrant-dark-code-background);
     color: var(--colour-vibrant-dark-code-text);
 }
 
-.color-pair-vibrant-dark-button {
+.colour-pair-vibrant-dark-button {
     background: var(--colour-vibrant-dark-button-background);
     color: var(--colour-vibrant-dark-button-text);
 }
 
-.color-pair-vibrant-dark-button-hover {
+.colour-pair-vibrant-dark-button-hover {
     background: var(--colour-vibrant-dark-button-background-hover);
     color: var(--colour-vibrant-dark-button-text-hover);
 }
 
-.color-pair-vibrant-dark-button-selected {
+.colour-pair-vibrant-dark-button-selected {
     background: var(--colour-vibrant-dark-button-background-selected);
     color: var(--colour-vibrant-dark-button-text-selected);
 }
 
-.color-pair-vibrant-dark-menu {
+.colour-pair-vibrant-dark-menu {
     background: var(--colour-vibrant-dark-menu-background);
     color: var(--colour-vibrant-dark-menu-text);
 }
 
-.color-pair-vibrant-dark-menu-hover {
+.colour-pair-vibrant-dark-menu-hover {
     background: var(--colour-vibrant-dark-menu-background-hover);
     color: var(--colour-vibrant-dark-menu-text-hover);
 }
 
-.color-pair-vibrant-dark-menu-visited {
+.colour-pair-vibrant-dark-menu-visited {
     background: var(--colour-vibrant-dark-menu-background-visited);
     color: var(--colour-vibrant-dark-menu-text-visited);
 }
