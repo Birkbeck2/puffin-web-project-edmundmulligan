@@ -1,446 +1,512 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.12.24)  6 APR 2026 13:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.1) (preloaded format=pdflatex 2026.2.9)  1 JUN 2026 14:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**essay-2.tex
-(./essay-2.tex
-LaTeX2e <2023-11-01> patch level 1
-L3 programming layer <2024-01-22>
-(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
-Document Class: article 2023/05/17 v1.4n Standard LaTeX document class
-(/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
-File: size12.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
+**./essay-2.tex
+(essay-2.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+
+(C:\Users\EdmundMulligan.ONELONDON\AppData\Local\Programs\MiKTeX\tex/latex/base
+\article.cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+
+(C:\Users\EdmundMulligan.ONELONDON\AppData\Local\Programs\MiKTeX\tex/latex/base
+\size12.clo
+File: size12.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
 )
-\c@part=\count187
-\c@section=\count188
-\c@subsection=\count189
-\c@subsubsection=\count190
-\c@paragraph=\count191
-\c@subparagraph=\count192
-\c@figure=\count193
-\c@table=\count194
-\abovecaptionskip=\skip48
-\belowcaptionskip=\skip49
-\bibindent=\dimen140
+\c@part=\count275
+\c@section=\count276
+\c@subsection=\count277
+\c@subsubsection=\count278
+\c@paragraph=\count279
+\c@subparagraph=\count280
+\c@figure=\count281
+\c@table=\count282
+\abovecaptionskip=\skip49
+\belowcaptionskip=\skip50
+\bibindent=\dimen148
 )
-(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+(C:\Users\EdmundMulligan.ONELONDON\AppData\Local\Programs\MiKTeX\tex/latex/geom
+etry\geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
 
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+(C:\Users\EdmundMulligan.ONELONDON\AppData\Local\Programs\MiKTeX\tex/latex/grap
+hics\keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
 \KV@toks@=\toks17
 )
-(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty
+(C:\Users\EdmundMulligan.ONELONDON\AppData\Local\Programs\MiKTeX\tex/generic/if
+tex\ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 
-(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
-Package: iftex 2022/02/03 v1.0f TeX engine tests
+(C:\Users\EdmundMulligan.ONELONDON\AppData\Local\Programs\MiKTeX\tex/generic/if
+tex\iftex.sty
+Package: iftex 2024/12/12 v1.0g TeX engine tests
 ))
-\Gm@cnth=\count195
-\Gm@cntv=\count196
-\c@Gm@tempcnt=\count197
-\Gm@bindingoffset=\dimen141
-\Gm@wd@mp=\dimen142
-\Gm@odd@mp=\dimen143
-\Gm@even@mp=\dimen144
-\Gm@layoutwidth=\dimen145
-\Gm@layoutheight=\dimen146
-\Gm@layouthoffset=\dimen147
-\Gm@layoutvoffset=\dimen148
+\Gm@cnth=\count283
+\Gm@cntv=\count284
+\c@Gm@tempcnt=\count285
+\Gm@bindingoffset=\dimen149
+\Gm@wd@mp=\dimen150
+\Gm@odd@mp=\dimen151
+\Gm@even@mp=\dimen152
+\Gm@layoutwidth=\dimen153
+\Gm@layoutheight=\dimen154
+\Gm@layouthoffset=\dimen155
+\Gm@layoutvoffset=\dimen156
 \Gm@dimlist=\toks18
-)
-(/usr/share/texlive/texmf-dist/tex/latex/natbib/natbib.sty
+
+(C:\Users\EdmundMulligan.ONELONDON\AppData\Local\Programs\MiKTeX\tex/latex/geom
+etry\geometry.cfg))
+(C:\Users\EdmundMulligan.ONELONDON\AppData\Local\Programs\MiKTeX\tex/latex/natb
+ib\natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
-\bibhang=\skip50
-\bibsep=\skip51
+\bibhang=\skip51
+\bibsep=\skip52
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count198
+\c@NAT@ctr=\count286
 )
-(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
-\Urlmuskip=\muskip16
+(C:\Users\EdmundMulligan.ONELONDON\AppData\Local\Programs\MiKTeX\tex/latex/url\
+url.sty
+\Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-(/usr/share/texlive/texmf-dist/tex/latex/tools/indentfirst.sty
+(C:\Users\EdmundMulligan.ONELONDON\AppData\Local\Programs\MiKTeX\tex/latex/tool
+s\indentfirst.sty
 Package: indentfirst 2023/07/02 v1.03 Indent first paragraph (DPC)
 )
-(/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty
+(C:\Users\EdmundMulligan.ONELONDON\AppData\Local\Programs\MiKTeX\tex/latex/book
+tabs\booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
-\heavyrulewidth=\dimen149
-\lightrulewidth=\dimen150
-\cmidrulewidth=\dimen151
-\belowrulesep=\dimen152
-\belowbottomsep=\dimen153
-\aboverulesep=\dimen154
-\abovetopsep=\dimen155
-\cmidrulesep=\dimen156
-\cmidrulekern=\dimen157
-\defaultaddspace=\dimen158
-\@cmidla=\count199
-\@cmidlb=\count266
-\@aboverulesep=\dimen159
-\@belowrulesep=\dimen160
-\@thisruleclass=\count267
-\@lastruleclass=\count268
-\@thisrulewidth=\dimen161
+\heavyrulewidth=\dimen157
+\lightrulewidth=\dimen158
+\cmidrulewidth=\dimen159
+\belowrulesep=\dimen160
+\belowbottomsep=\dimen161
+\aboverulesep=\dimen162
+\abovetopsep=\dimen163
+\cmidrulesep=\dimen164
+\cmidrulekern=\dimen165
+\defaultaddspace=\dimen166
+\@cmidla=\count287
+\@cmidlb=\count288
+\@aboverulesep=\dimen167
+\@belowrulesep=\dimen168
+\@thisruleclass=\count289
+\@lastruleclass=\count290
+\@thisrulewidth=\dimen169
 )
-(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+(C:\Users\EdmundMulligan.ONELONDON\AppData\Local\Programs\MiKTeX\tex/latex/floa
+t\float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count269
+\c@float@type=\count291
 \float@exts=\toks19
-\float@box=\box51
+\float@box=\box53
 \@float@everytoks=\toks20
-\@floatcapt=\box52
+\@floatcapt=\box54
 )
-(/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
-Package: enumitem 2019/06/20 v3.9 Customized lists
-\labelindent=\skip52
-\enit@outerparindent=\dimen162
+(C:\Users\EdmundMulligan.ONELONDON\AppData\Local\Programs\MiKTeX\tex/latex/enum
+item\enumitem.sty
+Package: enumitem 2025/02/06 v3.11 Customized lists
+\labelindent=\skip53
+\enit@outerparindent=\dimen170
 \enit@toks=\toks21
-\enit@inbox=\box53
-\enit@count@id=\count270
-\enitdp@description=\count271
+\enit@inbox=\box55
+\enit@count@id=\count292
+\enitdp@description=\count293
 )
-(/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
+(C:\Users\EdmundMulligan.ONELONDON\AppData\Local\Programs\MiKTeX\tex/latex/capt
+ion\subcaption.sty
 Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
 
-(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+(C:\Users\EdmundMulligan.ONELONDON\AppData\Local\Programs\MiKTeX\tex/latex/capt
+ion\caption.sty
 Package: caption 2023/08/05 v3.6o Customizing captions (AR)
 
-(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+(C:\Users\EdmundMulligan.ONELONDON\AppData\Local\Programs\MiKTeX\tex/latex/capt
+ion\caption3.sty
 Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
-\caption@tempdima=\dimen163
-\captionmargin=\dimen164
-\caption@leftmargin=\dimen165
-\caption@rightmargin=\dimen166
-\caption@width=\dimen167
-\caption@indent=\dimen168
-\caption@parindent=\dimen169
-\caption@hangindent=\dimen170
+\caption@tempdima=\dimen171
+\captionmargin=\dimen172
+\caption@leftmargin=\dimen173
+\caption@rightmargin=\dimen174
+\caption@width=\dimen175
+\caption@indent=\dimen176
+\caption@parindent=\dimen177
+\caption@hangindent=\dimen178
 Package caption Info: Standard document class detected.
 )
-\c@caption@flags=\count272
-\c@continuedfloat=\count273
+\c@caption@flags=\count294
+\c@continuedfloat=\count295
 Package caption Info: float package is loaded.
 )
 Package caption Info: New subtype `subfigure' on input line 238.
-\c@subfigure=\count274
+\c@subfigure=\count296
 Package caption Info: New subtype `subtable' on input line 238.
-\c@subtable=\count275
+\c@subtable=\count297
 )
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+(C:\Users\EdmundMulligan.ONELONDON\AppData\Local\Programs\MiKTeX\tex/latex/grap
+hics\graphicx.sty
+Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+(C:\Users\EdmundMulligan.ONELONDON\AppData\Local\Programs\MiKTeX\tex/latex/grap
+hics\graphics.sty
+Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
 
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
-Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+(C:\Users\EdmundMulligan.ONELONDON\AppData\Local\Programs\MiKTeX\tex/latex/grap
+hics\trig.sty
+Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
 )
-(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+(C:\Users\EdmundMulligan.ONELONDON\AppData\Local\Programs\MiKTeX\tex/latex/grap
+hics-cfg\graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
-Package graphics Info: Driver file: pdftex.def on input line 107.
+Package graphics Info: Driver file: pdftex.def on input line 106.
 
-(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
-File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
+(C:\Users\EdmundMulligan.ONELONDON\AppData\Local\Programs\MiKTeX\tex/latex/grap
+hics-def\pdftex.def
+File: pdftex.def 2025/09/29 v1.2d Graphics/color driver for pdftex
 ))
-\Gin@req@height=\dimen171
-\Gin@req@width=\dimen172
+\Gin@req@height=\dimen179
+\Gin@req@width=\dimen180
 )
-(/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
-(/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
-(/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
+(C:\Users\EdmundMulligan.ONELONDON\AppData\Local\Programs\MiKTeX\tex/latex/pgf/
+frontendlayer\tikz.sty
+(C:\Users\EdmundMulligan.ONELONDON\AppData\Local\Programs\MiKTeX\tex/latex/pgf/
+basiclayer\pgf.sty
+(C:\Users\EdmundMulligan.ONELONDON\AppData\Local\Programs\MiKTeX\tex/latex/pgf/
+utilities\pgfrcs.sty
+(C:\Users\EdmundMulligan.ONELONDON\AppData\Local\Programs\MiKTeX\tex/generic/pg
+f/utilities\pgfutil-common.tex
 \pgfutil@everybye=\toks22
-\pgfutil@tempdima=\dimen173
-\pgfutil@tempdimb=\dimen174
+\pgfutil@tempdima=\dimen181
+\pgfutil@tempdimb=\dimen182
 )
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
-\pgfutil@abb=\box54
+(C:\Users\EdmundMulligan.ONELONDON\AppData\Local\Programs\MiKTeX\tex/generic/pg
+f/utilities\pgfutil-latex.def
+\pgfutil@abb=\box56
 )
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/pgf.revision.tex)
-Package: pgfrcs 2023-01-15 v3.1.10 (3.1.10)
+(C:\Users\EdmundMulligan.ONELONDON\AppData\Local\Programs\MiKTeX\tex/generic/pg
+f/utilities\pgfrcs.code.tex
+(C:\Users\EdmundMulligan.ONELONDON\AppData\Local\Programs\MiKTeX\tex/generic/pg
+f\pgf.revision.tex)
+Package: pgfrcs 2025-08-29 v3.1.11a (3.1.11a)
 ))
-Package: pgf 2023-01-15 v3.1.10 (3.1.10)
+Package: pgf 2025-08-29 v3.1.11a (3.1.11a)
 
-(/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
-(/usr/share/texlive/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
-Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
+(C:\Users\EdmundMulligan.ONELONDON\AppData\Local\Programs\MiKTeX\tex/latex/pgf/
+basiclayer\pgfcore.sty
+(C:\Users\EdmundMulligan.ONELONDON\AppData\Local\Programs\MiKTeX\tex/latex/pgf/
+systemlayer\pgfsys.sty
+(C:\Users\EdmundMulligan.ONELONDON\AppData\Local\Programs\MiKTeX\tex/generic/pg
+f/systemlayer\pgfsys.code.tex
+Package: pgfsys 2025-08-29 v3.1.11a (3.1.11a)
 
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+(C:\Users\EdmundMulligan.ONELONDON\AppData\Local\Programs\MiKTeX\tex/generic/pg
+f/utilities\pgfkeys.code.tex
 \pgfkeys@pathtoks=\toks23
 \pgfkeys@temptoks=\toks24
 
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfiltered
-.code.tex
+(C:\Users\EdmundMulligan.ONELONDON\AppData\Local\Programs\MiKTeX\tex/generic/pg
+f/utilities\pgfkeyslibraryfiltered.code.tex
 \pgfkeys@tmptoks=\toks25
 ))
-\pgf@x=\dimen175
-\pgf@y=\dimen176
-\pgf@xa=\dimen177
-\pgf@ya=\dimen178
-\pgf@xb=\dimen179
-\pgf@yb=\dimen180
-\pgf@xc=\dimen181
-\pgf@yc=\dimen182
-\pgf@xd=\dimen183
-\pgf@yd=\dimen184
+\pgf@x=\dimen183
+\pgf@y=\dimen184
+\pgf@xa=\dimen185
+\pgf@ya=\dimen186
+\pgf@xb=\dimen187
+\pgf@yb=\dimen188
+\pgf@xc=\dimen189
+\pgf@yc=\dimen190
+\pgf@xd=\dimen191
+\pgf@yd=\dimen192
 \w@pgf@writea=\write3
 \r@pgf@reada=\read2
-\c@pgf@counta=\count276
-\c@pgf@countb=\count277
-\c@pgf@countc=\count278
-\c@pgf@countd=\count279
+\c@pgf@counta=\count298
+\c@pgf@countb=\count299
+\c@pgf@countc=\count300
+\c@pgf@countd=\count301
 \t@pgf@toka=\toks26
 \t@pgf@tokb=\toks27
 \t@pgf@tokc=\toks28
-\pgf@sys@id@count=\count280
- (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
-File: pgf.cfg 2023-01-15 v3.1.10 (3.1.10)
+\pgf@sys@id@count=\count302
+
+(C:\Users\EdmundMulligan.ONELONDON\AppData\Local\Programs\MiKTeX\tex/generic/pg
+f/systemlayer\pgf.cfg
+File: pgf.cfg 2025-08-29 v3.1.11a (3.1.11a)
 )
 Driver file for pgf: pgfsys-pdftex.def
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
-File: pgfsys-pdftex.def 2023-01-15 v3.1.10 (3.1.10)
 
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.de
-f
-File: pgfsys-common-pdf.def 2023-01-15 v3.1.10 (3.1.10)
+(C:\Users\EdmundMulligan.ONELONDON\AppData\Local\Programs\MiKTeX\tex/generic/pg
+f/systemlayer\pgfsys-pdftex.def
+File: pgfsys-pdftex.def 2025-08-29 v3.1.11a (3.1.11a)
+
+(C:\Users\EdmundMulligan.ONELONDON\AppData\Local\Programs\MiKTeX\tex/generic/pg
+f/systemlayer\pgfsys-common-pdf.def
+File: pgfsys-common-pdf.def 2025-08-29 v3.1.11a (3.1.11a)
 )))
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.
-tex
-File: pgfsyssoftpath.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfsyssoftpath@smallbuffer@items=\count281
-\pgfsyssoftpath@bigbuffer@items=\count282
+(C:\Users\EdmundMulligan.ONELONDON\AppData\Local\Programs\MiKTeX\tex/generic/pg
+f/systemlayer\pgfsyssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfsyssoftpath@smallbuffer@items=\count303
+\pgfsyssoftpath@bigbuffer@items=\count304
 )
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.
-tex
-File: pgfsysprotocol.code.tex 2023-01-15 v3.1.10 (3.1.10)
-)) (/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
-Package: xcolor 2023/11/15 v3.01 LaTeX color extensions (UK)
+(C:\Users\EdmundMulligan.ONELONDON\AppData\Local\Programs\MiKTeX\tex/generic/pg
+f/systemlayer\pgfsysprotocol.code.tex
+File: pgfsysprotocol.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+))
+(C:\Users\EdmundMulligan.ONELONDON\AppData\Local\Programs\MiKTeX\tex/latex/xcol
+or\xcolor.sty
+Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
 
-(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+(C:\Users\EdmundMulligan.ONELONDON\AppData\Local\Programs\MiKTeX\tex/latex/grap
+hics-cfg\color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 274.
 
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/mathcolor.ltx)
-Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1350.
-Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1354.
-Package xcolor Info: Model `RGB' extended on input line 1366.
-Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1368.
-Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1369.
-Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1370.
-Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1371.
-Package xcolor Info: Model `Gray' substituted by `gray' on input line 1372.
-Package xcolor Info: Model `wave' substituted by `hsb' on input line 1373.
+(C:\Users\EdmundMulligan.ONELONDON\AppData\Local\Programs\MiKTeX\tex/latex/grap
+hics\mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1353.
+Package xcolor Info: Model `RGB' extended on input line 1365.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1367.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
 )
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
-Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
+(C:\Users\EdmundMulligan.ONELONDON\AppData\Local\Programs\MiKTeX\tex/generic/pg
+f/basiclayer\pgfcore.code.tex
+Package: pgfcore 2025-08-29 v3.1.11a (3.1.11a)
 
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
-\pgfmath@dimen=\dimen185
-\pgfmath@count=\count283
-\pgfmath@box=\box55
+(C:\Users\EdmundMulligan.ONELONDON\AppData\Local\Programs\MiKTeX\tex/generic/pg
+f/math\pgfmath.code.tex
+(C:\Users\EdmundMulligan.ONELONDON\AppData\Local\Programs\MiKTeX\tex/generic/pg
+f/math\pgfmathutil.code.tex)
+(C:\Users\EdmundMulligan.ONELONDON\AppData\Local\Programs\MiKTeX\tex/generic/pg
+f/math\pgfmathparser.code.tex
+\pgfmath@dimen=\dimen193
+\pgfmath@count=\count305
+\pgfmath@box=\box57
 \pgfmath@toks=\toks29
 \pgfmath@stack@operand=\toks30
 \pgfmath@stack@operation=\toks31
 )
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex)
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code
-.tex)
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonomet
-ric.code.tex)
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.cod
-e.tex)
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison
-.code.tex)
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.
-tex)
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code
-.tex)
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.
-tex)
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerari
-thmetics.code.tex)
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex)
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count284
+(C:\Users\EdmundMulligan.ONELONDON\AppData\Local\Programs\MiKTeX\tex/generic/pg
+f/math\pgfmathfunctions.code.tex)
+(C:\Users\EdmundMulligan.ONELONDON\AppData\Local\Programs\MiKTeX\tex/generic/pg
+f/math\pgfmathfunctions.basic.code.tex)
+(C:\Users\EdmundMulligan.ONELONDON\AppData\Local\Programs\MiKTeX\tex/generic/pg
+f/math\pgfmathfunctions.trigonometric.code.tex)
+(C:\Users\EdmundMulligan.ONELONDON\AppData\Local\Programs\MiKTeX\tex/generic/pg
+f/math\pgfmathfunctions.random.code.tex)
+(C:\Users\EdmundMulligan.ONELONDON\AppData\Local\Programs\MiKTeX\tex/generic/pg
+f/math\pgfmathfunctions.comparison.code.tex)
+(C:\Users\EdmundMulligan.ONELONDON\AppData\Local\Programs\MiKTeX\tex/generic/pg
+f/math\pgfmathfunctions.base.code.tex)
+(C:\Users\EdmundMulligan.ONELONDON\AppData\Local\Programs\MiKTeX\tex/generic/pg
+f/math\pgfmathfunctions.round.code.tex)
+(C:\Users\EdmundMulligan.ONELONDON\AppData\Local\Programs\MiKTeX\tex/generic/pg
+f/math\pgfmathfunctions.misc.code.tex)
+(C:\Users\EdmundMulligan.ONELONDON\AppData\Local\Programs\MiKTeX\tex/generic/pg
+f/math\pgfmathfunctions.integerarithmetics.code.tex)
+(C:\Users\EdmundMulligan.ONELONDON\AppData\Local\Programs\MiKTeX\tex/generic/pg
+f/math\pgfmathcalc.code.tex)
+(C:\Users\EdmundMulligan.ONELONDON\AppData\Local\Programs\MiKTeX\tex/generic/pg
+f/math\pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count306
 ))
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.te
-x
-File: pgfcorepoints.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@picminx=\dimen186
-\pgf@picmaxx=\dimen187
-\pgf@picminy=\dimen188
-\pgf@picmaxy=\dimen189
-\pgf@pathminx=\dimen190
-\pgf@pathmaxx=\dimen191
-\pgf@pathminy=\dimen192
-\pgf@pathmaxy=\dimen193
-\pgf@xx=\dimen194
-\pgf@xy=\dimen195
-\pgf@yx=\dimen196
-\pgf@yy=\dimen197
-\pgf@zx=\dimen198
-\pgf@zy=\dimen199
+(C:\Users\EdmundMulligan.ONELONDON\AppData\Local\Programs\MiKTeX\tex/generic/pg
+f/math\pgfint.code.tex)
+(C:\Users\EdmundMulligan.ONELONDON\AppData\Local\Programs\MiKTeX\tex/generic/pg
+f/basiclayer\pgfcorepoints.code.tex
+File: pgfcorepoints.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@picminx=\dimen194
+\pgf@picmaxx=\dimen195
+\pgf@picminy=\dimen196
+\pgf@picmaxy=\dimen197
+\pgf@pathminx=\dimen198
+\pgf@pathmaxx=\dimen199
+\pgf@pathminy=\dimen256
+\pgf@pathmaxy=\dimen257
+\pgf@xx=\dimen258
+\pgf@xy=\dimen259
+\pgf@yx=\dimen260
+\pgf@yy=\dimen261
+\pgf@zx=\dimen262
+\pgf@zy=\dimen263
 )
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.
-code.tex
-File: pgfcorepathconstruct.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@path@lastx=\dimen256
-\pgf@path@lasty=\dimen257
+(C:\Users\EdmundMulligan.ONELONDON\AppData\Local\Programs\MiKTeX\tex/generic/pg
+f/basiclayer\pgfcorepathconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@path@lastx=\dimen264
+\pgf@path@lasty=\dimen265
 )
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code
-.tex
-File: pgfcorepathusage.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@shorten@end@additional=\dimen258
-\pgf@shorten@start@additional=\dimen259
+(C:\Users\EdmundMulligan.ONELONDON\AppData\Local\Programs\MiKTeX\tex/generic/pg
+f/basiclayer\pgfcorepathusage.code.tex
+File: pgfcorepathusage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@shorten@end@additional=\dimen266
+\pgf@shorten@start@additional=\dimen267
 )
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.te
-x
-File: pgfcorescopes.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfpic=\box56
-\pgf@hbox=\box57
-\pgf@layerbox@main=\box58
-\pgf@picture@serial@count=\count285
+(C:\Users\EdmundMulligan.ONELONDON\AppData\Local\Programs\MiKTeX\tex/generic/pg
+f/basiclayer\pgfcorescopes.code.tex
+File: pgfcorescopes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfpic=\box58
+\pgf@hbox=\box59
+\pgf@layerbox@main=\box60
+\pgf@picture@serial@count=\count307
 )
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.c
-ode.tex
-File: pgfcoregraphicstate.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgflinewidth=\dimen260
+(C:\Users\EdmundMulligan.ONELONDON\AppData\Local\Programs\MiKTeX\tex/generic/pg
+f/basiclayer\pgfcoregraphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgflinewidth=\dimen268
 )
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformation
-s.code.tex
-File: pgfcoretransformations.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@pt@x=\dimen261
-\pgf@pt@y=\dimen262
-\pgf@pt@temp=\dimen263
+(C:\Users\EdmundMulligan.ONELONDON\AppData\Local\Programs\MiKTeX\tex/generic/pg
+f/basiclayer\pgfcoretransformations.code.tex
+File: pgfcoretransformations.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@pt@x=\dimen269
+\pgf@pt@y=\dimen270
+\pgf@pt@temp=\dimen271
 )
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
-File: pgfcorequick.code.tex 2023-01-15 v3.1.10 (3.1.10)
+(C:\Users\EdmundMulligan.ONELONDON\AppData\Local\Programs\MiKTeX\tex/generic/pg
+f/basiclayer\pgfcorequick.code.tex
+File: pgfcorequick.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 )
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.t
-ex
-File: pgfcoreobjects.code.tex 2023-01-15 v3.1.10 (3.1.10)
+(C:\Users\EdmundMulligan.ONELONDON\AppData\Local\Programs\MiKTeX\tex/generic/pg
+f/basiclayer\pgfcoreobjects.code.tex
+File: pgfcoreobjects.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 )
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing
-.code.tex
-File: pgfcorepathprocessing.code.tex 2023-01-15 v3.1.10 (3.1.10)
+(C:\Users\EdmundMulligan.ONELONDON\AppData\Local\Programs\MiKTeX\tex/generic/pg
+f/basiclayer\pgfcorepathprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 )
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.te
-x
-File: pgfcorearrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfarrowsep=\dimen264
+(C:\Users\EdmundMulligan.ONELONDON\AppData\Local\Programs\MiKTeX\tex/generic/pg
+f/basiclayer\pgfcorearrows.code.tex
+File: pgfcorearrows.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfarrowsep=\dimen272
 )
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
-File: pgfcoreshade.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@max=\dimen265
-\pgf@sys@shading@range@num=\count286
-\pgf@shadingcount=\count287
+(C:\Users\EdmundMulligan.ONELONDON\AppData\Local\Programs\MiKTeX\tex/generic/pg
+f/basiclayer\pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@max=\dimen273
+\pgf@sys@shading@range@num=\count308
+\pgf@shadingcount=\count309
 )
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
-File: pgfcoreimage.code.tex 2023-01-15 v3.1.10 (3.1.10)
+(C:\Users\EdmundMulligan.ONELONDON\AppData\Local\Programs\MiKTeX\tex/generic/pg
+f/basiclayer\pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 )
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.
-tex
-File: pgfcoreexternal.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfexternal@startupbox=\box59
+(C:\Users\EdmundMulligan.ONELONDON\AppData\Local\Programs\MiKTeX\tex/generic/pg
+f/basiclayer\pgfcoreexternal.code.tex
+File: pgfcoreexternal.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfexternal@startupbox=\box61
 )
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.te
-x
-File: pgfcorelayers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+(C:\Users\EdmundMulligan.ONELONDON\AppData\Local\Programs\MiKTeX\tex/generic/pg
+f/basiclayer\pgfcorelayers.code.tex
+File: pgfcorelayers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 )
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.c
-ode.tex
-File: pgfcoretransparency.code.tex 2023-01-15 v3.1.10 (3.1.10)
+(C:\Users\EdmundMulligan.ONELONDON\AppData\Local\Programs\MiKTeX\tex/generic/pg
+f/basiclayer\pgfcoretransparency.code.tex
+File: pgfcoretransparency.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 )
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.
-tex
-File: pgfcorepatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
+(C:\Users\EdmundMulligan.ONELONDON\AppData\Local\Programs\MiKTeX\tex/generic/pg
+f/basiclayer\pgfcorepatterns.code.tex
+File: pgfcorepatterns.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 )
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
-File: pgfcorerdf.code.tex 2023-01-15 v3.1.10 (3.1.10)
+(C:\Users\EdmundMulligan.ONELONDON\AppData\Local\Programs\MiKTeX\tex/generic/pg
+f/basiclayer\pgfcorerdf.code.tex
+File: pgfcorerdf.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 )))
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
-File: pgfmoduleshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfnodeparttextbox=\box60
-) (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
-File: pgfmoduleplot.code.tex 2023-01-15 v3.1.10 (3.1.10)
+(C:\Users\EdmundMulligan.ONELONDON\AppData\Local\Programs\MiKTeX\tex/generic/pg
+f/modules\pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfnodeparttextbox=\box62
 )
-(/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65
-.sty
-Package: pgfcomp-version-0-65 2023-01-15 v3.1.10 (3.1.10)
-\pgf@nodesepstart=\dimen266
-\pgf@nodesepend=\dimen267
+(C:\Users\EdmundMulligan.ONELONDON\AppData\Local\Programs\MiKTeX\tex/generic/pg
+f/modules\pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 )
-(/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18
-.sty
-Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
-)) (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
-(/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex))
-(/usr/share/texlive/texmf-dist/tex/latex/pgf/math/pgfmath.sty
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
-Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
-\pgffor@iter=\dimen268
-\pgffor@skip=\dimen269
+(C:\Users\EdmundMulligan.ONELONDON\AppData\Local\Programs\MiKTeX\tex/latex/pgf/
+compatibility\pgfcomp-version-0-65.sty
+Package: pgfcomp-version-0-65 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@nodesepstart=\dimen274
+\pgf@nodesepend=\dimen275
+)
+(C:\Users\EdmundMulligan.ONELONDON\AppData\Local\Programs\MiKTeX\tex/latex/pgf/
+compatibility\pgfcomp-version-1-18.sty
+Package: pgfcomp-version-1-18 2025-08-29 v3.1.11a (3.1.11a)
+))
+(C:\Users\EdmundMulligan.ONELONDON\AppData\Local\Programs\MiKTeX\tex/latex/pgf/
+utilities\pgffor.sty
+(C:\Users\EdmundMulligan.ONELONDON\AppData\Local\Programs\MiKTeX\tex/latex/pgf/
+utilities\pgfkeys.sty
+(C:\Users\EdmundMulligan.ONELONDON\AppData\Local\Programs\MiKTeX\tex/generic/pg
+f/utilities\pgfkeys.code.tex))
+(C:\Users\EdmundMulligan.ONELONDON\AppData\Local\Programs\MiKTeX\tex/latex/pgf/
+math\pgfmath.sty
+(C:\Users\EdmundMulligan.ONELONDON\AppData\Local\Programs\MiKTeX\tex/generic/pg
+f/math\pgfmath.code.tex))
+(C:\Users\EdmundMulligan.ONELONDON\AppData\Local\Programs\MiKTeX\tex/generic/pg
+f/utilities\pgffor.code.tex
+Package: pgffor 2025-08-29 v3.1.11a (3.1.11a)
+\pgffor@iter=\dimen276
+\pgffor@skip=\dimen277
 \pgffor@stack=\toks32
 \pgffor@toks=\toks33
 ))
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
-Package: tikz 2023-01-15 v3.1.10 (3.1.10)
+(C:\Users\EdmundMulligan.ONELONDON\AppData\Local\Programs\MiKTeX\tex/generic/pg
+f/frontendlayer/tikz\tikz.code.tex
+Package: tikz 2025-08-29 v3.1.11a (3.1.11a)
 
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers
-.code.tex
-File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@plot@mark@count=\count288
-\pgfplotmarksize=\dimen270
+(C:\Users\EdmundMulligan.ONELONDON\AppData\Local\Programs\MiKTeX\tex/generic/pg
+f/libraries\pgflibraryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@plot@mark@count=\count310
+\pgfplotmarksize=\dimen278
 )
-\tikz@lastx=\dimen271
-\tikz@lasty=\dimen272
-\tikz@lastxsaved=\dimen273
-\tikz@lastysaved=\dimen274
-\tikz@lastmovetox=\dimen275
-\tikz@lastmovetoy=\dimen276
-\tikzleveldistance=\dimen277
-\tikzsiblingdistance=\dimen278
-\tikz@figbox=\box61
-\tikz@figbox@bg=\box62
-\tikz@tempbox=\box63
-\tikz@tempbox@bg=\box64
-\tikztreelevel=\count289
-\tikznumberofchildren=\count290
-\tikznumberofcurrentchild=\count291
-\tikz@fig@count=\count292
+\tikz@lastx=\dimen279
+\tikz@lasty=\dimen280
+\tikz@lastxsaved=\dimen281
+\tikz@lastysaved=\dimen282
+\tikz@lastmovetox=\dimen283
+\tikz@lastmovetoy=\dimen284
+\tikzleveldistance=\dimen285
+\tikzsiblingdistance=\dimen286
+\tikz@figbox=\box63
+\tikz@figbox@bg=\box64
+\tikz@tempbox=\box65
+\tikz@tempbox@bg=\box66
+\tikztreelevel=\count311
+\tikznumberofchildren=\count312
+\tikznumberofcurrentchild=\count313
+\tikz@fig@count=\count314
 
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
-File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfmatrixcurrentrow=\count293
-\pgfmatrixcurrentcolumn=\count294
-\pgf@matrix@numberofcolumns=\count295
+(C:\Users\EdmundMulligan.ONELONDON\AppData\Local\Programs\MiKTeX\tex/generic/pg
+f/modules\pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfmatrixcurrentrow=\count315
+\pgfmatrixcurrentcolumn=\count316
+\pgf@matrix@numberofcolumns=\count317
 )
-\tikz@expandcount=\count296
+\tikz@expandcount=\count318
 
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
-zlibrarytopaths.code.tex
-File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
+(C:\Users\EdmundMulligan.ONELONDON\AppData\Local\Programs\MiKTeX\tex/generic/pg
+f/frontendlayer/tikz/libraries\tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 )))
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
-zlibrarypositioning.code.tex
-File: tikzlibrarypositioning.code.tex 2023-01-15 v3.1.10 (3.1.10)
+(C:\Users\EdmundMulligan.ONELONDON\AppData\Local\Programs\MiKTeX\tex/generic/pg
+f/frontendlayer/tikz/libraries\tikzlibrarypositioning.code.tex
+File: tikzlibrarypositioning.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 )
-(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count297
-\l__pdf_internal_box=\box65
-)
-(./essay-2.aux)
+(C:\Users\EdmundMulligan.ONELONDON\AppData\Local\Programs\MiKTeX\tex/latex/l3ba
+ckend\l3backend-pdftex.def
+File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count319
+) (essay-2.aux)
 \openout1 = `essay-2.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
@@ -494,34 +560,37 @@ LaTeX Font Info:    ... okay on input line 28.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+
+(C:\Users\EdmundMulligan.ONELONDON\AppData\Local\Programs\MiKTeX\tex/context/ba
+se/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count298
-\scratchdimen=\dimen279
-\scratchbox=\box66
-\nofMPsegments=\count299
-\nofMParguments=\count300
+\scratchcounter=\count320
+\scratchdimen=\dimen287
+\scratchbox=\box67
+\nofMPsegments=\count321
+\nofMParguments=\count322
 \everyMPshowfont=\toks34
-\MPscratchCnt=\count301
-\MPscratchDim=\dimen280
-\MPnumerator=\count302
-\makeMPintoPDFobject=\count303
+\MPscratchCnt=\count323
+\MPscratchDim=\dimen288
+\MPnumerator=\count324
+\makeMPintoPDFobject=\count325
 \everyMPtoPDFconversion=\toks35
-) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+)
+(C:\Users\EdmundMulligan.ONELONDON\AppData\Local\Programs\MiKTeX\tex/latex/epst
+opdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
 
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
-e
+(C:\Users\EdmundMulligan.ONELONDON\AppData\Local\Programs\MiKTeX\tex/latex/00mi
+ktex\epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <14.4> on input line 34.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 34.
-
-(./essay-2.toc
+ (essay-2.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <12> on input line 4.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -534,23 +603,23 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
  [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-(./essay-2.lof)
+{C:/Users/EdmundMulligan.ONELONDON/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex
+.map}] (essay-2.lof)
 \tf@lof=\write5
 \openout5 = `essay-2.lof'.
 
- [2] [3{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
-<logo-embodied-mind.png, id=22, 194.23749pt x 194.23749pt>
+ [2] [3]
+<logo-embodied-mind.png, id=21, 194.23749pt x 194.23749pt>
 File: logo-embodied-mind.png Graphic file (type png)
 <use logo-embodied-mind.png>
 Package pdftex.def Info: logo-embodied-mind.png  used on input line 86.
 (pdftex.def)             Requested size: 145.11053pt x 145.11165pt.
-<Roy_Lichtenstein_Whaam.jpg, id=24, 486.81876pt x 206.7725pt>
+<Roy_Lichtenstein_Whaam.jpg, id=23, 486.81876pt x 206.7725pt>
 File: Roy_Lichtenstein_Whaam.jpg Graphic file (type jpg)
 <use Roy_Lichtenstein_Whaam.jpg>
 Package pdftex.def Info: Roy_Lichtenstein_Whaam.jpg  used on input line 95.
 (pdftex.def)             Requested size: 232.17242pt x 98.61234pt.
-<ShotMarilyn.png, id=25, 1806.75pt x 1806.75pt>
+<ShotMarilyn.png, id=24, 1806.75pt x 1806.75pt>
 File: ShotMarilyn.png Graphic file (type png)
 <use ShotMarilyn.png>
 Package pdftex.def Info: ShotMarilyn.png  used on input line 101.
@@ -560,22 +629,22 @@ Underfull \hbox (badness 1990) in paragraph at lines 102--102
 []\OT1/cmr/m/n/12 Figure 3: |Andy Warhol's Shot Mar-i-lyn
  []
 
-<batman.jpg, id=26, 1088.065pt x 1651.16875pt>
+<batman.jpg, id=25, 1088.065pt x 1651.16875pt>
 File: batman.jpg Graphic file (type jpg)
 <use batman.jpg>
 Package pdftex.def Info: batman.jpg  used on input line 111.
 (pdftex.def)             Requested size: 108.83105pt x 165.15173pt.
-<bewitched.jpg, id=27, 2007.5pt x 3011.25pt>
+<bewitched.jpg, id=26, 2007.5pt x 3011.25pt>
 File: bewitched.jpg Graphic file (type jpg)
 <use bewitched.jpg>
 Package pdftex.def Info: bewitched.jpg  used on input line 117.
 (pdftex.def)             Requested size: 108.83105pt x 163.207pt.
-<jeannie.jpeg, id=28, 453.695pt x 680.5425pt>
+<jeannie.jpeg, id=27, 453.695pt x 680.5425pt>
 File: jeannie.jpeg Graphic file (type jpg)
 <use jeannie.jpeg>
 Package pdftex.def Info: jeannie.jpeg  used on input line 126.
 (pdftex.def)             Requested size: 108.83105pt x 163.24007pt.
-<Testcard_D.png, id=29, 321.2pt x 239.89626pt>
+<Testcard_D.png, id=28, 321.2pt x 239.89626pt>
 File: Testcard_D.png Graphic file (type png)
 <use Testcard_D.png>
 Package pdftex.def Info: Testcard_D.png  used on input line 132.
@@ -583,7 +652,7 @@ Package pdftex.def Info: Testcard_D.png  used on input line 132.
 [4 <./logo-embodied-mind.png> <./Roy_Lichtenstein_Whaam.jpg> <./ShotMarilyn.png
 >] [5 <./batman.jpg> <./bewitched.jpg> <./jeannie.jpeg> <./Testcard_D.png (PNG 
 copy)>]
-<../images/portraits/rachel-mulligan-witch-young-female.png, id=38, 481.8pt x 6
+<../images/portraits/rachel-mulligan-witch-young-female.png, id=37, 481.8pt x 6
 42.4pt>
 File: ../images/portraits/rachel-mulligan-witch-young-female.png Graphic file (
 type png)
@@ -591,7 +660,7 @@ type png)
 Package pdftex.def Info: ../images/portraits/rachel-mulligan-witch-young-female
 .png  used on input line 153.
 (pdftex.def)             Requested size: 87.06189pt x 116.07791pt.
-<../images/portraits/rachel-mulligan-witch-young-male.png, id=39, 481.8pt x 642
+<../images/portraits/rachel-mulligan-witch-young-male.png, id=38, 481.8pt x 642
 .4pt>
 File: ../images/portraits/rachel-mulligan-witch-young-male.png Graphic file (ty
 pe png)
@@ -599,7 +668,7 @@ pe png)
 Package pdftex.def Info: ../images/portraits/rachel-mulligan-witch-young-male.p
 ng  used on input line 156.
 (pdftex.def)             Requested size: 87.06189pt x 116.07791pt.
-<../images/portraits/rachel-mulligan-witch-old-female.png, id=40, 481.8pt x 642
+<../images/portraits/rachel-mulligan-witch-old-female.png, id=39, 481.8pt x 642
 .4pt>
 File: ../images/portraits/rachel-mulligan-witch-old-female.png Graphic file (ty
 pe png)
@@ -607,7 +676,7 @@ pe png)
 Package pdftex.def Info: ../images/portraits/rachel-mulligan-witch-old-female.p
 ng  used on input line 159.
 (pdftex.def)             Requested size: 87.06189pt x 116.07791pt.
-<../images/portraits/rachel-mulligan-witch-old-male.png, id=41, 481.8pt x 642.4
+<../images/portraits/rachel-mulligan-witch-old-male.png, id=40, 481.8pt x 642.4
 pt>
 File: ../images/portraits/rachel-mulligan-witch-old-male.png Graphic file (type
  png)
@@ -615,7 +684,7 @@ File: ../images/portraits/rachel-mulligan-witch-old-male.png Graphic file (type
 Package pdftex.def Info: ../images/portraits/rachel-mulligan-witch-old-male.png
   used on input line 162.
 (pdftex.def)             Requested size: 87.06189pt x 116.07791pt.
-<../images/portraits/rachel-mulligan-wizard-young-female.png, id=42, 481.8pt x 
+<../images/portraits/rachel-mulligan-wizard-young-female.png, id=41, 481.8pt x 
 642.4pt>
 File: ../images/portraits/rachel-mulligan-wizard-young-female.png Graphic file 
 (type png)
@@ -623,7 +692,7 @@ File: ../images/portraits/rachel-mulligan-wizard-young-female.png Graphic file
 Package pdftex.def Info: ../images/portraits/rachel-mulligan-wizard-young-femal
 e.png  used on input line 166.
 (pdftex.def)             Requested size: 87.06189pt x 116.07791pt.
-<../images/portraits/rachel-mulligan-wizard-young-male.png, id=43, 481.8pt x 64
+<../images/portraits/rachel-mulligan-wizard-young-male.png, id=42, 481.8pt x 64
 2.4pt>
 File: ../images/portraits/rachel-mulligan-wizard-young-male.png Graphic file (t
 ype png)
@@ -631,7 +700,7 @@ ype png)
 Package pdftex.def Info: ../images/portraits/rachel-mulligan-wizard-young-male.
 png  used on input line 169.
 (pdftex.def)             Requested size: 87.06189pt x 116.07791pt.
-<../images/portraits/rachel-mulligan-wizard-old-female.png, id=44, 481.8pt x 64
+<../images/portraits/rachel-mulligan-wizard-old-female.png, id=43, 481.8pt x 64
 2.4pt>
 File: ../images/portraits/rachel-mulligan-wizard-old-female.png Graphic file (t
 ype png)
@@ -639,7 +708,7 @@ ype png)
 Package pdftex.def Info: ../images/portraits/rachel-mulligan-wizard-old-female.
 png  used on input line 172.
 (pdftex.def)             Requested size: 87.06189pt x 116.07791pt.
-<../images/portraits/rachel-mulligan-wizard-old-male.png, id=45, 481.8pt x 642.
+<../images/portraits/rachel-mulligan-wizard-old-male.png, id=44, 481.8pt x 642.
 4pt>
 File: ../images/portraits/rachel-mulligan-wizard-old-male.png Graphic file (typ
 e png)
@@ -660,23 +729,23 @@ n-witch-old-female.png> <../images/portraits/rachel-mulligan-witch-old-male.png
 raits/rachel-mulligan-wizard-young-male.png> <../images/portraits/rachel-mullig
 an-wizard-old-female.png> <../images/portraits/rachel-mulligan-wizard-old-male.
 png>] [7]
-<nav-menu-1.png, id=61, 3720.90125pt x 483.8075pt>
+<nav-menu-1.png, id=60, 3720.90125pt x 483.8075pt>
 File: nav-menu-1.png Graphic file (type png)
 <use nav-menu-1.png>
 Package pdftex.def Info: nav-menu-1.png  used on input line 217.
 (pdftex.def)             Requested size: 483.69687pt x 62.8898pt.
-<nav-menu-2.png, id=62, 3720.90125pt x 483.8075pt>
+<nav-menu-2.png, id=61, 3720.90125pt x 483.8075pt>
 File: nav-menu-2.png Graphic file (type png)
 <use nav-menu-2.png>
 Package pdftex.def Info: nav-menu-2.png  used on input line 222.
 (pdftex.def)             Requested size: 483.69687pt x 62.8898pt.
-<wand_iconography.png, id=63, 1927.2pt x 1132.23pt>
+<wand_iconography.png, id=62, 1927.2pt x 1132.23pt>
 File: wand_iconography.png Graphic file (type png)
 <use wand_iconography.png>
 Package pdftex.def Info: wand_iconography.png  used on input line 227.
 (pdftex.def)             Requested size: 483.69687pt x 284.16249pt.
- [8] [9 <./nav-menu-1.png> <./nav-menu-2.png> <./wand_iconography.png>] [10] (.
-/essay-2-wordcount.txt) (./essay-2.bbl
+ [8] [9 <./nav-menu-1.png> <./nav-menu-2.png> <./wand_iconography.png>] [10] (e
+ssay-2-wordcount.txt) (essay-2.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 264--1
 
  []
@@ -687,33 +756,36 @@ Underfull \hbox (badness 1990) in paragraph at lines 91--97
 ps : / / www . tate . org . uk / art / artworks /
  []
 
-[12]) [13] (./essay-2-appendix.tex) [14] (./essay-2.aux)
+[12]) [13] (essay-2-appendix.tex) [14] (essay-2.aux)
  ***********
-LaTeX2e <2023-11-01> patch level 1
-L3 programming layer <2024-01-22>
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 14999 strings out of 474222
- 306292 string characters out of 5748732
- 1934975 words of memory out of 5000000
- 37011 multiletter control sequences out of 15000+600000
- 565044 words of font info for 59 fonts, out of 8000000 for 9000
+ 15019 strings out of 467866
+ 314276 string characters out of 5409130
+ 687178 words of memory out of 5000000
+ 43660 multiletter control sequences out of 15000+600000
+ 634696 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,8n,93p,1148b,464s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmtt12.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfr
-m1200.pfb>
-Output written on essay-2.pdf (14 pages, 8480767 bytes).
+ 84i,8n,104p,1150b,472s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\EdmundMulligan.ONELONDON\AppData\Local\MiKTeX\fonts/pk/ljfour/jkna
+ppen/ec/dpi600\tcrm1200.pk><C:/Users/EdmundMulligan.ONELONDON/AppData/Local/Pro
+grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/EdmundMulligan
+.ONELONDON/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.
+pfb><C:/Users/EdmundMulligan.ONELONDON/AppData/Local/Programs/MiKTeX/fonts/type
+1/public/amsfonts/cm/cmr10.pfb><C:/Users/EdmundMulligan.ONELONDON/AppData/Local
+/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/EdmundMulli
+gan.ONELONDON/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr1
+7.pfb><C:/Users/EdmundMulligan.ONELONDON/AppData/Local/Programs/MiKTeX/fonts/ty
+pe1/public/amsfonts/cm/cmti10.pfb><C:/Users/EdmundMulligan.ONELONDON/AppData/Lo
+cal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/EdmundM
+ulligan.ONELONDON/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
+cmtt12.pfb>
+Output written on essay-2.pdf (14 pages, 8514684 bytes).
 PDF statistics:
- 131 PDF objects out of 1000 (max. 8388607)
- 65 compressed objects within 1 object stream
+ 129 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  103 words of extra memory for PDF output out of 10000 (max. 10000000)
 
